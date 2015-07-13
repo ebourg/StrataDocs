@@ -11,7 +11,7 @@ before_install:
   - chmod 600 id_rsa
   - echo -e "Host ci-docs.opengamma.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 before_script:
-  - "sed -i -e 's!baseurl: \"\"!baseurl: \"/strata/'\"$TRAVIS_BRANCH\"'\"!' _config.yml"
+  - "sed -i -e 's!baseurl: \".*\"!baseurl: \"/strata/'\"$TRAVIS_BRANCH\"'\"!' _config.yml"
 script:
   - bundle exec jekyll build
 #  - bundle exec htmlproof ./_site --check-html

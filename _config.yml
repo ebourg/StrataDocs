@@ -1,0 +1,20 @@
+baseurl: ""
+
+exclude: [Gemfile, LICENSE.txt, README.md, vendor]
+
+markdown: redcarpet
+redcarpet:
+  extensions: ["smart", "autolink", "tables", "fenced_code_blocks", "no_intra_emphasis"]
+
+permalink: :title
+
+highlighter: pygments
+
+sass:
+  sass_dir: assets/stylesheets
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"

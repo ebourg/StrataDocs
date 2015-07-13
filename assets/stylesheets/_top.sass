@@ -1,0 +1,66 @@
+.topbar .logo
+  position: relative
+  margin: -2px 1.5rem 0 $column-gutter/2
+  float: left
+  a
+    font-size: $font-size-ml
+    font-weight: 600
+    display: block
+
+.top
+  background-color: $green-light
+
+.topbar
+  font-size: $font-size-m
+  background-color: $green-light
+  color: $white
+
+  .navigation
+    padding: 0
+    margin: 0
+    height: $top-height
+    list-style: none
+    float: left
+    li
+      display: inline-block
+      margin-right: 1rem
+
+      @media #{$small-only}
+        display: none
+
+  a
+    display: block
+    color: $white
+    font-size: $font-size-sm
+    cursor: pointer
+    height: $top-height
+    line-height: $top-height + 2px
+    border: none
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+
+  .og
+    padding: 0
+    margin: 0
+    float: right
+    margin-right: $column-gutter/2
+    height: $top-height
+
+    div
+      margin-left: 1rem
+      line-height: $top-height
+      float: right
+
+    .toggle
+      line-height: 1.5rem
+      margin-top: .6em
+      text-align: right
+     
+      @media #{$large-up}
+        display: none
+
+    .og_logo
+      img
+        width: 118px
+        height: 20px

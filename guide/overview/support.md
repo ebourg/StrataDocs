@@ -20,5 +20,5 @@ Please [contact us directly](http://www.opengamma.com/) to discuss commercial su
 ## Open source support
 Community driven support for Strata is available through the [OpenGamma community forums](http://forums.opengamma.com).
 
-If you have found a bug or wish to add a feature, see [contributions](/contributions).
+If you have found a bug or wish to add a feature, see [contributions]({{site.baseurl}}/contributions).
 

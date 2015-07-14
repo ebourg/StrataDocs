@@ -17,7 +17,7 @@ Strata is different. Although, of course, it ultimately needs the same inputs, a
 
 Since so many of the inputs that are necessary for pricing common instruments are standard market conventions, Strata provides these as part of the library and offer easy access to them via built-in constants. This includes common indices and their conventions, currencies and currency pairs, and even holiday calendars generated from rules for the common markets and exchanges. While in a production system these could be sourced from elsewhere and supplemented with more unusual or proprietary data, having the most common data built-in and easily accessible significantly lowers the barrier to evaluation and integration.
 
-The command-line tool illustrates this by making full use of the built-in data and conventions to offer simple, command-line access to the [Reporting API](reporting). Only trades and market data need to be supplied for access to any of Strata's coverage.
+The command-line tool illustrates this by making full use of the built-in data and conventions to offer simple, command-line access to the [Reporting API]({{site.baseurl}}/reporting). Only trades and market data need to be supplied for access to any of Strata's coverage.
 
 ## Obtaining the tool
 
@@ -27,7 +27,7 @@ The tool is distributed as a standalone zip file including example data. The `st
 
 ### Source code
 
-The tool is implemented by a simple Java class, `ReportRunnerTool`, which wraps the Reporting API. The code can be found in the `strata-examples` module. See [obtaining strata](obtaining_strata) for more information on obtaining the source code.
+The tool is implemented by a simple Java class, `ReportRunnerTool`, which wraps the Reporting API. The code can be found in the `strata-examples` module. See [obtaining strata]({{site.baseurl}}/obtaining_strata) for more information on obtaining the source code.
 
 ## Usage
 
@@ -235,7 +235,7 @@ The fields are described below.
 
 Curve groups assign purposes to curves. For example, they allow a curve to be identified as a USD discounting curve, or a forecasting curve for 3-month Libor.
 
-The [market data rules](rules) specify the name of the curve group to use for a given trade. In Strata 0.7, a fixed set of rules are used by the command-line tool which always use a single curve group with the name `Default`. The use of multiple curve groups would be the mechanism by which, for example, a different discounting curve could be used for different counterparties, or the same measure could be displayed side-by-side showing the effect of using different curves.
+The [market data rules]({{site.baseurl}}/calculation_rules) specify the name of the curve group to use for a given trade. In Strata 0.7, a fixed set of rules are used by the command-line tool which always use a single curve group with the name `Default`. The use of multiple curve groups would be the mechanism by which, for example, a different discounting curve could be used for different counterparties, or the same measure could be displayed side-by-side showing the effect of using different curves.
 
 There must be a single file called `groups.csv` which defines all available curve groups. This is a CSV-formatted file with the following header row:
 

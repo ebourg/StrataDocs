@@ -5,7 +5,7 @@ permalink: /extend_scenario_framework/
 
 ## Background
 
-The [scenario framework](/scenarios/) provides a way to execute the same set of calculations multiple times using different market data. For example, a scenario might be used to calculate the present value of a portfolio of swaps with and without a one basis point shift applied to the curves.
+The [scenario framework]({{site.baseurl}}/scenarios/) provides a way to execute the same set of calculations multiple times using different market data. For example, a scenario might be used to calculate the present value of a portfolio of swaps with and without a one basis point shift applied to the curves.
 
 The fundamental concepts in the scenario framework are market data filters and market data perturbations. The scenario framework uses filters and perturbations to produce the market data used in each scenario.
 
@@ -75,7 +75,7 @@ public final class CurveNameFilter implements MarketDataFilter<Curve, CurveId>, 
 
 The notable features of the class declaration are:
  
-* The `@BeanDefinition` annotation and `ImmutableBean`; all data objects in Strata are immutable [Joda Beans](/core_technologies/). 
+* The `@BeanDefinition` annotation and `ImmutableBean`; all data objects in Strata are immutable [Joda Beans]({{site.baseurl}}/core_technologies/). 
 * The type parameters; the filter handles instances of `Curve` and curves are identified by instances of `CurveId`.
 * The `curveName` field; the filter matches curves if the curve name is equal to `curveName`.
 
@@ -144,7 +144,7 @@ public final class CurveParallelShift implements Perturbation<Curve>, ImmutableB
 
 The notable features of the class declaration are:
  
-* The `@BeanDefinition` annotation and `ImmutableBean`; all data objects in Strata are immutable [Joda Beans](/core_technologies/). 
+* The `@BeanDefinition` annotation and `ImmutableBean`; all data objects in Strata are immutable [Joda Beans]({{site.baseurl}}/core_technologies/). 
 * The type parameter; the perturbation handles instances of `Curve`.
 * The `shiftType` field; the shift amount can be added to the curve Y values (`ShiftType.ABSOLUTE`) or it can be used to scale the curve values (`ShiftType.RELATIVE`).
 * The `shiftAmount` field; the amount by which the curve Y values are shifted.

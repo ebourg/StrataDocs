@@ -21,4 +21,4 @@ A <i class="fa fa-check"></i> for a measure in the coverage grid means:
 * A calculation function exists for this measure with analytics support as necessary.
 * The measure is wired-up and available out-of-the-box under the standard measure name above.
 * The examples project contains a pricing example requesting this measure.
-* The [command-line tool](command-line tool) distribution includes example data for requesting this measure.
+* The [command-line tool]({{site.baseurl}}/command_line_tool) distribution includes example data for requesting this measure.

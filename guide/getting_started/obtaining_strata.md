@@ -25,7 +25,7 @@ To reference the top-level Report module, add the following dependency:
 Strata is also released to GitHub through the standard [repository release pages](https://github.com/OpenGamma/Strata/releases). The downloads include:
 
  * `strata-dist` -- the full Strata distribution containing the Strata jars, Strata's dependencies and Javadoc.
- * `report-tool` -- the [command-line tool](command_line_tool) for easy access to the reporting capabilities.
+ * `report-tool` -- the [command-line tool]({{site.baseurl}}/command_line_tool) for easy access to the reporting capabilities.
  * Source code -- the source code as of the release, documentation source and tool chain.
 
 ## For Developers

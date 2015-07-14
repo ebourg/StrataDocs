@@ -1,0 +1,6 @@
+---
+title: Reporting
+permalink: /reporting/
+---
+
+

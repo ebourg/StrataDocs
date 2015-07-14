@@ -8,17 +8,7 @@ There are a number of ways to obtain Strata.
 
 ## From Maven Central
 
-Strata is available in Maven Central.
-
-To reference the top-level Report module, add the following dependency:
-
-```
-<dependency>
-  <groupId>com.opengamma.strata</groupId>
-  <artifactId>strata-report-beta</artifactId>
-  <version>0.7.0</version>
-</dependency>
-```
+Strata will soon be available in Maven Central.
 
 ## From GitHub Releases
 

@@ -1,6 +1,0 @@
----
-title: Scenarios
-permalink: /scenarios/
----
-
-

@@ -5,7 +5,7 @@ permalink: /extend_scenario_framework/
 
 ## Background
 
-The [scenario framework]({{site.baseurl}}/scenarios/) provides a way to execute the same set of calculations multiple times using different market data. For example, a scenario might be used to calculate the present value of a portfolio of swaps with and without a one basis point shift applied to the curves.
+The scenario framework provides a way to execute the same set of calculations multiple times using different market data. For example, a scenario might be used to calculate the present value of a portfolio of swaps with and without a one basis point shift applied to the curves.
 
 The fundamental concepts in the scenario framework are market data filters and market data perturbations. The scenario framework uses filters and perturbations to produce the market data used in each scenario.
 

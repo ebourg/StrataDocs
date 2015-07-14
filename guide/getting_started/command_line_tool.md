@@ -17,8 +17,8 @@ Strata is different. Although, of course, it ultimately needs the same inputs, a
 
 Since so many of the inputs that are necessary for pricing common instruments are standard market conventions, Strata provides these as part of the library and offer easy access to them via built-in constants. This includes common indices and their conventions, currencies and currency pairs, and even holiday calendars generated from rules for the common markets and exchanges. While in a production system these could be sourced from elsewhere and supplemented with more unusual or proprietary data, having the most common data built-in and easily accessible significantly lowers the barrier to evaluation and integration.
 
-The command-line tool illustrates this by making full use of the built-in data and conventions to offer simple, command-line access to the [Reporting API]({{site.baseurl}}/reporting). Only trades and market data need to be supplied for access to any of Strata's coverage.
-
+The command-line tool illustrates this by making full use of the built-in data and conventions to offer simple, command-line access to the Reporting API. Only trades and market data need to be supplied for access to any of Strata's coverage.
+I
 ## Obtaining the tool
 
 ### Download

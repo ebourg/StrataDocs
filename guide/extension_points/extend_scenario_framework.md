@@ -23,7 +23,7 @@ If a filter returns `true` for a piece of market data, the scenario framework pa
 
 ## The MarketDataFilter Interface
 
-Market data filters are implementations of the `MarketDataFilter` interface. 
+Market data filters are implementations of the [`MarketDataFilter`]({{site.baseurl}}/apidocs/com/opengamma/strata/engine/marketdata/scenarios/MarketDataFilter.html) interface. 
 
 ```java
 public interface MarketDataFilter<T, I extends MarketDataId<T>> {
@@ -38,11 +38,11 @@ The type parameter `T` is the type of market data handled by the filter. It is i
 
 The `getMarketDataIdType` method returns the type of market data handled by the filter. The scenario framework only passes market data to a filter if it is of the correct type. This means filter implementations don't have to contain boilerplate code to check the type of the market data and cast it to the expected type.
 
-The `apply` method contains the logic which decides whether the market data should be modified in the scenario. It receives the market data value and the `MarketDataId` which identifies it. The market data ID identifies the value and possibly contains additional metadata used when deciding whether the value should be perturbed.
+The `apply` method contains the logic which decides whether the market data should be modified in the scenario. It receives the market data value and the [`MarketDataId`]({{site.baseurl}}/apidocs/com/opengamma/strata/basics/market/MarketDataId.html) which identifies it. The market data ID identifies the value and possibly contains additional metadata used when deciding whether the value should be perturbed.
 
 ### Implementing MarketDataFilter
 
-This section demonstrates how to implement `MarketDataFilter` using one of the standard filters included in Strata as an example. The filter is `CurveNameFilter`. It handles curves, and matches if the name of the curve is the same as the curve name in the filter
+This section demonstrates how to implement [`MarketDataFilter`]({{site.baseurl}}/apidocs/com/opengamma/strata/engine/marketdata/scenarios/MarketDataFilter.html) using one of the standard filters included in Strata as an example. The filter is [`CurveNameFilter`]({{site.baseurl}}/apidocs/com/opengamma/strata/function/marketdata/scenarios/curves/CurveNameFilter.html). It handles curves, and matches if the name of the curve is the same as the curve name in the filter
 
 ```java
 /**
@@ -76,7 +76,7 @@ public final class CurveNameFilter implements MarketDataFilter<Curve, CurveId>, 
 The notable features of the class declaration are:
  
 * The `@BeanDefinition` annotation and `ImmutableBean`; all data objects in Strata are immutable [Joda Beans]({{site.baseurl}}/core_technologies/). 
-* The type parameters; the filter handles instances of `Curve` and curves are identified by instances of `CurveId`.
+* The type parameters; the filter handles instances of [`Curve`]({{site.baseurl}}/apidocs/com/opengamma/strata/market/curve/Curve.html) and curves are identified by instances of [`CurveId`]({{site.baseurl}}/apidocs/com/opengamma/strata/market/id/CurveId.html).
 * The `curveName` field; the filter matches curves if the curve name is equal to `curveName`.
 
 #### The getMarketDataIdType method
@@ -89,7 +89,7 @@ The `apply` method compares the name of the curve with the curve name field in t
 
 ## The Perturbation Interface
 
-Perturbations are implementations of the `Perturbation` interface.
+Perturbations are implementations of the [`Perturbation`]({{site.baseurl}}/apidocs/com/opengamma/strata/engine/marketdata/scenarios/Perturbation.html) interface.
 
 ```java
 public interface Perturbation<T> {
@@ -104,7 +104,7 @@ The `apply` method has an argument for the market data value and returns an obje
 
 ### Implementing Perturbation
 
-This section demonstrates how to implement `Perturbation` using one of the standard perturbations included in Strata as an example. The perturbation is `CurveParallelShift`. It applies a shift to all points on a curve.
+This section demonstrates how to implement [`Perturbation`]({{site.baseurl}}/apidocs/com/opengamma/strata/engine/marketdata/scenarios/Perturbation.html) using one of the standard perturbations included in Strata as an example. The perturbation is [`CurveParallelShift`]({{site.baseurl}}/apidocs/com/opengamma/strata/function/marketdata/scenarios/curves/CurveParallelShift.html). It applies a shift to all points on a curve.
 
 ```java
 /**
@@ -146,9 +146,9 @@ The notable features of the class declaration are:
  
 * The `@BeanDefinition` annotation and `ImmutableBean`; all data objects in Strata are immutable [Joda Beans]({{site.baseurl}}/core_technologies/). 
 * The type parameter; the perturbation handles instances of `Curve`.
-* The `shiftType` field; the shift amount can be added to the curve Y values (`ShiftType.ABSOLUTE`) or it can be used to scale the curve values (`ShiftType.RELATIVE`).
+* The `shiftType` field; the shift amount can be added to the curve Y values ([`ShiftType.ABSOLUTE`]({{site.baseurl}}/apidocs/com/opengamma/strata/market/curve/ShiftType.html#ABSOLUTE)) or it can be used to scale the curve values ([`ShiftType.RELATIVE`]({{site.baseurl}}/apidocs/com/opengamma/strata/market/curve/ShiftType.html#RELATIVE)).
 * The `shiftAmount` field; the amount by which the curve Y values are shifted.
 
 ### The apply Method
 
-The `apply` method creates an instance of `ParallelShiftedCurve`, a decorator which wraps the curve and applies a shift when Y values are requested.
+The `apply` method creates an instance of [`ParallelShiftedCurve`]({{site.baseurl}}/apidocs/com/opengamma/strata/market/curve/ParallelShiftedCurve.html), a decorator which wraps the curve and applies a shift when Y values are requested.

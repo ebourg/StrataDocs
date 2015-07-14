@@ -71,5 +71,5 @@ Market data rules specify a mapping between market data keys and IDs. Market dat
 
 Or they can be extremely specific:
 
-> When pricing cross-currency swaps including CHF and the counterparty is "XYZ", use curve group "ABC" as the source of the discount factors
+> When pricing cross-currency swaps where one currency is CHF and the counterparty is "XYZ", use curve group "ABC" built using data from Bloomberg as the source of the discount factors
 

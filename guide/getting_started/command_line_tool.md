@@ -17,8 +17,8 @@ Strata is different. Although, of course, it ultimately needs the same inputs, a
 
 Since so many of the inputs that are necessary for pricing common instruments are standard market conventions, Strata provides these as part of the library and offer easy access to them via built-in constants. This includes common indices and their conventions, currencies and currency pairs, and even holiday calendars generated from rules for the common markets and exchanges. While in a production system these could be sourced from elsewhere and supplemented with more unusual or proprietary data, having the most common data built-in and easily accessible significantly lowers the barrier to evaluation and integration.
 
-The command-line tool illustrates this by making full use of the built-in data and conventions to offer simple, command-line access to the [Reporting API]({{site.baseurl}}/reporting). Only trades and market data need to be supplied for access to any of Strata's coverage.
-
+The command-line tool illustrates this by making full use of the built-in data and conventions to offer simple, command-line access to the Reporting API. Only trades and market data need to be supplied for access to any of Strata's coverage.
+I
 ## Obtaining the tool
 
 ### Download
@@ -90,9 +90,9 @@ For example, running the tool with only the required arguments above might gener
 ```
 $ java -jar strata-report-tool.jar -p example-portfolios/swap-portfolio.xml -t example-reports/swap-report-template.ini -d 2014-01-22
 
-+--------------------------------------+------+-----------+--------+---------+-----------+---------+
++--------------------------------------------------------+---------+----------------+------------+-------------+----------------+-------------+
 | Description                                            | Pay Ccy |   Pay Notional | Fixed Rate | Current Par |            NPV |        PV01 |
-+--------------------------------------+------+-----------+--------+---------+-----------+---------+
++--------------------------------------------------------+---------+----------------+------------+-------------+----------------+-------------+
 | Fixed vs Libor 3m                                      | USD     | 100,000,000.00 |       0.01 |        0.02 |   5,965,705.04 |   62,626.50 |
 | Libor 3m + spread vs Libor 6m                          | USD     | 100,000,000.00 |            |             |      76,158.72 |     (96.39) |
 | Fed Funds averaged + spread vs Libor 3m                | USD     | 100,000,000.00 |            |             |     186,121.20 |    (363.58) |
@@ -109,7 +109,7 @@ $ java -jar strata-report-tool.jar -p example-portfolios/swap-portfolio.xml -t e
 | GBP Libor 3m vs USD Libor 3m                           | GBP     |  61,600,000.00 |            |             |   4,360,136.12 |  (2,934.31) |
 | USD fixed vs GBP Libor 3m                              | USD     | 100,000,000.00 |       0.03 |        0.02 | (6,547,782.15) |   67,906.38 |
 | USD fixed vs GBP Libor 3m (notional exchange)          | USD     | 100,000,000.00 |       0.03 |        0.02 | (5,489,286.95) |   67,742.37 |
-+--------------------------------------+------+-----------+--------+---------+-----------+---------+
++--------------------------------------------------------+---------+----------------+------------+-------------+----------------+-------------+
 ```
 
 ### Report format

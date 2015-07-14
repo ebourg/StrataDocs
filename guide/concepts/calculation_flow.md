@@ -52,7 +52,7 @@ This optional stage allows the market environment built in the previous stage to
 
 Building the market environment for the scenarios up-front is a key part of allowing [vector-based calculations]({{site.baseurl}}/performance/). It also means that, going into the next stage, all necessary data has already been sourced or built, so the calculations can proceed as quickly as possible.
 
-The scenarios are specified by the _scenario definition_ input which describes the perturbations to be applied. For more information, see [Scenarios]({{site.baseurl}}/scenarios/).
+The scenarios are specified by the _scenario definition_ input which describes the perturbations to be applied.
 
 This stage is implemented by `MarketDataFactory` in the method `buildScenarioCalculationEnvironment`.
 
@@ -68,7 +68,7 @@ The final, optional stage allows the calculation results to be transformed into 
 
 While the set of calculation results are provided as a simple table structure at a trade level, the calculated values in the 'cells' are often not directly suitable for reporting even at this same trade level. For example, a value corresponding to a curve sensitivity measure in a multi-curve environment may contain the sensitivities to every curve in a nested data structure, or if multiple scenarios are present then each 'cell' will contain a result for each scenario in a list.
 
-A report is a user-facing table structure, designed for a particular purpose, which is suitable for backing a grid in a UI, or for rendering directly as text or CSV. For more information, see [Reports]({{site.baseurl}}/reporting/).
+A report is a user-facing table structure, designed for a particular purpose, which is suitable for backing a grid in a UI, or for rendering directly as text or CSV.
 
 The report runner extracts the necessary information from the input calculation results and outputs the report defined by the report template.
 

@@ -28,7 +28,7 @@ In Strata, market data values are assembled in advance of any calculations. This
 
 ### Requesting Market Data for Calculations
 
-If market data must be assembled before starting any calculations, it implies that it must be possible to find out what data is required before starting the calculations. The method `CalculationFunction.requirements` provides this information. See "[Adding a New Measure](/add_measure/)" for details.
+If market data must be assembled before starting any calculations, it implies that it must be possible to find out what data is required before starting the calculations. The method `CalculationFunction.requirements` provides this information. See "[Adding a New Measure]({{site.baseurl}}/add_measure/)" for details.
 
 ### Identifying Market Data
 

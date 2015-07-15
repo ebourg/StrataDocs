@@ -23,11 +23,12 @@ The Strata calculation runner is very lightweight, and carries little overhead i
 
 Strata's built-in pricers are scalar pricers: they loop over the supplied scenarios, performing one calculation at a time.
 
-In our testing, a basic desktop computer (Intel Core 2 Quad circa 2006/7) running Strata using its built-in pricers calculated the present value of 1000 USD swaps for a single scenario, on a single CPU core, in approximately 50ms. This is summarised in the table below.
+In our testing, a basic desktop computer (**Intel Core 2 Quad circa 2006/7**) running Strata using its built-in pricers calculated the present value of 1000 USD swaps for a single scenario, on a **single CPU core**, in approximately 50ms. This is summarised in the table below.
 
-| Trade count |  Scenario count |  Run time (s) | PVs/core/s | Time per PV (ns) |
-|:-----------:|:---------------:|:-------------:|:----------:|:----------------:|
-| 1000        |               1 |     0.05      |    20000   |    50000         |
+| Trade count |  Scenario count |  Run time (s) | Time per PV (ns) | PVs/core/s |
+|:-----------:|:---------------:|:-------------:|:----------------:|:----------:|
+| 1000        |               1 |     0.05      |    50,000        |   20,000   |
+
 
 ### Vector pricing
 
@@ -35,11 +36,11 @@ Strata also supports vector-based pricing as a first class concept: extension po
 
 Vector-based pricing is particularly useful in initial margin (IM) calculations, where common methodologies involve thousands of scenarios.
 
-Internal testing showed significant performance gains by using our own vector-based pricer implementations in Strata for the present value calculations required to compute initial margin (IM) using two methodologies. The figures below were obtained on a 16 core, 2Ghz machine for USD swaps with uniformly distributed maturities and an average maturity of 15 years.
+Internal testing showed significant performance gains by using our own vector-based pricer implementations in Strata for the present value calculations required to compute initial margin (IM) using two methodologies. The figures below were obtained on a **16 core, 2Ghz machine** for USD swaps with uniformly distributed maturities and an average maturity of 15 years.
 
-|  Methodology  | Trade count |  Scenario count |  Run time (s) | PVs/core/s | Time per PV (ns) |
-|:-------------:|:-----------:|:---------------:|:-------------:|:----------:|:----------------:|
-| A             | 202000      |            1700 |     117       |  183,000   |      341         |       
-| B             | 202000      |            5000 |     159       |  397,000   |      157         |
+|  Methodology  | Trade count |  Scenario count |  Run time (s) | Time per PV (ns) | PVs/core/s |
+|:-------------:|:-----------:|:---------------:|:-------------:|:----------------:|:----------:|
+| A             | 202000      |            1700 |     117       |      341         |  183,000   |
+| B             | 202000      |            5000 |     159       |      157         |  397,000   |
 
 Strata already has the necessary extension points to enable these implementations, and work is ongoing to bring this code into production and extend asset class coverage for vector-based computation.

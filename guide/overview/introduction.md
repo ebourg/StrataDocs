@@ -18,7 +18,7 @@ Strata allows financial systems developers to build or enhance existing applicat
 
 Strata has been built from the ground up to be lightweight and flexible. It does not impose any database, server or middleware requirements; these would be built on top of Strata. It provides a high-quality, open source Java toolkit that is designed to be used both in its entirety, as well as for its individual components.
 
-Strata is also highly extensible. Its built-in coverage is implemented using exactly the same extension points as anybody else would use to add their own asset classes, integrate thier own quant library, or add new pricing measures. This can be done externally, without needing to change or recompile the Strata code.
+Strata is also highly extensible. Its built-in coverage is implemented using exactly the same extension points as anybody else would use to add their own asset classes, integrate their own quant library, or add new pricing measures. This can be done externally, without needing to change or recompile the Strata code.
 
 ## Who is Strata for?
 

@@ -7,13 +7,122 @@ permalink: /product_coverage/
 
 Strata 0.7 includes the following product coverage:
 
-| Asset class               | Types                                           | PV    | PV01   | Bucketed PV01 | Gamma PV01 | Par Rate | CS01 | Bucketed CS01 | Cashflows |
-|---------------------------|-------------------------------------------------|:-----:|:------:|:-------------:|:----------:|:--------:|:----:|:-------------:|:---------:|
-| **Swap**                  | Vanilla, OIS, variable notional, cross-currency | {{x}} | {{x}}  |     {{x}}     |   {{x}}    |  {{x}}   |      |               |  {{x}}    |
-| **FRA**                   |                                                 | {{x}} | {{x}}  |     {{x}}     |   {{x}}    |  {{x}}   |      |               |  {{x}}    |
-| **CDS**                   | Single name, index                              | {{x}} | {{x}}  |     {{x}}     |            |          | {{x}}|    {{x}}      |           |
-| **Generic Future**        |                                                 | {{x}} |        |               |            |          |      |               |           |
-| **Generic Future Option** |                                                 | {{x}} |        |               |            |          |      |               |           |
+<table class="product-coverage">
+  <thead>
+    <tr>
+      <th class="asset">Asset class</th>
+      <th>PV</th>
+      <th>PV01</th>
+      <th>Bucketed PV01</th>
+      <th>Gamma PV01</th>
+      <th>Par Rate</th>
+      <th>CS01</th>
+      <th>Bucketed CS01</th>
+      <th>Cashflows</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td class="asset">Vanilla Swap</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td class="na"></td>
+    <td class="na"></td>
+    <td><i class="fa fa-check"></i></td>
+    </tr>
+  <tr>
+    <td class="asset">OIS</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td class="na"></td>
+    <td class="na"></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td class="asset">Variable-Notional Swap</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td class="na"></td>
+    <td class="na"></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td class="asset">Cross-Currency Swap</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td class="na"></td>
+    <td class="na"></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+  <td class="asset">FRA</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td class="na"></td>
+    <td class="na"></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td class="asset">Single-Name CDS</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td></td>
+    <td></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="asset">Index CDS</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td></td>
+    <td></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="asset">Generic Future</td>
+    <td><i class="fa fa-check"></i></td>
+    <td class="na"></td>
+    <td class="na"></td>
+    <td class="na"></td>
+    <td class="na"></td>
+    <td class="na"></td>
+    <td class="na"></td>
+    <td class="na"></td>
+  </tr>
+  <tr>
+    <td class="asset">Generic Future Option</td>
+    <td><i class="fa fa-check"></i></td>
+    <td class="na"></td>
+    <td class="na"></td>
+    <td class="na"></td>
+    <td class="na"></td>
+    <td class="na"></td>
+    <td class="na"></td>
+    <td class="na"></td>
+  </tr>
+  </tbody>
+</table>
 
 A <i class="fa fa-check"></i> for a measure in the coverage grid means:
 

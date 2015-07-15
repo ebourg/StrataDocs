@@ -25,9 +25,9 @@ Strata's built-in pricers are scalar pricers: they loop over the supplied scenar
 
 In our testing, a basic desktop computer (**Intel Core 2 Quad circa 2006/7**) running Strata using its built-in pricers calculated the present value of 1000 USD swaps for a single scenario, on a **single CPU core**, in approximately 50ms. This is summarised in the table below.
 
-| Trade count |  Scenario count |  Run time (s) | Time per PV (ns) | PVs/core/s |
-|:-----------:|:---------------:|:-------------:|:----------------:|:----------:|
-| 1000        |               1 |     0.05      |    50,000        |   20,000   |
+| Trade count |  Scenario count |  Run time (s) | PVs/core/s |
+|:-----------:|:---------------:|:-------------:|:----------:|
+| 1000        |              1  |     0.05      |   20,000   |
 
 
 ### Vector pricing
@@ -38,9 +38,9 @@ Vector-based pricing is particularly useful in initial margin (IM) calculations,
 
 Internal testing showed significant performance gains by using our own vector-based pricer implementations in Strata for the present value calculations required to compute initial margin (IM) using two methodologies. The figures below were obtained on a **16 core, 2Ghz machine** for USD swaps with uniformly distributed maturities and an average maturity of 15 years.
 
-|  Methodology  | Trade count |  Scenario count |  Run time (s) | Time per PV (ns) | PVs/core/s |
-|:-------------:|:-----------:|:---------------:|:-------------:|:----------------:|:----------:|
-| A             | 202000      |            1700 |     117       |      341         |  183,000   |
-| B             | 202000      |            5000 |     159       |      157         |  397,000   |
+|  Methodology  | Trade count |  Scenario count |  Run time (s) | PVs/core/s |
+|:-------------:|:-----------:|:---------------:|:-------------:|:----------:|
+| A             |   202000    |           1700  |     117       |   183,000  |
+| B             |   202000    |           5000  |     159       |   397,000  |
 
 Strata already has the necessary extension points to enable these implementations, and work is ongoing to bring this code into production and extend asset class coverage for vector-based computation.

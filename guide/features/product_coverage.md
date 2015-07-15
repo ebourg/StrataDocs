@@ -3,8 +3,6 @@ title: Product Coverage
 permalink: /product_coverage/
 ---
 
-{% assign x = '<i class="fa fa-check"></i>' %}
-
 Strata 0.7 includes the following product coverage:
 
 <table class="product-coverage">

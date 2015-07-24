@@ -24,7 +24,7 @@ At its core, Strata operates at a trade level. The goal of the first stage is to
 
 Together, these calculation requirements will allow the _market environment_ to be built in the next stage, and the calculations to be executed in a later stage.
 
-The key input to this stage is the set of _calculation rules_. These completely determine which calculation functions are available for use, and they fill in the details of the market data those functions require. For more information, see [Calculation Rules]({{site.baseurl}}/calculation_rules/).
+The key input to this stage is the set of _calculation rules_. These completely determine which calculation functions are available for use, and they fill in the details of the market data those functions require.
 
 This stage is implemented by `CalculationRunner` in the methods `createCalculationConfig` and `createCalculationTasks`.
 

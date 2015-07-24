@@ -235,7 +235,7 @@ The fields are described below.
 
 Curve groups assign purposes to curves. For example, they allow a curve to be identified as a USD discounting curve, or a forecasting curve for 3-month Libor.
 
-The [market data rules]({{site.baseurl}}/calculation_rules) specify the name of the curve group to use for a given trade. In Strata 0.7, a fixed set of rules are used by the command-line tool which always use a single curve group with the name `Default`. The use of multiple curve groups would be the mechanism by which, for example, a different discounting curve could be used for different counterparties, or the same measure could be displayed side-by-side showing the effect of using different curves.
+The market data rules specify the name of the curve group to use for a given trade. In Strata 0.7, a fixed set of rules are used by the command-line tool which always use a single curve group with the name `Default`. The use of multiple curve groups would be the mechanism by which, for example, a different discounting curve could be used for different counterparties, or the same measure could be displayed side-by-side showing the effect of using different curves.
 
 There must be a single file called `groups.csv` which defines all available curve groups. This is a CSV-formatted file with the following header row:
 

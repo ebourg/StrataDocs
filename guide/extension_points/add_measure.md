@@ -4,7 +4,7 @@ permalink: /add_measure/
 ---
 ## Measures
 
-In Strata, measures define the values that can be calculated for a trade or other calculation target. For example, Strata provides a standard set of measures including present value and PV01 (see the `Measure` class). When a user requests a calculation they specify the measures that should be calculated and the [rules]({{site.baseurl}}/calculation_rules/) defining how they should be calculated.
+In Strata, measures define the values that can be calculated for a trade or other calculation target. For example, Strata provides a standard set of measures including present value and PV01 (see the `Measure` class). When a user requests a calculation they specify the measures that should be calculated and the rules defining how they should be calculated.
 
 The set of measures calculated by Strata is extensible. Users can add new measures for the built-in asset classes and can also add support for the built-in measures for new asset classes.
 

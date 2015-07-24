@@ -6,7 +6,7 @@ Strata includes support for a range of common asset classes, but support for new
 
 * Define classes for the asset class
 * Write functions to calculate measures for the new asset class - see [this guide]({{site.baseurl}}/add_measure/).
-* Create pricing rules specifying how measures should be calculated for the new asset class - see [here]({{site.baseurl}}/calculation_rules/).
+* Create pricing rules specifying how measures should be calculated for the new asset class.
 
 ## Defining an Asset Class
 

@@ -251,8 +251,8 @@ If the first day-of-month is 31, change the first day-of-month to 30.
 ### 30U/360
 
 <table>
-<tr><th>Name<td>`30U/360`
-<tr><th>Constant<td>`DayCounts.THIRTY_U_360`
+<tr><th>Name<td>30U/360
+<tr><th>Constant<td>DayCounts.THIRTY_U_360
 <tr><th>Description<td>
 A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February.
 <p>
@@ -276,8 +276,8 @@ The '30/360 ISDA' rule is identical to this rule when the EOM convention does no
 ### 30U/360 EOM
 
 <table>
-<tr><th>Name<td>`30U/360 EOM`
-<tr><th>Constant<td>`DayCounts.THIRTY_U_360_EOM`
+<tr><th>Name<td>30U/360 EOM
+<tr><th>Constant<td>DayCounts.THIRTY_U_360_EOM
 <tr><th>Description<td>
 A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February.
 <p>
@@ -299,8 +299,8 @@ In most cases, '30U/360' should be used in preference to this day count.
 ### 30/360 PSA
 
 <table>
-<tr><th>Name<td>`30/360 PSA`
-<tr><th>Constant<td>`DayCounts.THIRTY_360_PSA`
+<tr><th>Name<td>30/360 PSA
+<tr><th>Constant<td>DayCounts.THIRTY_360_PSA
 <tr><th>Description<td>
 A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February.
 <p>
@@ -316,8 +316,8 @@ If the first day-of-month is 31, change the first day-of-month to 30.
 ### 30E/360 ISDA
 
 <table>
-<tr><th>Name<td>`30E/360 ISDA`
-<tr><th>Constant<td>`DayCounts.THIRTY_E_360_ISDA`
+<tr><th>Name<td>30E/360 ISDA
+<tr><th>Constant<td>DayCounts.THIRTY_E_360_ISDA
 <tr><th>Description<td>
 A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February.
 <p>
@@ -335,8 +335,8 @@ If the second date is the last day of February and it is not the maturity date, 
 ### 30E/360
 
 <table>
-<tr><th>Name<td>`30E/360`
-<tr><th>Constant<td>`DayCounts.THIRTY_E_360`
+<tr><th>Name<td>30E/360
+<tr><th>Constant<td>DayCounts.THIRTY_E_360
 <tr><th>Description<td>
 A 30/360 style algorithm with special rules for the 31st day-of-month.
 <p>
@@ -351,8 +351,8 @@ If the second day-of-month is 31, it is changed to 30.
 ### 30E+/360
 
 <table>
-<tr><th>Name<td>`30E+/360`
-<tr><th>Constant<td>`DayCounts.THIRTY_EPLUS_360`
+<tr><th>Name<td>30E+/360
+<tr><th>Constant<td>DayCounts.THIRTY_EPLUS_360
 <tr><th>Description<td>
 A 30/360 style algorithm with special rules for the 31st day-of-month.
 <p>
@@ -365,8 +365,8 @@ If the second day-of-month is 31, it is changed to 1 and the second month is inc
 ### 1/1
 
 <table>
-<tr><th>Name<td>`1/1`
-<tr><th>Constant<td>`DayCounts.ONE_ONE`
+<tr><th>Name<td>1/1
+<tr><th>Constant<td>DayCounts.ONE_ONE
 <tr><th>Description<td> An artificial day count that always returns one.
 <tr><th>Definition<td>Defined by the 2006 ISDA definitions 4.16a
 </table>

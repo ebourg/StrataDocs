@@ -31,7 +31,7 @@ The collect module adds features in a number of areas:
 The `strata-basics` module provides basic concepts used in finance.
 For more information, see the following guides:
 
-* [Holidays]({{site.baseurl}}/holidays) - to determine if a date a working day or a holiday
+* [Holidays]({{site.baseurl}}/holidays) - to determine if a date is a working day or a holiday
 * [Date adjustments]({{site.baseurl}}/date_adjustments) - adjusting dates relative to holidays
 * [Schedules]({{site.baseurl}}/schedules) - building periodic schedules
 * [Value adjustments]({{site.baseurl}}/value_adjustments) - adjusting values relative to a schedule
@@ -50,7 +50,7 @@ The `strata-market` includes the representations of the market, including curves
 
 ## Pricer module
 
-The `strata-pricer` module provides standard analytics for pricing financial instruments.
+The `strata-pricer` module provides standard analytics for pricing and risk calculations on financial instruments.
 
 
 ## Engine module

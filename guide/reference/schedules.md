@@ -3,6 +3,8 @@ title: Reference documentation - Schedules
 permalink: /schedules/
 ---
 
+{% include macros.html %}
+
 ## Introduction
 
 A common problem in finance is the derivation of a schedule of dates.
@@ -61,7 +63,7 @@ For example:
     Schedule schedule = definition.createSchedule();
 ```
 
-> If the `PeriodicSchedule` contains an invalid definition, then an exception will be thrown when creating the schedule.
+{{note}} If the `PeriodicSchedule` contains an invalid definition, then an exception will be thrown when creating the schedule. {{end}}
 
 
 ### Frequency
@@ -131,12 +133,12 @@ The `PeriodicSchedule` class allows the stub to be controlled in two main ways.
 The most convenient approach is to use a `StubConvention`.
 This has six possible values:
 
-* 'ShortInitial'
-* 'LongInitial'
-* 'ShortFinal'
-* 'LongFinal'
-* 'None'
-* 'Both'
+* ShortInitial
+* LongInitial
+* ShortFinal
+* LongFinal
+* None
+* Both
 
 The initial and final values correspond to the descriptions and diagrams above
 and fully define the stub required.

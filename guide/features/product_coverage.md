@@ -129,3 +129,14 @@ A <i class="fa fa-check"></i> for a measure in the coverage grid means:
 * The measure is wired-up and available out-of-the-box under the standard measure name above.
 * The examples project contains a pricing example requesting this measure.
 * The [command-line tool]({{site.baseurl}}/command_line_tool) distribution includes example data for requesting this measure.
+
+Strata 0.8 is planned to include the following additional coverage:
+
+* FX Forward / FX Spot
+* FX NDF (Non Deliverable Forward)
+* FX Swap
+* Deliverable Swap Future
+* Fixed Coupon Bond
+* Swaption (Physical)
+* STIR Future (IBOR)
+* Bullet Payment

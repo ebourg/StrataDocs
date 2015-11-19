@@ -13,7 +13,7 @@ A major update that brings functionality much closer to that needed for v1.0.
 
 * Curve calibration
 * New asset classes - FX Forward, FX Swap, FX NDF, Term Deposit, Deliverable Swap Futures, Ibor STIR Futures, Bullet Payment
-* Pricing level support for Swaptions, Bonds, FX vanilla options
+* Pricing level support for Swaptions, Bonds, FX vanilla options, Bond Futures, Bond Future Options, STIR Future Options (Ibor)
 * Loader project, allowing data to be loaded from XML and CSV formats
 * Reporting framework promoted from Beta
 

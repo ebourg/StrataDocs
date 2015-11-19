@@ -8,8 +8,8 @@ permalink: /reference_overview/
 The Strata codebase consists of a number of modules.
 Detailed reference documentation on each module will expand over time.
 
-When viewing the reference documentation and [Javadoc]({{site.baseurl}}/apidocs/),
-bear in mind that any package with `impl` in the name is considered to be an implementation detail.
+Full documentation of the API is available in the [Javadoc]({{site.baseurl}}/apidocs/).
+Note that any package with `impl` in the name is considered to be an implementation detail.
 
 
 ## Collect module

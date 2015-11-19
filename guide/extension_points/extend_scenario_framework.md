@@ -135,10 +135,10 @@ The `applyTo` method has an argument for a box containing the market data value 
 ### Implementing Perturbation
 
 This section demonstrates how to implement
-[`ScenarioPerturbation`]({{site.baseurl}}/apidocs/com/opengamma/strata/engine/marketdata/scenarios/ScenarioPerturbation.html)
+[`ScenarioPerturbation`]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/marketdata/scenario/ScenarioPerturbation.html)
 using one of the standard perturbations included in Strata as an example.
 The perturbation is 
-[`CurveParallelShifts`]({{site.baseurl}}/apidocs/com/opengamma/strata/function/marketdata/scenarios/curves/CurveParallelShifts.html).
+[`CurveParallelShifts`]({{site.baseurl}}/apidocs/com/opengamma/strata/function/marketdata/curve/CurveParallelShifts.html).
 It applies a shift to all points on a curve.
 
 ```java
@@ -189,14 +189,14 @@ The notable features of the class declaration are:
 [Joda Beans]({{site.baseurl}}/core_technologies/). 
 * The type parameter; the perturbation handles instances of `Curve`.
 * The `shiftType` field; the shift amount can be added to the curve Y values
-([`ShiftType.ABSOLUTE`]({{site.baseurl}}/apidocs/com/opengamma/strata/market/curve/ShiftType.html#ABSOLUTE)) or it
-can be used to scale the curve values ([`ShiftType.RELATIVE`]({{site.baseurl}}/apidocs/com/opengamma/strata/market/curve/ShiftType.html#RELATIVE)).
+([`ShiftType.ABSOLUTE`]({{site.baseurl}}/apidocs/com/opengamma/strata/market/ShiftType.html#ABSOLUTE)) or it
+can be used to scale the curve values ([`ShiftType.RELATIVE`]({{site.baseurl}}/apidocs/com/opengamma/strata/market/ShiftType.html#RELATIVE)).
 * The `shiftAmount` field; the amount by which the curve Y values are shifted.
 
 ### The applyShift Method
 
 The `applyShift` method creates an instance of
-[`ParallelShiftedCurve`]({{site.baseurl}}/apidocs/com/opengamma/strata/market/curve/ParallelShiftedCurve.html),
+[`ParallelShiftedCurve`]({{site.baseurl}}/apidocs/com/opengamma/strata/market/curve/perturb/ParallelShiftedCurve.html),
 a decorator which a the curve and applies a shift when Y values are requested.
 
 ### The applyTo Method

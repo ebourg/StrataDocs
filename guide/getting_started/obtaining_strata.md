@@ -22,7 +22,9 @@ Strata is also released to GitHub through the standard [repository release pages
 
 ### Source code
 
-As noted above, the source code for Strata is available from GitHub releases, however, the most up-to-date code can be obtained directly from [GitHub](https://github.com/OpenGamma/Strata). To do this you will need [Git](https://git-scm.com/download/).
+As noted above, the source code for Strata is available from GitHub releases, however,
+the most up-to-date code can be obtained directly from [GitHub](https://github.com/OpenGamma/Strata).
+To do this you will need [Git](https://git-scm.com/download/).
 
 Simply clone the repository locally:
 
@@ -49,5 +51,7 @@ Strata works out-of-the-box with most IDEs and no special settings are required.
 
 The Strata codebase should be imported as a Maven project using the included `pom.xml`.
 
-To help with contributions back to Strata, settings are included in the codebase for the Eclipse IDE providing formatting rules and templates. For further information on working with Strata in the Eclipse IDE see [here](https://github.com/OpenGamma/Strata/tree/master/eclipse).
+To help with contributions back to Strata, settings are included in the codebase for the Eclipse IDE
+providing formatting rules and templates. For further information on working with Strata in the Eclipse IDE
+see [here](https://github.com/OpenGamma/Strata/tree/master/eclipse).
 

@@ -6,7 +6,8 @@ permalink: /contributions/
 Contributions to Strata are very welcome.
 
 ## Reporting a bug
-Please raise all bugs as [Github Issues](https://github.com/OpenGamma/Strata/issues). If possible please include the following (where relevant):
+Please raise all bugs as [Github Issues](https://github.com/OpenGamma/Strata/issues).
+If possible please include the following (where relevant):
 
  * A short description of the bug.
  * An explanation as to what caused the problem, please be as detailed as possible.
@@ -18,7 +19,8 @@ Please raise all bugs as [Github Issues](https://github.com/OpenGamma/Strata/iss
  * JDK version and Operating system.
 
 ## Submitting a patch
-If you have a patch for anything from a bug right through to a full blown feature, the process for inclusion of your code into Strata is essentially the same.
+If you have a patch for anything from a bug right through to a full blown feature, the process
+for inclusion of your code into Strata is essentially the same.
 
  0. Fork Strata on Github.
  1. From your fork of Strata create a pull request in Github against `OpenGamma/Strata:master`.
@@ -31,7 +33,8 @@ We have a few basic rules for getting a patch accepted.
 
  * The patch must not break any existing tests.
  * The patch must not break backwards compatibility.
- * The patch must meet our visual code standards (see [here](https://github.com/OpenGamma/Strata/tree/master/eclipse) on how to get automatic formatting and templating).
+ * The patch must meet our visual code standards (see [here](https://github.com/OpenGamma/Strata/tree/master/eclipse)
+ on how to get automatic formatting and templating).
  * If the patch is adding new features it must:
    * Come with suitable tests.
    * Come with javadoc and if applicable additional documentation.

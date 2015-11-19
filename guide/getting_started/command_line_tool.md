@@ -5,42 +5,59 @@ permalink: /command_line_tool/
 
 {% include macros.html %}
 
-Strata includes a command-line tool for quickly exploring the built-in coverage and reporting features. This is distributed as a standalone zip file including the tool as well as example data.
+Strata includes a command-line tool for quickly exploring the built-in coverage and reporting features.
+This is distributed as a standalone zip file including the tool as well as example data.
 
 <img alt="Calculation flow diagram" src="{{site.baseurl}}/images/strata_report_tool_screenshot.png" />
 
 ## Background
 
-Legacy market risk systems typically require extensive set-up before they can be used to price instruments; usually a database has to be populated with conventions, currencies, holiday data, pricing configuration and market data, before the system can be run as a server, trades loaded, and eventually reports run.
+Legacy market risk systems typically require extensive set-up before they can be used to price instruments;
+usually a database has to be populated with conventions, currencies, holiday data, pricing configuration and market data,
+before the system can be run as a server, trades loaded, and eventually reports run.
 
-Strata is different. Although, of course, it ultimately needs the same inputs, at its heart it is a stateless library which does not rely on finding these in a database; all the inputs are explicitly supplied through its APIs.
+Strata is different. Although, of course, it ultimately needs the same inputs, at its heart it is a stateless library
+which does not rely on finding these in a database; all the inputs are explicitly supplied through its APIs.
 
-Since so many of the inputs that are necessary for pricing common instruments are standard market conventions, Strata provides these as part of the library and offer easy access to them via built-in constants. This includes common indices and their conventions, currencies and currency pairs, and even holiday calendars generated from rules for the common markets and exchanges. While in a production system these could be sourced from elsewhere and supplemented with more unusual or proprietary data, having the most common data built-in and easily accessible significantly lowers the barrier to evaluation and integration.
+Since so many of the inputs that are necessary for pricing common instruments are standard market conventions,
+Strata provides these as part of the library and offer easy access to them via built-in constants.
+This includes common indices and their conventions, currencies and currency pairs, and even holiday calendars generated
+from rules for the common markets and exchanges. While in a production system these could be sourced from elsewhere
+and supplemented with more unusual or proprietary data, having the most common data built-in and easily accessible
+significantly lowers the barrier to evaluation and integration.
 
-The command-line tool illustrates this by making full use of the built-in data and conventions to offer simple, command-line access to the Reporting API. Only trades and market data need to be supplied for access to any of Strata's coverage.
+The command-line tool illustrates this by making full use of the built-in data and conventions to offer simple,
+command-line access to the Reporting API. Only trades and market data need to be supplied for access to any of Strata's coverage.
 
 ## Obtaining the tool
 
 ### Download
 
-The tool is distributed as a standalone zip file including example data. The `strata-report-tool` package can be found under Downloads on the [releases](https://github.com/OpenGamma/Strata/releases) page.
+The tool is distributed as a standalone zip file including example data. The `strata-report-tool` package can be found
+under Downloads on the [releases](https://github.com/OpenGamma/Strata/releases) page.
 
 ### Source code
 
-The tool is implemented by a simple Java class, `ReportRunnerTool`, which wraps the Reporting API. The code can be found in the `strata-examples` module. See [obtaining strata]({{site.baseurl}}/obtaining_strata) for more information on obtaining the source code.
+The tool is implemented by a simple Java class, `ReportRunnerTool`, which wraps the Reporting API.
+The code can be found in the `strata-examples` module. See [obtaining strata]({{site.baseurl}}/obtaining_strata) for
+more information on obtaining the source code.
 
 ## Usage
 
 ### Package contents
 
-{{tip}}This assumes the tool is being run from the downloadable distribution. If you have built the tool from source code, then the example data is located in the strata-examples resources directory.{{end}}
+{{tip}}This assumes the tool is being run from the downloadable distribution. If you have built the tool from source code,
+then the example data is located in the strata-examples resources directory.{{end}}
 
 After downloading and unzipping the package, the distribution contains the following top-level items:
 
 * `strata-report-tool.jar` -- the self-contained JAR file used to run the tool from the command line.
-* `example-marketdata` -- a complete market environment containing curves, historical fixings, quotes and credit data. This is sufficient to calculate every measure on the example portfolios. When running the tool, the `-m` option can be pointed to this directory.
-* `example-portfolios` -- a set of example portfolios containing trades for all supported asset classes. When running the tool, the `-p` option can be pointed to a specific portfolio  in this directory.
-* `example-reports` -- a set of example report templates for controlling the output of the tool. When running the tool, the `-t` option can be pointed to a specific template in this directory.
+* `example-marketdata` -- a complete market environment containing curves, historical fixings, quotes and credit data.
+This is sufficient to calculate every measure on the example portfolios. When running the tool, the `-m` option can be pointed to this directory.
+* `example-portfolios` -- a set of example portfolios containing trades for all supported asset classes.
+When running the tool, the `-p` option can be pointed to a specific portfolio  in this directory.
+* `example-reports` -- a set of example report templates for controlling the output of the tool.
+When running the tool, the `-t` option can be pointed to a specific template in this directory.
 
 ### Running the tool
 
@@ -83,7 +100,9 @@ Running the tool without any arguments causes the help message to be displayed. 
 * `-p` -- the portfolio file, such as one from the `example-portfolios` directory described above.
 * `-t` -- the report template, such as one from the `example-reports` directory described above.
 
-The tool has a market data environment built-in which is identical to the one distributed with the tool in the `example-marketdata` directory. If the `-m` argument is not specified then this built-in market data will be used. This can be useful if you have made modifications to the `example-marketdata` directory.
+The tool has a market data environment built-in which is identical to the one distributed with the tool in the `example-marketdata` directory.
+If the `-m` argument is not specified then this built-in market data will be used.
+This can be useful if you have made modifications to the `example-marketdata` directory.
 
 For example, running the tool with only the required arguments above might generate the following output:
 
@@ -146,14 +165,16 @@ $ java -jar strata-report-tool.jar -p example-portfolios/swap-portfolio.xml -t e
 
 ## Report templates
 
-The tool outputs the result of running a report. The report is controlled through the use of a _report template_. This defines the structure and format of a report in a way that can be reused across different portfolios, asset classes and market environments.
+The tool outputs the result of running a report. The report is controlled through the use of a _report template_.
+This defines the structure and format of a report in a way that can be reused across different portfolios, asset classes and market environments.
 
 The Reporting API currently supports two types of report:
 
 * Trade report -- a table showing calculated measures (the columns) for each trade (the rows).
 * Cashflow report -- a table showing the cashflows for a single trade.
 
-The input file for a report template uses a standard INI format. This contains section names in square brackets (e.g. `[Present Value]`), each followed by `key = value` pairs.
+The input file for a report template uses a standard INI format.
+This contains section names in square brackets (e.g. `[Present Value]`), each followed by `key = value` pairs.
 
 Every report template must start with a `Settings` section which specifies the type of the report, for example:
 
@@ -164,24 +185,29 @@ reportType = trade
 
 ### Trade report template
 
-Trade reports are represented by a table showing trade-level calculated measures. The report template must specify `reportType = trade`.
+Trade reports are represented by a table showing trade-level calculated measures.
+The report template must specify `reportType = trade`.
 
 Trade reports are highly configurable using a simple dot-based notation for drilling into objects.
 
 ### Cashflow report template
 
-Cashflow reports are represented by a table showing individual cashflows for a single trade. The report template must specify `reportType = cashflow`.
+Cashflow reports are represented by a table showing individual cashflows for a single trade.
+The report template must specify `reportType = cashflow`.
 
-Cashflow reports are not currently parameterised, so no further configuration can be specified in the report template. The behaviour is to output all available fields for every relevant cashflow.
+Cashflow reports are not currently parameterised, so no further configuration can be specified in the report template.
+The behaviour is to output all available fields for every relevant cashflow.
 
 Cashflow reports are available for all asset classes which support the `ExplainPresentValue` measure.
 
 
 ## Portfolios
 
-{{note}}Strata will support FpML as its standard trade input format in a future release. This will be reflected here in the input to the command-line tool.{{end}}
+{{note}}Strata will support FpML as its standard trade input format in a future release.
+This will be reflected here in the input to the command-line tool.{{end}}
 
-Portfolio files currently consist of a list of trades in an XML representation. It is not recommended to construct portfolios by hand in this format, but it is possible to create new trades using the example portfolios as a guide.
+Portfolio files currently consist of a list of trades in an XML representation.
+It is not recommended to construct portfolios by hand in this format, but it is possible to create new trades using the example portfolios as a guide.
 
 The indices, day count conventions, and holiday calendars in the example portfolios refer to Strata's built-in data.
 
@@ -190,7 +216,9 @@ The indices, day count conventions, and holiday calendars in the example portfol
 
 {{note}}The structure of the market environment directory may be subject to change in order to ensure consistency as input formats for additional types of market data are added.{{end}}
 
-The market environment can be read from a directory, specified on the command line. This directory must contain subdirectories and files in a prescribed structure and format, and this completely defines the market data available to the tool. The data files have been designed for ease-of-use, and are generally in a CSV format.
+The market environment can be read from a directory, specified on the command line.
+This directory must contain subdirectories and files in a prescribed structure and format, and this completely defines the market data available to the tool.
+The data files have been designed for ease-of-use, and are generally in a CSV format.
 
 {{tip}}A common technique when using the command-line tool to evaluate Strata is to assemble several market environment directories containing different data, and to select the required environment by passing the corresponding directory to the -m option when running the tool.{{end}}
 
@@ -201,7 +229,9 @@ The market environment directory may contain the following subdirectories:
 * `quotes` -- contains quote data
 * `credit` -- contains additional data for pricing credit instruments
 
-While this currently only covers certain types of market data, Strata's built-in data may be used for other inputs such as index definitions or holiday calendars. Support for other types of market data will be added in future Strata releases in order to offer full control over all possible inputs.
+While this currently only covers certain types of market data, Strata's built-in data may be used for other inputs
+such as index definitions or holiday calendars. Support for other types of market data will be added in future
+Strata releases in order to offer full control over all possible inputs.
 
 ### Curves
 
@@ -235,7 +265,10 @@ The fields are described below.
 
 Curve groups assign purposes to curves. For example, they allow a curve to be identified as a USD discounting curve, or a forecasting curve for 3-month Libor.
 
-The market data rules specify the name of the curve group to use for a given trade. In Strata 0.7, a fixed set of rules are used by the command-line tool which always use a single curve group with the name `Default`. The use of multiple curve groups would be the mechanism by which, for example, a different discounting curve could be used for different counterparties, or the same measure could be displayed side-by-side showing the effect of using different curves.
+The market data rules specify the name of the curve group to use for a given trade.
+In Strata 0.8, a fixed set of rules are used by the command-line tool which always use a single curve group with the name `Default`.
+The use of multiple curve groups would be the mechanism by which, for example, a different discounting curve could be used
+for different counterparties, or the same measure could be displayed side-by-side showing the effect of using different curves.
 
 There must be a single file called `groups.csv` which defines all available curve groups. This is a CSV-formatted file with the following header row:
 
@@ -245,18 +278,20 @@ Group Name,Curve Type,Reference,Curve Name
 
 The fields are described below.
 
-| Field      | Description                                                                                                                                                                                                                                                  |
-|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Group Name | The name of the curve group.                                                                                                                                                                                                                                 |
-| Curve Type | `Discount` for a discounting curve, or `Forward` for a forward curve.                                                                                                                                                                                        |
-| Reference  | The reference for which the curve is used. For `Discount` curve types, this is the ISO currency code of the curve. For `Forward` curve types, this is the name of the corresponding index. The example market data uses Strata's built-in index definitions. |
-| Curve Name | The name of the curve. This must correspond to a curve defined in this group in a curve file.                                                                                                                                                                |
+| Field      | Description                                                                                                                               |
+|------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| Group Name | The name of the curve group.                                                                                                              |
+| Curve Type | `Discount` for a discounting curve, or `Forward` for a forward curve.                                                                     |
+| Reference  | The reference for which the curve is used. For `Discount` curve types, this is the ISO currency code of the curve.
+For `Forward` curve types, this is the name of the corresponding index. The example market data uses Strata's built-in index definitions. |
+| Curve Name | The name of the curve. This must correspond to a curve defined in this group in a curve file.                                             |
 
 The curve groups file allows a single curve to be used for multiple purposes.
 
 #### Curve settings
 
-There must also be a single file called `settings.csv` which specifies settings for each curve in the curves files. This is again a CSV-formatted file, with the following header row:
+There must also be a single file called `settings.csv` which specifies settings for each curve in the curves files.
+This is again a CSV-formatted file, with the following header row:
 
 ```
 Group Name,Curve Name,Value Type,Day Count,Interpolator,Left Extrapolator,Right Extrapolator
@@ -294,7 +329,8 @@ The fields are described below.
 | Date      | The date of the fixing, in the form `yyyy-mm-dd`.                                                                                             |
 | Value     | The numeric fixing value.                                                                                                                     |
 
-The values for each index define a fixing series. Each fixing series must be contained within a single CSV file, but a single file may contain multiple series. Historical fixing data may be divided among severval files as appropriate, and any file name is permitted.
+The values for each index define a fixing series. Each fixing series must be contained within a single CSV file, but a single file may contain multiple series.
+Historical fixing data may be divided among severval files as appropriate, and any file name is permitted.
 
 
 ### Quotes
@@ -318,7 +354,8 @@ This file may be used to specify a snapshot of quotes for market observables.
 
 ### Credit
 
-The `credit` directory contains market data needed for pricing credit products. It must contain a subdirectory for each valuation date that the market environment is to be used for, named in the format `yyyy-mm-dd`.
+The `credit` directory contains market data needed for pricing credit products.
+It must contain a subdirectory for each valuation date that the market environment is to be used for, named in the format `yyyy-mm-dd`.
 
 For each valuation date, data files may be specified for three types of credit data:
 
@@ -328,7 +365,9 @@ For each valuation date, data files may be specified for three types of credit d
 
 #### Yield curves
 
-{{note}}Strata's built-in credit coverage uses an implementation of the ISDA standard model. The rates curves required by this model have their own definition file format, described here. However, they are a more constrained form of the rates curves used elsewhere in Strata, and the two formats will likely be aligned in the future.{{end}}
+{{note}}Strata's built-in credit coverage uses an implementation of the ISDA standard model.
+The rates curves required by this model have their own definition file format, described here.
+However, they are a more constrained form of the rates curves used elsewhere in Strata, and the two formats will likely be aligned in the future.{{end}}
 
 A file named `cds.yieldCurves.csv` defines the interest rates curves to be used in CDS pricing. 
 
@@ -354,7 +393,8 @@ Two files are required for pricing single-name CDS trades:
 * `singleName.creditCurves.csv`
 * `singleName.staticData.csv`
 
-The `creditCurves` file contains curve data in the standard Markit format. The intention is for this to be downloaded directly through a Markit subscription.
+The `creditCurves` file contains curve data in the standard Markit format.
+The intention is for this to be downloaded directly through a Markit subscription.
 
 The `staticData` file contains supplementary data for each name. This is a CSV file with the following header row:
 
@@ -376,7 +416,8 @@ Two files are required for pricing CDS index trades:
 * `index.creditCurves.csv`
 * `index.staticData.csv`
 
-The `creditCurves` file contains curve data in the standard Markit format. The intention is for this to be downloaded directly through a Markit subscription.
+The `creditCurves` file contains curve data in the standard Markit format.
+The intention is for this to be downloaded directly through a Markit subscription.
 
 The `staticData` file contains supplementary pricing settings for each index. This is a CSV file with the following header row:
 

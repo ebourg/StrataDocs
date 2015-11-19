@@ -6,8 +6,10 @@ permalink: /reference_overview/
 ## Overview
 
 The Strata codebase consists of a number of modules.
-This reference documentation aims to cover in detail key parts of the API.
-However, right now it primarily covers the `strata-basics` module.
+Detailed reference documentation on each module will expand over time.
+
+Full documentation of the API is available in the [Javadoc]({{site.baseurl}}/apidocs/).
+Note that any package with `impl` in the name is considered to be an implementation detail.
 
 
 ## Collect module
@@ -17,6 +19,7 @@ The module builds on [Guava](https://github.com/google/guava), Google's high qua
 
 The collect module adds features in a number of areas:
 
+* Extended enums - provides support for `enum`-like data structures that are loaded at startup
 * Functions - additional Java SE 8 functional interfaces
 * Identifiers - a standard way to refer to an identifier
 * Ranges - ranges of values
@@ -38,9 +41,10 @@ For more information, see the following guides:
 * [Day counts]({{site.baseurl}}/day_counts) - converting date-based periods to numeric year fractions
 
 
-## Finance module
+## Product module
 
-The `strata-finance` module contains the main domain model, defining instruments such as interest rate swaps, FRAs and futures.
+The `strata-product` module contains the main domain model, defining instruments such as
+interest rate swaps, FRAs and futures.
 
 
 ## Market module
@@ -51,17 +55,23 @@ The `strata-market` includes the representations of the market, including curves
 ## Pricer module
 
 The `strata-pricer` module provides standard analytics for pricing and risk calculations on financial instruments.
+This depends on the `strata-math` module, which is intended to be an implementation detail.
 
 
-## Engine module
+## Calculation module
 
-The `strata-engine` module provides a calculation engine capable of calculating risk analytics.
+The `strata-calc` module provides a calculation engine capable of calculating risk analytics.
 Given a list of trades and some configuration parameters, it will determine what market data is needed,
 obtain it from a source, perform any necessary calibration, and calculate the desired results.
 
 
 ## Function module
 
-The `strata-function` module includes the functions that operate within `strata-engine` to calculate
+The `strata-function` module includes the functions that operate within `strata-calc` to calculate
 the desired results.
 
+
+## Report module
+
+The `strata-report` module provides a small framework for reporting on the results of calculations.
+A tool provides the ability to use a report template to drive the calculations necessary to produce a simple report.

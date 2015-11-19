@@ -32,7 +32,7 @@ To do this you will need [Git](https://git-scm.com/download/).
 Simply clone the repository locally:
 
 ```
-    git clone https://github.com/OpenGamma/Strata.git
+git clone https://github.com/OpenGamma/Strata.git
 ```
 
 ### Building
@@ -47,7 +47,7 @@ Note that versions of JDK 8 before update 40 are not able to compile Strata (due
 To build, simply change to the root directory of the cloned source code, and from the command line run:
 
 ```
-$ mvn compile
+mvn compile
 ```
 
 ### Using an IDE

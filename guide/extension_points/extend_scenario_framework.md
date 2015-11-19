@@ -33,7 +33,7 @@ The perturbation returns a new item of market data created by applying a transfo
 ## The MarketDataFilter Interface
 
 Market data filters are implementations of the
-[`MarketDataFilter`]({{site.baseurl}}/apidocs/com/opengamma/strata/engine/marketdata/scenarios/MarketDataFilter.html) interface. 
+[`MarketDataFilter`]({{site.baseurl}}/apidocs/com/opengamma/strata/engine/marketdata/scenario/MarketDataFilter.html) interface. 
 
 ```java
 public interface MarketDataFilter<T, I extends MarketDataId<T>> {
@@ -60,9 +60,9 @@ used when deciding whether the value should be perturbed.
 ### Implementing MarketDataFilter
 
 This section demonstrates how to implement
-[`MarketDataFilter`]({{site.baseurl}}/apidocs/com/opengamma/strata/engine/marketdata/scenarios/MarketDataFilter.html)
+[`MarketDataFilter`]({{site.baseurl}}/apidocs/com/opengamma/strata/engine/marketdata/scenario/MarketDataFilter.html)
 using one of the standard filters included in Strata as an example.
-The filter is [`CurveNameFilter`]({{site.baseurl}}/apidocs/com/opengamma/strata/function/marketdata/scenarios/curves/CurveNameFilter.html).
+The filter is [`CurveNameFilter`]({{site.baseurl}}/apidocs/com/opengamma/strata/function/marketdata/scenario/curves/CurveNameFilter.html).
 It handles curves, and matches if the name of the curve is the same as the curve name in the filter
 
 ```java
@@ -114,7 +114,7 @@ The `apply` method compares the name of the curve with the curve name field in t
 ## The Perturbation Interface
 
 Perturbations are implementations of the
-[`ScenarioPerturbation`]({{site.baseurl}}/apidocs/com/opengamma/strata/engine/marketdata/scenarios/ScenarioPerturbation.html) 
+[`ScenarioPerturbation`]({{site.baseurl}}/apidocs/com/opengamma/strata/engine/marketdata/scenario/ScenarioPerturbation.html) 
 interface.
 
 ```java
@@ -179,7 +179,7 @@ public final class CurveParallelShifts implements ScenarioPerturbation<Curve>, I
   
   ...
 }
-```
+``` 
 
 ### The Class Declaration
 

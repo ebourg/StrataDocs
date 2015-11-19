@@ -16,6 +16,7 @@ A major update that brings functionality much closer to that needed for v1.0.
 * Pricing level support for Swaptions, Bonds, FX vanilla options, Bond Futures, Bond Future Options, STIR Future Options (Ibor)
 * Loader project, allowing data to be loaded from XML and CSV formats
 * Reporting framework promoted from Beta
+* Removed dependency on legacy Analytics codebase
 
 
 ## Strata v0.7

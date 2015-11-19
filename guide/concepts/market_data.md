@@ -3,16 +3,16 @@ title: Market Data
 permalink: /market_data/
 ---
 
-Market data is a fundamental aspect of a risk system and most calculations performed by the Strata calculation
-engine are likely to use market data. Market data is a first class concept in Strata.
+Market data is a fundamental aspect of a risk system and most calculations performed by Strata 
+are likely to use market data. Market data is a first class concept in Strata.
 
 ## Definition
 
 The term "market data" in Strata refers to any value which is observable in the market or is derived solely from
 observable market data.
 
-For example, FX rates and futures prices are observable market data and can be looked up directly from a provider of
-market data such as Bloomberg or Reuters. 
+For example, futures prices are observable market data and can be looked up directly from a provider of
+market data such as Bloomberg or Reuters.
 
 A calibrated yield curve is an example of non-observable market data as it is derived from observable data such as
 quoted rates and futures prices.
@@ -60,7 +60,7 @@ key = DiscountFactorsKey.of(Currency.USD);
 ```
 
 The currency is the only field on this key; together with the type of the key itself, this is all the information
-the function should have to specify. The precise details of which USD discounting curve is used to satisfy this
+the function needs to specify. The precise details of which USD discounting curve is used to satisfy this
 requirement is a separate problem that is solved by market data IDs. 
 
 The keys are used to build an instance of `FunctionRequirements` in the `requirements` method and to request data
@@ -68,7 +68,7 @@ from the `CalculationMarketData` argument passed to the `execute` method.
 
 #### Market Data IDs
 
-Market data IDs are very similar to market data keys, but are used to identify precisely the piece of market data
+Market data IDs are very similar to market data keys, but are used to uniquely identify the piece of market data
 that will be used. They may contain additional fields in order to do this.
 
 In the example above, a function uses a market data key to request a set of USD discount factors.
@@ -91,5 +91,4 @@ The rules can be very general and apply to all calculations, for example:
 Or they can be extremely specific:
 
 > When pricing cross-currency swaps where one currency is CHF and the counterparty is "XYZ", use curve group
-"ABC" built using data from Bloomberg as the source of the discount factors
-
+"ABC" built using Bloomberg as the source of the underlying data

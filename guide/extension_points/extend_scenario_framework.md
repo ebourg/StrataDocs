@@ -25,7 +25,7 @@ filter and the filter returns `true` if it should be modified for the scenario, 
 ### Perturbations
 
 A perturbation contains the logic to modify an item of market data so it can be used in a scenario.
-In the example above, a perturbation would be applied to each curve to apply the one basis point shift.
+In the example above, a perturbation would be applied to the curve data to apply the one basis point shift.
 
 If a filter returns `true` for a piece of market data, the scenario framework passes the data to the associated perturbation.
 The perturbation returns a new item of market data created by applying a transformation the original.
@@ -40,7 +40,7 @@ public interface MarketDataFilter<T, I extends MarketDataId<T>> {
 
   public abstract Class<?> getMarketDataIdType();
 
-  public abstract boolean apply(I marketDataId, T marketData);
+  public abstract boolean apply(I marketDataId, MarketDataBox<T> marketData);
 }
 ```
 
@@ -114,26 +114,31 @@ The `apply` method compares the name of the curve with the curve name field in t
 ## The Perturbation Interface
 
 Perturbations are implementations of the
-[`Perturbation`]({{site.baseurl}}/apidocs/com/opengamma/strata/engine/marketdata/scenarios/Perturbation.html) interface.
+[`ScenarioPerturbation`]({{site.baseurl}}/apidocs/com/opengamma/strata/engine/marketdata/scenarios/ScenarioPerturbation.html) 
+interface.
 
 ```java
-public interface Perturbation<T> {
+public interface ScenarioPerturbation<T> {
 
-  public abstract T apply(T marketData);
+  public abstract MarketDataBox<T> applyTo(MarketDataBox<T> marketData);
+
+  public abstract int getScenarioCount();
 }
 ```
 
 The type parameter `T` is the type of market data handled by the perturbation.
 It is important to note that a perturbation deals with a single type of market data.
 
-The `apply` method has an argument for the market data value and returns an object of the same type.
+The `applyTo` method has an argument for a box containing the market data value and returns a box containing an
+ object of the same type.
 
 ### Implementing Perturbation
 
 This section demonstrates how to implement
-[`Perturbation`]({{site.baseurl}}/apidocs/com/opengamma/strata/engine/marketdata/scenarios/Perturbation.html) using
-one of the standard perturbations included in Strata as an example.
-The perturbation is [`CurveParallelShift`]({{site.baseurl}}/apidocs/com/opengamma/strata/function/marketdata/scenarios/curves/CurveParallelShift.html).
+[`ScenarioPerturbation`]({{site.baseurl}}/apidocs/com/opengamma/strata/engine/marketdata/scenarios/ScenarioPerturbation.html)
+using one of the standard perturbations included in Strata as an example.
+The perturbation is 
+[`CurveParallelShifts`]({{site.baseurl}}/apidocs/com/opengamma/strata/function/marketdata/scenarios/curves/CurveParallelShifts.html).
 It applies a shift to all points on a curve.
 
 ```java
@@ -149,7 +154,7 @@ It applies a shift to all points on a curve.
  * shifted value is {@code (value x (1 + shift))}.
  */
 @BeanDefinition(builderScope = "private")
-public final class CurveParallelShift implements Perturbation<Curve>, ImmutableBean {
+public final class CurveParallelShifts implements ScenarioPerturbation<Curve>, ImmutableBean {
 
   /** The type of shift to apply to the Y values of the curve. */
   @PropertyDefinition(validate = "notNull")
@@ -162,7 +167,13 @@ public final class CurveParallelShift implements Perturbation<Curve>, ImmutableB
   ...
 
   @Override
-  public Curve apply(Curve curve) {
+  public MarketDataBox<Curve> applyTo(MarketDataBox<Curve> curve) {
+    return curve.apply(getScenarioCount(), this::applyShift);
+  }
+
+  private Curve applyShift(Curve curve, int scenarioIndex) {
+    double shiftAmount = shiftAmounts.get(scenarioIndex);
+    log.debug("Applying {} parallel shift of {} to curve '{}'", shiftType, shiftAmount, curve.getName());
     return ParallelShiftedCurve.of(curve, shiftType, shiftAmount);
   }
   
@@ -182,8 +193,19 @@ The notable features of the class declaration are:
 can be used to scale the curve values ([`ShiftType.RELATIVE`]({{site.baseurl}}/apidocs/com/opengamma/strata/market/curve/ShiftType.html#RELATIVE)).
 * The `shiftAmount` field; the amount by which the curve Y values are shifted.
 
-### The apply Method
+### The applyShift Method
 
-The `apply` method creates an instance of
+The `applyShift` method creates an instance of
 [`ParallelShiftedCurve`]({{site.baseurl}}/apidocs/com/opengamma/strata/market/curve/ParallelShiftedCurve.html),
-a decorator which wraps the curve and applies a shift when Y values are requested.
+a decorator which a the curve and applies a shift when Y values are requested.
+
+### The applyTo Method
+
+The `applyTo` method applies a shift to every curve in the market data box. It does this by calling the box's
+`apply` method, passing in the number of scenarios and a reference to the `applyShift` method. The `MarketDataBox`
+invokes the `applyShift` method for every curve in the box and creates a box containing the result. This means
+the perturbation doesn't have to deal with the two possibilities; the box can contain a single curve shared between
+all scenarios or it can contain multiple curves, one for each scenario.
+
+The [MarketDataBox]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/marketdata/scenario/MarketDataBox.html)
+documentation provides more background about market data boxes and why they are used.

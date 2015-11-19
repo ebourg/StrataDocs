@@ -63,7 +63,7 @@ The function creates a market data key for each piece of market data it requires
 ###### Single Market Data Values
 
 Single market data values are individual items are market data used in the calculations, and they can be of any type.
-A their simplest they might be a single `double` value representing a quoted price or rate.
+A their simplest they might be a `double` value representing a quoted price or rate.
 They can also be complex values derived from underlying data, for example a curve or a higher level object such
 as a `DiscountFactors` instance.
 
@@ -73,7 +73,7 @@ or they can be derived from other underlying market data, for example calibrated
 ###### Time Series
 
 Time series contain multiple values of an item of observable market data over a ranges of dates.
-For example, a series of index rates used for historical fixings, or a series of FX rates used when calculating returns.
+For example, a series of index rates used for historical fixings.
 
 The values in a time series are always of type `double`.
 
@@ -84,7 +84,7 @@ the purposes of reporting. In order to perform this conversion the required FX r
 
 The engine must know which currencies are included in the results in order to provide the correct FX rates.
 Therefore if the result of the function includes any currency value, the currencies should be included in
-the set of output currencies. 
+the set of output currencies.
 
 ##### Example requirements Implementation
 
@@ -183,12 +183,13 @@ calculations repeatedly and pack the results into a single return value.
 
 A function requests market data by calling the following methods on `CalculationMarketData`:
 
-* `getValues`
+* `getValue`
 * `getTimeSeries`
 
 The single argument to these methods is the market data key identifying the market data required.
-The return value of `getTimeSeries` is a `LocalDateDoubleTimeSeries`. The return value of `getValues`
-is a list of values, one for each scenario.
+The return value of `getTimeSeries` is a `LocalDateDoubleTimeSeries`. The return value of `getValue`
+is a `MarketDataBox` which provides a market data value for each scenario. The market data value for
+each scenario is provided by `MarketDataBox.getValue(int scenarioIndex)`.
 
 If the market data doesn't contain a value for the key an exception will be thrown.
 The exception will be caught by the engine and the results will contain an error explaining the calculation

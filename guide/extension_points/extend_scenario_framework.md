@@ -62,7 +62,7 @@ used when deciding whether the value should be perturbed.
 This section demonstrates how to implement
 [`MarketDataFilter`]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/marketdata/scenario/MarketDataFilter.html)
 using one of the standard filters included in Strata as an example.
-The filter is [`CurveNameFilter`]({{site.baseurl}}/apidocs/com/opengamma/strata/function/marketdata/scenario/curves/CurveNameFilter.html).
+The filter is [`CurveNameFilter`]({{site.baseurl}}/apidocs/com/opengamma/strata/function/marketdata/scenario/curve/CurveNameFilter.html).
 It handles curves, and matches if the name of the curve is the same as the curve name in the filter
 
 ```java

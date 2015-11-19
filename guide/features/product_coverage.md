@@ -3,7 +3,7 @@ title: Product Coverage
 permalink: /product_coverage/
 ---
 
-Strata 0.7 includes the following product coverage:
+Strata 0.8 includes the following product coverage:
 
 <table class="product-coverage">
   <thead>

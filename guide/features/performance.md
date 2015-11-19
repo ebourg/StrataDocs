@@ -5,7 +5,7 @@ permalink: /performance/
 
 {% include macros.html %}
 
-{{note}} Strata 0.7 is a next-generation technology preview. The results presented here include those from a closed source implementation of vector based pricers that are backed by Strata. {{end}}
+{{note}} Strata 0.8 is a next-generation technology preview. The results presented here include those from a closed source implementation of vector based pricers that are backed by Strata. {{end}}
 
 
 ## Target use-cases

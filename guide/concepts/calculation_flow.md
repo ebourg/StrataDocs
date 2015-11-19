@@ -5,7 +5,7 @@ permalink: /calculation_flow/
 
 {% include macros.html %}
 
-{{note}} Strata 0.7 is a next-generation technology preview, and the details on this page are subject to change. {{end}}
+{{note}} Strata 0.8 is a next-generation technology preview, and the details on this page are subject to change. {{end}}
 
 ## Overview
 

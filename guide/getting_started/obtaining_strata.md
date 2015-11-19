@@ -6,17 +6,20 @@ permalink: /obtaining_strata/
 There are a number of ways to obtain Strata.
 
 
-## From Maven Central
-
-Strata will soon be available in Maven Central.
-
 ## From GitHub Releases
 
 Strata is also released to GitHub through the standard [repository release pages](https://github.com/OpenGamma/Strata/releases). The downloads include:
 
- * `strata-dist` -- the full Strata distribution containing the Strata jars, Strata's dependencies and Javadoc.
+ * `strata-dist` -- the full Strata distribution containing the jar files, dependencies and Javadoc.
  * `report-tool` -- the [command-line tool]({{site.baseurl}}/command_line_tool) for easy access to the reporting capabilities.
  * Source code -- the source code as of the release, documentation source and tool chain.
+
+## From a Maven repository
+
+The Strata JAR files are available from the [OpenGamma Maven repository](http://maven.opengamma.com/nexus/content/groups/public/com/opengamma/strata/).
+
+It is intended that Strata will be available in [Maven Central](http://search.maven.org) from v1.0.
+
 
 ## For Developers
 
@@ -36,8 +39,10 @@ Simply clone the repository locally:
 
 To build Strata from source code, the following dependencies are required:
 
- * Java SE Development Kit (JDK) 8
- * Maven 3.2 or later
+* Java SE Development Kit (JDK) 8u40 or later
+* Maven 3.2 or later
+
+Note that versions of JDK 8 before update 40 are not able to compile Strata (due to bugs in early JDK 8 versions).
 
 To build, simply change to the root directory of the cloned source code, and from the command line run:
 

@@ -60,7 +60,7 @@ After this stage, no more market data needs to be sourced for the calculations t
 It may be useful to inspect the results of this stage in advance of a long-running calculation job to check
 for market data errors before executing the calculations.
 
-This stage is implemented by `MarketDataFactory` in the method `buildCalculationEnvironment`.
+This stage is implemented by `MarketDataFactory` in the method `buildCalculationMarketData`.
 
 ## Scenario building
 
@@ -74,7 +74,8 @@ necessary data has already been sourced or built, so the calculations can procee
 
 The scenarios are specified by the _scenario definition_ input which describes the perturbations to be applied.
 
-This stage is implemented by `MarketDataFactory` in the method `buildScenarioCalculationEnvironment`.
+This stage is implemented by `MarketDataFactory` in the method `buildCalculationMarketData` method taking
+a `ScenarioDefinition`.
 
 ## Calculation runner
 

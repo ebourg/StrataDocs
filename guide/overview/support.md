@@ -15,7 +15,7 @@ OpenGamma offers commercial support for Strata and all its software offerings. T
  * Testing tools.
  * Production support.
 
-Please [contact us directly](http://www.opengamma.com/) to discuss commercial support.
+Please [contact us directly](http://www.opengamma.com/support-services) to discuss commercial support.
 
 ## Open source support
 Community driven support for Strata is available through the [OpenGamma community forums](http://forums.opengamma.com).

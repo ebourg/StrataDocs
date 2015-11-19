@@ -45,7 +45,8 @@ from the scenarios can be compactly represented in vector form, allowing pricing
 market data in almost the same way as the trade could be priced for a single scenario.
 This batching of calculations can lead to a considerable increase in performance versus scalar pricing.
 
-Vector-based pricing is particularly useful in initial margin (IM) calculations, where common methodologies involve thousands of scenarios.
+Vector-based pricing is particularly useful in initial margin (IM) calculations, where common methodologies
+involve thousands of scenarios.
 
 Internal testing showed significant performance gains by using our own vector-based pricer implementations in Strata
 for the present value calculations required to compute initial margin (IM) using two methodologies.
@@ -57,5 +58,5 @@ maturities and an average maturity of 15 years.
 | A             |   202000    |           1700  |     117       |   183,000  |
 | B             |   202000    |           5000  |     159       |   397,000  |
 
-Strata already has the necessary extension points to enable these implementations, and work is ongoing to bring
-this code into production and extend asset class coverage for vector-based computation.
+Strata already has the necessary extension points to enable these implementations.
+A closed source prototype has been developed to prove the capability and to provide these numbers.

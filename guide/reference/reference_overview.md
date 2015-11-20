@@ -19,7 +19,7 @@ The module builds on [Guava](https://github.com/google/guava), Google's high qua
 
 The collect module adds features in a number of areas:
 
-* Extended enums - provides support for `enum`-like data structures that are loaded at startup
+* [Extended enums]({{site.baseurl}}/extended_enum) - provides support for `enum`-like data structures that are loaded at startup
 * Functions - additional Java SE 8 functional interfaces
 * Identifiers - a standard way to refer to an identifier
 * Ranges - ranges of values
@@ -50,6 +50,12 @@ interest rate swaps, FRAs and futures.
 ## Market module
 
 The `strata-market` includes the representations of the market, including curves and surfaces.
+
+
+## Loader module
+
+The `strata-loader` provides the ability to load products and market data from files.
+This includes an FpML loader for products.
 
 
 ## Pricer module

@@ -45,6 +45,9 @@ For more information, see the following guides:
 
 The `strata-product` module contains the main domain model, defining instruments such as
 interest rate swaps, FRAs and futures.
+For more information, see the following guides:
+
+* [FRA]({{site.baseurl}}/fra) - Forward Rate Agreements
 
 
 ## Market module

@@ -20,7 +20,7 @@ Strata 0.8 includes the following product coverage:
     </tr>
   </thead>
   <tbody>
-    <tr>
+  <tr>
     <td class="asset">Vanilla Swap</td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
@@ -30,7 +30,7 @@ Strata 0.8 includes the following product coverage:
     <td class="na"></td>
     <td class="na"></td>
     <td><i class="fa fa-check"></i></td>
-    </tr>
+  </tr>
   <tr>
     <td class="asset">OIS</td>
     <td><i class="fa fa-check"></i></td>

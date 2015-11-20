@@ -207,13 +207,34 @@ A <i class="fa fa-check"></i> for a measure in the coverage grid means:
 * The examples project contains a pricing example requesting this measure.
 * The [command-line tool]({{site.baseurl}}/command_line_tool) distribution includes example data for requesting this measure.
 
-Strata 0.8 also includes pricing-level support for the following asset classes:
+
+## Additional coverage
+
+The following asset classes can be priced using the API of the `strata-pricer` module.
+They are not currently exposed through the scenario-aware calculation API.
+Work is ongoing to provide complete end-to-end support for them.
 
 * Fixed Coupon Bond
-* Swaption
+* Swaption (Physical) using Normal, Black and SABR models
+* Swaption (Cash-settled) using Normal, Black and SABR models
 * Bond Future
-* Bond Future Option
-* STIR Future Option (Ibor)
+* Bond Future Option using Black model
+* STIR Future Option (Ibor) using Normal model
+* FX Vanilla Option using Black model
 
-These asset classes do not have calculation functions or examples.
-Work is ongoing to provide complete end-to-end support for them.
+
+
+## Curve calibration
+
+Strata includes a full implementation of the multi-curve framework for curve calibration.
+The following asset classes can be used when defining curves:
+
+* Ibor Fixing
+* Term Deposit
+* FRA
+* STIR Future (Ibor)
+* Vanilla Swap (Fixed vs Ibor)
+* OIS (Fixed vs Overnight)
+* Basis Swap (Ibor vs Ibor)
+* Cross-currency Swap (Ibor vs Ibor)
+* FX Swap

@@ -75,7 +75,7 @@ For example, the ISDA FpML specification includes long lists of standard codes f
 These external code lists can be tied to extended enums.
 When they are, the name used is called the _external name_.
 
-For exampe, Strata includes external names that map the FpML names to the following extended enums:
+For example, Strata includes external names that map the FpML names to the following extended enums:
 
 * `BusinessDayConvention`
 * `DayCount`

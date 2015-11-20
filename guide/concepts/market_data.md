@@ -44,7 +44,10 @@ See [Adding a New Measure]({{site.baseurl}}/add_measure) for details.
 ### Identifying Market Data
 
 In order for functions to declare the market data they require and to request it during their calculations,
-there must be a way to identify market data. This is done using implementations of `MarketDataKey` and `MarketDataId`.
+there must be a way to identify market data. This is done using implementations of 
+[`MarketDataKey`]({{site.baseurl}}/apidocs/com/opengamma/strata/basics/market/MarketDataKey.html)
+and 
+[`MarketDataId`]({{site.baseurl}}/apidocs/com/opengamma/strata/basics/market/MarketDataId.html)
 
 #### Market Data Keys
 
@@ -52,8 +55,9 @@ Market data keys are used by functions to request a piece of market data. The ke
 that a function cares about to operate as generically as possible.
 
 For example, the function to price a USD swap will need discount factors from a USD discounting curve;
-therefore, one of its market data requirements will be an instance of `DiscountFactorsKey` with a currency of USD.
-This can be constructed as shown below:
+therefore, one of its market data requirements will be an instance of 
+[`DiscountFactorsKey`]({{site.baseurl}}/apidocs/com/opengamma/strata/market/key/DiscountFactorsKey.html)
+with a currency of USD. This can be constructed as shown below:
 
 ```java
 key = DiscountFactorsKey.of(Currency.USD);
@@ -63,8 +67,11 @@ The currency is the only field on this key; together with the type of the key it
 the function needs to specify. The precise details of which USD discounting curve is used to satisfy this
 requirement is a separate problem that is solved by market data IDs. 
 
-The keys are used to build an instance of `FunctionRequirements` in the `requirements` method and to request data
-from the `CalculationMarketData` argument passed to the `execute` method.
+The keys are used to build an instance of 
+[`FunctionRequirements`]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/marketdata/FunctionRequirements.html)
+in the `requirements` method and to request data from the
+[`CalculationMarketData`]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/marketdata/CalculationMarketData.html)
+argument passed to the `execute` method.
 
 #### Market Data IDs
 
@@ -92,3 +99,34 @@ Or they can be extremely specific:
 
 > When pricing cross-currency swaps where one currency is CHF and the counterparty is "XYZ", use curve group
 "ABC" built using Bloomberg as the source of the underlying data
+
+### Market Data Boxes
+
+Functions that perform calculations request market data from an instance of 
+[`CalculationMarketData`]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/marketdata/CalculationMarketData.html). 
+The `getValue` method on this interface returns 
+[`MarketDataBox<T>`]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/marketdata/scenario/MarketDataBox.html), 
+where `T` is the type of the market data value used in the calculation for each scenario. The function requests 
+the data for a scenario by calling `MarketDataBox.getValue(int scenarioIndex)`, passing in the index of the scenario.
+
+A market data box can contain a single value for the data or it can contain multiple values, one for each 
+scenario. If it contains a single value then the same value is used in every scenario.
+
+Wrapping the data in a box allows a simple interface for looking up market data that hides whether there
+is one value or multiple values. Without the box every function that uses market data would have to
+handle the two cases separately.
+
+The box also takes care of transforming the market data when using it to build other market data values
+(see the `apply` methods). This means that market data functions and perturbations don't need
+different logic to deal with single and multiple values.
+
+Using a box allows scenario data to be stored more efficiently in some cases. For example, curve data for
+multiple scenarios can include one copy of the x-axis data which is used in all scenarios. If a separate
+curve were stored for each scenario that data would be unnecessarily stored multiple times.
+
+In some cases a function might need to access the data for all scenarios at the same time. For example, if
+part of the calculation is the same for all scenarios it can be done once and reused instead of recalculated
+for each scenario. In this case a 
+[`ScenarioMarketDataKey`]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/marketdata/ScenarioMarketDataKey.html) 
+should be used to retrieve the scenario value from the
+[`CalculationMarketData`]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/marketdata/CalculationMarketData.html). 

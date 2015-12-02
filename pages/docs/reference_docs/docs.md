@@ -53,6 +53,7 @@ For more information, see the following guides:
 
 * [Swap]({{site.baseurl}}/swap) - Swaps (Fixed, Ibor, Overnight, Inflation)
 * [FRA]({{site.baseurl}}/fra) - Forward Rate Agreements
+* [Swaption]({{site.baseurl}}/swaption) - Options on swaps
 * [Term Deposit]({{site.baseurl}}/term_deposit) - Fixed rate deposits
 * [Bullet Payment]({{site.baseurl}}/bullet_payment) - Unidirectional one-off payments
 

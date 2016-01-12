@@ -31,7 +31,7 @@ Strata provides two calculation APIS - Pricer-level and Calculation-level.
 The APIs differ primarily in the amount of data they can handle.
 
 The Pricer-level API provides the ability to calculate one result (risk measure).
-The inputs are one trade one set of market data.
+The inputs consist of one trade and one set of market data.
 
 The Calculation-level API provides the ability to calculate many results.
-The inputs are one or more trades, one or more measures and one or more set of market data (scenarios).
+The inputs consist of one or more trades, one or more measures and one or more sets of market data (scenarios).

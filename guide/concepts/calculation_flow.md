@@ -23,7 +23,7 @@ At its core, Strata calculations operate on a list of trades, a list of columns 
 The setup stage primarily involves choosing the columns and defining the calculation rules.
 
 Each column is normally a thin wrapper around the risk measure to be calculated, such as present value or par rate.
-When necessary, the column can also contain overrides to the default set of calculation rules,
+When necessary, the column can also contain overrides to the default set of calculation rules.
 
 The calculation rules have three parts:
 

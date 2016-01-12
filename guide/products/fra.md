@@ -31,6 +31,8 @@ Fra fra = Fra.builder()
   .build();
 ```
 
+{{tip}}The `strata-loader` project provides the ability to load a FRA from FpML.{{end}}
+
 
 ## Pricing
 
@@ -42,9 +44,9 @@ The `strata-pricer` module provides pricing support for FRAs:
 The following pricing methods are available:
 
 * present value, and associated sensitivity
-* forecast value, and associated sensitivity
 * par rate
 * par spread, and associated sensitivity
+* forecast value, and associated sensitivity
 * cash flows
 * explain present value
 

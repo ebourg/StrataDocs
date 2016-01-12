@@ -48,6 +48,8 @@ interest rate swaps, FRAs and futures.
 For more information, see the following guides:
 
 * [FRA]({{site.baseurl}}/fra) - Forward Rate Agreements
+* [Swap]({{site.baseurl}}/swap) - Swaps (Fixed, Ibor, Overnight, Inflation)
+* [Term Deposit]({{site.baseurl}}/term_deposit) - Fixed rate deposits
 
 
 ## Market module

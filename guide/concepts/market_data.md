@@ -56,11 +56,11 @@ that a function cares about to operate as generically as possible.
 
 For example, the function to price a USD swap will need discount factors from a USD discounting curve;
 therefore, one of its market data requirements will be an instance of 
-[`DiscountFactorsKey`]({{site.baseurl}}/apidocs/com/opengamma/strata/market/key/DiscountFactorsKey.html)
+[`DiscountCurveKey`]({{site.baseurl}}/apidocs/com/opengamma/strata/market/key/DiscountCurveKey.html)
 with a currency of USD. This can be constructed as shown below:
 
 ```java
-key = DiscountFactorsKey.of(Currency.USD);
+key = DiscountCurveKey.of(Currency.USD);
 ```
 
 The currency is the only field on this key; together with the type of the key itself, this is all the information
@@ -85,8 +85,8 @@ are derived from a USD discounting curve, and there may be multiple such curves 
 from different market observables (perhaps from different sources, or by using observables snapshotted
 at different points in time). Therefore, two additional fields are needed to identify precisely the USD discount
 factors to use: the curve group name, and the market data feed details.
-The _market data rules_ specify these additional fields, and map the market data key (`DiscountFactorsKey`)
-into a market data ID (`DiscountFactorsId`).
+The _market data rules_ specify these additional fields, and map the market data key (`DiscountCurveKey`)
+into a market data ID (`DiscountCurveId`).
 
 #### Market Data Rules
 

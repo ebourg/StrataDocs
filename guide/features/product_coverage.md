@@ -3,7 +3,7 @@ title: Product Coverage
 permalink: /product_coverage/
 ---
 
-Strata 0.8 includes the following product coverage:
+Strata 0.9 includes the following product coverage:
 
 <table class="product-coverage">
   <thead>
@@ -223,7 +223,6 @@ Work is ongoing to provide complete end-to-end support for them.
 * FX Vanilla Option using Black model
 
 
-
 ## Curve calibration
 
 Strata includes a full implementation of the multi-curve framework for curve calibration.
@@ -236,5 +235,6 @@ The following asset classes can be used when defining curves:
 * Vanilla Swap (Fixed vs Ibor)
 * OIS (Fixed vs Overnight)
 * Basis Swap (Ibor vs Ibor)
+* Three Leg Basis Swap (Euribor)
 * Cross-currency Swap (Ibor vs Ibor)
 * FX Swap

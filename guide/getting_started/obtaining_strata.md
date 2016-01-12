@@ -47,7 +47,7 @@ Note that versions of JDK 8 before update 40 are not able to compile Strata (due
 To build, simply change to the root directory of the cloned source code, and from the command line run:
 
 ```
-mvn compile
+mvn install
 ```
 
 ### Using an IDE
@@ -59,4 +59,3 @@ The Strata codebase should be imported as a Maven project using the included `po
 To help with contributions back to Strata, settings are included in the codebase for the Eclipse IDE
 providing formatting rules and templates. For further information on working with Strata in the Eclipse IDE
 see [here](https://github.com/OpenGamma/Strata/tree/master/eclipse).
-

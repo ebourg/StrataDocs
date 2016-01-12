@@ -12,6 +12,7 @@ These illustrate:
 
 * Programmatic use of all the built-in [product coverage]({{site.baseurl}}/product_coverage) in the
 `com.opengamma.strata.examples.finance` package.
+The `SwapPricingExample` and `SwapPricingWithCalibrationExample` classes are good starting points.
 * The use of the declarative scenario API to run a historical simulation, producing P&L vectors which
 could be used to calculate historical VaR, in `HistoricalScenarioExample`.
 * Trade serialisation in `SwapTradeModelDemo`.

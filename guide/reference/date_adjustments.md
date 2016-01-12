@@ -23,7 +23,7 @@ The `strata-basics` module includes a number of key classes for adjusting dates:
 
 ## Business Day Adjustment
 
-The simplest adjustment is provided by ``BusinessDayAdjustment``.
+The simplest adjustment is provided by `BusinessDayAdjustment`.
 It takes an input date and returns the closest business day, as defined by the rules of the adjustment.
 
 The rules consist of two items:

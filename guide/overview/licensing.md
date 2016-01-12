@@ -15,9 +15,9 @@ The following third party libraries are used by Strata:
 |:---------------------:|:-------:|:--------------------------------------------------------------:|
 | Commons Math          | 3.5     | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
 | Commons IO            | 2.4     | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
-| Guava                 | 18.0    | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
+| Guava                 | 19.0    | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
 | Joda-Beans            | 1.7     | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
-| Joda-Convert          | 1.7     | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
+| Joda-Convert          | 1.8.1   | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
 | SLF4J                 | 1.7.13  | [MIT](http://www.opensource.org/licenses/mit-license.php) |
 | JCommander            | 1.48    | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
 | Colt                  | 1.2.0   | [Colt](https://dst.lbl.gov/ACSSoftware/colt/license.html) |
@@ -30,7 +30,7 @@ The following third party libraries are used in test code by Strata:
 
 | Library name          | Version | License                                                                     |
 |:---------------------:|:-------:|:--------------------------------------------------------------:|
-| TestNG                | 6.9.9   | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
+| TestNG                | 6.9.10  | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
 | Mockito               | 1.10.19 | [MIT](https://github.com/mockito/mockito/blob/master/LICENSE) |
-| AssertJ               | 2.0.0   | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
+| AssertJ               | 3.3.0   | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
 | Memory File System    | 0.6.4   | [MIT](http://opensource.org/licenses/MIT) |

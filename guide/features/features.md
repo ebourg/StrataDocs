@@ -24,3 +24,14 @@ Its built-in coverage relies on all the same extension points as could be used e
 The scope of Strata and its extension points are illustrated below.
 
 <img alt="Components and extension points" src="{{site.baseurl}}/images/features.svg" />
+
+## Main APIs
+
+Strata provides two calculation APIS - Pricer-level and Calculation-level.
+The APIs differ primarily in the amount of data they can handle.
+
+The Pricer-level API provides the ability to calculate one result (risk measure).
+The inputs are one trade one set of market data.
+
+The Calculation-level API provides the ability to calculate many results.
+The inputs are one or more trades, one or more measures and one or more set of market data (scenarios).

@@ -5,7 +5,8 @@ permalink: /add_measure/
 ## Measures
 
 In Strata, measures define the values that can be calculated for a trade or other calculation target.
-For example, Strata provides a standard set of measures including present value and PV01 (see the `Measure` class).
+For example, Strata provides a standard set of measures including present value and PV01 (see the
+[`Measure`]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/config/Measure.html) class).
 When a user requests a calculation they specify the measures that should be calculated and the rules defining
 how they should be calculated.
 
@@ -16,7 +17,8 @@ for new asset classes.
 ## Calculation Functions
 
 Measures are calculated by classes that implement one of the subtypes of `CalculationFunction`, normally
-`CalculationSingleFunction`. Adding a new measure to Strata requires three steps:
+[`CalculationSingleFunction`]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/runner/function/CalculationSingleFunction.html).
+Adding a new measure to Strata requires three steps:
 
 * Create a function to calculate the measure
 * Create a `Measure` instance to identify the measure and 
@@ -64,8 +66,7 @@ The function creates a market data key for each piece of market data it requires
 
 Single market data values are individual items are market data used in the calculations, and they can be of any type.
 A their simplest they might be a `double` value representing a quoted price or rate.
-They can also be complex values derived from underlying data, for example a curve or a higher level object such
-as a `DiscountFactors` instance.
+They can also be complex values derived from underlying data, for example a curve.
 
 Single market data values can be values that are directly observable in the market, for example rates or prices,
 or they can be derived from other underlying market data, for example calibrated curves or volatility surfaces.
@@ -96,7 +97,7 @@ following market data is required:
 
 * A time series of historical rates for each of the indices
 * A forward curve for predicting the future values of the rates for each of the indices
-* A `DiscountFactors` object for the currency used for discounting future values
+* A discount curve for the currency used for discounting future values
 
 ```java
 @Override
@@ -104,12 +105,12 @@ public FunctionRequirements requirements(FraTrade trade) {
   Fra fra = trade.getProduct();
 
   // Create a set of all indices referenced by the FRA
-  Set<Index> indices = new HashSet<>();
-  
+  Set<IborIndex> indices = new HashSet<>();
+
   // The main index is always present
   indices.add(fra.getIndex());
-  
-  // This index is optional
+
+  // The index used for linear interpolation is optional
   fra.getIndexInterpolated().ifPresent(indices::add);
 
   // Create a key identifying the rate of each index referenced by the FRA
@@ -119,11 +120,11 @@ public FunctionRequirements requirements(FraTrade trade) {
 
   // Create a key identifying the forward curve of each index referenced by the FRA
   Set<MarketDataKey<?>> indexCurveKeys = indices.stream()
-      .map(MarketDataKeys::indexCurve)
+      .map(IborIndexCurveKey::of)
       .collect(toImmutableSet());
 
   // Create a key identifying the discount factors for the FRA currency
-  Set<DiscountFactorsKey> discountFactorsKeys = ImmutableSet.of(DiscountFactorsKey.of(fra.getCurrency()));
+  Set<DiscountCurveKey> discountFactorsKeys = ImmutableSet.of(DiscountCurveKey.of(fra.getCurrency()));
 
   return FunctionRequirements.builder()
       .singleValueRequirements(Sets.union(indexCurveKeys, discountFactorsKeys))
@@ -137,8 +138,8 @@ The logic of the method performs the following steps:
 
 1. Builds a set containing the indices referenced by the FRA
 1. Builds a set of `IndexRateKey` instances for the indices to identify the time series of index rates
-1. Builds a set of `MarketDataKey` instances identifying the forward curve for each index
-1. Creates a `DiscountFactorsKey` identifying the discount factors for the FRA currency
+1. Builds a set of `IborIndexCurveKey` instances identifying the forward curve for each index
+1. Creates a `DiscountCurveKey` identifying the discount curve for the FRA currency
 1. Creates a set of `FunctionRequirements` containing the keys and with the FRA currency as the output currency 
 
 ##### The defaultReportingCurrency Method

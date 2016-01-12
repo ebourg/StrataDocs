@@ -173,7 +173,7 @@ The Reporting API currently supports two types of report:
 * Trade report -- a table showing calculated measures (the columns) for each trade (the rows).
 * Cashflow report -- a table showing the cashflows for a single trade.
 
-The input file for a report template uses a standard INI format.
+The input file for a report template uses a standard ini format.
 This contains section names in square brackets (e.g. `[Present Value]`), each followed by `key = value` pairs.
 
 Every report template must start with a `Settings` section which specifies the type of the report, for example:
@@ -266,7 +266,7 @@ The fields are described below.
 Curve groups assign purposes to curves. For example, they allow a curve to be identified as a USD discounting curve, or a forecasting curve for 3-month Libor.
 
 The market data rules specify the name of the curve group to use for a given trade.
-In Strata 0.8, a fixed set of rules are used by the command-line tool which always use a single curve group with the name `Default`.
+In Strata 0.9, a fixed set of rules are used by the command-line tool which always use a single curve group with the name `Default`.
 The use of multiple curve groups would be the mechanism by which, for example, a different discounting curve could be used
 for different counterparties, or the same measure could be displayed side-by-side showing the effect of using different curves.
 
@@ -282,8 +282,7 @@ The fields are described below.
 |------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | Group Name | The name of the curve group.                                                                                                              |
 | Curve Type | `Discount` for a discounting curve, or `Forward` for a forward curve.                                                                     |
-| Reference  | The reference for which the curve is used. For `Discount` curve types, this is the ISO currency code of the curve.
-For `Forward` curve types, this is the name of the corresponding index. The example market data uses Strata's built-in index definitions. |
+| Reference  | The reference for which the curve is used. For `Discount` curve types, this is the ISO currency code of the curve. For `Forward` curve types, this is the name of the corresponding index. The example market data uses Strata's built-in index definitions. |
 | Curve Name | The name of the curve. This must correspond to a curve defined in this group in a curve file.                                             |
 
 The curve groups file allows a single curve to be used for multiple purposes.
@@ -311,7 +310,7 @@ The fields are described below.
 
 Each curve must occur exactly once in this file, or it will be ignored.
 
-### Historical fixings
+### Fixings
 
 The `historical-fixings` directory contains CSV-formatted files with historical fixing data. 
 

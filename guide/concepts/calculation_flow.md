@@ -5,7 +5,7 @@ permalink: /calculation_flow/
 
 {% include macros.html %}
 
-{{note}} Strata 0.8 is a next-generation technology preview, and the details on this page are subject to change. {{end}}
+{{note}} Strata 0.9 is a next-generation technology preview, and the details on this page are subject to change. {{end}}
 
 ## Overview
 
@@ -19,18 +19,25 @@ use, or they can be run sequentially through APIs that abstract across multiple 
 
 ## Calculation setup
 
-At its core, Strata operates at a trade level. The goal of the first stage is to determine:
+At its core, Strata calculations operate on a list of trades, a list of columns and some rules.
+The setup stage primarily involves choosing the columns and defining the calculation rules.
 
-* the calculation functions to use to obtain the requested set of measures on the given trades
-* the market data requirements of those functions
+Each column is normally a thin wrapper around the risk measure to be calculated, such as present value or par rate.
+When necessary, the column can also contain overrides to the default set of calculation rules,
 
-Together, these calculation requirements will allow the _market environment_ to be built in the next stage,
-and the calculations to be executed in a later stage.
+The calculation rules have three parts:
 
-The key input to this stage is the set of _calculation rules_. These completely determine which calculation functions
-are available for use, and they fill in the details of the market data those functions require.
+* pricing rules - select the appropriate function to invoke
+* market data rules - select the market data to use
+* reporting currency - select the currency to convert to
 
-This stage is implemented by `CalculationRunner` in the methods `createCalculationConfig` and `createCalculationTasks`.
+The final part of setup is creating a suitable set of market data.
+In many cases, the market data is known and can simply be assembled.
+
+Where the market data is not known, Strata offers the option of using the calculation functions
+to determine the data that is required for a specific set of trades, columns and rules.
+To achieve this, create an instance of `CalculationTasks` and call `getRequirements()`.
+These requirements allow the _market environment_ to be built in the next stage.
 
 ## Market data building
 
@@ -60,7 +67,7 @@ After this stage, no more market data needs to be sourced for the calculations t
 It may be useful to inspect the results of this stage in advance of a long-running calculation job to check
 for market data errors before executing the calculations.
 
-This stage is implemented by `MarketDataFactory` in the method `buildCalculationMarketData`.
+This stage is implemented by `MarketDataFactory` in the method `buildMarketData`.
 
 ## Scenario building
 
@@ -74,7 +81,7 @@ necessary data has already been sourced or built, so the calculations can procee
 
 The scenarios are specified by the _scenario definition_ input which describes the perturbations to be applied.
 
-This stage is implemented by `MarketDataFactory` in the method `buildCalculationMarketData` method taking
+This stage is implemented by `MarketDataFactory` in the method `buildMarketData` method taking
 a `ScenarioDefinition`.
 
 ## Calculation runner
@@ -82,11 +89,12 @@ a `ScenarioDefinition`.
 This stage runs the calculations necessary to produce the measures originally requested.
 It can be invoked either with a standard _market environment_, or with a _scenario market environment_.
 
-Thanks to the preparation in the previous stages, there are no further inputs to this stage.
 The output is the set of calculation results.
 This a table containing the input trades as the rows and the requested measures as the columns.
 Each 'cell' then contains one result, or one result for each scenario in the case of a _scenario market
 environment_ being used.
+
+This stage is implemented by the `CalculationRunner` component.
 
 ## Report runner
 

@@ -7,6 +7,18 @@ Releases of Strata are performed when a set of functionality has stabilized.
 The release files can be [downloaded here](https://github.com/OpenGamma/Strata/releases).
 
 
+## Strata v0.9
+
+Additional preparatory work for v1.0. The next release will be v0.10, not v1.0.
+
+* Simpler calculation runner concept for calculations with many trades, many measures or many scenarios
+* Unified pricing for Swaptions, with present value available via the calculation runner
+* Add currency exposure to pricers
+* Use data files to define holidays and indices
+* Update interpolators and extrapolators
+* Efficient data structures for large scenarios
+
+
 ## Strata v0.8
 
 A major update that brings functionality much closer to that needed for v1.0.

@@ -99,16 +99,23 @@ concurrent data structures that could slow the application down.
 ### Ini files
 
 Each extended enum is defined by one or more `.ini` files.
-The ini file must be located on the classpath in the same folder as the interface.
+The ini file must be located on the classpath in one of two specific locations,
+`com/opengamma/strata/config/base` or `com/opengamma/strata/config/application`.
+The "base" location is intended for use by Strata.
+The "application" location is intended for use by application code.
+The list of known locations can be expanded by setting the system property
+`com.opengamma.strata.config.directories` on the command line.
 
 For example, if the extended enum interface is `com.opengamma.strata.basics.date.DayCount`,
-then the ini file must be located in the same folder: `com/opengamma/strata/basics/date/DayCount.ini`.
+then an application ini file must be named: `com/opengamma/strata/config/application/DayCount.ini`.
 
-The ini file has the following format (described below):
+The [`ResourceConfig`]({{site.baseurl}}/apidocs/com/opengamma/strata/collect/io/ResourceConfig.html) class
+is responsible for loading and combining the ini files.
+
+The ini file typically has the following format (described below):
 
 ```
 [chain]
-priority = 0
 chainNextFile = false
 
 [providers]
@@ -124,19 +131,16 @@ Actual/Actual ISDA = Act/Act ISDA
 
 ### Ini file chain
 
-When loading the configuration for an extended enum, there may be more than one ini file on the classpath
-with the same name (such as from two different jar files).
-The `[chain]` section is used to manage the ambiguity.
+The list of known locations provides a deterministic ordering to the loading of ini files.
+The "base" location is lower priority than the "application" location.
+There must only ever be one ini file in each location on the classpath.
 
-The `priority` section is an integral number, where larger numbers have higher priorities.
-When processing multiple ini files, the files are processed in order from highest priority to lowest.
-
-The `chainNextFile` section is a boolean, "true" or "false".
-When processing multiple ini files, processing will continue to the next file if the flag is true,
+The `[chain]` section is used to control how the files link together.
+The `chainNextFile` property is a boolean, "true" or "false".
+When processing more than one ini file, processing will continue to the next file if the flag is true,
 and ignore lower priority files if the flag is false.
 
-In combination, these two features provide the ability for application code to add to, or replace,
-the existing Strata ini configuration.
+The default value for `chainNextFile` is true, thus the whole `[chain]` section is normally omitted.
 
 ### Ini file providers
 

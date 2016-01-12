@@ -133,12 +133,12 @@ The `PeriodicSchedule` class allows the stub to be controlled in two main ways.
 The most convenient approach is to use a `StubConvention`.
 This has six possible values:
 
-* ShortInitial
-* LongInitial
-* ShortFinal
-* LongFinal
-* None
-* Both
+* 'ShortInitial'
+* 'LongInitial'
+* 'ShortFinal'
+* 'LongFinal'
+* 'None'
+* 'Both'
 
 The initial and final values correspond to the descriptions and diagrams above
 and fully define the stub required.

@@ -5,7 +5,7 @@ permalink: /performance/
 
 {% include macros.html %}
 
-{{note}} Strata 0.8 is a next-generation technology preview.
+{{note}} Strata 0.9 is a next-generation technology preview.
 The results presented here include those from a closed source implementation of vector based pricers that are backed by Strata. {{end}}
 
 
@@ -55,8 +55,8 @@ maturities and an average maturity of 15 years.
 
 |  Methodology  | Trade count |  Scenario count |  Run time (s) | PVs/core/s |
 |:-------------:|:-----------:|:---------------:|:-------------:|:----------:|
-| A             |   202000    |           1700  |     117       |   183,000  |
-| B             |   202000    |           5000  |     159       |   397,000  |
+| A             |   202,000   |           1700  |     117       |   183,000  |
+| B             |   202,000   |           5000  |     159       |   397,000  |
 
 Strata already has the necessary extension points to enable these implementations.
 A closed source prototype has been developed to prove the capability and to provide these numbers.

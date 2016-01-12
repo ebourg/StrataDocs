@@ -35,7 +35,7 @@ Java SE Development Kit (JDK) 8u40 or later.
 
 The Strata JAR files can be obtained from the [Strata Releases](https://github.com/OpenGamma/Strata/releases) page on GitHub.
 They are also available from the [OpenGamma Maven repository](http://maven.opengamma.com/nexus/content/groups/public/com/opengamma/strata/)
-however it is intended to add them to [Maven Central](http://search.maven.org) from v1.0.
+however it is intended to add them to [Maven Central](http://search.maven.org/#search|ga|1|opengamma) from v1.0.
 Please see [obtaining Strata]({{site.baseurl}}/obtaining_strata) for more information.
 
 At runtime the Java Runtime Environment (JRE) 8 or later is required.

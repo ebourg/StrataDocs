@@ -31,24 +31,22 @@ Fra fra = Fra.builder()
   .build();
 ```
 
+{{tip}}The `strata-loader` project provides the ability to load a FRA from FpML.{{end}}
+
 
 ## Pricing
 
 The `strata-pricer` module provides pricing support for FRAs:
 
-* [`DiscountingFraProductPricer`]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/fra/DiscountingFraProductPricer.html) class.
-* [`DiscountingFraTradePricer`]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/fra/DiscountingFraTradePricer.html) class.
+* `DiscountingFraProductPricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/fra/DiscountingFraProductPricer.html).
+* `DiscountingFraTradePricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/fra/DiscountingFraTradePricer.html).
 
-The following [pricing methods]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/fra/DiscountingFraProductPricer.html)
-are available:
+The following pricing methods are available:
 
-* present value
-* present value sensitivity
-* forecast value
-* forecast value sensitivity
+* present value, and associated sensitivity
 * par rate
-* par spread
-* par spread sensitivity
+* par spread, and associated sensitivity
+* forecast value, and associated sensitivity
 * cash flows
 * explain present value
 
@@ -59,8 +57,8 @@ The following table summarizes the fields on `Fra` that can be used to control t
 For more detail on the meaning of each field, see the
 [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/product/fra/Fra.html);
 
-| Property name     | Description | Optional   |
-|-------------------|-------------|------------|
+| Property name     | Description | Required/Optional |
+|-------------------|-------------|-------------------|
 | buySell           | Whether the FRA is buy or sell | Required |
 | currency          | The primary currency | Defaults to the currency of the index |
 | notional          | The notional amount | Required |

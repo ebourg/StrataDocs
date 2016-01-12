@@ -62,6 +62,9 @@ SwapLeg receiveLeg = RateCalculationSwapLeg.builder()
 Swap swap = Swap.of(payLeg, receiveLeg);
 ```
 
+{{tip}}The `strata-loader` project provides the ability to load a swap from FpML.{{end}}
+
+
 
 ## Pricing
 
@@ -73,9 +76,9 @@ The `strata-pricer` module provides pricing support for swaps:
 The following pricing methods are available:
 
 * present value, and associated sensitivity
-* forecast value, and associated sensitivity
 * par rate, and associated sensitivity
 * par spread, and associated sensitivity
+* forecast value, and associated sensitivity
 * accrued interest
 * currency exposure
 * current cash

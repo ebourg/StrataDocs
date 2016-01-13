@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Introduction to Strata
 permalink: /introduction/
 ---
 

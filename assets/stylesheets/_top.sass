@@ -1,11 +1,11 @@
 .topbar .logo
   position: relative
   margin: -2px 1.5rem 0 $column-gutter/2
-  margin-right: 17rem
   float: left
   a
     font-size: $font-size-l
     font-weight: 600
+    padding: 0
     display: block
 
 .top
@@ -16,14 +16,21 @@
   background-color: $green-light
   color: $white
 
-  .navigation
+  ul
     padding: 0
     margin: 0
     height: $top-height
     list-style: none
-    float: left
-    li
+    display: flex
+
+  li
+    display: none
+
+    @media #{$large-up}
       display: inline-block
+
+  .navigation
+    float: left
 
   .tabsel
     background-color: $grey-dark
@@ -41,33 +48,25 @@
     font-size: $font-size-sm
     cursor: pointer
     height: $top-height
-    padding-left: 0.5rem
-    padding-right: 0.5rem
+    padding: 0 1.5rem
     line-height: $top-height + 2px
     border: none
     text-decoration: none
 
-  .og
-    padding: 0
-    margin: 0
+  .links
     float: right
     margin-right: $column-gutter/2
-    height: $top-height
-
-    div
-      margin-left: 1rem
-      line-height: $top-height
-      float: right
-
-    .toggle
-      line-height: 1.5rem
-      margin-top: .6em
-      text-align: right
-     
-      @media #{$large-up}
-        display: none
 
     .og_logo
       img
+        margin-top: -2px
         width: 118px
         height: 20px
+
+  .toggle		
+    line-height: 1.5rem		
+    padding-top: .6em		
+    text-align: right		
+      		
+    @media #{$large-up}		
+      display: none

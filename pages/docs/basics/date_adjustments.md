@@ -1,9 +1,7 @@
 ---
-title: Reference documentation - Date adjustments
+title: Date adjustments
 permalink: /date_adjustments/
 ---
-
-## Date Adjustments
 
 A key problem when working with dates is calculating one date relative to another
 taking into account [holidays]({{site.baseurl}}/holidays), weekends and other conventions.

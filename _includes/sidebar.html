@@ -8,9 +8,18 @@
     </div>
   </div>
   -->
+{% if page.tab == 'intro' %}
+  {% assign datafile = site.data.sidebar_intro %}
+{% elsif page.tab == 'docs' %}
+  {% assign datafile = site.data.sidebar_docs %}
+{% elsif page.tab == 'dev' %}
+  {% assign datafile = site.data.sidebar_dev %}
+{% else %}
+  {% assign datafile = site.data.sidebar_intro %}
+{% endif %}
 
   <section>
-  {% for entry in site.data.sidebar %}
+  {% for entry in datafile %}
     <h2>{{entry.title}}</h2>
     <nav>
       <ul>

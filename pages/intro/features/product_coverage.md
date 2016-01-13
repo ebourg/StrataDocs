@@ -21,7 +21,7 @@ Strata 0.9 includes the following product coverage:
   </thead>
   <tbody>
   <tr>
-    <td class="asset">Vanilla Swap</td>
+    <td class="asset"><a href="{{site.baseurl}}/swap">Vanilla Swap</a></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
@@ -32,7 +32,7 @@ Strata 0.9 includes the following product coverage:
     <td><i class="fa fa-check"></i></td>
   </tr>
   <tr>
-    <td class="asset">OIS</td>
+    <td class="asset"><a href="{{site.baseurl}}/swap">OIS</a></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
@@ -43,7 +43,7 @@ Strata 0.9 includes the following product coverage:
     <td><i class="fa fa-check"></i></td>
   </tr>
   <tr>
-    <td class="asset">Variable-Notional Swap</td>
+    <td class="asset"><a href="{{site.baseurl}}/swap">Variable-Notional Swap</a></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
@@ -54,7 +54,7 @@ Strata 0.9 includes the following product coverage:
     <td><i class="fa fa-check"></i></td>
   </tr>
   <tr>
-    <td class="asset">Cross-Currency Swap</td>
+    <td class="asset"><a href="{{site.baseurl}}/swap">Cross Currency Swap</a></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
@@ -65,7 +65,7 @@ Strata 0.9 includes the following product coverage:
     <td><i class="fa fa-check"></i></td>
   </tr>
   <tr>
-  <td class="asset">FRA</td>
+    <td class="asset"><a href="{{site.baseurl}}/fra">FRA</a></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
@@ -175,7 +175,7 @@ Strata 0.9 includes the following product coverage:
     <td></td>
   </tr>
   <tr>
-    <td class="asset">Term Deposit</td>
+    <td class="asset"><a href="{{site.baseurl}}/term_deposit">Term Deposit</a></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
@@ -186,7 +186,7 @@ Strata 0.9 includes the following product coverage:
     <td></td>
   </tr>
   <tr>
-    <td class="asset">Bullet Payment</td>
+    <td class="asset"><a href="{{site.baseurl}}/bullet_payment">Bullet Payment</a></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>

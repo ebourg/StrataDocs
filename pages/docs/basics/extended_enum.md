@@ -1,9 +1,7 @@
 ---
-title: Reference documentation - Extended Enums
+title: Extended Enums
 permalink: /extended_enum/
 ---
-
-## Extended Enums
 
 The Java `enum` concept is great for data that is constant and never changes.
 However, sometimes there is a need for data that rarely changes, but sometimes does.

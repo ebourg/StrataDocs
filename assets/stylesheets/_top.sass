@@ -1,9 +1,10 @@
 .topbar .logo
   position: relative
   margin: -2px 1.5rem 0 $column-gutter/2
+  margin-right: 17rem
   float: left
   a
-    font-size: $font-size-ml
+    font-size: $font-size-l
     font-weight: 600
     display: block
 
@@ -23,10 +24,16 @@
     float: left
     li
       display: inline-block
-      margin-right: 1rem
 
-      @media #{$small-only}
-        display: none
+  .tabsel
+    background-color: $grey-dark
+
+  .tabdesel
+    a
+      &:focus,
+      &:active,
+      &:hover
+        background-color: $blue-light
 
   a
     display: block
@@ -34,11 +41,11 @@
     font-size: $font-size-sm
     cursor: pointer
     height: $top-height
+    padding-left: 0.5rem
+    padding-right: 0.5rem
     line-height: $top-height + 2px
     border: none
     text-decoration: none
-    &:hover
-      text-decoration: underline
 
   .og
     padding: 0

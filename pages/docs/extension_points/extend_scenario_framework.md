@@ -207,5 +207,5 @@ invokes the `applyShift` method for every curve in the box and creates a box con
 the perturbation doesn't have to deal with the two possibilities; the box can contain a single curve shared between
 all scenarios or it can contain multiple curves, one for each scenario.
 
-The [MarketDataBox]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/marketdata/scenario/MarketDataBox.html)
+The [MarketDataBox]({{site.baseurl}}/apidocs/com/opengamma/strata/basics/market/MarketDataBox.html)
 documentation provides more background about market data boxes and why they are used.

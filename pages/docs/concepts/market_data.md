@@ -105,7 +105,7 @@ Or they can be extremely specific:
 Functions that perform calculations request market data from an instance of 
 [`CalculationMarketData`]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/marketdata/CalculationMarketData.html). 
 The `getValue` method on this interface returns 
-[`MarketDataBox<T>`]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/marketdata/scenario/MarketDataBox.html), 
+[`MarketDataBox<T>`]({{site.baseurl}}/apidocs/com/opengamma/strata/basics/market/MarketDataBox.html), 
 where `T` is the type of the market data value used in the calculation for each scenario. The function requests 
 the data for a scenario by calling `MarketDataBox.getValue(int scenarioIndex)`, passing in the index of the scenario.
 
@@ -127,6 +127,6 @@ curve were stored for each scenario that data would be unnecessarily stored mult
 In some cases a function might need to access the data for all scenarios at the same time. For example, if
 part of the calculation is the same for all scenarios it can be done once and reused instead of recalculated
 for each scenario. In this case a 
-[`ScenarioMarketDataKey`]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/marketdata/ScenarioMarketDataKey.html) 
+[`ScenarioMarketDataKey`]({{site.baseurl}}/apidocs/com/opengamma/strata/basics/market/ScenarioMarketDataKey.html) 
 should be used to retrieve the scenario value from the
 [`CalculationMarketData`]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/marketdata/CalculationMarketData.html). 

@@ -4,7 +4,7 @@ permalink: /releases/
 ---
 
 Releases of Strata are performed when a set of functionality has stabilized.
-The release files can be [downloaded here](https://github.com/OpenGamma/Strata/releases).
+To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
 
 ## Strata v0.9

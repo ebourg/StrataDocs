@@ -5,13 +5,30 @@
     </h1>
     <nav>
       <ul id="navigation" class="navigation">
-        <li><a href="https://github.com/OpenGamma/Strata">Source Code</a></li>
-        <li><a href="https://github.com/OpenGamma/Strata/releases">Releases</a></li>
+{% if page.tab == 'intro' %}
+        <li class="tabsel"><a href="{{site.baseurl}}/introduction/">Introduction</a></li>
+        <li class="tabdesel"><a href="{{site.baseurl}}/docs">Documentation</a></li>
+        <li class="tabdesel"><a href="{{site.baseurl}}/development">Development</a></li>
+{% elsif page.tab == 'docs' %}
+        <li class="tabdesel"><a href="{{site.baseurl}}/introduction">Introduction</a></li>
+        <li class="tabsel"><a href="{{site.baseurl}}/docs">Documentation</a></li>
+        <li class="tabdesel"><a href="{{site.baseurl}}/development">Development</a></li>
+{% elsif page.tab == 'dev' %}
+        <li class="tabdesel"><a href="{{site.baseurl}}/introduction">Introduction</a></li>
+        <li class="tabdesel"><a href="{{site.baseurl}}/docs">Documentation</a></li>
+        <li class="tabsel"><a href="{{site.baseurl}}/development">Development</a></li>
+{% else %}
+        <li class="tabdesel"><a href="{{site.baseurl}}/introduction">Introduction</a></li>
+        <li class="tabdesel"><a href="{{site.baseurl}}/docs">Documentation</a></li>
+        <li class="tabdesel"><a href="{{site.baseurl}}/development">Development</a></li>
+{% endif %}
       </ul>
-      <div class="og">
-        <div class="toggle"><button type="button" id="toggle-menu" class="button--teal">Menu</button></div>
-        <div class="og_logo"><img alt="OpenGamma" src="{{ "/images/logo_topnav.png" | prepend: site.baseurl }}" /></div>
-      </div>
+      <ul class="links">
+        <li class="tabdesel"><a href="https://github.com/OpenGamma/Strata"><i class="fa fa-external-link-square fa-fw"></i> Source Code</a></li>
+        <li class="tabdesel"><a href="https://github.com/OpenGamma/Strata/releases"><i class="fa fa-external-link-square fa-fw"></i> Download</a></li>
+        <li class="tabdesel"><a class="og_logo" href="http://www.opengamma.com"><img alt="OpenGamma" src="{{ "/images/logo_topnav.png" | prepend: site.baseurl }}" /></a></li>
+      </ul>
+      <div class="toggle"><button type="button" id="toggle-menu" class="button--teal">Menu</button></div>		
     </nav>
   </div>
 </header>

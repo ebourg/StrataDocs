@@ -1,21 +1,18 @@
 <div id="sidebar" class="sidebar">
-  <!--
-  <div>
-    <div class="searchbox">
-      <form>
-        <input type="text" id="st-search-input" class="searchbox-input" placeholder="Search docs" />
-      </form>
-    </div>
-  </div>
-  -->
 
   <section>
-  {% for entry in site.data.sidebar %}
+  {% capture sidebar %}sidebar_{{ page.tab }}{% endcapture %}
+  {% for entry in site.data[sidebar] %}
     <h2>{{entry.title}}</h2>
     <nav>
       <ul>
       {% for item in entry.items %}
-        <li><a href="{{ item.url | prepend: site.baseurl }}">{{item.title}}</a></li>
+        {% if page.url == item.url %}
+          {% assign li_class = 'class="current"' %}
+        {% else %}
+          {% assign li_class = '' %}
+        {% endif %}
+        <li {{ li_class }}><a href="{{ item.url | prepend: site.baseurl }}">{{item.title}}</a></li>
       {% endfor %}
       </ul>
     </nav>

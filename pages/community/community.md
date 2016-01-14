@@ -1,6 +1,6 @@
 ---
-title: Development
-permalink: /development/
+title: Community
+permalink: /community/
 ---
 
 Strata is an Open Source project backed by a commercial company, [OpenGamma](http://www.opengamma.com).

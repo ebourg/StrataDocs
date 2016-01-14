@@ -12,7 +12,11 @@
         {% else %}
           {% assign li_class = '' %}
         {% endif %}
-        <li {{ li_class }}><a href="{{ item.url | prepend: site.baseurl }}">{{item.title}}</a></li>
+        {% if item.external %}
+          <li><a href="{{ item.url }}"><i class="fa fa-external-link-square fa-fw"></i> {{ item.title }}</a></li>
+        {% else %}
+          <li {{ li_class }}><a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a></li>
+        {% endif %}
       {% endfor %}
       </ul>
     </nav>

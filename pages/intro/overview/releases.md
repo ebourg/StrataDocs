@@ -4,10 +4,12 @@ permalink: /releases/
 ---
 
 Releases of Strata are performed when a set of functionality has stabilized.
-The release files can be [downloaded here](https://github.com/OpenGamma/Strata/releases).
+To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
 
 ## Strata v0.9
+
+*14 January 2016*
 
 Additional preparatory work for v1.0. The next release will be v0.10, not v1.0.
 
@@ -21,6 +23,8 @@ Additional preparatory work for v1.0. The next release will be v0.10, not v1.0.
 
 ## Strata v0.8
 
+*19 November 2015*
+
 A major update that brings functionality much closer to that needed for v1.0.
 
 * Curve calibration
@@ -32,6 +36,8 @@ A major update that brings functionality much closer to that needed for v1.0.
 
 
 ## Strata v0.7
+
+*25 June 2015*
 
 The initial release.
 

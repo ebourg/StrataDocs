@@ -1,5 +1,5 @@
 ---
-title: Products - Bullet Payment
+title: Bullet Payment
 permalink: /bullet_payment/
 ---
 

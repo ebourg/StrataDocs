@@ -9,6 +9,8 @@ To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obt
 
 ## Strata v0.9
 
+*14 January 2016*
+
 Additional preparatory work for v1.0. The next release will be v0.10, not v1.0.
 
 * Simpler calculation runner concept for calculations with many trades, many measures or many scenarios
@@ -21,6 +23,8 @@ Additional preparatory work for v1.0. The next release will be v0.10, not v1.0.
 
 ## Strata v0.8
 
+*19 November 2015*
+
 A major update that brings functionality much closer to that needed for v1.0.
 
 * Curve calibration
@@ -32,6 +36,8 @@ A major update that brings functionality much closer to that needed for v1.0.
 
 
 ## Strata v0.7
+
+*25 June 2015*
 
 The initial release.
 

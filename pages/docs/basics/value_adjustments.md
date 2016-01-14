@@ -1,9 +1,7 @@
 ---
-title: Reference documentation - Value Adjustments
+title: Value Adjustments
 permalink: /value_adjustments/
 ---
-
-## Introduction
 
 Once a [schedule]({{site.baseurl}}/schedules) of dates has been determined,
 a key task is associating a value with the schedule.

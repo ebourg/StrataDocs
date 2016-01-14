@@ -1,9 +1,7 @@
 ---
-title: Reference documentation - Holidays
+title: Holidays
 permalink: /holidays/
 ---
-
-## Holidays
 
 A key problem when working with dates is the impact of holidays and weekends.
 To manage this complexity, a *holiday calendar* is used.

@@ -1,11 +1,11 @@
 ---
-title: Products - FRA
+title: Forward Rate Agreement
 permalink: /fra/
 ---
 
-## Forward Rate Agreement (FRA)
+{% include macros.html %}
 
-A FRA is a financial instrument that represents the one off exchange of a fixed
+A Forward Rate Agreement (FRA) is a financial instrument that represents the one off exchange of a fixed
 rate of interest for a floating rate at a future date.
 
 For example, a FRA might involve an agreement to exchange the difference between

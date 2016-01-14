@@ -1,11 +1,9 @@
 ---
-title: Reference documentation - Schedules
+title: Schedules
 permalink: /schedules/
 ---
 
 {% include macros.html %}
-
-## Introduction
 
 A common problem in finance is the derivation of a schedule of dates.
 The schedule is generally used to determine accrued interest and payments.

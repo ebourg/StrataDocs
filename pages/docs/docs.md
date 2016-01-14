@@ -1,7 +1,11 @@
 ---
 title: Reference documentation
-permalink: /reference_overview/
+permalink: /docs/
 ---
+
+{% include macros.html %}
+
+{{note}} Strata 0.9 is a next-generation technology preview release. Please be aware that the APIs, features and extension points described in this documentation may be subject to change. {{end}}
 
 ## Overview
 
@@ -47,9 +51,10 @@ The `strata-product` module contains the main domain model, defining instruments
 interest rate swaps, FRAs and futures.
 For more information, see the following guides:
 
-* [FRA]({{site.baseurl}}/fra) - Forward Rate Agreements
 * [Swap]({{site.baseurl}}/swap) - Swaps (Fixed, Ibor, Overnight, Inflation)
+* [FRA]({{site.baseurl}}/fra) - Forward Rate Agreements
 * [Term Deposit]({{site.baseurl}}/term_deposit) - Fixed rate deposits
+* [Bullet Payment]({{site.baseurl}}/bullet_payment) - Unidirectional one-off payments
 
 
 ## Market module

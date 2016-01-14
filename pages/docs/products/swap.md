@@ -1,9 +1,9 @@
 ---
-title: Products - Swap
+title: Swap
 permalink: /swap/
 ---
 
-## Swap
+{% include macros.html %}
 
 A rate swap is a financial instrument that represents the exchange of streams of payments.
 The swap is formed of legs, where each leg typically represents the obligations

@@ -1,9 +1,9 @@
 ---
-title: Products - Term Deposit
+title: Term Deposit
 permalink: /term_deposit/
 ---
 
-## Term Deposit
+{% include macros.html %}
 
 A Term Deposit is a financial instrument that provides a fixed rate of interest on an amount for a specific term.
 For example, investing GBP 1,000 for 3 months at a 1% interest rate.

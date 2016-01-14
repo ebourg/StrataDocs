@@ -1,9 +1,7 @@
 ---
-title: Reference documentation - Day Counts
+title: Day Counts
 permalink: /day_counts/
 ---
-
-## Introduction
 
 A *day count* is used to convert dates to a numeric representation for financial maths.
 

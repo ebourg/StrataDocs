@@ -23,7 +23,7 @@ Strata can be divided into a number of major components, each of which has been 
 Its built-in coverage relies on all the same extension points as could be used externally to add custom coverage.
 The scope of Strata and its extension points are illustrated below.
 
-<img alt="Components and extension points" src="{{site.baseurl}}/images/features.svg" />
+<img alt="Components and extension points" src="{{site.baseurl}}/images/components.png" />
 
 ## Main APIs
 

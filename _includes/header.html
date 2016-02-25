@@ -1,34 +1,31 @@
 <header class="top">
-  <div class="row topbar">
-    <h1 id="logo" class="logo">
+  <div class="row primarybar">
+    <h1 class="title">
       <a href="{{ "/" | prepend: site.baseurl }}">Strata</a>
     </h1>
     <nav>
-      <ul id="navigation" class="navigation">
-{% if page.tab == 'intro' %}
-        <li class="tabsel"><a href="{{site.baseurl}}/introduction/">Introduction</a></li>
-        <li class="tabdesel"><a href="{{site.baseurl}}/docs">Documentation</a></li>
-        <li class="tabdesel"><a href="{{site.baseurl}}/community">Community</a></li>
-{% elsif page.tab == 'docs' %}
-        <li class="tabdesel"><a href="{{site.baseurl}}/introduction">Introduction</a></li>
-        <li class="tabsel"><a href="{{site.baseurl}}/docs">Documentation</a></li>
-        <li class="tabdesel"><a href="{{site.baseurl}}/community">Community</a></li>
-{% elsif page.tab == 'community' %}
-        <li class="tabdesel"><a href="{{site.baseurl}}/introduction">Introduction</a></li>
-        <li class="tabdesel"><a href="{{site.baseurl}}/docs">Documentation</a></li>
-        <li class="tabsel"><a href="{{site.baseurl}}/community">Community</a></li>
-{% else %}
-        <li class="tabdesel"><a href="{{site.baseurl}}/introduction">Introduction</a></li>
-        <li class="tabdesel"><a href="{{site.baseurl}}/docs">Documentation</a></li>
-        <li class="tabdesel"><a href="{{site.baseurl}}/community">Community</a></li>
-{% endif %}
+      <ul class="navigation">
+        <li class="{% if page.tab == 'intro' %}tabsel{% else %}tabdesel{% endif %}"><a href="{{site.baseurl}}/introduction/" alt="Introduction">Introduction</a></li>
+        <li class="{% if page.tab == 'docs' %}tabsel{% else %}tabdesel{% endif %}"><a href="{{site.baseurl}}/docs" alt="Documentation">Documentation</a></li>
+        <li class="{% if page.tab == 'community' %}tabsel{% else %}tabdesel{% endif %}"><a href="{{site.baseurl}}/community" alt="Community">Community</a></li>
       </ul>
-      <ul class="links">
-        <li class="tabdesel"><a href="https://github.com/OpenGamma/Strata"><i class="fa fa-external-link fa-fw"></i> Source Code</a></li>
-        <li class="tabdesel"><a href="https://github.com/OpenGamma/Strata/releases"><i class="fa fa-external-link fa-fw"></i> Download</a></li>
-        <li class="tabdesel"><a class="og_logo" href="http://www.opengamma.com"><img alt="OpenGamma" src="{{ "/images/logo_topnav.png" | prepend: site.baseurl }}" /></a></li>
-      </ul>
-      <div class="toggle"><button type="button" id="toggle-menu" class="button--teal">Menu</button></div>		
     </nav>
+    <p class="logo">
+      <a href="http://www.opengamma.com"><img alt="OpenGamma" src="{{ "/images/logo_topnav.png" | prepend: site.baseurl }}" /></a>
+    </p>
+    <ul class="links">
+      <li class="tabdesel"><a href="https://github.com/OpenGamma/Strata" alt="Source Code"><i class="fa fa-external-link fa-fw"></i> Source Code</a></li>
+      <li class="tabdesel"><a href="https://github.com/OpenGamma/Strata/releases" alt="Download"><i class="fa fa-external-link fa-fw"></i> Download</a></li>
+    </ul>
+  </div>
+  <div class="row secondarybar">
+    <nav>
+      <ul class="navigation">
+        <li class="{% if page.tab == 'intro' %}tabsel{% else %}tabdesel{% endif %}"><a href="{{site.baseurl}}/introduction/" alt="Introduction">Intro</a></li>
+        <li class="{% if page.tab == 'docs' %}tabsel{% else %}tabdesel{% endif %}"><a href="{{site.baseurl}}/docs" alt="Documentation">Docs</a></li>
+        <li class="{% if page.tab == 'community' %}tabsel{% else %}tabdesel{% endif %}"><a href="{{site.baseurl}}/community" alt="Community">Community</a></li>
+      </ul>
+    </nav>
+    <div class="toggle"><button type="button" id="toggle-menu" class="button--grey"><i class="fa fa-bars"></i></button></div>
   </div>
 </header>

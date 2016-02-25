@@ -11,11 +11,6 @@ $(document).ready(function() {
 
     $('#sidebar').toggleClass('is-open');
     $('.wrapper').toggleClass('is-fixed')
-    if ($('#sidebar').hasClass('is-open')) {
-      $(this).text('Close');
-    } else {
-      $(this).text('Menu');
-    }
 
   });
 

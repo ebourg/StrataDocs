@@ -62,7 +62,7 @@ SwapLeg receiveLeg = RateCalculationSwapLeg.builder()
 Swap swap = Swap.of(payLeg, receiveLeg);
 ```
 
-{{tip}}The `strata-loader` project provides the ability to load a swap from FpML.{{end}}
+{{tip}}The strata-loader project provides the ability to load a swap from FpML.{{end}}
 
 
 

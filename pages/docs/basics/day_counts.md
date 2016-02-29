@@ -163,7 +163,7 @@ The denominator is always 365.</td>
 </tr>
 <tr>
   <th>Summary</th>
-  <td>Divides the actual number of days by 366 if a leap day is contained, or by 365 if not.</td>
+  <td>Divides the actual number of days by 366 if a leap day is contained, or by 365 if not</td>
 </tr>
 <tr>
   <th>Description</th>
@@ -191,7 +191,7 @@ The first day in the period is excluded, the last day is included.</td>
 </tr>
 <tr>
   <th>Summary</th>
-  <td>Divides the actual number of days by 365 or 366.</td>
+  <td>Divides the actual number of days by 365 or 366</td>
 </tr>
 <tr>
   <th>Description</th>
@@ -204,7 +204,7 @@ If the frequency is not annual, the the denominator is 366 if the period end dat
 </tr>
 <tr>
   <th>Schedules</th>
-  <td>This day count requires <code>ScheduleInfo</code>.</td>
+  <td>This day count requires <code>ScheduleInfo</code></td>
 </tr>
 <tr>
   <th>Also&nbsp;known</th>
@@ -212,7 +212,7 @@ If the frequency is not annual, the the denominator is 366 if the period end dat
 </tr>
 <tr>
   <th>Definition</th>
-  <td>2006 ISDA definitions 4.16i and ICMA rule 251.1(i) part 2 as later clarified by ICMA and Swiss Exchange.</td>
+  <td>2006 ISDA definitions 4.16i and ICMA rule 251.1(i) part 2 as later clarified by ICMA and Swiss Exchange</td>
 </tr>
 </table>
 
@@ -229,7 +229,7 @@ If the frequency is not annual, the the denominator is 366 if the period end dat
 </tr>
 <tr>
   <th>Summary</th>
-  <td>Divides the actual number of days by 365.25.</td>
+  <td>Divides the actual number of days by 365.25</td>
 </tr>
 <tr>
   <th>Description</th>
@@ -252,7 +252,7 @@ The denominator is always 365.25.</td>
 </tr>
 <tr>
   <th>Summary</th>
-  <td>Divides the actual number of days omitting leap days by 365.</td>
+  <td>Divides the actual number of days omitting leap days by 365</td>
 </tr>
 <tr>
   <th>Description</th>
@@ -280,7 +280,7 @@ The first day in the period is excluded, the last day is included.</td>
 </tr>
 <tr>
   <th>Summary</th>
-  <td>Divides the actual number of days in a leap year by 366 and the actual number of days in a standard year by 365.</td>
+  <td>Divides the actual number of days in a leap year by 366 and the actual number of days in a standard year by 365</td>
 </tr>
 <tr>
   <th>Description</th>
@@ -292,7 +292,7 @@ The first day in the period is included, the last day is excluded.</td>
 </tr>
 <tr>
   <th>Definition</th>
-  <td>2006 ISDA definitions 4.16b.</td>
+  <td>2006 ISDA definitions 4.16b</td>
 </tr>
 </table>
 
@@ -309,7 +309,7 @@ The first day in the period is included, the last day is excluded.</td>
 </tr>
 <tr>
   <th>Summary</th>
-  <td>Divides the actual number of days by the actual number of days in the coupon period multiplied by the frequency.</td>
+  <td>Divides the actual number of days by the actual number of days in the coupon period multiplied by the frequency</td>
 </tr>
 <tr>
   <th>Description</th>
@@ -328,7 +328,7 @@ The first day in the period is included, the last day is excluded.</td>
 </tr>
 <tr>
   <th>Schedules</th>
-  <td>This day count requires <code>ScheduleInfo</code>.</td>
+  <td>This day count requires <code>ScheduleInfo</code></td>
 </tr>
 <tr>
   <th>Also&nbsp;known</th>
@@ -337,7 +337,7 @@ The first day in the period is included, the last day is excluded.</td>
 <tr>
   <th>Definition</th>
   <td>2006 ISDA definitions 4.16c and ICMA rule 251.1(iii) and 251.3 as
-<a href="http://www.isda.org/c_and_a/pdf/mktc1198.pdf">later clarified</a> by ISDA.</td>
+<a href="http://www.isda.org/c_and_a/pdf/mktc1198.pdf">later clarified</a> by ISDA</td>
 </tr>
 </table>
 
@@ -355,7 +355,7 @@ The first day in the period is included, the last day is excluded.</td>
 <tr>
   <th>Summary</th>
   <td>Divides the actual number of days by 366 if a leap day is contained, or by 365 if not,
-with additional rules for periods over one year.</td>
+with additional rules for periods over one year</td>
 </tr>
 <tr>
   <th>Description</th>
@@ -370,7 +370,7 @@ and confusion with the <a href="http://www.isda.org/c_and_a/pdf/ACT-ACT-ISDA-199
 </tr>
 <tr>
   <th>Definition</th>
-  <td>Association Francaise des Banques in September 1994 as 'Base Exact/Exact' in 'Definitions Communes plusieurs Additifs Techniques'.</td>
+  <td>Association Francaise des Banques in September 1994 as 'Base Exact/Exact' in 'Definitions Communes plusieurs Additifs Techniques'</td>
 </tr>
 </table>
 
@@ -387,7 +387,7 @@ and confusion with the <a href="http://www.isda.org/c_and_a/pdf/ACT-ACT-ISDA-199
 </tr>
 <tr>
   <th>Summary</th>
-  <td>A 30/360 style algorithm with special rules for the 31st day-of-month.</td>
+  <td>A 30/360 style algorithm with special rules for the 31st day-of-month</td>
 </tr>
 <tr>
   <th>Description</th>
@@ -398,7 +398,7 @@ If the first day-of-month is 31, change the first day-of-month to 30.</td>
 </tr>
 <tr>
   <th>Also&nbsp;known</th>
-  <td>'30/360 U.S. Municipal' or '30/360 Bond Basis'.</td>
+  <td>'30/360 U.S. Municipal' or '30/360 Bond Basis'</td>
 </tr>
 <tr>
   <th>Definition</th>
@@ -419,7 +419,7 @@ If the first day-of-month is 31, change the first day-of-month to 30.</td>
 </tr>
 <tr>
   <th>Summary</th>
-  <td>A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February.</td>
+  <td>A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February</td>
 </tr>
 <tr>
   <th>Description</th>
@@ -441,7 +441,7 @@ The '30/360 ISDA' rule is identical to this rule when the EOM convention does no
 </tr>
 <tr>
   <th>Schedules</th>
-  <td>This day count assumes EOM convention is true if <code>ScheduleInfo</code> is not specified.</td>
+  <td>This day count assumes EOM convention is true if <code>ScheduleInfo</code> is not specified</td>
 </tr>
 <tr>
   <th>Also&nbsp;known</th>
@@ -462,7 +462,7 @@ The '30/360 ISDA' rule is identical to this rule when the EOM convention does no
 </tr>
 <tr>
   <th>Summary</th>
-  <td>A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February.</td>
+  <td>A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February</td>
 </tr>
 <tr>
   <th>Description</th>
@@ -498,7 +498,7 @@ In most cases, '30U/360' should be used in preference to this day count.</td>
 </tr>
 <tr>
   <th>Summary</th>
-  <td>A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February.</td>
+  <td>A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February</td>
 </tr>
 <tr>
   <th>Description</th>
@@ -510,11 +510,11 @@ If the first day-of-month is 31, change the first day-of-month to 30.</td>
 </tr>
 <tr>
   <th>Schedules</th>
-  <td>This day count assumes EOM convention is true if <code>ScheduleInfo</code> is not specified.</td>
+  <td>This day count assumes EOM convention is true if <code>ScheduleInfo</code> is not specified</td>
 </tr>
 <tr>
   <th>Also&nbsp;known</th>
-  <td>'30/360 BMA' (PSA is the Public Securites Association, BMA is the Bond Market Association).</td>
+  <td>'30/360 BMA' (PSA is the Public Securites Association, BMA is the Bond Market Association)</td>
 </tr>
 </table>
 
@@ -531,7 +531,7 @@ If the first day-of-month is 31, change the first day-of-month to 30.</td>
 </tr>
 <tr>
   <th>Summary</th>
-  <td>A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February.</td>
+  <td>A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February</td>
 </tr>
 <tr>
   <th>Description</th>
@@ -544,15 +544,15 @@ If the second date is the last day of February and it is not the maturity date, 
 </tr>
 <tr>
   <th>Schedules</th>
-  <td>This day count requires <code>ScheduleInfo</code>.</td>
+  <td>This day count requires <code>ScheduleInfo</code></td>
 </tr>
 <tr>
   <th>Also&nbsp;known</th>
-  <td>'30E/360 German' or 'German'.</td>
+  <td>'30E/360 German' or 'German'</td>
 </tr>
 <tr>
   <th>Definition</th>
-  <td>2006 ISDA definitions 4.16h.</td>
+  <td>2006 ISDA definitions 4.16h</td>
 </tr>
 </table>
 
@@ -569,7 +569,7 @@ If the second date is the last day of February and it is not the maturity date, 
 </tr>
 <tr>
   <th>Summary</th>
-  <td>A 30/360 style algorithm with special rules for the 31st day-of-month.</td>
+  <td>A 30/360 style algorithm with special rules for the 31st day-of-month</td>
 </tr>
 <tr>
   <th>Description</th>
@@ -584,7 +584,7 @@ If the second day-of-month is 31, it is changed to 30.</td>
 </tr>
 <tr>
   <th>Definition</th>
-  <td>2006 ISDA definitions 4.16g and ICMA rule 251.1(ii) and 252.2.</td>
+  <td>2006 ISDA definitions 4.16g and ICMA rule 251.1(ii) and 252.2</td>
 </tr>
 </table>
 
@@ -601,7 +601,7 @@ If the second day-of-month is 31, it is changed to 30.</td>
 </tr>
 <tr>
   <th>Summary</th>
-  <td>A 30/360 style algorithm with special rules for the 31st day-of-month.</td>
+  <td>A 30/360 style algorithm with special rules for the 31st day-of-month</td>
 </tr>
 <tr>
   <th>Description</th>
@@ -625,7 +625,7 @@ If the second day-of-month is 31, it is changed to 1 and the second month is inc
 </tr>
 <tr>
   <th>Description</th>
-  <td> An artificial day count that always returns one.</td>
+  <td> An artificial day count that always returns one</td>
 </tr>
 <tr>
   <th>Definition</th>

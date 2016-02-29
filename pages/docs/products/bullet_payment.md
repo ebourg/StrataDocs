@@ -21,7 +21,7 @@ A `BulletPayment` can be created using a builder as follows:
 BulletPayment bp = BulletPayment.builder()
   .payReceive(PayReceive.PAY)
   .value(CurrencyAmount.of(GBP, 20_000))
-  .date(AdjustableDate.of(LocalDate.of(2014, 9, 16)))
+  .date(AdjustableDate.of(LocalDate.of(2014, 9, 16), BusinessDayAdjustement.of(FOLLOWING, GBLO)))
   .build();
 ```
 
@@ -49,4 +49,4 @@ For more detail on the meaning of each field, see the
 |-------------------|-------------|-------------------|
 | payReceive        | Whether the amount is paid or received | Required |
 | value             | The payment value | Required |
-| date              | The payment date | Required |
+| date              | The payment date, adjustable | Required |

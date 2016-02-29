@@ -92,8 +92,8 @@ The following table summarizes the fields on `Swap` that can be used to control 
 For more detail on the meaning of each field, see the
 [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/product/swap/Swap.html);
 
-| Property name     | Description | Optional   |
-|-------------------|-------------|------------|
+| Property name     | Description | Required/Optional |
+|-------------------|-------------|-------------------|
 | legs              | The list of swap legs | Required |
 
 There are a number of kinds of swap leg. The most common is `RateCalculationSwapLeg`, see the

@@ -65,44 +65,90 @@ For more information on each, see the Javadoc of `DayCounts`:
 ### Actual/360
 
 <table>
-<tr><th>Name<td>Act/360
-<tr><th>Constant<td>DayCounts.ACT_360
-<tr><th>Description<td>Divides the actual number of days by 360.
-<p>
-The result is a simple division.<br />
+<tr>
+  <th>Name</th>
+  <td>Act/360</td>
+</tr>
+<tr>
+  <th>Constant</th>
+  <td>DayCounts.ACT_360</td>
+</tr>
+<tr>
+  <th>Summary</th>
+  <td>Divides the actual number of days by 360</td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>The result is a simple division.<br />
 The numerator is the actual number of days in the requested period.<br />
-The denominator is always 360.
-<tr><th>Also&nbsp;known<td>'French'.
-<tr><th>Definition<td>2006 ISDA definitions 4.16e and ICMA rule 251.1(i) part 1
+The denominator is always 360.</td>
+</tr>
+<tr>
+  <th>Also&nbsp;known</th>
+  <td>'French</td>
+</tr>
+<tr>
+  <th>Definition</th>
+  <td>2006 ISDA definitions 4.16e and ICMA rule 251.1(i) part 1</td>
+</tr>
 </table>
+
 
 ### Actual/364
 
 <table>
-<tr><th>Name<td>Act/364
-<tr><th>Constant<td>DayCounts.ACT_364
-<tr><th>Description<td>
-Divides the actual number of days by 364.
-<p>
-The result is a simple division.<br />
+<tr>
+  <th>Name</th>
+  <td>Act/364</td>
+</tr>
+<tr>
+  <th>Constant</th>
+  <td>DayCounts.ACT_364</td>
+</tr>
+<tr>
+  <th>Summary</th>
+  <td>Divides the actual number of days by 364</td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>The result is a simple division.<br />
 The numerator is the actual number of days in the requested period.<br />
-The denominator is always 364.
+The denominator is always 364.</td>
+</tr>
 </table>
+
 
 ### Actual/365 Fixed
 
 <table>
-<tr><th>Name<td>Act/365F
-<tr><th>Constant<td>DayCounts.ACT_365F
-<tr><th>Description<td>
-Divides the actual number of days by 365.
-<p>
-The result is a simple division.<br />
+<tr>
+  <th>Name</th>
+  <td>Act/365F</td>
+</tr>
+<tr>
+  <th>Constant</th>
+  <td>DayCounts.ACT_365F</td>
+</tr>
+<tr>
+  <th>Summary</th>
+  <td>Divides the actual number of days by 365</td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>The result is a simple division.<br />
 The numerator is the actual number of days in the requested period.<br />
-The denominator is always 365.
-<tr><th>Also&nbsp;known<td>'English'.
-<tr><th>Definition<td>2006 ISDA definitions 4.16d.
+The denominator is always 365.</td>
+</tr>
+<tr>
+  <th>Also&nbsp;known</th>
+  <td>'English</td>
+</tr>
+<tr>
+  <th>Definition</th>
+  <td>Definition<td>2006 ISDA definitions 4.16d</td>
+</tr>
 </table>
+
 
 ### Actual/365 Actual
 
@@ -169,17 +215,27 @@ The first day in the period is excluded, the last day is included.
 ### Actual/Actual ISDA
 
 <table>
-<tr><th>Name<td>Act/Act ISDA
-<tr><th>Constant<td>DayCounts.ACT_ACT_ISDA
-<tr><th>Description<td>
-Divides the actual number of days in a leap year by 366 and the actual number of days in a standard year by 365.
-<p>
+<tr>
+  <th>Name</th>
+  <td>Act/Act ISDA</td>
+</tr>
+<tr>
+  <th>Constant</th>
+  <td>DayCounts.ACT_ACT_ISDA</td>
+</tr>
+<tr>
+  <th>Description</th>
+  </td>Divides the actual number of days in a leap year by 366 and the actual number of days in a standard year by 365.<br />
+<br />
 The result is calculated in two parts.<br />
 The actual number of days in the requested period that fall in a leap year is divided by 366.<br />
 The actual number of days in the requested period that fall in a standard year is divided by 365.<br />
 The result is the sum of the two.<br />
-The first day in the period is included, the last day is excluded.
-<tr><th>Definition<td>2006 ISDA definitions 4.16b.
+The first day in the period is included, the last day is excluded.</td>
+<tr>
+  <th>Definition</th>
+  <td>2006 ISDA definitions 4.16b.</td>
+</tr>
 </table>
 
 ### Actual/Actual ICMA

@@ -28,7 +28,7 @@ to be managed as reference data.
 
 *14 January 2016*
 
-Additional preparatory work for v1.0. The next release will be v0.10, not v1.0.
+Additional preparatory work for v1.0.
 
 * Simpler calculation runner concept for calculations with many trades, many measures or many scenarios
 * Unified pricing for Swaptions, with present value available via the calculation runner

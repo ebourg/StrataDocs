@@ -31,7 +31,7 @@ Fra fra = Fra.builder()
   .build();
 ```
 
-{{tip}}The `strata-loader` project provides the ability to load a FRA from FpML.{{end}}
+{{tip}}The strata-loader project provides the ability to load a FRA from FpML.{{end}}
 
 
 ## Pricing

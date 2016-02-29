@@ -22,7 +22,7 @@ A `Swaption` can be created using a builder as follows:
 
 ```java
 Swaption swaption = Swaption.builder()
-  .expiryDate(AdjustableDate.of(LocalDate.of(2014, 6, 14), BusinessDayAdjustment.of(FOLLOWING, HolidayCalendars.USNY)))
+  .expiryDate(AdjustableDate.of(LocalDate.of(2014, 6, 14), BusinessDayAdjustment.of(FOLLOWING, USNY)))
   .expiryTime(LocalTime.of(10, 0))
   .expiryZone(ZoneId.of("Z"))
   .longShort(LongShort.LONG)

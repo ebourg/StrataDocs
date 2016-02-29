@@ -24,10 +24,10 @@ A `TermDeposit` can be created using a builder as follows:
 ```java
 TermDeposit td = TermDeposit.builder()
   .buySell(BuySell.BUY)
-  .startDate(LocalDate.of(2014, 9, 12))
-  .endDate(LocalDate.of(2014, 12, 12))
   .currency(Currency.USD)
   .notional(10_000_000)
+  .startDate(LocalDate.of(2014, 9, 12))
+  .endDate(LocalDate.of(2014, 12, 12))
   .dayCount(DayCounts.THIRTY_360_ISDA)
   .rate(0.013)
   .build();
@@ -63,7 +63,7 @@ For more detail on the meaning of each field, see the
 | startDate         | The start date | Required |
 | endDate           | The end date | Required |
 | businessDayAdjustment | The holiday adjustment to the start/end date | Optional |
-| dayCount          | The day count | Defaults to the day count of the index |
+| dayCount          | The day count | Required |
 | rate              | The fixed rate of interest | Required |
 
 The fixed interest rate must be specified in decimal form.

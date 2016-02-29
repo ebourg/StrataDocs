@@ -5,7 +5,7 @@ permalink: /docs/
 
 {% include macros.html %}
 
-{{note}} Strata 0.9 is a next-generation technology preview release. Please be aware that the APIs, features and extension points described in this documentation may be subject to change. {{end}}
+{{note}} Strata 0.10 is a next-generation technology preview release. Please be aware that the APIs, features and extension points described in this documentation may be subject to change. {{end}}
 
 ## Overview
 
@@ -53,6 +53,9 @@ For more information, see the following guides:
 
 * [Swap]({{site.baseurl}}/swap) - Swaps (Fixed, Ibor, Overnight, Inflation)
 * [FRA]({{site.baseurl}}/fra) - Forward Rate Agreements
+* [Swaption]({{site.baseurl}}/swaption) - Options on swaps
+* [FX Forward/Spot]({{site.baseurl}}/fx_single) - FX Forward and FX spot
+* [FX Swap]({{site.baseurl}}/fx_swap) - FX Swap
 * [Term Deposit]({{site.baseurl}}/term_deposit) - Fixed rate deposits
 * [Bullet Payment]({{site.baseurl}}/bullet_payment) - Unidirectional one-off payments
 

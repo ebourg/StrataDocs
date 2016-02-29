@@ -7,6 +7,23 @@ Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
 
+## Strata v0.10
+
+*29 February 2016*
+
+Additional preparatory work for v1.0. The next release will be v0.11, not v1.0.
+The next release will contain a significant refactoring of the trade model to allow holidays
+to be managed as reference data.
+
+* New asset classes - CMS, CMS cap/floor and Ibor cap/floor
+* Calculation function design simplified, with all functions operating as multi-measure
+* Enhance FX conversion of function results
+* Enhanced FpML parsing, including inflation swaps
+* Control over the date generated for each node in curve calibration
+* Synthetic curve calibrator, calibrating on synthetic instruments
+* Schedule generation handling all-stub schedules, plus performance tweaks
+
+
 ## Strata v0.9
 
 *14 January 2016*

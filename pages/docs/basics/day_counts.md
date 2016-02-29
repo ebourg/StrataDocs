@@ -85,7 +85,7 @@ The denominator is always 360.</td>
 </tr>
 <tr>
   <th>Also&nbsp;known</th>
-  <td>'French</td>
+  <td>'French'</td>
 </tr>
 <tr>
   <th>Definition</th>
@@ -141,11 +141,11 @@ The denominator is always 365.</td>
 </tr>
 <tr>
   <th>Also&nbsp;known</th>
-  <td>'English</td>
+  <td>'English'</td>
 </tr>
 <tr>
   <th>Definition</th>
-  <td>Definition<td>2006 ISDA definitions 4.16d</td>
+  <td>2006 ISDA definitions 4.16d</td>
 </tr>
 </table>
 
@@ -153,63 +153,118 @@ The denominator is always 365.</td>
 ### Actual/365 Actual
 
 <table>
-<tr><th>Name<td>Act/365 Actual
-<tr><th>Constant<td>DayCounts.ACT_365_ACTUAL
-<tr><th>Description<td>
-Divides the actual number of days by 366 if a leap day is contained, or by 365 if not.
-<p>
-The result is a simple division.<br />
+<tr>
+  <th>Name</th>
+  <td>Act/365 Actual</td>
+</tr>
+<tr>
+  <th>Constant</th>
+  <td>DayCounts.ACT_365_ACTUAL</td>
+</tr>
+<tr>
+  <th>Summary</th>
+  <td>Divides the actual number of days by 366 if a leap day is contained, or by 365 if not.</td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>The result is a simple division.<br />
 The numerator is the actual number of days in the requested period.<br />
 The denominator is 366 if the period contains February 29th, if not it is 365.<br />
-The first day in the period is excluded, the last day is included.
-<tr><th>Also&nbsp;known<td>'Act/365A'.
+The first day in the period is excluded, the last day is included.</td>
+</tr>
+<tr>
+  <th>Also&nbsp;known</th>
+  <td>'Act/365A'</td>
+</tr>
 </table>
 
 ### Actual/365 Long
 
 <table>
-<tr><th>Name<td>Act/365L
-<tr><th>Constant<td>DayCounts.ACT_365L
-<tr><th>Description<td>
-Divides the actual number of days by 365 or 366.
-<p>
-The result is a simple division.<br />
+<tr>
+  <th>Name</th>
+  <td>Act/365L</td>
+</tr>
+<tr>
+  <th>Constant</th>
+  <td>DayCounts.ACT_365L</td>
+</tr>
+<tr>
+  <th>Summary</th>
+  <td>Divides the actual number of days by 365 or 366.</td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>The result is a simple division.<br />
 The numerator is the actual number of days in the requested period.<br />
 The denominator is determined by examining the frequency and the period end date (the date of the next coupon).<br />
 If the frequency is annual then the denominator is 366 if the period contains February 29th, if not it is 365.<br />
 The first day in the period is excluded, the last day is included.<br />
-If the frequency is not annual, the the denominator is 366 if the period end date is in a leap year, if not it is 365.
-<tr><th>Schedules<td>This day count requires <code>ScheduleInfo</code>.
-<tr><th>Also&nbsp;known<td>'Act/365 Leap year'.
-<tr><th>Definition<td>2006 ISDA definitions 4.16i and ICMA rule 251.1(i) part 2 as later clarified by ICMA and Swiss Exchange.
+If the frequency is not annual, the the denominator is 366 if the period end date is in a leap year, if not it is 365.</td>
+</tr>
+<tr>
+  <th>Schedules</th>
+  <td>This day count requires <code>ScheduleInfo</code>.</td>
+</tr>
+<tr>
+  <th>Also&nbsp;known</th>
+  <td>'Act/365 Leap year'</td>
+</tr>
+<tr>
+  <th>Definition</th>
+  <td>2006 ISDA definitions 4.16i and ICMA rule 251.1(i) part 2 as later clarified by ICMA and Swiss Exchange.</td>
+</tr>
 </table>
 
 ### Actual/365.25
 
 <table>
-<tr><th>Name<td>Act/365.25
-<tr><th>Constant<td>DayCounts.ACT_365_25
-<tr><th>Description<td>
-Divides the actual number of days by 365.25.
-<p>
-The result is a simple division.<br />
+<tr>
+  <th>Name</th>
+  <td>Act/365.25</td>
+</tr>
+<tr>
+  <th>Constant</th>
+  <td>DayCounts.ACT_365_25</td>
+</tr>
+<tr>
+  <th>Summary</th>
+  <td>Divides the actual number of days by 365.25.</td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>The result is a simple division.<br />
 The numerator is the actual number of days in the requested period.<br />
-The denominator is always 365.25.    
+The denominator is always 365.25.</td>
+</tr>
 </table>
 
 ### NL/365
 
 <table>
-<tr><th>Name<td>NL/365
-<tr><th>Constant<td>DayCounts.NL_365
-<tr><th>Description<td>
-Divides the actual number of days omitting leap days by 365.
-<p>
-The result is a simple division.<br />
+<tr>
+  <th>Name</th>
+  <td>NL/365</td>
+</tr>
+<tr>
+  <th>Constant</th>
+  <td>DayCounts.NL_365</td>
+</tr>
+<tr>
+  <th>Summary</th>
+  <td>Divides the actual number of days omitting leap days by 365.</td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>The result is a simple division.<br />
 The numerator is the actual number of days in the requested period minus the number of occurrences of February 29.<br />
 The denominator is always 365.<br />
-The first day in the period is excluded, the last day is included.
-<tr><th>Also&nbsp;known<td>'Act/365 No Leap'.
+The first day in the period is excluded, the last day is included.</td>
+</tr>
+<tr>
+  <th>Also&nbsp;known</th>
+  <td>'Act/365 No Leap'</td>
+</tr>
 </table>
 
 ### Actual/Actual ISDA
@@ -224,14 +279,17 @@ The first day in the period is excluded, the last day is included.
   <td>DayCounts.ACT_ACT_ISDA</td>
 </tr>
 <tr>
+  <th>Summary</th>
+  <td>Divides the actual number of days in a leap year by 366 and the actual number of days in a standard year by 365.</td>
+</tr>
+<tr>
   <th>Description</th>
-  </td>Divides the actual number of days in a leap year by 366 and the actual number of days in a standard year by 365.<br />
-<br />
-The result is calculated in two parts.<br />
+  <td>The result is calculated in two parts.<br />
 The actual number of days in the requested period that fall in a leap year is divided by 366.<br />
 The actual number of days in the requested period that fall in a standard year is divided by 365.<br />
 The result is the sum of the two.<br />
 The first day in the period is included, the last day is excluded.</td>
+</tr>
 <tr>
   <th>Definition</th>
   <td>2006 ISDA definitions 4.16b.</td>
@@ -241,12 +299,21 @@ The first day in the period is included, the last day is excluded.</td>
 ### Actual/Actual ICMA
 
 <table>
-<tr><th>Name<td>Act/Act ICMA
-<tr><th>Constant<td>DayCounts.ACT_ACT_ICMA
-<tr><th>Description<td>
-Divides the actual number of days by the actual number of days in the coupon period multiplied by the frequency.
-<p>
-The result is calculated as follows.<br />
+<tr>
+  <th>Name</th>
+  <td>Act/Act ICMA</td>
+</tr>
+<tr>
+  <th>Constant</th>
+  <td>DayCounts.ACT_ACT_ICMA</td>
+</tr>
+<tr>
+  <th>Summary</th>
+  <td>Divides the actual number of days by the actual number of days in the coupon period multiplied by the frequency.</td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>The result is calculated as follows.<br />
 First, the underlying schedule period is obtained treating the first date as the start of the schedule period.<br />
 Second, if the period is a stub, then nominal regular periods are created matching the
 schedule frequency, working forwards or backwards from the known regular schedule date.<br />
@@ -257,171 +324,312 @@ The actual days between the first and second date are allocated to the matching 
 Each calculation is a division. The numerator is the actual number of days in
 the nominal period, which could be zero in the case of a long stub.<br />
 The denominator is the length of the nominal period  multiplied by the frequency.<br />
-The first day in the period is included, the last day is excluded.
-<tr><th>Schedules<td>This day count requires <code>ScheduleInfo</code>.
-<tr><th>Also&nbsp;known<td>'ISMA-99'.
-<tr><th>Definition<td>
-2006 ISDA definitions 4.16c and ICMA rule 251.1(iii) and 251.3 as
-<a href="http://www.isda.org/c_and_a/pdf/mktc1198.pdf">later clarified</a> by ISDA.
+The first day in the period is included, the last day is excluded.</td>
+</tr>
+<tr>
+  <th>Schedules</th>
+  <td>This day count requires <code>ScheduleInfo</code>.</td>
+</tr>
+<tr>
+  <th>Also&nbsp;known</th>
+  <td>'ISMA-99'</td>
+</tr>
+<tr>
+  <th>Definition</th>
+  <td>2006 ISDA definitions 4.16c and ICMA rule 251.1(iii) and 251.3 as
+<a href="http://www.isda.org/c_and_a/pdf/mktc1198.pdf">later clarified</a> by ISDA.</td>
+</tr>
 </table>
 
 ### Actual/Actual AFB
 
 <table>
-<tr><th>Name<td>Act/Act AFB
-<tr><th>Constant<td>DayCounts.ACT_ACT_AFB
-<tr><th>Description<td>
-Divides the actual number of days by 366 if a leap day is contained, or by 365 if not,
-with additional rules for periods over one year.
-<p>
-The result is a simple division.<br />
+<tr>
+  <th>Name</th>
+  <td>Act/Act AFB</td>
+</tr>
+<tr>
+  <th>Constant</th>
+  <td>DayCounts.ACT_ACT_AFB</td>
+</tr>
+<tr>
+  <th>Summary</th>
+  <td>Divides the actual number of days by 366 if a leap day is contained, or by 365 if not,
+with additional rules for periods over one year.</td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>The result is a simple division.<br />
 The numerator is the actual number of days in the requested period.<br />
 The denominator is determined by examining the period end date (the date of the next coupon).<br />
 The denominator is 366 if the schedule period contains February 29th, if not it is 365.<br />
 The first day in the schedule period is included, the last day is excluded.<br />
 Read the Javadoc for a discussion of the algorithm, the
 <a href="http://www.banque-france.fr/fileadmin/user_upload/banque_de_france/archipel/publications/bdf_bof/bdf_bof_1999/bdf_bof_01.pdf">original French text</a>
-and confusion with the <a href="http://www.isda.org/c_and_a/pdf/ACT-ACT-ISDA-1999.pdf">ISDA clarification</a>.
-<tr><th>Definition<td>
-Association Francaise des Banques in September 1994 as 'Base Exact/Exact' in 'Definitions Communes plusieurs Additifs Techniques'.
+and confusion with the <a href="http://www.isda.org/c_and_a/pdf/ACT-ACT-ISDA-1999.pdf">ISDA clarification</a>.</td>
+</tr>
+<tr>
+  <th>Definition</th>
+  <td>Association Francaise des Banques in September 1994 as 'Base Exact/Exact' in 'Definitions Communes plusieurs Additifs Techniques'.</td>
+</tr>
 </table>
 
 ### 30/360 ISDA
 
 <table>
-<tr><th>Name<td>30/360 ISDA
-<tr><th>Constant<td>DayCounts.THIRTY_360_ISDA
-<tr><th>Description<td>
-A 30/360 style algorithm with special rules for the 31st day-of-month.
-<p>
-The result is calculated as <code>(360 * deltaYear + 30 * deltaMonth + deltaDay) / 360</code>.<br />
+<tr>
+  <th>Name</th>
+  <td>30/360 ISDA</td>
+</tr>
+<tr>
+  <th>Constant</th>
+  <td>DayCounts.THIRTY_360_ISDA</td>
+</tr>
+<tr>
+  <th>Summary</th>
+  <td>A 30/360 style algorithm with special rules for the 31st day-of-month.</td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>The result is calculated as <code>(360 * deltaYear + 30 * deltaMonth + deltaDay) / 360</code>.<br />
 The deltaDay is then calculated once day-of-month adjustments have occurred.<br />
 If the second day-of-month is 31 and the first day-of-month is 30 or 31, change the second day-of-month to 30.<br />
-If the first day-of-month is 31, change the first day-of-month to 30.
-<tr><th>Also&nbsp;known<td>'30/360 U.S. Municipal' or '30/360 Bond Basis'.
-<tr><th>Definition<td>2006 ISDA definitions 4.16f.
+If the first day-of-month is 31, change the first day-of-month to 30.</td>
+</tr>
+<tr>
+  <th>Also&nbsp;known</th>
+  <td>'30/360 U.S. Municipal' or '30/360 Bond Basis'.</td>
+</tr>
+<tr>
+  <th>Definition</th>
+  <td>2006 ISDA definitions 4.16f.</td>
+</tr>
 </table>
 
 ### 30U/360
 
 <table>
-<tr><th>Name<td>30U/360
-<tr><th>Constant<td>DayCounts.THIRTY_U_360
-<tr><th>Description<td>
-A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February.
-<p>
-The result is calculated as <code>(360 * deltaYear + 30 * deltaMonth + deltaDay) / 360</code>.<br />
+<tr>
+  <th>Name</th>
+  <td>30U/360</td>
+</tr>
+<tr>
+  <th>Constant</th>
+  <td>DayCounts.THIRTY_U_360</td>
+</tr>
+<tr>
+  <th>Summary</th>
+  <td>A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February.</td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>
+    The result is calculated as <code>(360 * deltaYear + 30 * deltaMonth + deltaDay) / 360</code>.<br />
 The deltaDay is then calculated once day-of-month adjustments have occurred.<br />
 If the schedule uses EOM convention and both dates are the last day of February, change the second day-of-month to 30.<br />
 If the schedule uses EOM convention and the first date is the last day of February, change the first day-of-month to 30.<br />
 If the second day-of-month is 31 and the first day-of-month is 30 or 31, change the second day-of-month to 30.<br />
 If the first day-of-month is 31, change the first day-of-month to 30.
-<p>
+<br /><br />
 This day count has different rules depending on whether the EOM rule applies or not.<br />
 The EOM rule is set in the <code>ScheduleInfo</code> and defaults to true.
-<p>
+<br /><br />
 There are two related day counts.<br />
 The '30U/360 EOM' rule is identical to this rule when the EOM convention applies.<br />
 The '30/360 ISDA' rule is identical to this rule when the EOM convention does not apply.
-<tr><th>Schedules<td>This day count assumes EOM convention is true if <code>ScheduleInfo</code> is not specified.
-<tr><th>Also&nbsp;known<td>'30/360 US', '30US/360' or '30/360 SIA'.
+  </td>
+</tr>
+<tr>
+  <th>Schedules</th>
+  <td>This day count assumes EOM convention is true if <code>ScheduleInfo</code> is not specified.</td>
+</tr>
+<tr>
+  <th>Also&nbsp;known</th>
+  <td>'30/360 US', '30US/360' or '30/360 SIA'</td>
+</tr>
 </table>
 
 ### 30U/360 EOM
 
 <table>
-<tr><th>Name<td>30U/360 EOM
-<tr><th>Constant<td>DayCounts.THIRTY_U_360_EOM
-<tr><th>Description<td>
-A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February.
-<p>
-The result is calculated as <code>(360 * deltaYear + 30 * deltaMonth + deltaDay) / 360</code>.<br />
+<tr>
+  <th>Name</th>
+  <td>30U/360 EOM</td>
+</tr>
+<tr>
+  <th>Constant</th>
+  <td>DayCounts.THIRTY_U_360_EOM</td>
+</tr>
+<tr>
+  <th>Summary</th>
+  <td>A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February.</td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>The result is calculated as <code>(360 * deltaYear + 30 * deltaMonth + deltaDay) / 360</code>.<br />
 The deltaDay is then calculated once day-of-month adjustments have occurred.<br />
 If both dates are the last day of February, change the second day-of-month to 30.<br />
 If the first date is the last day of February, change the first day-of-month to 30.<br />
 If the second day-of-month is 31 and the first day-of-month is 30 or 31, change the second day-of-month to 30.<br />
 If the first day-of-month is 31, change the first day-of-month to 30.
-<p>
+<br /><br />
 This day count is not dependent on the EOM flag in <code>ScheduleInfo</code>.
-<p>
+<br /><br />
 This is the same as '30U/360' when the EOM convention applies.<br />
 This day count would typically be used to be explicit about the EOM rule applying.<br />
-In most cases, '30U/360' should be used in preference to this day count.
-<tr><th>Also&nbsp;known<td>'30/360 US', '30US/360' or '30/360 SIA'.
+In most cases, '30U/360' should be used in preference to this day count.</td>
+</tr>
+<tr>
+  <th>Also&nbsp;known</th>
+  <td>'30/360 US', '30US/360' or '30/360 SIA'</td>
+</tr>
 </table>
 
 ### 30/360 PSA
 
 <table>
-<tr><th>Name<td>30/360 PSA
-<tr><th>Constant<td>DayCounts.THIRTY_360_PSA
-<tr><th>Description<td>
-A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February.
-<p>
-The result is calculated as <code>(360 * deltaYear + 30 * deltaMonth + deltaDay) / 360</code>.<br />
+<tr>
+  <th>Name</th>
+  <td>30/360 PSA</td>
+</tr>
+<tr>
+  <th>Constant</th>
+  <td>DayCounts.THIRTY_360_PSA</td>
+</tr>
+<tr>
+  <th>Summary</th>
+  <td>A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February.</td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>The result is calculated as <code>(360 * deltaYear + 30 * deltaMonth + deltaDay) / 360</code>.<br />
 The deltaDay is then calculated once day-of-month adjustments have occurred.<br />
 If the first date is the last day of February, change the first day-of-month to 30.<br />
 If the second day-of-month is 31 and the first day-of-month is 30 or 31, change the second day-of-month to 30.<br />
-If the first day-of-month is 31, change the first day-of-month to 30.
-<tr><th>Schedules<td>This day count assumes EOM convention is true if <code>ScheduleInfo</code> is not specified.
-<tr><th>Also&nbsp;known<td>'30/360 BMA' (PSA is the Public Securites Association, BMA is the Bond Market Association).
+If the first day-of-month is 31, change the first day-of-month to 30.</td>
+</tr>
+<tr>
+  <th>Schedules</th>
+  <td>This day count assumes EOM convention is true if <code>ScheduleInfo</code> is not specified.</td>
+</tr>
+<tr>
+  <th>Also&nbsp;known</th>
+  <td>'30/360 BMA' (PSA is the Public Securites Association, BMA is the Bond Market Association).</td>
+</tr>
 </table>
 
 ### 30E/360 ISDA
 
 <table>
-<tr><th>Name<td>30E/360 ISDA
-<tr><th>Constant<td>DayCounts.THIRTY_E_360_ISDA
-<tr><th>Description<td>
-A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February.
-<p>
-The result is calculated as <code>(360 * deltaYear + 30 * deltaMonth + deltaDay) / 360</code>.<br />
+<tr>
+  <th>Name</th>
+  <td>30E/360 ISDA</td>
+</tr>
+<tr>
+  <th>Constant</th>
+  <td>DayCounts.THIRTY_E_360_ISDA</td>
+</tr>
+<tr>
+  <th>Summary</th>
+  <td>A 30/360 style algorithm with special rules for the 31st day-of-month and the end of February.</td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>The result is calculated as <code>(360 * deltaYear + 30 * deltaMonth + deltaDay) / 360</code>.<br />
 The deltaDay is then calculated once day-of-month adjustments have occurred.<br />
 If the first day-of-month is 31, change the first day-of-month to 30.<br />
 If the second day-of-month is 31, change the second day-of-month to 30.<br />
 If the first date is the last day of February, change the first day-of-month to 30.<br />
-If the second date is the last day of February and it is not the maturity date, change the second day-of-month to 30.
-<tr><th>Schedules<td>This day count requires <code>ScheduleInfo</code>.
-<tr><th>Also&nbsp;known<td>'30E/360 German' or 'German'.
-<tr><th>Definition<td>2006 ISDA definitions 4.16h.
+If the second date is the last day of February and it is not the maturity date, change the second day-of-month to 30.</td>
+</tr>
+<tr>
+  <th>Schedules</th>
+  <td>This day count requires <code>ScheduleInfo</code>.</td>
+</tr>
+<tr>
+  <th>Also&nbsp;known</th>
+  <td>'30E/360 German' or 'German'.</td>
+</tr>
+<tr>
+  <th>Definition</th>
+  <td>2006 ISDA definitions 4.16h.</td>
+</tr>
 </table>
 
 ### 30E/360
 
 <table>
-<tr><th>Name<td>30E/360
-<tr><th>Constant<td>DayCounts.THIRTY_E_360
-<tr><th>Description<td>
-A 30/360 style algorithm with special rules for the 31st day-of-month.
-<p>
-The result is calculated as <code>(360 * deltaYear + 30 * deltaMonth + deltaDay) / 360</code>.<br />
+<tr>
+  <th>Name</th>
+  <td>30E/360</td>
+</tr>
+<tr>
+  <th>Constant</th>
+  <td>DayCounts.THIRTY_E_360</td>
+</tr>
+<tr>
+  <th>Summary</th>
+  <td>A 30/360 style algorithm with special rules for the 31st day-of-month.</td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>The result is calculated as <code>(360 * deltaYear + 30 * deltaMonth + deltaDay) / 360</code>.<br />
 The deltaDay is then calculated once day-of-month adjustments have occurred.<br />
 If the first day-of-month is 31, it is changed to 30.<br />
-If the second day-of-month is 31, it is changed to 30.
-<tr><th>Also&nbsp;known<td>'30/360 ISMA', '30/360 European', '30S/360 Special German' or 'Eurobond'.
-<tr><th>Definition<td>2006 ISDA definitions 4.16g and ICMA rule 251.1(ii) and 252.2.
+If the second day-of-month is 31, it is changed to 30.</td>
+</tr>
+<tr>
+  <th>Also&nbsp;known</th>
+  <td>'30/360 ISMA', '30/360 European', '30S/360 Special German' or 'Eurobond'</td>
+</tr>
+<tr>
+  <th>Definition</th>
+  <td>2006 ISDA definitions 4.16g and ICMA rule 251.1(ii) and 252.2.</td>
+</tr>
 </table>
 
 ### 30E+/360
 
 <table>
-<tr><th>Name<td>30E+/360
-<tr><th>Constant<td>DayCounts.THIRTY_EPLUS_360
-<tr><th>Description<td>
-A 30/360 style algorithm with special rules for the 31st day-of-month.
-<p>
-The result is calculated as <code>(360 * deltaYear + 30 * deltaMonth + deltaDay) / 360</code>.<br />
+<tr>
+  <th>Name</th>
+  <td>30E+/360</td>
+</tr>
+<tr>
+  <th>Constant</th>
+  <td>DayCounts.THIRTY_EPLUS_360</td>
+</tr>
+<tr>
+  <th>Summary</th>
+  <td>A 30/360 style algorithm with special rules for the 31st day-of-month.</td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>The result is calculated as <code>(360 * deltaYear + 30 * deltaMonth + deltaDay) / 360</code>.<br />
 The deltaDay and deltaMonth are calculated once adjustments have occurred.<br />
 If the first day-of-month is 31, it is changed to 30.<br />
-If the second day-of-month is 31, it is changed to 1 and the second month is incremented.
+If the second day-of-month is 31, it is changed to 1 and the second month is incremented.</td>
+</tr>
 </table>
 
 ### 1/1
 
 <table>
-<tr><th>Name<td>1/1
-<tr><th>Constant<td>DayCounts.ONE_ONE
-<tr><th>Description<td> An artificial day count that always returns one.
-<tr><th>Definition<td>Defined by the 2006 ISDA definitions 4.16a
+<tr>
+  <th>Name</th>
+  <td>1/1</td>
+</tr>
+<tr>
+  <th>Constant</th>
+  <td>DayCounts.ONE_ONE</td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td> An artificial day count that always returns one.</td>
+</tr>
+<tr>
+  <th>Definition</th>
+  <td>Defined by the 2006 ISDA definitions 4.16a</td>
+</tr>
 </table>
 

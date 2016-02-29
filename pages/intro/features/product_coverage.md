@@ -3,7 +3,7 @@ title: Product Coverage
 permalink: /product_coverage/
 ---
 
-Strata include coverage for the following products:
+Strata includes coverage for the following products:
 
 <table class="product-coverage">
   <thead>

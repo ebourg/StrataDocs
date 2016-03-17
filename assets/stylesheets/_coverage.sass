@@ -1,13 +1,23 @@
-.product-coverage
+div.product-coverage
+
+  overflow-x: auto
+  
+  table
+    table-layout: fixed
 
   th, td
     width: 100px
     text-align: center
 
+    &:first-child
+      min-width: 150px
+      max-width: none
+      width: 250px
+      text-align: left
 
-  .asset
-    text-align: left
-    width: 300px
+  .note
+    font-style: italic
 
   .na
     background-color: $grey-light
+

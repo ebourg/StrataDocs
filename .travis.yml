@@ -14,7 +14,7 @@ before_script:
   - "sed -i -e 's!baseurl: \".*\"!baseurl: \"/strata/'\"$TRAVIS_BRANCH\"'\"!' _config.yml"
 script:
   - bundle exec jekyll build -d ./_site/strata/$TRAVIS_BRANCH
-  - bundle exec htmlproof _site --href-ignore /github.com/ --file-ignore /strata/$TRAVIS_BRANCH/apidocs/
+  - bundle exec htmlproofer _site --url-ignore /github.com/ --file-ignore /strata/$TRAVIS_BRANCH/apidocs/
 after_success:
   - rsync -rve 'ssh -v -p 2222 -i id_rsa' _site/ opengamma@ci-docs.opengamma.com:public_html/ci-docs/
 env:

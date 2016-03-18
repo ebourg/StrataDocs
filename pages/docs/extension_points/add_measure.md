@@ -34,11 +34,11 @@ public interface CalculationFunction<T extends CalculationTarget> {
 
   Set<Measure> supportedMeasures();
 
-  Currency naturalCurrency(T target);
+  Currency naturalCurrency(T target, ReferenceData refData);
 
-  FunctionRequirements requirements(T target, Set<Measure> measures);
+  FunctionRequirements requirements(T target, Set<Measure> measures, ReferenceData refData);
 
-  Map<Measure, Result<?>> calculate(T target, Set<Measure> measures, CalculationMarketData marketData);
+  Map<Measure, Result<?>> calculate(T target, Set<Measure> measures, CalculationMarketData marketData, ReferenceData refData);
 
 }
 ```
@@ -118,7 +118,7 @@ following market data is required:
 
 ```java
 @Override
-public FunctionRequirements requirements(FraTrade trade, Set<Measure> measures) {
+public FunctionRequirements requirements(FraTrade trade, Set<Measure> measures, ReferenceData refData) {
   Fra fra = trade.getProduct();
 
   // Create a set of all indices referenced by the FRA

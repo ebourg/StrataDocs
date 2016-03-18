@@ -7,6 +7,28 @@ Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
 
+## Strata v0.11
+
+*18 March 2016*
+
+This release contains a major rework of the trade model to introduce reference data.
+Holiday calendars are now treated as data, referenced by an identifier.
+Securities can also now be referenced by identifier, although only for mark-to-market pricing at present.
+While there will no doubt be further trade model tweaks before v1.0, this set of changes should be by far the largest.
+The holiday calendar data provided with Strata is now available using `ReferenceData.standard()`.
+These changes also caused `StandardId` to change package.
+The next release will be v0.12, not v1.0.
+
+* New asset classes - Capital Indexed Bonds
+* Refactored trade model treating holidays and securities as reference data
+* Added dedicated index observation objects for querying market data
+* Type-safe attributes can be attached to trades
+* Add Canadian holidays and indices
+* Allow holiday calendars to be queried beyond known dates
+
+Feel free to ask a question in the forums if you have difficulty porting code from v0.10 to v0.11.
+
+
 ## Strata v0.10
 
 *29 February 2016*

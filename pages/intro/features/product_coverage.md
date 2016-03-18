@@ -3,224 +3,203 @@ title: Product Coverage
 permalink: /product_coverage/
 ---
 
-Strata includes coverage for the following products:
+Strata includes the following coverage:
 
-<table class="product-coverage">
+<div class="product-coverage">
+<table>
   <thead>
     <tr>
-      <th class="asset">Asset class</th>
-      <th>PV</th>
-      <th>PV01</th>
-      <th>Bucketed PV01</th>
-      <th>Gamma PV01</th>
-      <th>Par Rate/Spread</th>
-      <th>CS01</th>
-      <th>Bucketed CS01</th>
-      <th>Cashflows</th>
+      <th>Asset class</th>
+      <th>Pricer <a id="pricer" href="#pricer-footnote"><sup>1</sup></a></th>
+      <th>Calc API <a id="calcapi" href="#calcapi-footnote"><sup>2</sup></a></th>
+      <th>Examples <a id="examples" href="#examples-footnote"><sup>3</sup></a></th>
+      <th>Load from FpML</th>
     </tr>
   </thead>
   <tbody>
   <tr>
-    <td class="asset"><a href="{{site.baseurl}}/swap">Swap</a><br />
-    Including Vanilla, OIS, Basis, Cross Currency and Variable Notional</td>
+    <td><a href="{{site.baseurl}}/swap">Swap</a><br />
+    <span class="note">Including Vanilla, OIS, Basis, Cross Currency and Variable Notional</span></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
-    <td><i class="fa fa-check"></i></td>
-    <td><i class="fa fa-check"></i></td>
-    <td class="na"></td>
-    <td class="na"></td>
     <td><i class="fa fa-check"></i></td>
   </tr>
   <tr>
-    <td class="asset"><a href="{{site.baseurl}}/fra">FRA</a></td>
+    <td><a href="{{site.baseurl}}/fra">FRA</a></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
-    <td><i class="fa fa-check"></i></td>
-    <td><i class="fa fa-check"></i></td>
-    <td class="na"></td>
-    <td class="na"></td>
     <td><i class="fa fa-check"></i></td>
   </tr>
   <tr>
-    <td class="asset">CDS<br />Single Name, Index</td>
+    <td>CDS<br />
+    <span class="note">Including Single Name and Index</span></td>
     <td><i class="fa fa-check"></i></td>
-    <td><i class="fa fa-check"></i></td>
-    <td><i class="fa fa-check"></i></td>
-    <td></td>
-    <td></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td></td>
   </tr>
   <tr>
-    <td class="asset"><a href="{{site.baseurl}}/fx_single">FX Forward/Spot</a></td>
+    <td><a href="{{site.baseurl}}/fx_single">FX Forward/Spot</a></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
-    <td></td>
     <td><i class="fa fa-check"></i></td>
-    <td class="na"></td>
-    <td class="na"></td>
+  </tr>
+  <tr>
+    <td>FX NDF</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
     <td></td>
   </tr>
   <tr>
-    <td class="asset">FX NDF</td>
+    <td><a href="{{site.baseurl}}/fx_swap">FX Swap</a></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
-    <td></td>
     <td><i class="fa fa-check"></i></td>
-    <td class="na"></td>
-    <td class="na"></td>
-    <td></td>
   </tr>
   <tr>
-    <td class="asset"><a href="{{site.baseurl}}/fx_swap">FX Swap</a></td>
+    <td>STIR Future (Ibor)</td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
-    <td></td>
-    <td><i class="fa fa-check"></i></td>
-    <td class="na"></td>
-    <td class="na"></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td class="asset">Generic Future</td>
-    <td><i class="fa fa-check"></i></td>
-    <td class="na"></td>
-    <td class="na"></td>
-    <td class="na"></td>
-    <td class="na"></td>
-    <td class="na"></td>
-    <td class="na"></td>
     <td class="na"></td>
   </tr>
   <tr>
-    <td class="asset">Generic Future Option</td>
+    <td>Deliverable Swap Future</td>
     <td><i class="fa fa-check"></i></td>
-    <td class="na"></td>
-    <td class="na"></td>
-    <td class="na"></td>
-    <td class="na"></td>
-    <td class="na"></td>
-    <td class="na"></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
     <td class="na"></td>
   </tr>
   <tr>
-    <td class="asset">STIR Future (Ibor)</td>
+    <td><a href="{{site.baseurl}}/term_deposit">Term Deposit</a></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
-    <td></td>
     <td><i class="fa fa-check"></i></td>
-    <td class="na"></td>
-    <td class="na"></td>
-    <td></td>
   </tr>
   <tr>
-    <td class="asset">Deliverable Swap Future</td>
+    <td><a href="{{site.baseurl}}/bullet_payment">Bullet Payment</a></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
-    <td></td>
-    <td></td>
-    <td class="na"></td>
-    <td class="na"></td>
-    <td></td>
+    <td><i class="fa fa-check"></i></td>
   </tr>
   <tr>
-    <td class="asset"><a href="{{site.baseurl}}/term_deposit">Term Deposit</a></td>
-    <td><i class="fa fa-check"></i></td>
-    <td><i class="fa fa-check"></i></td>
-    <td><i class="fa fa-check"></i></td>
+    <td><a href="{{site.baseurl}}/swaption">Swaption</a><br />
+    <span class="note">Including physical and cash-settled</span></td>
+    <td><i class="fa fa-check"></i><br />
+    <span class="note">Normal, Black, SABR</span></td>
     <td></td>
-    <td><i class="fa fa-check"></i></td>
-    <td class="na"></td>
-    <td class="na"></td>
     <td></td>
+    <td class="na"></td>
   </tr>
   <tr>
-    <td class="asset"><a href="{{site.baseurl}}/bullet_payment">Bullet Payment</a></td>
-    <td><i class="fa fa-check"></i></td>
-    <td><i class="fa fa-check"></i></td>
+    <td>Fixed-Coupon Bond</td>
     <td><i class="fa fa-check"></i></td>
     <td></td>
     <td></td>
     <td class="na"></td>
-    <td class="na"></td>
+  </tr>
+  <tr>
+    <td>Capital Indexed Bond<br />
+    <span class="note">Including support for US TIPS</span></td>
+    <td><i class="fa fa-check"></i></td>
     <td></td>
+    <td></td>
+    <td class="na"></td>
+  </tr>
+  <tr>
+    <td>Bond Future</td>
+    <td><i class="fa fa-check"></i></td>
+    <td></td>
+    <td></td>
+    <td class="na"></td>
+  </tr>
+  <tr>
+    <td>Bond Future Option</td>
+    <td><i class="fa fa-check"></i><br />
+    <span class="note">Black</span></td>
+    <td></td>
+    <td></td>
+    <td class="na"></td>
+  </tr>
+  <tr>
+    <td>STIR Future</td>
+    <td><i class="fa fa-check"></i><br />
+    <span class="note">Hull-White</span></td>
+    <td></td>
+    <td></td>
+    <td class="na"></td>
+  </tr>
+  <tr>
+    <td>STIR Future Option</td>
+    <td><i class="fa fa-check"></i><br />
+    <span class="note">Normal</span></td>
+    <td></td>
+    <td></td>
+    <td class="na"></td>
+  </tr>
+  <tr>
+    <td>FX Vanilla Option</td>
+    <td><i class="fa fa-check"></i><br />
+    <span class="note">Black</span></td>
+    <td></td>
+    <td></td>
+    <td class="na"></td>
+  </tr>
+  <tr>
+    <td>CMS<br />
+    <span class="note">Including cap/floor</span></td>
+    <td><i class="fa fa-check"></i><br />
+    <span class="note">Normal, Black</span></td>
+    <td></td>
+    <td></td>
+    <td class="na"></td>
+  </tr>
+  <tr>
+    <td>IBOR cap/floor</td>
+    <td><i class="fa fa-check"></i><br />
+    <span class="note">Normal, Black</span></td>
+    <td></td>
+    <td></td>
+    <td class="na"></td>
+  </tr>
+  <tr>
+    <td>Generic Security</td>
+    <td class="na">MtM</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td class="na"></td>
   </tr>
   </tbody>
 </table>
+</div>
 
-A <i class="fa fa-check"></i> for a measure in the coverage grid means:
+<a id="pricer-footnote" href="#pricer"><sup>1</sup></a>
+Pricer support means Strata includes one or more model implementations which provide pricing and risk calculations. These provide an API which, given the required market data, calculates a particular measure. For details on the specific calculations supported, please see the relevant asset class page.
 
-* A fully-documented trade model exists for the asset class.
-* A calculation function exists for this measure with analytics support as necessary.
-* The measure is wired-up and available out-of-the-box under the standard measure name above.
-* The examples project contains a pricing example requesting this measure.
-* The [command-line tool]({{site.baseurl}}/command_line_tool) distribution includes example data for requesting this measure.
+<a id="calcapi-footnote" href="#calcapi"><sup>2</sup></a>
+The Calculation API allows measures to be calculated on mixed portfolios in a single operation, automatically calling the appropriate pricer, and returning a table of results. It also includes scenario capabilities.
+Support for the Calculation API means that the pricer is fully integrated using Strata's standard measure names.
 
+<a id="examples-footnote" href="#examples"><sup>3</sup></a>
+Code examples are included in the strata-examples module. This also indicates that the command-line tool includes an example portfolio and report for the asset class.
 
-## Additional coverage
+Work is ongoing to broaden asset class coverage, to integrate the existing coverage into the Calculation API, and to provide examples.
 
-The following asset classes can be priced using the API of the `strata-pricer` module.
-They are not currently exposed through the scenario-aware calculation API.
-Work is ongoing to provide complete end-to-end support for them.
+## Coverage roadmap
 
-<table class="product-coverage">
-  <thead>
-    <tr>
-      <th class="asset">Asset class</th>
-      <th>Models</th>
-    </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td class="asset"><a href="{{site.baseurl}}/swaption">Swaption</a> (Physical)</td>
-    <td>Normal, Black, SABR</td>
-  </tr>
-  <tr>
-    <td class="asset"><a href="{{site.baseurl}}/swaption">Swaption</a> (Cash-settled)</td>
-    <td>Normal, Black, SABR</td>
-  </tr>
-  <tr>
-    <td class="asset">Fixed Coupon Bond</td>
-    <td>Discounting</td>
-  </tr>
-  <tr>
-    <td class="asset">Bond Future</td>
-    <td>Discounting</td>
-  </tr>
-  <tr>
-    <td class="asset">Bond Future Option</td>
-    <td>Black</td>
-  </tr>
-  <tr>
-    <td class="asset">STIR Future (Ibor)</td>
-    <td>Hull-White</td>
-  </tr>
-  <tr>
-    <td class="asset">STIR Future Option (Ibor)</td>
-    <td>Normal</td>
-  </tr>
-  <tr>
-    <td class="asset">FX Vanilla Option</td>
-    <td>Black</td>
-  </tr>
-  <tr>
-    <td class="asset">CMS, including cap/floor</td>
-    <td>SABR</td>
-  </tr>
-  <tr>
-    <td class="asset">Ibor cap/floor</td>
-    <td>Normal, Black</td>
-  </tr>
-  </tbody>
-</table>
+Coverage for the following asset classes is currently in development and is planned to be released soon:
+
+* Capital Indexed Bonds (adding support for Japanese conventions)
+* FX Barrier Options
+
+Further coverage is on the longer-term roadmap and is prioritised based on commercial considerations. These asset classes will be added to the list above once development is scheduled.
 
 
 ## Curve calibration

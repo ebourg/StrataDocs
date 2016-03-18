@@ -5,7 +5,7 @@ permalink: /docs/
 
 {% include macros.html %}
 
-{{note}} Strata 0.10 is a next-generation technology preview release. Please be aware that the APIs, features and extension points described in this documentation may be subject to change. {{end}}
+{{note}} Strata 0.11 is a next-generation technology preview release. Please be aware that the APIs, features and extension points described in this documentation may be subject to change. {{end}}
 
 ## Overview
 
@@ -25,7 +25,6 @@ The collect module adds features in a number of areas:
 
 * [Extended enums]({{site.baseurl}}/extended_enum) - provides support for `enum`-like data structures that are loaded at startup
 * Functions - additional Java SE 8 functional interfaces
-* Identifiers - a standard way to refer to an identifier
 * Ranges - ranges of values
 * Result - functional result model
 * Time-Series - a series of values over time

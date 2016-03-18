@@ -16,6 +16,7 @@ Holiday calendars are now treated as data, referenced by an identifier.
 Securities can also now be referenced by identifier, although only for mark-to-market pricing at present.
 While there will no doubt be further trade model tweaks before v1.0, this set of changes should be by far the largest.
 The holiday calendar data provided with Strata is now available using `ReferenceData.standard()`.
+These changes also caused `StandardId` to change package.
 The next release will be v0.12, not v1.0.
 
 * New asset classes - Capital Indexed Bonds

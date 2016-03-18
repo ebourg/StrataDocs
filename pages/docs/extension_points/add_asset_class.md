@@ -19,9 +19,8 @@ A trade is the basic element of finance, a transaction between two counterpartie
 
 A security is a standard contract that is traded, such as an equity share or futures contract.
 Securities are typically created once and shared using an identifier, represented by a
-[`StandardId`]({{site.baseurl}}/apidocs/com/opengamma/strata/collect/id/StandardId.html).
-They are often referred to as *reference data*. The standard implementation of a security is
-[`UnitSecurity`]({{site.baseurl}}/apidocs/com/opengamma/strata/product/UnitSecurity.html).
+[`SecurityId`]({{site.baseurl}}/apidocs/com/opengamma/strata/product/SecurityId.html).
+They are often referred to as *reference data*.
 
 A product is the financial details of the trade or security. A product typically contains enough information
 to be priced, such as the dates, holidays, indices, currencies and amounts.
@@ -39,23 +38,33 @@ that directly contains a [`Swap`]({{site.baseurl}}/apidocs/com/opengamma/strata/
 where [`SwapTrade`]({{site.baseurl}}/apidocs/com/opengamma/strata/product/swap/SwapTrade.html) implements
 [`ProductTrade`]({{site.baseurl}}/apidocs/com/opengamma/strata/product/ProductTrade.html).
 
-A listed trade contains a reference to the underlying security that is the basis of the trade.
-Rather than holding the security directly, a [`SecurityLink`]({{site.baseurl}}/apidocs/com/opengamma/strata/product/SecurityLink.html)
-is used to loosely connect the trade to the security. The link permits the security to either be located externally,
-such as in a database, or to be embedded within the link. The security contains details of the actual product.
+A listed trade can be defined in two ways.
 
-For example, consider a trade in a listed equity. The object model consists of a
-[`EquityTrade`]({{site.baseurl}}/apidocs/com/opengamma/strata/product/equity/EquityTrade.html) that contains a link
-to a [`Security`]({{site.baseurl}}/apidocs/com/opengamma/strata/product/Security.html).
-The security will directly contain the underlying [`Equity`]({{site.baseurl}}/apidocs/com/opengamma/strata/product/equity/Equity.html).
- 
+The first approach is to use [`SecurityTrade`]({{site.baseurl}}/apidocs/com/opengamma/strata/product/SecurityTrade.html).
+A `SecurityTrade` stores just the security identifier, quantity and trade price.
+When the trade needs to be priced, the identifier can be resolved to a `Security` using
+[`ReferenceData`]({{site.baseurl}}/apidocs/com/opengamma/strata/basics/market/ReferenceData.html).
+The reference data could be backed by an in-memory store or a database.
+
+The second approach is to use a more specific trade type, such as
+[`BondFutureTrade`]({{site.baseurl}}/apidocs/com/opengamma/strata/product/bond/BondFutureTrade.html).
+These types include the product details directly so that no reference data is needed.
+As such, this approach avoids the need to use the Strata `Security` classes.
+
+For example, consider a bond future.
+In the first approach, the application would create a `SecurityTrade` using the identifier of the future.
+The reference data would be populated, mapping the identifier to an instance of `BondFutureSecurity`
+and additional identifiers for each of the underlying `FixedCouponBondSecurity` instances.
+
+In the second approach, the trade would be defined using `BondFutureTrade`. In this case,
+the trade directly holds the product model of the `BondFuture` and each underlying `FixedCouponBond`.
+There is thus no need to populate the reference data with securities.
+
 The key to understanding the model is appreciating the separation of products from trades and securities.
-In many cases, it is possible to price the product without knowing any trade details.
-This allows a product to be an underlying of another product, such as a swap within a swaption.
+It is often possible to price either against the market or against a model.
+Details for pricing against the market are held in the security.
+Details for pricing against the model are held in the product.
 
-Note that on the listed side, it is often possible to price either against the market or against a model.
-Details for pricing against the market are primarily held in the security.
-Details for pricing against the model are primarily held in the product.
 
 ### Technology
 

@@ -7,6 +7,26 @@ Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
 
+## Strata v0.12
+
+*11 April 2016*
+
+This release contains a major rework of the security model to introduce positions.
+`GenericFuture` and `GenericFutureOption` have gone, with `GenericSecurity` in use instead.
+A new `Security` interface is added, with implementations that refer to other securities by identifier.
+There is also a new `Position` interface with `SecurityPosition` and `GenericSecurityPosition` implementations.
+The next release will be v0.13, not v1.0.
+
+* New security and position domain model
+* Replaced generic future/option by generic security
+* Inflation swap conventions
+* Canadian holidays and indices
+* Improved FX rate triangulation
+* Enhanced examples
+
+Feel free to ask a question in the forums if you have difficulty porting code from v0.11 to v0.12.
+
+
 ## Strata v0.11
 
 *18 March 2016*

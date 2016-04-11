@@ -23,7 +23,7 @@ If you have a patch for anything from a bug right through to a full-blown featur
 for inclusion of your code into Strata is essentially the same.
 
  1. Fork Strata on Github.
- 2. From your fork of Strata create a pull request in Github against `OpenGamma/Strata:master` (i.e. the `master` branch of the main repository).
+ 2. From your fork of Strata create a pull request in GitHub against `OpenGamma/Strata:master` (i.e. the `master` branch of the main repository).
  3. If necessary (particularly for large contributions) we will email you a legal indemnity form to sign and return.
  4. We will check your patch passes in CI and meets our quality standards (see below on how to get a patch accepted).
  5. If everything is fine your patch will be accepted and be merged. Thanks!

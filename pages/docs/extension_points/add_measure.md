@@ -2,11 +2,10 @@
 title: Adding a New Measure
 permalink: /add_measure/
 ---
-## Measures
 
 In Strata, measures define the values that can be calculated for a trade or other calculation target.
 For example, Strata provides a standard set of measures including present value and PV01 (see the
-[`Measures`]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/config/Measures.html) class).
+[`Measures`]({{site.baseurl}}/apidocs/com/opengamma/strata/measure/Measures.html) class).
 When a user requests a calculation they specify the measures that should be calculated and the rules defining
 how they should be calculated.
 
@@ -17,7 +16,7 @@ for new asset classes.
 ## Calculation Functions
 
 Measures are calculated by implementations of
-[`CalculationFunction`]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/runner/function/CalculationFunction.html).
+[`CalculationFunction`]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/runner/CalculationFunction.html).
 Adding a new measure to Strata requires three steps:
 
 * Create a function to calculate the measure
@@ -32,16 +31,25 @@ It contains four methods:
 ```java
 public interface CalculationFunction<T extends CalculationTarget> {
 
+  Class<T> targetType();
+
   Set<Measure> supportedMeasures();
 
   Currency naturalCurrency(T target, ReferenceData refData);
 
-  FunctionRequirements requirements(T target, Set<Measure> measures, ReferenceData refData);
+  FunctionRequirements requirements(
+      T target, Set<Measure> measures, CalculationParameters parameters, ReferenceData refData);
 
-  Map<Measure, Result<?>> calculate(T target, Set<Measure> measures, CalculationMarketData marketData, ReferenceData refData);
+  Map<Measure, Result<?>> calculate(
+      T target, Set<Measure> measures, CalculationParameters parameters, ScenarioMarketData marketData, ReferenceData refData);
 
 }
 ```
+
+### Target type
+
+Each function implementation will handle one type of target.
+The `targetType` method specifies the type, such as `ResolvedSwap.class`.
 
 ### Supported measures
 
@@ -71,8 +79,8 @@ More details can be found [here]({{site.baseurl}}/market_data/).
 The `requirements` method has a parameter for the calculation target and returns an instance of `FunctionRequirements`.
 The requirements specify the market data required by the function to calculate a value for the target.
 
-Market data is identified by implementations of `MarketDataKey`.
-The function creates a market data key for each piece of market data it requires and populates a set of
+Market data is identified by implementations of `MarketDataId`.
+The function creates a market data identifier for each piece of market data it requires and populates the
 `FunctionRequirements`. The requirements contain three types of values:
 
 * Single values, for example a curve or a quoted price
@@ -97,10 +105,10 @@ The values in a time series are always of type `double`.
 
 ##### Output Currencies
 
-The Strata calculation engine is able to automatically convert currency values into different currencies for
-the purposes of reporting. In order to perform this conversion the required FX rates must be available in the environment. 
+The Strata calculation runner is able to automatically convert currency values into different currencies for
+the purposes of reporting. In order to perform this conversion the required FX rates must be available in the market data. 
 
-The engine must know which currencies are included in the results in order to provide the correct FX rates.
+The calculation runner must know which currencies are included in the results in order to provide the correct FX rates.
 Therefore if the result of the function includes any currency value, the currencies should be included in
 the set of output currencies.
 
@@ -116,53 +124,15 @@ following market data is required:
 * A forward curve for predicting the future values of the rates for each of the indices
 * A discount curve for the currency used for discounting future values
 
-```java
-@Override
-public FunctionRequirements requirements(FraTrade trade, Set<Measure> measures, ReferenceData refData) {
-  Fra fra = trade.getProduct();
+The requirements method must be implemented to return these items in the `FunctionRequirements`.
+In most case, the function will use an instance of `CalculationParameters`.
+The `requirements` method will delegate most of the implementation to the parameters instance.
 
-  // Create a set of all indices referenced by the FRA
-  Set<IborIndex> indices = new HashSet<>();
-
-  // The main index is always present
-  indices.add(fra.getIndex());
-
-  // The index used for linear interpolation is optional
-  fra.getIndexInterpolated().ifPresent(indices::add);
-
-  // Create a key identifying the rate of each index referenced by the FRA
-  Set<ObservableKey> indexRateKeys = indices.stream()
-      .map(IndexRateKey::of)
-      .collect(toImmutableSet());
-
-  // Create a key identifying the forward curve of each index referenced by the FRA
-  Set<MarketDataKey<?>> indexCurveKeys = indices.stream()
-      .map(IborIndexCurveKey::of)
-      .collect(toImmutableSet());
-
-  // Create a key identifying the discount factors for the FRA currency
-  Set<DiscountCurveKey> discountFactorsKeys = ImmutableSet.of(DiscountCurveKey.of(fra.getCurrency()));
-
-  return FunctionRequirements.builder()
-      .singleValueRequirements(Sets.union(indexCurveKeys, discountFactorsKeys))
-      .timeSeriesRequirements(indexRateKeys)
-      .outputCurrencies(fra.getCurrency())
-      .build();
-}
-```
-
-The logic of the method performs the following steps:
-
-1. Builds a set containing the indices referenced by the FRA
-1. Builds a set of `IndexRateKey` instances for the indices to identify the time series of index rates
-1. Builds a set of `IborIndexCurveKey` instances identifying the forward curve for each index
-1. Creates a `DiscountCurveKey` identifying the discount curve for the FRA currency
-1. Creates a set of `FunctionRequirements` containing the keys and with the FRA currency as the output currency 
 
 ### Calculate
 
 The `calculate` method calculates a value for each of the specified measures for the calculation target (normally a trade).
-The method parameters are the calculation target, measures and an instance of `CalculationMarketData` containing
+The method parameters are the calculation target, measures and an instance of `ScenarioMarketData` containing
 the market data required for the calculation.
 
 To perform efficient calculations, the interface is designed to handle multiple measures and multiple scenarios efficiently.
@@ -177,7 +147,7 @@ calculations repeatedly and pack the results into a single return value.
 
 #### Looking up Market Data
 
-A function requests market data by calling the following methods on `CalculationMarketData`:
+A function requests market data by calling the following methods on `ScenarioMarketData`:
 
 * `getValue`
 * `getTimeSeries`
@@ -188,8 +158,8 @@ is a `MarketDataBox` which provides a market data value for each scenario. The m
 each scenario is provided by `MarketDataBox.getValue(int scenarioIndex)`.
 
 If the market data doesn't contain a value for the key an exception will be thrown.
-The exception will be caught by the engine and the results will contain an error explaining the calculation
-failed because the market data was not available.
+The exception will be caught by the calculation runner and the results will contain an error
+explaining the calculation failed because the market data was not available.
 
 #### Return Values
 

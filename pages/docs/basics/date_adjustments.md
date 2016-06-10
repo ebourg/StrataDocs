@@ -1,5 +1,5 @@
 ---
-title: Date adjustments
+title: Date Adjustments
 permalink: /date_adjustments/
 ---
 

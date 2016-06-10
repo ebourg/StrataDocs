@@ -97,9 +97,10 @@ concurrent data structures that could slow the application down.
 ### Ini files
 
 Each extended enum is defined by one or more `.ini` files.
-The ini file must be located on the classpath in one of two specific locations,
+The ini file must be located on the classpath in one of three specific locations,
 `com/opengamma/strata/config/base` or `com/opengamma/strata/config/application`.
 The "base" location is intended for use by Strata.
+The "library" location is intended for use by libraries that build on Strata.
 The "application" location is intended for use by application code.
 The list of known locations can be expanded by setting the system property
 `com.opengamma.strata.config.directories` on the command line.
@@ -130,7 +131,7 @@ Actual/Actual ISDA = Act/Act ISDA
 ### Ini file chain
 
 The list of known locations provides a deterministic ordering to the loading of ini files.
-The "base" location is lower priority than the "application" location.
+The "base" location is lower priority than the "library" location which is lower priority than the  "application" location.
 There must only ever be one ini file in each location on the classpath.
 
 The `[chain]` section is used to control how the files link together.

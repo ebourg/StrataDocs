@@ -15,7 +15,7 @@ These illustrate:
 The `SwapPricingExample` and `SwapPricingWithCalibrationExample` classes are good starting points.
 * The use of the declarative scenario API to run a historical simulation, producing P&L vectors which
 could be used to calculate historical VaR, in `HistoricalScenarioExample`.
-* Trade serialisation in `SwapTradeModelDemo`.
+* Trade serialization in `SwapTradeModelDemo`.
 * Schedule generation implemented as a demo JavaFX UI by `ScheduleGui`.
 
 This module also contains the code for the [command-line tool]({{site.baseurl}}/command_line_tool).

@@ -5,7 +5,8 @@ permalink: /docs/
 
 {% include macros.html %}
 
-{{note}} Strata 0.12 is a next-generation technology preview release. Please be aware that the APIs, features and extension points described in this documentation may be subject to change. {{end}}
+{{note}} Strata 0.14 is a next-generation technology preview release.
+Please be aware that the APIs, features and extension points described in this documentation may be subject to change. {{end}}
 
 ## Overview
 
@@ -46,8 +47,8 @@ For more information, see the following guides:
 
 ## Product module
 
-The `strata-product` module contains the main domain model, defining instruments such as
-interest rate swaps, FRAs and futures.
+The `strata-product` module contains the [main domain model]({{site.baseurl}}/product_model),
+defining instruments such as interest rate swaps, FRAs and futures.
 For more information, see the following guides:
 
 * [Swap]({{site.baseurl}}/swap) - Swaps (Fixed, Ibor, Overnight, Inflation)
@@ -59,14 +60,20 @@ For more information, see the following guides:
 * [Bullet Payment]({{site.baseurl}}/bullet_payment) - Unidirectional one-off payments
 
 
+## Data module
+
+The `strata-data` module provides market data containers.
+Both single-scenario and multi-scenario containers are available.
+
+
 ## Market module
 
-The `strata-market` includes the representations of the market, including curves and surfaces.
+The `strata-market` module includes the representations of the market, including curves and surfaces.
 
 
 ## Loader module
 
-The `strata-loader` provides the ability to load products and market data from files.
+The `strata-loader` module provides the ability to load products and market data from files.
 This includes an FpML loader for products.
 
 
@@ -83,10 +90,10 @@ Given a list of trades and some configuration parameters, it will determine what
 obtain it from a source, perform any necessary calibration, and calculate the desired results.
 
 
-## Function module
+## Measure module
 
-The `strata-function` module includes the functions that operate within `strata-calc` to calculate
-the desired results.
+The `strata-function` module enables applications to calculate high-level measures, such as PV and PV01.
+Access is provided directly and via the Calculation API of `strata-calc`.
 
 
 ## Report module

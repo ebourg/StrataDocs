@@ -7,6 +7,35 @@ Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
 
+## Strata v0.14
+
+*9 June 2016*
+
+This release contains a major simplification of the calculation API.
+The "rules" part of the calculation API has been replaced with a "parameter" concept,
+for example `RatesMarketDataLookup` that selects from the complete set of market data.
+The new design is far simpler, with logic moved out of the framework and into code that applications
+can control and extend. The results model now includes column headers.
+The calculation runner and market data factory are both affected.
+
+There has also been significant refactoring of packages, module structure and market data.
+Separate curve and surface sensitivity objects have been combined.
+Scenario market data is now more widely available, with the `MarketDataKey` concept removed.
+The `strata-function` project has been renamed to `strata-measure`.
+The goal has been to provide a structure that will last Strata in the long term.
+v1.0 is approaching and expected at the end of June and will provide backwards compatible API stability.
+
+* Simplified and extensible calculation API
+* Curve sensitivity rebucketing
+* FX single barrier option trade model and pricer
+* FX vanilla option Vanna Volga pricer
+* SABR swaption calibrator
+* Additional swap conventions
+* Abstraction for market data parameters
+
+Feel free to ask a question in the forums if you have difficulty porting code from v0.12 to v0.14.
+
+
 ## Strata v0.12
 
 *11 April 2016*
@@ -15,7 +44,7 @@ This release contains a major rework of the security model to introduce position
 `GenericFuture` and `GenericFutureOption` have gone, with `GenericSecurity` in use instead.
 A new `Security` interface is added, with implementations that refer to other securities by identifier.
 There is also a new `Position` interface with `SecurityPosition` and `GenericSecurityPosition` implementations.
-The next release will be v0.13, not v1.0.
+The next release will be v0.14, not v1.0.
 
 * New security and position domain model
 * Replaced generic future/option by generic security

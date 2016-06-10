@@ -147,7 +147,15 @@ Strata includes the following coverage:
   <tr>
     <td>FX Vanilla Option</td>
     <td><i class="fa fa-check"></i><br />
-    <span class="note">Black</span></td>
+    <span class="note">Black, Vanna Volga</span></td>
+    <td></td>
+    <td></td>
+    <td class="na"></td>
+  </tr>
+  <tr>
+    <td>FX Single Barrier Option</td>
+    <td><i class="fa fa-check"></i><br />
+    <span class="note">Black, Trinomial tree</span></td>
     <td></td>
     <td></td>
     <td class="na"></td>
@@ -156,7 +164,7 @@ Strata includes the following coverage:
     <td>CMS<br />
     <span class="note">Including cap/floor</span></td>
     <td><i class="fa fa-check"></i><br />
-    <span class="note">Normal, Black</span></td>
+    <span class="note">SABR</span></td>
     <td></td>
     <td></td>
     <td class="na"></td>

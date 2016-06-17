@@ -65,25 +65,30 @@ Swap swap = Swap.of(payLeg, receiveLeg);
 {{tip}}The strata-loader project provides the ability to load a swap from FpML.{{end}}
 
 
+## Risk measures
 
-## Pricing
+The `strata-measure` module provides high-level risk measures for rate swaps.
+The main entry point is
+[`SwapTradeCalculations`]({{site.baseurl}}/apidocs/com/opengamma/strata/measure/swap/SwapTradeCalculations.html).
 
-The `strata-pricer` module provides pricing support for swaps:
+The following measures are available:
 
-* `DiscountingSwapProductPricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/swap/DiscountingSwapProductPricer.html).
-* `DiscountingSwapTradePricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/swap/DiscountingSwapTradePricer.html).
-
-The following pricing methods are available:
-
-* present value, and associated sensitivity
-* par rate, and associated sensitivity
-* par spread, and associated sensitivity
-* forecast value, and associated sensitivity
+* present value, detailed breakdown, and associated sensitivity
+* par rate
+* par spread
+* cash flows
 * accrued interest
+* leg initial notional
+* leg present value
 * currency exposure
 * current cash
-* cash flows
-* explain present value
+
+These measures are also available using the calculation API.
+
+The `strata-pricer` module provides lower-level pricing support for rate swaps:
+
+* `DiscountingSwapTradePricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/swap/DiscountingSwapTradePricer.html).
+* `DiscountingSwapProductPricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/swap/DiscountingSwapProductPricer.html).
 
 
 ## Product model

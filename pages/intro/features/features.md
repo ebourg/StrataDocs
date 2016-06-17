@@ -27,11 +27,15 @@ The scope of Strata and its extension points are illustrated below.
 
 ## Main APIs
 
-Strata provides two calculation APIs: pricer-level and calculation-level.
+Strata provides three main APIs: pricer-level, measure-level and calculation-level.
 The APIs differ primarily in the amount of data they can handle.
 
 The pricer-level API provides the ability to calculate one result (risk measure).
 The inputs consist of one trade and one set of market data.
+Where possible it is recommended to use the measure-level API in preference to the prcer-level API.
+
+The measure-level API provides the ability to calculate one result (risk measure).
+The inputs consist of one trade, with methods to handle either one set of market data or many sets (scenarios).
 
 The calculation-level API provides the ability to calculate many results.
 The inputs consist of one or more trades, one or more measures and one or more sets of market data (scenarios).

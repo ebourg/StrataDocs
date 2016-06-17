@@ -5,7 +5,7 @@ permalink: /docs/
 
 {% include macros.html %}
 
-{{note}} Strata 0.14 is a next-generation technology preview release.
+{{note}} Strata 0.15 is a next-generation technology preview release.
 Please be aware that the APIs, features and extension points described in this documentation may be subject to change. {{end}}
 
 ## Overview
@@ -92,7 +92,7 @@ obtain it from a source, perform any necessary calibration, and calculate the de
 
 ## Measure module
 
-The `strata-function` module enables applications to calculate high-level measures, such as PV and PV01.
+The `strata-measure` module enables applications to calculate high-level measures, such as PV and PV01.
 Access is provided directly and via the Calculation API of `strata-calc`.
 
 

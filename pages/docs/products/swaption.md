@@ -37,43 +37,36 @@ The swaption settlement type is `PhysicalSettlement` or `CashSettlement`, and fu
 These correspond to the ISDA 2006 definitions.
 
 
-## Pricing
+## Risk measures
 
-The `strata-pricer` module provides pricing support for swaptions based on lognormal (Black) model, normal (Bachelier) model and SABR model.
+The `strata-measure` module provides high-level risk measures for swaptions.
+This is based on the lognormal (Black) model, normal (Bachelier) model and SABR model.
+The main entry point is
+[`SwaptionTradeCalculations`]({{site.baseurl}}/apidocs/com/opengamma/strata/measure/swaption/SwaptionTradeCalculations.html).
 
-For physical-delivery swaptions, the pricer classes are
-
-* [`BlackSwaptionPhysicalProductPricer`]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/swaption/BlackSwaptionPhysicalProductPricer.html) class.
-* [`NormalSwaptionPhysicalProductPricer`]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/swaption/NormalSwaptionPhysicalProductPricer.html) class.
-* [`SabrSwaptionPhysicalProductPricer`]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/swaption/SabrSwaptionPhysicalProductPricer.html) class.
-* [`BlackSwaptionPhysicalTradePricer`]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/swaption/BlackSwaptionPhysicalTradePricer.html) class.
-* [`NormalSwaptionPhysicalTradePricer`]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/swaption/NormalSwaptionPhysicalTradePricer.html) class.
-* [`SabrSwaptionPhysicalTradePricer`]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/swaption/SabrSwaptionPhysicalTradePricer.html) class.
-
-For cash-settled swaptions, the pricer classes are
-
-* [`BlackSwaptionCashParYieldProductPricer`]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/swaption/BlackSwaptionCashParYieldProductPricer.html) class.
-* [`NormalSwaptionCashParYieldProductPricer`]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/swaption/NormalSwaptionCashParYieldProductPricer.html) class.
-* [`SabrSwaptionCashParYieldProductPricer`]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/swaption/SabrSwaptionCashParYieldProductPricer.html) class.
-* [`BlackSwaptionCashParYieldTradePricer`]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/swaption/BlackSwaptionCashParYieldTradePricer.html) class.
-* [`NormalSwaptionCashParYieldTradePricer`]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/swaption/NormalSwaptionCashParYieldTradePricer.html) class.
-* [`SabrSwaptionCashParYieldTradePricer`]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/swaption/SabrSwaptionCashParYieldTradePricer.html) class.
-
-The following pricing methods are available:
+The following measures are available:
 
 * present value, and associated sensitivity
 * currency exposure
 * current cash
 * implied volatility
 
-For Black and Normal methods, the Greeks are computed:
+These measures are also available using the calculation API.
+
+The `strata-pricer` module provides pricing support for swaptions.
+
+* [`BlackSwaptionTradePricer`]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/swaption/BlackSwaptionTradePricer.html) class.
+* [`NormalSwaptionTradePricer`]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/swaption/NormalSwaptionTradePricer.html) class.
+* [`SabrSwaptionTradePricer`]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/swaption/SabrSwaptionTradePricer.html) class.
+
+For Black and Normal methods, the Greeks can be computed:
 
 * present value delta
 * present value gamma
 * present value theta
 * present value sensitivity to volatility, i.e., present value vega
 
-SABR model pricer instead supports
+For the SABR method the pricer supports
 
 * SABR parameter sensitivity
 

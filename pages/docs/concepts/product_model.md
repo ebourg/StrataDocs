@@ -7,6 +7,7 @@ The product model in Strata, defined in `strata-product`, provides Java classes 
 a broad range of common asset classes. It is a _data only_ design.
 There is little to no behaviour in the classes.
 Logic for pricing and risk is provided separately in the `strata-pricer` project.
+Applications will typically use `strata-measure` to access risk measures.
 
 
 ## Concepts

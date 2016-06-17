@@ -34,21 +34,26 @@ Fra fra = Fra.builder()
 {{tip}}The strata-loader project provides the ability to load a FRA from FpML.{{end}}
 
 
-## Pricing
+## Risk measures
 
-The `strata-pricer` module provides pricing support for FRAs:
+The `strata-measure` module provides high-level risk measures for FRAs.
+The main entry point is
+[`FraTradeCalculations`]({{site.baseurl}}/apidocs/com/opengamma/strata/measure/fra/FraTradeCalculations.html).
 
-* `DiscountingFraProductPricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/fra/DiscountingFraProductPricer.html).
-* `DiscountingFraTradePricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/fra/DiscountingFraTradePricer.html).
+The following measures are available:
 
-The following pricing methods are available:
-
-* present value, and associated sensitivity
+* present value, detailed breakdown, and associated sensitivity
 * par rate
-* par spread, and associated sensitivity
-* forecast value, and associated sensitivity
-* cash flows
-* explain present value
+* par spread
+* currency exposure
+* current cash
+
+These measures are also available using the calculation API.
+
+The `strata-pricer` module provides lower-level pricing support for FRAs:
+
+* `DiscountingFraTradePricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/fra/DiscountingFraTradePricer.html).
+* `DiscountingFraProductPricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/fra/DiscountingFraProductPricer.html).
 
 
 ## Product model

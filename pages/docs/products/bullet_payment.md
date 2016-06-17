@@ -28,15 +28,23 @@ BulletPayment bp = BulletPayment.builder()
 {{tip}}The strata-loader project provides the ability to load a bullet payment from FpML.{{end}}
 
 
-## Pricing
+## Risk measures
 
-The `strata-pricer` module provides pricing support for Bullet Payments:
+The `strata-measure` module provides high-level risk measures for Bullet Payments.
+The main entry point is
+[`BulletPaymentTradeCalculations`]({{site.baseurl}}/apidocs/com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html).
 
-* `DiscountingPaymentPricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/DiscountingPaymentPricer.html).
-
-The following pricing methods are available:
+The following measures are available:
 
 * present value, and associated sensitivity
+* currency exposure
+* current cash
+
+These measures are also available using the calculation API.
+
+The `strata-pricer` module provides lower-level pricing support for Bullet Payments:
+
+* `DiscountingPaymentPricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/DiscountingPaymentPricer.html).
 
 
 ## Product model

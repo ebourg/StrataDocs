@@ -31,13 +31,13 @@ FxSingle fx = FxSingle.of(CurrencyAmount.of(Currency.USD, 1000),
 {{tip}}The strata-loader project provides the ability to load an FX Single from FpML.{{end}}
 
 
-## Pricing
+## Risk measures
 
-The `strata-pricer` module provides pricing support for FX Singles:
+The `strata-measure` module provides high-level risk measures for FX Singles.
+The main entry point is
+[`FxSingleTradeCalculations`]({{site.baseurl}}/apidocs/com/opengamma/strata/measure/fx/FxSingleTradeCalculations.html).
 
-* `DiscountingFxSingleProductPricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/fx/DiscountingFxSingleProductPricer.html).
-
-The following pricing methods are available:
+The following measures are available:
 
 * present value, and associated sensitivity
 * par spread
@@ -45,6 +45,12 @@ The following pricing methods are available:
 * current cash
 * forward FX rate, and associated point/spot sensitivity
 
+These measures are also available using the calculation API.
+
+The `strata-pricer` module provides lower-level pricing support for FX Singles:
+
+* `DiscountingFxSingleTradePricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/fx/DiscountingFxSingleTradePricer.html).
+* `DiscountingFxSingleProductPricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/fx/DiscountingFxSingleProductPricer.html).
 
 ## Product model
 

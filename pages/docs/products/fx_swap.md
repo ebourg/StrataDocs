@@ -32,18 +32,25 @@ FxSwap fx = FxSwap.ofForwardPoints(CurrencyAmount.of(Currency.USD, 1000),  // am
 {{tip}}The strata-loader project provides the ability to load an FX Swap from FpML.{{end}}
 
 
-## Pricing
+## Risk measures
 
-The `strata-pricer` module provides pricing support for FX Swaps:
+The `strata-measure` module provides high-level risk measures for FX Swaps.
+The main entry point is
+[`FxSwapTradeCalculations`]({{site.baseurl}}/apidocs/com/opengamma/strata/measure/fx/FxSwapTradeCalculations.html).
 
-* `DiscountingFxSwapProductPricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/fx/DiscountingFxSwapProductPricer.html).
-
-The following pricing methods are available:
+The following measures are available:
 
 * present value, and associated sensitivity
-* par spread, and associated sensitivity
+* par spread
 * currency exposure
 * current cash
+
+These measures are also available using the calculation API.
+
+The `strata-pricer` module provides lower-level pricing support for FX Swaps:
+
+* `DiscountingFxSwapTradePricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/fx/DiscountingFxSwapTradePricer.html).
+* `DiscountingFxSwapProductPricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/fx/DiscountingFxSwapProductPricer.html).
 
 
 ## Product model

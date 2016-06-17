@@ -7,6 +7,26 @@ Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
 
+## Strata v0.15
+
+*17 June 2016*
+
+This release contains a new measures API.
+The measures API is intended to be the main access to the functionality of Strata.
+Applications currently using the pricer API should consider using the measures API instead.
+
+For example, consider using `SwapTradeCalculations` instead of `DiscountingSwapTradePricer`.
+
+* New measures API
+* Extended set of measures access via the calculation API
+* Renamed PV01 measures
+* Add a calculator to obtain the notional equivalent
+* Add currency exposure and current cash to some instruments
+* Add support for known amount stubs on swaps (fixed and ibor legs)
+
+Feel free to ask a question in the forums if you have difficulty porting code from v0.14 to v0.15.
+
+
 ## Strata v0.14
 
 *9 June 2016*

@@ -36,17 +36,26 @@ TermDeposit td = TermDeposit.builder()
 {{tip}}The strata-loader project provides the ability to load a term deposit from FpML.{{end}}
 
 
-## Pricing
+## Risk measures
 
-The `strata-pricer` module provides pricing support for Term Deposits:
+The `strata-measure` module provides high-level risk measures for Term Deposits.
+The main entry point is
+[`TermDepositTradeCalculations`]({{site.baseurl}}/apidocs/com/opengamma/strata/measure/deposit/TermDepositTradeCalculations.html).
 
-* `DiscountingTermDepositProductPricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/deposit/DiscountingTermDepositProductPricer.html).
-
-The following pricing methods are available:
+The following measures are available:
 
 * present value, and associated sensitivity
 * par rate
-* par spread, and associated sensitivity
+* par spread
+* currency exposure
+* current cash
+
+These measures are also available using the calculation API.
+
+The `strata-pricer` module provides lower-level pricing support for Term Deposits:
+
+* `DiscountingTermDepositTradePricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/deposit/DiscountingTermDepositTradePricer.html).
+* `DiscountingTermDepositProductPricer`, see [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/pricer/deposit/DiscountingTermDepositProductPricer.html).
 
 
 ## Product model

@@ -374,6 +374,35 @@ and confusion with the <a href="http://www.isda.org/c_and_a/pdf/ACT-ACT-ISDA-199
 </tr>
 </table>
 
+### Actual/Actual Year
+
+<table>
+<tr>
+  <th>Name</th>
+  <td>Act/Act Year</td>
+</tr>
+<tr>
+  <th>Constant</th>
+  <td>DayCounts.ACT_ACT_YEAR</td>
+</tr>
+<tr>
+  <th>Summary</th>
+  <td>Divides the actual number of days by the actual number of days in the year from the start date</td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>The result is calculated in two parts - a number of whole years and the remaining part.<br />
+If the period is over one year, a number of years is added to the start date to reduce
+the remaining period to less than a year. If the start date is February 29th, then each
+time a year is added the last valid day in February is chosen.<br />
+The remaining period is then processed by a simple division.<br />
+The numerator is the actual number of days in the remaining period.<br />
+The denominator is the actual number of days in the year from the adjusted start date.<br />
+The first day in the period is included, the last day is excluded.<br />
+The result is the number of whole years plus the result of the division.<br />
+</tr>
+</table>
+
 ### 30/360 ISDA
 
 <table>

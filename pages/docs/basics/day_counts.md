@@ -399,7 +399,7 @@ The remaining period is then processed by a simple division.<br />
 The numerator is the actual number of days in the remaining period.<br />
 The denominator is the actual number of days in the year from the adjusted start date.<br />
 The first day in the period is included, the last day is excluded.<br />
-The result is the number of whole years plus the result of the division.<br />
+The result is the number of whole years plus the result of the division.</td>
 </tr>
 </table>
 

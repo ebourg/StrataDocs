@@ -94,9 +94,9 @@ Strata includes the following coverage:
     <span class="note">Including physical and cash-settled</span></td>
     <td><i class="fa fa-check"></i><br />
     <span class="note">Normal, Black, SABR</span></td>
+    <td><i class="fa fa-check"></i></td>
     <td></td>
     <td></td>
-    <td class="na"></td>
   </tr>
   <tr>
     <td>Fixed-Coupon Bond</td>
@@ -129,14 +129,6 @@ Strata includes the following coverage:
     <td class="na"></td>
   </tr>
   <tr>
-    <td>STIR Future</td>
-    <td><i class="fa fa-check"></i><br />
-    <span class="note">Hull-White</span></td>
-    <td></td>
-    <td></td>
-    <td class="na"></td>
-  </tr>
-  <tr>
     <td>STIR Future Option</td>
     <td><i class="fa fa-check"></i><br />
     <span class="note">Normal</span></td>
@@ -150,7 +142,7 @@ Strata includes the following coverage:
     <span class="note">Black, Vanna Volga</span></td>
     <td></td>
     <td></td>
-    <td class="na"></td>
+    <td></td>
   </tr>
   <tr>
     <td>FX Single Barrier Option</td>
@@ -158,7 +150,7 @@ Strata includes the following coverage:
     <span class="note">Black, Trinomial tree</span></td>
     <td></td>
     <td></td>
-    <td class="na"></td>
+    <td></td>
   </tr>
   <tr>
     <td>CMS<br />
@@ -167,7 +159,7 @@ Strata includes the following coverage:
     <span class="note">SABR</span></td>
     <td></td>
     <td></td>
-    <td class="na"></td>
+    <td></td>
   </tr>
   <tr>
     <td>IBOR cap/floor</td>
@@ -175,7 +167,7 @@ Strata includes the following coverage:
     <span class="note">Normal, Black</span></td>
     <td></td>
     <td></td>
-    <td class="na"></td>
+    <td></td>
   </tr>
   <tr>
     <td>Generic Security</td>
@@ -189,25 +181,30 @@ Strata includes the following coverage:
 </div>
 
 <a id="pricer-footnote" href="#pricer"><sup>1</sup></a>
-Pricer support means Strata includes one or more model implementations which provide pricing and risk calculations. These provide an API which, given the required market data, calculates a particular measure. For details on the specific calculations supported, please see the relevant asset class page.
+Pricer support means Strata includes one or more model implementations which provide pricing and risk calculations.
+These provide an API which, given the required market data, calculates a particular measure.
+For details on the specific calculations supported, please see the relevant asset class page.
 
 <a id="calcapi-footnote" href="#calcapi"><sup>2</sup></a>
-The Calculation API allows measures to be calculated on mixed portfolios in a single operation, automatically calling the appropriate pricer, and returning a table of results. It also includes scenario capabilities.
+The Calculation API allows measures to be calculated on mixed portfolios in a single operation, automatically
+calling the appropriate pricer, and returning a table of results. It also includes scenario capabilities.
 Support for the Calculation API means that the pricer is fully integrated using Strata's standard measure names.
+This also implies support in the measure-level API
 
 <a id="examples-footnote" href="#examples"><sup>3</sup></a>
 Code examples are included in the strata-examples module. This also indicates that the command-line tool includes an example portfolio and report for the asset class.
 
-Work is ongoing to broaden asset class coverage, to integrate the existing coverage into the Calculation API, and to provide examples.
+Work is ongoing to broaden asset class coverage, to integrate the existing coverage into the
+Calculation API, and to provide examples.
 
 ## Coverage roadmap
 
 Coverage for the following asset classes is currently in development and is planned to be released soon:
 
 * Capital Indexed Bonds (adding support for Japanese conventions)
-* FX Barrier Options
 
-Further coverage is on the longer-term roadmap and is prioritised based on commercial considerations. These asset classes will be added to the list above once development is scheduled.
+Further coverage is on the longer-term roadmap and is prioritised based on commercial considerations.
+These asset classes will be added to the list above once development is scheduled.
 
 
 ## Curve calibration
@@ -221,7 +218,7 @@ The following asset classes can be used when defining curves:
 * STIR Future (Ibor)
 * Vanilla Swap (Fixed vs Ibor)
 * OIS (Fixed vs Overnight)
-* Basis Swap (Ibor vs Ibor)
+* Basis Swap (Ibor vs Ibor and Overnight vs Ibor)
 * Three Leg Basis Swap (Euribor)
 * Cross-currency Swap (Ibor vs Ibor)
 * FX Swap

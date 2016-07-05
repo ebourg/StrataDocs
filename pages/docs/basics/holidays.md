@@ -72,15 +72,17 @@ Future and past dates are an extrapolations of the known holiday dates.
 
 | Name | Holidays                                         | Weekends          | ISDA reference      |
 |------|--------------------------------------------------|-------------------|---------------------|
-| GBLO | London (UK) holidays                             | Saturday/Sunday   |                     |
-| FRPA | Paris (France) holidays                          | Saturday/Sunday   |                     |
+| CATO | Toronto (Canada) holidays                        | Saturday/Sunday   |                     |
 | CHZU | Zurich (Switzerland) holidays                    | Saturday/Sunday   |                     |
 | EUTA | TARGET interbank payment (Europe) holidays       | Saturday/Sunday   | section 1.8 (2006)  |
+| FRPA | Paris (France) holidays                          | Saturday/Sunday   |                     |
+| GBLO | London (UK) holidays                             | Saturday/Sunday   |                     |
 | JPTO | Tokyo (Japan) holidays                           | Saturday/Sunday   |                     |
-| USGS | United States Government Securities              | Saturday/Sunday   | section 1.11 (2006) |
-| USNY | New York (USA) holidays                          | Saturday/Sunday   |                     |
+| NOOS | Oslo (Norway) holidays                           | Saturday/Sunday   |                     |
 | NYFD | Federal Reserve Bank of New York holidays        | Saturday/Sunday   | section 1.9 (2006)  |
 | NYSE | New York Stock Exchange holidays                 | Saturday/Sunday   | section 1.10 (2006) |
+| USGS | United States Government Securities              | Saturday/Sunday   | section 1.11 (2006) |
+| USNY | New York (USA) holidays                          | Saturday/Sunday   |                     |
 
 ### Simple calendars
 

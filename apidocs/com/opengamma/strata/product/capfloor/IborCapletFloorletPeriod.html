@@ -121,18 +121,18 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
  <p>
  This represents a single payment period within an Ibor cap/floor leg.
  This class specifies the data necessary to calculate the value of the period.
- The payment period contains the unique accrual period. 
+ The payment period contains the unique accrual period.
  The value of the period is based on the observed value of <code>IborRateComputation</code>.
  <p>
  The pay-offs are, for an Ibor index on the fixingDate of 'I' and an year fraction 'a'<br>
  Ibor caplet: a * (I-K)^+ ; K=caplet<br>
  Ibor floorlet: a * (K-I)^+ ; K=floorlet
  <p>
- The payment is a caplet or floorlet. 
- If <code>caplet</code> (<code>floorlet</code>) is not null, the payment is a caplet (floorlet). 
+ The payment is a caplet or floorlet.
+ If <code>caplet</code> (<code>floorlet</code>) is not null, the payment is a caplet (floorlet).
  Thus one of the two fields must be null.
  <p>
- If start date and end date of the period, and payment date are not specified, a standard caplet/floorlet is created 
+ If start date and end date of the period, and payment date are not specified, a standard caplet/floorlet is created
  based on the data and convention in <code>rateComputation</code>,  i.e., the Ibor is fixed in advance and paid in arrears.
  <p>
  An <code>IborCapletFloorletPeriod</code> is bound to data that changes over time, such as holiday calendars.
@@ -371,7 +371,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <div class="block">Gets the fixing date of the index.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the fixing date.</dd>
+<dd>the fixing date</dd>
 </dl>
 </li>
 </ul>
@@ -385,7 +385,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <div class="block">Gets the fixing date-time of the index.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the fixing date-time.</dd>
+<dd>the fixing date-time</dd>
 </dl>
 </li>
 </ul>
@@ -410,7 +410,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <li class="blockList">
 <h4>getPutCall</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/common/PutCall.html" title="enum in com.opengamma.strata.product.common">PutCall</a>&nbsp;getPutCall()</pre>
-<div class="block">Gets put or call. 
+<div class="block">Gets put or call.
  <p>
  CALL is returned for a caplet, whereas PUT is returned for a floorlet.</div>
 <dl>

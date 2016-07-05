@@ -314,6 +314,16 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/calc/runner/DerivedCalculationFunction.html" title="type parameter in DerivedCalculationFunction">R</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DerivedCalculationFunction.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/calc/runner/DerivedCalculationFunction.html#calculate-T-java.util.Map-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.data.scenario.ScenarioMarketData-com.opengamma.strata.basics.ReferenceData-">calculate</a></span>(<a href="../../../../../../com/opengamma/strata/calc/runner/DerivedCalculationFunction.html" title="type parameter in DerivedCalculationFunction">T</a>&nbsp;target,
+         <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;requiredMeasures,
+         <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameters.html" title="class in com.opengamma.strata.calc.runner">CalculationParameters</a>&nbsp;parameters,
+         <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData,
+         <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the measure.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>,<a href="../../../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result">Result</a>&lt;?&gt;&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">CalculationFunction.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#calculate-T-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.data.scenario.ScenarioMarketData-com.opengamma.strata.basics.ReferenceData-">calculate</a></span>(<a href="../../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="type parameter in CalculationFunction">T</a>&nbsp;target,
          <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;&nbsp;measures,
@@ -323,13 +333,13 @@
 <div class="block">Calculates values of multiple measures for the target using multiple sets of market data.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameters.html" title="class in com.opengamma.strata.calc.runner">CalculationParameters</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CalculationParameters.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameters.html#combinedWith-com.opengamma.strata.calc.runner.CalculationParameters-">combinedWith</a></span>(<a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameters.html" title="class in com.opengamma.strata.calc.runner">CalculationParameters</a>&nbsp;other)</code>
 <div class="block">Combines this set of parameters with the specified set.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationTask.html" title="class in com.opengamma.strata.calc.runner">CalculationTask</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CalculationTask.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/calc/runner/CalculationTask.html#of-com.opengamma.strata.basics.CalculationTarget-com.opengamma.strata.calc.runner.CalculationFunction-com.opengamma.strata.calc.runner.CalculationParameters-java.util.List-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>&nbsp;target,
   <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>&gt;&nbsp;function,
@@ -338,7 +348,21 @@
 <div class="block">Obtains an instance that will calculate the specified cells.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/calc/runner/FunctionRequirements.html" title="class in com.opengamma.strata.calc.runner">FunctionRequirements</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DerivedCalculationFunction.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/calc/runner/DerivedCalculationFunction.html#requirements-T-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.basics.ReferenceData-">requirements</a></span>(<a href="../../../../../../com/opengamma/strata/calc/runner/DerivedCalculationFunction.html" title="type parameter in DerivedCalculationFunction">T</a>&nbsp;target,
+            <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameters.html" title="class in com.opengamma.strata.calc.runner">CalculationParameters</a>&nbsp;parameters,
+            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Returns requirements for the market data required by this function to calculate its measure.</div>
+</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/calc/runner/FunctionRequirements.html" title="class in com.opengamma.strata.calc.runner">FunctionRequirements</a></code></td>
+<td class="colLast"><span class="typeNameLabel">AbstractDerivedCalculationFunction.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/calc/runner/AbstractDerivedCalculationFunction.html#requirements-T-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.basics.ReferenceData-">requirements</a></span>(<a href="../../../../../../com/opengamma/strata/calc/runner/AbstractDerivedCalculationFunction.html" title="type parameter in AbstractDerivedCalculationFunction">T</a>&nbsp;target,
+            <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameters.html" title="class in com.opengamma.strata.calc.runner">CalculationParameters</a>&nbsp;parameters,
+            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/calc/runner/FunctionRequirements.html" title="class in com.opengamma.strata.calc.runner">FunctionRequirements</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CalculationFunction.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#requirements-T-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.basics.ReferenceData-">requirements</a></span>(<a href="../../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="type parameter in CalculationFunction">T</a>&nbsp;target,
             <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;&nbsp;measures,

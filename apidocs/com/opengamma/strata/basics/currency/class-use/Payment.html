@@ -128,18 +128,24 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.product.fxopt">com.opengamma.strata.product.fxopt</a></td>
+<td class="colLast">
+<div class="block">Entity objects describing options in the foreign exchange market.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.payment">com.opengamma.strata.product.payment</a></td>
 <td class="colLast">
 <div class="block">Entity objects describing simple payment financial instruments.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.swap">com.opengamma.strata.product.swap</a></td>
 <td class="colLast">
 <div class="block">Entity objects describing a swap.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.swaption">com.opengamma.strata.product.swaption</a></td>
 <td class="colLast">
 <div class="block">Entity objects describing options on swaps, known as swaptions.</div>
@@ -213,6 +219,12 @@
 <div class="block">Obtains an instance representing an amount to be received.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></code></td>
+<td class="colLast"><span class="typeNameLabel">AdjustablePayment.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Resolves the date on this payment, returning a payment with a fixed date.</div>
+</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -225,6 +237,21 @@
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">Payment.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/Payment.Meta.html#beanType--">beanType</a></span>()</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/basics/currency/package-summary.html">com.opengamma.strata.basics.currency</a> with parameters of type <a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html" title="class in com.opengamma.strata.basics.currency">AdjustablePayment</a></code></td>
+<td class="colLast"><span class="typeNameLabel">AdjustablePayment.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html#of-com.opengamma.strata.basics.currency.Payment-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment)</code>
+<div class="block">Obtains an instance based on a <code>Payment</code>.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -269,37 +296,37 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountingPaymentPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html#presentValue-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.DiscountFactors-double-com.opengamma.strata.pricer.CompoundedRateType-int-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
-            <a href="../../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&nbsp;discountFactors,
-            double&nbsp;zSpread,
-            <a href="../../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
-            int&nbsp;periodsPerYear)</code>
-<div class="block">Computes the present value of the payment with z-spread by discounting.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DiscountingPaymentPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html#presentValueSensitivity-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.BaseProvider-">presentValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
                        <a href="../../../../../../com/opengamma/strata/pricer/BaseProvider.html" title="interface in com.opengamma.strata.pricer">BaseProvider</a>&nbsp;provider)</code>
 <div class="block">Compute the present value curve sensitivity of the payment.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DiscountingPaymentPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html#presentValueSensitivity-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.DiscountFactors-">presentValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
                        <a href="../../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&nbsp;discountFactors)</code>
 <div class="block">Compute the present value curve sensitivity of the payment.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountingPaymentPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html#presentValueSensitivity-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.DiscountFactors-double-com.opengamma.strata.pricer.CompoundedRateType-int-">presentValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
-                       <a href="../../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&nbsp;discountFactors,
-                       double&nbsp;zSpread,
-                       <a href="../../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
-                       int&nbsp;periodsPerYear)</code>
+<td class="colLast"><span class="typeNameLabel">DiscountingPaymentPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html#presentValueSensitivityWithSpread-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.DiscountFactors-double-com.opengamma.strata.pricer.CompoundedRateType-int-">presentValueSensitivityWithSpread</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
+                                 <a href="../../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&nbsp;discountFactors,
+                                 double&nbsp;zSpread,
+                                 <a href="../../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
+                                 int&nbsp;periodsPerYear)</code>
 <div class="block">Compute the present value curve sensitivity of the payment with z-spread.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountingPaymentPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html#presentValueWithSpread-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.DiscountFactors-double-com.opengamma.strata.pricer.CompoundedRateType-int-">presentValueWithSpread</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
+                      <a href="../../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&nbsp;discountFactors,
+                      double&nbsp;zSpread,
+                      <a href="../../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
+                      int&nbsp;periodsPerYear)</code>
+<div class="block">Computes the present value of the payment with z-spread by discounting.</div>
 </td>
 </tr>
 </tbody>
@@ -393,20 +420,8 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">IborCapFloorTrade.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/capfloor/IborCapFloorTrade.html#getPremium--">getPremium</a></span>()</code>
-<div class="block">Gets the optional premium of the product.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedIborCapFloorTrade.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.Meta.html#premium--">premium</a></span>()</code>
-<div class="block">The meta-property for the <code>premium</code> property.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">IborCapFloorTrade.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/capfloor/IborCapFloorTrade.Meta.html#premium--">premium</a></span>()</code>
 <div class="block">The meta-property for the <code>premium</code> property.</div>
 </td>
 </tr>
@@ -422,12 +437,6 @@
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.Builder.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedIborCapFloorTrade.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.Builder.html#premium-com.opengamma.strata.basics.currency.Payment-">premium</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;premium)</code>
-<div class="block">Sets the optional premium of the product.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/capfloor/IborCapFloorTrade.Builder.html" title="class in com.opengamma.strata.product.capfloor">IborCapFloorTrade.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborCapFloorTrade.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/capfloor/IborCapFloorTrade.Builder.html#premium-com.opengamma.strata.basics.currency.Payment-">premium</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;premium)</code>
 <div class="block">Sets the optional premium of the product.</div>
 </td>
 </tr>
@@ -452,20 +461,8 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">CmsTrade.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/cms/CmsTrade.html#getPremium--">getPremium</a></span>()</code>
-<div class="block">Gets the optional premium of the product.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedCmsTrade.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.Meta.html#premium--">premium</a></span>()</code>
-<div class="block">The meta-property for the <code>premium</code> property.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">CmsTrade.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/cms/CmsTrade.Meta.html#premium--">premium</a></span>()</code>
 <div class="block">The meta-property for the <code>premium</code> property.</div>
 </td>
 </tr>
@@ -481,12 +478,6 @@
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.Builder.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedCmsTrade.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.Builder.html#premium-com.opengamma.strata.basics.currency.Payment-">premium</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;premium)</code>
-<div class="block">Sets the optional premium of the product.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/cms/CmsTrade.Builder.html" title="class in com.opengamma.strata.product.cms">CmsTrade.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CmsTrade.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/cms/CmsTrade.Builder.html#premium-com.opengamma.strata.basics.currency.Payment-">premium</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;premium)</code>
 <div class="block">Sets the optional premium of the product.</div>
 </td>
 </tr>
@@ -573,30 +564,6 @@
 <div class="block">Gets the payment in the counter currency, positive if receiving, negative if paying.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedFxVanillaOptionTrade.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/ResolvedFxVanillaOptionTrade.html#getPremium--">getPremium</a></span>()</code>
-<div class="block">Gets the premium of the FX option.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedFxSingleBarrierOptionTrade.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/ResolvedFxSingleBarrierOptionTrade.html#getPremium--">getPremium</a></span>()</code>
-<div class="block">Gets the premium of the FX option.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FxVanillaOptionTrade.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/FxVanillaOptionTrade.html#getPremium--">getPremium</a></span>()</code>
-<div class="block">Gets the premium of the FX option.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FxSingleBarrierOptionTrade.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/FxSingleBarrierOptionTrade.html#getPremium--">getPremium</a></span>()</code>
-<div class="block">Gets the premium of the FX option.</div>
-</td>
-</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -618,30 +585,6 @@
 <div class="block">The meta-property for the <code>counterCurrencyPayment</code> property.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedFxVanillaOptionTrade.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/ResolvedFxVanillaOptionTrade.Meta.html#premium--">premium</a></span>()</code>
-<div class="block">The meta-property for the <code>premium</code> property.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedFxSingleBarrierOptionTrade.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/ResolvedFxSingleBarrierOptionTrade.Meta.html#premium--">premium</a></span>()</code>
-<div class="block">The meta-property for the <code>premium</code> property.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">FxVanillaOptionTrade.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/FxVanillaOptionTrade.Meta.html#premium--">premium</a></span>()</code>
-<div class="block">The meta-property for the <code>premium</code> property.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">FxSingleBarrierOptionTrade.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/FxSingleBarrierOptionTrade.Meta.html#premium--">premium</a></span>()</code>
-<div class="block">The meta-property for the <code>premium</code> property.</div>
-</td>
-</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -658,27 +601,71 @@
 <div class="block">Creates an <code>ResolvedFxSingle</code> from two equivalent payments in different currencies.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/fx/ResolvedFxVanillaOptionTrade.Builder.html" title="class in com.opengamma.strata.product.fx">ResolvedFxVanillaOptionTrade.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedFxVanillaOptionTrade.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/ResolvedFxVanillaOptionTrade.Builder.html#premium-com.opengamma.strata.basics.currency.Payment-">premium</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;premium)</code>
-<div class="block">Sets the premium of the FX option.</div>
-</td>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.product.fxopt">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a> in <a href="../../../../../../com/opengamma/strata/product/fxopt/package-summary.html">com.opengamma.strata.product.fxopt</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/product/fxopt/package-summary.html">com.opengamma.strata.product.fxopt</a> that return <a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
 </tr>
+<tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/fx/ResolvedFxSingleBarrierOptionTrade.Builder.html" title="class in com.opengamma.strata.product.fx">ResolvedFxSingleBarrierOptionTrade.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedFxSingleBarrierOptionTrade.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/ResolvedFxSingleBarrierOptionTrade.Builder.html#premium-com.opengamma.strata.basics.currency.Payment-">premium</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;premium)</code>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedFxVanillaOptionTrade.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOptionTrade.html#getPremium--">getPremium</a></span>()</code>
+<div class="block">Gets the premium of the FX option.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedFxSingleBarrierOptionTrade.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOptionTrade.html#getPremium--">getPremium</a></span>()</code>
+<div class="block">Gets the premium of the FX option.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/product/fxopt/package-summary.html">com.opengamma.strata.product.fxopt</a> that return types with arguments of type <a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedFxVanillaOptionTrade.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOptionTrade.Meta.html#premium--">premium</a></span>()</code>
+<div class="block">The meta-property for the <code>premium</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedFxSingleBarrierOptionTrade.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOptionTrade.Meta.html#premium--">premium</a></span>()</code>
+<div class="block">The meta-property for the <code>premium</code> property.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/product/fxopt/package-summary.html">com.opengamma.strata.product.fxopt</a> with parameters of type <a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOptionTrade.Builder.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOptionTrade.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedFxVanillaOptionTrade.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOptionTrade.Builder.html#premium-com.opengamma.strata.basics.currency.Payment-">premium</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;premium)</code>
 <div class="block">Sets the premium of the FX option.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/fx/FxVanillaOptionTrade.Builder.html" title="class in com.opengamma.strata.product.fx">FxVanillaOptionTrade.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FxVanillaOptionTrade.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/FxVanillaOptionTrade.Builder.html#premium-com.opengamma.strata.basics.currency.Payment-">premium</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;premium)</code>
-<div class="block">Sets the premium of the FX option.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/fx/FxSingleBarrierOptionTrade.Builder.html" title="class in com.opengamma.strata.product.fx">FxSingleBarrierOptionTrade.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FxSingleBarrierOptionTrade.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/FxSingleBarrierOptionTrade.Builder.html#premium-com.opengamma.strata.basics.currency.Payment-">premium</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;premium)</code>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOptionTrade.Builder.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxSingleBarrierOptionTrade.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedFxSingleBarrierOptionTrade.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOptionTrade.Builder.html#premium-com.opengamma.strata.basics.currency.Payment-">premium</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;premium)</code>
 <div class="block">Sets the premium of the FX option.</div>
 </td>
 </tr>
@@ -754,11 +741,17 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></code></td>
+<td class="colLast"><span class="typeNameLabel">NotionalExchange.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/NotionalExchange.html#getPayment--">getPayment</a></span>()</code>
+<div class="block">Gets the notional exchange payment.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">KnownAmountPaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountPaymentPeriod.html#getPayment--">getPayment</a></span>()</code>
 <div class="block">Gets the payment.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">KnownAmountNotionalPaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountNotionalPaymentPeriod.html#getPayment--">getPayment</a></span>()</code>
 <div class="block">Gets the payment.</div>
@@ -775,11 +768,17 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">KnownAmountPaymentPeriod.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountPaymentPeriod.Meta.html#payment--">payment</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">NotionalExchange.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/NotionalExchange.Meta.html#payment--">payment</a></span>()</code>
 <div class="block">The meta-property for the <code>payment</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">KnownAmountPaymentPeriod.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountPaymentPeriod.Meta.html#payment--">payment</a></span>()</code>
+<div class="block">The meta-property for the <code>payment</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">KnownAmountNotionalPaymentPeriod.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountNotionalPaymentPeriod.Meta.html#payment--">payment</a></span>()</code>
 <div class="block">The meta-property for the <code>payment</code> property.</div>
@@ -795,13 +794,19 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/swap/NotionalExchange.html" title="class in com.opengamma.strata.product.swap">NotionalExchange</a></code></td>
+<td class="colLast"><span class="typeNameLabel">NotionalExchange.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/NotionalExchange.html#of-com.opengamma.strata.basics.currency.Payment-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment)</code>
+<div class="block">Obtains an instance from the payment.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountPaymentPeriod.html" title="class in com.opengamma.strata.product.swap">KnownAmountPaymentPeriod</a></code></td>
 <td class="colLast"><span class="typeNameLabel">KnownAmountPaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountPaymentPeriod.html#of-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.basics.schedule.SchedulePeriod-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
   <a href="../../../../../../com/opengamma/strata/basics/schedule/SchedulePeriod.html" title="class in com.opengamma.strata.basics.schedule">SchedulePeriod</a>&nbsp;period)</code>
 <div class="block">Obtains an instance based on a payment and schedule period.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountNotionalPaymentPeriod.html" title="class in com.opengamma.strata.product.swap">KnownAmountNotionalPaymentPeriod</a></code></td>
 <td class="colLast"><span class="typeNameLabel">KnownAmountNotionalPaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountNotionalPaymentPeriod.html#of-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.basics.schedule.SchedulePeriod-com.opengamma.strata.basics.currency.CurrencyAmount-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
   <a href="../../../../../../com/opengamma/strata/basics/schedule/SchedulePeriod.html" title="class in com.opengamma.strata.basics.schedule">SchedulePeriod</a>&nbsp;period,
@@ -809,7 +814,7 @@
 <div class="block">Obtains an instance based on a payment, schedule period and notional.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountNotionalPaymentPeriod.html" title="class in com.opengamma.strata.product.swap">KnownAmountNotionalPaymentPeriod</a></code></td>
 <td class="colLast"><span class="typeNameLabel">KnownAmountNotionalPaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountNotionalPaymentPeriod.html#of-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.basics.schedule.SchedulePeriod-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.basics.index.FxIndexObservation-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
   <a href="../../../../../../com/opengamma/strata/basics/schedule/SchedulePeriod.html" title="class in com.opengamma.strata.basics.schedule">SchedulePeriod</a>&nbsp;period,
@@ -818,13 +823,13 @@
 <div class="block">Obtains an instance based on a payment, schedule period, notional and FX reset.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountPaymentPeriod.Builder.html" title="class in com.opengamma.strata.product.swap">KnownAmountPaymentPeriod.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">KnownAmountPaymentPeriod.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountPaymentPeriod.Builder.html#payment-com.opengamma.strata.basics.currency.Payment-">payment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment)</code>
 <div class="block">Sets the payment.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountNotionalPaymentPeriod.Builder.html" title="class in com.opengamma.strata.product.swap">KnownAmountNotionalPaymentPeriod.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">KnownAmountNotionalPaymentPeriod.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountNotionalPaymentPeriod.Builder.html#payment-com.opengamma.strata.basics.currency.Payment-">payment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment)</code>
 <div class="block">Sets the payment.</div>
@@ -846,12 +851,6 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SwaptionTrade.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swaption/SwaptionTrade.html#getPremium--">getPremium</a></span>()</code>
-<div class="block">Gets the premium of the swaption.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedSwaptionTrade.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaptionTrade.html#getPremium--">getPremium</a></span>()</code>
 <div class="block">Gets the premium of the swaption.</div>
 </td>
@@ -866,12 +865,6 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">SwaptionTrade.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swaption/SwaptionTrade.Meta.html#premium--">premium</a></span>()</code>
-<div class="block">The meta-property for the <code>premium</code> property.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedSwaptionTrade.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaptionTrade.Meta.html#premium--">premium</a></span>()</code>
 <div class="block">The meta-property for the <code>premium</code> property.</div>
@@ -899,16 +892,10 @@
 <td class="colLast"><span class="typeNameLabel">SwaptionTrade.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swaption/SwaptionTrade.html#of-com.opengamma.strata.product.TradeInfo-com.opengamma.strata.product.swaption.Swaption-com.opengamma.strata.basics.currency.Payment-">of</a></span>(<a href="../../../../../../com/opengamma/strata/product/TradeInfo.html" title="class in com.opengamma.strata.product">TradeInfo</a>&nbsp;info,
   <a href="../../../../../../com/opengamma/strata/product/swaption/Swaption.html" title="class in com.opengamma.strata.product.swaption">Swaption</a>&nbsp;product,
   <a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;premium)</code>
-<div class="block">Obtains an instance of a Swaption trade.</div>
+<div class="block">Obtains an instance of a Swaption trade with a fixed payment.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swaption/SwaptionTrade.Builder.html" title="class in com.opengamma.strata.product.swaption">SwaptionTrade.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SwaptionTrade.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swaption/SwaptionTrade.Builder.html#premium-com.opengamma.strata.basics.currency.Payment-">premium</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;premium)</code>
-<div class="block">Sets the premium of the swaption.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaptionTrade.Builder.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaptionTrade.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedSwaptionTrade.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaptionTrade.Builder.html#premium-com.opengamma.strata.basics.currency.Payment-">premium</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;premium)</code>
 <div class="block">Sets the premium of the swaption.</div>

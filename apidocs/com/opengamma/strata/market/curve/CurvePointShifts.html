@@ -170,7 +170,8 @@ implements <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPe
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurvePointShifts.html#applyTo-com.opengamma.strata.data.scenario.MarketDataBox-">applyTo</a></span>(<a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;&nbsp;marketData)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurvePointShifts.html#applyTo-com.opengamma.strata.data.scenario.MarketDataBox-com.opengamma.strata.basics.ReferenceData-">applyTo</a></span>(<a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;&nbsp;marketData,
+       <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Applies this perturbation to the market data in a box, returning a box containing new, modified data.</div>
 </td>
 </tr>
@@ -279,23 +280,25 @@ implements <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPe
 </dl>
 </li>
 </ul>
-<a name="applyTo-com.opengamma.strata.data.scenario.MarketDataBox-">
+<a name="applyTo-com.opengamma.strata.data.scenario.MarketDataBox-com.opengamma.strata.basics.ReferenceData-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>applyTo</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;&nbsp;applyTo(<a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;&nbsp;marketData)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html#applyTo-com.opengamma.strata.data.scenario.MarketDataBox-">ScenarioPerturbation</a></code></span></div>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;&nbsp;applyTo(<a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;&nbsp;marketData,
+                                    <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html#applyTo-com.opengamma.strata.data.scenario.MarketDataBox-com.opengamma.strata.basics.ReferenceData-">ScenarioPerturbation</a></code></span></div>
 <div class="block">Applies this perturbation to the market data in a box, returning a box containing new, modified data.
  <p>
  The original market data must not be altered.
  Instead a perturbed copy must be returned.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html#applyTo-com.opengamma.strata.data.scenario.MarketDataBox-">applyTo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html" title="interface in com.opengamma.strata.data.scenario">ScenarioPerturbation</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></dd>
+<dd><code><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html#applyTo-com.opengamma.strata.data.scenario.MarketDataBox-com.opengamma.strata.basics.ReferenceData-">applyTo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html" title="interface in com.opengamma.strata.data.scenario">ScenarioPerturbation</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>marketData</code> - the market data to perturb</dd>
+<dd><code>refData</code> - the reference data</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>new market data derived by applying the perturbation to the input data</dd>
 </dl>

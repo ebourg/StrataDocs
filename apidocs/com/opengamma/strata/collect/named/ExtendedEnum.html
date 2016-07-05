@@ -135,9 +135,11 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
  <p>
  The 'providers' section contains a number of properties, one for each provider.
  The key is the full class name of the provider.
- The value is either 'constants' or 'lookup'.
- A 'constants' provider defines the extended enums are public static constants.
- A 'lookup' provider implemented <a href="../../../../../com/opengamma/strata/collect/named/NamedLookup.html" title="interface in com.opengamma.strata.collect.named"><code>NamedLookup</code></a>.
+ The value is 'constants', 'lookup' or 'instance', and is used to obtain a <a href="../../../../../com/opengamma/strata/collect/named/NamedLookup.html" title="interface in com.opengamma.strata.collect.named"><code>NamedLookup</code></a> instance.
+ A 'constants' provider must contain public static constants of the correct type,
+ which will be reflectively located and wrapped in a <code>NamedLookup</code>.
+ A 'lookup' provider must implement <a href="../../../../../com/opengamma/strata/collect/named/NamedLookup.html" title="interface in com.opengamma.strata.collect.named"><code>NamedLookup</code></a> and have a no-args constructor.
+ An 'instance' provider must have a static variable named "INSTANCE" of type <a href="../../../../../com/opengamma/strata/collect/named/NamedLookup.html" title="interface in com.opengamma.strata.collect.named"><code>NamedLookup</code></a>.
  <p>
  The 'alternates' section contains a number of properties, one for each alternate name.
  The key is the alternate name, the value is the standard name.

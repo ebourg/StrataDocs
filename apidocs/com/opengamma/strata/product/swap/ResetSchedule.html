@@ -191,21 +191,21 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/ResetSchedule.html#equals-java.lang.Object-">equals</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/IborRateAveragingMethod.html" title="enum in com.opengamma.strata.product.swap">IborRateAveragingMethod</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/ResetSchedule.html#getAveragingMethod--">getAveragingMethod</a></span>()</code>
-<div class="block">Gets the rate averaging method, defaulted to 'Unweighted'.</div>
-</td>
-</tr>
-<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/ResetSchedule.html#getBusinessDayAdjustment--">getBusinessDayAdjustment</a></span>()</code>
 <div class="block">Gets the business day adjustment to apply to each reset date.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/ResetSchedule.html#getResetFrequency--">getResetFrequency</a></span>()</code>
 <div class="block">Gets the periodic frequency of reset dates.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/IborRateResetMethod.html" title="enum in com.opengamma.strata.product.swap">IborRateResetMethod</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/ResetSchedule.html#getResetMethod--">getResetMethod</a></span>()</code>
+<div class="block">Gets the rate reset method, defaulted to 'Unweighted'.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -367,14 +367,14 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </dl>
 </li>
 </ul>
-<a name="getAveragingMethod--">
+<a name="getResetMethod--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getAveragingMethod</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/swap/IborRateAveragingMethod.html" title="enum in com.opengamma.strata.product.swap">IborRateAveragingMethod</a>&nbsp;getAveragingMethod()</pre>
-<div class="block">Gets the rate averaging method, defaulted to 'Unweighted'.
+<h4>getResetMethod</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/swap/IborRateResetMethod.html" title="enum in com.opengamma.strata.product.swap">IborRateResetMethod</a>&nbsp;getResetMethod()</pre>
+<div class="block">Gets the rate reset method, defaulted to 'Unweighted'.
  <p>
  This is used when more than one fixing contributes to the accrual period.
  <p>

@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":9,"i8":10,"i9":9,"i10":10,"i11":10,"i12":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":9,"i11":10,"i12":9,"i13":10,"i14":10,"i15":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -117,7 +117,11 @@ var activeTableTab = "activeTableTab";
 <pre>public final class <span class="typeNameLabel">Results</span>
 extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a></pre>
-<div class="block">Results of performing calculations for a set of targets over a set of scenarios.</div>
+<div class="block">Calculation results of performing calculations for a set of targets and columns.
+ <p>
+ This defines a grid of results where the grid contains a row for each target and a column for each measure.
+ Each result may be a single value or a multi-scenario value.
+ A multi-scenario value will implement <a href="../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario"><code>ScenarioArray</code></a> unless it has been aggregated.</div>
 </li>
 </ul>
 </div>
@@ -163,65 +167,88 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result">Result</a>&lt;?&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/Results.html#get-int-int-">get</a></span>(int&nbsp;rowIndex,
-   int&nbsp;columnIndex)</code>
-<div class="block">Returns the results for a target and column for a set of scenarios.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/Results.html#get-int-com.opengamma.strata.calc.ColumnName-">get</a></span>(int&nbsp;rowIndex,
+   <a href="../../../../com/opengamma/strata/calc/ColumnName.html" title="class in com.opengamma.strata.calc">ColumnName</a>&nbsp;columnName)</code>
+<div class="block">Returns the results for a target and column name.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>&lt;T&gt;&nbsp;<a href="../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result">Result</a>&lt;T&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/Results.html#get-int-com.opengamma.strata.calc.ColumnName-java.lang.Class-">get</a></span>(int&nbsp;rowIndex,
+   <a href="../../../../com/opengamma/strata/calc/ColumnName.html" title="class in com.opengamma.strata.calc">ColumnName</a>&nbsp;columnName,
+   <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;type)</code>
+<div class="block">Returns the results for a target and column name, casting the result to a known type.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result">Result</a>&lt;?&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/Results.html#get-int-int-">get</a></span>(int&nbsp;rowIndex,
+   int&nbsp;columnIndex)</code>
+<div class="block">Returns the results for a target and column index.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>&lt;T&gt;&nbsp;<a href="../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result">Result</a>&lt;T&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/Results.html#get-int-int-java.lang.Class-">get</a></span>(int&nbsp;rowIndex,
+   int&nbsp;columnIndex,
+   <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;type)</code>
+<div class="block">Returns the results for a target and column index, casting the result to a known type.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result">Result</a>&lt;?&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/Results.html#getCells--">getCells</a></span>()</code>
 <div class="block">Gets the grid of results, stored as a flat list.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/Results.html#getColumnCount--">getColumnCount</a></span>()</code>
 <div class="block">Gets the number of columns in the results.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../com/opengamma/strata/calc/ColumnHeader.html" title="class in com.opengamma.strata.calc">ColumnHeader</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/Results.html#getColumns--">getColumns</a></span>()</code>
 <div class="block">Gets the column headers.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/Results.html#getRowCount--">getRowCount</a></span>()</code>
 <div class="block">Gets the number of rows in the results.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/Results.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/calc/Results.Meta.html" title="class in com.opengamma.strata.calc">Results.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/Results.html#meta--">meta</a></span>()</code>
 <div class="block">The meta-bean for <code>Results</code>.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/calc/Results.Meta.html" title="class in com.opengamma.strata.calc">Results.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/Results.html#metaBean--">metaBean</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/calc/Results.html" title="class in com.opengamma.strata.calc">Results</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/Results.html#of-java.util.List-java.util.List-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../com/opengamma/strata/calc/ColumnHeader.html" title="class in com.opengamma.strata.calc">ColumnHeader</a>&gt;&nbsp;columns,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result">Result</a>&lt;?&gt;&gt;&nbsp;cells)</code>
 <div class="block">Obtains an instance containing the results of the calculation for each cell.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>&lt;R&gt;&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Property.html?is-external=true" title="class or interface in org.joda.beans">Property</a>&lt;R&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/Results.html#property-java.lang.String-">property</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/Results.html#propertyNames--">propertyNames</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/Results.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -305,13 +332,113 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <h4>get</h4>
 <pre>public&nbsp;<a href="../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result">Result</a>&lt;?&gt;&nbsp;get(int&nbsp;rowIndex,
                      int&nbsp;columnIndex)</pre>
-<div class="block">Returns the results for a target and column for a set of scenarios.</div>
+<div class="block">Returns the results for a target and column index.
+ <p>
+ The result may be a single value or a multi-scenario value.
+ A multi-scenario value will implement <a href="../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario"><code>ScenarioArray</code></a> unless it has been aggregated.
+ <p>
+ If the calculation did not complete successfully, a failure result will be returned
+ explaining the problem. Callers must check whether the result is a success or failure
+ before examining the result value.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>rowIndex</code> - the index of the row containing the results for a target</dd>
 <dd><code>columnIndex</code> - the index of the column</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the results for the specified row and column for a set of scenarios</dd>
+<dd>the result for the specified row and column for a set of scenarios</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the row or column index is invalid</dd>
+</dl>
+</li>
+</ul>
+<a name="get-int-int-java.lang.Class-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>get</h4>
+<pre>public&nbsp;&lt;T&gt;&nbsp;<a href="../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result">Result</a>&lt;T&gt;&nbsp;get(int&nbsp;rowIndex,
+                         int&nbsp;columnIndex,
+                         <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;type)</pre>
+<div class="block">Returns the results for a target and column index, casting the result to a known type.
+ <p>
+ The result may be a single value or a multi-scenario value.
+ A multi-scenario value will implement <a href="../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario"><code>ScenarioArray</code></a> unless it has been aggregated.
+ <p>
+ If the calculation did not complete successfully, a failure result will be returned
+ explaining the problem. Callers must check whether the result is a success or failure
+ before examining the result value.</div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - the result type</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>rowIndex</code> - the index of the row containing the results for a target</dd>
+<dd><code>columnIndex</code> - the index of the column</dd>
+<dd><code>type</code> - the result type</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the result for the specified row and column for a set of scenarios, cast to the specified type</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the row or column index is invalid</dd>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/ClassCastException.html?is-external=true" title="class or interface in java.lang">ClassCastException</a></code> - if the result is not of the specified type</dd>
+</dl>
+</li>
+</ul>
+<a name="get-int-com.opengamma.strata.calc.ColumnName-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>get</h4>
+<pre>public&nbsp;<a href="../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result">Result</a>&lt;?&gt;&nbsp;get(int&nbsp;rowIndex,
+                     <a href="../../../../com/opengamma/strata/calc/ColumnName.html" title="class in com.opengamma.strata.calc">ColumnName</a>&nbsp;columnName)</pre>
+<div class="block">Returns the results for a target and column name.
+ <p>
+ The result may be a single value or a multi-scenario value.
+ A multi-scenario value will implement <a href="../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario"><code>ScenarioArray</code></a> unless it has been aggregated.
+ <p>
+ If the calculation did not complete successfully, a failure result will be returned
+ explaining the problem. Callers must check whether the result is a success or failure
+ before examining the result value.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>rowIndex</code> - the index of the row containing the results for a target</dd>
+<dd><code>columnName</code> - the name of the column</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the result for the specified row and column for a set of scenarios</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the row index or column name is invalid</dd>
+</dl>
+</li>
+</ul>
+<a name="get-int-com.opengamma.strata.calc.ColumnName-java.lang.Class-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>get</h4>
+<pre>public&nbsp;&lt;T&gt;&nbsp;<a href="../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result">Result</a>&lt;T&gt;&nbsp;get(int&nbsp;rowIndex,
+                         <a href="../../../../com/opengamma/strata/calc/ColumnName.html" title="class in com.opengamma.strata.calc">ColumnName</a>&nbsp;columnName,
+                         <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;type)</pre>
+<div class="block">Returns the results for a target and column name, casting the result to a known type.
+ <p>
+ The result may be a single value or a multi-scenario value.
+ A multi-scenario value will implement <a href="../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario"><code>ScenarioArray</code></a> unless it has been aggregated.
+ <p>
+ If the calculation did not complete successfully, a failure result will be returned
+ explaining the problem. Callers must check whether the result is a success or failure
+ before examining the result value.</div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - the result type</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>rowIndex</code> - the index of the row containing the results for a target</dd>
+<dd><code>columnName</code> - the name of the column</dd>
+<dd><code>type</code> - the result type</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the result for the specified row and column for a set of scenarios, cast to the specified type</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the row index or column name is invalid</dd>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/ClassCastException.html?is-external=true" title="class or interface in java.lang">ClassCastException</a></code> - if the result is not of the specified type</dd>
 </dl>
 </li>
 </ul>

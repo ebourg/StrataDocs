@@ -114,7 +114,7 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="#com.opengamma.strata.market.interpolator">com.opengamma.strata.market.interpolator</a></td>
+<td class="colFirst"><a href="#com.opengamma.strata.market.curve.interpolator">com.opengamma.strata.market.curve.interpolator</a></td>
 <td class="colLast">
 <div class="block">Interpolators for interpolating in one and two dimensions.</div>
 </td>
@@ -138,28 +138,38 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#com.opengamma.strata.market.surface.interpolator">com.opengamma.strata.market.surface.interpolator</a></td>
+<td class="colLast">
+<div class="block">Interpolators for surfaces.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer">com.opengamma.strata.pricer</a></td>
 <td class="colLast">
 <div class="block">Calculators for financial instruments.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.curve">com.opengamma.strata.pricer.curve</a></td>
 <td class="colLast">
 <div class="block">Provides the ability to calibrate curves.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="#com.opengamma.strata.pricer.fx">com.opengamma.strata.pricer.fx</a></td>
+<tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.fxopt">com.opengamma.strata.pricer.fxopt</a></td>
 <td class="colLast">
-<div class="block">Calculators for FX instruments, such as FX forward and FX swap.</div>
+<div class="block">Calculators for FX options.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.index">com.opengamma.strata.pricer.index</a></td>
 <td class="colLast">
 <div class="block">Calculators for products based on rate indices, such as Short Term Interest Rate futures (STIRs).</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.model">com.opengamma.strata.pricer.model</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.rate">com.opengamma.strata.pricer.rate</a></td>
@@ -192,6 +202,11 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colOne"><a href="../../../../../com/opengamma/strata/collect/array/class-use/DoubleArray.html#com.opengamma.strata.basics.currency">DoubleArray</a>
+<div class="block">An immutable array of <code>double</code> values.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><a href="../../../../../com/opengamma/strata/collect/array/class-use/DoubleMatrix.html#com.opengamma.strata.basics.currency">DoubleMatrix</a>
 <div class="block">An immutable two-dimensional array of <code>double</code> values.</div>
 </td>
@@ -292,17 +307,17 @@
 </tbody>
 </table>
 </li>
-<li class="blockList"><a name="com.opengamma.strata.market.interpolator">
+<li class="blockList"><a name="com.opengamma.strata.market.curve.interpolator">
 <!--   -->
 </a>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
-<caption><span>Classes in <a href="../../../../../com/opengamma/strata/collect/array/package-summary.html">com.opengamma.strata.collect.array</a> used by <a href="../../../../../com/opengamma/strata/market/interpolator/package-summary.html">com.opengamma.strata.market.interpolator</a></span><span class="tabEnd">&nbsp;</span></caption>
+<caption><span>Classes in <a href="../../../../../com/opengamma/strata/collect/array/package-summary.html">com.opengamma.strata.collect.array</a> used by <a href="../../../../../com/opengamma/strata/market/curve/interpolator/package-summary.html">com.opengamma.strata.market.curve.interpolator</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colOne" scope="col">Class and Description</th>
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colOne"><a href="../../../../../com/opengamma/strata/collect/array/class-use/DoubleArray.html#com.opengamma.strata.market.interpolator">DoubleArray</a>
+<td class="colOne"><a href="../../../../../com/opengamma/strata/collect/array/class-use/DoubleArray.html#com.opengamma.strata.market.curve.interpolator">DoubleArray</a>
 <div class="block">An immutable array of <code>double</code> values.</div>
 </td>
 </tr>
@@ -360,6 +375,23 @@
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="com.opengamma.strata.market.surface.interpolator">
+<!--   -->
+</a>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../com/opengamma/strata/collect/array/package-summary.html">com.opengamma.strata.collect.array</a> used by <a href="../../../../../com/opengamma/strata/market/surface/interpolator/package-summary.html">com.opengamma.strata.market.surface.interpolator</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../com/opengamma/strata/collect/array/class-use/DoubleArray.html#com.opengamma.strata.market.surface.interpolator">DoubleArray</a>
+<div class="block">An immutable array of <code>double</code> values.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.pricer">
 <!--   -->
 </a>
@@ -399,22 +431,22 @@
 </tbody>
 </table>
 </li>
-<li class="blockList"><a name="com.opengamma.strata.pricer.fx">
+<li class="blockList"><a name="com.opengamma.strata.pricer.fxopt">
 <!--   -->
 </a>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
-<caption><span>Classes in <a href="../../../../../com/opengamma/strata/collect/array/package-summary.html">com.opengamma.strata.collect.array</a> used by <a href="../../../../../com/opengamma/strata/pricer/fx/package-summary.html">com.opengamma.strata.pricer.fx</a></span><span class="tabEnd">&nbsp;</span></caption>
+<caption><span>Classes in <a href="../../../../../com/opengamma/strata/collect/array/package-summary.html">com.opengamma.strata.collect.array</a> used by <a href="../../../../../com/opengamma/strata/pricer/fxopt/package-summary.html">com.opengamma.strata.pricer.fxopt</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colOne" scope="col">Class and Description</th>
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colOne"><a href="../../../../../com/opengamma/strata/collect/array/class-use/DoubleArray.html#com.opengamma.strata.pricer.fx">DoubleArray</a>
+<td class="colOne"><a href="../../../../../com/opengamma/strata/collect/array/class-use/DoubleArray.html#com.opengamma.strata.pricer.fxopt">DoubleArray</a>
 <div class="block">An immutable array of <code>double</code> values.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><a href="../../../../../com/opengamma/strata/collect/array/class-use/DoubleMatrix.html#com.opengamma.strata.pricer.fx">DoubleMatrix</a>
+<td class="colOne"><a href="../../../../../com/opengamma/strata/collect/array/class-use/DoubleMatrix.html#com.opengamma.strata.pricer.fxopt">DoubleMatrix</a>
 <div class="block">An immutable two-dimensional array of <code>double</code> values.</div>
 </td>
 </tr>
@@ -432,6 +464,23 @@
 <tbody>
 <tr class="altColor">
 <td class="colOne"><a href="../../../../../com/opengamma/strata/collect/array/class-use/DoubleArray.html#com.opengamma.strata.pricer.index">DoubleArray</a>
+<div class="block">An immutable array of <code>double</code> values.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.model">
+<!--   -->
+</a>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../com/opengamma/strata/collect/array/package-summary.html">com.opengamma.strata.collect.array</a> used by <a href="../../../../../com/opengamma/strata/pricer/model/package-summary.html">com.opengamma.strata.pricer.model</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../com/opengamma/strata/collect/array/class-use/DoubleArray.html#com.opengamma.strata.pricer.model">DoubleArray</a>
 <div class="block">An immutable array of <code>double</code> values.</div>
 </td>
 </tr>

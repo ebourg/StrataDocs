@@ -7,6 +7,29 @@ Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
 
+## Strata v0.16
+
+*5 July 2016*
+
+This release prepares the way for v1.0, which will be the next release.
+This primarily involved fixing bugs and mistakes in the API.
+
+* Calculation API tightened to clearly separate scenario from non-scenario
+* DSF based on standard market price, not decimal/fractional price
+* Curve calibration with a Fed-Fund swap
+* More control over IborFuture curve nodes
+* Add calendar and indices for Norway
+* Fixed inflation swap conventions
+* Scenario generation API refactored
+* New surface interpolators - surface data must now be sorted
+* Renamed term deposit conventions
+* Renamed scenario return types, eg. CurrencyValuesArray to CurrencyScenarioArray
+* Restructured examples
+* Removed implementation-specific classes from public API
+
+Feel free to ask a question in the forums if you have difficulty porting code from v0.15 to v0.16.
+
+
 ## Strata v0.15
 
 *17 June 2016*

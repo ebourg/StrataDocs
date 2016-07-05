@@ -157,7 +157,8 @@ extends <a href="../../../../../../com/opengamma/strata/report/framework/express
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/report/framework/expression/EvaluationResult.html" title="class in com.opengamma.strata.report.framework.expression">EvaluationResult</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/report/framework/expression/TradeTokenEvaluator.html#evaluate-com.opengamma.strata.product.Trade-java.lang.String-java.util.List-">evaluate</a></span>(<a href="../../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&nbsp;trade,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/report/framework/expression/TradeTokenEvaluator.html#evaluate-com.opengamma.strata.product.Trade-com.opengamma.strata.calc.runner.CalculationFunctions-java.lang.String-java.util.List-">evaluate</a></span>(<a href="../../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&nbsp;trade,
+        <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationFunctions.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunctions</a>&nbsp;functions,
         <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;firstToken,
         <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;remainingTokens)</code>
 <div class="block">Evaluates a token against a given object.</div>
@@ -257,22 +258,24 @@ extends <a href="../../../../../../com/opengamma/strata/report/framework/express
 </dl>
 </li>
 </ul>
-<a name="evaluate-com.opengamma.strata.product.Trade-java.lang.String-java.util.List-">
+<a name="evaluate-com.opengamma.strata.product.Trade-com.opengamma.strata.calc.runner.CalculationFunctions-java.lang.String-java.util.List-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>evaluate</h4>
 <pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/report/framework/expression/EvaluationResult.html" title="class in com.opengamma.strata.report.framework.expression">EvaluationResult</a>&nbsp;evaluate(<a href="../../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&nbsp;trade,
+                                 <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationFunctions.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunctions</a>&nbsp;functions,
                                  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;firstToken,
                                  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;remainingTokens)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../com/opengamma/strata/report/framework/expression/TokenEvaluator.html#evaluate-T-java.lang.String-java.util.List-">TokenEvaluator</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../com/opengamma/strata/report/framework/expression/TokenEvaluator.html#evaluate-T-com.opengamma.strata.calc.runner.CalculationFunctions-java.lang.String-java.util.List-">TokenEvaluator</a></code></span></div>
 <div class="block">Evaluates a token against a given object.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../com/opengamma/strata/report/framework/expression/TokenEvaluator.html#evaluate-T-java.lang.String-java.util.List-">evaluate</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../com/opengamma/strata/report/framework/expression/TokenEvaluator.html" title="class in com.opengamma.strata.report.framework.expression">TokenEvaluator</a>&lt;<a href="../../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;</code></dd>
+<dd><code><a href="../../../../../../com/opengamma/strata/report/framework/expression/TokenEvaluator.html#evaluate-T-com.opengamma.strata.calc.runner.CalculationFunctions-java.lang.String-java.util.List-">evaluate</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../com/opengamma/strata/report/framework/expression/TokenEvaluator.html" title="class in com.opengamma.strata.report.framework.expression">TokenEvaluator</a>&lt;<a href="../../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;</code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the object against which to evaluate the token</dd>
+<dd><code>functions</code> - the calculation functions</dd>
 <dd><code>firstToken</code> - the first token of the expression</dd>
 <dd><code>remainingTokens</code> - the remaining tokens in the expression, possibly empty</dd>
 <dt><span class="returnLabel">Returns:</span></dt>

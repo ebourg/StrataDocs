@@ -58,38 +58,5 @@ Note that when querying dates, there is no difference between a holiday and a we
 
 ## Standard Holiday Calendars
 
-Some common standard holiday calendars are provided.
-
-### Location calendars
-
-The following calendars are available for specific locations.
-The intention of providing these calendars is to allow the system to be easily evaluated.
-When using this library in production, OpenGamma strongly recommends replacing the data provided
-with data from an external vendor of holiday information.
-
-The holiday dates are based on original research and typically cover 1950 to 2099.
-Future and past dates are an extrapolations of the known holiday dates.
-
-| Name | Holidays                                         | Weekends          | ISDA reference      |
-|------|--------------------------------------------------|-------------------|---------------------|
-| GBLO | London (UK) holidays                             | Saturday/Sunday   |                     |
-| FRPA | Paris (France) holidays                          | Saturday/Sunday   |                     |
-| CHZU | Zurich (Switzerland) holidays                    | Saturday/Sunday   |                     |
-| EUTA | TARGET interbank payment (Europe) holidays       | Saturday/Sunday   | section 1.8 (2006)  |
-| JPTO | Tokyo (Japan) holidays                           | Saturday/Sunday   |                     |
-| USGS | United States Government Securities              | Saturday/Sunday   | section 1.11 (2006) |
-| USNY | New York (USA) holidays                          | Saturday/Sunday   |                     |
-| NYFD | Federal Reserve Bank of New York holidays        | Saturday/Sunday   | section 1.9 (2006)  |
-| NYSE | New York Stock Exchange holidays                 | Saturday/Sunday   | section 1.10 (2006) |
-
-### Simple calendars
-
-The following simple calendars are also available.
-
-| Name       | Holidays             | Weekends          |
-|------------|----------------------|-------------------|
-| NoHolidays | No holiday dates     | No weekends       |
-| Sat/Sun    | No holiday dates     | Saturday/Sunday   |
-| Fri/Sat    | No holiday dates     | Friday/Saturday   |
-| Thu/Fri    | No holiday dates     | Thursday/Friday   |
+Strata provides a set of [standard holiday calendars]({{site.baseurl}}/standard_ref_data).
 

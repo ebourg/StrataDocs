@@ -118,7 +118,10 @@ var activeTableTab = "activeTableTab";
 extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Base pricer for Deliverable Swap Futures (DSFs).
  <p>
- This function provides common code used when pricing an <a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsfTrade.html" title="class in com.opengamma.strata.product.dsf"><code>ResolvedDsfTrade</code></a>.</div>
+ This function provides common code used when pricing an <a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsfTrade.html" title="class in com.opengamma.strata.product.dsf"><code>ResolvedDsfTrade</code></a>.
+ <p>
+ The price of a DSF is based on the present value (NPV) of the underlying swap on the delivery date.
+ For example, a price of 100.1822 represents a present value of $100,182.20, if the notional is $100,000.</div>
 </li>
 </ul>
 </div>

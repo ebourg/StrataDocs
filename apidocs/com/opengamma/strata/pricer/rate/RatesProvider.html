@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":18,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":18,"i7":6,"i8":6};
+var methods = {"i0":18,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":18,"i10":6,"i11":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -161,30 +161,48 @@ extends <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html" t
 </td>
 </tr>
 <tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#getIborIndices--">getIborIndices</a></span>()</code>
+<div class="block">Gets the set of Ibor indices that are available.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#getOvernightIndices--">getOvernightIndices</a></span>()</code>
+<div class="block">Gets the set of Overnight indices that are available.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#getPriceIndices--">getPriceIndices</a></span>()</code>
+<div class="block">Gets the set of Price indices that are available.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">IborIndexRates</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#iborIndexRates-com.opengamma.strata.basics.index.IborIndex-">iborIndexRates</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index)</code>
 <div class="block">Gets the rates for an Ibor index.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">OvernightIndexRates</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#overnightIndexRates-com.opengamma.strata.basics.index.OvernightIndex-">overnightIndexRates</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index)</code>
 <div class="block">Gets the rates for an Overnight index.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#parameterSensitivity-com.opengamma.strata.market.sensitivity.PointSensitivities-">parameterSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&nbsp;pointSensitivities)</code>
 <div class="block">Computes the parameter sensitivity.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/PriceIndexValues.html" title="interface in com.opengamma.strata.pricer.rate">PriceIndexValues</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#priceIndexValues-com.opengamma.strata.basics.index.PriceIndex-">priceIndexValues</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&nbsp;index)</code>
 <div class="block">Gets the values for an Price index.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#timeSeries-com.opengamma.strata.basics.index.Index-">timeSeries</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&nbsp;index)</code>
 <div class="block">Gets the time series.</div>
@@ -196,7 +214,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html" t
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.opengamma.strata.pricer.<a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html" title="interface in com.opengamma.strata.pricer">BaseProvider</a></h3>
-<code><a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html#data-com.opengamma.strata.data.MarketDataId-">data</a>, <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html#discountFactor-com.opengamma.strata.basics.currency.Currency-java.time.LocalDate-">discountFactor</a>, <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html#discountFactors-com.opengamma.strata.basics.currency.Currency-">discountFactors</a>, <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html#fxRate-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.basics.currency.Currency-">fxRate</a>, <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html#fxRate-com.opengamma.strata.basics.currency.CurrencyPair-">fxRate</a>, <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html#getValuationDate--">getValuationDate</a></code></li>
+<code><a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html#data-com.opengamma.strata.data.MarketDataId-">data</a>, <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html#discountFactor-com.opengamma.strata.basics.currency.Currency-java.time.LocalDate-">discountFactor</a>, <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html#discountFactors-com.opengamma.strata.basics.currency.Currency-">discountFactors</a>, <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html#fxRate-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.basics.currency.Currency-">fxRate</a>, <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html#fxRate-com.opengamma.strata.basics.currency.CurrencyPair-">fxRate</a>, <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html#getDiscountCurrencies--">getDiscountCurrencies</a>, <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html#getValuationDate--">getValuationDate</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.basics.currency.FxRateProvider">
@@ -219,6 +237,48 @@ extends <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html" t
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="getIborIndices--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getIborIndices</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&gt;&nbsp;getIborIndices()</pre>
+<div class="block">Gets the set of Ibor indices that are available.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the set of Ibor indices</dd>
+</dl>
+</li>
+</ul>
+<a name="getOvernightIndices--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOvernightIndices</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&gt;&nbsp;getOvernightIndices()</pre>
+<div class="block">Gets the set of Overnight indices that are available.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the set of Overnight indices</dd>
+</dl>
+</li>
+</ul>
+<a name="getPriceIndices--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPriceIndices</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&gt;&nbsp;getPriceIndices()</pre>
+<div class="block">Gets the set of Price indices that are available.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the set of Price indices</dd>
+</dl>
+</li>
+</ul>
 <a name="fxIndexRates-com.opengamma.strata.basics.index.FxIndex-">
 <!--   -->
 </a>

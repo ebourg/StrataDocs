@@ -125,8 +125,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/index/IborFutureTrade.html" title="class in com.opengamma.strata.product.index">IborFutureTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborFutureCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/node/IborFutureCurveNode.html#trade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-     double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">IborFutureCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/node/IborFutureCurveNode.html#trade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(double&nbsp;quantity,
      <a href="../../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
      <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
@@ -231,7 +230,8 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/index/IborFutureTrade.html" title="class in com.opengamma.strata.product.index">IborFutureTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborFutureTemplate.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/type/IborFutureTemplate.html#createTrade-java.time.LocalDate-double-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+<td class="colLast"><span class="typeNameLabel">IborFutureTemplate.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/type/IborFutureTemplate.html#createTrade-java.time.LocalDate-com.opengamma.strata.product.SecurityId-double-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+           <a href="../../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId,
            double&nbsp;quantity,
            double&nbsp;notional,
            double&nbsp;price,
@@ -241,7 +241,8 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/index/IborFutureTrade.html" title="class in com.opengamma.strata.product.index">IborFutureTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableIborFutureConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/type/ImmutableIborFutureConvention.html#createTrade-java.time.LocalDate-java.time.Period-int-double-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+<td class="colLast"><span class="typeNameLabel">ImmutableIborFutureConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/type/ImmutableIborFutureConvention.html#createTrade-java.time.LocalDate-com.opengamma.strata.product.SecurityId-java.time.Period-int-double-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+           <a href="../../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId,
            <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;minimumPeriod,
            int&nbsp;sequenceNumber,
            double&nbsp;quantity,
@@ -251,9 +252,32 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/index/IborFutureTrade.html" title="class in com.opengamma.strata.product.index">IborFutureTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborFutureConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/type/IborFutureConvention.html#createTrade-java.time.LocalDate-java.time.Period-int-double-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+<td class="colLast"><span class="typeNameLabel">IborFutureConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/type/IborFutureConvention.html#createTrade-java.time.LocalDate-com.opengamma.strata.product.SecurityId-java.time.Period-int-double-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+           <a href="../../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId,
            <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;minimumPeriod,
            int&nbsp;sequenceNumber,
+           double&nbsp;quantity,
+           double&nbsp;notional,
+           double&nbsp;price,
+           <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Creates a trade based on this convention.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/index/IborFutureTrade.html" title="class in com.opengamma.strata.product.index">IborFutureTrade</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableIborFutureConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/type/ImmutableIborFutureConvention.html#createTrade-java.time.LocalDate-com.opengamma.strata.product.SecurityId-java.time.YearMonth-double-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+           <a href="../../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html?is-external=true" title="class or interface in java.time">YearMonth</a>&nbsp;yearMonth,
+           double&nbsp;quantity,
+           double&nbsp;notional,
+           double&nbsp;price,
+           <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/index/IborFutureTrade.html" title="class in com.opengamma.strata.product.index">IborFutureTrade</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/type/IborFutureConvention.html#createTrade-java.time.LocalDate-com.opengamma.strata.product.SecurityId-java.time.YearMonth-double-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+           <a href="../../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html?is-external=true" title="class or interface in java.time">YearMonth</a>&nbsp;yearMonth,
            double&nbsp;quantity,
            double&nbsp;notional,
            double&nbsp;price,

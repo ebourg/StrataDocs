@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":17,"i5":17,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":17,"i4":17,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -141,24 +141,18 @@ extends <a href="../../../../../com/opengamma/strata/market/MarketDataView.html"
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;T&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#findData-com.opengamma.strata.data.MarketDataName-">findData</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketDataName.html" title="class in com.opengamma.strata.data">MarketDataName</a>&lt;T&gt;&nbsp;name)</code>
-<div class="block">Finds the market data structure underlying this instance with the specified name.</div>
-</td>
-</tr>
-<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#getFixings--">getFixings</a></span>()</code>
 <div class="block">Gets the time-series of fixings for the index.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#getIndex--">getIndex</a></span>()</code>
 <div class="block">Gets the Overnight index.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">OvernightIndexRates</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#of-com.opengamma.strata.basics.index.OvernightIndex-java.time.LocalDate-com.opengamma.strata.market.curve.Curve-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
@@ -166,7 +160,7 @@ extends <a href="../../../../../com/opengamma/strata/market/MarketDataView.html"
 <div class="block">Obtains an instance from a forward curve, with an empty time-series of fixings.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">OvernightIndexRates</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#of-com.opengamma.strata.basics.index.OvernightIndex-java.time.LocalDate-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
@@ -175,60 +169,60 @@ extends <a href="../../../../../com/opengamma/strata/market/MarketDataView.html"
 <div class="block">Obtains an instance from a curve and time-series of fixings.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#parameterSensitivity-com.opengamma.strata.pricer.rate.OvernightRateSensitivity-">parameterSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/pricer/rate/OvernightRateSensitivity.html" title="class in com.opengamma.strata.pricer.rate">OvernightRateSensitivity</a>&nbsp;pointSensitivity)</code>
 <div class="block">Calculates the parameter sensitivity from the point sensitivity.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#periodRate-com.opengamma.strata.basics.index.OvernightIndexObservation-java.time.LocalDate-">periodRate</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/OvernightIndexObservation.html" title="class in com.opengamma.strata.basics.index">OvernightIndexObservation</a>&nbsp;startDateObservation,
           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate)</code>
 <div class="block">Gets the historic or forward rate at the specified fixing period.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#periodRatePointSensitivity-com.opengamma.strata.basics.index.OvernightIndexObservation-java.time.LocalDate-">periodRatePointSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/OvernightIndexObservation.html" title="class in com.opengamma.strata.basics.index">OvernightIndexObservation</a>&nbsp;startDateObservation,
                           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate)</code>
 <div class="block">Calculates the point sensitivity of the historic or forward rate at the specified fixing period.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#rate-com.opengamma.strata.basics.index.OvernightIndexObservation-">rate</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/OvernightIndexObservation.html" title="class in com.opengamma.strata.basics.index">OvernightIndexObservation</a>&nbsp;observation)</code>
 <div class="block">Gets the historic or forward rate at the specified fixing date.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#rateIgnoringFixings-com.opengamma.strata.basics.index.OvernightIndexObservation-">rateIgnoringFixings</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/OvernightIndexObservation.html" title="class in com.opengamma.strata.basics.index">OvernightIndexObservation</a>&nbsp;observation)</code>
 <div class="block">Ignores the time-series of fixings to get the forward rate at the specified
  fixing date, used in rare and special cases.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#rateIgnoringFixingsPointSensitivity-com.opengamma.strata.basics.index.OvernightIndexObservation-">rateIgnoringFixingsPointSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/OvernightIndexObservation.html" title="class in com.opengamma.strata.basics.index">OvernightIndexObservation</a>&nbsp;observation)</code>
 <div class="block">Ignores the time-series of fixings to get the forward rate point sensitivity at the
  specified fixing date, used in rare and special cases.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#ratePointSensitivity-com.opengamma.strata.basics.index.OvernightIndexObservation-">ratePointSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/OvernightIndexObservation.html" title="class in com.opengamma.strata.basics.index">OvernightIndexObservation</a>&nbsp;observation)</code>
 <div class="block">Calculates the point sensitivity of the historic or forward rate at the specified fixing date.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">OvernightIndexRates</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#withParameter-int-double-">withParameter</a></span>(int&nbsp;parameterIndex,
              double&nbsp;newValue)</code>
 <div class="block">Returns a copy of the data with the value at the specified index altered.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">OvernightIndexRates</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#withPerturbation-com.opengamma.strata.market.param.ParameterPerturbation-">withPerturbation</a></span>(<a href="../../../../../com/opengamma/strata/market/param/ParameterPerturbation.html" title="interface in com.opengamma.strata.market.param">ParameterPerturbation</a>&nbsp;perturbation)</code>
 <div class="block">Returns a perturbed copy of the data.</div>
@@ -240,7 +234,7 @@ extends <a href="../../../../../com/opengamma/strata/market/MarketDataView.html"
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.opengamma.strata.market.<a href="../../../../../com/opengamma/strata/market/MarketDataView.html" title="interface in com.opengamma.strata.market">MarketDataView</a></h3>
-<code><a href="../../../../../com/opengamma/strata/market/MarketDataView.html#getValuationDate--">getValuationDate</a></code></li>
+<code><a href="../../../../../com/opengamma/strata/market/MarketDataView.html#findData-com.opengamma.strata.data.MarketDataName-">findData</a>, <a href="../../../../../com/opengamma/strata/market/MarketDataView.html#getValuationDate--">getValuationDate</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.market.param.ParameterizedData">
@@ -345,27 +339,6 @@ extends <a href="../../../../../com/opengamma/strata/market/MarketDataView.html"
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the time-series fixings</dd>
-</dl>
-</li>
-</ul>
-<a name="findData-com.opengamma.strata.data.MarketDataName-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>findData</h4>
-<pre>&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;T&gt;&nbsp;findData(<a href="../../../../../com/opengamma/strata/data/MarketDataName.html" title="class in com.opengamma.strata.data">MarketDataName</a>&lt;T&gt;&nbsp;name)</pre>
-<div class="block">Finds the market data structure underlying this instance with the specified name.
- <p>
- This is most commonly used to find a <a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve"><code>Curve</code></a> using a <a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve"><code>CurveName</code></a>.
- If the market data cannot be found, empty is returned.</div>
-<dl>
-<dt><span class="paramLabel">Type Parameters:</span></dt>
-<dd><code>T</code> - the type of the market data value</dd>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - the name to find</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the market data value, empty if not found</dd>
 </dl>
 </li>
 </ul>

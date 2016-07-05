@@ -218,8 +218,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#initialGuesses-java.time.LocalDate-com.opengamma.strata.data.MarketData-">initialGuesses</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-              <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#initialGuesses-com.opengamma.strata.data.MarketData-">initialGuesses</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData)</code>
 <div class="block">Gets the list of all initial guesses.</div>
 </td>
 </tr>
@@ -270,8 +269,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </tr>
 <tr id="i18" class="altColor">
 <td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#resolvedTrades-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrades</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-              <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#resolvedTrades-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrades</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
               <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Creates a list of trades representing the instrument at each node.</div>
 </td>
@@ -341,7 +339,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupName.html" title="class in com.opengamma.strata.market.curve">CurveGroupName</a>&nbsp;name,
                                       <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupEntry.html" title="class in com.opengamma.strata.market.curve">CurveGroupEntry</a>&gt;&nbsp;entries,
                                       <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a>&gt;&nbsp;curveDefinitions)</pre>
-<div class="block">Returns a curve group definition with the specified name and containing the specified entries. 
+<div class="block">Returns a curve group definition with the specified name and containing the specified entries.
  <p>
  The Jacobian matrices are computed. The Present Value sensitivity to Market quotes are not computed.</div>
 <dl>
@@ -420,53 +418,51 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <div class="block">Gets the total number of parameters in the group.
  <p>
  This returns the total number of parameters in the group, which equals the number of nodes.
- The result of <a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#resolvedTrades-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-"><code>resolvedTrades(LocalDate, MarketData, ReferenceData)</code></a>, and
- <a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#initialGuesses-java.time.LocalDate-com.opengamma.strata.data.MarketData-"><code>initialGuesses(LocalDate, MarketData)</code></a> will be of this size.</div>
+ The result of <a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#resolvedTrades-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-"><code>resolvedTrades(MarketData, ReferenceData)</code></a>, and
+ <a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#initialGuesses-com.opengamma.strata.data.MarketData-"><code>initialGuesses(MarketData)</code></a> will be of this size.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the number of parameters</dd>
 </dl>
 </li>
 </ul>
-<a name="resolvedTrades-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">
+<a name="resolvedTrades-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>resolvedTrades</h4>
-<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&gt;&nbsp;resolvedTrades(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-                                                   <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&gt;&nbsp;resolvedTrades(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
                                                    <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
 <div class="block">Creates a list of trades representing the instrument at each node.
  <p>
  This uses the observed market data to build the trade that each node represents.
  The result combines the list of trades from each curve in order.
- Each trade is created with a quantity of 1.</div>
+ Each trade is created with a quantity of 1.
+ The valuation date is defined by the market data.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>valuationDate</code> - the valuation date used when calibrating the curve</dd>
-<dd><code>marketData</code> - the market data required to build a trade for the instrument</dd>
+<dd><code>marketData</code> - the market data required to build a trade for the instrument, including the valuation date</dd>
 <dd><code>refData</code> - the reference data, used to resolve the trades</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the list of all trades</dd>
 </dl>
 </li>
 </ul>
-<a name="initialGuesses-java.time.LocalDate-com.opengamma.strata.data.MarketData-">
+<a name="initialGuesses-com.opengamma.strata.data.MarketData-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>initialGuesses</h4>
-<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&nbsp;initialGuesses(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-                                            <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData)</pre>
+<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&nbsp;initialGuesses(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData)</pre>
 <div class="block">Gets the list of all initial guesses.
  <p>
- This returns a list that combines the list of initial guesses from each curve in order.</div>
+ This returns a list that combines the list of initial guesses from each curve in order.
+ The valuation date is defined by the market data.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>valuationDate</code> - the valuation date used when calibrating the curve</dd>
-<dd><code>marketData</code> - the market data required to build a trade for the instrument</dd>
+<dd><code>marketData</code> - the market data required to build a trade for the instrument, including the valuation date</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the list of all initial guesses</dd>
 </dl>

@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":18,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6};
+var methods = {"i0":6,"i1":18,"i2":6,"i3":18,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -153,37 +153,43 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html#getParameterMetadata-int-">getParameterMetadata</a></span>(int&nbsp;parameterIndex)</code>
+<div class="block">Gets the metadata of the parameter at the specified index.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html#getSurfaceName--">getSurfaceName</a></span>()</code>
 <div class="block">Gets the surface name.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html#getXValueType--">getXValueType</a></span>()</code>
 <div class="block">Gets the x-value type, providing meaning to the x-values of the surface.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html#getYValueType--">getYValueType</a></span>()</code>
 <div class="block">Gets the y-value type, providing meaning to the y-values of the surface.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html#getZValueType--">getZValueType</a></span>()</code>
 <div class="block">Gets the z-value type, providing meaning to the z-values of the surface.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>&lt;T&gt;&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/DefaultSurfaceMetadata.html" title="class in com.opengamma.strata.market.surface">DefaultSurfaceMetadata</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html#withInfo-com.opengamma.strata.market.surface.SurfaceInfoType-T-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceInfoType.html" title="class in com.opengamma.strata.market.surface">SurfaceInfoType</a>&lt;T&gt;&nbsp;type,
         T&nbsp;value)</code>
 <div class="block">Returns an instance where the specified additional information has been added.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html#withParameterMetadata-java.util.List-">withParameterMetadata</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a>&gt;&nbsp;parameterMetadata)</code>
 <div class="block">Returns an instance where the parameter metadata has been changed.</div>
@@ -306,6 +312,26 @@ var activeTableTab = "activeTableTab";
 <dd><code>type</code> - the type to find</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the surface information</dd>
+</dl>
+</li>
+</ul>
+<a name="getParameterMetadata-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getParameterMetadata</h4>
+<pre>default&nbsp;<a href="../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a>&nbsp;getParameterMetadata(int&nbsp;parameterIndex)</pre>
+<div class="block">Gets the metadata of the parameter at the specified index.
+ <p>
+ If there is no specific parameter metadata, an empty instance will be returned.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>parameterIndex</code> - the zero-based index of the parameter to get</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the metadata of the parameter</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang">IndexOutOfBoundsException</a></code> - if the index is invalid</dd>
 </dl>
 </li>
 </ul>

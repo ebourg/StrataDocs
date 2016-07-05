@@ -119,7 +119,10 @@ var activeTableTab = "activeTableTab";
 extends <a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfTradePricer.html" title="class in com.opengamma.strata.pricer.dsf">AbstractDsfTradePricer</a></pre>
 <div class="block">Pricer implementation for Deliverable Swap Futures (DSFs).
  <p>
- This function provides the ability to price a <a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsfTrade.html" title="class in com.opengamma.strata.product.dsf"><code>ResolvedDsfTrade</code></a>.</div>
+ This function provides the ability to price a <a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsfTrade.html" title="class in com.opengamma.strata.product.dsf"><code>ResolvedDsfTrade</code></a>.
+ <p>
+ The price of a DSF is based on the present value (NPV) of the underlying swap on the delivery date.
+ For example, a price of 100.1822 represents a present value of $100,182.20, if the notional is $100,000.</div>
 </li>
 </ul>
 </div>
@@ -316,7 +319,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfTrade
 <dd><code>trade</code> - the trade</dd>
 <dd><code>provider</code> - the rates provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the price of the trade, in decimal form</dd>
+<dd>the price of the trade</dd>
 </dl>
 </li>
 </ul>
@@ -377,7 +380,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfTrade
                                             double&nbsp;referencePrice)</pre>
 <div class="block">Calculates the currency exposure of the deliverable swap futures trade.
  <p>
- Since the deliverable swap futures is based on a single currency, the trade is exposed to only this currency.  
+ Since the deliverable swap futures is based on a single currency, the trade is exposed to only this currency.
  <p>
  The calculation is performed against a reference price. The reference price should
  be the settlement price except on the trade date, when it is the trade price.</div>

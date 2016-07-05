@@ -171,7 +171,8 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>abstract <a href="../../../../../../com/opengamma/strata/report/framework/expression/EvaluationResult.html" title="class in com.opengamma.strata.report.framework.expression">EvaluationResult</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/report/framework/expression/TokenEvaluator.html#evaluate-T-java.lang.String-java.util.List-">evaluate</a></span>(<a href="../../../../../../com/opengamma/strata/report/framework/expression/TokenEvaluator.html" title="type parameter in TokenEvaluator">T</a>&nbsp;target,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/report/framework/expression/TokenEvaluator.html#evaluate-T-com.opengamma.strata.calc.runner.CalculationFunctions-java.lang.String-java.util.List-">evaluate</a></span>(<a href="../../../../../../com/opengamma/strata/report/framework/expression/TokenEvaluator.html" title="type parameter in TokenEvaluator">T</a>&nbsp;target,
+        <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationFunctions.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunctions</a>&nbsp;functions,
         <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;firstToken,
         <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;remainingTokens)</code>
 <div class="block">Evaluates a token against a given object.</div>
@@ -267,21 +268,23 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </dl>
 </li>
 </ul>
-<a name="evaluate-java.lang.Object-java.lang.String-java.util.List-">
+<a name="evaluate-java.lang.Object-com.opengamma.strata.calc.runner.CalculationFunctions-java.lang.String-java.util.List-">
 <!--   -->
-</a><a name="evaluate-T-java.lang.String-java.util.List-">
+</a><a name="evaluate-T-com.opengamma.strata.calc.runner.CalculationFunctions-java.lang.String-java.util.List-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>evaluate</h4>
 <pre>public abstract&nbsp;<a href="../../../../../../com/opengamma/strata/report/framework/expression/EvaluationResult.html" title="class in com.opengamma.strata.report.framework.expression">EvaluationResult</a>&nbsp;evaluate(<a href="../../../../../../com/opengamma/strata/report/framework/expression/TokenEvaluator.html" title="type parameter in TokenEvaluator">T</a>&nbsp;target,
+                                          <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationFunctions.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunctions</a>&nbsp;functions,
                                           <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;firstToken,
                                           <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;remainingTokens)</pre>
 <div class="block">Evaluates a token against a given object.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>target</code> - the object against which to evaluate the token</dd>
+<dd><code>functions</code> - the calculation functions</dd>
 <dd><code>firstToken</code> - the first token of the expression</dd>
 <dd><code>remainingTokens</code> - the remaining tokens in the expression, possibly empty</dd>
 <dt><span class="returnLabel">Returns:</span></dt>

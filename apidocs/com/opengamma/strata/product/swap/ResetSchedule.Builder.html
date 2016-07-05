@@ -145,29 +145,29 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/ResetSchedule.Builder.html" title="class in com.opengamma.strata.product.swap">ResetSchedule.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/ResetSchedule.Builder.html#averagingMethod-com.opengamma.strata.product.swap.IborRateAveragingMethod-">averagingMethod</a></span>(<a href="../../../../../com/opengamma/strata/product/swap/IborRateAveragingMethod.html" title="enum in com.opengamma.strata.product.swap">IborRateAveragingMethod</a>&nbsp;averagingMethod)</code>
-<div class="block">Sets the rate averaging method, defaulted to 'Unweighted'.</div>
-</td>
-</tr>
-<tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/ResetSchedule.html" title="class in com.opengamma.strata.product.swap">ResetSchedule</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/ResetSchedule.Builder.html#build--">build</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/ResetSchedule.Builder.html" title="class in com.opengamma.strata.product.swap">ResetSchedule.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/ResetSchedule.Builder.html#businessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">businessDayAdjustment</a></span>(<a href="../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</code>
 <div class="block">Sets the business day adjustment to apply to each reset date.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/ResetSchedule.Builder.html#get-java.lang.String-">get</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/ResetSchedule.Builder.html" title="class in com.opengamma.strata.product.swap">ResetSchedule.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/ResetSchedule.Builder.html#resetFrequency-com.opengamma.strata.basics.schedule.Frequency-">resetFrequency</a></span>(<a href="../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;resetFrequency)</code>
 <div class="block">Sets the periodic frequency of reset dates.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/ResetSchedule.Builder.html" title="class in com.opengamma.strata.product.swap">ResetSchedule.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/ResetSchedule.Builder.html#resetMethod-com.opengamma.strata.product.swap.IborRateResetMethod-">resetMethod</a></span>(<a href="../../../../../com/opengamma/strata/product/swap/IborRateResetMethod.html" title="enum in com.opengamma.strata.product.swap">IborRateResetMethod</a>&nbsp;resetMethod)</code>
+<div class="block">Sets the rate reset method, defaulted to 'Unweighted'.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -360,14 +360,14 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 </dl>
 </li>
 </ul>
-<a name="averagingMethod-com.opengamma.strata.product.swap.IborRateAveragingMethod-">
+<a name="resetMethod-com.opengamma.strata.product.swap.IborRateResetMethod-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>averagingMethod</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/swap/ResetSchedule.Builder.html" title="class in com.opengamma.strata.product.swap">ResetSchedule.Builder</a>&nbsp;averagingMethod(<a href="../../../../../com/opengamma/strata/product/swap/IborRateAveragingMethod.html" title="enum in com.opengamma.strata.product.swap">IborRateAveragingMethod</a>&nbsp;averagingMethod)</pre>
-<div class="block">Sets the rate averaging method, defaulted to 'Unweighted'.
+<h4>resetMethod</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/swap/ResetSchedule.Builder.html" title="class in com.opengamma.strata.product.swap">ResetSchedule.Builder</a>&nbsp;resetMethod(<a href="../../../../../com/opengamma/strata/product/swap/IborRateResetMethod.html" title="enum in com.opengamma.strata.product.swap">IborRateResetMethod</a>&nbsp;resetMethod)</pre>
+<div class="block">Sets the rate reset method, defaulted to 'Unweighted'.
  <p>
  This is used when more than one fixing contributes to the accrual period.
  <p>
@@ -377,7 +377,7 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
  Defined by the 2006 ISDA definitions article 6.2a.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>averagingMethod</code> - the new value, not null</dd>
+<dd><code>resetMethod</code> - the new value, not null</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this, for chaining, not null</dd>
 </dl>

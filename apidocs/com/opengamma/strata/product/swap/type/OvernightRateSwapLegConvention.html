@@ -189,7 +189,8 @@ implements <a href="../../../../../../com/opengamma/strata/product/swap/type/Swa
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.html#getAccrualBusinessDayAdjustment--">getAccrualBusinessDayAdjustment</a></span>()</code>
-<div class="block">Gets the business day adjustment to apply to accrual schedule dates.</div>
+<div class="block">Gets the business day adjustment to apply to accrual schedule dates,
+ providing a default result if no override specified.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -518,16 +519,17 @@ implements <a href="../../../../../../com/opengamma/strata/product/swap/type/Swa
 <li class="blockList">
 <h4>getAccrualBusinessDayAdjustment</h4>
 <pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;getAccrualBusinessDayAdjustment()</pre>
-<div class="block">Gets the business day adjustment to apply to accrual schedule dates.
+<div class="block">Gets the business day adjustment to apply to accrual schedule dates,
+ providing a default result if no override specified.
  <p>
  Each date in the calculated schedule is determined without taking into account weekends and holidays.
  The adjustment specified here is used to convert those dates to valid business days.
+ The start date and end date have their own business day adjustment rules.
  <p>
- The start date and end date may have their own business day adjustment rules.
- If those are not present, then this adjustment is used instead.</div>
+ This will default to 'ModifiedFollowing' using the index fixing calendar if not specified.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the accrual business day adjustment, not null</dd>
+<dd>the business day adjustment, not null</dd>
 </dl>
 </li>
 </ul>

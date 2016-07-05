@@ -188,7 +188,7 @@ implements <a href="../../../../../com/opengamma/strata/data/ObservableId.html" 
 <tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/observable/IndexQuoteId.html#getStandardId--">getStandardId</a></span>()</code>
-<div class="block">Gets the standard identifier identifying the data.</div>
+<div class="block">Gets the identifier of the data.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -341,17 +341,15 @@ implements <a href="../../../../../com/opengamma/strata/data/ObservableId.html" 
 <li class="blockList">
 <h4>getStandardId</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;getStandardId()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/data/ObservableId.html#getStandardId--">ObservableId</a></code></span></div>
-<div class="block">Gets the standard identifier identifying the data.
+<div class="block">Gets the identifier of the data.
  <p>
- The identifier may be the identifier used to identify the item in an underlying data provider,
- for example a Bloomberg ticker. It also may be any arbitrary unique identifier that can be resolved
- to one or more data provider identifiers which are used to request the data from the provider.</div>
+ This returns an artificial identifier with a scheme of 'OG-Future' and
+ a value of the index name.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/opengamma/strata/data/ObservableId.html#getStandardId--">getStandardId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/data/ObservableId.html" title="interface in com.opengamma.strata.data">ObservableId</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a standard identifier, such as a ticker, to identify the desired data</dd>
+<dd>the standard identifier</dd>
 </dl>
 </li>
 </ul>

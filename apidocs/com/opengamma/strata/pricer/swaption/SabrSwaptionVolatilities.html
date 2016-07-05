@@ -18,8 +18,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var methods = {"i0":18,"i1":6,"i2":6,"i3":6,"i4":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -112,9 +112,11 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public interface <span class="typeNameLabel">SabrSwaptionVolatilities</span>
 extends <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a></pre>
-<div class="block">Volatility for swaptions in SABR model. 
+<div class="block">Volatility for swaptions in SABR model.
  <p>
- The volatility is represented in terms of SABR model parameters.</div>
+ The volatility is represented in terms of SABR model parameters.
+ <p>
+ The prices are calculated using the SABR implied volatility with respect to the Black formula.</div>
 </li>
 </ul>
 </div>
@@ -128,19 +130,25 @@ extends <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVol
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t5" class="tableTab"><span><a href="javascript:show(16);">Default Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html#getVolatilityType--">getVolatilityType</a></span>()</code>
+<div class="block">Gets the type of volatility returned by the <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#volatility-java.time.ZonedDateTime-double-double-double-"><code>SwaptionVolatilities.volatility(java.time.ZonedDateTime, double, double, double)</code></a> method.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html#shift-double-double-">shift</a></span>(double&nbsp;expiry,
      double&nbsp;tenor)</code>
 <div class="block">Calculates the shift parameter for the specified time to expiry and instrument tenor.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/value/ValueDerivatives.html" title="class in com.opengamma.strata.basics.value">ValueDerivatives</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html#volatilityAdjoint-double-double-double-double-">volatilityAdjoint</a></span>(double&nbsp;expiry,
                  double&nbsp;tenor,
@@ -149,14 +157,14 @@ extends <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVol
 <div class="block">Calculates the volatility and associated sensitivities.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SabrSwaptionVolatilities</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html#withParameter-int-double-">withParameter</a></span>(int&nbsp;parameterIndex,
              double&nbsp;newValue)</code>
 <div class="block">Returns a copy of the data with the value at the specified index altered.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SabrSwaptionVolatilities</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html#withPerturbation-com.opengamma.strata.market.param.ParameterPerturbation-">withPerturbation</a></span>(<a href="../../../../../com/opengamma/strata/market/param/ParameterPerturbation.html" title="interface in com.opengamma.strata.market.param">ParameterPerturbation</a>&nbsp;perturbation)</code>
 <div class="block">Returns a perturbed copy of the data.</div>
@@ -169,6 +177,13 @@ extends <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVol
 </a>
 <h3>Methods inherited from interface&nbsp;com.opengamma.strata.pricer.swaption.<a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a></h3>
 <code><a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#getConvention--">getConvention</a>, <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#getName--">getName</a>, <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#getValuationDate--">getValuationDate</a>, <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#getValuationDateTime--">getValuationDateTime</a>, <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#parameterSensitivity-com.opengamma.strata.market.sensitivity.PointSensitivities-">parameterSensitivity</a>, <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#parameterSensitivity-com.opengamma.strata.market.sensitivity.PointSensitivity...-">parameterSensitivity</a>, <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#price-double-double-com.opengamma.strata.product.common.PutCall-double-double-double-">price</a>, <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#priceDelta-double-double-com.opengamma.strata.product.common.PutCall-double-double-double-">priceDelta</a>, <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#priceGamma-double-double-com.opengamma.strata.product.common.PutCall-double-double-double-">priceGamma</a>, <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#priceTheta-double-double-com.opengamma.strata.product.common.PutCall-double-double-double-">priceTheta</a>, <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#priceVega-double-double-com.opengamma.strata.product.common.PutCall-double-double-double-">priceVega</a>, <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#relativeTime-java.time.ZonedDateTime-">relativeTime</a>, <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#tenor-java.time.LocalDate-java.time.LocalDate-">tenor</a>, <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#volatility-double-double-double-double-">volatility</a>, <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#volatility-java.time.ZonedDateTime-double-double-double-">volatility</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.market.MarketDataView">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.market.<a href="../../../../../com/opengamma/strata/market/MarketDataView.html" title="interface in com.opengamma.strata.market">MarketDataView</a></h3>
+<code><a href="../../../../../com/opengamma/strata/market/MarketDataView.html#findData-com.opengamma.strata.data.MarketDataName-">findData</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.market.param.ParameterizedData">
@@ -191,6 +206,23 @@ extends <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVol
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="getVolatilityType--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getVolatilityType</h4>
+<pre>default&nbsp;<a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;getVolatilityType()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#getVolatilityType--">SwaptionVolatilities</a></code></span></div>
+<div class="block">Gets the type of volatility returned by the <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#volatility-java.time.ZonedDateTime-double-double-double-"><code>SwaptionVolatilities.volatility(java.time.ZonedDateTime, double, double, double)</code></a> method.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#getVolatilityType--">getVolatilityType</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the type</dd>
+</dl>
+</li>
+</ul>
 <a name="withParameter-int-double-">
 <!--   -->
 </a>

@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":9,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":9,"i10":10,"i11":9,"i12":10,"i13":10,"i14":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -51,7 +51,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../com/opengamma/strata/product/swap/FxResetFixingRelativeTo.html" title="enum in com.opengamma.strata.product.swap"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.Builder.html" title="class in com.opengamma.strata.product.swap"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.Meta.html" title="class in com.opengamma.strata.product.swap"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?com/opengamma/strata/product/swap/FxResetNotionalExchange.html" target="_top">Frames</a></li>
@@ -161,12 +161,6 @@ implements <a href="../../../../../com/opengamma/strata/product/swap/PaymentEven
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.Builder.html" title="class in com.opengamma.strata.product.swap">FxResetNotionalExchange.Builder</a></span></code>
-<div class="block">The bean-builder for <code>FxResetNotionalExchange</code>.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.Meta.html" title="class in com.opengamma.strata.product.swap">FxResetNotionalExchange.Meta</a></span></code>
 <div class="block">The meta-bean for <code>FxResetNotionalExchange</code>.</div>
 </td>
@@ -193,64 +187,66 @@ implements <a href="../../../../../com/opengamma/strata/product/swap/PaymentEven
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.Builder.html" title="class in com.opengamma.strata.product.swap">FxResetNotionalExchange.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.html#builder--">builder</a></span>()</code>
-<div class="block">Returns a builder used to create an instance of the bean.</div>
-</td>
-</tr>
-<tr id="i2" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.html#equals-java.lang.Object-">equals</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.html#getCurrency--">getCurrency</a></span>()</code>
 <div class="block">Gets the payment currency.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.html#getNotional--">getNotional</a></span>()</code>
 <div class="block">Gets the amount of the notional.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.html#getNotionalAmount--">getNotionalAmount</a></span>()</code>
 <div class="block">Gets the notional amount, positive if receiving, negative if paying.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/index/FxIndexObservation.html" title="class in com.opengamma.strata.basics.index">FxIndexObservation</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.html#getObservation--">getObservation</a></span>()</code>
 <div class="block">Gets the FX index observation.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.html#getPaymentDate--">getPaymentDate</a></span>()</code>
 <div class="block">Gets the date that the payment is made.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.html#getReferenceCurrency--">getReferenceCurrency</a></span>()</code>
 <div class="block">Gets the reference currency, as defined in the contract.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.Meta.html" title="class in com.opengamma.strata.product.swap">FxResetNotionalExchange.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.html#meta--">meta</a></span>()</code>
 <div class="block">The meta-bean for <code>FxResetNotionalExchange</code>.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.Meta.html" title="class in com.opengamma.strata.product.swap">FxResetNotionalExchange.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.html#metaBean--">metaBean</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.html" title="class in com.opengamma.strata.product.swap">FxResetNotionalExchange</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.html#of-com.opengamma.strata.basics.currency.CurrencyAmount-java.time.LocalDate-com.opengamma.strata.basics.index.FxIndexObservation-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;notionalAmount,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate,
+  <a href="../../../../../com/opengamma/strata/basics/index/FxIndexObservation.html" title="class in com.opengamma.strata.basics.index">FxIndexObservation</a>&nbsp;observation)</code>
+<div class="block">Obtains an instance from the amount, date and FX index observation.</div>
+</td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>&lt;R&gt;&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Property.html?is-external=true" title="class or interface in org.joda.beans">Property</a>&lt;R&gt;</code></td>
@@ -261,12 +257,6 @@ implements <a href="../../../../../com/opengamma/strata/product/swap/PaymentEven
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.html#propertyNames--">propertyNames</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i14" class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.Builder.html" title="class in com.opengamma.strata.product.swap">FxResetNotionalExchange.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.html#toBuilder--">toBuilder</a></span>()</code>
-<div class="block">Returns a builder that allows this bean to be mutated.</div>
-</td>
-</tr>
-<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -292,6 +282,26 @@ implements <a href="../../../../../com/opengamma/strata/product/swap/PaymentEven
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="of-com.opengamma.strata.basics.currency.CurrencyAmount-java.time.LocalDate-com.opengamma.strata.basics.index.FxIndexObservation-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>of</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.html" title="class in com.opengamma.strata.product.swap">FxResetNotionalExchange</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;notionalAmount,
+                                         <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate,
+                                         <a href="../../../../../com/opengamma/strata/basics/index/FxIndexObservation.html" title="class in com.opengamma.strata.basics.index">FxIndexObservation</a>&nbsp;observation)</pre>
+<div class="block">Obtains an instance from the amount, date and FX index observation.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>notionalAmount</code> - the notional amount that will be FX converted</dd>
+<dd><code>paymentDate</code> - the date that the payment is made</dd>
+<dd><code>observation</code> - the FX observation to perform</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the FX reset notional exchange</dd>
+</dl>
+</li>
+</ul>
 <a name="getCurrency--">
 <!--   -->
 </a>
@@ -383,20 +393,6 @@ implements <a href="../../../../../com/opengamma/strata/product/swap/PaymentEven
 </dl>
 </li>
 </ul>
-<a name="builder--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.Builder.html" title="class in com.opengamma.strata.product.swap">FxResetNotionalExchange.Builder</a>&nbsp;builder()</pre>
-<div class="block">Returns a builder used to create an instance of the bean.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the builder, not null</dd>
-</dl>
-</li>
-</ul>
 <a name="metaBean--">
 <!--   -->
 </a>
@@ -436,6 +432,24 @@ implements <a href="../../../../../com/opengamma/strata/product/swap/PaymentEven
 </dl>
 </li>
 </ul>
+<a name="getNotionalAmount--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNotionalAmount</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;getNotionalAmount()</pre>
+<div class="block">Gets the notional amount, positive if receiving, negative if paying.
+ <p>
+ The notional amount applicable during the period.
+ The currency of the notional is specified by <code>referenceCurrency</code> but will
+ be paid after FX conversion using the index.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the value of the property, not null</dd>
+</dl>
+</li>
+</ul>
 <a name="getPaymentDate--">
 <!--   -->
 </a>
@@ -450,24 +464,6 @@ implements <a href="../../../../../com/opengamma/strata/product/swap/PaymentEven
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/opengamma/strata/product/swap/PaymentEvent.html#getPaymentDate--">getPaymentDate</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/product/swap/PaymentEvent.html" title="interface in com.opengamma.strata.product.swap">PaymentEvent</a></code></dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the value of the property, not null</dd>
-</dl>
-</li>
-</ul>
-<a name="getNotionalAmount--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getNotionalAmount</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;getNotionalAmount()</pre>
-<div class="block">Gets the notional amount, positive if receiving, negative if paying.
- <p>
- The notional amount applicable during the period.
- The currency of the notional is specified by <code>referenceCurrency</code> but will
- be paid after FX conversion using the index.</div>
-<dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value of the property, not null</dd>
 </dl>
@@ -490,20 +486,6 @@ implements <a href="../../../../../com/opengamma/strata/product/swap/PaymentEven
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value of the property, not null</dd>
-</dl>
-</li>
-</ul>
-<a name="toBuilder--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>toBuilder</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.Builder.html" title="class in com.opengamma.strata.product.swap">FxResetNotionalExchange.Builder</a>&nbsp;toBuilder()</pre>
-<div class="block">Returns a builder that allows this bean to be mutated.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the mutable builder, not null</dd>
 </dl>
 </li>
 </ul>
@@ -576,7 +558,7 @@ implements <a href="../../../../../com/opengamma/strata/product/swap/PaymentEven
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../com/opengamma/strata/product/swap/FxResetFixingRelativeTo.html" title="enum in com.opengamma.strata.product.swap"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.Builder.html" title="class in com.opengamma.strata.product.swap"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.Meta.html" title="class in com.opengamma.strata.product.swap"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?com/opengamma/strata/product/swap/FxResetNotionalExchange.html" target="_top">Frames</a></li>

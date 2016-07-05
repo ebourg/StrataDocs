@@ -180,7 +180,7 @@ implements <a href="../../../../../com/opengamma/strata/pricer/rate/OvernightInd
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;T&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/DiscountOvernightIndexRates.html#findData-com.opengamma.strata.data.MarketDataName-">findData</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketDataName.html" title="class in com.opengamma.strata.data">MarketDataName</a>&lt;T&gt;&nbsp;name)</code>
-<div class="block">Finds the market data structure underlying this instance with the specified name.</div>
+<div class="block">Finds the market data with the specified name.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -428,14 +428,14 @@ implements <a href="../../../../../com/opengamma/strata/pricer/rate/OvernightInd
 <li class="blockList">
 <h4>findData</h4>
 <pre>public&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;T&gt;&nbsp;findData(<a href="../../../../../com/opengamma/strata/data/MarketDataName.html" title="class in com.opengamma.strata.data">MarketDataName</a>&lt;T&gt;&nbsp;name)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#findData-com.opengamma.strata.data.MarketDataName-">OvernightIndexRates</a></code></span></div>
-<div class="block">Finds the market data structure underlying this instance with the specified name.
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/market/MarketDataView.html#findData-com.opengamma.strata.data.MarketDataName-">MarketDataView</a></code></span></div>
+<div class="block">Finds the market data with the specified name.
  <p>
- This is most commonly used to find a <a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve"><code>Curve</code></a> using a <a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve"><code>CurveName</code></a>.
+ This is most commonly used to find an underlying curve or surface by name.
  If the market data cannot be found, empty is returned.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#findData-com.opengamma.strata.data.MarketDataName-">findData</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">OvernightIndexRates</a></code></dd>
+<dd><code><a href="../../../../../com/opengamma/strata/market/MarketDataView.html#findData-com.opengamma.strata.data.MarketDataName-">findData</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/MarketDataView.html" title="interface in com.opengamma.strata.market">MarketDataView</a></code></dd>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
 <dd><code>T</code> - the type of the market data value</dd>
 <dt><span class="paramLabel">Parameters:</span></dt>

@@ -84,42 +84,60 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.calc">com.opengamma.strata.calc</a></td>
+<td class="colLast">
+<div class="block">Calculates risk measures on trades, applies scenarios and manages market data.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#com.opengamma.strata.calc.marketdata">com.opengamma.strata.calc.marketdata</a></td>
+<td class="colLast">
+<div class="block">Provides the ability to obtain market data and perform calibrations and scenario perturbations.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.calc.runner">com.opengamma.strata.calc.runner</a></td>
+<td class="colLast">
+<div class="block">The calculation runner.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.data">com.opengamma.strata.data</a></td>
 <td class="colLast">
 <div class="block">Basic types to model market data.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.data.scenario">com.opengamma.strata.data.scenario</a></td>
 <td class="colLast">
 <div class="block">Basic types to model market data across scenarios.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.market.curve">com.opengamma.strata.market.curve</a></td>
 <td class="colLast">
 <div class="block">Definitions of curves.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.market.curve.node">com.opengamma.strata.market.curve.node</a></td>
 <td class="colLast">
 <div class="block">Curve nodes.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.measure.rate">com.opengamma.strata.measure.rate</a></td>
 <td class="colLast">
 <div class="block">Base package for calculation functions.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.measure.swaption">com.opengamma.strata.measure.swaption</a></td>
 <td class="colLast">
 <div class="block">Calculation functions for swaption products.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.curve">com.opengamma.strata.pricer.curve</a></td>
 <td class="colLast">
 <div class="block">Provides the ability to calibrate curves.</div>
@@ -130,6 +148,122 @@
 </li>
 <li class="blockList">
 <ul class="blockList">
+<li class="blockList"><a name="com.opengamma.strata.calc">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a> in <a href="../../../../../com/opengamma/strata/calc/package-summary.html">com.opengamma.strata.calc</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../com/opengamma/strata/calc/package-summary.html">com.opengamma.strata.calc</a> with parameters of type <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/calc/Results.html" title="class in com.opengamma.strata.calc">Results</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CalculationRunner.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/CalculationRunner.html#calculate-com.opengamma.strata.calc.CalculationRules-java.util.List-java.util.List-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">calculate</a></span>(<a href="../../../../../com/opengamma/strata/calc/CalculationRules.html" title="class in com.opengamma.strata.calc">CalculationRules</a>&nbsp;calculationRules,
+         <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>&gt;&nbsp;targets,
+         <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Column.html" title="class in com.opengamma.strata.calc">Column</a>&gt;&nbsp;columns,
+         <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+         <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Performs calculations for a single set of market data.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">CalculationRunner.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/CalculationRunner.html#calculateAsync-com.opengamma.strata.calc.CalculationRules-java.util.List-java.util.List-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-com.opengamma.strata.calc.runner.CalculationListener-">calculateAsync</a></span>(<a href="../../../../../com/opengamma/strata/calc/CalculationRules.html" title="class in com.opengamma.strata.calc">CalculationRules</a>&nbsp;calculationRules,
+              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>&gt;&nbsp;targets,
+              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Column.html" title="class in com.opengamma.strata.calc">Column</a>&gt;&nbsp;columns,
+              <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData,
+              <a href="../../../../../com/opengamma/strata/calc/runner/CalculationListener.html" title="interface in com.opengamma.strata.calc.runner">CalculationListener</a>&nbsp;listener)</code>
+<div class="block">Performs calculations asynchronously for a single set of market data,
+ invoking a listener as each calculation completes.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.calc.marketdata">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a> in <a href="../../../../../com/opengamma/strata/calc/marketdata/package-summary.html">com.opengamma.strata.calc.marketdata</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../com/opengamma/strata/calc/marketdata/package-summary.html">com.opengamma.strata.calc.marketdata</a> that implement <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/marketdata/BuiltMarketData.html" title="class in com.opengamma.strata.calc.marketdata">BuiltMarketData</a></span></code>
+<div class="block">Market data that has been built.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../com/opengamma/strata/calc/marketdata/package-summary.html">com.opengamma.strata.calc.marketdata</a> with parameters of type <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/calc/marketdata/BuiltMarketData.html" title="class in com.opengamma.strata.calc.marketdata">BuiltMarketData</a></code></td>
+<td class="colLast"><span class="typeNameLabel">MarketDataFactory.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/marketdata/MarketDataFactory.html#create-com.opengamma.strata.calc.marketdata.MarketDataRequirements-com.opengamma.strata.calc.marketdata.MarketDataConfig-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">create</a></span>(<a href="../../../../../com/opengamma/strata/calc/marketdata/MarketDataRequirements.html" title="class in com.opengamma.strata.calc.marketdata">MarketDataRequirements</a>&nbsp;requirements,
+      <a href="../../../../../com/opengamma/strata/calc/marketdata/MarketDataConfig.html" title="class in com.opengamma.strata.calc.marketdata">MarketDataConfig</a>&nbsp;marketDataConfig,
+      <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;suppliedData,
+      <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Builds a set of market data.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/calc/marketdata/BuiltScenarioMarketData.html" title="class in com.opengamma.strata.calc.marketdata">BuiltScenarioMarketData</a></code></td>
+<td class="colLast"><span class="typeNameLabel">MarketDataFactory.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/marketdata/MarketDataFactory.html#createMultiScenario-com.opengamma.strata.calc.marketdata.MarketDataRequirements-com.opengamma.strata.calc.marketdata.MarketDataConfig-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-com.opengamma.strata.calc.marketdata.ScenarioDefinition-">createMultiScenario</a></span>(<a href="../../../../../com/opengamma/strata/calc/marketdata/MarketDataRequirements.html" title="class in com.opengamma.strata.calc.marketdata">MarketDataRequirements</a>&nbsp;requirements,
+                   <a href="../../../../../com/opengamma/strata/calc/marketdata/MarketDataConfig.html" title="class in com.opengamma.strata.calc.marketdata">MarketDataConfig</a>&nbsp;marketDataConfig,
+                   <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;suppliedData,
+                   <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData,
+                   <a href="../../../../../com/opengamma/strata/calc/marketdata/ScenarioDefinition.html" title="class in com.opengamma.strata.calc.marketdata">ScenarioDefinition</a>&nbsp;scenarioDefinition)</code>
+<div class="block">Builds the market data required for performing calculations for a set of scenarios.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.calc.runner">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a> in <a href="../../../../../com/opengamma/strata/calc/runner/package-summary.html">com.opengamma.strata.calc.runner</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../com/opengamma/strata/calc/runner/package-summary.html">com.opengamma.strata.calc.runner</a> with parameters of type <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/calc/Results.html" title="class in com.opengamma.strata.calc">Results</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CalculationTaskRunner.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/CalculationTaskRunner.html#calculate-com.opengamma.strata.calc.runner.CalculationTasks-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">calculate</a></span>(<a href="../../../../../com/opengamma/strata/calc/runner/CalculationTasks.html" title="class in com.opengamma.strata.calc.runner">CalculationTasks</a>&nbsp;tasks,
+         <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+         <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Performs calculations for a single set of market data.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">CalculationTaskRunner.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/CalculationTaskRunner.html#calculateAsync-com.opengamma.strata.calc.runner.CalculationTasks-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-com.opengamma.strata.calc.runner.CalculationListener-">calculateAsync</a></span>(<a href="../../../../../com/opengamma/strata/calc/runner/CalculationTasks.html" title="class in com.opengamma.strata.calc.runner">CalculationTasks</a>&nbsp;tasks,
+              <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData,
+              <a href="../../../../../com/opengamma/strata/calc/runner/CalculationListener.html" title="interface in com.opengamma.strata.calc.runner">CalculationListener</a>&nbsp;listener)</code>
+<div class="block">Performs calculations asynchronously for a single set of market data,
+ invoking a listener as each calculation completes.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.data">
 <!--   -->
 </a>
@@ -225,6 +359,15 @@
  specifying the source of FX rates.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/data/MarketDataFxRateProvider.html" title="class in com.opengamma.strata.data">MarketDataFxRateProvider</a></code></td>
+<td class="colLast"><span class="typeNameLabel">MarketDataFxRateProvider.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/data/MarketDataFxRateProvider.html#of-com.opengamma.strata.data.MarketData-com.opengamma.strata.data.ObservableSource-com.opengamma.strata.basics.currency.Currency-">of</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+  <a href="../../../../../com/opengamma/strata/data/ObservableSource.html" title="class in com.opengamma.strata.data">ObservableSource</a>&nbsp;fxRatesSource,
+  <a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;triangulationCurrency)</code>
+<div class="block">Obtains an instance which takes FX rates from the market data,
+ specifying the source of FX rates.</div>
+</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -262,6 +405,22 @@
 </tr>
 </tbody>
 </table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../com/opengamma/strata/data/scenario/package-summary.html">com.opengamma.strata.data.scenario</a> with parameters of type <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ScenarioMarketData.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html#of-int-com.opengamma.strata.data.MarketData-">of</a></span>(int&nbsp;scenarioCount,
+  <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData)</code>
+<div class="block">Obtains an instance by wrapping a single set of market data.</div>
+</td>
+</tr>
+</tbody>
+</table>
 </li>
 <li class="blockList"><a name="com.opengamma.strata.market.curve">
 <!--   -->
@@ -276,23 +435,20 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">CurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveNode.html#initialGuess-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-            <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+<td class="colLast"><span class="typeNameLabel">CurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveNode.html#initialGuess-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
             <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;valueType)</code>
 <div class="block">Gets the initial guess used for calibrating the node.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">CurveGroupDefinition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#initialGuesses-java.time.LocalDate-com.opengamma.strata.data.MarketData-">initialGuesses</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-              <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData)</code>
+<td class="colLast"><span class="typeNameLabel">CurveGroupDefinition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#initialGuesses-com.opengamma.strata.data.MarketData-">initialGuesses</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData)</code>
 <div class="block">Gets the list of all initial guesses.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveNode.html#resolvedTrade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-             double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">CurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveNode.html#resolvedTrade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(double&nbsp;quantity,
              <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Creates a resolved trade representing the instrument at the node.</div>
@@ -300,16 +456,14 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">CurveGroupDefinition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#resolvedTrades-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrades</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-              <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+<td class="colLast"><span class="typeNameLabel">CurveGroupDefinition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#resolvedTrades-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrades</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
               <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Creates a list of trades representing the instrument at each node.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveNode.html#trade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-     double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">CurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveNode.html#trade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(double&nbsp;quantity,
      <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
      <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Creates a trade representing the instrument at the node.</div>
@@ -331,221 +485,205 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">XCcyIborIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/XCcyIborIborSwapCurveNode.html#initialGuess-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-            <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+<td class="colLast"><span class="typeNameLabel">XCcyIborIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/XCcyIborIborSwapCurveNode.html#initialGuess-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
             <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;valueType)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">ThreeLegBasisSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/ThreeLegBasisSwapCurveNode.html#initialGuess-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-            <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+<td class="colLast"><span class="typeNameLabel">ThreeLegBasisSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/ThreeLegBasisSwapCurveNode.html#initialGuess-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
             <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;valueType)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">TermDepositCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/TermDepositCurveNode.html#initialGuess-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-            <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+<td class="colLast"><span class="typeNameLabel">TermDepositCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/TermDepositCurveNode.html#initialGuess-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
             <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;valueType)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/OvernightIborSwapCurveNode.html#initialGuess-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-            <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+<td class="colLast"><span class="typeNameLabel">OvernightIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/OvernightIborSwapCurveNode.html#initialGuess-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
             <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;valueType)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">IborIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/IborIborSwapCurveNode.html#initialGuess-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-            <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+<td class="colLast"><span class="typeNameLabel">IborIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/IborIborSwapCurveNode.html#initialGuess-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
             <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;valueType)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">IborFutureCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/IborFutureCurveNode.html#initialGuess-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-            <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+<td class="colLast"><span class="typeNameLabel">IborFutureCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/IborFutureCurveNode.html#initialGuess-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
             <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;valueType)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">IborFixingDepositCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/IborFixingDepositCurveNode.html#initialGuess-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-            <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+<td class="colLast"><span class="typeNameLabel">IborFixingDepositCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/IborFixingDepositCurveNode.html#initialGuess-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
             <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;valueType)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">FxSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FxSwapCurveNode.html#initialGuess-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-            <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+<td class="colLast"><span class="typeNameLabel">FxSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FxSwapCurveNode.html#initialGuess-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
             <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;valueType)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">FraCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FraCurveNode.html#initialGuess-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-            <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+<td class="colLast"><span class="typeNameLabel">FraCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FraCurveNode.html#initialGuess-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
             <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;valueType)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">FixedOvernightSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FixedOvernightSwapCurveNode.html#initialGuess-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-            <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+<td class="colLast"><span class="typeNameLabel">FixedOvernightSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FixedOvernightSwapCurveNode.html#initialGuess-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
             <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;valueType)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">FixedIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FixedIborSwapCurveNode.html#initialGuess-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-            <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+<td class="colLast"><span class="typeNameLabel">FixedInflationSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FixedInflationSwapCurveNode.html#initialGuess-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
             <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;valueType)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwapTrade.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">XCcyIborIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/XCcyIborIborSwapCurveNode.html#resolvedTrade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-             double&nbsp;quantity,
-             <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
-             <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><span class="typeNameLabel">FixedIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FixedIborSwapCurveNode.html#initialGuess-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+            <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;valueType)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwapTrade.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ThreeLegBasisSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/ThreeLegBasisSwapCurveNode.html#resolvedTrade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-             double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">XCcyIborIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/XCcyIborIborSwapCurveNode.html#resolvedTrade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(double&nbsp;quantity,
              <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwapTrade.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapTrade</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ThreeLegBasisSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/ThreeLegBasisSwapCurveNode.html#resolvedTrade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(double&nbsp;quantity,
+             <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+             <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/deposit/ResolvedTermDepositTrade.html" title="class in com.opengamma.strata.product.deposit">ResolvedTermDepositTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">TermDepositCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/TermDepositCurveNode.html#resolvedTrade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-             double&nbsp;quantity,
-             <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
-             <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwapTrade.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/OvernightIborSwapCurveNode.html#resolvedTrade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-             double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">TermDepositCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/TermDepositCurveNode.html#resolvedTrade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(double&nbsp;quantity,
              <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwapTrade.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/IborIborSwapCurveNode.html#resolvedTrade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-             double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">OvernightIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/OvernightIborSwapCurveNode.html#resolvedTrade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(double&nbsp;quantity,
              <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwapTrade.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapTrade</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/IborIborSwapCurveNode.html#resolvedTrade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(double&nbsp;quantity,
+             <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+             <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborFutureCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/IborFutureCurveNode.html#resolvedTrade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-             double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">IborFutureCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/IborFutureCurveNode.html#resolvedTrade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(double&nbsp;quantity,
              <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/deposit/ResolvedIborFixingDepositTrade.html" title="class in com.opengamma.strata.product.deposit">ResolvedIborFixingDepositTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborFixingDepositCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/IborFixingDepositCurveNode.html#resolvedTrade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-             double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">IborFixingDepositCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/IborFixingDepositCurveNode.html#resolvedTrade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(double&nbsp;quantity,
              <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/fx/ResolvedFxSwapTrade.html" title="class in com.opengamma.strata.product.fx">ResolvedFxSwapTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FxSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FxSwapCurveNode.html#resolvedTrade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-             double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">FxSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FxSwapCurveNode.html#resolvedTrade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(double&nbsp;quantity,
+             <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+             <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/fra/ResolvedFraTrade.html" title="class in com.opengamma.strata.product.fra">ResolvedFraTrade</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FraCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FraCurveNode.html#resolvedTrade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(double&nbsp;quantity,
              <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/fra/ResolvedFraTrade.html" title="class in com.opengamma.strata.product.fra">ResolvedFraTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FraCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FraCurveNode.html#resolvedTrade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-             double&nbsp;quantity,
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwapTrade.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapTrade</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FixedOvernightSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FixedOvernightSwapCurveNode.html#resolvedTrade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(double&nbsp;quantity,
              <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwapTrade.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FixedOvernightSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FixedOvernightSwapCurveNode.html#resolvedTrade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-             double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">FixedInflationSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FixedInflationSwapCurveNode.html#resolvedTrade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(double&nbsp;quantity,
              <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwapTrade.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FixedIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FixedIborSwapCurveNode.html#resolvedTrade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-             double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">FixedIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FixedIborSwapCurveNode.html#resolvedTrade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(double&nbsp;quantity,
              <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">XCcyIborIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/XCcyIborIborSwapCurveNode.html#trade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-     double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">XCcyIborIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/XCcyIborIborSwapCurveNode.html#trade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(double&nbsp;quantity,
      <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
      <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ThreeLegBasisSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/ThreeLegBasisSwapCurveNode.html#trade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-     double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">ThreeLegBasisSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/ThreeLegBasisSwapCurveNode.html#trade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(double&nbsp;quantity,
      <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
      <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/deposit/TermDepositTrade.html" title="class in com.opengamma.strata.product.deposit">TermDepositTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">TermDepositCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/TermDepositCurveNode.html#trade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-     double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">TermDepositCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/TermDepositCurveNode.html#trade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(double&nbsp;quantity,
      <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
      <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/OvernightIborSwapCurveNode.html#trade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-     double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">OvernightIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/OvernightIborSwapCurveNode.html#trade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(double&nbsp;quantity,
      <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
      <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/IborIborSwapCurveNode.html#trade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-     double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">IborIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/IborIborSwapCurveNode.html#trade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(double&nbsp;quantity,
      <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
      <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFutureTrade.html" title="class in com.opengamma.strata.product.index">IborFutureTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborFutureCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/IborFutureCurveNode.html#trade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-     double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">IborFutureCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/IborFutureCurveNode.html#trade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(double&nbsp;quantity,
      <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
      <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/deposit/IborFixingDepositTrade.html" title="class in com.opengamma.strata.product.deposit">IborFixingDepositTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborFixingDepositCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/IborFixingDepositCurveNode.html#trade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-     double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">IborFixingDepositCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/IborFixingDepositCurveNode.html#trade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(double&nbsp;quantity,
      <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
      <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/fx/FxSwapTrade.html" title="class in com.opengamma.strata.product.fx">FxSwapTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FxSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FxSwapCurveNode.html#trade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-     double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">FxSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FxSwapCurveNode.html#trade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(double&nbsp;quantity,
      <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
      <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/fra/FraTrade.html" title="class in com.opengamma.strata.product.fra">FraTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FraCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FraCurveNode.html#trade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-     double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">FraCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FraCurveNode.html#trade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(double&nbsp;quantity,
      <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
      <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FixedOvernightSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FixedOvernightSwapCurveNode.html#trade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-     double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">FixedOvernightSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FixedOvernightSwapCurveNode.html#trade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(double&nbsp;quantity,
      <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
      <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FixedIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FixedIborSwapCurveNode.html#trade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-     double&nbsp;quantity,
+<td class="colLast"><span class="typeNameLabel">FixedInflationSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FixedInflationSwapCurveNode.html#trade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(double&nbsp;quantity,
+     <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+     <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FixedIborSwapCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/node/FixedIborSwapCurveNode.html#trade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(double&nbsp;quantity,
      <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
      <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
@@ -683,21 +821,11 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CurveCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/curve/CurveCalibrator.html#calibrate-com.opengamma.strata.market.curve.CurveGroupDefinition-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-java.util.Map-">calibrate</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&nbsp;curveGroupDefn,
-         <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+<td class="colLast"><span class="typeNameLabel">CurveCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/curve/CurveCalibrator.html#calibrate-com.opengamma.strata.market.curve.CurveGroupDefinition-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-java.util.Map-">calibrate</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&nbsp;curveGroupDefn,
          <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
          <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData,
          <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>,<a href="../../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&gt;&nbsp;timeSeries)</code>
 <div class="block">Calibrates a single curve group, containing one or more curves.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CurveCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/curve/CurveCalibrator.html#calibrate-java.util.List-com.opengamma.strata.pricer.rate.ImmutableRatesProvider-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">calibrate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&gt;&nbsp;allGroupsDefn,
-         <a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>&nbsp;knownData,
-         <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
-         <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
-<div class="block">Calibrates a list of curve groups, each containing one or more curves.</div>
 </td>
 </tr>
 </tbody>

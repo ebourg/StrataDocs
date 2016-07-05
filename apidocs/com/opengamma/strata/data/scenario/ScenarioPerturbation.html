@@ -139,7 +139,8 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;<a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html" title="type parameter in ScenarioPerturbation">T</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html#applyTo-com.opengamma.strata.data.scenario.MarketDataBox-">applyTo</a></span>(<a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;<a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html" title="type parameter in ScenarioPerturbation">T</a>&gt;&nbsp;marketData)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html#applyTo-com.opengamma.strata.data.scenario.MarketDataBox-com.opengamma.strata.basics.ReferenceData-">applyTo</a></span>(<a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;<a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html" title="type parameter in ScenarioPerturbation">T</a>&gt;&nbsp;marketData,
+       <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Applies this perturbation to the market data in a box, returning a box containing new, modified data.</div>
 </td>
 </tr>
@@ -188,13 +189,14 @@ var activeTableTab = "activeTableTab";
 </dl>
 </li>
 </ul>
-<a name="applyTo-com.opengamma.strata.data.scenario.MarketDataBox-">
+<a name="applyTo-com.opengamma.strata.data.scenario.MarketDataBox-com.opengamma.strata.basics.ReferenceData-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>applyTo</h4>
-<pre><a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;<a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html" title="type parameter in ScenarioPerturbation">T</a>&gt;&nbsp;applyTo(<a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;<a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html" title="type parameter in ScenarioPerturbation">T</a>&gt;&nbsp;marketData)</pre>
+<pre><a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;<a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html" title="type parameter in ScenarioPerturbation">T</a>&gt;&nbsp;applyTo(<a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;<a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html" title="type parameter in ScenarioPerturbation">T</a>&gt;&nbsp;marketData,
+                         <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
 <div class="block">Applies this perturbation to the market data in a box, returning a box containing new, modified data.
  <p>
  The original market data must not be altered.
@@ -202,6 +204,7 @@ var activeTableTab = "activeTableTab";
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>marketData</code> - the market data to perturb</dd>
+<dd><code>refData</code> - the reference data</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>new market data derived by applying the perturbation to the input data</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>

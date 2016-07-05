@@ -525,51 +525,80 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/tuple/Pair.html" title="class in com.opengamma.strata.collect.tuple">Pair</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrSwaptionCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionCalibrator.html#calibrateAtmShiftedFromBlackVolatilities-com.opengamma.strata.basics.date.BusinessDayAdjustment-java.time.ZonedDateTime-com.opengamma.strata.basics.date.DayCount-java.time.Period-double-double-double-com.opengamma.strata.collect.array.DoubleArray-double-">calibrateAtmShiftedFromBlackVolatilities</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;bda,
+                                        <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;calibrationDateTime,
+                                        <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+                                        <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;periodToExpiry,
+                                        double&nbsp;forward,
+                                        double&nbsp;blackVolatility,
+                                        double&nbsp;shiftInput,
+                                        <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;startParameters,
+                                        double&nbsp;shiftOutput)</code>
+<div class="block">Calibrate the SABR alpha parameter to an ATM Black volatility and compute the derivative of the result with 
+ respect to the input volatility.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/tuple/Pair.html" title="class in com.opengamma.strata.collect.tuple">Pair</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrSwaptionCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionCalibrator.html#calibrateAtmShiftedFromNormalVolatilities-com.opengamma.strata.basics.date.BusinessDayAdjustment-java.time.ZonedDateTime-com.opengamma.strata.basics.date.DayCount-java.time.Period-double-double-com.opengamma.strata.collect.array.DoubleArray-double-">calibrateAtmShiftedFromNormalVolatilities</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;bda,
+                                         <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;calibrationDateTime,
+                                         <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+                                         <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;periodToExpiry,
+                                         double&nbsp;forward,
+                                         double&nbsp;normalVolatility,
+                                         <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;startParameters,
+                                         double&nbsp;shiftOutput)</code>
+<div class="block">Calibrate the SABR alpha parameter to an ATM normal volatility and compute the derivative of the result 
+ with respect to the input volatility.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/tuple/Pair.html" title="class in com.opengamma.strata.collect.tuple">Pair</a>&lt;com.opengamma.strata.math.impl.statistics.leastsquare.LeastSquareResultsWithTransform,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">SabrSwaptionCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionCalibrator.html#calibrateShiftedFromBlackVolatilities-com.opengamma.strata.basics.date.BusinessDayAdjustment-java.time.ZonedDateTime-com.opengamma.strata.basics.date.DayCount-java.time.Period-double-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.ValueType-com.opengamma.strata.collect.array.DoubleArray-double-com.opengamma.strata.collect.array.DoubleArray-java.util.BitSet-double-">calibrateShiftedFromBlackVolatilities</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;bda,
-                                     <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;calibrationDateTime,
-                                     <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-                                     <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;periodToExpiry,
-                                     double&nbsp;forward,
-                                     <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;strikesLike,
-                                     <a href="../../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;strikeType,
-                                     <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;blackVolatilitiesInput,
-                                     double&nbsp;shiftInput,
-                                     <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;startParameters,
-                                     <a href="http://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util">BitSet</a>&nbsp;fixedParameters,
-                                     double&nbsp;shiftOutput)</code>
-<div class="block">Calibrate the SABR parameters to a set of Black volatilities at given moneyness.</div>
+<td class="colLast"><span class="typeNameLabel">SabrSwaptionCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionCalibrator.html#calibrateLsShiftedFromBlackVolatilities-com.opengamma.strata.basics.date.BusinessDayAdjustment-java.time.ZonedDateTime-com.opengamma.strata.basics.date.DayCount-java.time.Period-double-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.ValueType-com.opengamma.strata.collect.array.DoubleArray-double-com.opengamma.strata.collect.array.DoubleArray-java.util.BitSet-double-">calibrateLsShiftedFromBlackVolatilities</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;bda,
+                                       <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;calibrationDateTime,
+                                       <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+                                       <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;periodToExpiry,
+                                       double&nbsp;forward,
+                                       <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;strikesLike,
+                                       <a href="../../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;strikeType,
+                                       <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;blackVolatilitiesInput,
+                                       double&nbsp;shiftInput,
+                                       <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;startParameters,
+                                       <a href="http://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util">BitSet</a>&nbsp;fixedParameters,
+                                       double&nbsp;shiftOutput)</code>
+<div class="block">Calibrate the SABR parameters to a set of Black volatilities at given moneyness by least square.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/tuple/Pair.html" title="class in com.opengamma.strata.collect.tuple">Pair</a>&lt;com.opengamma.strata.math.impl.statistics.leastsquare.LeastSquareResultsWithTransform,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">SabrSwaptionCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionCalibrator.html#calibrateShiftedFromNormalVolatilities-com.opengamma.strata.basics.date.BusinessDayAdjustment-java.time.ZonedDateTime-com.opengamma.strata.basics.date.DayCount-java.time.Period-double-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.ValueType-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-java.util.BitSet-double-">calibrateShiftedFromNormalVolatilities</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;bda,
-                                      <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;calibrationDateTime,
-                                      <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-                                      <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;periodToExpiry,
-                                      double&nbsp;forward,
-                                      <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;strikesLike,
-                                      <a href="../../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;strikeType,
-                                      <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;normalVolatilities,
-                                      <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;startParameters,
-                                      <a href="http://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util">BitSet</a>&nbsp;fixedParameters,
-                                      double&nbsp;shiftOutput)</code>
+<td class="colLast"><span class="typeNameLabel">SabrSwaptionCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionCalibrator.html#calibrateLsShiftedFromNormalVolatilities-com.opengamma.strata.basics.date.BusinessDayAdjustment-java.time.ZonedDateTime-com.opengamma.strata.basics.date.DayCount-java.time.Period-double-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.ValueType-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-java.util.BitSet-double-">calibrateLsShiftedFromNormalVolatilities</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;bda,
+                                        <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;calibrationDateTime,
+                                        <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+                                        <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;periodToExpiry,
+                                        double&nbsp;forward,
+                                        <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;strikesLike,
+                                        <a href="../../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;strikeType,
+                                        <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;normalVolatilities,
+                                        <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;startParameters,
+                                        <a href="http://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util">BitSet</a>&nbsp;fixedParameters,
+                                        double&nbsp;shiftOutput)</code>
 <div class="block">Calibrate the SABR parameters to a set of normal volatilities at given moneyness.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/tuple/Pair.html" title="class in com.opengamma.strata.collect.tuple">Pair</a>&lt;com.opengamma.strata.math.impl.statistics.leastsquare.LeastSquareResultsWithTransform,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">SabrSwaptionCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionCalibrator.html#calibrateShiftedFromPrices-com.opengamma.strata.basics.date.BusinessDayAdjustment-java.time.ZonedDateTime-com.opengamma.strata.basics.date.DayCount-java.time.Period-double-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.ValueType-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-java.util.BitSet-double-">calibrateShiftedFromPrices</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;bda,
-                          <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;calibrationDateTime,
-                          <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-                          <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;periodToExpiry,
-                          double&nbsp;forward,
-                          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;strikesLike,
-                          <a href="../../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;strikeType,
-                          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;prices,
-                          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;startParameters,
-                          <a href="http://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util">BitSet</a>&nbsp;fixedParameters,
-                          double&nbsp;shiftOutput)</code>
+<td class="colLast"><span class="typeNameLabel">SabrSwaptionCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionCalibrator.html#calibrateLsShiftedFromPrices-com.opengamma.strata.basics.date.BusinessDayAdjustment-java.time.ZonedDateTime-com.opengamma.strata.basics.date.DayCount-java.time.Period-double-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.ValueType-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-java.util.BitSet-double-">calibrateLsShiftedFromPrices</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;bda,
+                            <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;calibrationDateTime,
+                            <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+                            <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;periodToExpiry,
+                            double&nbsp;forward,
+                            <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;strikesLike,
+                            <a href="../../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;strikeType,
+                            <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;prices,
+                            <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;startParameters,
+                            <a href="http://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util">BitSet</a>&nbsp;fixedParameters,
+                            double&nbsp;shiftOutput)</code>
 <div class="block">Calibrate the SABR parameters to a set of option prices at given moneyness.</div>
 </td>
 </tr>
@@ -842,7 +871,8 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.html" title="class in com.opengamma.strata.product.deposit.type">ImmutableTermDepositConvention</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableTermDepositConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.html#of-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.basics.date.BusinessDayAdjustment-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.basics.date.DaysAdjustment-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+<td class="colLast"><span class="typeNameLabel">ImmutableTermDepositConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.html#of-java.lang.String-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.basics.date.BusinessDayAdjustment-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.basics.date.DaysAdjustment-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+  <a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
   <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment,
   <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
   <a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;spotDateOffset)</code>
@@ -1218,13 +1248,15 @@
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.html#getAccrualBusinessDayAdjustment--">getAccrualBusinessDayAdjustment</a></span>()</code>
-<div class="block">Gets the business day adjustment to apply to accrual schedule dates.</div>
+<div class="block">Gets the business day adjustment to apply to accrual schedule dates,
+ providing a default result if no override specified.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.html#getAccrualBusinessDayAdjustment--">getAccrualBusinessDayAdjustment</a></span>()</code>
-<div class="block">Gets the business day adjustment to apply to accrual schedule dates.</div>
+<div class="block">Gets the business day adjustment to apply to accrual schedule dates,
+ providing a default result if no override specified.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -1252,18 +1284,6 @@
 <td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.html#getEndDateBusinessDayAdjustment--">getEndDateBusinessDayAdjustment</a></span>()</code>
 <div class="block">Gets the business day adjustment to apply to the end date,
  providing a default result if no override specified.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableFixedInflationSwapConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/ImmutableFixedInflationSwapConvention.html#getSpotDateOffset--">getSpotDateOffset</a></span>()</code>
-<div class="block">Gets the offset of the spot value date from the trade date.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FixedInflationSwapConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedInflationSwapConvention.html#getSpotDateOffset--">getSpotDateOffset</a></span>()</code>
-<div class="block">Gets the offset of the spot value date from the trade date.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -1304,38 +1324,38 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Meta.html#accrualBusinessDayAdjustment--">accrualBusinessDayAdjustment</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">InflationRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.Meta.html#accrualBusinessDayAdjustment--">accrualBusinessDayAdjustment</a></span>()</code>
 <div class="block">The meta-property for the <code>accrualBusinessDayAdjustment</code> property.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Meta.html#accrualBusinessDayAdjustment--">accrualBusinessDayAdjustment</a></span>()</code>
+<div class="block">The meta-property for the <code>accrualBusinessDayAdjustment</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Meta.html#accrualBusinessDayAdjustment--">accrualBusinessDayAdjustment</a></span>()</code>
 <div class="block">The meta-property for the <code>accrualBusinessDayAdjustment</code> property.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Meta.html#endDateBusinessDayAdjustment--">endDateBusinessDayAdjustment</a></span>()</code>
 <div class="block">The meta-property for the <code>endDateBusinessDayAdjustment</code> property.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Meta.html#endDateBusinessDayAdjustment--">endDateBusinessDayAdjustment</a></span>()</code>
 <div class="block">The meta-property for the <code>endDateBusinessDayAdjustment</code> property.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Meta.html#endDateBusinessDayAdjustment--">endDateBusinessDayAdjustment</a></span>()</code>
 <div class="block">The meta-property for the <code>endDateBusinessDayAdjustment</code> property.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableFixedInflationSwapConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/ImmutableFixedInflationSwapConvention.Meta.html#spotDateOffset--">spotDateOffset</a></span>()</code>
-<div class="block">The meta-property for the <code>spotDateOffset</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -1372,36 +1392,42 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">InflationRateSwapLegConvention.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InflationRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.Builder.html#accrualBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">accrualBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;accrualBusinessDayAdjustment)</code>
+<div class="block">Sets the business day adjustment to apply to accrual schedule dates.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">IborRateSwapLegConvention.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Builder.html#accrualBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">accrualBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;accrualBusinessDayAdjustment)</code>
 <div class="block">Sets the business day adjustment to apply to accrual schedule dates.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">FixedRateSwapLegConvention.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Builder.html#accrualBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">accrualBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;accrualBusinessDayAdjustment)</code>
 <div class="block">Sets the business day adjustment to apply to accrual schedule dates.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">OvernightRateSwapLegConvention.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html#endDateBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">endDateBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;endDateBusinessDayAdjustment)</code>
 <div class="block">Sets the business day adjustment to apply to the end date, optional with defaulting getter.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">IborRateSwapLegConvention.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Builder.html#endDateBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">endDateBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;endDateBusinessDayAdjustment)</code>
 <div class="block">Sets the business day adjustment to apply to the end date, optional with defaulting getter.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">FixedRateSwapLegConvention.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Builder.html#endDateBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">endDateBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;endDateBusinessDayAdjustment)</code>
 <div class="block">Sets the business day adjustment to apply to the end date, optional with defaulting getter.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.html" title="class in com.opengamma.strata.product.swap.type">FixedRateSwapLegConvention</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.html#of-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.basics.schedule.Frequency-com.opengamma.strata.basics.date.BusinessDayAdjustment-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
   <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
@@ -1410,20 +1436,12 @@
 <div class="block">Obtains a convention based on the specified parameters.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/swap/type/ImmutableFixedInflationSwapConvention.html" title="class in com.opengamma.strata.product.swap.type">ImmutableFixedInflationSwapConvention</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableFixedInflationSwapConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/ImmutableFixedInflationSwapConvention.html#of-java.lang.String-com.opengamma.strata.product.swap.type.FixedRateSwapLegConvention-com.opengamma.strata.product.swap.type.InflationRateSwapLegConvention-com.opengamma.strata.basics.date.BusinessDayAdjustment-com.opengamma.strata.basics.date.DaysAdjustment-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-  <a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.html" title="class in com.opengamma.strata.product.swap.type">FixedRateSwapLegConvention</a>&nbsp;fixedLeg,
-  <a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.html" title="class in com.opengamma.strata.product.swap.type">InflationRateSwapLegConvention</a>&nbsp;floatingLeg,
-  <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;spotDateOffset,
-  <a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;paymentDateOffset)</code>
-<div class="block">Obtains a convention based on the specified name and leg conventions.</div>
-</td>
-</tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/ImmutableFixedInflationSwapConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">ImmutableFixedInflationSwapConvention.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableFixedInflationSwapConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/ImmutableFixedInflationSwapConvention.Builder.html#spotDateOffset-com.opengamma.strata.basics.date.BusinessDayAdjustment-">spotDateOffset</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;spotDateOffset)</code>
-<div class="block">Sets the offset of the spot value date from the trade date.</div>
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.html" title="class in com.opengamma.strata.product.swap.type">InflationRateSwapLegConvention</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InflationRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.html#of-com.opengamma.strata.basics.index.PriceIndex-java.time.Period-com.opengamma.strata.basics.date.BusinessDayAdjustment-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&nbsp;index,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;lag,
+  <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</code>
+<div class="block">Obtains a convention based on the specified index.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -1442,17 +1460,6 @@
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">FixedRateSwapLegConvention.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Builder.html#startDateBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">startDateBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;startDateBusinessDayAdjustment)</code>
 <div class="block">Sets the business day adjustment to apply to the start date, optional with defaulting getter.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/RateCalculationSwapLeg.html" title="class in com.opengamma.strata.product.swap">RateCalculationSwapLeg</a></code></td>
-<td class="colLast"><span class="typeNameLabel">InflationRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.html#toLeg-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.product.common.PayReceive-com.opengamma.strata.basics.date.BusinessDayAdjustment-com.opengamma.strata.basics.date.DaysAdjustment-double-">toLeg</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
-     <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate,
-     <a href="../../../../../../com/opengamma/strata/product/common/PayReceive.html" title="enum in com.opengamma.strata.product.common">PayReceive</a>&nbsp;payReceive,
-     <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment,
-     <a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;paymentDateOffset,
-     double&nbsp;notional)</code>
-<div class="block">Creates a leg based on this convention.</div>
 </td>
 </tr>
 </tbody>

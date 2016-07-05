@@ -147,23 +147,23 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?is
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html#ERROR">ERROR</a></span></code>
-<div class="block">There was an exception thrown during the function call.</div>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html#CURRENCY_CONVERSION">CURRENCY_CONVERSION</a></span></code>
+<div class="block">Currency conversion failed.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html#INVALID_INPUT">INVALID_INPUT</a></span></code>
-<div class="block">The input was invalid.</div>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html#ERROR">ERROR</a></span></code>
+<div class="block">An error occurred during the calculation.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html#MISSING_ARGUMENT">MISSING_ARGUMENT</a></span></code>
-<div class="block">No value was provided for a non-nullable argument.</div>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html#INVALID">INVALID</a></span></code>
+<div class="block">The request was invalid.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html#MISSING_DATA">MISSING_DATA</a></span></code>
-<div class="block">Some data required for the function was missing.</div>
+<div class="block">Some data was missing.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -182,14 +182,8 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?is
 </td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html#PENDING_DATA">PENDING_DATA</a></span></code>
-<div class="block">Some data required for the function has been requested but not received and
- therefore the function could not be successfully completed.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html#PERMISSION_DENIED">PERMISSION_DENIED</a></span></code>
-<div class="block">The user has insufficient permissions to view the result.</div>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html#UNSUPPORTED">UNSUPPORTED</a></span></code>
+<div class="block">The request is not supported.</div>
 </td>
 </tr>
 </table>
@@ -269,8 +263,19 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>ERROR</h4>
 <pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> ERROR</pre>
-<div class="block">There was an exception thrown during the function call.
+<div class="block">An error occurred during the calculation.
  Where possible, more specific reason codes should be used.</div>
+</li>
+</ul>
+<a name="INVALID">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>INVALID</h4>
+<pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> INVALID</pre>
+<div class="block">The request was invalid.
+ This is used to indicate that the request was not valid.</div>
 </li>
 </ul>
 <a name="NOT_APPLICABLE">
@@ -286,27 +291,15 @@ the order they are declared.</div>
  grid of results where not every column is applicable for a specific row.</div>
 </li>
 </ul>
-<a name="INVALID_INPUT">
+<a name="UNSUPPORTED">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>INVALID_INPUT</h4>
-<pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> INVALID_INPUT</pre>
-<div class="block">The input was invalid.
- This is used if no configured function matched the specified input object.</div>
-</li>
-</ul>
-<a name="MISSING_ARGUMENT">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>MISSING_ARGUMENT</h4>
-<pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> MISSING_ARGUMENT</pre>
-<div class="block">No value was provided for a non-nullable argument.
- When running a function, values must be available for all parameters.
- This reason indicates that a value was missing.</div>
+<h4>UNSUPPORTED</h4>
+<pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> UNSUPPORTED</pre>
+<div class="block">The request is not supported.
+ This is used to indicate that the request is not supported and could not be calculated.</div>
 </li>
 </ul>
 <a name="MISSING_DATA">
@@ -316,9 +309,20 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>MISSING_DATA</h4>
 <pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> MISSING_DATA</pre>
-<div class="block">Some data required for the function was missing.
- When running a function, all the necessary data must be available.
+<div class="block">Some data was missing.
+ When performing calculations, all the necessary data must be available.
  This reason indicates that a piece of data was missing.</div>
+</li>
+</ul>
+<a name="CURRENCY_CONVERSION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CURRENCY_CONVERSION</h4>
+<pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> CURRENCY_CONVERSION</pre>
+<div class="block">Currency conversion failed.
+ An error occurred during currency conversion, perhaps due to missing FX rates.</div>
 </li>
 </ul>
 <a name="CALCULATION_FAILED">
@@ -329,28 +333,6 @@ the order they are declared.</div>
 <h4>CALCULATION_FAILED</h4>
 <pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> CALCULATION_FAILED</pre>
 <div class="block">Some aspect of the calculation in the function has failed.</div>
-</li>
-</ul>
-<a name="PENDING_DATA">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>PENDING_DATA</h4>
-<pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> PENDING_DATA</pre>
-<div class="block">Some data required for the function has been requested but not received and
- therefore the function could not be successfully completed.
- If the function is retried the calculation may succeed.</div>
-</li>
-</ul>
-<a name="PERMISSION_DENIED">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>PERMISSION_DENIED</h4>
-<pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> PERMISSION_DENIED</pre>
-<div class="block">The user has insufficient permissions to view the result.</div>
 </li>
 </ul>
 <a name="OTHER">

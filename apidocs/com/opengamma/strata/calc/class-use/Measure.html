@@ -361,6 +361,16 @@
 <div class="block">Gets the measure to be calculated.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DerivedCalculationFunction.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/DerivedCalculationFunction.html#measure--">measure</a></span>()</code>
+<div class="block">Returns the measure calculated by the function.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">AbstractDerivedCalculationFunction.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/AbstractDerivedCalculationFunction.html#measure--">measure</a></span>()</code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -385,6 +395,16 @@
 <td class="colLast"><span class="typeNameLabel">CalculationTask.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/CalculationTask.html#getMeasures--">getMeasures</a></span>()</code>
 <div class="block">Gets the set of measures that will be calculated by this task.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">DerivedCalculationFunction.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/DerivedCalculationFunction.html#requiredMeasures--">requiredMeasures</a></span>()</code>
+<div class="block">Returns the measures required by this function to calculate its measure.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">AbstractDerivedCalculationFunction.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/AbstractDerivedCalculationFunction.html#requiredMeasures--">requiredMeasures</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;</code></td>
@@ -442,6 +462,16 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/calc/runner/DerivedCalculationFunction.html" title="type parameter in DerivedCalculationFunction">R</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DerivedCalculationFunction.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/DerivedCalculationFunction.html#calculate-T-java.util.Map-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.data.scenario.ScenarioMarketData-com.opengamma.strata.basics.ReferenceData-">calculate</a></span>(<a href="../../../../../com/opengamma/strata/calc/runner/DerivedCalculationFunction.html" title="type parameter in DerivedCalculationFunction">T</a>&nbsp;target,
+         <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;requiredMeasures,
+         <a href="../../../../../com/opengamma/strata/calc/runner/CalculationParameters.html" title="class in com.opengamma.strata.calc.runner">CalculationParameters</a>&nbsp;parameters,
+         <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData,
+         <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the measure.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>,<a href="../../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result">Result</a>&lt;?&gt;&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">CalculationFunction.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#calculate-T-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.data.scenario.ScenarioMarketData-com.opengamma.strata.basics.ReferenceData-">calculate</a></span>(<a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="type parameter in CalculationFunction">T</a>&nbsp;target,
          <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;&nbsp;measures,
@@ -451,7 +481,7 @@
 <div class="block">Calculates values of multiple measures for the target using multiple sets of market data.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><span class="typeNameLabel">FunctionUtils.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/FunctionUtils.html#duplicateResult-com.opengamma.strata.calc.Measure-com.opengamma.strata.calc.Measure-java.util.Map-">duplicateResult</a></span>(<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&nbsp;existingKey,
                <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&nbsp;newKey,
@@ -459,13 +489,57 @@
 <div class="block">Checks if a map of results contains a value for a key, and if it does inserts it into the map for a different key.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/calc/runner/FunctionRequirements.html" title="class in com.opengamma.strata.calc.runner">FunctionRequirements</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CalculationFunction.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#requirements-T-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.basics.ReferenceData-">requirements</a></span>(<a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="type parameter in CalculationFunction">T</a>&nbsp;target,
             <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;&nbsp;measures,
             <a href="../../../../../com/opengamma/strata/calc/runner/CalculationParameters.html" title="class in com.opengamma.strata.calc.runner">CalculationParameters</a>&nbsp;parameters,
             <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Determines the market data required by this function to perform its calculations.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../com/opengamma/strata/calc/runner/package-summary.html">com.opengamma.strata.calc.runner</a> with parameters of type <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/AbstractDerivedCalculationFunction.html#AbstractDerivedCalculationFunction-java.lang.Class-com.opengamma.strata.calc.Measure-com.opengamma.strata.calc.Measure...-">AbstractDerivedCalculationFunction</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../../com/opengamma/strata/calc/runner/AbstractDerivedCalculationFunction.html" title="type parameter in AbstractDerivedCalculationFunction">T</a>&gt;&nbsp;targetType,
+                                  <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&nbsp;measure,
+                                  <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>...&nbsp;requiredMeasures)</code>
+<div class="block">Creates a new function which calculates one measure for targets of one type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/AbstractDerivedCalculationFunction.html#AbstractDerivedCalculationFunction-java.lang.Class-com.opengamma.strata.calc.Measure-com.opengamma.strata.calc.Measure...-">AbstractDerivedCalculationFunction</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../../com/opengamma/strata/calc/runner/AbstractDerivedCalculationFunction.html" title="type parameter in AbstractDerivedCalculationFunction">T</a>&gt;&nbsp;targetType,
+                                  <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&nbsp;measure,
+                                  <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>...&nbsp;requiredMeasures)</code>
+<div class="block">Creates a new function which calculates one measure for targets of one type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/AbstractDerivedCalculationFunction.html#AbstractDerivedCalculationFunction-java.lang.Class-com.opengamma.strata.calc.Measure-java.util.Set-">AbstractDerivedCalculationFunction</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../../com/opengamma/strata/calc/runner/AbstractDerivedCalculationFunction.html" title="type parameter in AbstractDerivedCalculationFunction">T</a>&gt;&nbsp;targetType,
+                                  <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&nbsp;measure,
+                                  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;&nbsp;requiredMeasures)</code>
+<div class="block">Creates a new function which calculates one measure for targets of one type.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructor parameters in <a href="../../../../../com/opengamma/strata/calc/runner/package-summary.html">com.opengamma.strata.calc.runner</a> with type arguments of type <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/AbstractDerivedCalculationFunction.html#AbstractDerivedCalculationFunction-java.lang.Class-com.opengamma.strata.calc.Measure-java.util.Set-">AbstractDerivedCalculationFunction</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../../com/opengamma/strata/calc/runner/AbstractDerivedCalculationFunction.html" title="type parameter in AbstractDerivedCalculationFunction">T</a>&gt;&nbsp;targetType,
+                                  <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&nbsp;measure,
+                                  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;&nbsp;requiredMeasures)</code>
+<div class="block">Creates a new function which calculates one measure for targets of one type.</div>
 </td>
 </tr>
 </tbody>
@@ -496,30 +570,6 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Measures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/Measures.html#CS01_BUCKETED_HAZARD">CS01_BUCKETED_HAZARD</a></span></code>
-<div class="block">Measure representing the (vector) PV change to a series of 1 bps shifts in hazard rates at each curve node.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Measures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/Measures.html#CS01_BUCKETED_PAR">CS01_BUCKETED_PAR</a></span></code>
-<div class="block">Measure representing the (vector) PV change to a series of 1 bps shifts in par credit rates at each curve node.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Measures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/Measures.html#CS01_PARALLEL_HAZARD">CS01_PARALLEL_HAZARD</a></span></code>
-<div class="block">Measure representing the (scalar) PV change to a 1 bps shift in hazard rates of calibrated curve.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Measures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/Measures.html#CS01_PARALLEL_PAR">CS01_PARALLEL_PAR</a></span></code>
-<div class="block">Measure representing the (scalar) PV change to a 1 bps shift in par credit spread rates.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Measures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/Measures.html#CURRENCY_EXPOSURE">CURRENCY_EXPOSURE</a></span></code>
 <div class="block">Measure representing the currency exposure of the calculation target.</div>
 </td>
@@ -544,67 +594,31 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Measures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/Measures.html#IR01_BUCKETED_PAR">IR01_BUCKETED_PAR</a></span></code>
-<div class="block">Measure representing the (vector) PV change to a series of 1 bps shifts in par interest rates at each curve node.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Measures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/Measures.html#IR01_BUCKETED_ZERO">IR01_BUCKETED_ZERO</a></span></code>
-<div class="block">Measure representing the (vector) PV change to a series of 1 bps shifts in zero interest rates at each curve node.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Measures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/Measures.html#IR01_PARALLEL_PAR">IR01_PARALLEL_PAR</a></span></code>
-<div class="block">Measure representing the (scalar) PV change to a 1 bps shift in par interest rates.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Measures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/Measures.html#IR01_PARALLEL_ZERO">IR01_PARALLEL_ZERO</a></span></code>
-<div class="block">Measure representing the (scalar) PV change to a 1 bps shift in zero interest rates of calibrated curve.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Measures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/Measures.html#JUMP_TO_DEFAULT">JUMP_TO_DEFAULT</a></span></code>
-<div class="block">Measure representing the the risk of default as opposed to the the risk of change in credit spreads.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Measures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/Measures.html#LEG_INITIAL_NOTIONAL">LEG_INITIAL_NOTIONAL</a></span></code>
 <div class="block">Measure representing the initial notional amount of each leg of the calculation target.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Measures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/Measures.html#LEG_PRESENT_VALUE">LEG_PRESENT_VALUE</a></span></code>
 <div class="block">Measure representing the present value of each leg of the calculation target.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Measures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/Measures.html#PAR_RATE">PAR_RATE</a></span></code>
 <div class="block">Measure representing the par rate of the calculation target.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Measures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/Measures.html#PAR_SPREAD">PAR_SPREAD</a></span></code>
 <div class="block">Measure representing the par spread of the calculation target.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Measures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/Measures.html#PRESENT_VALUE">PRESENT_VALUE</a></span></code>
-<div class="block">Measure representing the present value of the calculation target.</div>
-</td>
-</tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Measures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/Measures.html#PRESENT_VALUE_MULTI_CCY">PRESENT_VALUE_MULTI_CCY</a></span></code>
+<td class="colLast"><span class="typeNameLabel">Measures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/Measures.html#PRESENT_VALUE">PRESENT_VALUE</a></span></code>
 <div class="block">Measure representing the present value of the calculation target.</div>
 </td>
 </tr>
@@ -638,12 +652,6 @@
 <div class="block">Measure representing the semi-parallel bucketed gamma PV01 of the calculation target.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Measures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/Measures.html#RECOVERY01">RECOVERY01</a></span></code>
-<div class="block">Measure representing the (scalar) PV change to a 1 bps shift in recovery rate.</div>
-</td>
-</tr>
 </tbody>
 </table>
 </li>
@@ -675,6 +683,75 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a> in <a href="../../../../../com/opengamma/strata/measure/credit/package-summary.html">com.opengamma.strata.measure.credit</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../com/opengamma/strata/measure/credit/package-summary.html">com.opengamma.strata.measure.credit</a> declared as <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CreditMeasures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/credit/CreditMeasures.html#CS01_BUCKETED_HAZARD">CS01_BUCKETED_HAZARD</a></span></code>
+<div class="block">Measure representing the (vector) PV change to a series of 1 bps shifts in hazard rates at each curve node.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CreditMeasures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/credit/CreditMeasures.html#CS01_BUCKETED_PAR">CS01_BUCKETED_PAR</a></span></code>
+<div class="block">Measure representing the (vector) PV change to a series of 1 bps shifts in par credit rates at each curve node.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CreditMeasures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/credit/CreditMeasures.html#CS01_PARALLEL_HAZARD">CS01_PARALLEL_HAZARD</a></span></code>
+<div class="block">Measure representing the (scalar) PV change to a 1 bps shift in hazard rates of calibrated curve.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CreditMeasures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/credit/CreditMeasures.html#CS01_PARALLEL_PAR">CS01_PARALLEL_PAR</a></span></code>
+<div class="block">Measure representing the (scalar) PV change to a 1 bps shift in par credit spread rates.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CreditMeasures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/credit/CreditMeasures.html#IR01_BUCKETED_PAR">IR01_BUCKETED_PAR</a></span></code>
+<div class="block">Measure representing the (vector) PV change to a series of 1 bps shifts in par interest rates at each curve node.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CreditMeasures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/credit/CreditMeasures.html#IR01_BUCKETED_ZERO">IR01_BUCKETED_ZERO</a></span></code>
+<div class="block">Measure representing the (vector) PV change to a series of 1 bps shifts in zero interest rates at each curve node.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CreditMeasures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/credit/CreditMeasures.html#IR01_PARALLEL_PAR">IR01_PARALLEL_PAR</a></span></code>
+<div class="block">Measure representing the (scalar) PV change to a 1 bps shift in par interest rates.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CreditMeasures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/credit/CreditMeasures.html#IR01_PARALLEL_ZERO">IR01_PARALLEL_ZERO</a></span></code>
+<div class="block">Measure representing the (scalar) PV change to a 1 bps shift in zero interest rates of calibrated curve.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CreditMeasures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/credit/CreditMeasures.html#JUMP_TO_DEFAULT">JUMP_TO_DEFAULT</a></span></code>
+<div class="block">Measure representing the the risk of default as opposed to the the risk of change in credit spreads.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CreditMeasures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/credit/CreditMeasures.html#RECOVERY01">RECOVERY01</a></span></code>
+<div class="block">Measure representing the (scalar) PV change to a 1 bps shift in recovery rate.</div>
+</td>
+</tr>
+</tbody>
+</table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../com/opengamma/strata/measure/credit/package-summary.html">com.opengamma.strata.measure.credit</a> that return types with arguments of type <a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>

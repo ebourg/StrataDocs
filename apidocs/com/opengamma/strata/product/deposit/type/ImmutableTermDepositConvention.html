@@ -220,7 +220,7 @@ implements <a href="../../../../../../com/opengamma/strata/product/deposit/type/
 <tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.html#getName--">getName</a></span>()</code>
-<div class="block">Gets the convention name, such as 'GBP-Deposit'.</div>
+<div class="block">Gets the convention name, such as 'GBP-Deposit-ON'.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -245,7 +245,8 @@ implements <a href="../../../../../../com/opengamma/strata/product/deposit/type/
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.html" title="class in com.opengamma.strata.product.deposit.type">ImmutableTermDepositConvention</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.html#of-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.basics.date.BusinessDayAdjustment-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.basics.date.DaysAdjustment-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.html#of-java.lang.String-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.basics.date.BusinessDayAdjustment-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.basics.date.DaysAdjustment-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+  <a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
   <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment,
   <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
   <a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;spotDateOffset)</code>
@@ -318,13 +319,14 @@ implements <a href="../../../../../../com/opengamma/strata/product/deposit/type/
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="of-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.basics.date.BusinessDayAdjustment-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.basics.date.DaysAdjustment-">
+<a name="of-java.lang.String-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.basics.date.BusinessDayAdjustment-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.basics.date.DaysAdjustment-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>public static&nbsp;<a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.html" title="class in com.opengamma.strata.product.deposit.type">ImmutableTermDepositConvention</a>&nbsp;of(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+<pre>public static&nbsp;<a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.html" title="class in com.opengamma.strata.product.deposit.type">ImmutableTermDepositConvention</a>&nbsp;of(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                                                <a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
                                                 <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment,
                                                 <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
                                                 <a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;spotDateOffset)</pre>
@@ -332,32 +334,13 @@ implements <a href="../../../../../../com/opengamma/strata/product/deposit/type/
  day count convention and spot date offset.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - the name of the convention, such as 'GBP-Deposit-ON'</dd>
 <dd><code>currency</code> - the currency, in which the payments are made</dd>
 <dd><code>businessDayAdjustment</code> - the business day adjustment to apply to the start and end date</dd>
 <dd><code>dayCount</code> - the day count convention, used to convert dates to a numerical value</dd>
 <dd><code>spotDateOffset</code> - the offset of the spot value date from the trade date</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the convention</dd>
-</dl>
-</li>
-</ul>
-<a name="getName--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getName</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getName()</pre>
-<div class="block">Gets the convention name, such as 'GBP-Deposit'.
- <p>
- This will default to the currency code suffixed by '-Deposit' if not specified.</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../com/opengamma/strata/collect/named/Named.html#getName--">getName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a></code></dd>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../com/opengamma/strata/product/deposit/type/TermDepositConvention.html#getName--">getName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/product/deposit/type/TermDepositConvention.html" title="interface in com.opengamma.strata.product.deposit.type">TermDepositConvention</a></code></dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the convention name</dd>
 </dl>
 </li>
 </ul>
@@ -527,6 +510,24 @@ implements <a href="../../../../../../com/opengamma/strata/product/deposit/type/
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../com/opengamma/strata/product/deposit/type/TermDepositConvention.html#getCurrency--">getCurrency</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/product/deposit/type/TermDepositConvention.html" title="interface in com.opengamma.strata.product.deposit.type">TermDepositConvention</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the value of the property, not null</dd>
+</dl>
+</li>
+</ul>
+<a name="getName--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getName</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getName()</pre>
+<div class="block">Gets the convention name, such as 'GBP-Deposit-ON'.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../../com/opengamma/strata/collect/named/Named.html#getName--">getName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../../com/opengamma/strata/product/deposit/type/TermDepositConvention.html#getName--">getName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/product/deposit/type/TermDepositConvention.html" title="interface in com.opengamma.strata.product.deposit.type">TermDepositConvention</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value of the property, not null</dd>
 </dl>

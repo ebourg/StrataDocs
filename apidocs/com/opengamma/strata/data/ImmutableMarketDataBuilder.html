@@ -133,15 +133,15 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/data/ImmutableMarketDataBuilder.html" title="class in com.opengamma.strata.data">ImmutableMarketDataBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketDataBuilder.html#addTimeSeries-java.util.Map-">addTimeSeries</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;? extends <a href="../../../../com/opengamma/strata/data/ObservableId.html" title="interface in com.opengamma.strata.data">ObservableId</a>,<a href="../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&gt;&nbsp;timeSeriesMap)</code>
-<div class="block">Adds multiple time-series of market data values to the builder.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketDataBuilder.html#addTimeSeries-com.opengamma.strata.data.ObservableId-com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries-">addTimeSeries</a></span>(<a href="../../../../com/opengamma/strata/data/ObservableId.html" title="interface in com.opengamma.strata.data">ObservableId</a>&nbsp;id,
+             <a href="../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&nbsp;timeSeries)</code>
+<div class="block">Adds a time-series of observable market data values.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/data/ImmutableMarketDataBuilder.html" title="class in com.opengamma.strata.data">ImmutableMarketDataBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketDataBuilder.html#addTimeSeries-com.opengamma.strata.data.ObservableId-com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries-">addTimeSeries</a></span>(<a href="../../../../com/opengamma/strata/data/ObservableId.html" title="interface in com.opengamma.strata.data">ObservableId</a>&nbsp;id,
-             <a href="../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&nbsp;timeSeries)</code>
-<div class="block">Adds a time-series of market data values to the builder.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketDataBuilder.html#addTimeSeriesMap-java.util.Map-">addTimeSeriesMap</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;? extends <a href="../../../../com/opengamma/strata/data/ObservableId.html" title="interface in com.opengamma.strata.data">ObservableId</a>,<a href="../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&gt;&nbsp;timeSeriesMap)</code>
+<div class="block">Adds multiple time-series of observable market data values to the builder.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -153,7 +153,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/data/ImmutableMarketDataBuilder.html" title="class in com.opengamma.strata.data">ImmutableMarketDataBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketDataBuilder.html#addValues-java.util.Map-">addValues</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;? extends <a href="../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;?&gt;,?&gt;&nbsp;values)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketDataBuilder.html#addValueMap-java.util.Map-">addValueMap</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;? extends <a href="../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;?&gt;,?&gt;&nbsp;values)</code>
 <div class="block">Adds multiple values to the builder.</div>
 </td>
 </tr>
@@ -235,44 +235,6 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </dl>
 </li>
 </ul>
-<a name="addValue-com.opengamma.strata.data.MarketDataId-java.lang.Object-">
-<!--   -->
-</a><a name="addValue-com.opengamma.strata.data.MarketDataId-T-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addValue</h4>
-<pre>public&nbsp;&lt;T&gt;&nbsp;<a href="../../../../com/opengamma/strata/data/ImmutableMarketDataBuilder.html" title="class in com.opengamma.strata.data">ImmutableMarketDataBuilder</a>&nbsp;addValue(<a href="../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;T&gt;&nbsp;id,
-                                               T&nbsp;value)</pre>
-<div class="block">Adds a value to the builder.</div>
-<dl>
-<dt><span class="paramLabel">Type Parameters:</span></dt>
-<dd><code>T</code> - the type of the market data value</dd>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>id</code> - the identifier of the market data value</dd>
-<dd><code>value</code> - the market data value</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>this builder</dd>
-</dl>
-</li>
-</ul>
-<a name="addValues-java.util.Map-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addValues</h4>
-<pre>public&nbsp;<a href="../../../../com/opengamma/strata/data/ImmutableMarketDataBuilder.html" title="class in com.opengamma.strata.data">ImmutableMarketDataBuilder</a>&nbsp;addValues(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;? extends <a href="../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;?&gt;,?&gt;&nbsp;values)</pre>
-<div class="block">Adds multiple values to the builder.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>values</code> - the values</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>this builder</dd>
-</dl>
-</li>
-</ul>
 <a name="timeSeries-java.util.Map-">
 <!--   -->
 </a>
@@ -289,6 +251,44 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </dl>
 </li>
 </ul>
+<a name="addValue-com.opengamma.strata.data.MarketDataId-java.lang.Object-">
+<!--   -->
+</a><a name="addValue-com.opengamma.strata.data.MarketDataId-T-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addValue</h4>
+<pre>public&nbsp;&lt;T&gt;&nbsp;<a href="../../../../com/opengamma/strata/data/ImmutableMarketDataBuilder.html" title="class in com.opengamma.strata.data">ImmutableMarketDataBuilder</a>&nbsp;addValue(<a href="../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;T&gt;&nbsp;id,
+                                               T&nbsp;value)</pre>
+<div class="block">Adds a value to the builder.</div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - the type of the market data value</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>id</code> - the identifier</dd>
+<dd><code>value</code> - the market data value</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this builder</dd>
+</dl>
+</li>
+</ul>
+<a name="addValueMap-java.util.Map-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addValueMap</h4>
+<pre>public&nbsp;<a href="../../../../com/opengamma/strata/data/ImmutableMarketDataBuilder.html" title="class in com.opengamma.strata.data">ImmutableMarketDataBuilder</a>&nbsp;addValueMap(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;? extends <a href="../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;?&gt;,?&gt;&nbsp;values)</pre>
+<div class="block">Adds multiple values to the builder.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>values</code> - the values</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this builder</dd>
+</dl>
+</li>
+</ul>
 <a name="addTimeSeries-com.opengamma.strata.data.ObservableId-com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries-">
 <!--   -->
 </a>
@@ -297,27 +297,31 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>addTimeSeries</h4>
 <pre>public&nbsp;<a href="../../../../com/opengamma/strata/data/ImmutableMarketDataBuilder.html" title="class in com.opengamma.strata.data">ImmutableMarketDataBuilder</a>&nbsp;addTimeSeries(<a href="../../../../com/opengamma/strata/data/ObservableId.html" title="interface in com.opengamma.strata.data">ObservableId</a>&nbsp;id,
                                                 <a href="../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&nbsp;timeSeries)</pre>
-<div class="block">Adds a time-series of market data values to the builder.</div>
+<div class="block">Adds a time-series of observable market data values.
+ <p>
+ Any existing time-series with the same identifier will be replaced.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>id</code> - the identifier of the market data value</dd>
-<dd><code>timeSeries</code> - a time-series of the market data value</dd>
+<dd><code>id</code> - the identifier</dd>
+<dd><code>timeSeries</code> - a time-series of observable market data values</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this builder</dd>
 </dl>
 </li>
 </ul>
-<a name="addTimeSeries-java.util.Map-">
+<a name="addTimeSeriesMap-java.util.Map-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>addTimeSeries</h4>
-<pre>public&nbsp;<a href="../../../../com/opengamma/strata/data/ImmutableMarketDataBuilder.html" title="class in com.opengamma.strata.data">ImmutableMarketDataBuilder</a>&nbsp;addTimeSeries(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;? extends <a href="../../../../com/opengamma/strata/data/ObservableId.html" title="interface in com.opengamma.strata.data">ObservableId</a>,<a href="../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&gt;&nbsp;timeSeriesMap)</pre>
-<div class="block">Adds multiple time-series of market data values to the builder.</div>
+<h4>addTimeSeriesMap</h4>
+<pre>public&nbsp;<a href="../../../../com/opengamma/strata/data/ImmutableMarketDataBuilder.html" title="class in com.opengamma.strata.data">ImmutableMarketDataBuilder</a>&nbsp;addTimeSeriesMap(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;? extends <a href="../../../../com/opengamma/strata/data/ObservableId.html" title="interface in com.opengamma.strata.data">ObservableId</a>,<a href="../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&gt;&nbsp;timeSeriesMap)</pre>
+<div class="block">Adds multiple time-series of observable market data values to the builder.
+ <p>
+ Any existing time-series with the same identifier will be replaced.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>timeSeriesMap</code> - the time-series</dd>
+<dd><code>timeSeriesMap</code> - the map of time-series</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this builder</dd>
 </dl>

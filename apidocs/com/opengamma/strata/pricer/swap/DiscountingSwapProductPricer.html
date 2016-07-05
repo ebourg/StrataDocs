@@ -459,12 +459,12 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>parRate</h4>
 <pre>public&nbsp;double&nbsp;parRate(<a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwap.html" title="class in com.opengamma.strata.product.swap">ResolvedSwap</a>&nbsp;swap,
                       <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider)</pre>
-<div class="block">Computes the par rate for swaps with a fixed leg. 
+<div class="block">Computes the par rate for swaps with a fixed leg.
  <p>
  The par rate is the common rate on all payments of the fixed leg for which the total swap present value is 0.
  <p>
  At least one leg must be a fixed leg. The par rate will be computed with respect to the first fixed leg 
- in which all the payments are fixed payments with a unique accrual period (no compounding) and no FX reset. 
+ in which all the payments are fixed payments with a unique accrual period (no compounding) and no FX reset.
  If the fixed leg is compounding, the par rate is computed only when the number of fixed coupon payments is 1 and 
  accrual factor of each sub-period is 1</div>
 <dl>
@@ -484,7 +484,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>parSpread</h4>
 <pre>public&nbsp;double&nbsp;parSpread(<a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwap.html" title="class in com.opengamma.strata.product.swap">ResolvedSwap</a>&nbsp;swap,
                         <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider)</pre>
-<div class="block">Computes the par spread for swaps. 
+<div class="block">Computes the par spread for swaps.
  <p>
  The par spread is the common spread on all payments of the first leg for which the total swap present value is 0.
  <p>
@@ -572,7 +572,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>parRateSensitivity</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a>&nbsp;parRateSensitivity(<a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwap.html" title="class in com.opengamma.strata.product.swap">ResolvedSwap</a>&nbsp;swap,
                                                   <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider)</pre>
-<div class="block">Calculates the par rate curve sensitivity for a swap with a fixed leg. 
+<div class="block">Calculates the par rate curve sensitivity for a swap with a fixed leg.
  <p>
  The par rate is the common rate on all payments of the fixed leg for which the total swap present value is 0.
  <p>
@@ -595,7 +595,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>parSpreadSensitivity</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a>&nbsp;parSpreadSensitivity(<a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwap.html" title="class in com.opengamma.strata.product.swap">ResolvedSwap</a>&nbsp;swap,
                                                     <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider)</pre>
-<div class="block">Calculates the par spread curve sensitivity for a swap. 
+<div class="block">Calculates the par spread curve sensitivity for a swap.
  <p>
  The par spread is the common spread on all payments of the first leg for which the total swap present value is 0.
  <p>

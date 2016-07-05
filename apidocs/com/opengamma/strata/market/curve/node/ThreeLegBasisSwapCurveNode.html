@@ -120,7 +120,7 @@ implements <a href="../../../../../../com/opengamma/strata/market/curve/CurveNod
 <div class="block">A curve node whose instrument is a three leg basis swap.
  <p>
  The trade produced by the node will be a spread receiver (SELL) for a positive quantity
- and a payer (BUY) for a negative quantity. 
+ and a payer (BUY) for a negative quantity.
  This convention is line with other nodes where a positive quantity is similar to long a bond or deposit.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -217,8 +217,7 @@ implements <a href="../../../../../../com/opengamma/strata/market/curve/CurveNod
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/node/ThreeLegBasisSwapCurveNode.html#initialGuess-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-            <a href="../../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/node/ThreeLegBasisSwapCurveNode.html#initialGuess-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="../../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
             <a href="../../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;valueType)</code>
 <div class="block">Gets the initial guess used for calibrating the node.</div>
 </td>
@@ -281,8 +280,7 @@ implements <a href="../../../../../../com/opengamma/strata/market/curve/CurveNod
 </tr>
 <tr id="i18" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwapTrade.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapTrade</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/node/ThreeLegBasisSwapCurveNode.html#resolvedTrade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-             double&nbsp;quantity,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/node/ThreeLegBasisSwapCurveNode.html#resolvedTrade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(double&nbsp;quantity,
              <a href="../../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
              <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Creates a resolved trade representing the instrument at the node.</div>
@@ -300,8 +298,7 @@ implements <a href="../../../../../../com/opengamma/strata/market/curve/CurveNod
 </tr>
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/node/ThreeLegBasisSwapCurveNode.html#trade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-     double&nbsp;quantity,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/node/ThreeLegBasisSwapCurveNode.html#trade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(double&nbsp;quantity,
      <a href="../../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
      <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Creates a trade representing the instrument at the node.</div>
@@ -442,93 +439,90 @@ implements <a href="../../../../../../com/opengamma/strata/market/curve/CurveNod
 </dl>
 </li>
 </ul>
-<a name="trade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">
+<a name="trade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>trade</h4>
-<pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a>&nbsp;trade(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-                       double&nbsp;quantity,
+<pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a>&nbsp;trade(double&nbsp;quantity,
                        <a href="../../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
                        <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../com/opengamma/strata/market/curve/CurveNode.html#trade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">CurveNode</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../com/opengamma/strata/market/curve/CurveNode.html#trade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">CurveNode</a></code></span></div>
 <div class="block">Creates a trade representing the instrument at the node.
  <p>
  This uses the observed market data to build the trade that the node represents.
  The reference data is typically used to find the start date of the trade from the valuation date.
  The resulting trade is not resolved.
  The notional of the trade is taken from the 'quantity' variable.
- The quantity is signed and will affect whether the trade is Buy or Sell.</div>
+ The quantity is signed and will affect whether the trade is Buy or Sell.
+ The valuation date is defined by the market data.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../com/opengamma/strata/market/curve/CurveNode.html#trade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/market/curve/CurveNode.html" title="interface in com.opengamma.strata.market.curve">CurveNode</a></code></dd>
+<dd><code><a href="../../../../../../com/opengamma/strata/market/curve/CurveNode.html#trade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/market/curve/CurveNode.html" title="interface in com.opengamma.strata.market.curve">CurveNode</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>valuationDate</code> - the valuation date used when calibrating the curve</dd>
 <dd><code>quantity</code> - the quantity or notional of the trade</dd>
-<dd><code>marketData</code> - the market data required to build a trade for the instrument</dd>
+<dd><code>marketData</code> - the market data required to build a trade for the instrument, including the valuation date</dd>
 <dd><code>refData</code> - the reference data, used to resolve the trade dates</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a trade representing the instrument at the node</dd>
 </dl>
 </li>
 </ul>
-<a name="resolvedTrade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">
+<a name="resolvedTrade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>resolvedTrade</h4>
-<pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwapTrade.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapTrade</a>&nbsp;resolvedTrade(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-                                       double&nbsp;quantity,
+<pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwapTrade.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapTrade</a>&nbsp;resolvedTrade(double&nbsp;quantity,
                                        <a href="../../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
                                        <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../com/opengamma/strata/market/curve/CurveNode.html#resolvedTrade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">CurveNode</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../com/opengamma/strata/market/curve/CurveNode.html#resolvedTrade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">CurveNode</a></code></span></div>
 <div class="block">Creates a resolved trade representing the instrument at the node.
  <p>
  This uses the observed market data to build the trade that the node represents.
  The trade is then resolved using the specified reference data if necessary.
+ The valuation date is defined by the market data.
  <p>
  Resolved objects may be bound to data that changes over time, such as holiday calendars.
  If the data changes, such as the addition of a new holiday, the resolved form will not be updated.
  Care must be taken when placing the resolved form in a cache or persistence layer.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../com/opengamma/strata/market/curve/CurveNode.html#resolvedTrade-java.time.LocalDate-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/market/curve/CurveNode.html" title="interface in com.opengamma.strata.market.curve">CurveNode</a></code></dd>
+<dd><code><a href="../../../../../../com/opengamma/strata/market/curve/CurveNode.html#resolvedTrade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/market/curve/CurveNode.html" title="interface in com.opengamma.strata.market.curve">CurveNode</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>valuationDate</code> - the valuation date used when calibrating the curve</dd>
 <dd><code>quantity</code> - the quantity or notional of the trade</dd>
-<dd><code>marketData</code> - the market data required to build a trade for the instrument</dd>
+<dd><code>marketData</code> - the market data required to build a trade for the instrument, including the valuation date</dd>
 <dd><code>refData</code> - the reference data, used to resolve the trade</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a trade representing the instrument at the node</dd>
 </dl>
 </li>
 </ul>
-<a name="initialGuess-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">
+<a name="initialGuess-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>initialGuess</h4>
-<pre>public&nbsp;double&nbsp;initialGuess(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-                           <a href="../../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+<pre>public&nbsp;double&nbsp;initialGuess(<a href="../../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
                            <a href="../../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;valueType)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../com/opengamma/strata/market/curve/CurveNode.html#initialGuess-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">CurveNode</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../com/opengamma/strata/market/curve/CurveNode.html#initialGuess-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">CurveNode</a></code></span></div>
 <div class="block">Gets the initial guess used for calibrating the node.
  <p>
  This uses the observed market data to select a suitable initial guess.
  For example, a Fixed-Ibor swap would return the market quote, which is the fixed rate,
  providing that the value type is 'ZeroRate'.
+ The valuation date is defined by the market data.
  <p>
  This is primarily used as a performance hint. Since the guess is refined by
  calibration, in most cases any suitable number can be returned, such as zero.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../com/opengamma/strata/market/curve/CurveNode.html#initialGuess-java.time.LocalDate-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/market/curve/CurveNode.html" title="interface in com.opengamma.strata.market.curve">CurveNode</a></code></dd>
+<dd><code><a href="../../../../../../com/opengamma/strata/market/curve/CurveNode.html#initialGuess-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/market/curve/CurveNode.html" title="interface in com.opengamma.strata.market.curve">CurveNode</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>valuationDate</code> - the valuation date used when calibrating the curve</dd>
-<dd><code>marketData</code> - the market data required to build a trade for the instrument</dd>
+<dd><code>marketData</code> - the market data required to build a trade for the instrument, including the valuation date</dd>
 <dd><code>valueType</code> - the type of y-value that the curve will contain</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the initial guess of the calibrated value</dd>

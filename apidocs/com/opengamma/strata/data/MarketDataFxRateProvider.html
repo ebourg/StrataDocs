@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":9,"i6":10,"i7":9,"i8":9,"i9":10,"i10":10,"i11":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":9,"i7":10,"i8":9,"i9":9,"i10":9,"i11":10,"i12":10,"i13":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -128,7 +128,9 @@ implements <a href="../../../../com/opengamma/strata/basics/currency/FxRateProvi
  <li>Find the triangulation currency of AAA (TTA), try to return rate from AAA/TTA and TTA/BBB
  <li>Find the triangulation currency of BBB (TTB), try to return rate from AAA/TTB and TTB/BBB
  <li>Find the triangulation currency of AAA (TTA) and BBB (TTB), try to return rate from AAA/TTA, TTA/TTB and TTB/BBB
- </ol></div>
+ </ol>
+ The triangulation currency can also be specified, which is useful if all
+ FX rates are supplied relative to a currency other than USD.</div>
 </li>
 </ul>
 </div>
@@ -171,26 +173,32 @@ implements <a href="../../../../com/opengamma/strata/basics/currency/FxRateProvi
 </td>
 </tr>
 <tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/MarketDataFxRateProvider.html#getTriangulationCurrency--">getTriangulationCurrency</a></span>()</code>
+<div class="block">Gets the triangulation currency to use.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/MarketDataFxRateProvider.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>static <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaBean.html?is-external=true" title="class or interface in org.joda.beans">MetaBean</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/MarketDataFxRateProvider.html#meta--">meta</a></span>()</code>
 <div class="block">The meta-bean for <code>MarketDataFxRateProvider</code>.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaBean.html?is-external=true" title="class or interface in org.joda.beans">MetaBean</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/MarketDataFxRateProvider.html#metaBean--">metaBean</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/data/MarketDataFxRateProvider.html" title="class in com.opengamma.strata.data">MarketDataFxRateProvider</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/MarketDataFxRateProvider.html#of-com.opengamma.strata.data.MarketData-">of</a></span>(<a href="../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData)</code>
 <div class="block">Obtains an instance which takes FX rates from the market data.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/data/MarketDataFxRateProvider.html" title="class in com.opengamma.strata.data">MarketDataFxRateProvider</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/MarketDataFxRateProvider.html#of-com.opengamma.strata.data.MarketData-com.opengamma.strata.data.ObservableSource-">of</a></span>(<a href="../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
   <a href="../../../../com/opengamma/strata/data/ObservableSource.html" title="class in com.opengamma.strata.data">ObservableSource</a>&nbsp;fxRatesSource)</code>
@@ -198,15 +206,24 @@ implements <a href="../../../../com/opengamma/strata/basics/currency/FxRateProvi
  specifying the source of FX rates.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/data/MarketDataFxRateProvider.html" title="class in com.opengamma.strata.data">MarketDataFxRateProvider</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/MarketDataFxRateProvider.html#of-com.opengamma.strata.data.MarketData-com.opengamma.strata.data.ObservableSource-com.opengamma.strata.basics.currency.Currency-">of</a></span>(<a href="../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+  <a href="../../../../com/opengamma/strata/data/ObservableSource.html" title="class in com.opengamma.strata.data">ObservableSource</a>&nbsp;fxRatesSource,
+  <a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;triangulationCurrency)</code>
+<div class="block">Obtains an instance which takes FX rates from the market data,
+ specifying the source of FX rates.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>&lt;R&gt;&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Property.html?is-external=true" title="class or interface in org.joda.beans">Property</a>&lt;R&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/MarketDataFxRateProvider.html#property-java.lang.String-">property</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/MarketDataFxRateProvider.html#propertyNames--">propertyNames</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/MarketDataFxRateProvider.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -271,6 +288,29 @@ implements <a href="../../../../com/opengamma/strata/basics/currency/FxRateProvi
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>marketData</code> - market data used for looking up FX rates</dd>
 <dd><code>fxRatesSource</code> - the source of market data for FX rates</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the provider</dd>
+</dl>
+</li>
+</ul>
+<a name="of-com.opengamma.strata.data.MarketData-com.opengamma.strata.data.ObservableSource-com.opengamma.strata.basics.currency.Currency-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>of</h4>
+<pre>public static&nbsp;<a href="../../../../com/opengamma/strata/data/MarketDataFxRateProvider.html" title="class in com.opengamma.strata.data">MarketDataFxRateProvider</a>&nbsp;of(<a href="../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+                                          <a href="../../../../com/opengamma/strata/data/ObservableSource.html" title="class in com.opengamma.strata.data">ObservableSource</a>&nbsp;fxRatesSource,
+                                          <a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;triangulationCurrency)</pre>
+<div class="block">Obtains an instance which takes FX rates from the market data,
+ specifying the source of FX rates.
+ <p>
+ The source of FX rates is rarely needed, as most applications only need one set of FX rates.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>marketData</code> - market data used for looking up FX rates</dd>
+<dd><code>fxRatesSource</code> - the source of market data for FX rates</dd>
+<dd><code>triangulationCurrency</code> - the triangulation currency to use</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the provider</dd>
 </dl>
@@ -378,6 +418,23 @@ implements <a href="../../../../com/opengamma/strata/basics/currency/FxRateProvi
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value of the property, not null</dd>
+</dl>
+</li>
+</ul>
+<a name="getTriangulationCurrency--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTriangulationCurrency</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;getTriangulationCurrency()</pre>
+<div class="block">Gets the triangulation currency to use.
+ <p>
+ If specified, this currency is used to triangulate FX rates in preference to the standard approach.
+ This would be useful if all FX rates are supplied relative to a currency other than USD.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the optional value of the property, not null</dd>
 </dl>
 </li>
 </ul>

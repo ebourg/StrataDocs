@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":18,"i6":6};
+var methods = {"i0":18,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":18,"i7":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -51,7 +51,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../com/opengamma/strata/market/surface/InterpolatedNodalSurface.Meta.html" title="class in com.opengamma.strata.market.surface"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/market/surface/SimpleSurfaceParameterMetadata.html" title="class in com.opengamma.strata.market.surface"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?com/opengamma/strata/market/surface/NodalSurface.html" target="_top">Frames</a></li>
@@ -143,43 +143,49 @@ extends <a href="../../../../../com/opengamma/strata/market/surface/Surface.html
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/NodalSurface.html#getParameterMetadata-int-">getParameterMetadata</a></span>(int&nbsp;parameterIndex)</code>
+<div class="block">Gets the metadata of the parameter at the specified index.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/NodalSurface.html#getXValues--">getXValues</a></span>()</code>
 <div class="block">Gets the known x-values of the surface.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/NodalSurface.html#getYValues--">getYValues</a></span>()</code>
 <div class="block">Gets the known y-values of the surface.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/NodalSurface.html#getZValues--">getZValues</a></span>()</code>
 <div class="block">Gets the known z-values of the surface.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/surface/NodalSurface.html" title="interface in com.opengamma.strata.market.surface">NodalSurface</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/NodalSurface.html#withMetadata-com.opengamma.strata.market.surface.SurfaceMetadata-">withMetadata</a></span>(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;metadata)</code>
 <div class="block">Returns a new surface with the specified metadata.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/surface/NodalSurface.html" title="interface in com.opengamma.strata.market.surface">NodalSurface</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/NodalSurface.html#withParameter-int-double-">withParameter</a></span>(int&nbsp;parameterIndex,
              double&nbsp;newValue)</code>
 <div class="block">Returns a copy of the data with the value at the specified index altered.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/market/surface/NodalSurface.html" title="interface in com.opengamma.strata.market.surface">NodalSurface</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/NodalSurface.html#withPerturbation-com.opengamma.strata.market.param.ParameterPerturbation-">withPerturbation</a></span>(<a href="../../../../../com/opengamma/strata/market/param/ParameterPerturbation.html" title="interface in com.opengamma.strata.market.param">ParameterPerturbation</a>&nbsp;perturbation)</code>
 <div class="block">Returns a perturbed copy of the data.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/surface/NodalSurface.html" title="interface in com.opengamma.strata.market.surface">NodalSurface</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/NodalSurface.html#withZValues-com.opengamma.strata.collect.array.DoubleArray-">withZValues</a></span>(<a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;values)</code>
 <div class="block">Returns a new surface with the specified values.</div>
@@ -191,7 +197,7 @@ extends <a href="../../../../../com/opengamma/strata/market/surface/Surface.html
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.opengamma.strata.market.surface.<a href="../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a></h3>
-<code><a href="../../../../../com/opengamma/strata/market/surface/Surface.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a>, <a href="../../../../../com/opengamma/strata/market/surface/Surface.html#createParameterSensitivity-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a>, <a href="../../../../../com/opengamma/strata/market/surface/Surface.html#getMetadata--">getMetadata</a>, <a href="../../../../../com/opengamma/strata/market/surface/Surface.html#getName--">getName</a>, <a href="../../../../../com/opengamma/strata/market/surface/Surface.html#getParameterMetadata-int-">getParameterMetadata</a>, <a href="../../../../../com/opengamma/strata/market/surface/Surface.html#zValue-double-double-">zValue</a>, <a href="../../../../../com/opengamma/strata/market/surface/Surface.html#zValue-com.opengamma.strata.collect.tuple.DoublesPair-">zValue</a>, <a href="../../../../../com/opengamma/strata/market/surface/Surface.html#zValueParameterSensitivity-double-double-">zValueParameterSensitivity</a>, <a href="../../../../../com/opengamma/strata/market/surface/Surface.html#zValueParameterSensitivity-com.opengamma.strata.collect.tuple.DoublesPair-">zValueParameterSensitivity</a></code></li>
+<code><a href="../../../../../com/opengamma/strata/market/surface/Surface.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a>, <a href="../../../../../com/opengamma/strata/market/surface/Surface.html#createParameterSensitivity-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a>, <a href="../../../../../com/opengamma/strata/market/surface/Surface.html#getMetadata--">getMetadata</a>, <a href="../../../../../com/opengamma/strata/market/surface/Surface.html#getName--">getName</a>, <a href="../../../../../com/opengamma/strata/market/surface/Surface.html#zValue-double-double-">zValue</a>, <a href="../../../../../com/opengamma/strata/market/surface/Surface.html#zValue-com.opengamma.strata.collect.tuple.DoublesPair-">zValue</a>, <a href="../../../../../com/opengamma/strata/market/surface/Surface.html#zValueParameterSensitivity-double-double-">zValueParameterSensitivity</a>, <a href="../../../../../com/opengamma/strata/market/surface/Surface.html#zValueParameterSensitivity-com.opengamma.strata.collect.tuple.DoublesPair-">zValueParameterSensitivity</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.market.param.ParameterizedData">
@@ -232,6 +238,30 @@ extends <a href="../../../../../com/opengamma/strata/market/surface/Surface.html
 <dd><code>metadata</code> - the new metadata for the surface</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the new surface</dd>
+</dl>
+</li>
+</ul>
+<a name="getParameterMetadata-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getParameterMetadata</h4>
+<pre>default&nbsp;<a href="../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a>&nbsp;getParameterMetadata(int&nbsp;parameterIndex)</pre>
+<div class="block">Gets the metadata of the parameter at the specified index.
+ <p>
+ If there is no specific parameter metadata, <a href="../../../../../com/opengamma/strata/market/surface/SimpleSurfaceParameterMetadata.html" title="class in com.opengamma.strata.market.surface"><code>SimpleSurfaceParameterMetadata</code></a> will be created.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html#getParameterMetadata-int-">getParameterMetadata</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/market/surface/Surface.html#getParameterMetadata-int-">getParameterMetadata</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>parameterIndex</code> - the zero-based index of the parameter to get</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the metadata of the parameter</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang">IndexOutOfBoundsException</a></code> - if the index is invalid</dd>
 </dl>
 </li>
 </ul>
@@ -387,7 +417,7 @@ extends <a href="../../../../../com/opengamma/strata/market/surface/Surface.html
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../com/opengamma/strata/market/surface/InterpolatedNodalSurface.Meta.html" title="class in com.opengamma.strata.market.surface"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/market/surface/SimpleSurfaceParameterMetadata.html" title="class in com.opengamma.strata.market.surface"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?com/opengamma/strata/market/surface/NodalSurface.html" target="_top">Frames</a></li>

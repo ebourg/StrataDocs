@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":18,"i8":6,"i9":6,"i10":6,"i11":17,"i12":17,"i13":17,"i14":17,"i15":6,"i16":17};
+var methods = {"i0":6,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":18,"i8":6,"i9":6,"i10":6,"i11":17,"i12":17,"i13":17,"i14":17,"i15":6};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -51,7 +51,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../com/opengamma/strata/data/scenario/ImmutableScenarioMarketDataBuilder.html" title="class in com.opengamma.strata.data.scenario"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../com/opengamma/strata/data/scenario/MultiCurrencyValuesArray.html" title="class in com.opengamma.strata.data.scenario"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/data/scenario/MultiCurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?com/opengamma/strata/data/scenario/MarketDataBox.html" target="_top">Frames</a></li>
@@ -247,12 +247,6 @@ var activeTableTab = "activeTableTab";
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;<a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="type parameter in MarketDataBox">T</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html#stream--">stream</a></span>()</code>
 <div class="block">Returns a stream over the contents of the box.</div>
-</td>
-</tr>
-<tr id="i16" class="altColor">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;,<a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;T&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html#toMarketDataBox--">toMarketDataBox</a></span>()</code>
-<div class="block">Returns a collector which can be used to collect values from a stream into a market data box.</div>
 </td>
 </tr>
 </table>
@@ -569,7 +563,7 @@ static&nbsp;&lt;T&gt;&nbsp;<a href="../../../../../com/opengamma/strata/data/sce
 <a name="stream--">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>stream</h4>
 <pre><a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;<a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="type parameter in MarketDataBox">T</a>&gt;&nbsp;stream()</pre>
@@ -577,22 +571,6 @@ static&nbsp;&lt;T&gt;&nbsp;<a href="../../../../../com/opengamma/strata/data/sce
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a stream over the contents of the box</dd>
-</dl>
-</li>
-</ul>
-<a name="toMarketDataBox--">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>toMarketDataBox</h4>
-<pre>static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;,<a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;T&gt;&gt;&nbsp;toMarketDataBox()</pre>
-<div class="block">Returns a collector which can be used to collect values from a stream into a market data box.</div>
-<dl>
-<dt><span class="paramLabel">Type Parameters:</span></dt>
-<dd><code>T</code> - the type of the items in the stream</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>a collector which can be used to collect values from a stream into a market data box</dd>
 </dl>
 </li>
 </ul>
@@ -626,7 +604,7 @@ static&nbsp;&lt;T&gt;&nbsp;<a href="../../../../../com/opengamma/strata/data/sce
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../com/opengamma/strata/data/scenario/ImmutableScenarioMarketDataBuilder.html" title="class in com.opengamma.strata.data.scenario"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../com/opengamma/strata/data/scenario/MultiCurrencyValuesArray.html" title="class in com.opengamma.strata.data.scenario"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/data/scenario/MultiCurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?com/opengamma/strata/data/scenario/MarketDataBox.html" target="_top">Frames</a></li>

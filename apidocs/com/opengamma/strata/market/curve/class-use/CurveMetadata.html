@@ -324,45 +324,56 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html" title="class in com.opengamma.strata.market.curve">InterpolatedNodalCurve</a></code></td>
-<td class="colLast"><span class="typeNameLabel">InterpolatedNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html#of-com.opengamma.strata.market.curve.CurveMetadata-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.interpolator.CurveInterpolator-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata,
+<td class="colLast"><span class="typeNameLabel">InterpolatedNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html#of-com.opengamma.strata.market.curve.CurveMetadata-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata,
   <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;xValues,
   <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;yValues,
-  <a href="../../../../../../com/opengamma/strata/market/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.interpolator">CurveInterpolator</a>&nbsp;interpolator)</code>
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;interpolator)</code>
 <div class="block">Creates an interpolated curve with metadata.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html" title="class in com.opengamma.strata.market.curve">InterpolatedNodalCurve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InterpolatedNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html#of-com.opengamma.strata.market.curve.CurveMetadata-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;xValues,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;yValues,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;interpolator,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;extrapolatorLeft,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;extrapolatorRight)</code>
+<div class="block">Creates an interpolated curve with metadata.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/CurveInputs.html" title="class in com.opengamma.strata.market.curve">CurveInputs</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CurveInputs.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/CurveInputs.html#of-java.util.Map-com.opengamma.strata.market.curve.CurveMetadata-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;?&gt;,?&gt;&nbsp;marketData,
   <a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata)</code>
 <div class="block">Returns a <code>CurveInputs</code> instance containing the specified market data.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/ParallelShiftedCurve.html" title="class in com.opengamma.strata.market.curve">ParallelShiftedCurve</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ParallelShiftedCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParallelShiftedCurve.html#withMetadata-com.opengamma.strata.market.curve.CurveMetadata-">withMetadata</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/NodalCurve.html" title="interface in com.opengamma.strata.market.curve">NodalCurve</a></code></td>
 <td class="colLast"><span class="typeNameLabel">NodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/NodalCurve.html#withMetadata-com.opengamma.strata.market.curve.CurveMetadata-">withMetadata</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata)</code>
 <div class="block">Returns a new curve with the specified metadata.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html" title="class in com.opengamma.strata.market.curve">InterpolatedNodalCurve</a></code></td>
 <td class="colLast"><span class="typeNameLabel">InterpolatedNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html#withMetadata-com.opengamma.strata.market.curve.CurveMetadata-">withMetadata</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Curve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html#withMetadata-com.opengamma.strata.market.curve.CurveMetadata-">withMetadata</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata)</code>
 <div class="block">Returns a new curve with the specified metadata.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/ConstantCurve.html" title="class in com.opengamma.strata.market.curve">ConstantCurve</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ConstantCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ConstantCurve.html#withMetadata-com.opengamma.strata.market.curve.CurveMetadata-">withMetadata</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/AddFixedCurve.html" title="class in com.opengamma.strata.market.curve">AddFixedCurve</a></code></td>
 <td class="colLast"><span class="typeNameLabel">AddFixedCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/AddFixedCurve.html#withMetadata-com.opengamma.strata.market.curve.CurveMetadata-">withMetadata</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata)</code>&nbsp;</td>
 </tr>

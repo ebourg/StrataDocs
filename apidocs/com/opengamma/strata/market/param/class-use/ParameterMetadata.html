@@ -118,12 +118,28 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.fxopt">com.opengamma.strata.pricer.fxopt</a></td>
+<td class="colLast">
+<div class="block">Calculators for FX options.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.index">com.opengamma.strata.pricer.index</a></td>
+<td class="colLast">
+<div class="block">Calculators for products based on rate indices, such as Short Term Interest Rate futures (STIRs).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.model">com.opengamma.strata.pricer.model</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.rate">com.opengamma.strata.pricer.rate</a></td>
 <td class="colLast">
 <div class="block">Calculators for rates instruments, such as Forward Rate Agreement (FRA) and interest rate swap.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.swaption">com.opengamma.strata.pricer.swaption</a></td>
 <td class="colLast">
 <div class="block">Calculators for swaptions.</div>
@@ -138,6 +154,21 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a> in <a href="../../../../../../com/opengamma/strata/market/curve/package-summary.html">com.opengamma.strata.market.curve</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../com/opengamma/strata/market/curve/package-summary.html">com.opengamma.strata.market.curve</a> that implement <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/SimpleCurveParameterMetadata.html" title="class in com.opengamma.strata.market.curve">SimpleCurveParameterMetadata</a></span></code>
+<div class="block">Simple parameter metadata containing the x value and type.</div>
+</td>
+</tr>
+</tbody>
+</table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../com/opengamma/strata/market/curve/package-summary.html">com.opengamma.strata.market.curve</a> that return <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -148,6 +179,18 @@
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ParallelShiftedCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParallelShiftedCurve.html#getParameterMetadata-int-">getParameterMetadata</a></span>(int&nbsp;parameterIndex)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></code></td>
+<td class="colLast"><span class="typeNameLabel">NodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/NodalCurve.html#getParameterMetadata-int-">getParameterMetadata</a></span>(int&nbsp;parameterIndex)</code>
+<div class="block">Gets the metadata of the parameter at the specified index.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CurveMetadata.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html#getParameterMetadata-int-">getParameterMetadata</a></span>(int&nbsp;parameterIndex)</code>
+<div class="block">Gets the metadata of the parameter at the specified index.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></code></td>
@@ -200,11 +243,18 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/NodalCurve.html" title="interface in com.opengamma.strata.market.curve">NodalCurve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">NodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/NodalCurve.html#withNode-double-double-com.opengamma.strata.market.param.ParameterMetadata-">withNode</a></span>(double&nbsp;x,
+        double&nbsp;y,
+        <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a>&nbsp;paramMetadata)</code>
+<div class="block">Returns a new curve with an additional node, specifying the parameter metadata.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html" title="class in com.opengamma.strata.market.curve">InterpolatedNodalCurve</a></code></td>
-<td class="colLast"><span class="typeNameLabel">InterpolatedNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html#withNode-int-com.opengamma.strata.market.param.ParameterMetadata-double-double-">withNode</a></span>(int&nbsp;index,
-        <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a>&nbsp;paramMetadata,
-        double&nbsp;x,
-        double&nbsp;y)</code>
+<td class="colLast"><span class="typeNameLabel">InterpolatedNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html#withNode-double-double-com.opengamma.strata.market.param.ParameterMetadata-">withNode</a></span>(double&nbsp;x,
+        double&nbsp;y,
+        <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a>&nbsp;paramMetadata)</code>
 <div class="block">Returns a new curve with an additional node, specifying the parameter metadata.</div>
 </td>
 </tr>
@@ -450,6 +500,21 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a> in <a href="../../../../../../com/opengamma/strata/market/surface/package-summary.html">com.opengamma.strata.market.surface</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../com/opengamma/strata/market/surface/package-summary.html">com.opengamma.strata.market.surface</a> that implement <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/SimpleSurfaceParameterMetadata.html" title="class in com.opengamma.strata.market.surface">SimpleSurfaceParameterMetadata</a></span></code>
+<div class="block">Simple parameter metadata containing the x and y values and type.</div>
+</td>
+</tr>
+</tbody>
+</table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../com/opengamma/strata/market/surface/package-summary.html">com.opengamma.strata.market.surface</a> that return <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -459,7 +524,19 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SurfaceMetadata.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html#getParameterMetadata-int-">getParameterMetadata</a></span>(int&nbsp;parameterIndex)</code>
+<div class="block">Gets the metadata of the parameter at the specified index.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Surface.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surface.html#getParameterMetadata-int-">getParameterMetadata</a></span>(int&nbsp;parameterIndex)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></code></td>
+<td class="colLast"><span class="typeNameLabel">NodalSurface.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/NodalSurface.html#getParameterMetadata-int-">getParameterMetadata</a></span>(int&nbsp;parameterIndex)</code>
+<div class="block">Gets the metadata of the parameter at the specified index.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></code></td>
@@ -585,21 +662,6 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a> in <a href="../../../../../../com/opengamma/strata/pricer/fx/package-summary.html">com.opengamma.strata.pricer.fx</a></h3>
-<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
-<caption><span>Classes in <a href="../../../../../../com/opengamma/strata/pricer/fx/package-summary.html">com.opengamma.strata.pricer.fx</a> that implement <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Class and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fx/FxVolatilitySurfaceYearFractionParameterMetadata.html" title="class in com.opengamma.strata.pricer.fx">FxVolatilitySurfaceYearFractionParameterMetadata</a></span></code>
-<div class="block">Surface node metadata for a surface node with a specific time to expiry and strike.</div>
-</td>
-</tr>
-</tbody>
-</table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/fx/package-summary.html">com.opengamma.strata.pricer.fx</a> that return <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -614,6 +676,62 @@
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DiscountFxForwardRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fx/DiscountFxForwardRates.html#getParameterMetadata-int-">getParameterMetadata</a></span>(int&nbsp;parameterIndex)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.fxopt">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a> in <a href="../../../../../../com/opengamma/strata/pricer/fxopt/package-summary.html">com.opengamma.strata.pricer.fxopt</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../com/opengamma/strata/pricer/fxopt/package-summary.html">com.opengamma.strata.pricer.fxopt</a> that implement <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/FxVolatilitySurfaceYearFractionParameterMetadata.html" title="class in com.opengamma.strata.pricer.fxopt">FxVolatilitySurfaceYearFractionParameterMetadata</a></span></code>
+<div class="block">Surface node metadata for a surface node with a specific time to expiry and strike.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.index">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a> in <a href="../../../../../../com/opengamma/strata/pricer/index/package-summary.html">com.opengamma.strata.pricer.index</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/index/package-summary.html">com.opengamma.strata.pricer.index</a> that return <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></code></td>
+<td class="colLast"><span class="typeNameLabel">NormalIborFutureOptionExpirySimpleMoneynessVolatilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionExpirySimpleMoneynessVolatilities.html#getParameterMetadata-int-">getParameterMetadata</a></span>(int&nbsp;parameterIndex)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.model">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a> in <a href="../../../../../../com/opengamma/strata/pricer/model/package-summary.html">com.opengamma.strata.pricer.model</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/model/package-summary.html">com.opengamma.strata.pricer.model</a> that return <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrInterestRateParameters.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/model/SabrInterestRateParameters.html#getParameterMetadata-int-">getParameterMetadata</a></span>(int&nbsp;parameterIndex)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

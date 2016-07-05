@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":9,"i7":10,"i8":9,"i9":10,"i10":10,"i11":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":9,"i8":10,"i9":9,"i10":10,"i11":10,"i12":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -175,6 +175,12 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <div class="block">An instance requesting the "natural" currency of the target.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/calc/ReportingCurrency.html" title="class in com.opengamma.strata.calc">ReportingCurrency</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/ReportingCurrency.html#NONE">NONE</a></span></code>
+<div class="block">An instance requesting no currency conversion.</div>
+</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -218,35 +224,41 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/ReportingCurrency.html#isNone--">isNone</a></span>()</code>
+<div class="block">Checks if the type is 'None'.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/ReportingCurrency.html#isSpecific--">isSpecific</a></span>()</code>
 <div class="block">Checks if the type is 'Specific'.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/calc/ReportingCurrency.Meta.html" title="class in com.opengamma.strata.calc">ReportingCurrency.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/ReportingCurrency.html#meta--">meta</a></span>()</code>
 <div class="block">The meta-bean for <code>ReportingCurrency</code>.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/calc/ReportingCurrency.Meta.html" title="class in com.opengamma.strata.calc">ReportingCurrency.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/ReportingCurrency.html#metaBean--">metaBean</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/calc/ReportingCurrency.html" title="class in com.opengamma.strata.calc">ReportingCurrency</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/ReportingCurrency.html#of-com.opengamma.strata.basics.currency.Currency-">of</a></span>(<a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency)</code>
 <div class="block">Obtains an instance requesting the specified currency.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>&lt;R&gt;&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Property.html?is-external=true" title="class or interface in org.joda.beans">Property</a>&lt;R&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/ReportingCurrency.html#property-java.lang.String-">property</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/ReportingCurrency.html#propertyNames--">propertyNames</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/ReportingCurrency.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -275,7 +287,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <a name="NATURAL">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>NATURAL</h4>
 <pre>public static final&nbsp;<a href="../../../../com/opengamma/strata/calc/ReportingCurrency.html" title="class in com.opengamma.strata.calc">ReportingCurrency</a> NATURAL</pre>
@@ -284,6 +296,19 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
  When converting calculation results, conversion will occur to the "natural" currency of the target.
  The "natural" currency of a target is obtained
  from <a href="../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#naturalCurrency-T-com.opengamma.strata.basics.ReferenceData-"><code>CalculationFunction.naturalCurrency(CalculationTarget, ReferenceData)</code></a>.</div>
+</li>
+</ul>
+<a name="NONE">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>NONE</h4>
+<pre>public static final&nbsp;<a href="../../../../com/opengamma/strata/calc/ReportingCurrency.html" title="class in com.opengamma.strata.calc">ReportingCurrency</a> NONE</pre>
+<div class="block">An instance requesting no currency conversion.
+ <p>
+ Calculation results are normally converted to a single currency.
+ If this reporting currency is used, then no currency conversion will be performed.</div>
 </li>
 </ul>
 </li>
@@ -313,6 +338,23 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </dl>
 </li>
 </ul>
+<a name="isSpecific--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isSpecific</h4>
+<pre>public&nbsp;boolean&nbsp;isSpecific()</pre>
+<div class="block">Checks if the type is 'Specific'.
+ <p>
+ When converting calculation results, conversion will occur to the specific currency
+ returned by <a href="../../../../com/opengamma/strata/calc/ReportingCurrency.html#getCurrency--"><code>getCurrency()</code></a>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if the type is 'Specific'</dd>
+</dl>
+</li>
+</ul>
 <a name="isNatural--">
 <!--   -->
 </a>
@@ -331,20 +373,20 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </dl>
 </li>
 </ul>
-<a name="isSpecific--">
+<a name="isNone--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>isSpecific</h4>
-<pre>public&nbsp;boolean&nbsp;isSpecific()</pre>
-<div class="block">Checks if the type is 'Specific'.
+<h4>isNone</h4>
+<pre>public&nbsp;boolean&nbsp;isNone()</pre>
+<div class="block">Checks if the type is 'None'.
  <p>
- When converting calculation results, conversion will occur to the specific currency
- returned by <a href="../../../../com/opengamma/strata/calc/ReportingCurrency.html#getCurrency--"><code>getCurrency()</code></a>.</div>
+ Calculation results are normally converted to a single currency.
+ If this returns true than no currency conversion will be performed.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>true if the type is 'Specific'</dd>
+<dd>true if the type is 'None'</dd>
 </dl>
 </li>
 </ul>

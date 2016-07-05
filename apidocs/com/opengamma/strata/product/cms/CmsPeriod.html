@@ -121,16 +121,16 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
  <p>
  This represents a single payment period within a CMS leg.
  This class specifies the data necessary to calculate the value of the period.
- The payment period contains the unique accrual period. 
+ The payment period contains the unique accrual period.
  The value of the period is based on the observed value of <code>SwapIndex</code>.
  <p>
- The payment is a CMS coupon, CMS caplet or CMS floorlet. 
+ The payment is a CMS coupon, CMS caplet or CMS floorlet.
  The pay-offs are, for a swap index on the fixingDate of 'S' and an year fraction 'a'<br>
  CMS Coupon: a * S<br>
  CMS Caplet: a * (S-K)^+ ; K=caplet<br>
  CMS Floorlet: a * (K-S)^+ ; K=floorlet
  <p>
- If <code>caplet</code> (<code>floorlet</code>) is not null, the payment is a caplet (floorlet). 
+ If <code>caplet</code> (<code>floorlet</code>) is not null, the payment is a caplet (floorlet).
  If both of <code>caplet</code> and <code>floorlet</code> are null, this class represents a CMS coupon payment.
  Thus at least one of the fields must be null.
  <p>
@@ -359,7 +359,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <li class="blockList">
 <h4>getCmsPeriodType</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/cms/CmsPeriodType.html" title="enum in com.opengamma.strata.product.cms">CmsPeriodType</a>&nbsp;getCmsPeriodType()</pre>
-<div class="block">Obtains the type of the CMS period. 
+<div class="block">Obtains the type of the CMS period.
  <p>
  The period type is caplet, floorlet or coupon.</div>
 <dl>
@@ -375,7 +375,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <li class="blockList">
 <h4>getStrike</h4>
 <pre>public&nbsp;double&nbsp;getStrike()</pre>
-<div class="block">Obtains the strike value. 
+<div class="block">Obtains the strike value.
  <p>
  If the CMS period type is coupon, 0 is returned.</div>
 <dl>
@@ -396,7 +396,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
  For cap or floor the result is the coupon with the same dates and index but with no cap or floor strike.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the CMAS coupon</dd>
+<dd>the CMS coupon</dd>
 </dl>
 </li>
 </ul>

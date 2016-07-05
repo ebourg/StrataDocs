@@ -558,7 +558,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
                                               double&nbsp;zSpread,
                                               <a href="../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
                                               int&nbsp;periodsPerYear)</pre>
-<div class="block">Calculates the present value of the bond product with z-spread. 
+<div class="block">Calculates the present value of the bond product with z-spread.
  <p>
  The present value of the product is the value on the valuation date.
  The result is expressed using the payment currency of the bond.
@@ -834,7 +834,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
                                       double&nbsp;yield)</pre>
 <div class="block">Computes the dirty price from the conventional real yield.
  <p>
- The resulting dirty price is real price or nominal price depending on the yield convention.  
+ The resulting dirty price is real price or nominal price depending on the yield convention.
  <p>
  The input yield and output are expressed in fraction.</div>
 <dl>
@@ -860,7 +860,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
                                       double&nbsp;yield)</pre>
 <div class="block">Computes the clean price from the conventional real yield.
  <p>
- The resulting clean price is real price or nominal price depending on the yield convention. 
+ The resulting clean price is real price or nominal price depending on the yield convention.
  <p>
  The input yield and output are expressed in fraction.</div>
 <dl>
@@ -911,7 +911,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
                                   <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
                                   <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;issuerDiscountFactorsProvider,
                                   <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
-<div class="block">Computes the conventional real yield from the curves. 
+<div class="block">Computes the conventional real yield from the curves.
  <p>
  The yield is in the bill yield convention.</div>
 <dl>
@@ -962,7 +962,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Calculates the modified duration from the conventional real yield using finite difference approximation.
  <p>
  The modified duration is defined as the minus of the first derivative of clean price with respect to yield, 
- divided by the clean price. 
+ divided by the clean price.
  <p>
  The clean price here is real price or nominal price depending on the yield convention. This is coherent to 
  the implementation of <a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingCapitalIndexedBondProductPricer.html#dirtyPriceFromRealYield-com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond-com.opengamma.strata.pricer.rate.RatesProvider-java.time.LocalDate-double-"><code>dirtyPriceFromRealYield(ResolvedCapitalIndexedBond, RatesProvider, LocalDate, double)</code></a>.
@@ -991,7 +991,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
                                                      double&nbsp;yield)</pre>
 <div class="block">Calculates the convexity from the conventional real yield using finite difference approximation.
  <p>
- The convexity is defined as the second derivative of clean price with respect to yield, divided by the clean price. 
+ The convexity is defined as the second derivative of clean price with respect to yield, divided by the clean price.
  <p>
  The clean price here is real price or nominal price depending on the yield convention. This is coherent to 
  the implementation of <a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingCapitalIndexedBondProductPricer.html#dirtyPriceFromRealYield-com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond-com.opengamma.strata.pricer.rate.RatesProvider-java.time.LocalDate-double-"><code>dirtyPriceFromRealYield(ResolvedCapitalIndexedBond, RatesProvider, LocalDate, double)</code></a>.
@@ -1021,7 +1021,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Computes the modified duration from the standard yield.
  <p>
  The modified duration is defined as the minus of the first derivative of dirty price with respect to yield, 
- divided by the dirty price. 
+ divided by the dirty price.
  <p>
  The input yield and output are expressed in fraction.</div>
 <dl>
@@ -1047,7 +1047,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
                                          double&nbsp;yield)</pre>
 <div class="block">Computes the covexity from the standard yield.
  <p>
- The convexity is defined as the second derivative of dirty price with respect to yield, divided by the dirty price. 
+ The convexity is defined as the second derivative of dirty price with respect to yield, divided by the dirty price.
  <p>
  The input yield and output are expressed in fraction.</div>
 <dl>
@@ -1208,7 +1208,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
                                              int&nbsp;periodsPerYear)</pre>
 <div class="block">Calculates the z-spread of the bond from curves and clean price.
  <p>
- The input clean price is real price or nominal price depending on the yield convention. 
+ The input clean price is real price or nominal price depending on the yield convention.
  <p>
  The z-spread is a parallel shift applied to continuously compounded rates or periodic
  compounded rates of the discounting curve associated to the bond (Issuer Entity)

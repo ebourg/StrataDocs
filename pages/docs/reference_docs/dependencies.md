@@ -19,7 +19,6 @@ The following third party libraries are used by Strata:
 | [JCommander](http://jcommander.org/)                        | 1.48    | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
 | [Colt](https://dst.lbl.gov/ACSSoftware/colt/)               | 1.2.0   | [Colt](https://dst.lbl.gov/ACSSoftware/colt/license.html) |
 | [Concurrent](http://bit.ly/1PtgfMu)                         | 1.3.4   | [Public domain](https://dst.lbl.gov/ACSSoftware/colt/licenses/concurrent.LICENSE.txt) |
-| [JTransforms](http://sourceforge.net/projects/jtransforms/) | 2.4.0   | [MPL](http://www.mozilla.org/MPL/2.0/index.txt) or [LGPL](http://www.gnu.org/licenses/lgpl-2.1.txt) |
 | [JSR-305 annotations](https://jcp.org/en/jsr/detail?id=305) | 1.3.9   | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
 
 The following third party libraries are used in test code by Strata:

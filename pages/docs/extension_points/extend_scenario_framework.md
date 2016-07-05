@@ -59,9 +59,8 @@ used when deciding whether the value should be perturbed.
 
 This section demonstrates how to implement
 [`MarketDataFilter`]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/marketdata/MarketDataFilter.html).
-The example below is to filter on the name of a curve. In fact, Strata provide the
-[`NameFilter`]({{site.baseurl}}/apidocs/com/opengamma/strata/calc/marketdata/NameFilter.html) class to do this,
-but for the purposes of this example, we'll assume that doesn't exist.
+The example below is to filter on the name of a curve.
+In fact, already Strata provides a filter to do this but for the purposes of this example, we'll assume that doesn't exist.
 The example filter below handles curves, and matches if the name of the curve is the same as the curve name in the filter:
 
 ```java

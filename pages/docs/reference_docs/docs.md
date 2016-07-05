@@ -5,7 +5,7 @@ permalink: /docs/
 
 {% include macros.html %}
 
-{{note}} Strata 0.15 is a next-generation technology preview release.
+{{note}} Strata 0.16 is a next-generation technology preview release.
 Please be aware that the APIs, features and extension points described in this documentation may be subject to change. {{end}}
 
 ## Overview

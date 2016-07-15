@@ -6,6 +6,45 @@ permalink: /releases/
 Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
+## Strata v1.0
+
+*15 July 2016*
+
+The first full release of Strata, after two years of development.
+Strata is already in use in production and has now reached the point where v1.0 is appropriate.
+
+The key features are:
+
+* Measure-level API - a high level API calculating measures for one trade
+* Calc-level API - a high level API calculating measures for a mixed portfolio of trades
+* Pricer-level API - a low level API performing calculations for one trade
+* Market data structures - representations of curves, surfaces and other kinds of market data
+* Product domain model - beans representing different financial instruments
+* Conventions, indices, and holiday calendars for common markets
+
+The supported asset classes are:
+
+* Swap - including Vanilla, OIS, Basis, Inflation, Cross Currency and Variable Notional
+* Deliverable Swap Future (DSF)
+* Constant Maturity Swap (CMS)
+* Ibor cap/floor
+* Swaptions
+* Forward Rate Agreement (FRA)
+* FX forward/spot - including Non-Delivered Forward (NDF)
+* FX swap
+* FX options - vanilla and single barrier
+* STIR futures/options
+* Bonds - Fixed coupon and Capital indexed
+* Bond futures/option
+* Term deposit
+* Bullet payment
+* CDS - currently being reviewed and subject to incompatible change
+
+Feel free to give us feedback or ask a question in the [forums](http://forums.opengamma.com/).
+   
+  
+
+----
 
 ## Strata v0.16
 

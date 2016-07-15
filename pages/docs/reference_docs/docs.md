@@ -44,7 +44,8 @@ The collect module adds features in a number of areas:
 
 ### Basics module
 
-The `strata-basics` module provides basic concepts used in finance.
+The `strata-basics` module provides basic concepts used in finance, primarily in the area of
+[reference data]({{site.baseurl}}/reference_data).
 For more information, see the following guides:
 
 * [Holidays]({{site.baseurl}}/holidays) - to determine if a date is a working day or a holiday
@@ -71,7 +72,7 @@ For more information, see the following guides:
 
 ### Data module
 
-The `strata-data` module provides market data containers.
+The `strata-data` module provides [market data]({{site.baseurl}}/market_data) containers.
 Both single-scenario and multi-scenario containers are available.
 
 
@@ -94,7 +95,8 @@ This depends on the `strata-math` module, which is intended to be an implementat
 
 ### Calculation module
 
-The `strata-calc` module provides a calculation engine capable of calculating risk analytics.
+The `strata-calc` module provides a [calculation runner]({{site.baseurl}}/calculation_flow)
+capable of calculating risk analytics.
 Given a list of trades and some configuration parameters, it will determine what market data is needed,
 obtain it from a source, perform any necessary calibration, and calculate the desired results.
 

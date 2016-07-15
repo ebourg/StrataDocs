@@ -69,6 +69,14 @@ Strata includes the following coverage:
     <td class="na"></td>
   </tr>
   <tr>
+    <td>STIR Future Option</td>
+    <td><i class="fa fa-check"></i><br />
+    <span class="note">Normal</span></td>
+    <td><i class="fa fa-check"></i></td>
+    <td></td>
+    <td class="na"></td>
+  </tr>
+  <tr>
     <td>Deliverable Swap Future</td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
@@ -129,14 +137,6 @@ Strata includes the following coverage:
     <td class="na"></td>
   </tr>
   <tr>
-    <td>STIR Future Option</td>
-    <td><i class="fa fa-check"></i><br />
-    <span class="note">Normal</span></td>
-    <td></td>
-    <td></td>
-    <td class="na"></td>
-  </tr>
-  <tr>
     <td>FX Vanilla Option</td>
     <td><i class="fa fa-check"></i><br />
     <span class="note">Black, Vanna Volga</span></td>
@@ -157,12 +157,12 @@ Strata includes the following coverage:
     <span class="note">Including cap/floor</span></td>
     <td><i class="fa fa-check"></i><br />
     <span class="note">SABR</span></td>
-    <td></td>
+    <td><i class="fa fa-check"></i></td>
     <td></td>
     <td></td>
   </tr>
   <tr>
-    <td>IBOR cap/floor</td>
+    <td>Ibor cap/floor</td>
     <td><i class="fa fa-check"></i><br />
     <span class="note">Normal, Black</span></td>
     <td></td>
@@ -199,12 +199,7 @@ Calculation API, and to provide examples.
 
 ## Coverage roadmap
 
-Coverage for the following asset classes is currently in development and is planned to be released soon:
-
-* Capital Indexed Bonds (adding support for Japanese conventions)
-
-Further coverage is on the longer-term roadmap and is prioritised based on commercial considerations.
-These asset classes will be added to the list above once development is scheduled.
+Further coverage is prioritised based on commercial considerations.
 
 
 ## Curve calibration
@@ -221,4 +216,5 @@ The following asset classes can be used when defining curves:
 * Basis Swap (Ibor vs Ibor and Overnight vs Ibor)
 * Three Leg Basis Swap (Euribor)
 * Cross-currency Swap (Ibor vs Ibor)
+* Inflation Swap (Fixed vs Inflation)
 * FX Swap

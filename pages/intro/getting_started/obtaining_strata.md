@@ -16,10 +16,15 @@ Strata is also released to GitHub through the standard [repository release pages
 
 ## From a Maven repository
 
-The Strata JAR files are available from the [OpenGamma Maven repository](http://maven.opengamma.com/nexus/content/groups/public/com/opengamma/strata/).
+Strata is available in [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.opengamma.strata%22) and [JCenter](https://bintray.com/bintray/jcenter?filterByPkgName=Strata):
 
-It is intended that Strata will be available in [Maven Central](http://search.maven.org) from v1.0.
-
+```
+<dependency>
+  <groupId>com.opengamma.strata</groupId>
+  <artifactId>strata-measure</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
 
 ## For Developers
 

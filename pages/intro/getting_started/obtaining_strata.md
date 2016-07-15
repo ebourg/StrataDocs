@@ -18,6 +18,9 @@ Strata is available in [Maven Central](http://search.maven.org/#search%7Cga%7C1%
 </dependency>
 ```
 
+This dependency on the `strata-measure` module will provide access to all of Strata's pricing functionality and calculation APIs.
+For a full list of modules please see [Modules]({{site.baseurl}}/docs/#Modules).
+
 ## From GitHub Releases
 
 Strata is also released to GitHub through the standard [repository release pages](https://github.com/OpenGamma/Strata/releases). The downloads include:

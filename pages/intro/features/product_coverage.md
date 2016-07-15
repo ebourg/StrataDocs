@@ -33,14 +33,6 @@ Strata includes the following coverage:
     <td><i class="fa fa-check"></i></td>
   </tr>
   <tr>
-    <td>CDS<br />
-    <span class="note">Including Single Name and Index</span></td>
-    <td><i class="fa fa-check"></i></td>
-    <td><i class="fa fa-check"></i></td>
-    <td><i class="fa fa-check"></i></td>
-    <td></td>
-  </tr>
-  <tr>
     <td><a href="{{site.baseurl}}/fx_single">FX Forward/Spot</a></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
@@ -176,6 +168,14 @@ Strata includes the following coverage:
     <td><i class="fa fa-check"></i></td>
     <td class="na"></td>
   </tr>
+  <tr>
+    <td>CDS <a id="cds" href="#cds-footnote"><sup>4</sup></a><br />
+    <span class="note">Including Single Name and Index</span></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td></td>
+  </tr>
   </tbody>
 </table>
 </div>
@@ -193,6 +193,10 @@ This also implies support in the measure-level API
 
 <a id="examples-footnote" href="#examples"><sup>3</sup></a>
 Code examples are included in the strata-examples module. This also indicates that the command-line tool includes an example portfolio and report for the asset class.
+
+<a id="cds-footnote" href="#cds"><sup>4</sup></a>
+The CDS product and pricing model is currently being reviewed and refactored.
+Applications should expect the CDS product model and pricers to change incompatibly in a subsequent release.
 
 Work is ongoing to broaden asset class coverage, to integrate the existing coverage into the
 Calculation API, and to provide examples.

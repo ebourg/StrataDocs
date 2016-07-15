@@ -7,6 +7,16 @@ permalink: /docs/
 
 This is the home page for reference documentation about Strata, the open source market risk library from OpenGamma.
 
+## Concepts
+
+The following documentation introduces the core concepts of the system:
+
+* [Calculation Flow]({{site.baseurl}}/calculation_flow)
+* [Market Data]({{site.baseurl}}/market_data)
+* [Reference Data]({{site.baseurl}}/reference_data)
+* [Product Model]({{site.baseurl}}/product_model)
+
+
 ## Modules
 
 The Strata codebase consists of a number of modules.
@@ -16,7 +26,7 @@ Full documentation of the API is available in the [Javadoc]({{site.baseurl}}/api
 Note that any package with `impl` in the name is considered to be an implementation detail.
 
 
-## Collect module
+### Collect module
 
 The `strata-collect` module provides a standard library for collections and utilities to support the rest of Strata.
 The module builds on [Guava](https://github.com/google/guava), Google's high quality library of Java essentials.
@@ -32,7 +42,7 @@ The collect module adds features in a number of areas:
 * Validate - general utility classes
 
 
-## Basics module
+### Basics module
 
 The `strata-basics` module provides basic concepts used in finance.
 For more information, see the following guides:
@@ -44,7 +54,7 @@ For more information, see the following guides:
 * [Day counts]({{site.baseurl}}/day_counts) - converting date-based periods to numeric year fractions
 
 
-## Product module
+### Product module
 
 The `strata-product` module contains the [main domain model]({{site.baseurl}}/product_model),
 defining instruments such as interest rate swaps, FRAs and futures.
@@ -59,43 +69,43 @@ For more information, see the following guides:
 * [Bullet Payment]({{site.baseurl}}/bullet_payment) - Unidirectional one-off payments
 
 
-## Data module
+### Data module
 
 The `strata-data` module provides market data containers.
 Both single-scenario and multi-scenario containers are available.
 
 
-## Market module
+### Market module
 
 The `strata-market` module includes the representations of the market, including curves and surfaces.
 
 
-## Loader module
+### Loader module
 
 The `strata-loader` module provides the ability to load products and market data from files.
 This includes an FpML loader for products.
 
 
-## Pricer module
+### Pricer module
 
 The `strata-pricer` module provides standard analytics for pricing and risk calculations on financial instruments.
 This depends on the `strata-math` module, which is intended to be an implementation detail.
 
 
-## Calculation module
+### Calculation module
 
 The `strata-calc` module provides a calculation engine capable of calculating risk analytics.
 Given a list of trades and some configuration parameters, it will determine what market data is needed,
 obtain it from a source, perform any necessary calibration, and calculate the desired results.
 
 
-## Measure module
+### Measure module
 
 The `strata-measure` module enables applications to calculate high-level measures, such as PV and PV01.
 Access is provided directly and via the Calculation API of `strata-calc`.
 
 
-## Report module
+### Report module
 
 The `strata-report` module provides a small framework for reporting on the results of calculations.
 A tool provides the ability to use a report template to drive the calculations necessary to produce a simple report.

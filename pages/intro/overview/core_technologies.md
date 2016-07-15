@@ -33,9 +33,8 @@ Joda-Beans also offer a mechanism to handle backwards-compatibility as data obje
 To reference and use Strata from external applications, these applications will need to be built using the
 Java SE Development Kit (JDK) 8u40 or later.
 
-The Strata JAR files can be obtained from the [Strata Releases](https://github.com/OpenGamma/Strata/releases) page on GitHub.
-They are also available from the [OpenGamma Maven repository](http://maven.opengamma.com/nexus/content/groups/public/com/opengamma/strata/)
-however it is intended to add them to [Maven Central](http://search.maven.org/#search|ga|1|opengamma) from v1.0.
+Strata is available in [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.opengamma.strata%22),
+and the JAR files can also be downloaded from [Strata Releases](https://github.com/OpenGamma/Strata/releases) page on GitHub.
 Please see [obtaining Strata]({{site.baseurl}}/obtaining_strata) for more information.
 
 At runtime the Java Runtime Environment (JRE) 8 or later is required.

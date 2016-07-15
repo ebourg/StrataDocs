@@ -101,12 +101,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfTradePricer.html" title="class in com.opengamma.strata.pricer.dsf">com.opengamma.strata.pricer.dsf.AbstractDsfTradePricer</a></li>
-<li>
-<ul class="inheritance">
 <li>com.opengamma.strata.pricer.dsf.DiscountingDsfTradePricer</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -116,13 +111,19 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public class <span class="typeNameLabel">DiscountingDsfTradePricer</span>
-extends <a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfTradePricer.html" title="class in com.opengamma.strata.pricer.dsf">AbstractDsfTradePricer</a></pre>
+extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Pricer implementation for Deliverable Swap Futures (DSFs).
  <p>
  This function provides the ability to price a <a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsfTrade.html" title="class in com.opengamma.strata.product.dsf"><code>ResolvedDsfTrade</code></a>.
- <p>
+ 
+ <h4>Price</h4>
  The price of a DSF is based on the present value (NPV) of the underlying swap on the delivery date.
- For example, a price of 100.1822 represents a present value of $100,182.20, if the notional is $100,000.</div>
+ For example, a price of 100.182 represents a present value of $100,182.00, if the notional is $100,000.
+ This price can also be viewed as a percentage present value - <code>(100 + percentPv)</code>, or 0.182% in this example.
+ <p>
+ Strata uses <i>decimal prices</i> for DSFs in the trade model, pricers and market data.
+ The decimal price is based on the decimal multiplier equivalent to the implied percentage.
+ Thus the market price of 100.182 is represented in Strata by 1.00182.</div>
 </li>
 </ul>
 </div>
@@ -184,47 +185,41 @@ extends <a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfTrade
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/dsf/DiscountingDsfTradePricer.html#currencyExposure-com.opengamma.strata.product.dsf.ResolvedDsfTrade-com.opengamma.strata.pricer.rate.RatesProvider-double-">currencyExposure</a></span>(<a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsfTrade.html" title="class in com.opengamma.strata.product.dsf">ResolvedDsfTrade</a>&nbsp;trade,
-                <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider,
-                double&nbsp;referencePrice)</code>
+                <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                double&nbsp;lastSettlementPrice)</code>
 <div class="block">Calculates the currency exposure of the deliverable swap futures trade.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>protected <a href="../../../../../com/opengamma/strata/pricer/dsf/DiscountingDsfProductPricer.html" title="class in com.opengamma.strata.pricer.dsf">DiscountingDsfProductPricer</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/dsf/DiscountingDsfTradePricer.html#getProductPricer--">getProductPricer</a></span>()</code>
-<div class="block">Returns the pricer used to price the product underlying the trade.</div>
-</td>
-</tr>
-<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/dsf/DiscountingDsfTradePricer.html#presentValue-com.opengamma.strata.product.dsf.ResolvedDsfTrade-com.opengamma.strata.pricer.rate.RatesProvider-double-">presentValue</a></span>(<a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsfTrade.html" title="class in com.opengamma.strata.product.dsf">ResolvedDsfTrade</a>&nbsp;trade,
-            <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider,
-            double&nbsp;referencePrice)</code>
+            <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+            double&nbsp;lastSettlementPrice)</code>
 <div class="block">Calculates the present value of the deliverable swap futures trade.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/dsf/DiscountingDsfTradePricer.html#presentValueSensitivity-com.opengamma.strata.product.dsf.ResolvedDsfTrade-com.opengamma.strata.pricer.rate.RatesProvider-">presentValueSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsfTrade.html" title="class in com.opengamma.strata.product.dsf">ResolvedDsfTrade</a>&nbsp;trade,
-                       <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider)</code>
+                       <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</code>
 <div class="block">Calculates the present value sensitivity of the deliverable swap futures trade.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/dsf/DiscountingDsfTradePricer.html#price-com.opengamma.strata.product.dsf.ResolvedDsfTrade-com.opengamma.strata.pricer.rate.RatesProvider-">price</a></span>(<a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsfTrade.html" title="class in com.opengamma.strata.product.dsf">ResolvedDsfTrade</a>&nbsp;trade,
-     <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider)</code>
+     <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</code>
 <div class="block">Calculates the price of the underlying deliverable swap futures product.</div>
 </td>
 </tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/dsf/DiscountingDsfTradePricer.html#priceSensitivity-com.opengamma.strata.product.dsf.ResolvedDsfTrade-com.opengamma.strata.pricer.rate.RatesProvider-">priceSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsfTrade.html" title="class in com.opengamma.strata.product.dsf">ResolvedDsfTrade</a>&nbsp;trade,
+                <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</code>
+<div class="block">Calculates the price sensitivity of the deliverable swap futures product.</div>
+</td>
+</tr>
 </table>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.pricer.dsf.AbstractDsfTradePricer">
-<!--   -->
-</a>
-<h3>Methods inherited from class&nbsp;com.opengamma.strata.pricer.dsf.<a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfTradePricer.html" title="class in com.opengamma.strata.pricer.dsf">AbstractDsfTradePricer</a></h3>
-<code><a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfTradePricer.html#presentValue-com.opengamma.strata.product.dsf.ResolvedDsfTrade-double-double-">presentValue</a></code></li>
-</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
@@ -286,23 +281,6 @@ extends <a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfTrade
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="getProductPricer--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getProductPricer</h4>
-<pre>protected&nbsp;<a href="../../../../../com/opengamma/strata/pricer/dsf/DiscountingDsfProductPricer.html" title="class in com.opengamma.strata.pricer.dsf">DiscountingDsfProductPricer</a>&nbsp;getProductPricer()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfTradePricer.html#getProductPricer--">AbstractDsfTradePricer</a></code></span></div>
-<div class="block">Returns the pricer used to price the product underlying the trade.</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfTradePricer.html#getProductPricer--">getProductPricer</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfTradePricer.html" title="class in com.opengamma.strata.pricer.dsf">AbstractDsfTradePricer</a></code></dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the pricer</dd>
-</dl>
-</li>
-</ul>
 <a name="price-com.opengamma.strata.product.dsf.ResolvedDsfTrade-com.opengamma.strata.pricer.rate.RatesProvider-">
 <!--   -->
 </a>
@@ -310,16 +288,36 @@ extends <a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfTrade
 <li class="blockList">
 <h4>price</h4>
 <pre>public&nbsp;double&nbsp;price(<a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsfTrade.html" title="class in com.opengamma.strata.product.dsf">ResolvedDsfTrade</a>&nbsp;trade,
-                    <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider)</pre>
+                    <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</pre>
 <div class="block">Calculates the price of the underlying deliverable swap futures product.
  <p>
  The price of the trade is the price on the valuation date.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the trade</dd>
-<dd><code>provider</code> - the rates provider</dd>
+<dd><code>ratesProvider</code> - the rates provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the price of the trade</dd>
+<dd>the price of the trade, in decimal form</dd>
+</dl>
+</li>
+</ul>
+<a name="priceSensitivity-com.opengamma.strata.product.dsf.ResolvedDsfTrade-com.opengamma.strata.pricer.rate.RatesProvider-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>priceSensitivity</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&nbsp;priceSensitivity(<a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsfTrade.html" title="class in com.opengamma.strata.product.dsf">ResolvedDsfTrade</a>&nbsp;trade,
+                                           <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</pre>
+<div class="block">Calculates the price sensitivity of the deliverable swap futures product.
+ <p>
+ The price sensitivity of the product is the sensitivity of the price to the underlying curves.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>trade</code> - the trade</dd>
+<dd><code>ratesProvider</code> - the rates provider</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the price curve sensitivity of the trade</dd>
 </dl>
 </li>
 </ul>
@@ -330,19 +328,20 @@ extends <a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfTrade
 <li class="blockList">
 <h4>presentValue</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;presentValue(<a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsfTrade.html" title="class in com.opengamma.strata.product.dsf">ResolvedDsfTrade</a>&nbsp;trade,
-                                   <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider,
-                                   double&nbsp;referencePrice)</pre>
+                                   <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                                   double&nbsp;lastSettlementPrice)</pre>
 <div class="block">Calculates the present value of the deliverable swap futures trade.
  <p>
  The present value of the product is the value on the valuation date.
+ The current price is calculated using the discounting model.
  <p>
- The calculation is performed against a reference price. The reference price should
- be the settlement price except on the trade date, when it is the trade price.</div>
+ This method calculates based on the difference between the model price and the
+ last settlement price, or the trade price if traded on the valuation date.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the trade</dd>
-<dd><code>provider</code> - the rates provider</dd>
-<dd><code>referencePrice</code> - the price with respect to which the margining should be done</dd>
+<dd><code>ratesProvider</code> - the rates provider</dd>
+<dd><code>lastSettlementPrice</code> - the last settlement price used for margining, in decimal form</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the present value</dd>
 </dl>
@@ -355,7 +354,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfTrade
 <li class="blockList">
 <h4>presentValueSensitivity</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&nbsp;presentValueSensitivity(<a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsfTrade.html" title="class in com.opengamma.strata.product.dsf">ResolvedDsfTrade</a>&nbsp;trade,
-                                                  <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider)</pre>
+                                                  <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</pre>
 <div class="block">Calculates the present value sensitivity of the deliverable swap futures trade.
  <p>
  The present value sensitivity of the trade is the sensitivity of the present value to
@@ -363,7 +362,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfTrade
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the trade</dd>
-<dd><code>provider</code> - the rates provider</dd>
+<dd><code>ratesProvider</code> - the rates provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the present value curve sensitivity of the trade</dd>
 </dl>
@@ -376,19 +375,20 @@ extends <a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfTrade
 <li class="blockList">
 <h4>currencyExposure</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a>&nbsp;currencyExposure(<a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsfTrade.html" title="class in com.opengamma.strata.product.dsf">ResolvedDsfTrade</a>&nbsp;trade,
-                                            <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider,
-                                            double&nbsp;referencePrice)</pre>
+                                            <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                                            double&nbsp;lastSettlementPrice)</pre>
 <div class="block">Calculates the currency exposure of the deliverable swap futures trade.
  <p>
  Since the deliverable swap futures is based on a single currency, the trade is exposed to only this currency.
+ The current price is calculated using the discounting model.
  <p>
- The calculation is performed against a reference price. The reference price should
- be the settlement price except on the trade date, when it is the trade price.</div>
+ This method calculates based on the difference between the model price and the
+ last settlement price, or the trade price if traded on the valuation date.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the trade</dd>
-<dd><code>provider</code> - the rates provider</dd>
-<dd><code>referencePrice</code> - the price with respect to which the margining should be done</dd>
+<dd><code>ratesProvider</code> - the rates provider</dd>
+<dd><code>lastSettlementPrice</code> - the last settlement price used for margining, in decimal form</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the currency exposure of the trade</dd>
 </dl>

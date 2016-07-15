@@ -50,7 +50,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfTradePricer.html" title="class in com.opengamma.strata.pricer.dsf"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li>Prev&nbsp;Class</li>
 <li><a href="../../../../../com/opengamma/strata/pricer/dsf/DiscountingDsfTradePricer.html" title="class in com.opengamma.strata.pricer.dsf"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -101,12 +101,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfProductPricer.html" title="class in com.opengamma.strata.pricer.dsf">com.opengamma.strata.pricer.dsf.AbstractDsfProductPricer</a></li>
-<li>
-<ul class="inheritance">
 <li>com.opengamma.strata.pricer.dsf.DiscountingDsfProductPricer</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -116,13 +111,19 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">DiscountingDsfProductPricer</span>
-extends <a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfProductPricer.html" title="class in com.opengamma.strata.pricer.dsf">AbstractDsfProductPricer</a></pre>
+extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Pricer for for Deliverable Swap Futures (DSFs).
  <p>
  This function provides the ability to price a <a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsf.html" title="class in com.opengamma.strata.product.dsf"><code>ResolvedDsf</code></a>.
- <p>
+ 
+ <h4>Price</h4>
  The price of a DSF is based on the present value (NPV) of the underlying swap on the delivery date.
- For example, a price of 100.1822 represents a present value of $100,182.20, if the notional is $100,000.</div>
+ For example, a price of 100.182 represents a present value of $100,182.00, if the notional is $100,000.
+ This price can also be viewed as a percentage present value - <code>(100 + percentPv)</code>, or 0.182% in this example.
+ <p>
+ Strata uses <i>decimal prices</i> for DSFs in the trade model, pricers and market data.
+ The decimal price is based on the decimal multiplier equivalent to the implied percentage.
+ Thus the market price of 100.182 is represented in Strata by 1.00182.</div>
 </li>
 </ul>
 </div>
@@ -196,13 +197,6 @@ extends <a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfProdu
 </td>
 </tr>
 </table>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.pricer.dsf.AbstractDsfProductPricer">
-<!--   -->
-</a>
-<h3>Methods inherited from class&nbsp;com.opengamma.strata.pricer.dsf.<a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfProductPricer.html" title="class in com.opengamma.strata.pricer.dsf">AbstractDsfProductPricer</a></h3>
-<code><a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfProductPricer.html#marginIndex-com.opengamma.strata.product.dsf.ResolvedDsf-double-">marginIndex</a>, <a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfProductPricer.html#marginIndexSensitivity-com.opengamma.strata.product.dsf.ResolvedDsf-com.opengamma.strata.market.sensitivity.PointSensitivities-">marginIndexSensitivity</a></code></li>
-</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
@@ -280,7 +274,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfProdu
 <dd><code>future</code> - the future</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the price of the product</dd>
+<dd>the price of the product, in decimal form</dd>
 </dl>
 </li>
 </ul>
@@ -333,7 +327,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfProdu
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/opengamma/strata/pricer/dsf/AbstractDsfTradePricer.html" title="class in com.opengamma.strata.pricer.dsf"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li>Prev&nbsp;Class</li>
 <li><a href="../../../../../com/opengamma/strata/pricer/dsf/DiscountingDsfTradePricer.html" title="class in com.opengamma.strata.pricer.dsf"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">

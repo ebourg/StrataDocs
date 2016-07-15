@@ -161,7 +161,7 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBondTrade.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBondTrade.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBondTrade.Builder.html#price-double-">price</a></span>(double&nbsp;price)</code>
-<div class="block">Sets the price that was traded, which is the <i>clean</i> price.</div>
+<div class="block">Sets the <i>clean</i> price at which the bond was traded.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -202,7 +202,7 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBondTrade.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBondTrade.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBondTrade.Builder.html#settlement-com.opengamma.strata.product.swap.PaymentPeriod-">settlement</a></span>(<a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">PaymentPeriod</a>&nbsp;settlement)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBondTrade.Builder.html#settlement-com.opengamma.strata.product.bond.BondPaymentPeriod-">settlement</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/BondPaymentPeriod.html" title="interface in com.opengamma.strata.product.bond">BondPaymentPeriod</a>&nbsp;settlement)</code>
 <div class="block">Sets the settlement of the bond trade.</div>
 </td>
 </tr>
@@ -391,9 +391,12 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <li class="blockList">
 <h4>price</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBondTrade.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBondTrade.Builder</a>&nbsp;price(double&nbsp;price)</pre>
-<div class="block">Sets the price that was traded, which is the <i>clean</i> price.
+<div class="block">Sets the <i>clean</i> price at which the bond was traded.
  <p>
- This is the clean price agreed when the trade occurred, without accrued interest.</div>
+ The "clean" price excludes any accrued interest.
+ <p>
+ Strata uses <i>decimal prices</i> for bonds in the trade model, pricers and market data.
+ For example, a price of 99.32% is represented in Strata by 0.9932.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>price</code> - the new value</dd>
@@ -402,13 +405,13 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 </dl>
 </li>
 </ul>
-<a name="settlement-com.opengamma.strata.product.swap.PaymentPeriod-">
+<a name="settlement-com.opengamma.strata.product.bond.BondPaymentPeriod-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>settlement</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBondTrade.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBondTrade.Builder</a>&nbsp;settlement(<a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">PaymentPeriod</a>&nbsp;settlement)</pre>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBondTrade.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBondTrade.Builder</a>&nbsp;settlement(<a href="../../../../../com/opengamma/strata/product/bond/BondPaymentPeriod.html" title="interface in com.opengamma.strata.product.bond">BondPaymentPeriod</a>&nbsp;settlement)</pre>
 <div class="block">Sets the settlement of the bond trade.
  <p>
  The payment sign should be compatible with the product notional and trade quantity,

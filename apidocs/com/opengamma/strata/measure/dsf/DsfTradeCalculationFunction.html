@@ -120,6 +120,7 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
 <div class="block">Perform calculations on a single <code>DsfTrade</code> for each of a set of scenarios.
  <p>
  This uses the standard discounting calculation method.
+ An instance of <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate"><code>RatesMarketDataLookup</code></a> must be specified.
  The supported built-in measures are:
  <ul>
    <li><a href="../../../../../com/opengamma/strata/measure/Measures.html#PRESENT_VALUE">Present value</a>
@@ -127,13 +128,20 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
    <li><a href="../../../../../com/opengamma/strata/measure/Measures.html#PV01_CALIBRATED_BUCKETED">PV01 calibrated bucketed</a>
    <li><a href="../../../../../com/opengamma/strata/measure/Measures.html#PV01_MARKET_QUOTE_SUM">PV01 market quote sum</a>
    <li><a href="../../../../../com/opengamma/strata/measure/Measures.html#PV01_MARKET_QUOTE_BUCKETED">PV01 market quote bucketed</a>
+   <li><a href="../../../../../com/opengamma/strata/measure/Measures.html#UNIT_PRICE">Unit price</a>
    <li><a href="../../../../../com/opengamma/strata/measure/Measures.html#CURRENCY_EXPOSURE">Currency exposure</a>
  </ul>
  <p>
  The "natural" currency is the currency of the swap leg that is received.
- <p>
+ 
+ <h4>Price</h4>
  The price of a DSF is based on the present value (NPV) of the underlying swap on the delivery date.
- For example, a price of 100.1822 represents a present value of $100,182.20, if the notional is $100,000.</div>
+ For example, a price of 100.182 represents a present value of $100,182.00, if the notional is $100,000.
+ This price can also be viewed as a percentage present value - <code>(100 + percentPv)</code>, or 0.182% in this example.
+ <p>
+ Strata uses <i>decimal prices</i> for DSFs in the trade model, pricers and market data.
+ The decimal price is based on the decimal multiplier equivalent to the implied percentage.
+ Thus the market price of 100.182 is represented in Strata by 1.00182.</div>
 </li>
 </ul>
 </div>

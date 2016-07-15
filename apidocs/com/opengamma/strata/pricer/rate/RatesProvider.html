@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":18,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":18,"i10":6,"i11":6};
+var methods = {"i0":18,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":18,"i10":6,"i11":6,"i12":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -206,6 +206,12 @@ extends <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html" t
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#timeSeries-com.opengamma.strata.basics.index.Index-">timeSeries</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&nbsp;index)</code>
 <div class="block">Gets the time series.</div>
+</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#toImmutableRatesProvider--">toImmutableRatesProvider</a></span>()</code>
+<div class="block">Converts this provider to an equivalent <code>ImmutableRatesProvider</code>.</div>
 </td>
 </tr>
 </table>
@@ -459,7 +465,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html" t
 <a name="timeSeries-com.opengamma.strata.basics.index.Index-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>timeSeries</h4>
 <pre><a href="../../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&nbsp;timeSeries(<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&nbsp;index)</pre>
@@ -471,6 +477,20 @@ extends <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html" t
 <dd><code>index</code> - the index</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the time series</dd>
+</dl>
+</li>
+</ul>
+<a name="toImmutableRatesProvider--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toImmutableRatesProvider</h4>
+<pre><a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>&nbsp;toImmutableRatesProvider()</pre>
+<div class="block">Converts this provider to an equivalent <code>ImmutableRatesProvider</code>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the equivalent immutable rates provider</dd>
 </dl>
 </li>
 </ul>

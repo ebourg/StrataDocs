@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":9,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10};
+var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":9,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -124,7 +124,17 @@ implements <a href="../../../../../com/opengamma/strata/product/SecuritizedProdu
  It handles options with either daily margining or upfront premium.
  <p>
  An Ibor future option is also known as a <i>STIR future option</i> (Short Term Interest Rate).
- This class represents the structure of a single option contract.</div>
+ This class represents the structure of a single option contract.
+ 
+ <h4>Price</h4>
+ The price of an Ibor future option is based on the price of the underlying future, the volatility
+ and the time to expiry. The price of the at-the-money option tends to zero as expiry approaches.
+ <p>
+ Strata uses <i>decimal prices</i> for Ibor future options in the trade model, pricers and market data.
+ The decimal price is based on the decimal rate equivalent to the percentage.
+ For example, an option price of 0.2 is related to a futures price of 99.32 that implies an
+ interest rate of 0.68%. Strata represents the price of the future as 0.9932 and thus
+ represents the price of the option as 0.002.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../serialized-form.html#com.opengamma.strata.product.index.IborFutureOption">Serialized Form</a></dd>
@@ -215,76 +225,82 @@ implements <a href="../../../../../com/opengamma/strata/product/SecuritizedProdu
 </td>
 </tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/common/FutureOptionPremiumStyle.html" title="enum in com.opengamma.strata.product.common">FutureOptionPremiumStyle</a></code></td>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.html#getIndex--">getIndex</a></span>()</code>
+<div class="block">Gets the Ibor index that the option is based on.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/option/FutureOptionPremiumStyle.html" title="enum in com.opengamma.strata.product.option">FutureOptionPremiumStyle</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.html#getPremiumStyle--">getPremiumStyle</a></span>()</code>
 <div class="block">Gets the style of the option premium.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/common/PutCall.html" title="enum in com.opengamma.strata.product.common">PutCall</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.html#getPutCall--">getPutCall</a></span>()</code>
 <div class="block">Gets whether the option is put or call.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.html#getRounding--">getRounding</a></span>()</code>
 <div class="block">Gets the definition of how to round the option price, defaulted to no rounding.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.html#getSecurityId--">getSecurityId</a></span>()</code>
 <div class="block">Gets the security identifier.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.html#getStrikePrice--">getStrikePrice</a></span>()</code>
-<div class="block">Gets the strike price, represented in decimal form.</div>
+<div class="block">Gets the strike price, in decimal form.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFuture.html" title="class in com.opengamma.strata.product.index">IborFuture</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.html#getUnderlyingFuture--">getUnderlyingFuture</a></span>()</code>
 <div class="block">Gets the underlying future.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.Meta.html" title="class in com.opengamma.strata.product.index">IborFutureOption.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.html#meta--">meta</a></span>()</code>
 <div class="block">The meta-bean for <code>IborFutureOption</code>.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.Meta.html" title="class in com.opengamma.strata.product.index">IborFutureOption.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.html#metaBean--">metaBean</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>&lt;R&gt;&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Property.html?is-external=true" title="class or interface in org.joda.beans">Property</a>&lt;R&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.html#property-java.lang.String-">property</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.html#propertyNames--">propertyNames</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Resolves this object using the specified reference data.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.Builder.html" title="class in com.opengamma.strata.product.index">IborFutureOption.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.html#toBuilder--">toBuilder</a></span>()</code>
 <div class="block">Returns a builder that allows this bean to be mutated.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -342,6 +358,20 @@ implements <a href="../../../../../com/opengamma/strata/product/SecuritizedProdu
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the expiry date and time</dd>
+</dl>
+</li>
+</ul>
+<a name="getIndex--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getIndex</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;getIndex()</pre>
+<div class="block">Gets the Ibor index that the option is based on.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the Ibor index</dd>
 </dl>
 </li>
 </ul>
@@ -481,12 +511,14 @@ implements <a href="../../../../../com/opengamma/strata/product/SecuritizedProdu
 <li class="blockList">
 <h4>getStrikePrice</h4>
 <pre>public&nbsp;double&nbsp;getStrikePrice()</pre>
-<div class="block">Gets the strike price, represented in decimal form.
+<div class="block">Gets the strike price, in decimal form.
  <p>
  This is the price at which the option applies and refers to the price of the underlying future.
- This must be represented in decimal form, <code>(1.0 - decimalRate)</code>.
- As such, the common market price of 99.3 for a 0.7% rate must be input as 0.993.
- The rate implied by the strike can take negative values.</div>
+ The rate implied by the strike can take negative values.
+ <p>
+ Strata uses <i>decimal prices</i> for Ibor futures in the trade model, pricers and market data.
+ The decimal price is based on the decimal rate equivalent to the percentage.
+ For example, a price of 99.32 implies an interest rate of 0.68% which is represented in Strata by 0.9932.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value of the property</dd>
@@ -548,7 +580,7 @@ implements <a href="../../../../../com/opengamma/strata/product/SecuritizedProdu
 <ul class="blockList">
 <li class="blockList">
 <h4>getPremiumStyle</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/common/FutureOptionPremiumStyle.html" title="enum in com.opengamma.strata.product.common">FutureOptionPremiumStyle</a>&nbsp;getPremiumStyle()</pre>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/option/FutureOptionPremiumStyle.html" title="enum in com.opengamma.strata.product.option">FutureOptionPremiumStyle</a>&nbsp;getPremiumStyle()</pre>
 <div class="block">Gets the style of the option premium.
  <p>
  The two options are daily margining and upfront premium.</div>
@@ -568,9 +600,7 @@ implements <a href="../../../../../com/opengamma/strata/product/SecuritizedProdu
 <div class="block">Gets the definition of how to round the option price, defaulted to no rounding.
  <p>
  The price is represented in decimal form, not percentage form.
- As such, the decimal places expressed by the rounding refers to this decimal form.
- For example, the common market price of 99.7125 is represented as 0.997125 which
- has 6 decimal places.</div>
+ As such, the decimal places expressed by the rounding refers to this decimal form.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value of the property, not null</dd>

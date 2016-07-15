@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -101,12 +101,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFutureTradePricer.html" title="class in com.opengamma.strata.pricer.bond">com.opengamma.strata.pricer.bond.AbstractBondFutureTradePricer</a></li>
-<li>
-<ul class="inheritance">
 <li>com.opengamma.strata.pricer.bond.DiscountingBondFutureTradePricer</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -116,10 +111,15 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">DiscountingBondFutureTradePricer</span>
-extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFutureTradePricer.html" title="class in com.opengamma.strata.pricer.bond">AbstractBondFutureTradePricer</a></pre>
+extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Pricer implementation for bond future trades.
  <p>
- This function provides the ability to price a <a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond"><code>BondFutureTrade</code></a>.</div>
+ This function provides the ability to price a <a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond"><code>BondFutureTrade</code></a>.
+ 
+ <h4>Price</h4>
+ Strata uses <i>decimal prices</i> for bond futures in the trade model, pricers and market data.
+ This is coherent with the pricing of <a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBond.html" title="class in com.opengamma.strata.product.bond"><code>FixedCouponBond</code></a>. The bond futures delivery is a bond
+ for an amount computed from the bond future price, a conversion factor and the accrued interest.</div>
 </li>
 </ul>
 </div>
@@ -182,7 +182,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFut
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingBondFutureTradePricer.html#currencyExposure-com.opengamma.strata.product.bond.ResolvedBondFutureTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-double-">currencyExposure</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&nbsp;trade,
                 <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
-                double&nbsp;referencePrice)</code>
+                double&nbsp;lastSettlementPrice)</code>
 <div class="block">Calculates the currency exposure of the bond future trade.</div>
 </td>
 </tr>
@@ -190,7 +190,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFut
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingBondFutureTradePricer.html#currencyExposureWithZSpread-com.opengamma.strata.product.bond.ResolvedBondFutureTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-double-double-com.opengamma.strata.pricer.CompoundedRateType-int-">currencyExposureWithZSpread</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&nbsp;trade,
                            <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
-                           double&nbsp;referencePrice,
+                           double&nbsp;lastSettlementPrice,
                            double&nbsp;zSpread,
                            <a href="../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
                            int&nbsp;periodPerYear)</code>
@@ -198,27 +198,21 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFut
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>protected <a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingBondFutureProductPricer.html" title="class in com.opengamma.strata.pricer.bond">DiscountingBondFutureProductPricer</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingBondFutureTradePricer.html#getProductPricer--">getProductPricer</a></span>()</code>
-<div class="block">Returns the pricer used to price the product underlying the trade.</div>
-</td>
-</tr>
-<tr id="i3" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingBondFutureTradePricer.html#parSpread-com.opengamma.strata.product.bond.ResolvedBondFutureTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-double-">parSpread</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&nbsp;trade,
          <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
-         double&nbsp;referencePrice)</code>
+         double&nbsp;lastSettlementPrice)</code>
 <div class="block">Calculates the par spread of the bond future trade.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingBondFutureTradePricer.html#parSpreadSensitivity-com.opengamma.strata.product.bond.ResolvedBondFutureTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-">parSpreadSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&nbsp;trade,
                     <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider)</code>
 <div class="block">Calculates the par spread sensitivity of the bond future trade.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingBondFutureTradePricer.html#parSpreadSensitivityWithZSpread-com.opengamma.strata.product.bond.ResolvedBondFutureTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-double-com.opengamma.strata.pricer.CompoundedRateType-int-">parSpreadSensitivityWithZSpread</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&nbsp;trade,
                                <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
@@ -228,33 +222,33 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFut
 <div class="block">Calculates the par spread sensitivity of the bond future trade with z-spread.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingBondFutureTradePricer.html#parSpreadWithZSpread-com.opengamma.strata.product.bond.ResolvedBondFutureTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-double-double-com.opengamma.strata.pricer.CompoundedRateType-int-">parSpreadWithZSpread</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&nbsp;trade,
                     <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
-                    double&nbsp;referencePrice,
+                    double&nbsp;lastSettlementPrice,
                     double&nbsp;zSpread,
                     <a href="../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
                     int&nbsp;periodPerYear)</code>
 <div class="block">Calculates the par spread of the bond future trade with z-spread.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingBondFutureTradePricer.html#presentValue-com.opengamma.strata.product.bond.ResolvedBondFutureTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-double-">presentValue</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&nbsp;trade,
             <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
-            double&nbsp;referencePrice)</code>
+            double&nbsp;lastSettlementPrice)</code>
 <div class="block">Calculates the present value of the bond future trade.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingBondFutureTradePricer.html#presentValueSensitivity-com.opengamma.strata.product.bond.ResolvedBondFutureTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-">presentValueSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&nbsp;trade,
                        <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider)</code>
 <div class="block">Calculates the present value sensitivity of the bond future trade.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingBondFutureTradePricer.html#presentValueSensitivityWithZSpread-com.opengamma.strata.product.bond.ResolvedBondFutureTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-double-com.opengamma.strata.pricer.CompoundedRateType-int-">presentValueSensitivityWithZSpread</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&nbsp;trade,
                                   <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
@@ -264,25 +258,25 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFut
 <div class="block">Calculates the present value sensitivity of the bond future trade with z-spread.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingBondFutureTradePricer.html#presentValueWithZSpread-com.opengamma.strata.product.bond.ResolvedBondFutureTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-double-double-com.opengamma.strata.pricer.CompoundedRateType-int-">presentValueWithZSpread</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&nbsp;trade,
                        <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
-                       double&nbsp;referencePrice,
+                       double&nbsp;lastSettlementPrice,
                        double&nbsp;zSpread,
                        <a href="../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
                        int&nbsp;periodPerYear)</code>
 <div class="block">Calculates the present value of the bond future trade with z-spread.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingBondFutureTradePricer.html#price-com.opengamma.strata.product.bond.ResolvedBondFutureTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-">price</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&nbsp;trade,
      <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider)</code>
 <div class="block">Calculates the price of the bond future trade.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingBondFutureTradePricer.html#priceWithZSpread-com.opengamma.strata.product.bond.ResolvedBondFutureTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-double-com.opengamma.strata.pricer.CompoundedRateType-int-">priceWithZSpread</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&nbsp;trade,
                 <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
@@ -293,13 +287,6 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFut
 </td>
 </tr>
 </table>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.pricer.bond.AbstractBondFutureTradePricer">
-<!--   -->
-</a>
-<h3>Methods inherited from class&nbsp;com.opengamma.strata.pricer.bond.<a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFutureTradePricer.html" title="class in com.opengamma.strata.pricer.bond">AbstractBondFutureTradePricer</a></h3>
-<code><a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFutureTradePricer.html#currencyExposure-com.opengamma.strata.product.bond.ResolvedBondFutureTrade-double-double-">currencyExposure</a>, <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFutureTradePricer.html#presentValue-com.opengamma.strata.product.bond.ResolvedBondFutureTrade-double-double-">presentValue</a></code></li>
-</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
@@ -361,23 +348,6 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFut
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="getProductPricer--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getProductPricer</h4>
-<pre>protected&nbsp;<a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingBondFutureProductPricer.html" title="class in com.opengamma.strata.pricer.bond">DiscountingBondFutureProductPricer</a>&nbsp;getProductPricer()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFutureTradePricer.html#getProductPricer--">AbstractBondFutureTradePricer</a></code></span></div>
-<div class="block">Returns the pricer used to price the product underlying the trade.</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFutureTradePricer.html#getProductPricer--">getProductPricer</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFutureTradePricer.html" title="class in com.opengamma.strata.pricer.bond">AbstractBondFutureTradePricer</a></code></dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the pricer</dd>
-</dl>
-</li>
-</ul>
 <a name="price-com.opengamma.strata.product.bond.ResolvedBondFutureTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-">
 <!--   -->
 </a>
@@ -388,7 +358,10 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFut
                     <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider)</pre>
 <div class="block">Calculates the price of the bond future trade.
  <p>
- The price of the trade is the price on the valuation date.</div>
+ The price of the trade is the price on the valuation date.
+ <p>
+ Strata uses <i>decimal prices</i> for bond futures. This is coherent with the pricing of <a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBond.html" title="class in com.opengamma.strata.product.bond"><code>FixedCouponBond</code></a>.
+ For example, a price of 99.32% is represented in Strata by 0.9932.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the trade</dd>
@@ -435,18 +408,18 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFut
 <h4>presentValue</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;presentValue(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&nbsp;trade,
                                    <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
-                                   double&nbsp;referencePrice)</pre>
+                                   double&nbsp;lastSettlementPrice)</pre>
 <div class="block">Calculates the present value of the bond future trade.
  <p>
  The present value of the product is the value on the valuation date.
  <p>
- The calculation is performed against a reference price. The reference price should
- be the settlement price except on the trade date, when it is the trade price.</div>
+ This method calculates based on the difference between the model price and the
+ last settlement price, or the trade price if traded on the valuation date.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the trade</dd>
 <dd><code>provider</code> - the rates provider</dd>
-<dd><code>referencePrice</code> - the price with respect to which the margining should be done</dd>
+<dd><code>lastSettlementPrice</code> - the last settlement price used for margining, in decimal form</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the present value</dd>
 </dl>
@@ -460,7 +433,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFut
 <h4>presentValueWithZSpread</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;presentValueWithZSpread(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&nbsp;trade,
                                               <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
-                                              double&nbsp;referencePrice,
+                                              double&nbsp;lastSettlementPrice,
                                               double&nbsp;zSpread,
                                               <a href="../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
                                               int&nbsp;periodPerYear)</pre>
@@ -471,13 +444,13 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFut
  The z-spread is a parallel shift applied to continuously compounded rates or periodic compounded rates 
  of the issuer discounting curve.
  <p>
- The calculation is performed against a reference price. The reference price should
- be the settlement price except on the trade date, when it is the trade price.</div>
+ This method calculates based on the difference between the model price and the
+ last settlement price, or the trade price if traded on the valuation date.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the trade</dd>
 <dd><code>provider</code> - the rates provider</dd>
-<dd><code>referencePrice</code> - the price with respect to which the margining should be done</dd>
+<dd><code>lastSettlementPrice</code> - the last settlement price used for margining, in decimal form</dd>
 <dd><code>zSpread</code> - the z-spread</dd>
 <dd><code>compoundedRateType</code> - the compounded rate type</dd>
 <dd><code>periodPerYear</code> - the number of periods per year</dd>
@@ -545,19 +518,19 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFut
 <h4>parSpread</h4>
 <pre>public&nbsp;double&nbsp;parSpread(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&nbsp;trade,
                         <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
-                        double&nbsp;referencePrice)</pre>
+                        double&nbsp;lastSettlementPrice)</pre>
 <div class="block">Calculates the par spread of the bond future trade.
  <p>
  The par spread is defined in the following way. When the reference price (or market quote)
  is increased by the par spread, the present value of the trade is zero.
  <p>
- The calculation is performed against a reference price. The reference price should
- be the settlement price except on the trade date, when it is the trade price.</div>
+ This method calculates based on the difference between the model price and the
+ last settlement price, or the trade price if traded on the valuation date.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the trade</dd>
 <dd><code>provider</code> - the rates provider</dd>
-<dd><code>referencePrice</code> - the price with respect to which the margining should be done</dd>
+<dd><code>lastSettlementPrice</code> - the last settlement price used for margining, in decimal form</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the par spread</dd>
 </dl>
@@ -571,7 +544,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFut
 <h4>parSpreadWithZSpread</h4>
 <pre>public&nbsp;double&nbsp;parSpreadWithZSpread(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&nbsp;trade,
                                    <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
-                                   double&nbsp;referencePrice,
+                                   double&nbsp;lastSettlementPrice,
                                    double&nbsp;zSpread,
                                    <a href="../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
                                    int&nbsp;periodPerYear)</pre>
@@ -583,13 +556,13 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFut
  The z-spread is a parallel shift applied to continuously compounded rates or periodic compounded rates 
  of the issuer discounting curve.
  <p>
- The calculation is performed against a reference price. The reference price should
- be the settlement price except on the trade date, when it is the trade price.</div>
+ This method calculates based on the difference between the model price and the
+ last settlement price, or the trade price if traded on the valuation date.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the trade</dd>
 <dd><code>provider</code> - the rates provider</dd>
-<dd><code>referencePrice</code> - the price with respect to which the margining should be done</dd>
+<dd><code>lastSettlementPrice</code> - the last settlement price used for margining, in decimal form</dd>
 <dd><code>zSpread</code> - the z-spread</dd>
 <dd><code>compoundedRateType</code> - the compounded rate type</dd>
 <dd><code>periodPerYear</code> - the number of periods per year</dd>
@@ -657,16 +630,16 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFut
 <h4>currencyExposure</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a>&nbsp;currencyExposure(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&nbsp;trade,
                                             <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
-                                            double&nbsp;referencePrice)</pre>
+                                            double&nbsp;lastSettlementPrice)</pre>
 <div class="block">Calculates the currency exposure of the bond future trade.
  <p>
- The calculation is performed against a reference price. The reference price should
- be the settlement price except on the trade date, when it is the trade price.</div>
+ This method calculates based on the difference between the model price and the
+ last settlement price, or the trade price if traded on the valuation date.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the trade</dd>
 <dd><code>provider</code> - the rates provider</dd>
-<dd><code>referencePrice</code> - the price with respect to which the margining should be done</dd>
+<dd><code>lastSettlementPrice</code> - the last settlement price used for margining, in decimal form</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the currency exposure of the bond future trade</dd>
 </dl>
@@ -680,20 +653,22 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFut
 <h4>currencyExposureWithZSpread</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a>&nbsp;currencyExposureWithZSpread(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&nbsp;trade,
                                                        <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
-                                                       double&nbsp;referencePrice,
+                                                       double&nbsp;lastSettlementPrice,
                                                        double&nbsp;zSpread,
                                                        <a href="../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
                                                        int&nbsp;periodPerYear)</pre>
 <div class="block">Calculates the currency exposure of the bond future trade with z-spread.
  <p>
  The z-spread is a parallel shift applied to continuously compounded rates or periodic compounded rates 
- of the issuer discounting curve.</div>
+ of the issuer discounting curve.
+ <p>
+ This method calculates based on the difference between the model price and the
+ last settlement price, or the trade price if traded on the valuation date.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the trade</dd>
 <dd><code>provider</code> - the rates provider</dd>
-<dd><code>referencePrice</code> - the price with respect to which the margining should be done. The reference price is
-   the trade date before any margining has taken place and the price used for the last margining otherwise.</dd>
+<dd><code>lastSettlementPrice</code> - the last settlement price used for margining, in decimal form</dd>
 <dd><code>zSpread</code> - the z-spread</dd>
 <dd><code>compoundedRateType</code> - the compounded rate type</dd>
 <dd><code>periodPerYear</code> - the number of periods per year</dd>

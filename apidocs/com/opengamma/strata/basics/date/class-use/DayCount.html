@@ -126,16 +126,6 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="#com.opengamma.strata.pricer.bond">com.opengamma.strata.pricer.bond</a></td>
-<td class="colLast">
-<div class="block">Calculators for bonds.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="#com.opengamma.strata.pricer.capfloor">com.opengamma.strata.pricer.capfloor</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.fxopt">com.opengamma.strata.pricer.fxopt</a></td>
 <td class="colLast">
 <div class="block">Calculators for FX options.</div>
@@ -143,7 +133,9 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.model">com.opengamma.strata.pricer.model</a></td>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Common code for model pricing.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.swaption">com.opengamma.strata.pricer.swaption</a></td>
@@ -159,7 +151,9 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.cms">com.opengamma.strata.product.cms</a></td>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Entity objects describing Constant Maturity Swap (CMS) or CMS cap/floor.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.credit">com.opengamma.strata.product.credit</a></td>
@@ -396,26 +390,26 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightIndex.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndex.html#getDayCount--">getDayCount</a></span>()</code>
-<div class="block">Gets the day count convention of the index.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ImmutableOvernightIndex.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/ImmutableOvernightIndex.html#getDayCount--">getDayCount</a></span>()</code>
 <div class="block">Gets the day count convention.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightIndex.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndex.html#getDayCount--">getDayCount</a></span>()</code>
+<div class="block">Gets the day count convention of the index.</div>
+</td>
+</tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableIborIndex.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/ImmutableIborIndex.html#getDayCount--">getDayCount</a></span>()</code>
-<div class="block">Gets the day count convention.</div>
+<td class="colLast"><span class="typeNameLabel">IborIndex.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html#getDayCount--">getDayCount</a></span>()</code>
+<div class="block">Gets the day count convention of the index.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborIndex.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html#getDayCount--">getDayCount</a></span>()</code>
-<div class="block">Gets the day count convention of the index.</div>
+<td class="colLast"><span class="typeNameLabel">ImmutableIborIndex.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/ImmutableIborIndex.html#getDayCount--">getDayCount</a></span>()</code>
+<div class="block">Gets the day count convention.</div>
 </td>
 </tr>
 </tbody>
@@ -558,15 +552,29 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurveDefinition.Builder.html" title="class in com.opengamma.strata.market.curve">InterpolatedNodalCurveDefinition.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">InterpolatedNodalCurveDefinition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurveDefinition.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Sets the day count, optional.</div>
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Curves.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/Curves.html#blackVolatilityByExpiry-com.opengamma.strata.market.curve.CurveName-com.opengamma.strata.basics.date.DayCount-">blackVolatilityByExpiry</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&nbsp;name,
+                       <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates curve metadata for a curve providing Black volatility by expiry.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Curves.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/Curves.html#blackVolatilityByExpiry-java.lang.String-com.opengamma.strata.basics.date.DayCount-">blackVolatilityByExpiry</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                       <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates curve metadata for a curve providing Black volatility by expiry.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/DefaultCurveMetadataBuilder.html" title="class in com.opengamma.strata.market.curve">DefaultCurveMetadataBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DefaultCurveMetadataBuilder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/DefaultCurveMetadataBuilder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
 <div class="block">Sets the day count.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurveDefinition.Builder.html" title="class in com.opengamma.strata.market.curve">InterpolatedNodalCurveDefinition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InterpolatedNodalCurveDefinition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurveDefinition.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Sets the day count, optional.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -663,6 +671,48 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#blackVolatilityByExpiryLogMoneyness-java.lang.String-com.opengamma.strata.basics.date.DayCount-">blackVolatilityByExpiryLogMoneyness</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                                   <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Black expiry-log moneyness volatility.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#blackVolatilityByExpiryLogMoneyness-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">blackVolatilityByExpiryLogMoneyness</a></span>(<a href="../../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                                   <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Black expiry-log moneyness volatility.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#blackVolatilityByExpiryStrike-java.lang.String-com.opengamma.strata.basics.date.DayCount-">blackVolatilityByExpiryStrike</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                             <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Black expiry-strike volatility.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#blackVolatilityByExpiryStrike-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">blackVolatilityByExpiryStrike</a></span>(<a href="../../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                             <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Black expiry-strike volatility.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#blackVolatilityByExpiryTenor-java.lang.String-com.opengamma.strata.basics.date.DayCount-">blackVolatilityByExpiryTenor</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                            <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Black expiry-tenor volatility.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#blackVolatilityByExpiryTenor-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">blackVolatilityByExpiryTenor</a></span>(<a href="../../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                            <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Black expiry-tenor volatility.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/surface/DefaultSurfaceMetadataBuilder.html" title="class in com.opengamma.strata.market.surface">DefaultSurfaceMetadataBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DefaultSurfaceMetadataBuilder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/DefaultSurfaceMetadataBuilder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
 <div class="block">Sets the day count.</div>
@@ -670,217 +720,62 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#iborFutureOptionNormalExpirySimpleMoneyness-java.lang.String-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.model.MoneynessType-">iborFutureOptionNormalExpirySimpleMoneyness</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                                           <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-                                           <a href="../../../../../../com/opengamma/strata/market/model/MoneynessType.html" title="enum in com.opengamma.strata.market.model">MoneynessType</a>&nbsp;moneynessType)</code>
-<div class="block">Creates metadata for a surface providing Normal expiry-tenor volatility for swaptions.</div>
+<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#normalVolatilityByExpirySimpleMoneyness-java.lang.String-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.model.MoneynessType-">normalVolatilityByExpirySimpleMoneyness</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                                       <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+                                       <a href="../../../../../../com/opengamma/strata/market/model/MoneynessType.html" title="enum in com.opengamma.strata.market.model">MoneynessType</a>&nbsp;moneynessType)</code>
+<div class="block">Creates metadata for a surface providing Normal expiry-simple moneyness volatility.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#iborFutureOptionNormalExpirySimpleMoneyness-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.model.MoneynessType-">iborFutureOptionNormalExpirySimpleMoneyness</a></span>(<a href="../../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
-                                           <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-                                           <a href="../../../../../../com/opengamma/strata/market/model/MoneynessType.html" title="enum in com.opengamma.strata.market.model">MoneynessType</a>&nbsp;moneynessType)</code>
-<div class="block">Creates metadata for a surface providing Normal expiry-tenor volatility for swaptions.</div>
+<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#normalVolatilityByExpirySimpleMoneyness-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.model.MoneynessType-">normalVolatilityByExpirySimpleMoneyness</a></span>(<a href="../../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                                       <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+                                       <a href="../../../../../../com/opengamma/strata/market/model/MoneynessType.html" title="enum in com.opengamma.strata.market.model">MoneynessType</a>&nbsp;moneynessType)</code>
+<div class="block">Creates metadata for a surface providing Normal expiry-simple moneyness volatility.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#swaptionBlackExpiryTenor-java.lang.String-com.opengamma.strata.basics.date.DayCount-">swaptionBlackExpiryTenor</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                        <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Creates metadata for a surface providing Black expiry-tenor volatility for swaptions.</div>
+<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#normalVolatilityByExpiryStrike-java.lang.String-com.opengamma.strata.basics.date.DayCount-">normalVolatilityByExpiryStrike</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                              <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Normal expiry-strike volatility.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#swaptionBlackExpiryTenor-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">swaptionBlackExpiryTenor</a></span>(<a href="../../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
-                        <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Creates metadata for a surface providing Black expiry-tenor volatility for swaptions.</div>
+<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#normalVolatilityByExpiryStrike-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">normalVolatilityByExpiryStrike</a></span>(<a href="../../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                              <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Normal expiry-strike volatility.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#swaptionNormalExpiryTenor-java.lang.String-com.opengamma.strata.basics.date.DayCount-">swaptionNormalExpiryTenor</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                         <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Creates metadata for a surface providing Normal expiry-tenor volatility for swaptions.</div>
+<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#normalVolatilityByExpiryTenor-java.lang.String-com.opengamma.strata.basics.date.DayCount-">normalVolatilityByExpiryTenor</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                             <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Normal expiry-tenor volatility.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#swaptionNormalExpiryTenor-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">swaptionNormalExpiryTenor</a></span>(<a href="../../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
-                         <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Creates metadata for a surface providing Normal expiry-tenor volatility for swaptions.</div>
+<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#normalVolatilityByExpiryTenor-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">normalVolatilityByExpiryTenor</a></span>(<a href="../../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                             <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Normal expiry-tenor volatility.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#swaptionSabrExpiryTenor-java.lang.String-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.ValueType-">swaptionSabrExpiryTenor</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                       <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-                       <a href="../../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;zType)</code>
-<div class="block">Creates metadata for a surface providing SABR expiry-tenor volatility for swaptions.</div>
+<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#sabrParameterByExpiryTenor-java.lang.String-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.ValueType-">sabrParameterByExpiryTenor</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                          <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+                          <a href="../../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;zType)</code>
+<div class="block">Creates metadata for a surface providing a SABR expiry-tenor parameter.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#swaptionSabrExpiryTenor-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.ValueType-">swaptionSabrExpiryTenor</a></span>(<a href="../../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
-                       <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-                       <a href="../../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;zType)</code>
-<div class="block">Creates metadata for a surface providing SABR expiry-tenor volatility for swaptions.</div>
-</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li class="blockList"><a name="com.opengamma.strata.pricer.bond">
-<!--   -->
-</a>
-<h3>Uses of <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a> in <a href="../../../../../../com/opengamma/strata/pricer/bond/package-summary.html">com.opengamma.strata.pricer.bond</a></h3>
-<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
-<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/bond/package-summary.html">com.opengamma.strata.pricer.bond</a> that return <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BlackVolatilityExpLogMoneynessBondFutureProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityExpLogMoneynessBondFutureProvider.html#getDayCount--">getDayCount</a></span>()</code>
-<div class="block">Gets the day count applicable to the model.</div>
-</td>
-</tr>
-</tbody>
-</table>
-<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
-<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/bond/package-summary.html">com.opengamma.strata.pricer.bond</a> that return types with arguments of type <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">BlackVolatilityExpLogMoneynessBondFutureProvider.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityExpLogMoneynessBondFutureProvider.Meta.html#dayCount--">dayCount</a></span>()</code>
-<div class="block">The meta-property for the <code>dayCount</code> property.</div>
-</td>
-</tr>
-</tbody>
-</table>
-<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
-<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/bond/package-summary.html">com.opengamma.strata.pricer.bond</a> with parameters of type <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityExpLogMoneynessBondFutureProvider.Builder.html" title="class in com.opengamma.strata.pricer.bond">BlackVolatilityExpLogMoneynessBondFutureProvider.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BlackVolatilityExpLogMoneynessBondFutureProvider.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityExpLogMoneynessBondFutureProvider.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Sets the day count applicable to the model.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityExpLogMoneynessBondFutureProvider.html" title="class in com.opengamma.strata.pricer.bond">BlackVolatilityExpLogMoneynessBondFutureProvider</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BlackVolatilityExpLogMoneynessBondFutureProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityExpLogMoneynessBondFutureProvider.html#of-com.opengamma.strata.market.surface.InterpolatedNodalSurface-com.opengamma.strata.product.SecurityId-com.opengamma.strata.basics.date.DayCount-java.time.ZonedDateTime-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/surface/InterpolatedNodalSurface.html" title="class in com.opengamma.strata.market.surface">InterpolatedNodalSurface</a>&nbsp;surface,
-  <a href="../../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;futureSecurityId,
-  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;valuationTime)</code>
-<div class="block">Obtains an instance based on a surface.</div>
-</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li class="blockList"><a name="com.opengamma.strata.pricer.capfloor">
-<!--   -->
-</a>
-<h3>Uses of <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a> in <a href="../../../../../../com/opengamma/strata/pricer/capfloor/package-summary.html">com.opengamma.strata.pricer.capfloor</a></h3>
-<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
-<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/capfloor/package-summary.html">com.opengamma.strata.pricer.capfloor</a> that return <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">NormalIborCapletFloorletExpiryStrikeVolatilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#getDayCount--">getDayCount</a></span>()</code>
-<div class="block">Gets the day count applicable to the model.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BlackIborCapletFloorletExpiryStrikeVolatilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/BlackIborCapletFloorletExpiryStrikeVolatilities.html#getDayCount--">getDayCount</a></span>()</code>
-<div class="block">Gets the day count applicable to the model.</div>
-</td>
-</tr>
-</tbody>
-</table>
-<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
-<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/capfloor/package-summary.html">com.opengamma.strata.pricer.capfloor</a> that return types with arguments of type <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">NormalIborCapletFloorletExpiryStrikeVolatilities.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.Meta.html#dayCount--">dayCount</a></span>()</code>
-<div class="block">The meta-property for the <code>dayCount</code> property.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">BlackIborCapletFloorletExpiryStrikeVolatilities.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/BlackIborCapletFloorletExpiryStrikeVolatilities.Meta.html#dayCount--">dayCount</a></span>()</code>
-<div class="block">The meta-property for the <code>dayCount</code> property.</div>
-</td>
-</tr>
-</tbody>
-</table>
-<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
-<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/capfloor/package-summary.html">com.opengamma.strata.pricer.capfloor</a> with parameters of type <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html" title="class in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletExpiryStrikeVolatilities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">NormalIborCapletFloorletExpiryStrikeVolatilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#of-com.opengamma.strata.market.surface.Surface-com.opengamma.strata.basics.index.IborIndex-java.time.LocalDate-java.time.LocalTime-java.time.ZoneId-com.opengamma.strata.basics.date.DayCount-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;surface,
-  <a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html?is-external=true" title="class or interface in java.time">LocalTime</a>&nbsp;valuationTime,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZoneId.html?is-external=true" title="class or interface in java.time">ZoneId</a>&nbsp;valuationZone,
-  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Obtains an instance from the implied volatility surface and the date, time and zone for which it is valid.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/capfloor/BlackIborCapletFloorletExpiryStrikeVolatilities.html" title="class in com.opengamma.strata.pricer.capfloor">BlackIborCapletFloorletExpiryStrikeVolatilities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BlackIborCapletFloorletExpiryStrikeVolatilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/BlackIborCapletFloorletExpiryStrikeVolatilities.html#of-com.opengamma.strata.market.surface.Surface-com.opengamma.strata.basics.index.IborIndex-java.time.LocalDate-java.time.LocalTime-java.time.ZoneId-com.opengamma.strata.basics.date.DayCount-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;surface,
-  <a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html?is-external=true" title="class or interface in java.time">LocalTime</a>&nbsp;valuationTime,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZoneId.html?is-external=true" title="class or interface in java.time">ZoneId</a>&nbsp;valuationZone,
-  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Obtains an instance from the implied volatility surface and the date, time and zone for which it is valid.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html" title="class in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletExpiryStrikeVolatilities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">NormalIborCapletFloorletExpiryStrikeVolatilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#of-com.opengamma.strata.market.surface.Surface-com.opengamma.strata.basics.index.IborIndex-java.time.ZonedDateTime-com.opengamma.strata.basics.date.DayCount-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;surface,
-  <a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;valuationDateTime,
-  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Obtains an instance from the implied volatility surface and the date-time for which it is valid.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/capfloor/BlackIborCapletFloorletExpiryStrikeVolatilities.html" title="class in com.opengamma.strata.pricer.capfloor">BlackIborCapletFloorletExpiryStrikeVolatilities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BlackIborCapletFloorletExpiryStrikeVolatilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/BlackIborCapletFloorletExpiryStrikeVolatilities.html#of-com.opengamma.strata.market.surface.Surface-com.opengamma.strata.basics.index.IborIndex-java.time.ZonedDateTime-com.opengamma.strata.basics.date.DayCount-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;surface,
-  <a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;valuationDateTime,
-  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Obtains an instance from the implied volatility surface and the date-time for which it is valid.</div>
+<td class="colLast"><span class="typeNameLabel">Surfaces.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surfaces.html#sabrParameterByExpiryTenor-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.ValueType-">sabrParameterByExpiryTenor</a></span>(<a href="../../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                          <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+                          <a href="../../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;zType)</code>
+<div class="block">Creates metadata for a surface providing a SABR expiry-tenor parameter.</div>
 </td>
 </tr>
 </tbody>
@@ -899,14 +794,14 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BlackVolatilitySurfaceFxProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilitySurfaceFxProvider.html#getDayCount--">getDayCount</a></span>()</code>
-<div class="block">Gets the day count applicable to the model.</div>
+<td class="colLast"><span class="typeNameLabel">InterpolatedStrikeSmileDeltaTermStructure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html#getDayCount--">getDayCount</a></span>()</code>
+<div class="block">Gets the day count convention used for the expiry.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BlackVolatilityFlatFxProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFlatFxProvider.html#getDayCount--">getDayCount</a></span>()</code>
-<div class="block">Gets the day count applicable to the model.</div>
+<td class="colLast"><span class="typeNameLabel">SmileDeltaTermStructure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html#getDayCount--">getDayCount</a></span>()</code>
+<div class="block">Gets the day count convention used for the expiry.</div>
 </td>
 </tr>
 </tbody>
@@ -920,13 +815,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">BlackVolatilitySurfaceFxProvider.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilitySurfaceFxProvider.Meta.html#dayCount--">dayCount</a></span>()</code>
-<div class="block">The meta-property for the <code>dayCount</code> property.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">BlackVolatilityFlatFxProvider.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFlatFxProvider.Meta.html#dayCount--">dayCount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">InterpolatedStrikeSmileDeltaTermStructure.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.Meta.html#dayCount--">dayCount</a></span>()</code>
 <div class="block">The meta-property for the <code>dayCount</code> property.</div>
 </td>
 </tr>
@@ -940,33 +829,118 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilitySurfaceFxProvider.Builder.html" title="class in com.opengamma.strata.pricer.fxopt">BlackVolatilitySurfaceFxProvider.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BlackVolatilitySurfaceFxProvider.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilitySurfaceFxProvider.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Sets the day count applicable to the model.</div>
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html" title="class in com.opengamma.strata.pricer.fxopt">InterpolatedStrikeSmileDeltaTermStructure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InterpolatedStrikeSmileDeltaTermStructure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html#of-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleMatrix-com.opengamma.strata.collect.array.DoubleMatrix-com.opengamma.strata.basics.date.DayCount-">of</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;expiries,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;delta,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;atm,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a>&nbsp;riskReversal,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a>&nbsp;strangle,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Obtains volatility term structure from expiry times, delta values, ATM volatilities, risk reversal figures and
+ strangle figures.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFlatFxProvider.Builder.html" title="class in com.opengamma.strata.pricer.fxopt">BlackVolatilityFlatFxProvider.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BlackVolatilityFlatFxProvider.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFlatFxProvider.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Sets the day count applicable to the model.</div>
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html" title="class in com.opengamma.strata.pricer.fxopt">InterpolatedStrikeSmileDeltaTermStructure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InterpolatedStrikeSmileDeltaTermStructure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html#of-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleMatrix-com.opengamma.strata.collect.array.DoubleMatrix-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-">of</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;expiries,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;delta,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;atm,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a>&nbsp;riskReversal,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a>&nbsp;strangle,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;strikeInterpolator,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;strikeExtrapolatorLeft,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;strikeExtrapolatorRight)</code>
+<div class="block">Obtains volatility term structure from expiry times, delta values, ATM volatilities, risk reversal figures and
+ strangle figures with strike interpolator and extrapolators specified.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFlatFxProvider.html" title="class in com.opengamma.strata.pricer.fxopt">BlackVolatilityFlatFxProvider</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BlackVolatilityFlatFxProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFlatFxProvider.html#of-com.opengamma.strata.market.curve.NodalCurve-com.opengamma.strata.basics.currency.CurrencyPair-com.opengamma.strata.basics.date.DayCount-java.time.ZonedDateTime-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/NodalCurve.html" title="interface in com.opengamma.strata.market.curve">NodalCurve</a>&nbsp;curve,
-  <a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyPair.html" title="class in com.opengamma.strata.basics.currency">CurrencyPair</a>&nbsp;currencyPair,
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html" title="class in com.opengamma.strata.pricer.fxopt">InterpolatedStrikeSmileDeltaTermStructure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InterpolatedStrikeSmileDeltaTermStructure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html#of-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleMatrix-com.opengamma.strata.collect.array.DoubleMatrix-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-">of</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;expiries,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;delta,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;atm,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a>&nbsp;riskReversal,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a>&nbsp;strangle,
   <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;valuationTime)</code>
-<div class="block">Obtains an instance based on a curve.</div>
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;timeInterpolator,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;timeExtrapolatorLeft,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;timeExtrapolatorRight,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;strikeInterpolator,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;strikeExtrapolatorLeft,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;strikeExtrapolatorRight)</code>
+<div class="block">Obtains volatility term structure from expiry times, delta values, ATM volatilities, risk reversal figures and
+ strangle figures with interpolator and extrapolators fully specified.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilitySurfaceFxProvider.html" title="class in com.opengamma.strata.pricer.fxopt">BlackVolatilitySurfaceFxProvider</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BlackVolatilitySurfaceFxProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilitySurfaceFxProvider.html#of-com.opengamma.strata.market.surface.Surface-com.opengamma.strata.basics.currency.CurrencyPair-com.opengamma.strata.basics.date.DayCount-java.time.ZonedDateTime-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;surface,
-  <a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyPair.html" title="class in com.opengamma.strata.basics.currency">CurrencyPair</a>&nbsp;currencyPair,
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html" title="class in com.opengamma.strata.pricer.fxopt">InterpolatedStrikeSmileDeltaTermStructure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InterpolatedStrikeSmileDeltaTermStructure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html#of-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleMatrix-com.opengamma.strata.basics.date.DayCount-">of</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;expiries,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;delta,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a>&nbsp;volatility,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Obtains volatility term structure from expiry times, delta values and volatilities.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html" title="class in com.opengamma.strata.pricer.fxopt">InterpolatedStrikeSmileDeltaTermStructure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InterpolatedStrikeSmileDeltaTermStructure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html#of-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleMatrix-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-">of</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;expiries,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;delta,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a>&nbsp;volatility,
   <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;valuationTime)</code>
-<div class="block">Obtains an instance based on a surface.</div>
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;strikeInterpolator,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;strikeExtrapolatorLeft,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;strikeExtrapolatorRight)</code>
+<div class="block">Obtains volatility term structure from expiry times, delta values and volatilities
+ with strike interpolator and extrapolators specified.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html" title="class in com.opengamma.strata.pricer.fxopt">InterpolatedStrikeSmileDeltaTermStructure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InterpolatedStrikeSmileDeltaTermStructure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html#of-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleMatrix-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-">of</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;expiries,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;delta,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a>&nbsp;volatility,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;timeInterpolator,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;timeExtrapolatorLeft,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;timeExtrapolatorRight,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;strikeInterpolator,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;strikeExtrapolatorLeft,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;strikeExtrapolatorRight)</code>
+<div class="block">Obtains volatility term structure from expiry times, delta values and volatilities 
+ with interpolator and extrapolators fully specified.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html" title="class in com.opengamma.strata.pricer.fxopt">InterpolatedStrikeSmileDeltaTermStructure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InterpolatedStrikeSmileDeltaTermStructure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html#of-java.util.List-com.opengamma.strata.basics.date.DayCount-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaParameters.html" title="class in com.opengamma.strata.pricer.fxopt">SmileDeltaParameters</a>&gt;&nbsp;volatilityTerm,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Obtains volatility term structure from a set of smile descriptions.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html" title="class in com.opengamma.strata.pricer.fxopt">InterpolatedStrikeSmileDeltaTermStructure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InterpolatedStrikeSmileDeltaTermStructure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html#of-java.util.List-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaParameters.html" title="class in com.opengamma.strata.pricer.fxopt">SmileDeltaParameters</a>&gt;&nbsp;volatilityTerm,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;timeExtrapolatorLeft,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;timeInterpolator,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;timeExtrapolatorRight,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;strikeExtrapolatorLeft,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;strikeInterpolator,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;strikeExtrapolatorRight)</code>
+<div class="block">Obtains volatility term structure from a set of smile descriptions 
+ with interpolator and extrapolators fully specified.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html" title="class in com.opengamma.strata.pricer.fxopt">InterpolatedStrikeSmileDeltaTermStructure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InterpolatedStrikeSmileDeltaTermStructure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html#of-java.util.List-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaParameters.html" title="class in com.opengamma.strata.pricer.fxopt">SmileDeltaParameters</a>&gt;&nbsp;volatilityTerm,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;strikeInterpolator,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;strikeExtrapolatorLeft,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;strikeExtrapolatorRight)</code>
+<div class="block">Obtains volatility term structure from a set of smile descriptions 
+ with strike interpolator and extrapolators specified.</div>
 </td>
 </tr>
 </tbody>
@@ -985,14 +959,14 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SabrInterestRateParameters.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/model/SabrInterestRateParameters.html#getDayCount--">getDayCount</a></span>()</code>
-<div class="block">Gets the day count used to calculate the expiry year fraction.</div>
+<td class="colLast"><span class="typeNameLabel">HullWhiteOneFactorPiecewiseConstantParametersProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/model/HullWhiteOneFactorPiecewiseConstantParametersProvider.html#getDayCount--">getDayCount</a></span>()</code>
+<div class="block">Gets the day count applicable to the model.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">HullWhiteOneFactorPiecewiseConstantParametersProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/model/HullWhiteOneFactorPiecewiseConstantParametersProvider.html#getDayCount--">getDayCount</a></span>()</code>
-<div class="block">Gets the day count applicable to the model.</div>
+<td class="colLast"><span class="typeNameLabel">SabrInterestRateParameters.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/model/SabrInterestRateParameters.html#getDayCount--">getDayCount</a></span>()</code>
+<div class="block">Gets the day count used to calculate the expiry year fraction.</div>
 </td>
 </tr>
 </tbody>
@@ -1053,8 +1027,29 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrSwaptionDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionDefinition.html#getDayCount--">getDayCount</a></span>()</code>
+<div class="block">Gets the day count to use.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SabrParametersSwaptionVolatilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrParametersSwaptionVolatilities.html#getDayCount--">getDayCount</a></span>()</code>
 <div class="block">Gets the day count used to calculate the expiry year fraction.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/swaption/package-summary.html">com.opengamma.strata.pricer.swaption</a> that return types with arguments of type <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrSwaptionDefinition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionDefinition.Meta.html#dayCount--">dayCount</a></span>()</code>
+<div class="block">The meta-property for the <code>dayCount</code> property.</div>
 </td>
 </tr>
 </tbody>
@@ -1145,37 +1140,6 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrParametersSwaptionVolatilities.html" title="class in com.opengamma.strata.pricer.swaption">SabrParametersSwaptionVolatilities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SabrSwaptionCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionCalibrator.html#calibrateWithFixedBetaAndShift-com.opengamma.strata.pricer.swaption.SwaptionVolatilitiesName-com.opengamma.strata.product.swap.type.FixedIborSwapConvention-java.time.ZonedDateTime-com.opengamma.strata.basics.date.DayCount-java.util.List-java.util.List-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.market.surface.Surface-com.opengamma.strata.market.surface.Surface-com.opengamma.strata.market.surface.interpolator.SurfaceInterpolator-">calibrateWithFixedBetaAndShift</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilitiesName.html" title="class in com.opengamma.strata.pricer.swaption">SwaptionVolatilitiesName</a>&nbsp;name,
-                              <a href="../../../../../../com/opengamma/strata/product/swap/type/FixedIborSwapConvention.html" title="interface in com.opengamma.strata.product.swap.type">FixedIborSwapConvention</a>&nbsp;convention,
-                              <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;calibrationDateTime,
-                              <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-                              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&gt;&nbsp;tenors,
-                              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/pricer/curve/RawOptionData.html" title="class in com.opengamma.strata.pricer.curve">RawOptionData</a>&gt;&nbsp;data,
-                              <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                              <a href="../../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;betaSurface,
-                              <a href="../../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;shiftSurface,
-                              <a href="../../../../../../com/opengamma/strata/market/surface/interpolator/SurfaceInterpolator.html" title="interface in com.opengamma.strata.market.surface.interpolator">SurfaceInterpolator</a>&nbsp;interpolator)</code>
-<div class="block">Calibrate SABR parameters to a set of raw swaption data.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrParametersSwaptionVolatilities.html" title="class in com.opengamma.strata.pricer.swaption">SabrParametersSwaptionVolatilities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SabrSwaptionCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionCalibrator.html#calibrateWithFixedBetaAndShift-com.opengamma.strata.pricer.swaption.SwaptionVolatilitiesName-com.opengamma.strata.product.swap.type.FixedIborSwapConvention-java.time.ZonedDateTime-com.opengamma.strata.basics.date.DayCount-java.util.List-java.util.List-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.market.surface.Surface-com.opengamma.strata.market.surface.Surface-com.opengamma.strata.market.surface.interpolator.SurfaceInterpolator-boolean-">calibrateWithFixedBetaAndShift</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilitiesName.html" title="class in com.opengamma.strata.pricer.swaption">SwaptionVolatilitiesName</a>&nbsp;name,
-                              <a href="../../../../../../com/opengamma/strata/product/swap/type/FixedIborSwapConvention.html" title="interface in com.opengamma.strata.product.swap.type">FixedIborSwapConvention</a>&nbsp;convention,
-                              <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;calibrationDateTime,
-                              <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-                              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&gt;&nbsp;tenors,
-                              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/pricer/curve/RawOptionData.html" title="class in com.opengamma.strata.pricer.curve">RawOptionData</a>&gt;&nbsp;data,
-                              <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                              <a href="../../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;betaSurface,
-                              <a href="../../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;shiftSurface,
-                              <a href="../../../../../../com/opengamma/strata/market/surface/interpolator/SurfaceInterpolator.html" title="interface in com.opengamma.strata.market.surface.interpolator">SurfaceInterpolator</a>&nbsp;interpolator,
-                              boolean&nbsp;stopOnMathException)</code>
-<div class="block">Calibrate SABR parameters to a set of raw swaption data.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><span class="typeNameLabel">NormalSwaptionPhysicalProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/NormalSwaptionPhysicalProductPricer.html#impliedVolatilityFromPresentValue-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.basics.date.DayCount-double-">impliedVolatilityFromPresentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
                                  <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
@@ -1191,6 +1155,15 @@
                                  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
                                  double&nbsp;presentValue)</code>
 <div class="block">Computes the implied normal volatility from the present value of a swaption.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionDefinition.html" title="class in com.opengamma.strata.pricer.swaption">SabrSwaptionDefinition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrSwaptionDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionDefinition.html#of-com.opengamma.strata.pricer.swaption.SwaptionVolatilitiesName-com.opengamma.strata.product.swap.type.FixedIborSwapConvention-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.surface.interpolator.SurfaceInterpolator-">of</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilitiesName.html" title="class in com.opengamma.strata.pricer.swaption">SwaptionVolatilitiesName</a>&nbsp;name,
+  <a href="../../../../../../com/opengamma/strata/product/swap/type/FixedIborSwapConvention.html" title="interface in com.opengamma.strata.product.swap.type">FixedIborSwapConvention</a>&nbsp;convention,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+  <a href="../../../../../../com/opengamma/strata/market/surface/interpolator/SurfaceInterpolator.html" title="interface in com.opengamma.strata.market.surface.interpolator">SurfaceInterpolator</a>&nbsp;interpolator)</code>
+<div class="block">Obtains an instance from the name, convention, day count and tenors.</div>
 </td>
 </tr>
 </tbody>
@@ -1209,13 +1182,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedFixedCouponBond.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.html#getDayCount--">getDayCount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">CapitalIndexedBondSecurity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondSecurity.html#getDayCount--">getDayCount</a></span>()</code>
 <div class="block">Gets the day count convention applicable.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCapitalIndexedBond.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.html#getDayCount--">getDayCount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">CapitalIndexedBond.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/CapitalIndexedBond.html#getDayCount--">getDayCount</a></span>()</code>
 <div class="block">Gets the day count convention applicable.</div>
 </td>
 </tr>
@@ -1227,19 +1200,19 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FixedCouponBond.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/FixedCouponBond.html#getDayCount--">getDayCount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedFixedCouponBond.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.html#getDayCount--">getDayCount</a></span>()</code>
 <div class="block">Gets the day count convention applicable.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CapitalIndexedBondSecurity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondSecurity.html#getDayCount--">getDayCount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">FixedCouponBond.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/FixedCouponBond.html#getDayCount--">getDayCount</a></span>()</code>
 <div class="block">Gets the day count convention applicable.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CapitalIndexedBond.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/CapitalIndexedBond.html#getDayCount--">getDayCount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedCapitalIndexedBond.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.html#getDayCount--">getDayCount</a></span>()</code>
 <div class="block">Gets the day count convention applicable.</div>
 </td>
 </tr>
@@ -1254,13 +1227,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedFixedCouponBond.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.Meta.html#dayCount--">dayCount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">CapitalIndexedBondSecurity.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondSecurity.Meta.html#dayCount--">dayCount</a></span>()</code>
 <div class="block">The meta-property for the <code>dayCount</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCapitalIndexedBond.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.Meta.html#dayCount--">dayCount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">CapitalIndexedBond.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/CapitalIndexedBond.Meta.html#dayCount--">dayCount</a></span>()</code>
 <div class="block">The meta-property for the <code>dayCount</code> property.</div>
 </td>
 </tr>
@@ -1272,19 +1245,19 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">FixedCouponBond.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/FixedCouponBond.Meta.html#dayCount--">dayCount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedFixedCouponBond.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.Meta.html#dayCount--">dayCount</a></span>()</code>
 <div class="block">The meta-property for the <code>dayCount</code> property.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">CapitalIndexedBondSecurity.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondSecurity.Meta.html#dayCount--">dayCount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">FixedCouponBond.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/FixedCouponBond.Meta.html#dayCount--">dayCount</a></span>()</code>
 <div class="block">The meta-property for the <code>dayCount</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">CapitalIndexedBond.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/CapitalIndexedBond.Meta.html#dayCount--">dayCount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedCapitalIndexedBond.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.Meta.html#dayCount--">dayCount</a></span>()</code>
 <div class="block">The meta-property for the <code>dayCount</code> property.</div>
 </td>
 </tr>
@@ -1298,14 +1271,14 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedFixedCouponBond.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedFixedCouponBond.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondSecurity.Builder.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBondSecurity.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CapitalIndexedBondSecurity.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondSecurity.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
 <div class="block">Sets the day count convention applicable.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBond.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCapitalIndexedBond.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/CapitalIndexedBond.Builder.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBond.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CapitalIndexedBond.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/CapitalIndexedBond.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
 <div class="block">Sets the day count convention applicable.</div>
 </td>
 </tr>
@@ -1316,20 +1289,20 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedFixedCouponBond.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedFixedCouponBond.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Sets the day count convention applicable.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/FixedCouponBond.Builder.html" title="class in com.opengamma.strata.product.bond">FixedCouponBond.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FixedCouponBond.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/FixedCouponBond.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
 <div class="block">Sets the day count convention applicable.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondSecurity.Builder.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBondSecurity.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CapitalIndexedBondSecurity.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondSecurity.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Sets the day count convention applicable.</div>
-</td>
-</tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/CapitalIndexedBond.Builder.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBond.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CapitalIndexedBond.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/CapitalIndexedBond.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBond.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedCapitalIndexedBond.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
 <div class="block">Sets the day count convention applicable.</div>
 </td>
 </tr>
@@ -1655,15 +1628,15 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableTermDepositConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.html#getDayCount--">getDayCount</a></span>()</code>
-<div class="block">Gets the day count convention.</div>
+<td class="colLast"><span class="typeNameLabel">ImmutableIborFixingDepositConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableIborFixingDepositConvention.html#getDayCount--">getDayCount</a></span>()</code>
+<div class="block">Gets the day count convention applicable,
+ providing a default result if no override specified.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableIborFixingDepositConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableIborFixingDepositConvention.html#getDayCount--">getDayCount</a></span>()</code>
-<div class="block">Gets the day count convention applicable,
- providing a default result if no override specified.</div>
+<td class="colLast"><span class="typeNameLabel">ImmutableTermDepositConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.html#getDayCount--">getDayCount</a></span>()</code>
+<div class="block">Gets the day count convention.</div>
 </td>
 </tr>
 </tbody>
@@ -1677,13 +1650,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableTermDepositConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.Meta.html#dayCount--">dayCount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ImmutableIborFixingDepositConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableIborFixingDepositConvention.Meta.html#dayCount--">dayCount</a></span>()</code>
 <div class="block">The meta-property for the <code>dayCount</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableIborFixingDepositConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableIborFixingDepositConvention.Meta.html#dayCount--">dayCount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ImmutableTermDepositConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.Meta.html#dayCount--">dayCount</a></span>()</code>
 <div class="block">The meta-property for the <code>dayCount</code> property.</div>
 </td>
 </tr>
@@ -1697,15 +1670,15 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.Builder.html" title="class in com.opengamma.strata.product.deposit.type">ImmutableTermDepositConvention.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableTermDepositConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Sets the day count convention.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableIborFixingDepositConvention.Builder.html" title="class in com.opengamma.strata.product.deposit.type">ImmutableIborFixingDepositConvention.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ImmutableIborFixingDepositConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableIborFixingDepositConvention.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
 <div class="block">Sets the day count convention applicable, optional with defaulting getter.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.Builder.html" title="class in com.opengamma.strata.product.deposit.type">ImmutableTermDepositConvention.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableTermDepositConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Sets the day count convention.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -1836,25 +1809,15 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">RatePaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RatePaymentPeriod.html#getDayCount--">getDayCount</a></span>()</code>
-<div class="block">Gets the day count convention.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">RateCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RateCalculation.html#getDayCount--">getDayCount</a></span>()</code>
-<div class="block">Gets the day count convention.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
 <td class="colLast"><span class="typeNameLabel">OvernightRateCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/OvernightRateCalculation.html#getDayCount--">getDayCount</a></span>()</code>
 <div class="block">Gets the day count convention.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">InflationRateCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/InflationRateCalculation.html#getDayCount--">getDayCount</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">FixedRateCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/FixedRateCalculation.html#getDayCount--">getDayCount</a></span>()</code>
+<div class="block">Gets the day count convention.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
@@ -1864,7 +1827,17 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FixedRateCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/FixedRateCalculation.html#getDayCount--">getDayCount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">RatePaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RatePaymentPeriod.html#getDayCount--">getDayCount</a></span>()</code>
+<div class="block">Gets the day count convention.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InflationRateCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/InflationRateCalculation.html#getDayCount--">getDayCount</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">RateCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RateCalculation.html#getDayCount--">getDayCount</a></span>()</code>
 <div class="block">Gets the day count convention.</div>
 </td>
 </tr>
@@ -1879,13 +1852,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">RatePaymentPeriod.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RatePaymentPeriod.Meta.html#dayCount--">dayCount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">OvernightRateCalculation.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/OvernightRateCalculation.Meta.html#dayCount--">dayCount</a></span>()</code>
 <div class="block">The meta-property for the <code>dayCount</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightRateCalculation.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/OvernightRateCalculation.Meta.html#dayCount--">dayCount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">FixedRateCalculation.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/FixedRateCalculation.Meta.html#dayCount--">dayCount</a></span>()</code>
 <div class="block">The meta-property for the <code>dayCount</code> property.</div>
 </td>
 </tr>
@@ -1897,7 +1870,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">FixedRateCalculation.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/FixedRateCalculation.Meta.html#dayCount--">dayCount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">RatePaymentPeriod.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RatePaymentPeriod.Meta.html#dayCount--">dayCount</a></span>()</code>
 <div class="block">The meta-property for the <code>dayCount</code> property.</div>
 </td>
 </tr>
@@ -1911,14 +1884,14 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/RatePaymentPeriod.Builder.html" title="class in com.opengamma.strata.product.swap">RatePaymentPeriod.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">RatePaymentPeriod.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RatePaymentPeriod.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/OvernightRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">OvernightRateCalculation.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightRateCalculation.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/OvernightRateCalculation.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
 <div class="block">Sets the day count convention.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/OvernightRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">OvernightRateCalculation.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightRateCalculation.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/OvernightRateCalculation.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/FixedRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">FixedRateCalculation.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FixedRateCalculation.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/FixedRateCalculation.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
 <div class="block">Sets the day count convention.</div>
 </td>
 </tr>
@@ -1929,8 +1902,8 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/FixedRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">FixedRateCalculation.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FixedRateCalculation.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/FixedRateCalculation.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/RatePaymentPeriod.Builder.html" title="class in com.opengamma.strata.product.swap">RatePaymentPeriod.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">RatePaymentPeriod.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RatePaymentPeriod.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
 <div class="block">Sets the day count convention.</div>
 </td>
 </tr>

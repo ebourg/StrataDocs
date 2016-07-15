@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -51,7 +51,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../com/opengamma/strata/market/curve/CurveNodeDate.html" title="class in com.opengamma.strata.market.curve"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/market/curve/CurveNodeClashAction.html" title="enum in com.opengamma.strata.market.curve"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?com/opengamma/strata/market/curve/CurveNode.html" target="_top">Frames</a></li>
@@ -129,32 +129,45 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveNode.html#date-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">date</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+    <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the date associated with the node.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/curve/CurveNodeDateOrder.html" title="class in com.opengamma.strata.market.curve">CurveNodeDateOrder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveNode.html#getDateOrder--">getDateOrder</a></span>()</code>
+<div class="block">Gets the date order rules that apply to this node within the curve.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveNode.html#getLabel--">getLabel</a></span>()</code>
 <div class="block">Gets the label to use for the node.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveNode.html#initialGuess-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">initialGuess</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
             <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;valueType)</code>
 <div class="block">Gets the initial guess used for calibrating the node.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/DatedParameterMetadata.html" title="interface in com.opengamma.strata.market.param">DatedParameterMetadata</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveNode.html#metadata-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">metadata</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
         <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Returns metadata for the node.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;? extends <a href="../../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;?&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveNode.html#requirements--">requirements</a></span>()</code>
 <div class="block">Determines the market data that is required by the node.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveNode.html#resolvedTrade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrade</a></span>(double&nbsp;quantity,
              <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
@@ -162,7 +175,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Creates a resolved trade representing the instrument at the node.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveNode.html#trade-double-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">trade</a></span>(double&nbsp;quantity,
      <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
@@ -185,6 +198,38 @@ var activeTableTab = "activeTableTab";
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="getLabel--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLabel</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getLabel()</pre>
+<div class="block">Gets the label to use for the node.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the label, not empty</dd>
+</dl>
+</li>
+</ul>
+<a name="getDateOrder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDateOrder</h4>
+<pre><a href="../../../../../com/opengamma/strata/market/curve/CurveNodeDateOrder.html" title="class in com.opengamma.strata.market.curve">CurveNodeDateOrder</a>&nbsp;getDateOrder()</pre>
+<div class="block">Gets the date order rules that apply to this node within the curve.
+ <p>
+ Each curve node has an associated date which defines the x-value in the curve,
+ available via <a href="../../../../../com/opengamma/strata/market/curve/CurveNode.html#date-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-"><code>date(LocalDate, ReferenceData)</code></a>. Restrictions may be placed
+ on the node to prevent it from being too close, before or after another node.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the date order rules</dd>
+</dl>
+</li>
+</ul>
 <a name="requirements--">
 <!--   -->
 </a>
@@ -198,6 +243,27 @@ var activeTableTab = "activeTableTab";
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>requirements for the market data needed to build a trade representing the instrument at the node</dd>
+</dl>
+</li>
+</ul>
+<a name="date-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>date</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+               <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
+<div class="block">Calculates the date associated with the node.
+ <p>
+ Each curve node has an associated date which defines the x-value in the curve.
+ This date is visible in the <a href="../../../../../com/opengamma/strata/market/param/DatedParameterMetadata.html" title="interface in com.opengamma.strata.market.param">parameter metadata</a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>valuationDate</code> - the valuation date used when calibrating the curve</dd>
+<dd><code>refData</code> - the reference data to use to resolve the trade</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the date associated with the node</dd>
 </dl>
 </li>
 </ul>
@@ -285,7 +351,7 @@ var activeTableTab = "activeTableTab";
 <a name="initialGuess-com.opengamma.strata.data.MarketData-com.opengamma.strata.market.ValueType-">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>initialGuess</h4>
 <pre>double&nbsp;initialGuess(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
@@ -305,20 +371,6 @@ var activeTableTab = "activeTableTab";
 <dd><code>valueType</code> - the type of y-value that the curve will contain</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the initial guess of the calibrated value</dd>
-</dl>
-</li>
-</ul>
-<a name="getLabel--">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>getLabel</h4>
-<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getLabel()</pre>
-<div class="block">Gets the label to use for the node.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the label, not empty</dd>
 </dl>
 </li>
 </ul>
@@ -352,7 +404,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../com/opengamma/strata/market/curve/CurveNodeDate.html" title="class in com.opengamma.strata.market.curve"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/market/curve/CurveNodeClashAction.html" title="enum in com.opengamma.strata.market.curve"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?com/opengamma/strata/market/curve/CurveNode.html" target="_top">Frames</a></li>

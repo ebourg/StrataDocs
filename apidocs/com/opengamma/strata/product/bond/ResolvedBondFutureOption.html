@@ -125,7 +125,11 @@ implements <a href="../../../../../com/opengamma/strata/product/ResolvedProduct.
  <p>
  A <code>ResolvedBondFutureOption</code> is bound to data that changes over time, such as holiday calendars.
  If the data changes, such as the addition of a new holiday, the resolved form will not be updated.
- Care must be taken when placing the resolved form in a cache or persistence layer.</div>
+ Care must be taken when placing the resolved form in a cache or persistence layer.
+ 
+ <h4>Price</h4>
+ Strata uses <i>decimal prices</i> for bond futures options in the trade model, pricers and market data.
+ This is coherent with the pricing of <a href="../../../../../com/opengamma/strata/product/bond/BondFuture.html" title="class in com.opengamma.strata.product.bond"><code>BondFuture</code></a>.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../serialized-form.html#com.opengamma.strata.product.bond.ResolvedBondFutureOption">Serialized Form</a></dd>
@@ -198,7 +202,7 @@ implements <a href="../../../../../com/opengamma/strata/product/ResolvedProduct.
 </td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/common/FutureOptionPremiumStyle.html" title="enum in com.opengamma.strata.product.common">FutureOptionPremiumStyle</a></code></td>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/option/FutureOptionPremiumStyle.html" title="enum in com.opengamma.strata.product.option">FutureOptionPremiumStyle</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html#getPremiumStyle--">getPremiumStyle</a></span>()</code>
 <div class="block">Gets the style of the option premium.</div>
 </td>
@@ -440,7 +444,7 @@ implements <a href="../../../../../com/opengamma/strata/product/ResolvedProduct.
 <ul class="blockList">
 <li class="blockList">
 <h4>getPremiumStyle</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/common/FutureOptionPremiumStyle.html" title="enum in com.opengamma.strata.product.common">FutureOptionPremiumStyle</a>&nbsp;getPremiumStyle()</pre>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/option/FutureOptionPremiumStyle.html" title="enum in com.opengamma.strata.product.option">FutureOptionPremiumStyle</a>&nbsp;getPremiumStyle()</pre>
 <div class="block">Gets the style of the option premium.
  <p>
  The two options are daily margining and upfront premium.</div>

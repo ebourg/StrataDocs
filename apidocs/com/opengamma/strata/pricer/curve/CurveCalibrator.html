@@ -146,10 +146,9 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/curve/CurveCalibrator.html#calibrate-com.opengamma.strata.market.curve.CurveGroupDefinition-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-java.util.Map-">calibrate</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&nbsp;curveGroupDefn,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/curve/CurveCalibrator.html#calibrate-com.opengamma.strata.market.curve.CurveGroupDefinition-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">calibrate</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&nbsp;curveGroupDefn,
          <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
-         <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData,
-         <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>,<a href="../../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&gt;&nbsp;timeSeries)</code>
+         <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Calibrates a single curve group, containing one or more curves.</div>
 </td>
 </tr>
@@ -318,7 +317,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </dl>
 </li>
 </ul>
-<a name="calibrate-com.opengamma.strata.market.curve.CurveGroupDefinition-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-java.util.Map-">
+<a name="calibrate-com.opengamma.strata.market.curve.CurveGroupDefinition-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -326,8 +325,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>calibrate</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>&nbsp;calibrate(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&nbsp;curveGroupDefn,
                                         <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
-                                        <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData,
-                                        <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>,<a href="../../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&gt;&nbsp;timeSeries)</pre>
+                                        <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
 <div class="block">Calibrates a single curve group, containing one or more curves.
  <p>
  The calibration is defined using <a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve"><code>CurveGroupDefinition</code></a>.
@@ -338,9 +336,8 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>curveGroupDefn</code> - the curve group definition</dd>
-<dd><code>marketData</code> - the market data required to build a trade for the instrument</dd>
+<dd><code>marketData</code> - the market data required to build a trade for the instrument, including time-series</dd>
 <dd><code>refData</code> - the reference data, used to resolve the trades</dd>
-<dd><code>timeSeries</code> - the time-series</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the rates provider resulting from the calibration</dd>
 </dl>

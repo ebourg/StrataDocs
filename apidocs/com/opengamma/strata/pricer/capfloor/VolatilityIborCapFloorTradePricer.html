@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -207,11 +207,19 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/VolatilityIborCapFloorTradePricer.html#presentValueSensitivityModelParamsVolatility-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">presentValueSensitivityModelParamsVolatility</a></span>(<a href="../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
+                                            <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                                            <a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates the present value volatility sensitivity of the Ibor cap/floor product.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/VolatilityIborCapFloorTradePricer.html#presentValueSensitivity-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">presentValueSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
-                       <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                       <a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a>&nbsp;volatilities)</code>
-<div class="block">Calculates the present value curve sensitivity of the Ibor cap/floor trade.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/VolatilityIborCapFloorTradePricer.html#presentValueSensitivityRates-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">presentValueSensitivityRates</a></span>(<a href="../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
+                            <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                            <a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates the present value rates sensitivity of the Ibor cap/floor trade.</div>
 </td>
 </tr>
 </table>
@@ -289,34 +297,61 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
                                         <a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the present value of the Ibor cap/floor trade.
  <p>
- The present value of the trade is the value on the valuation date.</div>
+ The present value of the trade is the value on the valuation date.
+ <p>
+ The cap/floor leg and pay leg are typically in the same currency, thus the
+ present value gamma is expressed as a single currency amount in most cases.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the Ibor cap/floor trade</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilities</code> - the caplet/floorlet volatilities</dd>
+<dd><code>volatilities</code> - the volatilities</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the present value</dd>
 </dl>
 </li>
 </ul>
-<a name="presentValueSensitivity-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">
+<a name="presentValueSensitivityRates-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>presentValueSensitivity</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&nbsp;presentValueSensitivity(<a href="../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
-                                                  <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                                  <a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a>&nbsp;volatilities)</pre>
-<div class="block">Calculates the present value curve sensitivity of the Ibor cap/floor trade.
+<h4>presentValueSensitivityRates</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&nbsp;presentValueSensitivityRates(<a href="../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
+                                                       <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                                                       <a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a>&nbsp;volatilities)</pre>
+<div class="block">Calculates the present value rates sensitivity of the Ibor cap/floor trade.
  <p>
- The present value sensitivity of the trade is the sensitivity of the present value to the underlying curves.</div>
+ The present value rates sensitivity of the trade is the sensitivity
+ of the present value to the underlying curves.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the Ibor cap/floor trade</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilities</code> - the caplet/floorlet volatilities</dd>
+<dd><code>volatilities</code> - the volatilities</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the present value sensitivity</dd>
+</dl>
+</li>
+</ul>
+<a name="presentValueSensitivityModelParamsVolatility-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>presentValueSensitivityModelParamsVolatility</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a>&nbsp;presentValueSensitivityModelParamsVolatility(<a href="../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
+                                                                            <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                                                                            <a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a>&nbsp;volatilities)</pre>
+<div class="block">Calculates the present value volatility sensitivity of the Ibor cap/floor product.
+ <p>
+ The present value volatility sensitivity of the product is the sensitivity
+ of the present value to the volatility values.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>trade</code> - the Ibor cap/floor trade</dd>
+<dd><code>ratesProvider</code> - the rates provider</dd>
+<dd><code>volatilities</code> - the volatilities</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the present value sensitivity</dd>
 </dl>
@@ -336,7 +371,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the Ibor cap/floor trade</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilities</code> - the caplet/floorlet volatilities</dd>
+<dd><code>volatilities</code> - the volatilities</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the currency exposure</dd>
 </dl>
@@ -356,7 +391,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the Ibor cap/floor trade</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilities</code> - the caplet/floorlet volatilities</dd>
+<dd><code>volatilities</code> - the volatilities</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the current cash</dd>
 </dl>

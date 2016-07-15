@@ -98,21 +98,6 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt">SmileDeltaTermStructure</a> in <a href="../../../../../../com/opengamma/strata/pricer/fxopt/package-summary.html">com.opengamma.strata.pricer.fxopt</a></h3>
-<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
-<caption><span>Subinterfaces of <a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt">SmileDeltaTermStructure</a> in <a href="../../../../../../com/opengamma/strata/pricer/fxopt/package-summary.html">com.opengamma.strata.pricer.fxopt</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Interface and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code>interface&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedSmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt">InterpolatedSmileDeltaTermStructure</a></span></code>
-<div class="block">An interpolated term structure of smile as used in Forex market.</div>
-</td>
-</tr>
-</tbody>
-</table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
 <caption><span>Classes in <a href="../../../../../../com/opengamma/strata/pricer/fxopt/package-summary.html">com.opengamma.strata.pricer.fxopt</a> that implement <a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt">SmileDeltaTermStructure</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -122,8 +107,71 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedSmileDeltaTermStructureStrikeInterpolation.html" title="class in com.opengamma.strata.pricer.fxopt">InterpolatedSmileDeltaTermStructureStrikeInterpolation</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html" title="class in com.opengamma.strata.pricer.fxopt">InterpolatedStrikeSmileDeltaTermStructure</a></span></code>
 <div class="block">An interpolated term structure of smiles as used in Forex market.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/fxopt/package-summary.html">com.opengamma.strata.pricer.fxopt</a> that return <a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt">SmileDeltaTermStructure</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt">SmileDeltaTermStructure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BlackFxOptionSmileVolatilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionSmileVolatilities.html#getSmile--">getSmile</a></span>()</code>
+<div class="block">Gets the volatility model.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt">SmileDeltaTermStructure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SmileDeltaTermStructure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html#withParameter-int-double-">withParameter</a></span>(int&nbsp;parameterIndex,
+             double&nbsp;newValue)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt">SmileDeltaTermStructure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SmileDeltaTermStructure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html#withPerturbation-com.opengamma.strata.market.param.ParameterPerturbation-">withPerturbation</a></span>(<a href="../../../../../../com/opengamma/strata/market/param/ParameterPerturbation.html" title="interface in com.opengamma.strata.market.param">ParameterPerturbation</a>&nbsp;perturbation)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/fxopt/package-summary.html">com.opengamma.strata.pricer.fxopt</a> that return types with arguments of type <a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt">SmileDeltaTermStructure</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt">SmileDeltaTermStructure</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">BlackFxOptionSmileVolatilities.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionSmileVolatilities.Meta.html#smile--">smile</a></span>()</code>
+<div class="block">The meta-property for the <code>smile</code> property.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/fxopt/package-summary.html">com.opengamma.strata.pricer.fxopt</a> with parameters of type <a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt">SmileDeltaTermStructure</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionSmileVolatilities.html" title="class in com.opengamma.strata.pricer.fxopt">BlackFxOptionSmileVolatilities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BlackFxOptionSmileVolatilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionSmileVolatilities.html#of-com.opengamma.strata.pricer.fxopt.FxOptionVolatilitiesName-com.opengamma.strata.basics.currency.CurrencyPair-java.time.ZonedDateTime-com.opengamma.strata.pricer.fxopt.SmileDeltaTermStructure-">of</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/fxopt/FxOptionVolatilitiesName.html" title="class in com.opengamma.strata.pricer.fxopt">FxOptionVolatilitiesName</a>&nbsp;name,
+  <a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyPair.html" title="class in com.opengamma.strata.basics.currency">CurrencyPair</a>&nbsp;currencyPair,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;valuationTime,
+  <a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt">SmileDeltaTermStructure</a>&nbsp;smile)</code>
+<div class="block">Obtains an instance based on a smile.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionSmileVolatilities.Builder.html" title="class in com.opengamma.strata.pricer.fxopt">BlackFxOptionSmileVolatilities.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BlackFxOptionSmileVolatilities.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionSmileVolatilities.Builder.html#smile-com.opengamma.strata.pricer.fxopt.SmileDeltaTermStructure-">smile</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt">SmileDeltaTermStructure</a>&nbsp;smile)</code>
+<div class="block">Sets the volatility model.</div>
 </td>
 </tr>
 </tbody>

@@ -388,7 +388,10 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondTrade.Builder.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBondTrade.Builder</a>&nbsp;price(double&nbsp;price)</pre>
 <div class="block">Sets the <i>clean</i> price at which the bond was traded.
  <p>
- The "clean" price excludes any accrued interest.</div>
+ The "clean" price excludes any accrued interest.
+ <p>
+ Strata uses <i>decimal prices</i> for bonds in the trade model, pricers and market data.
+ For example, a price of 99.32% is represented in Strata by 0.9932.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>price</code> - the new value</dd>

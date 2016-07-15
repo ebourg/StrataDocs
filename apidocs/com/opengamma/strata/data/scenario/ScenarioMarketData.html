@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":18,"i1":18,"i2":17,"i3":6,"i4":6,"i5":6,"i6":6,"i7":18,"i8":6,"i9":6,"i10":18,"i11":17,"i12":17,"i13":17,"i14":18,"i15":18,"i16":18,"i17":18};
+var methods = {"i0":18,"i1":18,"i2":17,"i3":6,"i4":6,"i5":6,"i6":6,"i7":18,"i8":6,"i9":6,"i10":6,"i11":18,"i12":17,"i13":17,"i14":17,"i15":18,"i16":18,"i17":18,"i18":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -51,7 +51,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioFxRateProvider.html" title="interface in com.opengamma.strata.data.scenario"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketDataBox.html" title="class in com.opengamma.strata.data.scenario"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketDataId.html" title="interface in com.opengamma.strata.data.scenario"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?com/opengamma/strata/data/scenario/ScenarioMarketData.html" target="_top">Frames</a></li>
@@ -196,18 +196,24 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i9" class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/data/ObservableId.html" title="interface in com.opengamma.strata.data">ObservableId</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html#getTimeSeriesIds--">getTimeSeriesIds</a></span>()</code>
+<div class="block">Gets the time-series identifiers.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html#getValuationDate--">getValuationDate</a></span>()</code>
 <div class="block">Gets a box that can provide the valuation date of each scenario.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;<a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;T&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html#getValue-com.opengamma.strata.data.MarketDataId-">getValue</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;T&gt;&nbsp;id)</code>
 <div class="block">Gets the market data value associated with the specified identifier.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html#of-int-java.time.LocalDate-java.util.Map-java.util.Map-">of</a></span>(int&nbsp;scenarioCount,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
@@ -216,14 +222,14 @@ var activeTableTab = "activeTableTab";
 <div class="block">Obtains an instance from a valuation date, map of values and time-series.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html#of-int-com.opengamma.strata.data.MarketData-">of</a></span>(int&nbsp;scenarioCount,
   <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData)</code>
 <div class="block">Obtains an instance by wrapping a single set of market data.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html#of-int-com.opengamma.strata.data.scenario.MarketDataBox-java.util.Map-java.util.Map-">of</a></span>(int&nbsp;scenarioCount,
   <a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&gt;&nbsp;valuationDate,
@@ -232,19 +238,19 @@ var activeTableTab = "activeTableTab";
 <div class="block">Obtains an instance from a valuation date, map of values and time-series.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html#scenario-int-">scenario</a></span>(int&nbsp;scenarioIndex)</code>
 <div class="block">Returns market data for a single scenario.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>default <a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html#scenarios--">scenarios</a></span>()</code>
 <div class="block">Returns a stream of market data, one for each scenario.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;<a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html#withPerturbation-com.opengamma.strata.data.MarketDataId-com.opengamma.strata.data.scenario.ScenarioPerturbation-com.opengamma.strata.basics.ReferenceData-">withPerturbation</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;T&gt;&nbsp;id,
                 <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html" title="interface in com.opengamma.strata.data.scenario">ScenarioPerturbation</a>&lt;T&gt;&nbsp;perturbation,
@@ -252,7 +258,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Returns a copy of this market data with the specified value perturbed.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;<a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html#withValue-com.opengamma.strata.data.MarketDataId-com.opengamma.strata.data.scenario.MarketDataBox-">withValue</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;T&gt;&nbsp;id,
          <a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;T&gt;&nbsp;value)</code>
@@ -583,6 +589,23 @@ var activeTableTab = "activeTableTab";
 </dl>
 </li>
 </ul>
+<a name="getTimeSeriesIds--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTimeSeriesIds</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/data/ObservableId.html" title="interface in com.opengamma.strata.data">ObservableId</a>&gt;&nbsp;getTimeSeriesIds()</pre>
+<div class="block">Gets the time-series identifiers.
+ <p>
+ Time series are not affected by scenarios, therefore there is a single time-series
+ for each identifier which is shared between all scenarios.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the set of observable identifiers</dd>
+</dl>
+</li>
+</ul>
 <a name="getTimeSeries-com.opengamma.strata.data.ObservableId-">
 <!--   -->
 </a>
@@ -697,7 +720,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioFxRateProvider.html" title="interface in com.opengamma.strata.data.scenario"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketDataBox.html" title="class in com.opengamma.strata.data.scenario"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketDataId.html" title="interface in com.opengamma.strata.data.scenario"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?com/opengamma/strata/data/scenario/ScenarioMarketData.html" target="_top">Frames</a></li>

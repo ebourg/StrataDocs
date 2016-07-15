@@ -155,8 +155,8 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/swap/DiscountingSwapLegPricer.html#DiscountingSwapLegPricer-com.opengamma.strata.pricer.swap.PaymentPeriodPricer-com.opengamma.strata.pricer.swap.PaymentEventPricer-">DiscountingSwapLegPricer</a></span>(<a href="../../../../../com/opengamma/strata/pricer/swap/PaymentPeriodPricer.html" title="interface in com.opengamma.strata.pricer.swap">PaymentPeriodPricer</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">PaymentPeriod</a>&gt;&nbsp;paymentPeriodPricer,
-                        <a href="../../../../../com/opengamma/strata/pricer/swap/PaymentEventPricer.html" title="interface in com.opengamma.strata.pricer.swap">PaymentEventPricer</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/PaymentEvent.html" title="interface in com.opengamma.strata.product.swap">PaymentEvent</a>&gt;&nbsp;paymentEventPricer)</code>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/swap/DiscountingSwapLegPricer.html#DiscountingSwapLegPricer-com.opengamma.strata.pricer.swap.SwapPaymentPeriodPricer-com.opengamma.strata.pricer.swap.SwapPaymentEventPricer-">DiscountingSwapLegPricer</a></span>(<a href="../../../../../com/opengamma/strata/pricer/swap/SwapPaymentPeriodPricer.html" title="interface in com.opengamma.strata.pricer.swap">SwapPaymentPeriodPricer</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentPeriod</a>&gt;&nbsp;paymentPeriodPricer,
+                        <a href="../../../../../com/opengamma/strata/pricer/swap/SwapPaymentEventPricer.html" title="interface in com.opengamma.strata.pricer.swap">SwapPaymentEventPricer</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentEvent</a>&gt;&nbsp;paymentEventPricer)</code>
 <div class="block">Creates an instance.</div>
 </td>
 </tr>
@@ -279,13 +279,13 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr id="i14" class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/swap/PaymentEventPricer.html" title="interface in com.opengamma.strata.pricer.swap">PaymentEventPricer</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/PaymentEvent.html" title="interface in com.opengamma.strata.product.swap">PaymentEvent</a>&gt;</code></td>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/swap/SwapPaymentEventPricer.html" title="interface in com.opengamma.strata.pricer.swap">SwapPaymentEventPricer</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentEvent</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/swap/DiscountingSwapLegPricer.html#getEventPricer--">getEventPricer</a></span>()</code>
 <div class="block">Gets the underlying leg pricer.</div>
 </td>
 </tr>
 <tr id="i15" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/swap/PaymentPeriodPricer.html" title="interface in com.opengamma.strata.pricer.swap">PaymentPeriodPricer</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">PaymentPeriod</a>&gt;</code></td>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/swap/SwapPaymentPeriodPricer.html" title="interface in com.opengamma.strata.pricer.swap">SwapPaymentPeriodPricer</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentPeriod</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/swap/DiscountingSwapLegPricer.html#getPeriodPricer--">getPeriodPricer</a></span>()</code>
 <div class="block">Gets the underlying leg pricer.</div>
 </td>
@@ -366,19 +366,19 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="DiscountingSwapLegPricer-com.opengamma.strata.pricer.swap.PaymentPeriodPricer-com.opengamma.strata.pricer.swap.PaymentEventPricer-">
+<a name="DiscountingSwapLegPricer-com.opengamma.strata.pricer.swap.SwapPaymentPeriodPricer-com.opengamma.strata.pricer.swap.SwapPaymentEventPricer-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>DiscountingSwapLegPricer</h4>
-<pre>public&nbsp;DiscountingSwapLegPricer(<a href="../../../../../com/opengamma/strata/pricer/swap/PaymentPeriodPricer.html" title="interface in com.opengamma.strata.pricer.swap">PaymentPeriodPricer</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">PaymentPeriod</a>&gt;&nbsp;paymentPeriodPricer,
-                                <a href="../../../../../com/opengamma/strata/pricer/swap/PaymentEventPricer.html" title="interface in com.opengamma.strata.pricer.swap">PaymentEventPricer</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/PaymentEvent.html" title="interface in com.opengamma.strata.product.swap">PaymentEvent</a>&gt;&nbsp;paymentEventPricer)</pre>
+<pre>public&nbsp;DiscountingSwapLegPricer(<a href="../../../../../com/opengamma/strata/pricer/swap/SwapPaymentPeriodPricer.html" title="interface in com.opengamma.strata.pricer.swap">SwapPaymentPeriodPricer</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentPeriod</a>&gt;&nbsp;paymentPeriodPricer,
+                                <a href="../../../../../com/opengamma/strata/pricer/swap/SwapPaymentEventPricer.html" title="interface in com.opengamma.strata.pricer.swap">SwapPaymentEventPricer</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentEvent</a>&gt;&nbsp;paymentEventPricer)</pre>
 <div class="block">Creates an instance.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>paymentPeriodPricer</code> - the pricer for <a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html" title="interface in com.opengamma.strata.product.swap"><code>PaymentPeriod</code></a></dd>
-<dd><code>paymentEventPricer</code> - the pricer for <a href="../../../../../com/opengamma/strata/product/swap/PaymentEvent.html" title="interface in com.opengamma.strata.product.swap"><code>PaymentEvent</code></a></dd>
+<dd><code>paymentPeriodPricer</code> - the pricer for <a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html" title="interface in com.opengamma.strata.product.swap"><code>SwapPaymentPeriod</code></a></dd>
+<dd><code>paymentEventPricer</code> - the pricer for <a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html" title="interface in com.opengamma.strata.product.swap"><code>SwapPaymentEvent</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -396,7 +396,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getPeriodPricer</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/swap/PaymentPeriodPricer.html" title="interface in com.opengamma.strata.pricer.swap">PaymentPeriodPricer</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">PaymentPeriod</a>&gt;&nbsp;getPeriodPricer()</pre>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/swap/SwapPaymentPeriodPricer.html" title="interface in com.opengamma.strata.pricer.swap">SwapPaymentPeriodPricer</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentPeriod</a>&gt;&nbsp;getPeriodPricer()</pre>
 <div class="block">Gets the underlying leg pricer.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -410,7 +410,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getEventPricer</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/swap/PaymentEventPricer.html" title="interface in com.opengamma.strata.pricer.swap">PaymentEventPricer</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/PaymentEvent.html" title="interface in com.opengamma.strata.product.swap">PaymentEvent</a>&gt;&nbsp;getEventPricer()</pre>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/swap/SwapPaymentEventPricer.html" title="interface in com.opengamma.strata.pricer.swap">SwapPaymentEventPricer</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentEvent</a>&gt;&nbsp;getEventPricer()</pre>
 <div class="block">Gets the underlying leg pricer.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -522,7 +522,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
  The quantity is also known as "physical annuity" or "level".
  <p>
  Each period must not have FX reset or compounding.
- They must not be of type <a href="../../../../../com/opengamma/strata/product/swap/KnownAmountPaymentPeriod.html" title="class in com.opengamma.strata.product.swap"><code>KnownAmountPaymentPeriod</code></a>.</div>
+ They must not be of type <a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapPaymentPeriod.html" title="class in com.opengamma.strata.product.swap"><code>KnownAmountSwapPaymentPeriod</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>leg</code> - the swap leg</dd>
@@ -614,7 +614,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
  The quantity is also known as "physical annuity" or "level".
  <p>
  Each period must not have FX reset or compounding.
- They must not be of type <a href="../../../../../com/opengamma/strata/product/swap/KnownAmountPaymentPeriod.html" title="class in com.opengamma.strata.product.swap"><code>KnownAmountPaymentPeriod</code></a>.</div>
+ They must not be of type <a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapPaymentPeriod.html" title="class in com.opengamma.strata.product.swap"><code>KnownAmountSwapPaymentPeriod</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>fixedLeg</code> - the swap fixed leg</dd>

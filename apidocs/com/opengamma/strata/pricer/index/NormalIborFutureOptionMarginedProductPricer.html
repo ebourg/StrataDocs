@@ -101,12 +101,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../../com/opengamma/strata/pricer/index/IborFutureOptionMarginedProductPricer.html" title="class in com.opengamma.strata.pricer.index">com.opengamma.strata.pricer.index.IborFutureOptionMarginedProductPricer</a></li>
-<li>
-<ul class="inheritance">
 <li>com.opengamma.strata.pricer.index.NormalIborFutureOptionMarginedProductPricer</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -116,8 +111,21 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public class <span class="typeNameLabel">NormalIborFutureOptionMarginedProductPricer</span>
-extends <a href="../../../../../com/opengamma/strata/pricer/index/IborFutureOptionMarginedProductPricer.html" title="class in com.opengamma.strata.pricer.index">IborFutureOptionMarginedProductPricer</a></pre>
-<div class="block">Pricer of options on Ibor future with a normal model on the underlying future price.</div>
+extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">Pricer of options on Ibor future with a normal model on the underlying future price.
+ <p>
+ This provides the ability to price an Ibor future option.
+ The option must be based on <a href="../../../../../com/opengamma/strata/product/option/FutureOptionPremiumStyle.html#DAILY_MARGIN">daily margin</a>.
+ 
+ <h4>Price</h4>
+ The price of an Ibor future option is based on the price of the underlying future, the volatility
+ and the time to expiry. The price of the at-the-money option tends to zero as expiry approaches.
+ <p>
+ Strata uses <i>decimal prices</i> for Ibor future options in the trade model, pricers and market data.
+ The decimal price is based on the decimal rate equivalent to the percentage.
+ For example, an option price of 0.2 is related to a futures price of 99.32 that implies an
+ interest rate of 0.68%. Strata represents the price of the future as 0.9932 and thus
+ represents the price of the option as 0.002.</div>
 </li>
 </ul>
 </div>
@@ -214,48 +222,41 @@ extends <a href="../../../../../com/opengamma/strata/pricer/index/IborFutureOpti
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/index/IborFutureOptionSensitivity.html" title="class in com.opengamma.strata.pricer.index">IborFutureOptionSensitivity</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionMarginedProductPricer.html#priceSensitivityNormalVolatility-com.opengamma.strata.product.index.ResolvedIborFutureOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.index.NormalIborFutureOptionVolatilities-">priceSensitivityNormalVolatility</a></span>(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption</a>&nbsp;futureOption,
-                                <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                <a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.index">NormalIborFutureOptionVolatilities</a>&nbsp;volatilities)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionMarginedProductPricer.html#priceSensitivityModelParamsVolatility-com.opengamma.strata.product.index.ResolvedIborFutureOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.index.NormalIborFutureOptionVolatilities-">priceSensitivityModelParamsVolatility</a></span>(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption</a>&nbsp;futureOption,
+                                     <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                                     <a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.index">NormalIborFutureOptionVolatilities</a>&nbsp;volatilities)</code>
 <div class="block">Calculates the price sensitivity to the normal volatility used for the pricing of the Ibor future option.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/index/IborFutureOptionSensitivity.html" title="class in com.opengamma.strata.pricer.index">IborFutureOptionSensitivity</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionMarginedProductPricer.html#priceSensitivityNormalVolatility-com.opengamma.strata.product.index.ResolvedIborFutureOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.index.NormalIborFutureOptionVolatilities-double-">priceSensitivityNormalVolatility</a></span>(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption</a>&nbsp;futureOption,
-                                <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                <a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.index">NormalIborFutureOptionVolatilities</a>&nbsp;volatilities,
-                                double&nbsp;futurePrice)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionMarginedProductPricer.html#priceSensitivityModelParamsVolatility-com.opengamma.strata.product.index.ResolvedIborFutureOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.index.NormalIborFutureOptionVolatilities-double-">priceSensitivityModelParamsVolatility</a></span>(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption</a>&nbsp;futureOption,
+                                     <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                                     <a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.index">NormalIborFutureOptionVolatilities</a>&nbsp;volatilities,
+                                     double&nbsp;futurePrice)</code>
 <div class="block">Calculates the price sensitivity to the normal volatility used for the pricing of the Ibor future option
  based on the price of the underlying future.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionMarginedProductPricer.html#priceSensitivityStickyStrike-com.opengamma.strata.product.index.ResolvedIborFutureOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.index.NormalIborFutureOptionVolatilities-">priceSensitivityStickyStrike</a></span>(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption</a>&nbsp;futureOption,
-                            <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                            <a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.index">NormalIborFutureOptionVolatilities</a>&nbsp;volatilities)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionMarginedProductPricer.html#priceSensitivityRatesStickyStrike-com.opengamma.strata.product.index.ResolvedIborFutureOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.index.NormalIborFutureOptionVolatilities-">priceSensitivityRatesStickyStrike</a></span>(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption</a>&nbsp;futureOption,
+                                 <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                                 <a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.index">NormalIborFutureOptionVolatilities</a>&nbsp;volatilities)</code>
 <div class="block">Calculates the price sensitivity of the Ibor future option product based on curves.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionMarginedProductPricer.html#priceSensitivityStickyStrike-com.opengamma.strata.product.index.ResolvedIborFutureOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.index.NormalIborFutureOptionVolatilities-double-">priceSensitivityStickyStrike</a></span>(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption</a>&nbsp;futureOption,
-                            <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                            <a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.index">NormalIborFutureOptionVolatilities</a>&nbsp;volatilities,
-                            double&nbsp;futurePrice)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionMarginedProductPricer.html#priceSensitivityRatesStickyStrike-com.opengamma.strata.product.index.ResolvedIborFutureOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.index.NormalIborFutureOptionVolatilities-double-">priceSensitivityRatesStickyStrike</a></span>(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption</a>&nbsp;futureOption,
+                                 <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                                 <a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.index">NormalIborFutureOptionVolatilities</a>&nbsp;volatilities,
+                                 double&nbsp;futurePrice)</code>
 <div class="block">Calculates the price sensitivity of the Ibor future option product
  based on the price of the underlying future.</div>
 </td>
 </tr>
 </table>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.pricer.index.IborFutureOptionMarginedProductPricer">
-<!--   -->
-</a>
-<h3>Methods inherited from class&nbsp;com.opengamma.strata.pricer.index.<a href="../../../../../com/opengamma/strata/pricer/index/IborFutureOptionMarginedProductPricer.html" title="class in com.opengamma.strata.pricer.index">IborFutureOptionMarginedProductPricer</a></h3>
-<code><a href="../../../../../com/opengamma/strata/pricer/index/IborFutureOptionMarginedProductPricer.html#marginIndex-com.opengamma.strata.product.index.ResolvedIborFutureOption-double-">marginIndex</a>, <a href="../../../../../com/opengamma/strata/pricer/index/IborFutureOptionMarginedProductPricer.html#marginIndexSensitivity-com.opengamma.strata.product.index.ResolvedIborFutureOption-com.opengamma.strata.market.sensitivity.PointSensitivities-">marginIndexSensitivity</a></code></li>
-</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
@@ -360,7 +361,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/index/IborFutureOpti
 <dd><code>futureOption</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
 <dd><code>volatilities</code> - the volatilities</dd>
-<dd><code>futurePrice</code> - the price of the underlying future</dd>
+<dd><code>futurePrice</code> - the price of the underlying future, in decimal form</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the price of the product, in decimal form</dd>
 </dl>
@@ -411,21 +412,21 @@ extends <a href="../../../../../com/opengamma/strata/pricer/index/IborFutureOpti
 <dd><code>futureOption</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
 <dd><code>volatilities</code> - the volatilities</dd>
-<dd><code>futurePrice</code> - the price of the underlying future</dd>
+<dd><code>futurePrice</code> - the price of the underlying future, in decimal form</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the price curve sensitivity of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="priceSensitivityStickyStrike-com.opengamma.strata.product.index.ResolvedIborFutureOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.index.NormalIborFutureOptionVolatilities-">
+<a name="priceSensitivityRatesStickyStrike-com.opengamma.strata.product.index.ResolvedIborFutureOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.index.NormalIborFutureOptionVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>priceSensitivityStickyStrike</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&nbsp;priceSensitivityStickyStrike(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption</a>&nbsp;futureOption,
-                                                       <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                                       <a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.index">NormalIborFutureOptionVolatilities</a>&nbsp;volatilities)</pre>
+<h4>priceSensitivityRatesStickyStrike</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&nbsp;priceSensitivityRatesStickyStrike(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption</a>&nbsp;futureOption,
+                                                            <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                                                            <a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.index">NormalIborFutureOptionVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the price sensitivity of the Ibor future option product based on curves.
  <p>
  The price sensitivity of the product is the sensitivity of the price to the underlying curves.
@@ -442,16 +443,16 @@ extends <a href="../../../../../com/opengamma/strata/pricer/index/IborFutureOpti
 </dl>
 </li>
 </ul>
-<a name="priceSensitivityStickyStrike-com.opengamma.strata.product.index.ResolvedIborFutureOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.index.NormalIborFutureOptionVolatilities-double-">
+<a name="priceSensitivityRatesStickyStrike-com.opengamma.strata.product.index.ResolvedIborFutureOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.index.NormalIborFutureOptionVolatilities-double-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>priceSensitivityStickyStrike</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&nbsp;priceSensitivityStickyStrike(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption</a>&nbsp;futureOption,
-                                                       <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                                       <a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.index">NormalIborFutureOptionVolatilities</a>&nbsp;volatilities,
-                                                       double&nbsp;futurePrice)</pre>
+<h4>priceSensitivityRatesStickyStrike</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&nbsp;priceSensitivityRatesStickyStrike(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption</a>&nbsp;futureOption,
+                                                            <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                                                            <a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.index">NormalIborFutureOptionVolatilities</a>&nbsp;volatilities,
+                                                            double&nbsp;futurePrice)</pre>
 <div class="block">Calculates the price sensitivity of the Ibor future option product
  based on the price of the underlying future.
  <p>
@@ -462,21 +463,21 @@ extends <a href="../../../../../com/opengamma/strata/pricer/index/IborFutureOpti
 <dd><code>futureOption</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
 <dd><code>volatilities</code> - the volatilities</dd>
-<dd><code>futurePrice</code> - the price of the underlying future</dd>
+<dd><code>futurePrice</code> - the price of the underlying future, in decimal form</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the price curve sensitivity of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="priceSensitivityNormalVolatility-com.opengamma.strata.product.index.ResolvedIborFutureOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.index.NormalIborFutureOptionVolatilities-">
+<a name="priceSensitivityModelParamsVolatility-com.opengamma.strata.product.index.ResolvedIborFutureOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.index.NormalIborFutureOptionVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>priceSensitivityNormalVolatility</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/index/IborFutureOptionSensitivity.html" title="class in com.opengamma.strata.pricer.index">IborFutureOptionSensitivity</a>&nbsp;priceSensitivityNormalVolatility(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption</a>&nbsp;futureOption,
-                                                                    <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                                                    <a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.index">NormalIborFutureOptionVolatilities</a>&nbsp;volatilities)</pre>
+<h4>priceSensitivityModelParamsVolatility</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/index/IborFutureOptionSensitivity.html" title="class in com.opengamma.strata.pricer.index">IborFutureOptionSensitivity</a>&nbsp;priceSensitivityModelParamsVolatility(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption</a>&nbsp;futureOption,
+                                                                         <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                                                                         <a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.index">NormalIborFutureOptionVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the price sensitivity to the normal volatility used for the pricing of the Ibor future option.
  <p>
  This sensitivity is also called the <i>price normal vega</i>.
@@ -492,16 +493,16 @@ extends <a href="../../../../../com/opengamma/strata/pricer/index/IborFutureOpti
 </dl>
 </li>
 </ul>
-<a name="priceSensitivityNormalVolatility-com.opengamma.strata.product.index.ResolvedIborFutureOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.index.NormalIborFutureOptionVolatilities-double-">
+<a name="priceSensitivityModelParamsVolatility-com.opengamma.strata.product.index.ResolvedIborFutureOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.index.NormalIborFutureOptionVolatilities-double-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>priceSensitivityNormalVolatility</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/index/IborFutureOptionSensitivity.html" title="class in com.opengamma.strata.pricer.index">IborFutureOptionSensitivity</a>&nbsp;priceSensitivityNormalVolatility(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption</a>&nbsp;futureOption,
-                                                                    <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                                                    <a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.index">NormalIborFutureOptionVolatilities</a>&nbsp;volatilities,
-                                                                    double&nbsp;futurePrice)</pre>
+<h4>priceSensitivityModelParamsVolatility</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/index/IborFutureOptionSensitivity.html" title="class in com.opengamma.strata.pricer.index">IborFutureOptionSensitivity</a>&nbsp;priceSensitivityModelParamsVolatility(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption</a>&nbsp;futureOption,
+                                                                         <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                                                                         <a href="../../../../../com/opengamma/strata/pricer/index/NormalIborFutureOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.index">NormalIborFutureOptionVolatilities</a>&nbsp;volatilities,
+                                                                         double&nbsp;futurePrice)</pre>
 <div class="block">Calculates the price sensitivity to the normal volatility used for the pricing of the Ibor future option
  based on the price of the underlying future.
  <p>
@@ -511,7 +512,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/index/IborFutureOpti
 <dd><code>futureOption</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
 <dd><code>volatilities</code> - the volatilities</dd>
-<dd><code>futurePrice</code> - the underlying future price</dd>
+<dd><code>futurePrice</code> - the underlying future price, in decimal form</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the sensitivity</dd>
 </dl>

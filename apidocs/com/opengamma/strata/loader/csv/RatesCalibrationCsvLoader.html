@@ -138,7 +138,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
  <p>
  The third file is the curve calibration nodes file.
  This file has the following header row:<br />
- <code>Curve Name,Label,Symbology,Ticker,Field Name,Type,Convention,Time,Spread</code>.
+ <code>Curve Name,Label,Symbology,Ticker,Field Name,Type,Convention,Time,Date,Min Gap,Clash Action,Spread</code>.
  <ul>
  <li>The 'Curve Name' column is the name of the curve.
  <li>The 'Label' column is the label used to refer to the node.
@@ -149,10 +149,13 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
  <li>The 'Type' column is the type of the instrument, such as "FRA" or "OIS".
  <li>The 'Convention' column is the name of the convention to use.
  <li>The 'Time' column is the description of the time, such as "1Y" for a 1 year swap, or "3Mx6M" for a FRA.
- <li>The 'Spread' column is the spread to add to the instrument.
+ <li>The optional 'Date' column is the date to use for the node, defaults to "End", but can be
+  set to "LastFixing" or a yyyy-MM-dd date.
+ <li>The optional 'Min Gap' column is the minimum gap between this node and the adjacent nodes.
+ <li>The optional 'Clash Action' column is the action to perform if the nodes are closer than the minimum gap
+  or in the wrong order, defaults to "Exception", but can be set to "DropThis" or "DropOther".
+ <li>The optional 'Spread' column is the spread to add to the instrument.
  </ul>
- <p>
- Note that the three FX fields are only needed if specifying a cross-currency product.
  <p>
  Each curve must be contained entirely within a single file, but each file may contain more than
  one curve. The curve points do not need to be ordered.</div>
@@ -175,18 +178,18 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&gt;</code></td>
+<td class="colFirst"><code>static <a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupName.html" title="class in com.opengamma.strata.market.curve">CurveGroupName</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/RatesCalibrationCsvLoader.html#load-com.opengamma.strata.collect.io.ResourceLocator-com.opengamma.strata.collect.io.ResourceLocator-java.util.Collection-">load</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;groupsResource,
     <a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;settingsResource,
-    <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&gt;&nbsp;curveResources)</code>
+    <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&gt;&nbsp;curveNodeResources)</code>
 <div class="block">Loads one or more CSV format curve calibration files.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&gt;</code></td>
+<td class="colFirst"><code>static <a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupName.html" title="class in com.opengamma.strata.market.curve">CurveGroupName</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/RatesCalibrationCsvLoader.html#load-com.opengamma.strata.collect.io.ResourceLocator-com.opengamma.strata.collect.io.ResourceLocator-com.opengamma.strata.collect.io.ResourceLocator...-">load</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;groupsResource,
     <a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;settingsResource,
-    <a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>...&nbsp;curveResources)</code>
+    <a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>...&nbsp;curveNodeResources)</code>
 <div class="block">Loads one or more CSV format curve calibration files.</div>
 </td>
 </tr>
@@ -218,9 +221,9 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>load</h4>
-<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&gt;&nbsp;load(<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;groupsResource,
-                                              <a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;settingsResource,
-                                              <a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>...&nbsp;curveResources)</pre>
+<pre>public static&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupName.html" title="class in com.opengamma.strata.market.curve">CurveGroupName</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&gt;&nbsp;load(<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;groupsResource,
+                                                                     <a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;settingsResource,
+                                                                     <a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>...&nbsp;curveNodeResources)</pre>
 <div class="block">Loads one or more CSV format curve calibration files.
  <p>
  If the files contain a duplicate entry an exception will be thrown.</div>
@@ -228,9 +231,9 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>groupsResource</code> - the curve groups CSV resource</dd>
 <dd><code>settingsResource</code> - the curve settings CSV resource</dd>
-<dd><code>curveResources</code> - the CSV resources for curves</dd>
+<dd><code>curveNodeResources</code> - the CSV resources for curve nodes</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the loaded curves, mapped by an identifying key</dd>
+<dd>the group definitions, mapped by name</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the files contain a duplicate entry</dd>
 </dl>
@@ -242,9 +245,9 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>load</h4>
-<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&gt;&nbsp;load(<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;groupsResource,
-                                              <a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;settingsResource,
-                                              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&gt;&nbsp;curveResources)</pre>
+<pre>public static&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupName.html" title="class in com.opengamma.strata.market.curve">CurveGroupName</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&gt;&nbsp;load(<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;groupsResource,
+                                                                     <a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;settingsResource,
+                                                                     <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&gt;&nbsp;curveNodeResources)</pre>
 <div class="block">Loads one or more CSV format curve calibration files.
  <p>
  If the files contain a duplicate entry an exception will be thrown.</div>
@@ -252,9 +255,9 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>groupsResource</code> - the curve groups CSV resource</dd>
 <dd><code>settingsResource</code> - the curve settings CSV resource</dd>
-<dd><code>curveResources</code> - the CSV resources for curves</dd>
+<dd><code>curveNodeResources</code> - the CSV resources for curve nodes</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the loaded curves, mapped by an identifying key</dd>
+<dd>the group definitions, mapped by name</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the files contain a duplicate entry</dd>
 </dl>

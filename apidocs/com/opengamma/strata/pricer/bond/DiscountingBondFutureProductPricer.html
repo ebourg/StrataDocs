@@ -101,12 +101,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFutureProductPricer.html" title="class in com.opengamma.strata.pricer.bond">com.opengamma.strata.pricer.bond.AbstractBondFutureProductPricer</a></li>
-<li>
-<ul class="inheritance">
 <li>com.opengamma.strata.pricer.bond.DiscountingBondFutureProductPricer</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -116,10 +111,15 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">DiscountingBondFutureProductPricer</span>
-extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFutureProductPricer.html" title="class in com.opengamma.strata.pricer.bond">AbstractBondFutureProductPricer</a></pre>
+extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Pricer for for bond future products.
  <p>
- This function provides the ability to price a <a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFuture.html" title="class in com.opengamma.strata.product.bond"><code>ResolvedBondFuture</code></a>.</div>
+ This function provides the ability to price a <a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFuture.html" title="class in com.opengamma.strata.product.bond"><code>ResolvedBondFuture</code></a>.
+ 
+ <h4>Price</h4>
+ Strata uses <i>decimal prices</i> for bond futures in the trade model, pricers and market data.
+ This is coherent with the pricing of <a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBond.html" title="class in com.opengamma.strata.product.bond"><code>FixedCouponBond</code></a>. The bond futures delivery is a bond
+ for an amount computed from the bond future price, a conversion factor and the accrued interest.</div>
 </li>
 </ul>
 </div>
@@ -214,13 +214,6 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFut
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.pricer.bond.AbstractBondFutureProductPricer">
-<!--   -->
-</a>
-<h3>Methods inherited from class&nbsp;com.opengamma.strata.pricer.bond.<a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFutureProductPricer.html" title="class in com.opengamma.strata.pricer.bond">AbstractBondFutureProductPricer</a></h3>
-<code><a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFutureProductPricer.html#marginIndex-com.opengamma.strata.product.bond.ResolvedBondFuture-double-">marginIndex</a>, <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFutureProductPricer.html#marginIndexSensitivity-com.opengamma.strata.product.bond.ResolvedBondFuture-com.opengamma.strata.market.sensitivity.PointSensitivities-">marginIndexSensitivity</a></code></li>
-</ul>
-<ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
@@ -291,7 +284,10 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFut
                     <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider)</pre>
 <div class="block">Calculates the price of the bond future product.
  <p>
- The price of the product is the price on the valuation date.</div>
+ The price of the product is the price on the valuation date.
+ <p>
+ Strata uses <i>decimal prices</i> for bond futures. This is coherent with the pricing of <a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBond.html" title="class in com.opengamma.strata.product.bond"><code>FixedCouponBond</code></a>.
+ For example, a price of 99.32% is represented in Strata by 0.9932.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>future</code> - the future</dd>
@@ -317,7 +313,10 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFut
  The price of the product is the price on the valuation date.
  <p>
  The z-spread is a parallel shift applied to continuously compounded rates or periodic compounded rates 
- of the issuer discounting curve.</div>
+ of the issuer discounting curve.
+ <p>
+ Strata uses <i>decimal prices</i> for bond futures. This is coherent with the pricing of <a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBond.html" title="class in com.opengamma.strata.product.bond"><code>FixedCouponBond</code></a>.
+ For example, a price of 99.32% is represented in Strata by 0.9932.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>future</code> - the future</dd>

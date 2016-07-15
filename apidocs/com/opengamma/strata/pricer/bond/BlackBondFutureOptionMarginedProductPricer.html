@@ -50,7 +50,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFutureTradePricer.html" title="class in com.opengamma.strata.pricer.bond"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureExpiryLogMoneynessVolatilities.Meta.html" title="class in com.opengamma.strata.pricer.bond"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedTradePricer.html" title="class in com.opengamma.strata.pricer.bond"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -101,12 +101,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptionMarginedProductPricer.html" title="class in com.opengamma.strata.pricer.bond">com.opengamma.strata.pricer.bond.BondFutureOptionMarginedProductPricer</a></li>
-<li>
-<ul class="inheritance">
 <li>com.opengamma.strata.pricer.bond.BlackBondFutureOptionMarginedProductPricer</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -116,8 +111,12 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">BlackBondFutureOptionMarginedProductPricer</span>
-extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptionMarginedProductPricer.html" title="class in com.opengamma.strata.pricer.bond">BondFutureOptionMarginedProductPricer</a></pre>
-<div class="block">Pricer of options on bond future with a lognormal model on the underlying future price.</div>
+extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">Pricer of options on bond future with a log-normal model on the underlying future price.
+ 
+ <h4>Price</h4>
+ Strata uses <i>decimal prices</i> for bond futures options in the trade model, pricers and market data.
+ This is coherent with the pricing of <a href="../../../../../com/opengamma/strata/product/bond/BondFuture.html" title="class in com.opengamma.strata.product.bond"><code>BondFuture</code></a>.</div>
 </li>
 </ul>
 </div>
@@ -178,51 +177,51 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#deltaStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-">deltaStickyStrike</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#deltaStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-">deltaStickyStrike</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
                  <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                 <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider)</code>
+                 <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities)</code>
 <div class="block">Calculates the delta of the bond future option product.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#deltaStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-double-">deltaStickyStrike</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#deltaStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-double-">deltaStickyStrike</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
                  <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                 <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider,
+                 <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities,
                  double&nbsp;futurePrice)</code>
 <div class="block">Calculates the delta of the bond future option product based on the price of the underlying future.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#gammaStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-">gammaStickyStrike</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#gammaStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-">gammaStickyStrike</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
                  <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                 <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider)</code>
+                 <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities)</code>
 <div class="block">Calculates the gamma of the bond future option product.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#gammaStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-double-">gammaStickyStrike</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#gammaStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-double-">gammaStickyStrike</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
                  <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                 <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider,
+                 <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities,
                  double&nbsp;futurePrice)</code>
 <div class="block">Calculates the gamma of the bond future option product based on the price of the underlying future.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#price-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-">price</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#price-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-">price</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
      <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-     <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider)</code>
+     <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities)</code>
 <div class="block">Calculates the price of the bond future option product.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#price-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-double-">price</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#price-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-double-">price</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
      <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-     <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider,
+     <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities,
      double&nbsp;futurePrice)</code>
 <div class="block">Calculates the price of the bond future option product
  based on the price of the underlying future.</div>
@@ -230,64 +229,57 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptionSensitivity.html" title="class in com.opengamma.strata.pricer.bond">BondFutureOptionSensitivity</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#priceSensitivityBlackVolatility-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-">priceSensitivityBlackVolatility</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
-                               <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                               <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#priceSensitivityModelParamsVolatility-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-">priceSensitivityModelParamsVolatility</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
+                                     <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                                     <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities)</code>
 <div class="block">Calculates the price sensitivity to the Black volatility used for the pricing of the bond future option.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptionSensitivity.html" title="class in com.opengamma.strata.pricer.bond">BondFutureOptionSensitivity</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#priceSensitivityBlackVolatility-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-double-">priceSensitivityBlackVolatility</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
-                               <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                               <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider,
-                               double&nbsp;futurePrice)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#priceSensitivityModelParamsVolatility-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-double-">priceSensitivityModelParamsVolatility</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
+                                     <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                                     <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities,
+                                     double&nbsp;futurePrice)</code>
 <div class="block">Calculates the price sensitivity to the Black volatility used for the pricing of the bond future option
  based on the price of the underlying future.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#priceSensitivityStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-">priceSensitivityStickyStrike</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
-                            <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                            <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#priceSensitivityRatesStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-">priceSensitivityRatesStickyStrike</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
+                                 <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                                 <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities)</code>
 <div class="block">Calculates the price sensitivity of the bond future option product based on curves.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#priceSensitivityStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-double-">priceSensitivityStickyStrike</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
-                            <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                            <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider,
-                            double&nbsp;futurePrice)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#priceSensitivityRatesStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-double-">priceSensitivityRatesStickyStrike</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
+                                 <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                                 <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities,
+                                 double&nbsp;futurePrice)</code>
 <div class="block">Calculates the price sensitivity of the bond future option product based on the price of the underlying future.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#theta-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-">theta</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#theta-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-">theta</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
      <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-     <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider)</code>
+     <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities)</code>
 <div class="block">Calculates the theta of the bond future option product.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#theta-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-double-">theta</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedProductPricer.html#theta-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-double-">theta</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
      <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-     <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider,
+     <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities,
      double&nbsp;futurePrice)</code>
 <div class="block">Calculates the theta of the bond future option product based on the price of the underlying future.</div>
 </td>
 </tr>
 </table>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.pricer.bond.BondFutureOptionMarginedProductPricer">
-<!--   -->
-</a>
-<h3>Methods inherited from class&nbsp;com.opengamma.strata.pricer.bond.<a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptionMarginedProductPricer.html" title="class in com.opengamma.strata.pricer.bond">BondFutureOptionMarginedProductPricer</a></h3>
-<code><a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptionMarginedProductPricer.html#marginIndex-com.opengamma.strata.product.bond.ResolvedBondFutureOption-double-">marginIndex</a>, <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptionMarginedProductPricer.html#marginIndexSensitivity-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.market.sensitivity.PointSensitivities-">marginIndexSensitivity</a></code></li>
-</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
@@ -349,7 +341,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="price-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-">
+<a name="price-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -357,23 +349,26 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 <h4>price</h4>
 <pre>public&nbsp;double&nbsp;price(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
                     <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                    <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider)</pre>
+                    <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the price of the bond future option product.
  <p>
  The price of the option is the price on the valuation date.
  <p>
- This calculates the underlying future price using the future pricer.</div>
+ This calculates the underlying future price using the future pricer.
+ <p>
+ Strata uses <i>decimal prices</i> for bond futures. This is coherent with the pricing of <a href="../../../../../com/opengamma/strata/product/bond/BondFuture.html" title="class in com.opengamma.strata.product.bond"><code>BondFuture</code></a>.
+ For example, a price of 1.32% is represented in Strata by 0.0132.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>futureOption</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the provider of Black volatility</dd>
+<dd><code>volatilities</code> - the volatilities</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the price of the product, in decimal form</dd>
 </dl>
 </li>
 </ul>
-<a name="price-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-double-">
+<a name="price-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-double-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -381,24 +376,27 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 <h4>price</h4>
 <pre>public&nbsp;double&nbsp;price(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
                     <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                    <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider,
+                    <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities,
                     double&nbsp;futurePrice)</pre>
 <div class="block">Calculates the price of the bond future option product
  based on the price of the underlying future.
  <p>
- The price of the option is the price on the valuation date.</div>
+ The price of the option is the price on the valuation date.
+ <p>
+ Strata uses <i>decimal prices</i> for bond futures. This is coherent with the pricing of <a href="../../../../../com/opengamma/strata/product/bond/BondFuture.html" title="class in com.opengamma.strata.product.bond"><code>BondFuture</code></a>.
+ For example, a price of 1.32% is represented in Strata by 0.0132.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>futureOption</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the provider of Black volatility</dd>
+<dd><code>volatilities</code> - the volatilities</dd>
 <dd><code>futurePrice</code> - the price of the underlying future</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the price of the product, in decimal form</dd>
 </dl>
 </li>
 </ul>
-<a name="deltaStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-">
+<a name="deltaStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -406,7 +404,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 <h4>deltaStickyStrike</h4>
 <pre>public&nbsp;double&nbsp;deltaStickyStrike(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
                                 <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                                <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider)</pre>
+                                <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the delta of the bond future option product.
  <p>
  The delta of the product is the sensitivity of the option price to the future price.
@@ -417,13 +415,13 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>futureOption</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the provider of Black volatility</dd>
+<dd><code>volatilities</code> - the volatilities</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the price curve sensitivity of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="deltaStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-double-">
+<a name="deltaStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-double-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -431,7 +429,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 <h4>deltaStickyStrike</h4>
 <pre>public&nbsp;double&nbsp;deltaStickyStrike(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
                                 <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                                <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider,
+                                <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities,
                                 double&nbsp;futurePrice)</pre>
 <div class="block">Calculates the delta of the bond future option product based on the price of the underlying future.
  <p>
@@ -441,14 +439,14 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>futureOption</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the provider of Black volatility</dd>
+<dd><code>volatilities</code> - the volatilities</dd>
 <dd><code>futurePrice</code> - the price of the underlying future</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the price curve sensitivity of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="gammaStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-">
+<a name="gammaStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -456,7 +454,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 <h4>gammaStickyStrike</h4>
 <pre>public&nbsp;double&nbsp;gammaStickyStrike(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
                                 <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                                <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider)</pre>
+                                <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the gamma of the bond future option product.
  <p>
  The gamma of the product is the sensitivity of the option delta to the future price.
@@ -467,13 +465,13 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>futureOption</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the provider of Black volatility</dd>
+<dd><code>volatilities</code> - the volatilities</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the price curve sensitivity of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="gammaStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-double-">
+<a name="gammaStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-double-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -481,7 +479,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 <h4>gammaStickyStrike</h4>
 <pre>public&nbsp;double&nbsp;gammaStickyStrike(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
                                 <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                                <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider,
+                                <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities,
                                 double&nbsp;futurePrice)</pre>
 <div class="block">Calculates the gamma of the bond future option product based on the price of the underlying future.
  <p>
@@ -491,14 +489,14 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>futureOption</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the provider of Black volatility</dd>
+<dd><code>volatilities</code> - the volatilities</dd>
 <dd><code>futurePrice</code> - the price of the underlying future</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the price curve sensitivity of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="theta-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-">
+<a name="theta-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -506,7 +504,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 <h4>theta</h4>
 <pre>public&nbsp;double&nbsp;theta(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
                     <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                    <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider)</pre>
+                    <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the theta of the bond future option product.
  <p>
  The theta of the product is the minus of the option price sensitivity to the time to expiry.
@@ -517,13 +515,13 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>futureOption</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the provider of Black volatility</dd>
+<dd><code>volatilities</code> - the volatilities</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the price curve sensitivity of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="theta-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-double-">
+<a name="theta-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-double-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -531,7 +529,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 <h4>theta</h4>
 <pre>public&nbsp;double&nbsp;theta(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
                     <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                    <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider,
+                    <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities,
                     double&nbsp;futurePrice)</pre>
 <div class="block">Calculates the theta of the bond future option product based on the price of the underlying future.
  <p>
@@ -541,22 +539,22 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>futureOption</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the provider of Black volatility</dd>
+<dd><code>volatilities</code> - the volatilities</dd>
 <dd><code>futurePrice</code> - the price of the underlying future</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the price curve sensitivity of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="priceSensitivityStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-">
+<a name="priceSensitivityRatesStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>priceSensitivityStickyStrike</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&nbsp;priceSensitivityStickyStrike(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
-                                                       <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                                                       <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider)</pre>
+<h4>priceSensitivityRatesStickyStrike</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&nbsp;priceSensitivityRatesStickyStrike(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
+                                                            <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                                                            <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the price sensitivity of the bond future option product based on curves.
  <p>
  The price sensitivity of the product is the sensitivity of the price to the underlying curves.
@@ -567,22 +565,22 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>futureOption</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the provider of Black volatility</dd>
+<dd><code>volatilities</code> - the volatilities</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the price curve sensitivity of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="priceSensitivityStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-double-">
+<a name="priceSensitivityRatesStickyStrike-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-double-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>priceSensitivityStickyStrike</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&nbsp;priceSensitivityStickyStrike(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
-                                                       <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                                                       <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider,
-                                                       double&nbsp;futurePrice)</pre>
+<h4>priceSensitivityRatesStickyStrike</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&nbsp;priceSensitivityRatesStickyStrike(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
+                                                            <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                                                            <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities,
+                                                            double&nbsp;futurePrice)</pre>
 <div class="block">Calculates the price sensitivity of the bond future option product based on the price of the underlying future.
  <p>
  The price sensitivity of the product is the sensitivity of the price to the underlying curves.
@@ -591,22 +589,22 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>futureOption</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the provider of Black volatility</dd>
+<dd><code>volatilities</code> - the volatilities</dd>
 <dd><code>futurePrice</code> - the price of the underlying future</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the price curve sensitivity of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="priceSensitivityBlackVolatility-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-">
+<a name="priceSensitivityModelParamsVolatility-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>priceSensitivityBlackVolatility</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptionSensitivity.html" title="class in com.opengamma.strata.pricer.bond">BondFutureOptionSensitivity</a>&nbsp;priceSensitivityBlackVolatility(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
-                                                                   <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                                                                   <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider)</pre>
+<h4>priceSensitivityModelParamsVolatility</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptionSensitivity.html" title="class in com.opengamma.strata.pricer.bond">BondFutureOptionSensitivity</a>&nbsp;priceSensitivityModelParamsVolatility(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
+                                                                         <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                                                                         <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the price sensitivity to the Black volatility used for the pricing of the bond future option.
  <p>
  This calculates the underlying future price using the future pricer.</div>
@@ -614,29 +612,29 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>futureOption</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the provider of Black volatility</dd>
+<dd><code>volatilities</code> - the volatilities</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the sensitivity</dd>
 </dl>
 </li>
 </ul>
-<a name="priceSensitivityBlackVolatility-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackVolatilityBondFutureProvider-double-">
+<a name="priceSensitivityModelParamsVolatility-com.opengamma.strata.product.bond.ResolvedBondFutureOption-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-double-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>priceSensitivityBlackVolatility</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptionSensitivity.html" title="class in com.opengamma.strata.pricer.bond">BondFutureOptionSensitivity</a>&nbsp;priceSensitivityBlackVolatility(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
-                                                                   <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
-                                                                   <a href="../../../../../com/opengamma/strata/pricer/bond/BlackVolatilityBondFutureProvider.html" title="interface in com.opengamma.strata.pricer.bond">BlackVolatilityBondFutureProvider</a>&nbsp;volatilityProvider,
-                                                                   double&nbsp;futurePrice)</pre>
+<h4>priceSensitivityModelParamsVolatility</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptionSensitivity.html" title="class in com.opengamma.strata.pricer.bond">BondFutureOptionSensitivity</a>&nbsp;priceSensitivityModelParamsVolatility(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption</a>&nbsp;futureOption,
+                                                                         <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                                                                         <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities,
+                                                                         double&nbsp;futurePrice)</pre>
 <div class="block">Calculates the price sensitivity to the Black volatility used for the pricing of the bond future option
  based on the price of the underlying future.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>futureOption</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the provider of Black volatility</dd>
+<dd><code>volatilities</code> - the volatilities</dd>
 <dd><code>futurePrice</code> - the underlying future price</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the sensitivity</dd>
@@ -672,7 +670,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptio
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/opengamma/strata/pricer/bond/AbstractBondFutureTradePricer.html" title="class in com.opengamma.strata.pricer.bond"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureExpiryLogMoneynessVolatilities.Meta.html" title="class in com.opengamma.strata.pricer.bond"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedTradePricer.html" title="class in com.opengamma.strata.pricer.bond"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">

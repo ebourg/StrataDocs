@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -119,7 +119,15 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
  Each method takes a <a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index"><code>ResolvedIborFutureTrade</code></a>, whereas application code will
  typically work with <a href="../../../../../com/opengamma/strata/product/index/IborFutureTrade.html" title="class in com.opengamma.strata.product.index"><code>IborFutureTrade</code></a>. Call
  <a href="../../../../../com/opengamma/strata/product/index/IborFutureTrade.html#resolve-com.opengamma.strata.basics.ReferenceData-"><code>IborFutureTrade::resolve(ReferenceData)</code></a>
- to convert <code>IborFutureTrade</code> to <code>ResolvedIborFutureTrade</code>.</div>
+ to convert <code>IborFutureTrade</code> to <code>ResolvedIborFutureTrade</code>.
+ 
+ <h4>Price</h4>
+ The price of an Ibor future is based on the interest rate of the underlying index.
+ It is defined as <code>(100 - percentRate)</code>.
+ <p>
+ Strata uses <i>decimal prices</i> for Ibor futures in the trade model, pricers and market data.
+ The decimal price is based on the decimal rate equivalent to the percentage.
+ For example, a price of 99.32 implies an interest rate of 0.68% which is represented in Strata by 0.9932.</div>
 </li>
 </ul>
 </div>
@@ -266,6 +274,21 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/index/IborFutureTradeCalculations.html#pv01MarketQuoteSum-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-">pv01MarketQuoteSum</a></span>(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
                   <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</code>
 <div class="block">Calculates present value sensitivity for a single set of market data.</div>
+</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/data/scenario/DoubleScenarioArray.html" title="class in com.opengamma.strata.data.scenario">DoubleScenarioArray</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/index/IborFutureTradeCalculations.html#unitPrice-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">unitPrice</a></span>(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
+         <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;lookup,
+         <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</code>
+<div class="block">Calculates unit price across one or more scenarios.</div>
+</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/index/IborFutureTradeCalculations.html#unitPrice-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-">unitPrice</a></span>(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
+         <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</code>
+<div class="block">Calculates unit price for a single set of market data.</div>
 </td>
 </tr>
 </table>
@@ -585,7 +608,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <a name="parSpread-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>parSpread</h4>
 <pre>public&nbsp;double&nbsp;parSpread(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
@@ -597,6 +620,56 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dd><code>ratesProvider</code> - the market data</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the par spread</dd>
+</dl>
+</li>
+</ul>
+<a name="unitPrice-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>unitPrice</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/data/scenario/DoubleScenarioArray.html" title="class in com.opengamma.strata.data.scenario">DoubleScenarioArray</a>&nbsp;unitPrice(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
+                                     <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;lookup,
+                                     <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</pre>
+<div class="block">Calculates unit price across one or more scenarios.
+ <p>
+ This is the price of a single unit of the security.
+ <p>
+ Strata uses <i>decimal prices</i> for Ibor futures in the trade model, pricers and market data.
+ The decimal price is based on the decimal rate equivalent to the percentage.
+ For example, a price of 99.32 implies an interest rate of 0.68% which is represented in Strata by 0.9932.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>trade</code> - the trade</dd>
+<dd><code>lookup</code> - the lookup used to query the market data</dd>
+<dd><code>marketData</code> - the market data</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the present value, one entry per scenario</dd>
+</dl>
+</li>
+</ul>
+<a name="unitPrice-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>unitPrice</h4>
+<pre>public&nbsp;double&nbsp;unitPrice(<a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
+                        <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</pre>
+<div class="block">Calculates unit price for a single set of market data.
+ <p>
+ This is the price of a single unit of the security.
+ <p>
+ Strata uses <i>decimal prices</i> for Ibor futures in the trade model, pricers and market data.
+ The decimal price is based on the decimal rate equivalent to the percentage.
+ For example, a price of 99.32 implies an interest rate of 0.68% which is represented in Strata by 0.9932.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>trade</code> - the trade</dd>
+<dd><code>ratesProvider</code> - the market data</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the present value</dd>
 </dl>
 </li>
 </ul>

@@ -114,7 +114,11 @@ var activeTableTab = "activeTableTab";
 extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Pricer for for rate fixed coupon bond products.
  <p>
- This function provides the ability to price a <a href="../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.html" title="class in com.opengamma.strata.product.bond"><code>ResolvedFixedCouponBond</code></a>.</div>
+ This function provides the ability to price a <a href="../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.html" title="class in com.opengamma.strata.product.bond"><code>ResolvedFixedCouponBond</code></a>.
+ 
+ <h4>Price</h4>
+ Strata uses <i>decimal prices</i> for bonds in the trade model, pricers and market data.
+ For example, a price of 99.32% is represented in Strata by 0.9932.</div>
 </li>
 </ul>
 </div>
@@ -474,7 +478,9 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
                                    <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
 <div class="block">Calculates the dirty price of the fixed coupon bond.
  <p>
- The fixed coupon bond is represented as <a href="../../../../../com/opengamma/strata/product/Security.html" title="interface in com.opengamma.strata.product"><code>Security</code></a> where standard ID of the bond is stored.</div>
+ The fixed coupon bond is represented as <a href="../../../../../com/opengamma/strata/product/Security.html" title="interface in com.opengamma.strata.product"><code>Security</code></a> where standard ID of the bond is stored.
+ <p>
+ Strata uses <i>decimal prices</i> for bonds. For example, a price of 99.32% is represented in Strata by 0.9932.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>bond</code> - the product</dd>
@@ -598,7 +604,9 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <pre>public&nbsp;double&nbsp;cleanPriceFromDirtyPrice(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.html" title="class in com.opengamma.strata.product.bond">ResolvedFixedCouponBond</a>&nbsp;bond,
                                        <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;settlementDate,
                                        double&nbsp;dirtyPrice)</pre>
-<div class="block">Calculates the clean price of the fixed coupon bond from its settlement date and dirty price.</div>
+<div class="block">Calculates the clean price of the fixed coupon bond from its settlement date and dirty price.
+ <p>
+ Strata uses <i>decimal prices</i> for bonds. For example, a price of 99.32% is represented in Strata by 0.9932.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>bond</code> - the product</dd>

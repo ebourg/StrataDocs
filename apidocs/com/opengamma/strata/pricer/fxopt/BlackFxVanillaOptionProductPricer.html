@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -178,119 +178,113 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#currencyExposure-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">currencyExposure</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#currencyExposure-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">currencyExposure</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
                 <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</code>
+                <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</code>
 <div class="block">Calculates the currency exposure of the foreign exchange vanilla option product.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#delta-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">delta</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#delta-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">delta</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
      <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-     <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</code>
+     <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</code>
 <div class="block">Calculates the delta of the foreign exchange vanilla option product.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#gamma-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">gamma</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#gamma-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">gamma</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
      <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-     <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</code>
+     <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</code>
 <div class="block">Calculates the gamma of the foreign exchange vanilla option product.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/fx/DiscountingFxSingleProductPricer.html" title="class in com.opengamma.strata.pricer.fx">DiscountingFxSingleProductPricer</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#getDiscountingFxSingleProductPricer--">getDiscountingFxSingleProductPricer</a></span>()</code>
-<div class="block">Returns the pricer used to price the underlying FX product.</div>
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#impliedVolatility-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">impliedVolatility</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
+                 <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                 <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates the implied Black volatility of the foreign exchange vanilla option product.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#impliedVolatility-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">impliedVolatility</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
-                 <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                 <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</code>
-<div class="block">Calculates the implied Black volatility of the foreign exchange vanilla option product.</div>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValue-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">presentValue</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
+            <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+            <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates the present value of the foreign exchange vanilla option product.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValue-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">presentValue</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
-            <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-            <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</code>
-<div class="block">Calculates the present value of the foreign exchange vanilla option product.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValueDelta-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">presentValueDelta</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
+                 <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                 <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates the present value delta of the foreign exchange vanilla option product.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValueDelta-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">presentValueDelta</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValueGamma-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">presentValueGamma</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
                  <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                 <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</code>
+                 <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</code>
 <div class="block">Calculates the present value delta of the foreign exchange vanilla option product.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValueGamma-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">presentValueGamma</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
-                 <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                 <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</code>
-<div class="block">Calculates the present value delta of the foreign exchange vanilla option product.</div>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValueSensitivityModelParamsVolatility-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">presentValueSensitivityModelParamsVolatility</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
+                                            <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                                            <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Computes the present value sensitivity to the black volatility used in the pricing.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValueSensitivity-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">presentValueSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
-                       <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                       <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValueSensitivityRates-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">presentValueSensitivityRates</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
+                            <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                            <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</code>
 <div class="block">Calculates the present value sensitivity of the foreign exchange vanilla option product.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValueSensitivityBlackVolatility-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">presentValueSensitivityBlackVolatility</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
-                                      <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                      <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</code>
-<div class="block">Computes the present value sensitivity to the black volatility used in the pricing.</div>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValueTheta-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">presentValueTheta</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
+                 <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                 <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates the present value theta of the foreign exchange vanilla option product.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValueTheta-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">presentValueTheta</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
-                 <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                 <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</code>
-<div class="block">Calculates the present value theta of the foreign exchange vanilla option product.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValueVega-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">presentValueVega</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
+                <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates the present value vega of the foreign exchange vanilla option product.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValueVega-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">presentValueVega</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
-                <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</code>
-<div class="block">Calculates the present value vega of the foreign exchange vanilla option product.</div>
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#price-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">price</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
+     <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+     <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates the price of the foreign exchange vanilla option product.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#price-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">price</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#theta-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">theta</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
      <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-     <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</code>
-<div class="block">Calculates the price of the foreign exchange vanilla option product.</div>
+     <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates the Black theta of the foreign exchange vanilla option product.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#theta-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">theta</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
-     <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-     <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</code>
-<div class="block">Calculates the Black theta of the foreign exchange vanilla option product.</div>
-</td>
-</tr>
-<tr id="i14" class="altColor">
-<td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#vega-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">vega</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#vega-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">vega</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
     <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-    <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</code>
+    <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</code>
 <div class="block">Calculates the vega of the foreign exchange vanilla option product.</div>
 </td>
 </tr>
@@ -356,21 +350,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="getDiscountingFxSingleProductPricer--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getDiscountingFxSingleProductPricer</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/fx/DiscountingFxSingleProductPricer.html" title="class in com.opengamma.strata.pricer.fx">DiscountingFxSingleProductPricer</a>&nbsp;getDiscountingFxSingleProductPricer()</pre>
-<div class="block">Returns the pricer used to price the underlying FX product.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the pricer</dd>
-</dl>
-</li>
-</ul>
-<a name="price-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">
+<a name="price-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -378,23 +358,23 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>price</h4>
 <pre>public&nbsp;double&nbsp;price(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
                     <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                    <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</pre>
+                    <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the price of the foreign exchange vanilla option product.
  <p>
  The price of the product is the value on the valuation date for one unit of the base currency 
  and is expressed in the counter currency. The price does not take into account the long/short flag.
- See <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValue-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-"><code>presentValue(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider)</code></a> for scaling and currency.</div>
+ See <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValue-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-"><code>presentValue(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities)</code></a> for scaling and currency.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>option</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the Black volatility provider</dd>
+<dd><code>volatilities</code> - the Black volatility provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the price of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="presentValue-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">
+<a name="presentValue-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -402,7 +382,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>presentValue</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;presentValue(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
                                    <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                   <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</pre>
+                                   <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the present value of the foreign exchange vanilla option product.
  <p>
  The present value of the product is the value on the valuation date.
@@ -411,13 +391,13 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>option</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the Black volatility provider</dd>
+<dd><code>volatilities</code> - the Black volatility provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the present value of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="delta-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">
+<a name="delta-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -425,21 +405,21 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>delta</h4>
 <pre>public&nbsp;double&nbsp;delta(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
                     <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                    <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</pre>
+                    <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the delta of the foreign exchange vanilla option product.
  <p>
- The delta is the first derivative of <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#price-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-"><code>price(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider)</code></a> with respect to spot.</div>
+ The delta is the first derivative of <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#price-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-"><code>price(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities)</code></a> with respect to spot.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>option</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the Black volatility provider</dd>
+<dd><code>volatilities</code> - the Black volatility provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the delta of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="presentValueDelta-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">
+<a name="presentValueDelta-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -447,32 +427,32 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>presentValueDelta</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;presentValueDelta(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
                                         <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                        <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</pre>
+                                        <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the present value delta of the foreign exchange vanilla option product.
  <p>
- The present value delta is the first derivative of <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValue-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-"><code>presentValue(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider)</code></a> with respect to spot.</div>
+ The present value delta is the first derivative of <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValue-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-"><code>presentValue(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities)</code></a> with respect to spot.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>option</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the Black volatility provider</dd>
+<dd><code>volatilities</code> - the Black volatility provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the present value delta of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="presentValueSensitivity-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">
+<a name="presentValueSensitivityRates-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>presentValueSensitivity</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&nbsp;presentValueSensitivity(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
-                                                  <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                                  <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</pre>
+<h4>presentValueSensitivityRates</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&nbsp;presentValueSensitivityRates(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
+                                                       <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                                                       <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the present value sensitivity of the foreign exchange vanilla option product.
  <p>
- The present value sensitivity of the product is the sensitivity of <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValue-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-"><code>presentValue(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider)</code></a> to
+ The present value sensitivity of the product is the sensitivity of <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValue-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-"><code>presentValue(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities)</code></a> to
  the underlying curves.
  <p>
  The volatility is fixed in this sensitivity computation.</div>
@@ -480,13 +460,13 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>option</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the Black volatility provider</dd>
+<dd><code>volatilities</code> - the Black volatility provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the present value curve sensitivity of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="gamma-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">
+<a name="gamma-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -494,21 +474,21 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>gamma</h4>
 <pre>public&nbsp;double&nbsp;gamma(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
                     <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                    <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</pre>
+                    <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the gamma of the foreign exchange vanilla option product.
  <p>
- The gamma is the second derivative of <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#price-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-"><code>price(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider)</code></a> with respect to spot.</div>
+ The gamma is the second derivative of <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#price-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-"><code>price(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities)</code></a> with respect to spot.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>option</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the Black volatility provider</dd>
+<dd><code>volatilities</code> - the Black volatility provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the gamma of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="presentValueGamma-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">
+<a name="presentValueGamma-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -516,21 +496,21 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>presentValueGamma</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;presentValueGamma(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
                                         <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                        <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</pre>
+                                        <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the present value delta of the foreign exchange vanilla option product.
  <p>
- The present value gamma is the second derivative of the <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValue-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-"><code>presentValue(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider)</code></a> with respect to spot.</div>
+ The present value gamma is the second derivative of the <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValue-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-"><code>presentValue(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities)</code></a> with respect to spot.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>option</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the Black volatility provider</dd>
+<dd><code>volatilities</code> - the Black volatility provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the present value gamma of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="vega-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">
+<a name="vega-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -538,21 +518,21 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>vega</h4>
 <pre>public&nbsp;double&nbsp;vega(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
                    <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                   <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</pre>
+                   <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the vega of the foreign exchange vanilla option product.
  <p>
- The vega is the first derivative of <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#price-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-"><code>price(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider)</code></a> with respect to volatility.</div>
+ The vega is the first derivative of <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#price-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-"><code>price(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities)</code></a> with respect to volatility.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>option</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the Black volatility provider</dd>
+<dd><code>volatilities</code> - the Black volatility provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the vega of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="presentValueVega-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">
+<a name="presentValueVega-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -560,29 +540,29 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>presentValueVega</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;presentValueVega(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
                                        <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                       <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</pre>
+                                       <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the present value vega of the foreign exchange vanilla option product.
  <p>
- The present value vega is the first derivative of the <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValue-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-"><code>presentValue(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider)</code></a> with respect to volatility.</div>
+ The present value vega is the first derivative of the <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValue-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-"><code>presentValue(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities)</code></a> with respect to volatility.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>option</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the Black volatility provider</dd>
+<dd><code>volatilities</code> - the Black volatility provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the present value vega of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="presentValueSensitivityBlackVolatility-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">
+<a name="presentValueSensitivityModelParamsVolatility-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>presentValueSensitivityBlackVolatility</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a>&nbsp;presentValueSensitivityBlackVolatility(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
-                                                                      <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                                                      <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</pre>
+<h4>presentValueSensitivityModelParamsVolatility</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a>&nbsp;presentValueSensitivityModelParamsVolatility(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
+                                                                            <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                                                                            <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Computes the present value sensitivity to the black volatility used in the pricing.
  <p>
  The result is a single sensitivity to the volatility used.</div>
@@ -590,13 +570,13 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>option</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the Black volatility provider</dd>
+<dd><code>volatilities</code> - the Black volatility provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the present value sensitivity</dd>
 </dl>
 </li>
 </ul>
-<a name="theta-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">
+<a name="theta-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -604,22 +584,22 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>theta</h4>
 <pre>public&nbsp;double&nbsp;theta(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
                     <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                    <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</pre>
+                    <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the Black theta of the foreign exchange vanilla option product.
  <p>
- The theta is the negative of the first derivative of <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#price-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-"><code>price(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider)</code></a> with respect to time parameter
+ The theta is the negative of the first derivative of <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#price-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-"><code>price(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities)</code></a> with respect to time parameter
  in Black formula (the discounted driftless theta).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>option</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the Black volatility provider</dd>
+<dd><code>volatilities</code> - the Black volatility provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the theta of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="presentValueTheta-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">
+<a name="presentValueTheta-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -627,22 +607,22 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>presentValueTheta</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;presentValueTheta(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
                                         <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                        <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</pre>
+                                        <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the present value theta of the foreign exchange vanilla option product.
  <p>
- The present value theta is the negative of the first derivative of <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValue-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-"><code>presentValue(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider)</code></a> with time parameter
+ The present value theta is the negative of the first derivative of <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxVanillaOptionProductPricer.html#presentValue-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-"><code>presentValue(com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities)</code></a> with time parameter
  in Black formula, i.e., the driftless theta of the present value.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>option</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the Black volatility provider</dd>
+<dd><code>volatilities</code> - the Black volatility provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the present value vega of the product</dd>
 </dl>
 </li>
 </ul>
-<a name="impliedVolatility-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">
+<a name="impliedVolatility-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -650,13 +630,13 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>impliedVolatility</h4>
 <pre>public&nbsp;double&nbsp;impliedVolatility(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
                                 <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</pre>
+                                <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the implied Black volatility of the foreign exchange vanilla option product.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>option</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the Black volatility provider</dd>
+<dd><code>volatilities</code> - the Black volatility provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the implied volatility of the product</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -664,7 +644,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </dl>
 </li>
 </ul>
-<a name="currencyExposure-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackVolatilityFxProvider-">
+<a name="currencyExposure-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.fxopt.BlackFxOptionVolatilities-">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -672,13 +652,13 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>currencyExposure</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a>&nbsp;currencyExposure(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;option,
                                             <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                            <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackVolatilityFxProvider.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackVolatilityFxProvider</a>&nbsp;volatilityProvider)</pre>
+                                            <a href="../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the currency exposure of the foreign exchange vanilla option product.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>option</code> - the option product</dd>
 <dd><code>ratesProvider</code> - the rates provider</dd>
-<dd><code>volatilityProvider</code> - the Black volatility provider</dd>
+<dd><code>volatilities</code> - the Black volatility provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the currency exposure</dd>
 </dl>

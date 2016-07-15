@@ -50,7 +50,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/opengamma/strata/product/fxopt/KnockType.html" title="enum in com.opengamma.strata.product.fxopt"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/product/fxopt/FxVanillaOptionTrade.Meta.html" title="class in com.opengamma.strata.product.fxopt"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOption.Meta.html" title="class in com.opengamma.strata.product.fxopt"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -122,7 +122,7 @@ implements <a href="../../../../../com/opengamma/strata/product/ResolvedProduct.
  An FX option is a financial instrument that provides an option to exchange two currencies at a specified future time 
  only when barrier event occurs (knock-in option) or does not occur (knock-out option).
  <p>
- Depending on the barrier defined in <a href="../../../../../com/opengamma/strata/product/fxopt/Barrier.html" title="interface in com.opengamma.strata.product.fxopt"><code>Barrier</code></a>, the options are classified into four types: up-and-in, 
+ Depending on the barrier defined in <a href="../../../../../com/opengamma/strata/product/option/Barrier.html" title="interface in com.opengamma.strata.product.option"><code>Barrier</code></a>, the options are classified into four types: up-and-in, 
  down-and-in, up-and-out and down-and-out.
  <p>
  For example, an up-and-out call on a 'EUR 1.00 / USD -1.41' exchange with barrier of 1.5 is the option to
@@ -179,7 +179,7 @@ implements <a href="../../../../../com/opengamma/strata/product/ResolvedProduct.
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOption.html#equals-java.lang.Object-">equals</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/fxopt/Barrier.html" title="interface in com.opengamma.strata.product.fxopt">Barrier</a></code></td>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/option/Barrier.html" title="interface in com.opengamma.strata.product.option">Barrier</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOption.html#getBarrier--">getBarrier</a></span>()</code>
 <div class="block">Gets the barrier description.</div>
 </td>
@@ -213,15 +213,15 @@ implements <a href="../../../../../com/opengamma/strata/product/ResolvedProduct.
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxSingleBarrierOption</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOption.html#of-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.product.fxopt.Barrier-">of</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;underlyingOption,
-  <a href="../../../../../com/opengamma/strata/product/fxopt/Barrier.html" title="interface in com.opengamma.strata.product.fxopt">Barrier</a>&nbsp;barrier)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOption.html#of-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.product.option.Barrier-">of</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;underlyingOption,
+  <a href="../../../../../com/opengamma/strata/product/option/Barrier.html" title="interface in com.opengamma.strata.product.option">Barrier</a>&nbsp;barrier)</code>
 <div class="block">Obtains FX single barrier option without rebate.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxSingleBarrierOption</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOption.html#of-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.product.fxopt.Barrier-com.opengamma.strata.basics.currency.CurrencyAmount-">of</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;underlyingOption,
-  <a href="../../../../../com/opengamma/strata/product/fxopt/Barrier.html" title="interface in com.opengamma.strata.product.fxopt">Barrier</a>&nbsp;barrier,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOption.html#of-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.product.option.Barrier-com.opengamma.strata.basics.currency.CurrencyAmount-">of</a></span>(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;underlyingOption,
+  <a href="../../../../../com/opengamma/strata/product/option/Barrier.html" title="interface in com.opengamma.strata.product.option">Barrier</a>&nbsp;barrier,
   <a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;rebate)</code>
 <div class="block">Obtains FX single barrier option with rebate.</div>
 </td>
@@ -260,14 +260,14 @@ implements <a href="../../../../../com/opengamma/strata/product/ResolvedProduct.
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="of-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.product.fxopt.Barrier-com.opengamma.strata.basics.currency.CurrencyAmount-">
+<a name="of-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.product.option.Barrier-com.opengamma.strata.basics.currency.CurrencyAmount-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
 <pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxSingleBarrierOption</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;underlyingOption,
-                                               <a href="../../../../../com/opengamma/strata/product/fxopt/Barrier.html" title="interface in com.opengamma.strata.product.fxopt">Barrier</a>&nbsp;barrier,
+                                               <a href="../../../../../com/opengamma/strata/product/option/Barrier.html" title="interface in com.opengamma.strata.product.option">Barrier</a>&nbsp;barrier,
                                                <a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;rebate)</pre>
 <div class="block">Obtains FX single barrier option with rebate.</div>
 <dl>
@@ -280,14 +280,14 @@ implements <a href="../../../../../com/opengamma/strata/product/ResolvedProduct.
 </dl>
 </li>
 </ul>
-<a name="of-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.product.fxopt.Barrier-">
+<a name="of-com.opengamma.strata.product.fxopt.ResolvedFxVanillaOption-com.opengamma.strata.product.option.Barrier-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
 <pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxSingleBarrierOption</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxVanillaOption.html" title="class in com.opengamma.strata.product.fxopt">ResolvedFxVanillaOption</a>&nbsp;underlyingOption,
-                                               <a href="../../../../../com/opengamma/strata/product/fxopt/Barrier.html" title="interface in com.opengamma.strata.product.fxopt">Barrier</a>&nbsp;barrier)</pre>
+                                               <a href="../../../../../com/opengamma/strata/product/option/Barrier.html" title="interface in com.opengamma.strata.product.option">Barrier</a>&nbsp;barrier)</pre>
 <div class="block">Obtains FX single barrier option without rebate.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -371,7 +371,7 @@ implements <a href="../../../../../com/opengamma/strata/product/ResolvedProduct.
 <ul class="blockList">
 <li class="blockList">
 <h4>getBarrier</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/fxopt/Barrier.html" title="interface in com.opengamma.strata.product.fxopt">Barrier</a>&nbsp;getBarrier()</pre>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/option/Barrier.html" title="interface in com.opengamma.strata.product.option">Barrier</a>&nbsp;getBarrier()</pre>
 <div class="block">Gets the barrier description.
  <p>
  The barrier level stored in this field must be represented based on the direction of the currency pair in the
@@ -470,7 +470,7 @@ implements <a href="../../../../../com/opengamma/strata/product/ResolvedProduct.
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/opengamma/strata/product/fxopt/KnockType.html" title="enum in com.opengamma.strata.product.fxopt"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/product/fxopt/FxVanillaOptionTrade.Meta.html" title="class in com.opengamma.strata.product.fxopt"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOption.Meta.html" title="class in com.opengamma.strata.product.fxopt"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">

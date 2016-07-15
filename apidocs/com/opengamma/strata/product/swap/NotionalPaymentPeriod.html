@@ -102,16 +102,16 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Superinterfaces:</dt>
-<dd><a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">PaymentPeriod</a></dd>
+<dd><a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentPeriod</a></dd>
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountNotionalPaymentPeriod.html" title="class in com.opengamma.strata.product.swap">KnownAmountNotionalPaymentPeriod</a>, <a href="../../../../../com/opengamma/strata/product/swap/RatePaymentPeriod.html" title="class in com.opengamma.strata.product.swap">RatePaymentPeriod</a></dd>
+<dd><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountNotionalSwapPaymentPeriod.html" title="class in com.opengamma.strata.product.swap">KnownAmountNotionalSwapPaymentPeriod</a>, <a href="../../../../../com/opengamma/strata/product/swap/RatePaymentPeriod.html" title="class in com.opengamma.strata.product.swap">RatePaymentPeriod</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public interface <span class="typeNameLabel">NotionalPaymentPeriod</span>
-extends <a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">PaymentPeriod</a></pre>
+extends <a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentPeriod</a></pre>
 <div class="block">A period over which interest is accrued with a single payment calculated using a notional.
  <p>
  This is a single payment period within a swap leg.
@@ -119,7 +119,7 @@ extends <a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.
  It is typically based on a rate of interest.
  <p>
  This interface imposes few restrictions on the payment periods.
- It extends <a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html" title="interface in com.opengamma.strata.product.swap"><code>PaymentPeriod</code></a> to require that the period is based on a notional amount.
+ It extends <a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html" title="interface in com.opengamma.strata.product.swap"><code>SwapPaymentPeriod</code></a> to require that the period is based on a notional amount.
  <p>
  Implementations must be immutable and thread-safe beans.</div>
 </li>
@@ -154,11 +154,11 @@ extends <a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.swap.PaymentPeriod">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.swap.SwapPaymentPeriod">
 <!--   -->
 </a>
-<h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.swap.<a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">PaymentPeriod</a></h3>
-<code><a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html#adjustPaymentDate-java.time.temporal.TemporalAdjuster-">adjustPaymentDate</a>, <a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a>, <a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html#getCurrency--">getCurrency</a>, <a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html#getEndDate--">getEndDate</a>, <a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html#getPaymentDate--">getPaymentDate</a>, <a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html#getStartDate--">getStartDate</a></code></li>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.swap.<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentPeriod</a></h3>
+<code><a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html#adjustPaymentDate-java.time.temporal.TemporalAdjuster-">adjustPaymentDate</a>, <a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a>, <a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html#getCurrency--">getCurrency</a>, <a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html#getEndDate--">getEndDate</a>, <a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html#getPaymentDate--">getPaymentDate</a>, <a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html#getStartDate--">getStartDate</a></code></li>
 </ul>
 </li>
 </ul>
@@ -184,7 +184,7 @@ extends <a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.
 <div class="block">The notional amount, positive if receiving, negative if paying.
  <p>
  This is the notional amount applicable during the period.
- The currency may differ from that returned by <a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html#getCurrency--"><code>PaymentPeriod.getCurrency()</code></a>,
+ The currency may differ from that returned by <a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html#getCurrency--"><code>SwapPaymentPeriod.getCurrency()</code></a>,
  for example if the swap contains an FX reset.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>

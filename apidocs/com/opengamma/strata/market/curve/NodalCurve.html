@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":18,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":18,"i7":6};
+var methods = {"i0":18,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":18,"i7":6,"i8":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -106,7 +106,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html" title="class in com.opengamma.strata.market.curve">InterpolatedNodalCurve</a></dd>
+<dd><a href="../../../../../com/opengamma/strata/market/curve/ConstantNodalCurve.html" title="class in com.opengamma.strata.market.curve">ConstantNodalCurve</a>, <a href="../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html" title="class in com.opengamma.strata.market.curve">InterpolatedNodalCurve</a></dd>
 </dl>
 <hr>
 <br>
@@ -187,6 +187,13 @@ extends <a href="../../../../../com/opengamma/strata/market/curve/Curve.html" ti
 </td>
 </tr>
 <tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/curve/NodalCurve.html" title="interface in com.opengamma.strata.market.curve">NodalCurve</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/NodalCurve.html#withValues-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-">withValues</a></span>(<a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;xValues,
+          <a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;yValues)</code>
+<div class="block">Returns a new curve with the specified x-values and y-values.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/curve/NodalCurve.html" title="interface in com.opengamma.strata.market.curve">NodalCurve</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/NodalCurve.html#withYValues-com.opengamma.strata.collect.array.DoubleArray-">withYValues</a></span>(<a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;values)</code>
 <div class="block">Returns a new curve with the specified values.</div>
@@ -313,6 +320,26 @@ extends <a href="../../../../../com/opengamma/strata/market/curve/Curve.html" ti
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>values</code> - the new y-values for the curve</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the new curve</dd>
+</dl>
+</li>
+</ul>
+<a name="withValues-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withValues</h4>
+<pre><a href="../../../../../com/opengamma/strata/market/curve/NodalCurve.html" title="interface in com.opengamma.strata.market.curve">NodalCurve</a>&nbsp;withValues(<a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;xValues,
+                      <a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;yValues)</pre>
+<div class="block">Returns a new curve with the specified x-values and y-values.
+ <p>
+ This allows the x values and y-values of the curve to be changed.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>xValues</code> - the new x-values for the curve</dd>
+<dd><code>yValues</code> - the new y-values for the curve</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the new curve</dd>
 </dl>

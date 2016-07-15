@@ -172,7 +172,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProviderBuilder.html#iborIndexCurve-com.opengamma.strata.basics.index.IborIndex-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries-">iborIndexCurve</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
               <a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;forwardCurve,
               <a href="../../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&nbsp;timeSeries)</code>
-<div class="block">Adds an index forward curve to the provider with associated time-series.</div>
+<div class="block">Adds an Ibor index forward curve to the provider with associated time-series.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -215,19 +215,22 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProviderBuilder.html#overnightIndexCurve-com.opengamma.strata.basics.index.OvernightIndex-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries-">overnightIndexCurve</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index,
                    <a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;forwardCurve,
                    <a href="../../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&nbsp;timeSeries)</code>
-<div class="block">Adds an index forward curve to the provider with associated time-series.</div>
+<div class="block">Adds an Overnight index forward curve to the provider with associated time-series.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProviderBuilder.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProviderBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProviderBuilder.html#priceIndexValues-java.util.Map-">priceIndexValues</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;? extends <a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>,? extends <a href="../../../../../com/opengamma/strata/pricer/rate/PriceIndexValues.html" title="interface in com.opengamma.strata.pricer.rate">PriceIndexValues</a>&gt;&nbsp;priceIndexValues)</code>
-<div class="block">Adds price index values to the provider.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProviderBuilder.html#priceIndexCurve-com.opengamma.strata.basics.index.PriceIndex-com.opengamma.strata.market.curve.Curve-">priceIndexCurve</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&nbsp;index,
+               <a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;forwardCurve)</code>
+<div class="block">Adds a Price index forward curve to the provider.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProviderBuilder.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProviderBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProviderBuilder.html#priceIndexValues-com.opengamma.strata.pricer.rate.PriceIndexValues...-">priceIndexValues</a></span>(<a href="../../../../../com/opengamma/strata/pricer/rate/PriceIndexValues.html" title="interface in com.opengamma.strata.pricer.rate">PriceIndexValues</a>...&nbsp;priceIndexValues)</code>
-<div class="block">Adds price index values to the provider.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProviderBuilder.html#priceIndexCurve-com.opengamma.strata.basics.index.PriceIndex-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries-">priceIndexCurve</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&nbsp;index,
+               <a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;forwardCurve,
+               <a href="../../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&nbsp;timeSeries)</code>
+<div class="block">Adds an index forward curve to the provider with associated time-series.</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
@@ -351,7 +354,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProviderBuilder.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProviderBuilder</a>&nbsp;iborIndexCurve(<a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
                                                     <a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;forwardCurve,
                                                     <a href="../../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&nbsp;timeSeries)</pre>
-<div class="block">Adds an index forward curve to the provider with associated time-series.
+<div class="block">Adds an Ibor index forward curve to the provider with associated time-series.
  <p>
  This adds the specified forward curve and time-series to the provider.
  This operates using <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true#put-K-V-" title="class or interface in java.util"><code>Map.put(Object, Object)</code></a> semantics using the index as the key.</div>
@@ -395,6 +398,50 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProviderBuilder.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProviderBuilder</a>&nbsp;overnightIndexCurve(<a href="../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index,
                                                          <a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;forwardCurve,
                                                          <a href="../../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&nbsp;timeSeries)</pre>
+<div class="block">Adds an Overnight index forward curve to the provider with associated time-series.
+ <p>
+ This adds the specified forward curve and time-series to the provider.
+ This operates using <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true#put-K-V-" title="class or interface in java.util"><code>Map.put(Object, Object)</code></a> semantics using the index as the key.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>index</code> - the index of the curve</dd>
+<dd><code>forwardCurve</code> - the index forward curve</dd>
+<dd><code>timeSeries</code> - the associated time-series</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this, for chaining</dd>
+</dl>
+</li>
+</ul>
+<a name="priceIndexCurve-com.opengamma.strata.basics.index.PriceIndex-com.opengamma.strata.market.curve.Curve-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>priceIndexCurve</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProviderBuilder.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProviderBuilder</a>&nbsp;priceIndexCurve(<a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&nbsp;index,
+                                                     <a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;forwardCurve)</pre>
+<div class="block">Adds a Price index forward curve to the provider.
+ <p>
+ This adds the specified forward curve to the provider.
+ This operates using <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true#put-K-V-" title="class or interface in java.util"><code>Map.put(Object, Object)</code></a> semantics using the index as the key.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>index</code> - the index of the curve</dd>
+<dd><code>forwardCurve</code> - the Price index forward curve</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this, for chaining</dd>
+</dl>
+</li>
+</ul>
+<a name="priceIndexCurve-com.opengamma.strata.basics.index.PriceIndex-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>priceIndexCurve</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProviderBuilder.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProviderBuilder</a>&nbsp;priceIndexCurve(<a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&nbsp;index,
+                                                     <a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;forwardCurve,
+                                                     <a href="../../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&nbsp;timeSeries)</pre>
 <div class="block">Adds an index forward curve to the provider with associated time-series.
  <p>
  This adds the specified forward curve and time-series to the provider.
@@ -420,6 +467,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Adds an index forward curve to the provider.
  <p>
  This adds the specified forward curve to the provider.
+ This is used for Ibor, Overnight and Price indices.
  This operates using <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true#put-K-V-" title="class or interface in java.util"><code>Map.put(Object, Object)</code></a> semantics using the index as the key.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -442,6 +490,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Adds an index forward curve to the provider with associated time-series.
  <p>
  This adds the specified forward curve to the provider.
+ This is used for Ibor, Overnight and Price indices.
  This operates using <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true#put-K-V-" title="class or interface in java.util"><code>Map.put(Object, Object)</code></a> semantics using the index as the key.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -463,6 +512,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Adds index forward curves to the provider with associated time-series.
  <p>
  This adds the specified index forward curves to the provider.
+ This is used for Ibor, Overnight and Price indices.
  This operates using <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true#putAll-java.util.Map-" title="class or interface in java.util"><code>Map.putAll(Map)</code></a> semantics using the index as the key.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -483,6 +533,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Adds index forward curves to the provider with associated time-series.
  <p>
  This adds the specified index forward curves to the provider.
+ This is used for Ibor, Overnight and Price indices.
  This operates using <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true#putAll-java.util.Map-" title="class or interface in java.util"><code>Map.putAll(Map)</code></a> semantics using the index as the key.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -490,50 +541,6 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dd><code>timeSeries</code> - the associated time-series</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this, for chaining</dd>
-</dl>
-</li>
-</ul>
-<a name="priceIndexValues-com.opengamma.strata.pricer.rate.PriceIndexValues...-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>priceIndexValues</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProviderBuilder.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProviderBuilder</a>&nbsp;priceIndexValues(<a href="../../../../../com/opengamma/strata/pricer/rate/PriceIndexValues.html" title="interface in com.opengamma.strata.pricer.rate">PriceIndexValues</a>...&nbsp;priceIndexValues)</pre>
-<div class="block">Adds price index values to the provider.
- <p>
- This adds the specified price index values to the provider.
- The valuation date of the price index values must match the valuation date of the builder.
- This operates using <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true#put-K-V-" title="class or interface in java.util"><code>Map.put(Object, Object)</code></a> semantics using the index as the key.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>priceIndexValues</code> - the price index values</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>this, for chaining</dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the valuation date does not match</dd>
-</dl>
-</li>
-</ul>
-<a name="priceIndexValues-java.util.Map-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>priceIndexValues</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProviderBuilder.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProviderBuilder</a>&nbsp;priceIndexValues(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;? extends <a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>,? extends <a href="../../../../../com/opengamma/strata/pricer/rate/PriceIndexValues.html" title="interface in com.opengamma.strata.pricer.rate">PriceIndexValues</a>&gt;&nbsp;priceIndexValues)</pre>
-<div class="block">Adds price index values to the provider.
- <p>
- This adds the specified price index values to the provider.
- The valuation date of the price index values must match the valuation date of the builder.
- This operates using <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true#putAll-java.util.Map-" title="class or interface in java.util"><code>Map.putAll(Map)</code></a> semantics using the index as the key.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>priceIndexValues</code> - the price index values</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>this, for chaining</dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the valuation date does not match</dd>
 </dl>
 </li>
 </ul>

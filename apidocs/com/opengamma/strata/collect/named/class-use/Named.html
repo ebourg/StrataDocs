@@ -174,6 +174,18 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.capfloor">com.opengamma.strata.pricer.capfloor</a></td>
+<td class="colLast">
+<div class="block">Calculators for Ibor cap-floor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.fxopt">com.opengamma.strata.pricer.fxopt</a></td>
+<td class="colLast">
+<div class="block">Calculators for FX options.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.index">com.opengamma.strata.pricer.index</a></td>
 <td class="colLast">
 <div class="block">Calculators for products based on rate indices, such as Short Term Interest Rate futures (STIRs).</div>
@@ -316,35 +328,41 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/FloatingRateName.html" title="interface in com.opengamma.strata.basics.index">FloatingRateName</a></span></code>
+<div class="block">A floating rate index name, such as Libor, Euribor or US Fed Fund.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/FxIndex.html" title="interface in com.opengamma.strata.basics.index">FxIndex</a></span></code>
 <div class="block">An index of foreign exchange rates.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a></span></code>
 <div class="block">An inter-bank lending rate index, such as Libor or Euribor.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a></span></code>
 <div class="block">An index of values, such as LIBOR, FED FUND or daily exchange rates.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a></span></code>
 <div class="block">An Overnight index, such as Sonia or Eonia.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a></span></code>
 <div class="block">An index of prices.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/RateIndex.html" title="interface in com.opengamma.strata.basics.index">RateIndex</a></span></code>
 <div class="block">A index of interest rates, such as an Overnight or Inter-Bank rate.</div>
@@ -361,8 +379,8 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/FloatingRateName.html" title="class in com.opengamma.strata.basics.index">FloatingRateName</a></span></code>
-<div class="block">A floating rate index name, such as Libor, Euribor or US Fed Fund.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/ImmutableFloatingRateName.html" title="class in com.opengamma.strata.basics.index">ImmutableFloatingRateName</a></span></code>
+<div class="block">An immutable floating rate index name, such as Libor, Euribor or US Fed Fund.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -736,14 +754,60 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/BondGroup.html" title="class in com.opengamma.strata.pricer.bond">BondGroup</a></span></code>
-<div class="block">Bond group.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/BondFutureVolatilitiesName.html" title="class in com.opengamma.strata.pricer.bond">BondFutureVolatilitiesName</a></span></code>
+<div class="block">The name of a set of bond future volatilities.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/BondGroup.html" title="class in com.opengamma.strata.pricer.bond">BondGroup</a></span></code>
+<div class="block">Bond group.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityGroup.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityGroup</a></span></code>
 <div class="block">Legal entity group.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.capfloor">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a> in <a href="../../../../../../com/opengamma/strata/pricer/capfloor/package-summary.html">com.opengamma.strata.pricer.capfloor</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../com/opengamma/strata/pricer/capfloor/package-summary.html">com.opengamma.strata.pricer.capfloor</a> that implement <a href="../../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilitiesName.html" title="class in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilitiesName</a></span></code>
+<div class="block">The name of a set of Ibor cap/floor volatilities.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.fxopt">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a> in <a href="../../../../../../com/opengamma/strata/pricer/fxopt/package-summary.html">com.opengamma.strata.pricer.fxopt</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../com/opengamma/strata/pricer/fxopt/package-summary.html">com.opengamma.strata.pricer.fxopt</a> that implement <a href="../../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/FxOptionVolatilitiesName.html" title="class in com.opengamma.strata.pricer.fxopt">FxOptionVolatilitiesName</a></span></code>
+<div class="block">The name of a set of FX option volatilities.</div>
 </td>
 </tr>
 </tbody>

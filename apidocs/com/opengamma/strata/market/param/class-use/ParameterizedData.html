@@ -108,28 +108,48 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.bond">com.opengamma.strata.pricer.bond</a></td>
+<td class="colLast">
+<div class="block">Calculators for bonds.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.capfloor">com.opengamma.strata.pricer.capfloor</a></td>
+<td class="colLast">
+<div class="block">Calculators for Ibor cap-floor.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.fx">com.opengamma.strata.pricer.fx</a></td>
 <td class="colLast">
 <div class="block">Calculators for FX instruments, such as FX forward and FX swap.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.fxopt">com.opengamma.strata.pricer.fxopt</a></td>
+<td class="colLast">
+<div class="block">Calculators for FX options.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.index">com.opengamma.strata.pricer.index</a></td>
 <td class="colLast">
 <div class="block">Calculators for products based on rate indices, such as Short Term Interest Rate futures (STIRs).</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><a href="#com.opengamma.strata.pricer.model">com.opengamma.strata.pricer.model</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.model">com.opengamma.strata.pricer.model</a></td>
+<td class="colLast">
+<div class="block">Common code for model pricing.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.rate">com.opengamma.strata.pricer.rate</a></td>
 <td class="colLast">
 <div class="block">Calculators for rates instruments, such as Forward Rate Agreement (FRA) and interest rate swap.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.swaption">com.opengamma.strata.pricer.swaption</a></td>
 <td class="colLast">
 <div class="block">Calculators for swaptions.</div>
@@ -186,11 +206,17 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ConstantNodalCurve.html" title="class in com.opengamma.strata.market.curve">ConstantNodalCurve</a></span></code>
+<div class="block">A curve based on a single constant value.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html" title="class in com.opengamma.strata.market.curve">InterpolatedNodalCurve</a></span></code>
 <div class="block">A curve based on interpolation between a number of nodal points.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParallelShiftedCurve.html" title="class in com.opengamma.strata.market.curve">ParallelShiftedCurve</a></span></code>
 <div class="block">A curve with a parallel shift applied to its y-values.</div>
@@ -227,6 +253,21 @@
 <div class="block">Applies a perturbation to the specified underlying.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>&lt;R extends <a href="../../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a>&gt;<br><a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;R&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedDataCombiner.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/ParameterizedDataCombiner.html#withParameter-java.lang.Class-int-double-">withParameter</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;R&gt;&nbsp;underlyingType,
+             int&nbsp;parameterIndex,
+             double&nbsp;newValue)</code>
+<div class="block">Updates a parameter on the specified list of underlying instances.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>&lt;R extends <a href="../../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a>&gt;<br><a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;R&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedDataCombiner.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/ParameterizedDataCombiner.html#withPerturbation-java.lang.Class-com.opengamma.strata.market.param.ParameterPerturbation-">withPerturbation</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;R&gt;&nbsp;underlyingType,
+                <a href="../../../../../../com/opengamma/strata/market/param/ParameterPerturbation.html" title="interface in com.opengamma.strata.market.param">ParameterPerturbation</a>&nbsp;perturbation)</code>
+<div class="block">Applies a perturbation to each underlying.</div>
+</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -261,6 +302,21 @@
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/param/ParameterizedDataCombiner.html" title="class in com.opengamma.strata.market.param">ParameterizedDataCombiner</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ParameterizedDataCombiner.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/ParameterizedDataCombiner.html#of-com.opengamma.strata.market.param.ParameterizedData...-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a>...&nbsp;instances)</code>
+<div class="block">Obtains an instance that can combine the specified underlying instances.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Method parameters in <a href="../../../../../../com/opengamma/strata/market/param/package-summary.html">com.opengamma.strata.market.param</a> with type arguments of type <a href="../../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/param/ParameterizedDataCombiner.html" title="class in com.opengamma.strata.market.param">ParameterizedDataCombiner</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedDataCombiner.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/ParameterizedDataCombiner.html#of-java.util.List-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a>&gt;&nbsp;instances)</code>
 <div class="block">Obtains an instance that can combine the specified underlying instances.</div>
 </td>
 </tr>
@@ -367,6 +423,100 @@
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.bond">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a> in <a href="../../../../../../com/opengamma/strata/pricer/bond/package-summary.html">com.opengamma.strata.pricer.bond</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a> in <a href="../../../../../../com/opengamma/strata/pricer/bond/package-summary.html">com.opengamma.strata.pricer.bond</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a></span></code>
+<div class="block">Volatility for pricing bond futures and their options in the log-normal or Black model.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/BondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BondFutureVolatilities</a></span></code>
+<div class="block">Volatilities for pricing bond futures and their options.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../com/opengamma/strata/pricer/bond/package-summary.html">com.opengamma.strata.pricer.bond</a> that implement <a href="../../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureExpiryLogMoneynessVolatilities.html" title="class in com.opengamma.strata.pricer.bond">BlackBondFutureExpiryLogMoneynessVolatilities</a></span></code>
+<div class="block">Data provider of volatility for bond future options in the log-normal or Black model.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.capfloor">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a> in <a href="../../../../../../com/opengamma/strata/pricer/capfloor/package-summary.html">com.opengamma.strata.pricer.capfloor</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a> in <a href="../../../../../../com/opengamma/strata/pricer/capfloor/package-summary.html">com.opengamma.strata.pricer.capfloor</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/BlackIborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">BlackIborCapletFloorletVolatilities</a></span></code>
+<div class="block">Volatility for Ibor caplet/floorlet in the log-normal or Black model.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a></span></code>
+<div class="block">Volatilities for pricing Ibor caplet/floorlet.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletVolatilities</a></span></code>
+<div class="block">Volatility for Ibor caplet/floorlet in the normal or Bachelier model.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../com/opengamma/strata/pricer/capfloor/package-summary.html">com.opengamma.strata.pricer.capfloor</a> that implement <a href="../../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/BlackIborCapletFloorletExpiryStrikeVolatilities.html" title="class in com.opengamma.strata.pricer.capfloor">BlackIborCapletFloorletExpiryStrikeVolatilities</a></span></code>
+<div class="block">Volatility for Ibor caplet/floorlet in the log-normal or Black model based on a surface.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html" title="class in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletExpiryStrikeVolatilities</a></span></code>
+<div class="block">Volatility for Ibor caplet/floorlet in the normal or Bachelier model based on a surface.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.pricer.fx">
 <!--   -->
 </a>
@@ -407,8 +557,79 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fx/DiscountFxIndexRates.html" title="class in com.opengamma.strata.pricer.fx">DiscountFxIndexRates</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fx/ForwardFxIndexRates.html" title="class in com.opengamma.strata.pricer.fx">ForwardFxIndexRates</a></span></code>
 <div class="block">Provides access to rates for an FX index.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.fxopt">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a> in <a href="../../../../../../com/opengamma/strata/pricer/fxopt/package-summary.html">com.opengamma.strata.pricer.fxopt</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a> in <a href="../../../../../../com/opengamma/strata/pricer/fxopt/package-summary.html">com.opengamma.strata.pricer.fxopt</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">BlackFxOptionVolatilities</a></span></code>
+<div class="block">Volatility for FX option in the log-normal or Black model.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/FxOptionVolatilities.html" title="interface in com.opengamma.strata.pricer.fxopt">FxOptionVolatilities</a></span></code>
+<div class="block">Volatilities for pricing FX options.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt">SmileDeltaTermStructure</a></span></code>
+<div class="block">A term structure of smile as used in Forex market.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../com/opengamma/strata/pricer/fxopt/package-summary.html">com.opengamma.strata.pricer.fxopt</a> that implement <a href="../../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionFlatVolatilities.html" title="class in com.opengamma.strata.pricer.fxopt">BlackFxOptionFlatVolatilities</a></span></code>
+<div class="block">Volatility for FX options in the log-normal or Black model based on a curve.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionSmileVolatilities.html" title="class in com.opengamma.strata.pricer.fxopt">BlackFxOptionSmileVolatilities</a></span></code>
+<div class="block">Data provider of volatility for FX options in the log-normal or Black-Scholes model.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/BlackFxOptionSurfaceVolatilities.html" title="class in com.opengamma.strata.pricer.fxopt">BlackFxOptionSurfaceVolatilities</a></span></code>
+<div class="block">Volatility for FX options in the log-normal or Black model based on a surface.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html" title="class in com.opengamma.strata.pricer.fxopt">InterpolatedStrikeSmileDeltaTermStructure</a></span></code>
+<div class="block">An interpolated term structure of smiles as used in Forex market.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaParameters.html" title="class in com.opengamma.strata.pricer.fxopt">SmileDeltaParameters</a></span></code>
+<div class="block">A delta dependent smile as used in Forex market.</div>
 </td>
 </tr>
 </tbody>
@@ -588,6 +809,18 @@
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/BlackSwaptionExpiryTenorVolatilities.html" title="class in com.opengamma.strata.pricer.swaption">BlackSwaptionExpiryTenorVolatilities</a></span></code>
 <div class="block">Volatility for swaptions in the log-normal or Black model.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/NormalSwaptionExpirySimpleMoneynessVolatilities.html" title="class in com.opengamma.strata.pricer.swaption">NormalSwaptionExpirySimpleMoneynessVolatilities</a></span></code>
+<div class="block">Volatility for swaptions in the normal or Bachelier model based on a surface.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/NormalSwaptionExpiryStrikeVolatilities.html" title="class in com.opengamma.strata.pricer.swaption">NormalSwaptionExpiryStrikeVolatilities</a></span></code>
+<div class="block">Volatility for swaptions in the normal or Bachelier model based on a surface.</div>
 </td>
 </tr>
 <tr class="rowColor">

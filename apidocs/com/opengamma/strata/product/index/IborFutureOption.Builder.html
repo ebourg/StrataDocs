@@ -172,7 +172,7 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.Builder.html" title="class in com.opengamma.strata.product.index">IborFutureOption.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.Builder.html#premiumStyle-com.opengamma.strata.product.common.FutureOptionPremiumStyle-">premiumStyle</a></span>(<a href="../../../../../com/opengamma/strata/product/common/FutureOptionPremiumStyle.html" title="enum in com.opengamma.strata.product.common">FutureOptionPremiumStyle</a>&nbsp;premiumStyle)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.Builder.html#premiumStyle-com.opengamma.strata.product.option.FutureOptionPremiumStyle-">premiumStyle</a></span>(<a href="../../../../../com/opengamma/strata/product/option/FutureOptionPremiumStyle.html" title="enum in com.opengamma.strata.product.option">FutureOptionPremiumStyle</a>&nbsp;premiumStyle)</code>
 <div class="block">Sets the style of the option premium.</div>
 </td>
 </tr>
@@ -221,7 +221,7 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.Builder.html" title="class in com.opengamma.strata.product.index">IborFutureOption.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.Builder.html#strikePrice-double-">strikePrice</a></span>(double&nbsp;strikePrice)</code>
-<div class="block">Sets the strike price, represented in decimal form.</div>
+<div class="block">Sets the strike price, in decimal form.</div>
 </td>
 </tr>
 <tr id="i15" class="rowColor">
@@ -398,12 +398,14 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <li class="blockList">
 <h4>strikePrice</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.Builder.html" title="class in com.opengamma.strata.product.index">IborFutureOption.Builder</a>&nbsp;strikePrice(double&nbsp;strikePrice)</pre>
-<div class="block">Sets the strike price, represented in decimal form.
+<div class="block">Sets the strike price, in decimal form.
  <p>
  This is the price at which the option applies and refers to the price of the underlying future.
- This must be represented in decimal form, <code>(1.0 - decimalRate)</code>.
- As such, the common market price of 99.3 for a 0.7% rate must be input as 0.993.
- The rate implied by the strike can take negative values.</div>
+ The rate implied by the strike can take negative values.
+ <p>
+ Strata uses <i>decimal prices</i> for Ibor futures in the trade model, pricers and market data.
+ The decimal price is based on the decimal rate equivalent to the percentage.
+ For example, a price of 99.32 implies an interest rate of 0.68% which is represented in Strata by 0.9932.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>strikePrice</code> - the new value</dd>
@@ -467,13 +469,13 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 </dl>
 </li>
 </ul>
-<a name="premiumStyle-com.opengamma.strata.product.common.FutureOptionPremiumStyle-">
+<a name="premiumStyle-com.opengamma.strata.product.option.FutureOptionPremiumStyle-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>premiumStyle</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.Builder.html" title="class in com.opengamma.strata.product.index">IborFutureOption.Builder</a>&nbsp;premiumStyle(<a href="../../../../../com/opengamma/strata/product/common/FutureOptionPremiumStyle.html" title="enum in com.opengamma.strata.product.common">FutureOptionPremiumStyle</a>&nbsp;premiumStyle)</pre>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.Builder.html" title="class in com.opengamma.strata.product.index">IborFutureOption.Builder</a>&nbsp;premiumStyle(<a href="../../../../../com/opengamma/strata/product/option/FutureOptionPremiumStyle.html" title="enum in com.opengamma.strata.product.option">FutureOptionPremiumStyle</a>&nbsp;premiumStyle)</pre>
 <div class="block">Sets the style of the option premium.
  <p>
  The two options are daily margining and upfront premium.</div>
@@ -495,9 +497,7 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <div class="block">Sets the definition of how to round the option price, defaulted to no rounding.
  <p>
  The price is represented in decimal form, not percentage form.
- As such, the decimal places expressed by the rounding refers to this decimal form.
- For example, the common market price of 99.7125 is represented as 0.997125 which
- has 6 decimal places.</div>
+ As such, the decimal places expressed by the rounding refers to this decimal form.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>rounding</code> - the new value, not null</dd>

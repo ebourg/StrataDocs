@@ -110,13 +110,13 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../com/opengamma/strata/product/swap/PaymentEvent.html" title="interface in com.opengamma.strata.product.swap">PaymentEvent</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a></dd>
+<dd><a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentEvent</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">NotionalExchange</span>
 extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
-implements <a href="../../../../../com/opengamma/strata/product/swap/PaymentEvent.html" title="interface in com.opengamma.strata.product.swap">PaymentEvent</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
+implements <a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentEvent</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
 <div class="block">An exchange of notionals between two counterparties.
  <p>
  In most swaps, the notional amount is not exchanged, with only the net difference being exchanged.
@@ -303,14 +303,14 @@ implements <a href="../../../../../com/opengamma/strata/product/swap/PaymentEven
 <li class="blockList">
 <h4>getPaymentDate</h4>
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;getPaymentDate()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/product/swap/PaymentEvent.html#getPaymentDate--">PaymentEvent</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html#getPaymentDate--">SwapPaymentEvent</a></code></span></div>
 <div class="block">Gets the date that the payment is made.
  <p>
  Each payment event has a single payment date.
  This date has been adjusted to be a valid business day.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/product/swap/PaymentEvent.html#getPaymentDate--">getPaymentDate</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/product/swap/PaymentEvent.html" title="interface in com.opengamma.strata.product.swap">PaymentEvent</a></code></dd>
+<dd><code><a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html#getPaymentDate--">getPaymentDate</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentEvent</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the payment date</dd>
 </dl>
@@ -342,7 +342,7 @@ implements <a href="../../../../../com/opengamma/strata/product/swap/PaymentEven
  The currency of the event is the currency of the payment.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/product/swap/PaymentEvent.html#getCurrency--">getCurrency</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/product/swap/PaymentEvent.html" title="interface in com.opengamma.strata.product.swap">PaymentEvent</a></code></dd>
+<dd><code><a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html#getCurrency--">getCurrency</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentEvent</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the currency of the event</dd>
 </dl>
@@ -355,14 +355,14 @@ implements <a href="../../../../../com/opengamma/strata/product/swap/PaymentEven
 <li class="blockList">
 <h4>adjustPaymentDate</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/swap/NotionalExchange.html" title="class in com.opengamma.strata.product.swap">NotionalExchange</a>&nbsp;adjustPaymentDate(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/temporal/TemporalAdjuster.html?is-external=true" title="class or interface in java.time.temporal">TemporalAdjuster</a>&nbsp;adjuster)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/product/swap/PaymentEvent.html#adjustPaymentDate-java.time.temporal.TemporalAdjuster-">PaymentEvent</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html#adjustPaymentDate-java.time.temporal.TemporalAdjuster-">SwapPaymentEvent</a></code></span></div>
 <div class="block">Adjusts the payment date using the rules of the specified adjuster.
  <p>
  The adjuster is typically an instance of <a href="../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date"><code>BusinessDayAdjustment</code></a>.
  Implementations must return a new instance unless they are immutable and no change occurs.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/product/swap/PaymentEvent.html#adjustPaymentDate-java.time.temporal.TemporalAdjuster-">adjustPaymentDate</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/product/swap/PaymentEvent.html" title="interface in com.opengamma.strata.product.swap">PaymentEvent</a></code></dd>
+<dd><code><a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html#adjustPaymentDate-java.time.temporal.TemporalAdjuster-">adjustPaymentDate</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentEvent</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>adjuster</code> - the adjuster to apply to the payment date</dd>
 <dt><span class="returnLabel">Returns:</span></dt>

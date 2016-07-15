@@ -104,10 +104,6 @@ var activeTableTab = "activeTableTab";
 <dt><span class="paramLabel">Type Parameters:</span></dt>
 <dd><code>T</code> - the type of data held in the box</dd>
 </dl>
-<dl>
-<dt>All Known Implementing Classes:</dt>
-<dd><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketDataBox.html" title="class in com.opengamma.strata.data.scenario">ScenarioMarketDataBox</a>, <a href="../../../../../com/opengamma/strata/data/scenario/SingleMarketDataBox.html" title="class in com.opengamma.strata.data.scenario">SingleMarketDataBox</a></dd>
-</dl>
 <hr>
 <br>
 <pre>public interface <span class="typeNameLabel">MarketDataBox&lt;T&gt;</span></pre>
@@ -291,7 +287,13 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>ofScenarioValue</h4>
 <pre>static&nbsp;&lt;T&gt;&nbsp;<a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;T&gt;&nbsp;ofScenarioValue(<a href="../../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario">ScenarioArray</a>&lt;T&gt;&nbsp;scenarioValue)</pre>
-<div class="block">Obtains an instance containing a scenario market data value with data for multiple scenarios.</div>
+<div class="block">Obtains an instance containing a scenario market data value with data for multiple scenarios.
+ <p>
+ The market data is made up of multiple values, one for each scenario.
+ The <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario"><code>ScenarioArray</code></a> instance may provide optimized internal storage of these values.
+ <p>
+ A box may be created that contains a value for one scenario. Such a box is distinct from
+ a box created using <a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html#ofSingleValue-T-"><code>ofSingleValue(Object)</code></a>, which is valid for any number of scenarios.</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
 <dd><code>T</code> - the type of the market data value used in each scenario</dd>
@@ -314,7 +316,10 @@ var activeTableTab = "activeTableTab";
 static&nbsp;&lt;T&gt;&nbsp;<a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;T&gt;&nbsp;ofScenarioValues(T...&nbsp;scenarioValues)</pre>
 <div class="block">Obtains an instance containing a scenario market data value with data for multiple scenarios.
  <p>
- The market data is made up of multiple single values, one for each scenario.</div>
+ The market data is made up of multiple values, one for each scenario.
+ <p>
+ A box may be created that contains a value for one scenario. Such a box is distinct from
+ a box created using <a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html#ofSingleValue-T-"><code>ofSingleValue(Object)</code></a>, which is valid for any number of scenarios.</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
 <dd><code>T</code> - the type of the market data value used in each scenario</dd>
@@ -332,7 +337,12 @@ static&nbsp;&lt;T&gt;&nbsp;<a href="../../../../../com/opengamma/strata/data/sce
 <li class="blockList">
 <h4>ofScenarioValues</h4>
 <pre>static&nbsp;&lt;T&gt;&nbsp;<a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html" title="interface in com.opengamma.strata.data.scenario">MarketDataBox</a>&lt;T&gt;&nbsp;ofScenarioValues(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;&nbsp;scenarioValues)</pre>
-<div class="block">Obtains an instance containing a scenario market data value with data for multiple scenarios.</div>
+<div class="block">Obtains an instance containing a scenario market data value with data for multiple scenarios.
+ <p>
+ The market data is made up of multiple values, one for each scenario.
+ <p>
+ A box may be created that contains a value for one scenario. Such a box is distinct from
+ a box created using <a href="../../../../../com/opengamma/strata/data/scenario/MarketDataBox.html#ofSingleValue-T-"><code>ofSingleValue(Object)</code></a>, which is valid for any number of scenarios.</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
 <dd><code>T</code> - the type of the market data value used in each scenario</dd>
@@ -414,6 +424,8 @@ static&nbsp;&lt;T&gt;&nbsp;<a href="../../../../../com/opengamma/strata/data/sce
 <dd><code>scenarioIndex</code> - the index of the scenario</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the market data value associated with the scenario</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang">IndexOutOfBoundsException</a></code> - if the index is invalid</dd>
 </dl>
 </li>
 </ul>
@@ -454,11 +466,11 @@ static&nbsp;&lt;T&gt;&nbsp;<a href="../../../../../com/opengamma/strata/data/sce
 <pre>int&nbsp;getScenarioCount()</pre>
 <div class="block">Gets the number of scenarios for which this box contains data.
  <p>
- If a box contains data for a single scenario it is treated as a special case and can be used in any number
- of scenarios, returning the same value for every scenario.</div>
+ A "single value" box can be used with any number of scenarios.
+ To indicate this, the method will return -1.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the number of scenarios for which this box contains data</dd>
+<dd>the number of scenarios for which this box contains data, -1 if the number is not specified</dd>
 </dl>
 </li>
 </ul>

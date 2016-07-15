@@ -111,6 +111,13 @@
 <div class="block">Returns a scenario FX rate provider which takes its data from the provided market data.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioFxRateProvider.html" title="interface in com.opengamma.strata.data.scenario">ScenarioFxRateProvider</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ScenarioFxRateProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioFxRateProvider.html#of-com.opengamma.strata.data.scenario.ScenarioMarketData-com.opengamma.strata.data.ObservableSource-">of</a></span>(<a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData,
+  <a href="../../../../../../com/opengamma/strata/data/ObservableSource.html" title="class in com.opengamma.strata.data">ObservableSource</a>&nbsp;source)</code>
+<div class="block">Returns a scenario FX rate provider which takes its data from the provided market data.</div>
+</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -121,11 +128,9 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioFxConvertible.html" title="type parameter in ScenarioFxConvertible">R</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ScenarioFxConvertible.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioFxConvertible.html#convertedTo-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.data.scenario.ScenarioFxRateProvider-">convertedTo</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;resultCurrency,
-           <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioFxRateProvider.html" title="interface in com.opengamma.strata.data.scenario">ScenarioFxRateProvider</a>&nbsp;rateProvider)</code>
-<div class="block">Converts this instance to an equivalent amount in the specified currency.</div>
-</td>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/CurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">CurrencyScenarioArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CurrencyScenarioArray.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/data/scenario/CurrencyScenarioArray.html#convertedTo-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.data.scenario.ScenarioFxRateProvider-">convertedTo</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;reportingCurrency,
+           <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioFxRateProvider.html" title="interface in com.opengamma.strata.data.scenario">ScenarioFxRateProvider</a>&nbsp;fxRateProvider)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/CurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">CurrencyScenarioArray</a></code></td>
@@ -133,9 +138,11 @@
            <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioFxRateProvider.html" title="interface in com.opengamma.strata.data.scenario">ScenarioFxRateProvider</a>&nbsp;fxRateProvider)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/CurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">CurrencyScenarioArray</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CurrencyScenarioArray.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/data/scenario/CurrencyScenarioArray.html#convertedTo-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.data.scenario.ScenarioFxRateProvider-">convertedTo</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;reportingCurrency,
-           <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioFxRateProvider.html" title="interface in com.opengamma.strata.data.scenario">ScenarioFxRateProvider</a>&nbsp;fxRateProvider)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioFxConvertible.html" title="type parameter in ScenarioFxConvertible">R</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ScenarioFxConvertible.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioFxConvertible.html#convertedTo-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.data.scenario.ScenarioFxRateProvider-">convertedTo</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;resultCurrency,
+           <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioFxRateProvider.html" title="interface in com.opengamma.strata.data.scenario">ScenarioFxRateProvider</a>&nbsp;rateProvider)</code>
+<div class="block">Converts this instance to an equivalent amount in the specified currency.</div>
+</td>
 </tr>
 </tbody>
 </table>

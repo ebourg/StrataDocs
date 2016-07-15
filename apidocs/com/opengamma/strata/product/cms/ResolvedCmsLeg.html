@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":9,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10};
+var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":9,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -225,34 +225,40 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </td>
 </tr>
 <tr id="i8" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/cms/ResolvedCmsLeg.html#getUnderlyingIndex--">getUnderlyingIndex</a></span>()</code>
+<div class="block">Gets the underlying Ibor index that the leg is based on.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/cms/ResolvedCmsLeg.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/cms/ResolvedCmsLeg.Meta.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsLeg.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/cms/ResolvedCmsLeg.html#meta--">meta</a></span>()</code>
 <div class="block">The meta-bean for <code>ResolvedCmsLeg</code>.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/cms/ResolvedCmsLeg.Meta.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsLeg.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/cms/ResolvedCmsLeg.html#metaBean--">metaBean</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>&lt;R&gt;&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Property.html?is-external=true" title="class or interface in org.joda.beans">Property</a>&lt;R&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/cms/ResolvedCmsLeg.html#property-java.lang.String-">property</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/cms/ResolvedCmsLeg.html#propertyNames--">propertyNames</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/cms/ResolvedCmsLeg.Builder.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsLeg.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/cms/ResolvedCmsLeg.html#toBuilder--">toBuilder</a></span>()</code>
 <div class="block">Returns a builder that allows this bean to be mutated.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/cms/ResolvedCmsLeg.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -336,6 +342,22 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <h4>getIndex</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/swap/SwapIndex.html" title="interface in com.opengamma.strata.product.swap">SwapIndex</a>&nbsp;getIndex()</pre>
 <div class="block">Gets the swap index of the leg.
+ <p>
+ All periods in the leg will have this index.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the index</dd>
+</dl>
+</li>
+</ul>
+<a name="getUnderlyingIndex--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getUnderlyingIndex</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;getUnderlyingIndex()</pre>
+<div class="block">Gets the underlying Ibor index that the leg is based on.
  <p>
  All periods in the leg will have this index.</div>
 <dl>

@@ -103,7 +103,9 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.capfloor">com.opengamma.strata.pricer.capfloor</a></td>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Calculators for Ibor cap-floor.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.fx">com.opengamma.strata.pricer.fx</a></td>
@@ -181,14 +183,14 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">PointSensitivities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html#getSensitivities--">getSensitivities</a></span>()</code>
-<div class="block">Gets the point sensitivities.</div>
+<td class="colLast"><span class="typeNameLabel">MutablePointSensitivities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/sensitivity/MutablePointSensitivities.html#getSensitivities--">getSensitivities</a></span>()</code>
+<div class="block">Gets the immutable list of point sensitivities.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">MutablePointSensitivities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/sensitivity/MutablePointSensitivities.html#getSensitivities--">getSensitivities</a></span>()</code>
-<div class="block">Gets the immutable list of point sensitivities.</div>
+<td class="colLast"><span class="typeNameLabel">PointSensitivities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html#getSensitivities--">getSensitivities</a></span>()</code>
+<div class="block">Gets the point sensitivities.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -359,15 +361,21 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><span class="typeNameLabel">RepoCurveZeroRateSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/RepoCurveZeroRateSensitivity.html#compareKey-com.opengamma.strata.market.sensitivity.PointSensitivity-">compareKey</a></span>(<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>&nbsp;other)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">IssuerCurveZeroRateSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/IssuerCurveZeroRateSensitivity.html#compareKey-com.opengamma.strata.market.sensitivity.PointSensitivity-">compareKey</a></span>(<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>&nbsp;other)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><span class="typeNameLabel">IssuerCurveZeroRateSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/IssuerCurveZeroRateSensitivity.html#compareKey-com.opengamma.strata.market.sensitivity.PointSensitivity-">compareKey</a></span>(<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>&nbsp;other)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">RepoCurveZeroRateSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/RepoCurveZeroRateSensitivity.html#compareKey-com.opengamma.strata.market.sensitivity.PointSensitivity-">compareKey</a></span>(<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>&nbsp;other)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BondFutureOptionSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/BondFutureOptionSensitivity.html#compareKey-com.opengamma.strata.market.sensitivity.PointSensitivity-">compareKey</a></span>(<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>&nbsp;other)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFutureVolatilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/BondFutureVolatilities.html#parameterSensitivity-com.opengamma.strata.market.sensitivity.PointSensitivity...-">parameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>...&nbsp;pointSensitivities)</code>
+<div class="block">Calculates the parameter sensitivity.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -401,6 +409,12 @@
 <tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">IborCapletFloorletSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletSensitivity.html#compareKey-com.opengamma.strata.market.sensitivity.PointSensitivity-">compareKey</a></span>(<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>&nbsp;other)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborCapletFloorletVolatilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#parameterSensitivity-com.opengamma.strata.market.sensitivity.PointSensitivity...-">parameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>...&nbsp;pointSensitivities)</code>
+<div class="block">Calculates the parameter sensitivity.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -477,6 +491,12 @@
 <tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">FxOptionSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/FxOptionSensitivity.html#compareKey-com.opengamma.strata.market.sensitivity.PointSensitivity-">compareKey</a></span>(<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>&nbsp;other)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FxOptionVolatilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/FxOptionVolatilities.html#parameterSensitivity-com.opengamma.strata.market.sensitivity.PointSensitivity...-">parameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>...&nbsp;pointSensitivities)</code>
+<div class="block">Calculates the parameter sensitivity.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -560,11 +580,11 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightRateSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/OvernightRateSensitivity.html#compareKey-com.opengamma.strata.market.sensitivity.PointSensitivity-">compareKey</a></span>(<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>&nbsp;other)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">InflationRateSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/InflationRateSensitivity.html#compareKey-com.opengamma.strata.market.sensitivity.PointSensitivity-">compareKey</a></span>(<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>&nbsp;other)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><span class="typeNameLabel">InflationRateSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/InflationRateSensitivity.html#compareKey-com.opengamma.strata.market.sensitivity.PointSensitivity-">compareKey</a></span>(<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>&nbsp;other)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">OvernightRateSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/OvernightRateSensitivity.html#compareKey-com.opengamma.strata.market.sensitivity.PointSensitivity-">compareKey</a></span>(<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>&nbsp;other)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>int</code></td>
@@ -607,11 +627,11 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><span class="typeNameLabel">SwaptionSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionSensitivity.html#compareKey-com.opengamma.strata.market.sensitivity.PointSensitivity-">compareKey</a></span>(<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>&nbsp;other)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">SwaptionSabrSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionSabrSensitivity.html#compareKey-com.opengamma.strata.market.sensitivity.PointSensitivity-">compareKey</a></span>(<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>&nbsp;other)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><span class="typeNameLabel">SwaptionSabrSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionSabrSensitivity.html#compareKey-com.opengamma.strata.market.sensitivity.PointSensitivity-">compareKey</a></span>(<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>&nbsp;other)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">SwaptionSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionSensitivity.html#compareKey-com.opengamma.strata.market.sensitivity.PointSensitivity-">compareKey</a></span>(<a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivity.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivity</a>&nbsp;other)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>

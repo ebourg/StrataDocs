@@ -122,7 +122,15 @@ implements <a href="../../../../../com/opengamma/strata/product/SecuritizedProdu
  A trade in an underlying <a href="../../../../../com/opengamma/strata/product/index/IborFuture.html" title="class in com.opengamma.strata.product.index"><code>IborFuture</code></a>.
  <p>
  An Ibor future is also known as a <i>STIR future</i> (Short Term Interest Rate).
- For example, the purchase of 2 contracts of the widely traded "CME Eurodollar futures contract".</div>
+ For example, the purchase of 2 contracts of the widely traded "CME Eurodollar futures contract".
+ 
+ <h4>Price</h4>
+ The price of an Ibor future is based on the interest rate of the underlying index.
+ It is defined as <code>(100 - percentRate)</code>.
+ <p>
+ Strata uses <i>decimal prices</i> for Ibor futures in the trade model, pricers and market data.
+ The decimal price is based on the decimal rate equivalent to the percentage.
+ For example, a price of 99.32 implies an interest rate of 0.68% which is represented in Strata by 0.9932.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../serialized-form.html#com.opengamma.strata.product.index.IborFutureTrade">Serialized Form</a></dd>
@@ -439,8 +447,10 @@ implements <a href="../../../../../com/opengamma/strata/product/SecuritizedProdu
 <div class="block">Gets the price that was traded, in decimal form.
  <p>
  This is the price agreed when the trade occurred.
- This must be represented in decimal form, <code>(1.0 - decimalRate)</code>.
- As such, the common market price of 99.3 for a 0.7% rate must be input as 0.993.</div>
+ <p>
+ Strata uses <i>decimal prices</i> for Ibor futures in the trade model, pricers and market data.
+ The decimal price is based on the decimal rate equivalent to the percentage.
+ For example, a price of 99.32 implies an interest rate of 0.68% which is represented in Strata by 0.9932.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/opengamma/strata/product/SecuritizedProductTrade.html#getPrice--">getPrice</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/product/SecuritizedProductTrade.html" title="interface in com.opengamma.strata.product">SecuritizedProductTrade</a></code></dd>

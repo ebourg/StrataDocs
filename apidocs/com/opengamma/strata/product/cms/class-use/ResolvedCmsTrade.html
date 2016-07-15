@@ -84,18 +84,161 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><a href="#com.opengamma.strata.pricer.cms">com.opengamma.strata.pricer.cms</a></td>
-<td class="colLast">&nbsp;</td>
+<td class="colFirst"><a href="#com.opengamma.strata.measure.cms">com.opengamma.strata.measure.cms</a></td>
+<td class="colLast">
+<div class="block">Calculation functions for constant maturity swap (CMS) products.</div>
+</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.cms">com.opengamma.strata.pricer.cms</a></td>
+<td class="colLast">
+<div class="block">Calculators for CMS.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.cms">com.opengamma.strata.product.cms</a></td>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Entity objects describing Constant Maturity Swap (CMS) or CMS cap/floor.</div>
+</td>
 </tr>
 </tbody>
 </table>
 </li>
 <li class="blockList">
 <ul class="blockList">
+<li class="blockList"><a name="com.opengamma.strata.measure.cms">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a> in <a href="../../../../../../com/opengamma/strata/measure/cms/package-summary.html">com.opengamma.strata.measure.cms</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/measure/cms/package-summary.html">com.opengamma.strata.measure.cms</a> with parameters of type <a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/MultiCurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">MultiCurrencyScenarioArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CmsTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/cms/CmsTradeCalculations.html#currencyExposure-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.measure.swaption.SwaptionMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">currencyExposure</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+                <a href="../../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;ratesLookup,
+                <a href="../../../../../../com/opengamma/strata/measure/swaption/SwaptionMarketDataLookup.html" title="interface in com.opengamma.strata.measure.swaption">SwaptionMarketDataLookup</a>&nbsp;swaptionLookup,
+                <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</code>
+<div class="block">Calculates currency exposure across one or more scenarios.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CmsTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/cms/CmsTradeCalculations.html#currencyExposure-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">currencyExposure</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+                <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates currency exposure for a single set of market data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/MultiCurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">MultiCurrencyScenarioArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CmsTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/cms/CmsTradeCalculations.html#currentCash-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.measure.swaption.SwaptionMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">currentCash</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+           <a href="../../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;ratesLookup,
+           <a href="../../../../../../com/opengamma/strata/measure/swaption/SwaptionMarketDataLookup.html" title="interface in com.opengamma.strata.measure.swaption">SwaptionMarketDataLookup</a>&nbsp;swaptionLookup,
+           <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</code>
+<div class="block">Calculates current cash across one or more scenarios.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CmsTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/cms/CmsTradeCalculations.html#currentCash-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">currentCash</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+           <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+           <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates current cash for a single set of market data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/MultiCurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">MultiCurrencyScenarioArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CmsTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/cms/CmsTradeCalculations.html#presentValue-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.measure.swaption.SwaptionMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+            <a href="../../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;ratesLookup,
+            <a href="../../../../../../com/opengamma/strata/measure/swaption/SwaptionMarketDataLookup.html" title="interface in com.opengamma.strata.measure.swaption">SwaptionMarketDataLookup</a>&nbsp;swaptionLookup,
+            <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</code>
+<div class="block">Calculates present value across one or more scenarios.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CmsTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/cms/CmsTradeCalculations.html#presentValue-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+            <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+            <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates present value for a single set of market data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario">ScenarioArray</a>&lt;<a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">CmsTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/cms/CmsTradeCalculations.html#pv01RatesCalibratedBucketed-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.measure.swaption.SwaptionMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">pv01RatesCalibratedBucketed</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+                           <a href="../../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;ratesLookup,
+                           <a href="../../../../../../com/opengamma/strata/measure/swaption/SwaptionMarketDataLookup.html" title="interface in com.opengamma.strata.measure.swaption">SwaptionMarketDataLookup</a>&nbsp;swaptionLookup,
+                           <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</code>
+<div class="block">Calculates present value sensitivity across one or more scenarios.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CmsTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/cms/CmsTradeCalculations.html#pv01RatesCalibratedBucketed-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">pv01RatesCalibratedBucketed</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+                           <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                           <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates present value sensitivity for a single set of market data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/MultiCurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">MultiCurrencyScenarioArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CmsTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/cms/CmsTradeCalculations.html#pv01RatesCalibratedSum-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.measure.swaption.SwaptionMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">pv01RatesCalibratedSum</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+                      <a href="../../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;ratesLookup,
+                      <a href="../../../../../../com/opengamma/strata/measure/swaption/SwaptionMarketDataLookup.html" title="interface in com.opengamma.strata.measure.swaption">SwaptionMarketDataLookup</a>&nbsp;swaptionLookup,
+                      <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</code>
+<div class="block">Calculates present value sensitivity across one or more scenarios.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CmsTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/cms/CmsTradeCalculations.html#pv01RatesCalibratedSum-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">pv01RatesCalibratedSum</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+                      <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                      <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates present value sensitivity for a single set of market data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario">ScenarioArray</a>&lt;<a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">CmsTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/cms/CmsTradeCalculations.html#pv01RatesMarketQuoteBucketed-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.measure.swaption.SwaptionMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">pv01RatesMarketQuoteBucketed</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+                            <a href="../../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;ratesLookup,
+                            <a href="../../../../../../com/opengamma/strata/measure/swaption/SwaptionMarketDataLookup.html" title="interface in com.opengamma.strata.measure.swaption">SwaptionMarketDataLookup</a>&nbsp;swaptionLookup,
+                            <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</code>
+<div class="block">Calculates present value sensitivity across one or more scenarios.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CmsTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/cms/CmsTradeCalculations.html#pv01RatesMarketQuoteBucketed-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">pv01RatesMarketQuoteBucketed</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+                            <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                            <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates present value sensitivity for a single set of market data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/MultiCurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">MultiCurrencyScenarioArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CmsTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/cms/CmsTradeCalculations.html#pv01RatesMarketQuoteSum-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.measure.swaption.SwaptionMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">pv01RatesMarketQuoteSum</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+                       <a href="../../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;ratesLookup,
+                       <a href="../../../../../../com/opengamma/strata/measure/swaption/SwaptionMarketDataLookup.html" title="interface in com.opengamma.strata.measure.swaption">SwaptionMarketDataLookup</a>&nbsp;swaptionLookup,
+                       <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</code>
+<div class="block">Calculates present value sensitivity across one or more scenarios.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CmsTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/cms/CmsTradeCalculations.html#pv01RatesMarketQuoteSum-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">pv01RatesMarketQuoteSum</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+                       <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                       <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates present value sensitivity for a single set of market data.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.pricer.cms">
 <!--   -->
 </a>
@@ -116,9 +259,9 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SabrExtrapolationReplicationCmsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/cms/SabrExtrapolationReplicationCmsTradePricer.html#currencyExposure-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SabrParametersSwaptionVolatilities-">currencyExposure</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+<td class="colLast"><span class="typeNameLabel">SabrExtrapolationReplicationCmsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/cms/SabrExtrapolationReplicationCmsTradePricer.html#currencyExposure-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SabrSwaptionVolatilities-">currencyExposure</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
                 <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                <a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrParametersSwaptionVolatilities.html" title="class in com.opengamma.strata.pricer.swaption">SabrParametersSwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
+                <a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SabrSwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
 <div class="block">Calculates the currency exposure of the trade.</div>
 </td>
 </tr>
@@ -131,9 +274,9 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SabrExtrapolationReplicationCmsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/cms/SabrExtrapolationReplicationCmsTradePricer.html#currentCash-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SabrParametersSwaptionVolatilities-">currentCash</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+<td class="colLast"><span class="typeNameLabel">SabrExtrapolationReplicationCmsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/cms/SabrExtrapolationReplicationCmsTradePricer.html#currentCash-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SabrSwaptionVolatilities-">currentCash</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
            <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-           <a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrParametersSwaptionVolatilities.html" title="class in com.opengamma.strata.pricer.swaption">SabrParametersSwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
+           <a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SabrSwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
 <div class="block">Calculates the current cash of the trade.</div>
 </td>
 </tr>
@@ -146,9 +289,9 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SabrExtrapolationReplicationCmsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/cms/SabrExtrapolationReplicationCmsTradePricer.html#presentValue-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SabrParametersSwaptionVolatilities-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+<td class="colLast"><span class="typeNameLabel">SabrExtrapolationReplicationCmsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/cms/SabrExtrapolationReplicationCmsTradePricer.html#presentValue-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SabrSwaptionVolatilities-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
             <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-            <a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrParametersSwaptionVolatilities.html" title="class in com.opengamma.strata.pricer.swaption">SabrParametersSwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
+            <a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SabrSwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
 <div class="block">Calculates the present value of the CMS trade.</div>
 </td>
 </tr>
@@ -161,25 +304,25 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SabrExtrapolationReplicationCmsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/cms/SabrExtrapolationReplicationCmsTradePricer.html#presentValueSensitivity-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SabrParametersSwaptionVolatilities-">presentValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
-                       <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                       <a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrParametersSwaptionVolatilities.html" title="class in com.opengamma.strata.pricer.swaption">SabrParametersSwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
-<div class="block">Calculates the present value curve sensitivity of the CMS trade.</div>
+<td class="colLast"><span class="typeNameLabel">SabrExtrapolationReplicationCmsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/cms/SabrExtrapolationReplicationCmsTradePricer.html#presentValueSensitivityModelParamsSabr-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SabrSwaptionVolatilities-">presentValueSensitivityModelParamsSabr</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+                                      <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                                      <a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SabrSwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
+<div class="block">Calculates the present value sensitivity to the SABR model parameters.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SabrExtrapolationReplicationCmsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/cms/SabrExtrapolationReplicationCmsTradePricer.html#presentValueSensitivitySabrParameter-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SabrParametersSwaptionVolatilities-">presentValueSensitivitySabrParameter</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
-                                    <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                    <a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrParametersSwaptionVolatilities.html" title="class in com.opengamma.strata.pricer.swaption">SabrParametersSwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
-<div class="block">Calculates the present value sensitivity to the SABR model parameters.</div>
+<td class="colLast"><span class="typeNameLabel">SabrExtrapolationReplicationCmsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/cms/SabrExtrapolationReplicationCmsTradePricer.html#presentValueSensitivityRates-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SabrSwaptionVolatilities-">presentValueSensitivityRates</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+                            <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                            <a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SabrSwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
+<div class="block">Calculates the present value curve sensitivity of the CMS trade.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">SabrExtrapolationReplicationCmsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/cms/SabrExtrapolationReplicationCmsTradePricer.html#presentValueSensitivityStrike-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SabrParametersSwaptionVolatilities-">presentValueSensitivityStrike</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
+<td class="colLast"><span class="typeNameLabel">SabrExtrapolationReplicationCmsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/cms/SabrExtrapolationReplicationCmsTradePricer.html#presentValueSensitivityStrike-com.opengamma.strata.product.cms.ResolvedCmsTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SabrSwaptionVolatilities-">presentValueSensitivityStrike</a></span>(<a href="../../../../../../com/opengamma/strata/product/cms/ResolvedCmsTrade.html" title="class in com.opengamma.strata.product.cms">ResolvedCmsTrade</a>&nbsp;trade,
                              <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                             <a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrParametersSwaptionVolatilities.html" title="class in com.opengamma.strata.pricer.swaption">SabrParametersSwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
+                             <a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SabrSwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
 <div class="block">Calculates the present value sensitivity to the strike value.</div>
 </td>
 </tr>

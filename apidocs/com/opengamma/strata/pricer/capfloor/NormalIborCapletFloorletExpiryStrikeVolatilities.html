@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":9,"i8":10,"i9":9,"i10":9,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":9,"i11":10,"i12":9,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -110,7 +110,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../com/opengamma/strata/market/MarketDataView.html" title="interface in com.opengamma.strata.market">MarketDataView</a>, <a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a>, <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletVolatilities</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a></dd>
+<dd><a href="../../../../../com/opengamma/strata/market/MarketDataView.html" title="interface in com.opengamma.strata.market">MarketDataView</a>, <a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a>, <a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a>, <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletVolatilities</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a></dd>
 </dl>
 <hr>
 <br>
@@ -174,80 +174,86 @@ implements <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIb
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#getDayCount--">getDayCount</a></span>()</code>
-<div class="block">Gets the day count applicable to the model.</div>
-</td>
-</tr>
-<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#getIndex--">getIndex</a></span>()</code>
 <div class="block">Gets the Ibor index.</div>
 </td>
 </tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilitiesName.html" title="class in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilitiesName</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#getName--">getName</a></span>()</code>
+<div class="block">Gets the name of these volatilities.</div>
+</td>
+</tr>
 <tr id="i4" class="altColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#getParameter-int-">getParameter</a></span>(int&nbsp;parameterIndex)</code>
+<div class="block">Gets the value of the parameter at the specified index.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#getParameterCount--">getParameterCount</a></span>()</code>
+<div class="block">Gets the number of parameters.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#getParameterMetadata-int-">getParameterMetadata</a></span>(int&nbsp;parameterIndex)</code>
+<div class="block">Gets the metadata of the parameter at the specified index.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#getSurface--">getSurface</a></span>()</code>
 <div class="block">Gets the normal volatility surface.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#getValuationDateTime--">getValuationDateTime</a></span>()</code>
 <div class="block">Gets the valuation date-time.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.Meta.html" title="class in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletExpiryStrikeVolatilities.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#meta--">meta</a></span>()</code>
 <div class="block">The meta-bean for <code>NormalIborCapletFloorletExpiryStrikeVolatilities</code>.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.Meta.html" title="class in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletExpiryStrikeVolatilities.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#metaBean--">metaBean</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html" title="class in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletExpiryStrikeVolatilities</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#of-com.opengamma.strata.market.surface.Surface-com.opengamma.strata.basics.index.IborIndex-java.time.LocalDate-java.time.LocalTime-java.time.ZoneId-com.opengamma.strata.basics.date.DayCount-">of</a></span>(<a href="../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;surface,
-  <a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html?is-external=true" title="class or interface in java.time">LocalTime</a>&nbsp;valuationTime,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZoneId.html?is-external=true" title="class or interface in java.time">ZoneId</a>&nbsp;valuationZone,
-  <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Obtains an instance from the implied volatility surface and the date, time and zone for which it is valid.</div>
-</td>
-</tr>
-<tr id="i10" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html" title="class in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletExpiryStrikeVolatilities</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#of-com.opengamma.strata.market.surface.Surface-com.opengamma.strata.basics.index.IborIndex-java.time.ZonedDateTime-com.opengamma.strata.basics.date.DayCount-">of</a></span>(<a href="../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;surface,
-  <a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#of-com.opengamma.strata.basics.index.IborIndex-java.time.ZonedDateTime-com.opengamma.strata.market.surface.Surface-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;valuationDateTime,
-  <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+  <a href="../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;surface)</code>
 <div class="block">Obtains an instance from the implied volatility surface and the date-time for which it is valid.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#parameterSensitivity-com.opengamma.strata.pricer.capfloor.IborCapletFloorletSensitivity-">parameterSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletSensitivity.html" title="class in com.opengamma.strata.pricer.capfloor">IborCapletFloorletSensitivity</a>&nbsp;point)</code>
-<div class="block">Calculates the parameter sensitivity from the point sensitivity.</div>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#parameterSensitivity-com.opengamma.strata.market.sensitivity.PointSensitivities-">parameterSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&nbsp;pointSensitivities)</code>
+<div class="block">Calculates the parameter sensitivity.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#price-double-com.opengamma.strata.product.common.PutCall-double-double-double-">price</a></span>(double&nbsp;expiry,
      <a href="../../../../../com/opengamma/strata/product/common/PutCall.html" title="enum in com.opengamma.strata.product.common">PutCall</a>&nbsp;putCall,
      double&nbsp;strike,
-     double&nbsp;forwardRate,
+     double&nbsp;forward,
      double&nbsp;volatility)</code>
 <div class="block">Calculates the price.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#priceDelta-double-com.opengamma.strata.product.common.PutCall-double-double-double-">priceDelta</a></span>(double&nbsp;expiry,
           <a href="../../../../../com/opengamma/strata/product/common/PutCall.html" title="enum in com.opengamma.strata.product.common">PutCall</a>&nbsp;putCall,
@@ -257,7 +263,7 @@ implements <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIb
 <div class="block">Calculates the price delta.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#priceGamma-double-com.opengamma.strata.product.common.PutCall-double-double-double-">priceGamma</a></span>(double&nbsp;expiry,
           <a href="../../../../../com/opengamma/strata/product/common/PutCall.html" title="enum in com.opengamma.strata.product.common">PutCall</a>&nbsp;putCall,
@@ -267,7 +273,7 @@ implements <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIb
 <div class="block">Calculates the price gamma.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#priceTheta-double-com.opengamma.strata.product.common.PutCall-double-double-double-">priceTheta</a></span>(double&nbsp;expiry,
           <a href="../../../../../com/opengamma/strata/product/common/PutCall.html" title="enum in com.opengamma.strata.product.common">PutCall</a>&nbsp;putCall,
@@ -277,7 +283,7 @@ implements <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIb
 <div class="block">Calculates the price theta.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#priceVega-double-com.opengamma.strata.product.common.PutCall-double-double-double-">priceVega</a></span>(double&nbsp;expiry,
          <a href="../../../../../com/opengamma/strata/product/common/PutCall.html" title="enum in com.opengamma.strata.product.common">PutCall</a>&nbsp;putCall,
@@ -287,30 +293,43 @@ implements <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIb
 <div class="block">Calculates the price vega.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>&lt;R&gt;&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Property.html?is-external=true" title="class or interface in org.joda.beans">Property</a>&lt;R&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#property-java.lang.String-">property</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#propertyNames--">propertyNames</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#relativeTime-java.time.ZonedDateTime-">relativeTime</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;dateTime)</code>
 <div class="block">Converts a time and date to a relative year fraction.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#volatility-double-double-double-">volatility</a></span>(double&nbsp;expiry,
           double&nbsp;strike,
           double&nbsp;forward)</code>
-<div class="block">Calculates the volatility at the specified date-time.</div>
+<div class="block">Calculates the volatility at the specified expiry.</div>
+</td>
+</tr>
+<tr id="i24" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html" title="class in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletExpiryStrikeVolatilities</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#withParameter-int-double-">withParameter</a></span>(int&nbsp;parameterIndex,
+             double&nbsp;newValue)</code>
+<div class="block">Returns a copy of the data with the value at the specified index altered.</div>
+</td>
+</tr>
+<tr id="i25" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html" title="class in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletExpiryStrikeVolatilities</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html#withPerturbation-com.opengamma.strata.market.param.ParameterPerturbation-">withPerturbation</a></span>(<a href="../../../../../com/opengamma/strata/market/param/ParameterPerturbation.html" title="interface in com.opengamma.strata.market.param">ParameterPerturbation</a>&nbsp;perturbation)</code>
+<div class="block">Returns a perturbed copy of the data.</div>
 </td>
 </tr>
 </table>
@@ -322,11 +341,18 @@ implements <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIb
 <code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 <ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.pricer.capfloor.NormalIborCapletFloorletVolatilities">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.pricer.capfloor.<a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletVolatilities</a></h3>
+<code><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletVolatilities.html#getVolatilityType--">getVolatilityType</a></code></li>
+</ul>
+<ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.opengamma.strata.pricer.capfloor.<a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a></h3>
-<code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#getValuationDate--">getValuationDate</a>, <a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#parameterSensitivity-com.opengamma.strata.market.sensitivity.PointSensitivities-">parameterSensitivity</a>, <a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#volatility-java.time.ZonedDateTime-double-double-">volatility</a></code></li>
+<code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#getValuationDate--">getValuationDate</a>, <a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#parameterSensitivity-com.opengamma.strata.market.sensitivity.PointSensitivity...-">parameterSensitivity</a>, <a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#volatility-java.time.ZonedDateTime-double-double-">volatility</a></code></li>
 </ul>
 </li>
 </ul>
@@ -342,51 +368,51 @@ implements <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIb
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="of-com.opengamma.strata.market.surface.Surface-com.opengamma.strata.basics.index.IborIndex-java.time.ZonedDateTime-com.opengamma.strata.basics.date.DayCount-">
+<a name="of-com.opengamma.strata.basics.index.IborIndex-java.time.ZonedDateTime-com.opengamma.strata.market.surface.Surface-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html" title="class in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletExpiryStrikeVolatilities</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;surface,
-                                                                  <a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html" title="class in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletExpiryStrikeVolatilities</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
                                                                   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;valuationDateTime,
-                                                                  <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</pre>
-<div class="block">Obtains an instance from the implied volatility surface and the date-time for which it is valid.</div>
+                                                                  <a href="../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;surface)</pre>
+<div class="block">Obtains an instance from the implied volatility surface and the date-time for which it is valid.
+ <p>
+ The surface is specified by an instance of <a href="../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface"><code>Surface</code></a>, such as <a href="../../../../../com/opengamma/strata/market/surface/InterpolatedNodalSurface.html" title="class in com.opengamma.strata.market.surface"><code>InterpolatedNodalSurface</code></a>.
+ The surface must contain the correct metadata:
+ <ul>
+ <li>The x-value type must be <a href="../../../../../com/opengamma/strata/market/ValueType.html#YEAR_FRACTION"><code>ValueType.YEAR_FRACTION</code></a>
+ <li>The y-value type must be <a href="../../../../../com/opengamma/strata/market/ValueType.html#STRIKE"><code>ValueType.STRIKE</code></a>
+ <li>The z-value type must be <a href="../../../../../com/opengamma/strata/market/ValueType.html#NORMAL_VOLATILITY"><code>ValueType.NORMAL_VOLATILITY</code></a>
+ <li>The day count must be set in the additional information using <a href="../../../../../com/opengamma/strata/market/surface/SurfaceInfoType.html#DAY_COUNT"><code>SurfaceInfoType.DAY_COUNT</code></a>
+ </ul>
+ Suitable surface metadata can be created using
+ <a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#normalVolatilityByExpiryStrike-java.lang.String-com.opengamma.strata.basics.date.DayCount-"><code>Surfaces.normalVolatilityByExpiryStrike(String, DayCount)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>surface</code> - the implied volatility surface</dd>
 <dd><code>index</code> - the Ibor index for which the data is valid</dd>
 <dd><code>valuationDateTime</code> - the valuation date-time</dd>
-<dd><code>dayCount</code> - the day count applicable to the model</dd>
+<dd><code>surface</code> - the implied volatility surface</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the volatilities</dd>
 </dl>
 </li>
 </ul>
-<a name="of-com.opengamma.strata.market.surface.Surface-com.opengamma.strata.basics.index.IborIndex-java.time.LocalDate-java.time.LocalTime-java.time.ZoneId-com.opengamma.strata.basics.date.DayCount-">
+<a name="getName--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>of</h4>
-<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html" title="class in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletExpiryStrikeVolatilities</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;surface,
-                                                                  <a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
-                                                                  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-                                                                  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html?is-external=true" title="class or interface in java.time">LocalTime</a>&nbsp;valuationTime,
-                                                                  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZoneId.html?is-external=true" title="class or interface in java.time">ZoneId</a>&nbsp;valuationZone,
-                                                                  <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</pre>
-<div class="block">Obtains an instance from the implied volatility surface and the date, time and zone for which it is valid.</div>
+<h4>getName</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilitiesName.html" title="class in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilitiesName</a>&nbsp;getName()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#getName--">IborCapletFloorletVolatilities</a></code></span></div>
+<div class="block">Gets the name of these volatilities.</div>
 <dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>surface</code> - the implied volatility surface</dd>
-<dd><code>index</code> - the Ibor index for which the data is valid</dd>
-<dd><code>valuationDate</code> - the valuation date</dd>
-<dd><code>valuationTime</code> - the valuation time</dd>
-<dd><code>valuationZone</code> - the valuation time zone</dd>
-<dd><code>dayCount</code> - the day count applicable to the model</dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#getName--">getName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the volatilities</dd>
+<dd>the name</dd>
 </dl>
 </li>
 </ul>
@@ -414,6 +440,122 @@ implements <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIb
 </dl>
 </li>
 </ul>
+<a name="getParameterCount--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getParameterCount</h4>
+<pre>public&nbsp;int&nbsp;getParameterCount()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html#getParameterCount--">ParameterizedData</a></code></span></div>
+<div class="block">Gets the number of parameters.
+ <p>
+ This returns the number of parameters, which can be used to create a loop
+ to access the other methods on this interface.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html#getParameterCount--">getParameterCount</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the number of parameters</dd>
+</dl>
+</li>
+</ul>
+<a name="getParameter-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getParameter</h4>
+<pre>public&nbsp;double&nbsp;getParameter(int&nbsp;parameterIndex)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html#getParameter-int-">ParameterizedData</a></code></span></div>
+<div class="block">Gets the value of the parameter at the specified index.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html#getParameter-int-">getParameter</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>parameterIndex</code> - the zero-based index of the parameter to get</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the value of the parameter</dd>
+</dl>
+</li>
+</ul>
+<a name="getParameterMetadata-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getParameterMetadata</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a>&nbsp;getParameterMetadata(int&nbsp;parameterIndex)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html#getParameterMetadata-int-">ParameterizedData</a></code></span></div>
+<div class="block">Gets the metadata of the parameter at the specified index.
+ <p>
+ If there is no specific parameter metadata, an empty instance will be returned.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html#getParameterMetadata-int-">getParameterMetadata</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>parameterIndex</code> - the zero-based index of the parameter to get</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the metadata of the parameter</dd>
+</dl>
+</li>
+</ul>
+<a name="withParameter-int-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withParameter</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html" title="class in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletExpiryStrikeVolatilities</a>&nbsp;withParameter(int&nbsp;parameterIndex,
+                                                                      double&nbsp;newValue)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html#withParameter-int-double-">ParameterizedData</a></code></span></div>
+<div class="block">Returns a copy of the data with the value at the specified index altered.
+ <p>
+ This instance is immutable and unaffected by this method call.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html#withParameter-int-double-">withParameter</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#withParameter-int-double-">withParameter</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletVolatilities.html#withParameter-int-double-">withParameter</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletVolatilities</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>parameterIndex</code> - the zero-based index of the parameter to get</dd>
+<dd><code>newValue</code> - the new value for the specified parameter</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a parameterized data instance based on this with the specified parameter altered</dd>
+</dl>
+</li>
+</ul>
+<a name="withPerturbation-com.opengamma.strata.market.param.ParameterPerturbation-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withPerturbation</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html" title="class in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletExpiryStrikeVolatilities</a>&nbsp;withPerturbation(<a href="../../../../../com/opengamma/strata/market/param/ParameterPerturbation.html" title="interface in com.opengamma.strata.market.param">ParameterPerturbation</a>&nbsp;perturbation)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html#withPerturbation-com.opengamma.strata.market.param.ParameterPerturbation-">ParameterizedData</a></code></span></div>
+<div class="block">Returns a perturbed copy of the data.
+ <p>
+ The perturbation instance will be invoked once for each parameter in this instance,
+ returning the perturbed value for that parameter. The result of this method is a
+ new instance that is based on those perturbed values.
+ <p>
+ This instance is immutable and unaffected by this method call.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html#withPerturbation-com.opengamma.strata.market.param.ParameterPerturbation-">withPerturbation</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#withPerturbation-com.opengamma.strata.market.param.ParameterPerturbation-">withPerturbation</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletVolatilities.html#withPerturbation-com.opengamma.strata.market.param.ParameterPerturbation-">withPerturbation</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletVolatilities</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>perturbation</code> - the perturbation to apply</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a parameterized data instance based on this with the specified perturbation applied</dd>
+</dl>
+</li>
+</ul>
 <a name="volatility-double-double-double-">
 <!--   -->
 </a>
@@ -424,7 +566,7 @@ implements <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIb
                          double&nbsp;strike,
                          double&nbsp;forward)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#volatility-double-double-double-">IborCapletFloorletVolatilities</a></code></span></div>
-<div class="block">Calculates the volatility at the specified date-time.
+<div class="block">Calculates the volatility at the specified expiry.
  <p>
  This relies on expiry supplied by <a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#relativeTime-java.time.ZonedDateTime-"><code>IborCapletFloorletVolatilities.relativeTime(ZonedDateTime)</code></a>.</div>
 <dl>
@@ -439,24 +581,25 @@ implements <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIb
 </dl>
 </li>
 </ul>
-<a name="parameterSensitivity-com.opengamma.strata.pricer.capfloor.IborCapletFloorletSensitivity-">
+<a name="parameterSensitivity-com.opengamma.strata.market.sensitivity.PointSensitivities-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>parameterSensitivity</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a>&nbsp;parameterSensitivity(<a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletSensitivity.html" title="class in com.opengamma.strata.pricer.capfloor">IborCapletFloorletSensitivity</a>&nbsp;point)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#parameterSensitivity-com.opengamma.strata.pricer.capfloor.IborCapletFloorletSensitivity-">IborCapletFloorletVolatilities</a></code></span></div>
-<div class="block">Calculates the parameter sensitivity from the point sensitivity.
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&nbsp;parameterSensitivity(<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&nbsp;pointSensitivities)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#parameterSensitivity-com.opengamma.strata.market.sensitivity.PointSensitivities-">IborCapletFloorletVolatilities</a></code></span></div>
+<div class="block">Calculates the parameter sensitivity.
  <p>
- This is used to convert a single point sensitivity to parameter sensitivity.</div>
+ This computes the <a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param"><code>CurrencyParameterSensitivities</code></a> associated with the <a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity"><code>PointSensitivities</code></a>.
+ This corresponds to the projection of the point sensitivity to the internal parameters representation.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#parameterSensitivity-com.opengamma.strata.pricer.capfloor.IborCapletFloorletSensitivity-">parameterSensitivity</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a></code></dd>
+<dd><code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#parameterSensitivity-com.opengamma.strata.market.sensitivity.PointSensitivities-">parameterSensitivity</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>point</code> - the point sensitivity to convert</dd>
+<dd><code>pointSensitivities</code> - the point sensitivities</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the parameter sensitivity</dd>
+<dd>the sensitivity to the underlying parameters</dd>
 </dl>
 </li>
 </ul>
@@ -469,7 +612,7 @@ implements <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIb
 <pre>public&nbsp;double&nbsp;price(double&nbsp;expiry,
                     <a href="../../../../../com/opengamma/strata/product/common/PutCall.html" title="enum in com.opengamma.strata.product.common">PutCall</a>&nbsp;putCall,
                     double&nbsp;strike,
-                    double&nbsp;forwardRate,
+                    double&nbsp;forward,
                     double&nbsp;volatility)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#price-double-com.opengamma.strata.product.common.PutCall-double-double-double-">IborCapletFloorletVolatilities</a></code></span></div>
 <div class="block">Calculates the price.
@@ -483,7 +626,7 @@ implements <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIb
 <dd><code>expiry</code> - the time to expiry as a year fraction</dd>
 <dd><code>putCall</code> - whether the option is put or call</dd>
 <dd><code>strike</code> - the option strike rate</dd>
-<dd><code>forwardRate</code> - the forward rate</dd>
+<dd><code>forward</code> - the forward rate</dd>
 <dd><code>volatility</code> - the volatility</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the price</dd>
@@ -633,7 +776,7 @@ implements <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIb
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#relativeTime-java.time.ZonedDateTime-">relativeTime</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>dateTime</code> - the date/time to find the relative year fraction of</dd>
+<dd><code>dateTime</code> - the date-time to find the relative year fraction of</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the relative year fraction</dd>
 </dl>
@@ -692,22 +835,6 @@ implements <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIb
 </dl>
 </li>
 </ul>
-<a name="getSurface--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getSurface</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;getSurface()</pre>
-<div class="block">Gets the normal volatility surface.
- <p>
- The order of the dimensions is expiry/strike.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the value of the property, not null</dd>
-</dl>
-</li>
-</ul>
 <a name="getIndex--">
 <!--   -->
 </a>
@@ -726,20 +853,6 @@ implements <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIb
 </dl>
 </li>
 </ul>
-<a name="getDayCount--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getDayCount</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;getDayCount()</pre>
-<div class="block">Gets the day count applicable to the model.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the value of the property, not null</dd>
-</dl>
-</li>
-</ul>
 <a name="getValuationDateTime--">
 <!--   -->
 </a>
@@ -753,6 +866,23 @@ implements <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIb
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html#getValuationDateTime--">getValuationDateTime</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the value of the property, not null</dd>
+</dl>
+</li>
+</ul>
+<a name="getSurface--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSurface</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;getSurface()</pre>
+<div class="block">Gets the normal volatility surface.
+ <p>
+ The x-value of the surface is the expiry, as a year fraction.
+ The y-value of the surface is the strike.</div>
+<dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value of the property, not null</dd>
 </dl>

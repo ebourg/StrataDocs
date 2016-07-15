@@ -206,7 +206,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">PaymentPeriod</a>&gt;</code></td>
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentPeriod</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html#findPaymentPeriod-java.time.LocalDate-">findPaymentPeriod</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date)</code>
 <div class="block">Finds the payment period applicable for the specified accrual date.</div>
 </td>
@@ -224,13 +224,13 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </td>
 </tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/PaymentEvent.html" title="interface in com.opengamma.strata.product.swap">PaymentEvent</a>&gt;</code></td>
+<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentEvent</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html#getPaymentEvents--">getPaymentEvents</a></span>()</code>
 <div class="block">Gets the payment events that are associated with the swap leg.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
-<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">PaymentPeriod</a>&gt;</code></td>
+<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentPeriod</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html#getPaymentPeriods--">getPaymentPeriods</a></span>()</code>
 <div class="block">Gets the payment periods that combine to form the swap leg.</div>
 </td>
@@ -363,7 +363,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <ul class="blockList">
 <li class="blockList">
 <h4>findPaymentPeriod</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">PaymentPeriod</a>&gt;&nbsp;findPaymentPeriod(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date)</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentPeriod</a>&gt;&nbsp;findPaymentPeriod(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date)</pre>
 <div class="block">Finds the payment period applicable for the specified accrual date.
  <p>
  Each payment period contains one or more accrual periods.
@@ -527,7 +527,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <ul class="blockList">
 <li class="blockList">
 <h4>getPaymentPeriods</h4>
-<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/PaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">PaymentPeriod</a>&gt;&nbsp;getPaymentPeriods()</pre>
+<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentPeriod</a>&gt;&nbsp;getPaymentPeriods()</pre>
 <div class="block">Gets the payment periods that combine to form the swap leg.
  <p>
  Each payment period represents part of the life-time of the leg.
@@ -548,7 +548,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <ul class="blockList">
 <li class="blockList">
 <h4>getPaymentEvents</h4>
-<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/PaymentEvent.html" title="interface in com.opengamma.strata.product.swap">PaymentEvent</a>&gt;&nbsp;getPaymentEvents()</pre>
+<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentEvent</a>&gt;&nbsp;getPaymentEvents()</pre>
 <div class="block">Gets the payment events that are associated with the swap leg.
  <p>
  Payment events include notional exchange and fees.</div>

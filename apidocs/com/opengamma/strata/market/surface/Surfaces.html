@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9};
+var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -133,62 +133,104 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#iborFutureOptionNormalExpirySimpleMoneyness-java.lang.String-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.model.MoneynessType-">iborFutureOptionNormalExpirySimpleMoneyness</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                                           <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-                                           <a href="../../../../../com/opengamma/strata/market/model/MoneynessType.html" title="enum in com.opengamma.strata.market.model">MoneynessType</a>&nbsp;moneynessType)</code>
-<div class="block">Creates metadata for a surface providing Normal expiry-tenor volatility for swaptions.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#blackVolatilityByExpiryLogMoneyness-java.lang.String-com.opengamma.strata.basics.date.DayCount-">blackVolatilityByExpiryLogMoneyness</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                                   <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Black expiry-log moneyness volatility.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#iborFutureOptionNormalExpirySimpleMoneyness-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.model.MoneynessType-">iborFutureOptionNormalExpirySimpleMoneyness</a></span>(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
-                                           <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-                                           <a href="../../../../../com/opengamma/strata/market/model/MoneynessType.html" title="enum in com.opengamma.strata.market.model">MoneynessType</a>&nbsp;moneynessType)</code>
-<div class="block">Creates metadata for a surface providing Normal expiry-tenor volatility for swaptions.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#blackVolatilityByExpiryLogMoneyness-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">blackVolatilityByExpiryLogMoneyness</a></span>(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                                   <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Black expiry-log moneyness volatility.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#swaptionBlackExpiryTenor-java.lang.String-com.opengamma.strata.basics.date.DayCount-">swaptionBlackExpiryTenor</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                        <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Creates metadata for a surface providing Black expiry-tenor volatility for swaptions.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#blackVolatilityByExpiryStrike-java.lang.String-com.opengamma.strata.basics.date.DayCount-">blackVolatilityByExpiryStrike</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                             <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Black expiry-strike volatility.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#swaptionBlackExpiryTenor-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">swaptionBlackExpiryTenor</a></span>(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
-                        <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Creates metadata for a surface providing Black expiry-tenor volatility for swaptions.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#blackVolatilityByExpiryStrike-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">blackVolatilityByExpiryStrike</a></span>(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                             <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Black expiry-strike volatility.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#swaptionNormalExpiryTenor-java.lang.String-com.opengamma.strata.basics.date.DayCount-">swaptionNormalExpiryTenor</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                         <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Creates metadata for a surface providing Normal expiry-tenor volatility for swaptions.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#blackVolatilityByExpiryTenor-java.lang.String-com.opengamma.strata.basics.date.DayCount-">blackVolatilityByExpiryTenor</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                            <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Black expiry-tenor volatility.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#swaptionNormalExpiryTenor-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">swaptionNormalExpiryTenor</a></span>(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
-                         <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Creates metadata for a surface providing Normal expiry-tenor volatility for swaptions.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#blackVolatilityByExpiryTenor-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">blackVolatilityByExpiryTenor</a></span>(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                            <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Black expiry-tenor volatility.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#swaptionSabrExpiryTenor-java.lang.String-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.ValueType-">swaptionSabrExpiryTenor</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                       <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-                       <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;zType)</code>
-<div class="block">Creates metadata for a surface providing SABR expiry-tenor volatility for swaptions.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#normalVolatilityByExpirySimpleMoneyness-java.lang.String-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.model.MoneynessType-">normalVolatilityByExpirySimpleMoneyness</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                                       <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+                                       <a href="../../../../../com/opengamma/strata/market/model/MoneynessType.html" title="enum in com.opengamma.strata.market.model">MoneynessType</a>&nbsp;moneynessType)</code>
+<div class="block">Creates metadata for a surface providing Normal expiry-simple moneyness volatility.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#swaptionSabrExpiryTenor-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.ValueType-">swaptionSabrExpiryTenor</a></span>(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
-                       <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-                       <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;zType)</code>
-<div class="block">Creates metadata for a surface providing SABR expiry-tenor volatility for swaptions.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#normalVolatilityByExpirySimpleMoneyness-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.model.MoneynessType-">normalVolatilityByExpirySimpleMoneyness</a></span>(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                                       <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+                                       <a href="../../../../../com/opengamma/strata/market/model/MoneynessType.html" title="enum in com.opengamma.strata.market.model">MoneynessType</a>&nbsp;moneynessType)</code>
+<div class="block">Creates metadata for a surface providing Normal expiry-simple moneyness volatility.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#normalVolatilityByExpiryStrike-java.lang.String-com.opengamma.strata.basics.date.DayCount-">normalVolatilityByExpiryStrike</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                              <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Normal expiry-strike volatility.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#normalVolatilityByExpiryStrike-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">normalVolatilityByExpiryStrike</a></span>(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                              <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Normal expiry-strike volatility.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#normalVolatilityByExpiryTenor-java.lang.String-com.opengamma.strata.basics.date.DayCount-">normalVolatilityByExpiryTenor</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                             <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Normal expiry-tenor volatility.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#normalVolatilityByExpiryTenor-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">normalVolatilityByExpiryTenor</a></span>(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                             <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates metadata for a surface providing Normal expiry-tenor volatility.</div>
+</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#sabrParameterByExpiryTenor-java.lang.String-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.ValueType-">sabrParameterByExpiryTenor</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                          <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+                          <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;zType)</code>
+<div class="block">Creates metadata for a surface providing a SABR expiry-tenor parameter.</div>
+</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/surface/Surfaces.html#sabrParameterByExpiryTenor-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.ValueType-">sabrParameterByExpiryTenor</a></span>(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                          <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+                          <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;zType)</code>
+<div class="block">Creates metadata for a surface providing a SABR expiry-tenor parameter.</div>
 </td>
 </tr>
 </table>
@@ -213,16 +255,236 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="iborFutureOptionNormalExpirySimpleMoneyness-java.lang.String-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.model.MoneynessType-">
+<a name="blackVolatilityByExpiryTenor-java.lang.String-com.opengamma.strata.basics.date.DayCount-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>iborFutureOptionNormalExpirySimpleMoneyness</h4>
-<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;iborFutureOptionNormalExpirySimpleMoneyness(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                                                                          <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-                                                                          <a href="../../../../../com/opengamma/strata/market/model/MoneynessType.html" title="enum in com.opengamma.strata.market.model">MoneynessType</a>&nbsp;moneynessType)</pre>
-<div class="block">Creates metadata for a surface providing Normal expiry-tenor volatility for swaptions.
+<h4>blackVolatilityByExpiryTenor</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;blackVolatilityByExpiryTenor(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                                                           <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</pre>
+<div class="block">Creates metadata for a surface providing Black expiry-tenor volatility.
+ <p>
+ The x-values represent time to expiry year fractions as defined by the specified day count.
+ The y-values represent tenor year fractions.
+ The z-values represent Black volatility.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - the surface name</dd>
+<dd><code>dayCount</code> - the day count</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the surface metadata</dd>
+</dl>
+</li>
+</ul>
+<a name="blackVolatilityByExpiryTenor-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>blackVolatilityByExpiryTenor</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;blackVolatilityByExpiryTenor(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                                                           <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</pre>
+<div class="block">Creates metadata for a surface providing Black expiry-tenor volatility.
+ <p>
+ The x-values represent time to expiry year fractions as defined by the specified day count.
+ The y-values represent tenor year fractions.
+ The z-values represent Black volatility.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - the surface name</dd>
+<dd><code>dayCount</code> - the day count</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the surface metadata</dd>
+</dl>
+</li>
+</ul>
+<a name="blackVolatilityByExpiryStrike-java.lang.String-com.opengamma.strata.basics.date.DayCount-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>blackVolatilityByExpiryStrike</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;blackVolatilityByExpiryStrike(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                                                            <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</pre>
+<div class="block">Creates metadata for a surface providing Black expiry-strike volatility.
+ <p>
+ The x-values represent time to expiry year fractions as defined by the specified day count.
+ The y-values represent strike
+ The z-values represent Black volatility.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - the surface name</dd>
+<dd><code>dayCount</code> - the day count</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the surface metadata</dd>
+</dl>
+</li>
+</ul>
+<a name="blackVolatilityByExpiryStrike-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>blackVolatilityByExpiryStrike</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;blackVolatilityByExpiryStrike(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                                                            <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</pre>
+<div class="block">Creates metadata for a surface providing Black expiry-strike volatility.
+ <p>
+ The x-values represent time to expiry year fractions as defined by the specified day count.
+ The y-values represent strike
+ The z-values represent Black volatility.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - the surface name</dd>
+<dd><code>dayCount</code> - the day count</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the surface metadata</dd>
+</dl>
+</li>
+</ul>
+<a name="blackVolatilityByExpiryLogMoneyness-java.lang.String-com.opengamma.strata.basics.date.DayCount-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>blackVolatilityByExpiryLogMoneyness</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;blackVolatilityByExpiryLogMoneyness(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                                                                  <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</pre>
+<div class="block">Creates metadata for a surface providing Black expiry-log moneyness volatility.
+ <p>
+ The x-values represent time to expiry year fractions as defined by the specified day count.
+ The y-values represent log-moneyness
+ The z-values represent Black volatility.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - the surface name</dd>
+<dd><code>dayCount</code> - the day count</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the surface metadata</dd>
+</dl>
+</li>
+</ul>
+<a name="blackVolatilityByExpiryLogMoneyness-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>blackVolatilityByExpiryLogMoneyness</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;blackVolatilityByExpiryLogMoneyness(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                                                                  <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</pre>
+<div class="block">Creates metadata for a surface providing Black expiry-log moneyness volatility.
+ <p>
+ The x-values represent time to expiry year fractions as defined by the specified day count.
+ The y-values represent log-moneyness
+ The z-values represent Black volatility.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - the surface name</dd>
+<dd><code>dayCount</code> - the day count</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the surface metadata</dd>
+</dl>
+</li>
+</ul>
+<a name="normalVolatilityByExpiryTenor-java.lang.String-com.opengamma.strata.basics.date.DayCount-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>normalVolatilityByExpiryTenor</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;normalVolatilityByExpiryTenor(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                                                            <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</pre>
+<div class="block">Creates metadata for a surface providing Normal expiry-tenor volatility.
+ <p>
+ The x-values represent time to expiry year fractions as defined by the specified day count.
+ The y-values represent tenor year fractions.
+ The z-values represent Normal volatility.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - the surface name</dd>
+<dd><code>dayCount</code> - the day count</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the surface metadata</dd>
+</dl>
+</li>
+</ul>
+<a name="normalVolatilityByExpiryTenor-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>normalVolatilityByExpiryTenor</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;normalVolatilityByExpiryTenor(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                                                            <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</pre>
+<div class="block">Creates metadata for a surface providing Normal expiry-tenor volatility.
+ <p>
+ The x-values represent time to expiry year fractions as defined by the specified day count.
+ The y-values represent tenor year fractions.
+ The z-values represent Normal volatility.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - the surface name</dd>
+<dd><code>dayCount</code> - the day count</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the surface metadata</dd>
+</dl>
+</li>
+</ul>
+<a name="normalVolatilityByExpiryStrike-java.lang.String-com.opengamma.strata.basics.date.DayCount-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>normalVolatilityByExpiryStrike</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;normalVolatilityByExpiryStrike(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                                                             <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</pre>
+<div class="block">Creates metadata for a surface providing Normal expiry-strike volatility.
+ <p>
+ The x-values represent time to expiry year fractions as defined by the specified day count.
+ The y-values represent strike
+ The z-values represent Normal volatility.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - the surface name</dd>
+<dd><code>dayCount</code> - the day count</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the surface metadata</dd>
+</dl>
+</li>
+</ul>
+<a name="normalVolatilityByExpiryStrike-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>normalVolatilityByExpiryStrike</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;normalVolatilityByExpiryStrike(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                                                             <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</pre>
+<div class="block">Creates metadata for a surface providing Normal expiry-strike volatility.
+ <p>
+ The x-values represent time to expiry year fractions as defined by the specified day count.
+ The y-values represent strike
+ The z-values represent Normal volatility.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - the surface name</dd>
+<dd><code>dayCount</code> - the day count</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the surface metadata</dd>
+</dl>
+</li>
+</ul>
+<a name="normalVolatilityByExpirySimpleMoneyness-java.lang.String-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.model.MoneynessType-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>normalVolatilityByExpirySimpleMoneyness</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;normalVolatilityByExpirySimpleMoneyness(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                                                                      <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+                                                                      <a href="../../../../../com/opengamma/strata/market/model/MoneynessType.html" title="enum in com.opengamma.strata.market.model">MoneynessType</a>&nbsp;moneynessType)</pre>
+<div class="block">Creates metadata for a surface providing Normal expiry-simple moneyness volatility.
  <p>
  The x-values represent time to expiry year fractions as defined by the specified day count.
  The y-values represent simple moneyness.
@@ -237,16 +499,16 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </dl>
 </li>
 </ul>
-<a name="iborFutureOptionNormalExpirySimpleMoneyness-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.model.MoneynessType-">
+<a name="normalVolatilityByExpirySimpleMoneyness-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.model.MoneynessType-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>iborFutureOptionNormalExpirySimpleMoneyness</h4>
-<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;iborFutureOptionNormalExpirySimpleMoneyness(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
-                                                                          <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-                                                                          <a href="../../../../../com/opengamma/strata/market/model/MoneynessType.html" title="enum in com.opengamma.strata.market.model">MoneynessType</a>&nbsp;moneynessType)</pre>
-<div class="block">Creates metadata for a surface providing Normal expiry-tenor volatility for swaptions.
+<h4>normalVolatilityByExpirySimpleMoneyness</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;normalVolatilityByExpirySimpleMoneyness(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                                                                      <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+                                                                      <a href="../../../../../com/opengamma/strata/market/model/MoneynessType.html" title="enum in com.opengamma.strata.market.model">MoneynessType</a>&nbsp;moneynessType)</pre>
+<div class="block">Creates metadata for a surface providing Normal expiry-simple moneyness volatility.
  <p>
  The x-values represent time to expiry year fractions as defined by the specified day count.
  The y-values represent simple moneyness.
@@ -261,135 +523,47 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </dl>
 </li>
 </ul>
-<a name="swaptionBlackExpiryTenor-java.lang.String-com.opengamma.strata.basics.date.DayCount-">
+<a name="sabrParameterByExpiryTenor-java.lang.String-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.ValueType-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>swaptionBlackExpiryTenor</h4>
-<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;swaptionBlackExpiryTenor(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                                                       <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</pre>
-<div class="block">Creates metadata for a surface providing Black expiry-tenor volatility for swaptions.
+<h4>sabrParameterByExpiryTenor</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;sabrParameterByExpiryTenor(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                                                         <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+                                                         <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;zType)</pre>
+<div class="block">Creates metadata for a surface providing a SABR expiry-tenor parameter.
  <p>
  The x-values represent time to expiry year fractions as defined by the specified day count.
- The y-values represent tenor year fractions, rounded to the month.
- The z-values represent Black volatility.</div>
+ The y-values represent tenor year fractions.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - the surface name</dd>
 <dd><code>dayCount</code> - the day count</dd>
+<dd><code>zType</code> - the z-value type, which must be one of the four SABR values</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the surface metadata</dd>
 </dl>
 </li>
 </ul>
-<a name="swaptionBlackExpiryTenor-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>swaptionBlackExpiryTenor</h4>
-<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;swaptionBlackExpiryTenor(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
-                                                       <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</pre>
-<div class="block">Creates metadata for a surface providing Black expiry-tenor volatility for swaptions.
- <p>
- The x-values represent time to expiry year fractions as defined by the specified day count.
- The y-values represent tenor year fractions, rounded to the month.
- The z-values represent Black volatility.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - the surface name</dd>
-<dd><code>dayCount</code> - the day count</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the surface metadata</dd>
-</dl>
-</li>
-</ul>
-<a name="swaptionNormalExpiryTenor-java.lang.String-com.opengamma.strata.basics.date.DayCount-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>swaptionNormalExpiryTenor</h4>
-<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;swaptionNormalExpiryTenor(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                                                        <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</pre>
-<div class="block">Creates metadata for a surface providing Normal expiry-tenor volatility for swaptions.
- <p>
- The x-values represent time to expiry year fractions as defined by the specified day count.
- The y-values represent tenor year fractions, rounded to the month.
- The z-values represent Normal volatility.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - the surface name</dd>
-<dd><code>dayCount</code> - the day count</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the surface metadata</dd>
-</dl>
-</li>
-</ul>
-<a name="swaptionNormalExpiryTenor-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>swaptionNormalExpiryTenor</h4>
-<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;swaptionNormalExpiryTenor(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
-                                                        <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</pre>
-<div class="block">Creates metadata for a surface providing Normal expiry-tenor volatility for swaptions.
- <p>
- The x-values represent time to expiry year fractions as defined by the specified day count.
- The y-values represent tenor year fractions, rounded to the month.
- The z-values represent Normal volatility.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - the surface name</dd>
-<dd><code>dayCount</code> - the day count</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the surface metadata</dd>
-</dl>
-</li>
-</ul>
-<a name="swaptionSabrExpiryTenor-java.lang.String-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.ValueType-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>swaptionSabrExpiryTenor</h4>
-<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;swaptionSabrExpiryTenor(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                                                      <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-                                                      <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;zType)</pre>
-<div class="block">Creates metadata for a surface providing SABR expiry-tenor volatility for swaptions.
- <p>
- The x-values represent time to expiry year fractions as defined by the specified day count.
- The y-values represent tenor year fractions, rounded to the month.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - the surface name</dd>
-<dd><code>dayCount</code> - the day count</dd>
-<dd><code>zType</code> - the z-value type</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the surface metadata</dd>
-</dl>
-</li>
-</ul>
-<a name="swaptionSabrExpiryTenor-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.ValueType-">
+<a name="sabrParameterByExpiryTenor-com.opengamma.strata.market.surface.SurfaceName-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.ValueType-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>swaptionSabrExpiryTenor</h4>
-<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;swaptionSabrExpiryTenor(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
-                                                      <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-                                                      <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;zType)</pre>
-<div class="block">Creates metadata for a surface providing SABR expiry-tenor volatility for swaptions.
+<h4>sabrParameterByExpiryTenor</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/surface/SurfaceMetadata.html" title="interface in com.opengamma.strata.market.surface">SurfaceMetadata</a>&nbsp;sabrParameterByExpiryTenor(<a href="../../../../../com/opengamma/strata/market/surface/SurfaceName.html" title="class in com.opengamma.strata.market.surface">SurfaceName</a>&nbsp;name,
+                                                         <a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+                                                         <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;zType)</pre>
+<div class="block">Creates metadata for a surface providing a SABR expiry-tenor parameter.
  <p>
  The x-values represent time to expiry year fractions as defined by the specified day count.
- The y-values represent tenor year fractions, rounded to the month.</div>
+ The y-values represent tenor year fractions.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - the surface name</dd>
 <dd><code>dayCount</code> - the day count</dd>
-<dd><code>zType</code> - the z-value type</dd>
+<dd><code>zType</code> - the z-value type, which must be one of the four SABR values</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the surface metadata</dd>
 </dl>

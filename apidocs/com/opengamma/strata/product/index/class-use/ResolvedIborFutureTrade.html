@@ -239,6 +239,21 @@
 <div class="block">Calculates present value sensitivity for a single set of market data.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/DoubleScenarioArray.html" title="class in com.opengamma.strata.data.scenario">DoubleScenarioArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/index/IborFutureTradeCalculations.html#unitPrice-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">unitPrice</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
+         <a href="../../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;lookup,
+         <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</code>
+<div class="block">Calculates unit price across one or more scenarios.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/index/IborFutureTradeCalculations.html#unitPrice-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-">unitPrice</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
+         <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</code>
+<div class="block">Calculates unit price for a single set of market data.</div>
+</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -290,15 +305,15 @@
 <td class="colLast"><span class="typeNameLabel">HullWhiteIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/HullWhiteIborFutureTradePricer.html#currencyExposure-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.model.HullWhiteOneFactorPiecewiseConstantParametersProvider-double-">currencyExposure</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
                 <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider,
                 <a href="../../../../../../com/opengamma/strata/pricer/model/HullWhiteOneFactorPiecewiseConstantParametersProvider.html" title="class in com.opengamma.strata.pricer.model">HullWhiteOneFactorPiecewiseConstantParametersProvider</a>&nbsp;hwProvider,
-                double&nbsp;settlementPrice)</code>
+                double&nbsp;lastSettlementPrice)</code>
 <div class="block">Calculates the currency exposure of the Ibor future trade.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><span class="typeNameLabel">DiscountingIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/DiscountingIborFutureTradePricer.html#parSpread-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-double-">parSpread</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
-         <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider,
-         double&nbsp;settlementPrice)</code>
+         <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+         double&nbsp;lastSettlementPrice)</code>
 <div class="block">Calculates the par spread of the Ibor future trade.</div>
 </td>
 </tr>
@@ -307,81 +322,73 @@
 <td class="colLast"><span class="typeNameLabel">HullWhiteIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/HullWhiteIborFutureTradePricer.html#parSpread-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.model.HullWhiteOneFactorPiecewiseConstantParametersProvider-double-">parSpread</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
          <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
          <a href="../../../../../../com/opengamma/strata/pricer/model/HullWhiteOneFactorPiecewiseConstantParametersProvider.html" title="class in com.opengamma.strata.pricer.model">HullWhiteOneFactorPiecewiseConstantParametersProvider</a>&nbsp;hwProvider,
-         double&nbsp;settlementPrice)</code>
+         double&nbsp;lastSettlementPrice)</code>
 <div class="block">Calculates the par spread of the Ibor future trade.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DiscountingIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/DiscountingIborFutureTradePricer.html#parSpreadSensitivity-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-">parSpreadSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
-                    <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider)</code>
+                    <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</code>
 <div class="block">Calculates the par spread sensitivity of the Ibor future trade.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">HullWhiteIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/HullWhiteIborFutureTradePricer.html#parSpreadSensitivity-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.model.HullWhiteOneFactorPiecewiseConstantParametersProvider-">parSpreadSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
-                    <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                    <a href="../../../../../../com/opengamma/strata/pricer/model/HullWhiteOneFactorPiecewiseConstantParametersProvider.html" title="class in com.opengamma.strata.pricer.model">HullWhiteOneFactorPiecewiseConstantParametersProvider</a>&nbsp;hwProvider)</code>
+<td class="colLast"><span class="typeNameLabel">HullWhiteIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/HullWhiteIborFutureTradePricer.html#parSpreadSensitivityRates-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.model.HullWhiteOneFactorPiecewiseConstantParametersProvider-">parSpreadSensitivityRates</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
+                         <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                         <a href="../../../../../../com/opengamma/strata/pricer/model/HullWhiteOneFactorPiecewiseConstantParametersProvider.html" title="class in com.opengamma.strata.pricer.model">HullWhiteOneFactorPiecewiseConstantParametersProvider</a>&nbsp;hwProvider)</code>
 <div class="block">Calculates the par spread sensitivity of the Ibor future trade.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">AbstractIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/AbstractIborFutureTradePricer.html#presentValue-com.opengamma.strata.product.index.ResolvedIborFutureTrade-double-double-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
-            double&nbsp;currentPrice,
-            double&nbsp;referencePrice)</code>
-<div class="block">Calculates the present value of the Ibor future trade from the current price.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DiscountingIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/DiscountingIborFutureTradePricer.html#presentValue-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-double-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
-            <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider,
-            double&nbsp;settlementPrice)</code>
+            <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+            double&nbsp;lastSettlementPrice)</code>
 <div class="block">Calculates the present value of the Ibor future trade.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><span class="typeNameLabel">HullWhiteIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/HullWhiteIborFutureTradePricer.html#presentValue-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.model.HullWhiteOneFactorPiecewiseConstantParametersProvider-double-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
             <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
             <a href="../../../../../../com/opengamma/strata/pricer/model/HullWhiteOneFactorPiecewiseConstantParametersProvider.html" title="class in com.opengamma.strata.pricer.model">HullWhiteOneFactorPiecewiseConstantParametersProvider</a>&nbsp;hwProvider,
-            double&nbsp;settlementPrice)</code>
+            double&nbsp;lastSettlementPrice)</code>
 <div class="block">Calculates the present value of the Ibor future trade.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountingIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/DiscountingIborFutureTradePricer.html#presentValueSensitivity-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-">presentValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
-                       <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider)</code>
-<div class="block">Calculates the present value sensitivity of the Ibor future trade.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">HullWhiteIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/HullWhiteIborFutureTradePricer.html#presentValueSensitivity-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.model.HullWhiteOneFactorPiecewiseConstantParametersProvider-">presentValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
-                       <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                       <a href="../../../../../../com/opengamma/strata/pricer/model/HullWhiteOneFactorPiecewiseConstantParametersProvider.html" title="class in com.opengamma.strata.pricer.model">HullWhiteOneFactorPiecewiseConstantParametersProvider</a>&nbsp;hwProvider)</code>
+<td class="colLast"><span class="typeNameLabel">DiscountingIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/DiscountingIborFutureTradePricer.html#presentValueSensitivity-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-">presentValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
+                       <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</code>
 <div class="block">Calculates the present value sensitivity of the Ibor future trade.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
-<td class="colLast"><span class="typeNameLabel">HullWhiteIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/HullWhiteIborFutureTradePricer.html#presentValueSensitivityHullWhiteParameter-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.model.HullWhiteOneFactorPiecewiseConstantParametersProvider-">presentValueSensitivityHullWhiteParameter</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
-                                         <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                         <a href="../../../../../../com/opengamma/strata/pricer/model/HullWhiteOneFactorPiecewiseConstantParametersProvider.html" title="class in com.opengamma.strata.pricer.model">HullWhiteOneFactorPiecewiseConstantParametersProvider</a>&nbsp;hwProvider)</code>
+<td class="colLast"><span class="typeNameLabel">HullWhiteIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/HullWhiteIborFutureTradePricer.html#presentValueSensitivityModelParamsHullWhite-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.model.HullWhiteOneFactorPiecewiseConstantParametersProvider-">presentValueSensitivityModelParamsHullWhite</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
+                                           <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                                           <a href="../../../../../../com/opengamma/strata/pricer/model/HullWhiteOneFactorPiecewiseConstantParametersProvider.html" title="class in com.opengamma.strata.pricer.model">HullWhiteOneFactorPiecewiseConstantParametersProvider</a>&nbsp;hwProvider)</code>
 <div class="block">Calculates the present value sensitivity to piecewise constant volatility parameters of the Hull-White model.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountingIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/DiscountingIborFutureTradePricer.html#price-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-">price</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
-     <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider)</code>
-<div class="block">Calculates the price of the Ibor future trade.</div>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">HullWhiteIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/HullWhiteIborFutureTradePricer.html#presentValueSensitivityRates-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.model.HullWhiteOneFactorPiecewiseConstantParametersProvider-">presentValueSensitivityRates</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
+                            <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                            <a href="../../../../../../com/opengamma/strata/pricer/model/HullWhiteOneFactorPiecewiseConstantParametersProvider.html" title="class in com.opengamma.strata.pricer.model">HullWhiteOneFactorPiecewiseConstantParametersProvider</a>&nbsp;hwProvider)</code>
+<div class="block">Calculates the present value sensitivity of the Ibor future trade.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountingIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/DiscountingIborFutureTradePricer.html#price-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-">price</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
+     <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</code>
+<div class="block">Calculates the price of the Ibor future trade.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><span class="typeNameLabel">HullWhiteIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/HullWhiteIborFutureTradePricer.html#price-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.model.HullWhiteOneFactorPiecewiseConstantParametersProvider-">price</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
      <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
@@ -389,12 +396,19 @@
 <div class="block">Calculates the price of the Ibor future trade.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountingIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/DiscountingIborFutureTradePricer.html#priceSensitivity-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-">priceSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
+                <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</code>
+<div class="block">Calculates the price sensitivity of the Ibor future product.</div>
+</td>
+</tr>
 <tr class="rowColor">
-<td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">AbstractIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/AbstractIborFutureTradePricer.html#referencePrice-com.opengamma.strata.product.index.ResolvedIborFutureTrade-java.time.LocalDate-double-">referencePrice</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
-              <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-              double&nbsp;settlementPrice)</code>
-<div class="block">Calculates the reference price for a futures trade.</div>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">HullWhiteIborFutureTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/HullWhiteIborFutureTradePricer.html#priceSensitivityRates-com.opengamma.strata.product.index.ResolvedIborFutureTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.model.HullWhiteOneFactorPiecewiseConstantParametersProvider-">priceSensitivityRates</a></span>(<a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a>&nbsp;trade,
+                     <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                     <a href="../../../../../../com/opengamma/strata/pricer/model/HullWhiteOneFactorPiecewiseConstantParametersProvider.html" title="class in com.opengamma.strata.pricer.model">HullWhiteOneFactorPiecewiseConstantParametersProvider</a>&nbsp;hwProvider)</code>
+<div class="block">Calculates the price sensitivity of the Ibor future product.</div>
 </td>
 </tr>
 </tbody>

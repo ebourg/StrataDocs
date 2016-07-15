@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":18,"i1":6,"i2":6,"i3":6,"i4":6};
+var methods = {"i0":6,"i1":6,"i2":18,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -136,19 +136,47 @@ extends <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVol
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html#alpha-double-double-">alpha</a></span>(double&nbsp;expiry,
+     double&nbsp;tenor)</code>
+<div class="block">Calculates the alpha parameter for a pair of time to expiry and instrument tenor.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html#beta-double-double-">beta</a></span>(double&nbsp;expiry,
+    double&nbsp;tenor)</code>
+<div class="block">Calculates the beta parameter for a pair of time to expiry and instrument tenor.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html#getVolatilityType--">getVolatilityType</a></span>()</code>
 <div class="block">Gets the type of volatility returned by the <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html#volatility-java.time.ZonedDateTime-double-double-double-"><code>SwaptionVolatilities.volatility(java.time.ZonedDateTime, double, double, double)</code></a> method.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html#nu-double-double-">nu</a></span>(double&nbsp;expiry,
+  double&nbsp;tenor)</code>
+<div class="block">Calculates the nu parameter for a pair of time to expiry and instrument tenor.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html#rho-double-double-">rho</a></span>(double&nbsp;expiry,
+   double&nbsp;tenor)</code>
+<div class="block">Calculates the rho parameter for a pair of time to expiry and instrument tenor.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html#shift-double-double-">shift</a></span>(double&nbsp;expiry,
      double&nbsp;tenor)</code>
 <div class="block">Calculates the shift parameter for the specified time to expiry and instrument tenor.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/value/ValueDerivatives.html" title="class in com.opengamma.strata.basics.value">ValueDerivatives</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html#volatilityAdjoint-double-double-double-double-">volatilityAdjoint</a></span>(double&nbsp;expiry,
                  double&nbsp;tenor,
@@ -157,14 +185,14 @@ extends <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVol
 <div class="block">Calculates the volatility and associated sensitivities.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SabrSwaptionVolatilities</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html#withParameter-int-double-">withParameter</a></span>(int&nbsp;parameterIndex,
              double&nbsp;newValue)</code>
 <div class="block">Returns a copy of the data with the value at the specified index altered.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SabrSwaptionVolatilities</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionVolatilities.html#withPerturbation-com.opengamma.strata.market.param.ParameterPerturbation-">withPerturbation</a></span>(<a href="../../../../../com/opengamma/strata/market/param/ParameterPerturbation.html" title="interface in com.opengamma.strata.market.param">ParameterPerturbation</a>&nbsp;perturbation)</code>
 <div class="block">Returns a perturbed copy of the data.</div>
@@ -272,6 +300,78 @@ extends <a href="../../../../../com/opengamma/strata/pricer/swaption/SwaptionVol
 <dd><code>perturbation</code> - the perturbation to apply</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a parameterized data instance based on this with the specified perturbation applied</dd>
+</dl>
+</li>
+</ul>
+<a name="alpha-double-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>alpha</h4>
+<pre>double&nbsp;alpha(double&nbsp;expiry,
+             double&nbsp;tenor)</pre>
+<div class="block">Calculates the alpha parameter for a pair of time to expiry and instrument tenor.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>expiry</code> - the time to expiry as a year fraction</dd>
+<dd><code>tenor</code> - the tenor of the instrument as a year fraction</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the alpha parameter</dd>
+</dl>
+</li>
+</ul>
+<a name="beta-double-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>beta</h4>
+<pre>double&nbsp;beta(double&nbsp;expiry,
+            double&nbsp;tenor)</pre>
+<div class="block">Calculates the beta parameter for a pair of time to expiry and instrument tenor.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>expiry</code> - the time to expiry as a year fraction</dd>
+<dd><code>tenor</code> - the tenor of the instrument as a year fraction</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the beta parameter</dd>
+</dl>
+</li>
+</ul>
+<a name="rho-double-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rho</h4>
+<pre>double&nbsp;rho(double&nbsp;expiry,
+           double&nbsp;tenor)</pre>
+<div class="block">Calculates the rho parameter for a pair of time to expiry and instrument tenor.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>expiry</code> - the time to expiry as a year fraction</dd>
+<dd><code>tenor</code> - the tenor of the instrument as a year fraction</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the rho parameter</dd>
+</dl>
+</li>
+</ul>
+<a name="nu-double-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>nu</h4>
+<pre>double&nbsp;nu(double&nbsp;expiry,
+          double&nbsp;tenor)</pre>
+<div class="block">Calculates the nu parameter for a pair of time to expiry and instrument tenor.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>expiry</code> - the time to expiry as a year fraction</dd>
+<dd><code>tenor</code> - the tenor of the instrument as a year fraction</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the nu parameter</dd>
 </dl>
 </li>
 </ul>

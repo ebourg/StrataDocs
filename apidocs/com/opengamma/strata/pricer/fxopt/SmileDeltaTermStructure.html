@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":18,"i1":18,"i2":6,"i3":18,"i4":18,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6};
+var methods = {"i0":6,"i1":18,"i2":18,"i3":6,"i4":18,"i5":18,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -101,16 +101,17 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <dl>
-<dt>All Known Subinterfaces:</dt>
-<dd><a href="../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedSmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt">InterpolatedSmileDeltaTermStructure</a></dd>
+<dt>All Superinterfaces:</dt>
+<dd><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a></dd>
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedSmileDeltaTermStructureStrikeInterpolation.html" title="class in com.opengamma.strata.pricer.fxopt">InterpolatedSmileDeltaTermStructureStrikeInterpolation</a></dd>
+<dd><a href="../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html" title="class in com.opengamma.strata.pricer.fxopt">InterpolatedStrikeSmileDeltaTermStructure</a></dd>
 </dl>
 <hr>
 <br>
-<pre>public interface <span class="typeNameLabel">SmileDeltaTermStructure</span></pre>
+<pre>public interface <span class="typeNameLabel">SmileDeltaTermStructure</span>
+extends <a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a></pre>
 <div class="block">A term structure of smile as used in Forex market.
  <p>
  The term structure defined here is composed of smile descriptions at different times.
@@ -137,39 +138,39 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html#getDayCount--">getDayCount</a></span>()</code>
+<div class="block">Gets the day count convention used for the expiry.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html#getDelta--">getDelta</a></span>()</code>
 <div class="block">Gets delta values.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html#getDeltaFull--">getDeltaFull</a></span>()</code>
 <div class="block">Computes full delta for all strikes including put delta absolute value.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html#getName--">getName</a></span>()</code>
-<div class="block">Gets the name.</div>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html#getExpiries--">getExpiries</a></span>()</code>
+<div class="block">Gets the expiries associated with the volatility term.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>default int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html#getSmileCount--">getSmileCount</a></span>()</code>
 <div class="block">Gets the number of smiles.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>default int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html#getStrikeCount--">getStrikeCount</a></span>()</code>
 <div class="block">Gets the number of strikes.</div>
-</td>
-</tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html#getTimeToExpiry--">getTimeToExpiry</a></span>()</code>
-<div class="block">Gets a set of expiry for smiles.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -180,14 +181,14 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileAndBucketedSensitivities.html" title="class in com.opengamma.strata.pricer.fxopt">SmileAndBucketedSensitivities</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html#smileAndSensitivitiesForTime-double-com.opengamma.strata.collect.array.DoubleArray-">smileAndSensitivitiesForTime</a></span>(double&nbsp;expiry,
-                            <a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;volatilityAtTimeSensitivity)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html#smileAndSensitivitiesForExpiry-double-com.opengamma.strata.collect.array.DoubleArray-">smileAndSensitivitiesForExpiry</a></span>(double&nbsp;expiry,
+                              <a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;volatilityAtTimeSensitivity)</code>
 <div class="block">Calculates the smile at a given time and the sensitivities with respect to the volatility data points.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaParameters.html" title="class in com.opengamma.strata.pricer.fxopt">SmileDeltaParameters</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html#smileForTime-double-">smileForTime</a></span>(double&nbsp;expiry)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html#smileForExpiry-double-">smileForExpiry</a></span>(double&nbsp;expiry)</code>
 <div class="block">Calculates the smile at a given time.</div>
 </td>
 </tr>
@@ -207,7 +208,27 @@ var activeTableTab = "activeTableTab";
 <div class="block">Calculates the volatility and the volatility sensitivity with respect to the volatility data points.</div>
 </td>
 </tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt">SmileDeltaTermStructure</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html#withParameter-int-double-">withParameter</a></span>(int&nbsp;parameterIndex,
+             double&nbsp;newValue)</code>
+<div class="block">Returns a copy of the data with the value at the specified index altered.</div>
+</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt">SmileDeltaTermStructure</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html#withPerturbation-com.opengamma.strata.market.param.ParameterPerturbation-">withPerturbation</a></span>(<a href="../../../../../com/opengamma/strata/market/param/ParameterPerturbation.html" title="interface in com.opengamma.strata.market.param">ParameterPerturbation</a>&nbsp;perturbation)</code>
+<div class="block">Returns a perturbed copy of the data.</div>
+</td>
+</tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.market.param.ParameterizedData">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.market.param.<a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a></h3>
+<code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html#getParameter-int-">getParameter</a>, <a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html#getParameterCount--">getParameterCount</a>, <a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html#getParameterMetadata-int-">getParameterMetadata</a></code></li>
+</ul>
 </li>
 </ul>
 </li>
@@ -222,77 +243,17 @@ var activeTableTab = "activeTableTab";
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="volatility-double-double-double-">
+<a name="getDayCount--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>volatility</h4>
-<pre>double&nbsp;volatility(double&nbsp;expiry,
-                  double&nbsp;strike,
-                  double&nbsp;forward)</pre>
-<div class="block">Calculates the volatility at a given time/strike/forward from the term structure.</div>
+<h4>getDayCount</h4>
+<pre><a href="../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;getDayCount()</pre>
+<div class="block">Gets the day count convention used for the expiry.</div>
 <dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>expiry</code> - the time to expiry</dd>
-<dd><code>strike</code> - the strike</dd>
-<dd><code>forward</code> - the forward</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the volatility</dd>
-</dl>
-</li>
-</ul>
-<a name="volatilityAndSensitivities-double-double-double-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>volatilityAndSensitivities</h4>
-<pre><a href="../../../../../com/opengamma/strata/pricer/fxopt/VolatilityAndBucketedSensitivities.html" title="class in com.opengamma.strata.pricer.fxopt">VolatilityAndBucketedSensitivities</a>&nbsp;volatilityAndSensitivities(double&nbsp;expiry,
-                                                              double&nbsp;strike,
-                                                              double&nbsp;forward)</pre>
-<div class="block">Calculates the volatility and the volatility sensitivity with respect to the volatility data points.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>expiry</code> - the time to expiry</dd>
-<dd><code>strike</code> - the strike</dd>
-<dd><code>forward</code> - the forward</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the volatility</dd>
-</dl>
-</li>
-</ul>
-<a name="smileForTime-double-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>smileForTime</h4>
-<pre><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaParameters.html" title="class in com.opengamma.strata.pricer.fxopt">SmileDeltaParameters</a>&nbsp;smileForTime(double&nbsp;expiry)</pre>
-<div class="block">Calculates the smile at a given time.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>expiry</code> - the time to expiry</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the smile</dd>
-</dl>
-</li>
-</ul>
-<a name="smileAndSensitivitiesForTime-double-com.opengamma.strata.collect.array.DoubleArray-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>smileAndSensitivitiesForTime</h4>
-<pre><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileAndBucketedSensitivities.html" title="class in com.opengamma.strata.pricer.fxopt">SmileAndBucketedSensitivities</a>&nbsp;smileAndSensitivitiesForTime(double&nbsp;expiry,
-                                                           <a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;volatilityAtTimeSensitivity)</pre>
-<div class="block">Calculates the smile at a given time and the sensitivities with respect to the volatility data points.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>expiry</code> - the time to expiry</dd>
-<dd><code>volatilityAtTimeSensitivity</code> - the sensitivity to the volatilities of the smile at the given time</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the smile and sensitivities</dd>
+<dd>the day count</dd>
 </dl>
 </li>
 </ul>
@@ -352,38 +313,24 @@ var activeTableTab = "activeTableTab";
 </dl>
 </li>
 </ul>
-<a name="getTimeToExpiry--">
+<a name="getExpiries--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getTimeToExpiry</h4>
-<pre><a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;getTimeToExpiry()</pre>
-<div class="block">Gets a set of expiry for smiles.</div>
+<h4>getExpiries</h4>
+<pre><a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;getExpiries()</pre>
+<div class="block">Gets the expiries associated with the volatility term.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the set of expiry</dd>
 </dl>
 </li>
 </ul>
-<a name="getName--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getName</h4>
-<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getName()</pre>
-<div class="block">Gets the name.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the name</dd>
-</dl>
-</li>
-</ul>
 <a name="getDeltaFull--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getDeltaFull</h4>
 <pre>default&nbsp;<a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;getDeltaFull()</pre>
@@ -393,6 +340,128 @@ var activeTableTab = "activeTableTab";
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the delta</dd>
+</dl>
+</li>
+</ul>
+<a name="volatility-double-double-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>volatility</h4>
+<pre>double&nbsp;volatility(double&nbsp;expiry,
+                  double&nbsp;strike,
+                  double&nbsp;forward)</pre>
+<div class="block">Calculates the volatility at a given time/strike/forward from the term structure.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>expiry</code> - the time to expiry</dd>
+<dd><code>strike</code> - the strike</dd>
+<dd><code>forward</code> - the forward</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the volatility</dd>
+</dl>
+</li>
+</ul>
+<a name="volatilityAndSensitivities-double-double-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>volatilityAndSensitivities</h4>
+<pre><a href="../../../../../com/opengamma/strata/pricer/fxopt/VolatilityAndBucketedSensitivities.html" title="class in com.opengamma.strata.pricer.fxopt">VolatilityAndBucketedSensitivities</a>&nbsp;volatilityAndSensitivities(double&nbsp;expiry,
+                                                              double&nbsp;strike,
+                                                              double&nbsp;forward)</pre>
+<div class="block">Calculates the volatility and the volatility sensitivity with respect to the volatility data points.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>expiry</code> - the time to expiry</dd>
+<dd><code>strike</code> - the strike</dd>
+<dd><code>forward</code> - the forward</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the volatility</dd>
+</dl>
+</li>
+</ul>
+<a name="smileForExpiry-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>smileForExpiry</h4>
+<pre><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaParameters.html" title="class in com.opengamma.strata.pricer.fxopt">SmileDeltaParameters</a>&nbsp;smileForExpiry(double&nbsp;expiry)</pre>
+<div class="block">Calculates the smile at a given time.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>expiry</code> - the time to expiry</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the smile</dd>
+</dl>
+</li>
+</ul>
+<a name="smileAndSensitivitiesForExpiry-double-com.opengamma.strata.collect.array.DoubleArray-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>smileAndSensitivitiesForExpiry</h4>
+<pre><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileAndBucketedSensitivities.html" title="class in com.opengamma.strata.pricer.fxopt">SmileAndBucketedSensitivities</a>&nbsp;smileAndSensitivitiesForExpiry(double&nbsp;expiry,
+                                                             <a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;volatilityAtTimeSensitivity)</pre>
+<div class="block">Calculates the smile at a given time and the sensitivities with respect to the volatility data points.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>expiry</code> - the time to expiry</dd>
+<dd><code>volatilityAtTimeSensitivity</code> - the sensitivity to the volatilities of the smile at the given time</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the smile and sensitivities</dd>
+</dl>
+</li>
+</ul>
+<a name="withParameter-int-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withParameter</h4>
+<pre><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt">SmileDeltaTermStructure</a>&nbsp;withParameter(int&nbsp;parameterIndex,
+                                      double&nbsp;newValue)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html#withParameter-int-double-">ParameterizedData</a></code></span></div>
+<div class="block">Returns a copy of the data with the value at the specified index altered.
+ <p>
+ This instance is immutable and unaffected by this method call.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html#withParameter-int-double-">withParameter</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>parameterIndex</code> - the zero-based index of the parameter to get</dd>
+<dd><code>newValue</code> - the new value for the specified parameter</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a parameterized data instance based on this with the specified parameter altered</dd>
+</dl>
+</li>
+</ul>
+<a name="withPerturbation-com.opengamma.strata.market.param.ParameterPerturbation-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>withPerturbation</h4>
+<pre><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt">SmileDeltaTermStructure</a>&nbsp;withPerturbation(<a href="../../../../../com/opengamma/strata/market/param/ParameterPerturbation.html" title="interface in com.opengamma.strata.market.param">ParameterPerturbation</a>&nbsp;perturbation)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html#withPerturbation-com.opengamma.strata.market.param.ParameterPerturbation-">ParameterizedData</a></code></span></div>
+<div class="block">Returns a perturbed copy of the data.
+ <p>
+ The perturbation instance will be invoked once for each parameter in this instance,
+ returning the perturbed value for that parameter. The result of this method is a
+ new instance that is based on those perturbed values.
+ <p>
+ This instance is immutable and unaffected by this method call.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html#withPerturbation-com.opengamma.strata.market.param.ParameterPerturbation-">withPerturbation</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param">ParameterizedData</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>perturbation</code> - the perturbation to apply</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a parameterized data instance based on this with the specified perturbation applied</dd>
 </dl>
 </li>
 </ul>

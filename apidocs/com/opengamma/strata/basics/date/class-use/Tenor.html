@@ -108,12 +108,18 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.option">com.opengamma.strata.pricer.option</a></td>
+<td class="colLast">
+<div class="block">Pricer support classes for options.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.swaption">com.opengamma.strata.pricer.swaption</a></td>
 <td class="colLast">
 <div class="block">Calculators for swaptions.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.swap.type">com.opengamma.strata.product.swap.type</a></td>
 <td class="colLast">
 <div class="block">Conventions and templates to aid the construction of rate swaps.</div>
@@ -433,6 +439,12 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><span class="typeNameLabel">Tenor.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html#compareTo-com.opengamma.strata.basics.date.Tenor-">compareTo</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;other)</code>
+<div class="block">Compares this tenor to another tenor.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/basics/date/TenorAdjustment.html" title="class in com.opengamma.strata.basics.date">TenorAdjustment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">TenorAdjustment.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/date/TenorAdjustment.html#of-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.basics.date.PeriodAdditionConvention-com.opengamma.strata.basics.date.BusinessDayAdjustment-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
   <a href="../../../../../../com/opengamma/strata/basics/date/PeriodAdditionConvention.html" title="interface in com.opengamma.strata.basics.date">PeriodAdditionConvention</a>&nbsp;additionConvention,
@@ -440,7 +452,7 @@
 <div class="block">Obtains an instance that can adjust a date by the specified tenor.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/basics/date/TenorAdjustment.html" title="class in com.opengamma.strata.basics.date">TenorAdjustment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">TenorAdjustment.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/date/TenorAdjustment.html#ofLastBusinessDay-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.basics.date.BusinessDayAdjustment-">ofLastBusinessDay</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
                  <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;adjustment)</code>
@@ -448,7 +460,7 @@
  last business day of month convention.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/basics/date/TenorAdjustment.html" title="class in com.opengamma.strata.basics.date">TenorAdjustment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">TenorAdjustment.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/date/TenorAdjustment.html#ofLastDay-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.basics.date.BusinessDayAdjustment-">ofLastDay</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
          <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;adjustment)</code>
@@ -456,7 +468,7 @@
  last day of month convention.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/TenorAdjustment.Builder.html" title="class in com.opengamma.strata.basics.date">TenorAdjustment.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">TenorAdjustment.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/date/TenorAdjustment.Builder.html#tenor-com.opengamma.strata.basics.date.Tenor-">tenor</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor)</code>
 <div class="block">Sets the tenor to be added.</div>
@@ -478,14 +490,33 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableIborIndex.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/ImmutableIborIndex.html#getTenor--">getTenor</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">IborIndex.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html#getTenor--">getTenor</a></span>()</code>
 <div class="block">Gets the tenor of the index.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborIndex.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html#getTenor--">getTenor</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ImmutableIborIndex.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/ImmutableIborIndex.html#getTenor--">getTenor</a></span>()</code>
 <div class="block">Gets the tenor of the index.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/basics/index/package-summary.html">com.opengamma.strata.basics.index</a> that return types with arguments of type <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableFloatingRateName.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/ImmutableFloatingRateName.html#getTenors--">getTenors</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">FloatingRateName.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/FloatingRateName.html#getTenors--">getTenors</a></span>()</code>
+<div class="block">Gets the active tenors that are applicable for this floating rate.</div>
 </td>
 </tr>
 </tbody>
@@ -498,6 +529,10 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableFloatingRateName.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/ImmutableFloatingRateName.html#toIborIndex-com.opengamma.strata.basics.date.Tenor-">toIborIndex</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FloatingRateName.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/FloatingRateName.html#toIborIndex-com.opengamma.strata.basics.date.Tenor-">toIborIndex</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor)</code>
 <div class="block">Checks and returns an Ibor index.</div>
@@ -546,25 +581,25 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a></code></td>
-<td class="colLast"><span class="typeNameLabel">TenorParameterMetadata.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/TenorParameterMetadata.html#getIdentifier--">getIdentifier</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">TenorDateParameterMetadata.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/TenorDateParameterMetadata.html#getIdentifier--">getIdentifier</a></span>()</code>
 <div class="block">Gets the identifier, which is the tenor.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a></code></td>
-<td class="colLast"><span class="typeNameLabel">TenorDateParameterMetadata.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/TenorDateParameterMetadata.html#getIdentifier--">getIdentifier</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">TenorParameterMetadata.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/TenorParameterMetadata.html#getIdentifier--">getIdentifier</a></span>()</code>
 <div class="block">Gets the identifier, which is the tenor.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a></code></td>
-<td class="colLast"><span class="typeNameLabel">TenorParameterMetadata.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/TenorParameterMetadata.html#getTenor--">getTenor</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">TenorDateParameterMetadata.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/TenorDateParameterMetadata.html#getTenor--">getTenor</a></span>()</code>
 <div class="block">Gets the tenor associated with the parameter.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a></code></td>
-<td class="colLast"><span class="typeNameLabel">TenorDateParameterMetadata.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/TenorDateParameterMetadata.html#getTenor--">getTenor</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">TenorParameterMetadata.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/TenorParameterMetadata.html#getTenor--">getTenor</a></span>()</code>
 <div class="block">Gets the tenor associated with the parameter.</div>
 </td>
 </tr>
@@ -579,13 +614,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">TenorParameterMetadata.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/TenorParameterMetadata.Meta.html#tenor--">tenor</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">TenorDateParameterMetadata.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/TenorDateParameterMetadata.Meta.html#tenor--">tenor</a></span>()</code>
 <div class="block">The meta-property for the <code>tenor</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">TenorDateParameterMetadata.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/TenorDateParameterMetadata.Meta.html#tenor--">tenor</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">TenorParameterMetadata.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/TenorParameterMetadata.Meta.html#tenor--">tenor</a></span>()</code>
 <div class="block">The meta-property for the <code>tenor</code> property.</div>
 </td>
 </tr>
@@ -629,6 +664,62 @@
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.option">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a> in <a href="../../../../../../com/opengamma/strata/pricer/option/package-summary.html">com.opengamma.strata.pricer.option</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/option/package-summary.html">com.opengamma.strata.pricer.option</a> that return types with arguments of type <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSortedMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSortedMap</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>,<a href="../../../../../../com/opengamma/strata/pricer/option/RawOptionData.html" title="class in com.opengamma.strata.pricer.option">RawOptionData</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">TenorRawOptionData.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/option/TenorRawOptionData.html#getData--">getData</a></span>()</code>
+<div class="block">Gets the map of tenor to option data.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">TenorRawOptionData.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/option/TenorRawOptionData.html#getTenors--">getTenors</a></span>()</code>
+<div class="block">Gets the set of tenors.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/option/package-summary.html">com.opengamma.strata.pricer.option</a> with parameters of type <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/option/RawOptionData.html" title="class in com.opengamma.strata.pricer.option">RawOptionData</a></code></td>
+<td class="colLast"><span class="typeNameLabel">TenorRawOptionData.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/option/TenorRawOptionData.html#getData-com.opengamma.strata.basics.date.Tenor-">getData</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor)</code>
+<div class="block">Gets the raw option data for a given tenor.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Method parameters in <a href="../../../../../../com/opengamma/strata/pricer/option/package-summary.html">com.opengamma.strata.pricer.option</a> with type arguments of type <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/option/TenorRawOptionData.html" title="class in com.opengamma.strata.pricer.option">TenorRawOptionData</a></code></td>
+<td class="colLast"><span class="typeNameLabel">TenorRawOptionData.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/option/TenorRawOptionData.html#of-java.util.Map-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>,<a href="../../../../../../com/opengamma/strata/pricer/option/RawOptionData.html" title="class in com.opengamma.strata.pricer.option">RawOptionData</a>&gt;&nbsp;data)</code>
+<div class="block">Obtains an instance of the raw volatility.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.pricer.swaption">
 <!--   -->
 </a>
@@ -652,37 +743,6 @@
 <div class="block">Calibrate SABR alpha parameters to a set of ATM swaption volatilities.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrParametersSwaptionVolatilities.html" title="class in com.opengamma.strata.pricer.swaption">SabrParametersSwaptionVolatilities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SabrSwaptionCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionCalibrator.html#calibrateWithFixedBetaAndShift-com.opengamma.strata.pricer.swaption.SwaptionVolatilitiesName-com.opengamma.strata.product.swap.type.FixedIborSwapConvention-java.time.ZonedDateTime-com.opengamma.strata.basics.date.DayCount-java.util.List-java.util.List-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.market.surface.Surface-com.opengamma.strata.market.surface.Surface-com.opengamma.strata.market.surface.interpolator.SurfaceInterpolator-">calibrateWithFixedBetaAndShift</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilitiesName.html" title="class in com.opengamma.strata.pricer.swaption">SwaptionVolatilitiesName</a>&nbsp;name,
-                              <a href="../../../../../../com/opengamma/strata/product/swap/type/FixedIborSwapConvention.html" title="interface in com.opengamma.strata.product.swap.type">FixedIborSwapConvention</a>&nbsp;convention,
-                              <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;calibrationDateTime,
-                              <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-                              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&gt;&nbsp;tenors,
-                              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/pricer/curve/RawOptionData.html" title="class in com.opengamma.strata.pricer.curve">RawOptionData</a>&gt;&nbsp;data,
-                              <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                              <a href="../../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;betaSurface,
-                              <a href="../../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;shiftSurface,
-                              <a href="../../../../../../com/opengamma/strata/market/surface/interpolator/SurfaceInterpolator.html" title="interface in com.opengamma.strata.market.surface.interpolator">SurfaceInterpolator</a>&nbsp;interpolator)</code>
-<div class="block">Calibrate SABR parameters to a set of raw swaption data.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrParametersSwaptionVolatilities.html" title="class in com.opengamma.strata.pricer.swaption">SabrParametersSwaptionVolatilities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SabrSwaptionCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/SabrSwaptionCalibrator.html#calibrateWithFixedBetaAndShift-com.opengamma.strata.pricer.swaption.SwaptionVolatilitiesName-com.opengamma.strata.product.swap.type.FixedIborSwapConvention-java.time.ZonedDateTime-com.opengamma.strata.basics.date.DayCount-java.util.List-java.util.List-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.market.surface.Surface-com.opengamma.strata.market.surface.Surface-com.opengamma.strata.market.surface.interpolator.SurfaceInterpolator-boolean-">calibrateWithFixedBetaAndShift</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilitiesName.html" title="class in com.opengamma.strata.pricer.swaption">SwaptionVolatilitiesName</a>&nbsp;name,
-                              <a href="../../../../../../com/opengamma/strata/product/swap/type/FixedIborSwapConvention.html" title="interface in com.opengamma.strata.product.swap.type">FixedIborSwapConvention</a>&nbsp;convention,
-                              <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;calibrationDateTime,
-                              <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
-                              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&gt;&nbsp;tenors,
-                              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/pricer/curve/RawOptionData.html" title="class in com.opengamma.strata.pricer.curve">RawOptionData</a>&gt;&nbsp;data,
-                              <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                              <a href="../../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;betaSurface,
-                              <a href="../../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;shiftSurface,
-                              <a href="../../../../../../com/opengamma/strata/market/surface/interpolator/SurfaceInterpolator.html" title="interface in com.opengamma.strata.market.surface.interpolator">SurfaceInterpolator</a>&nbsp;interpolator,
-                              boolean&nbsp;stopOnMathException)</code>
-<div class="block">Calibrate SABR parameters to a set of raw swaption data.</div>
-</td>
-</tr>
 </tbody>
 </table>
 </li>
@@ -699,18 +759,6 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a></code></td>
-<td class="colLast"><span class="typeNameLabel">XCcyIborIborSwapTemplate.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/XCcyIborIborSwapTemplate.html#getTenor--">getTenor</a></span>()</code>
-<div class="block">Gets the tenor of the swap.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ThreeLegBasisSwapTemplate.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/ThreeLegBasisSwapTemplate.html#getTenor--">getTenor</a></span>()</code>
-<div class="block">Gets the tenor of the swap.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a></code></td>
 <td class="colLast"><span class="typeNameLabel">OvernightIborSwapTemplate.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightIborSwapTemplate.html#getTenor--">getTenor</a></span>()</code>
 <div class="block">Gets the tenor of the swap.</div>
 </td>
@@ -723,13 +771,25 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FixedOvernightSwapTemplate.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedOvernightSwapTemplate.html#getTenor--">getTenor</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ThreeLegBasisSwapTemplate.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/ThreeLegBasisSwapTemplate.html#getTenor--">getTenor</a></span>()</code>
 <div class="block">Gets the tenor of the swap.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FixedOvernightSwapTemplate.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedOvernightSwapTemplate.html#getTenor--">getTenor</a></span>()</code>
+<div class="block">Gets the tenor of the swap.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FixedInflationSwapTemplate.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedInflationSwapTemplate.html#getTenor--">getTenor</a></span>()</code>
+<div class="block">Gets the tenor of the swap.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a></code></td>
+<td class="colLast"><span class="typeNameLabel">XCcyIborIborSwapTemplate.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/XCcyIborIborSwapTemplate.html#getTenor--">getTenor</a></span>()</code>
 <div class="block">Gets the tenor of the swap.</div>
 </td>
 </tr>
@@ -750,18 +810,6 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">XCcyIborIborSwapTemplate.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/XCcyIborIborSwapTemplate.Meta.html#tenor--">tenor</a></span>()</code>
-<div class="block">The meta-property for the <code>tenor</code> property.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ThreeLegBasisSwapTemplate.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/ThreeLegBasisSwapTemplate.Meta.html#tenor--">tenor</a></span>()</code>
-<div class="block">The meta-property for the <code>tenor</code> property.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">OvernightIborSwapTemplate.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightIborSwapTemplate.Meta.html#tenor--">tenor</a></span>()</code>
 <div class="block">The meta-property for the <code>tenor</code> property.</div>
 </td>
@@ -774,13 +822,25 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">FixedOvernightSwapTemplate.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedOvernightSwapTemplate.Meta.html#tenor--">tenor</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ThreeLegBasisSwapTemplate.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/ThreeLegBasisSwapTemplate.Meta.html#tenor--">tenor</a></span>()</code>
 <div class="block">The meta-property for the <code>tenor</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">FixedOvernightSwapTemplate.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedOvernightSwapTemplate.Meta.html#tenor--">tenor</a></span>()</code>
+<div class="block">The meta-property for the <code>tenor</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">FixedInflationSwapTemplate.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedInflationSwapTemplate.Meta.html#tenor--">tenor</a></span>()</code>
+<div class="block">The meta-property for the <code>tenor</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">XCcyIborIborSwapTemplate.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/XCcyIborIborSwapTemplate.Meta.html#tenor--">tenor</a></span>()</code>
 <div class="block">The meta-property for the <code>tenor</code> property.</div>
 </td>
 </tr>
@@ -814,12 +874,12 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ThreeLegBasisSwapConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/ThreeLegBasisSwapConvention.html#createTrade-java.time.LocalDate-java.time.Period-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+<td class="colLast"><span class="typeNameLabel">FixedOvernightSwapConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedOvernightSwapConvention.html#createTrade-java.time.LocalDate-java.time.Period-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
            <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;periodToStart,
            <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
            <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
            double&nbsp;notional,
-           double&nbsp;spread,
+           double&nbsp;fixedRate,
            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Creates a forward-starting trade based on this convention.</div>
 </td>
@@ -850,7 +910,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FixedOvernightSwapConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedOvernightSwapConvention.html#createTrade-java.time.LocalDate-java.time.Period-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+<td class="colLast"><span class="typeNameLabel">FixedIborSwapConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedIborSwapConvention.html#createTrade-java.time.LocalDate-java.time.Period-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
            <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;periodToStart,
            <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
            <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
@@ -862,12 +922,12 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FixedIborSwapConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedIborSwapConvention.html#createTrade-java.time.LocalDate-java.time.Period-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+<td class="colLast"><span class="typeNameLabel">ThreeLegBasisSwapConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/ThreeLegBasisSwapConvention.html#createTrade-java.time.LocalDate-java.time.Period-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
            <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;periodToStart,
            <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
            <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
            double&nbsp;notional,
-           double&nbsp;fixedRate,
+           double&nbsp;spread,
            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Creates a forward-starting trade based on this convention.</div>
 </td>
@@ -886,11 +946,11 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ThreeLegBasisSwapConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/ThreeLegBasisSwapConvention.html#createTrade-java.time.LocalDate-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+<td class="colLast"><span class="typeNameLabel">FixedOvernightSwapConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedOvernightSwapConvention.html#createTrade-java.time.LocalDate-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
            <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
            <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
            double&nbsp;notional,
-           double&nbsp;spread,
+           double&nbsp;fixedRate,
            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Creates a spot-starting trade based on this convention.</div>
 </td>
@@ -919,17 +979,6 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FixedOvernightSwapConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedOvernightSwapConvention.html#createTrade-java.time.LocalDate-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
-           <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
-           <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
-           double&nbsp;notional,
-           double&nbsp;fixedRate,
-           <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
-<div class="block">Creates a spot-starting trade based on this convention.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FixedInflationSwapConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedInflationSwapConvention.html#createTrade-java.time.LocalDate-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
            <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
            <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
@@ -939,13 +988,24 @@
 <div class="block">Creates a forward-starting trade based on this convention.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FixedIborSwapConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedIborSwapConvention.html#createTrade-java.time.LocalDate-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
            <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
            <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
            double&nbsp;notional,
            double&nbsp;fixedRate,
+           <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Creates a spot-starting trade based on this convention.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ThreeLegBasisSwapConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/ThreeLegBasisSwapConvention.html#createTrade-java.time.LocalDate-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+           <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
+           <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+           double&nbsp;notional,
+           double&nbsp;spread,
            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Creates a spot-starting trade based on this convention.</div>
 </td>
@@ -1048,18 +1108,6 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/XCcyIborIborSwapTemplate.Builder.html" title="class in com.opengamma.strata.product.swap.type">XCcyIborIborSwapTemplate.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">XCcyIborIborSwapTemplate.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/XCcyIborIborSwapTemplate.Builder.html#tenor-com.opengamma.strata.basics.date.Tenor-">tenor</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor)</code>
-<div class="block">Sets the tenor of the swap.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/ThreeLegBasisSwapTemplate.Builder.html" title="class in com.opengamma.strata.product.swap.type">ThreeLegBasisSwapTemplate.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ThreeLegBasisSwapTemplate.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/ThreeLegBasisSwapTemplate.Builder.html#tenor-com.opengamma.strata.basics.date.Tenor-">tenor</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor)</code>
-<div class="block">Sets the tenor of the swap.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightIborSwapTemplate.Builder.html" title="class in com.opengamma.strata.product.swap.type">OvernightIborSwapTemplate.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">OvernightIborSwapTemplate.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightIborSwapTemplate.Builder.html#tenor-com.opengamma.strata.basics.date.Tenor-">tenor</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor)</code>
 <div class="block">Sets the tenor of the swap.</div>
@@ -1072,14 +1120,26 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/ThreeLegBasisSwapTemplate.Builder.html" title="class in com.opengamma.strata.product.swap.type">ThreeLegBasisSwapTemplate.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ThreeLegBasisSwapTemplate.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/ThreeLegBasisSwapTemplate.Builder.html#tenor-com.opengamma.strata.basics.date.Tenor-">tenor</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor)</code>
+<div class="block">Sets the tenor of the swap.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedOvernightSwapTemplate.Builder.html" title="class in com.opengamma.strata.product.swap.type">FixedOvernightSwapTemplate.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FixedOvernightSwapTemplate.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedOvernightSwapTemplate.Builder.html#tenor-com.opengamma.strata.basics.date.Tenor-">tenor</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor)</code>
 <div class="block">Sets the tenor of the swap.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedInflationSwapTemplate.Builder.html" title="class in com.opengamma.strata.product.swap.type">FixedInflationSwapTemplate.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FixedInflationSwapTemplate.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedInflationSwapTemplate.Builder.html#tenor-com.opengamma.strata.basics.date.Tenor-">tenor</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor)</code>
+<div class="block">Sets the tenor of the swap.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/XCcyIborIborSwapTemplate.Builder.html" title="class in com.opengamma.strata.product.swap.type">XCcyIborIborSwapTemplate.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">XCcyIborIborSwapTemplate.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/XCcyIborIborSwapTemplate.Builder.html#tenor-com.opengamma.strata.basics.date.Tenor-">tenor</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor)</code>
 <div class="block">Sets the tenor of the swap.</div>
 </td>
 </tr>

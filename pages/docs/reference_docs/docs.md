@@ -5,10 +5,9 @@ permalink: /docs/
 
 {% include macros.html %}
 
-{{note}} Strata 0.16 is a next-generation technology preview release.
-Please be aware that the APIs, features and extension points described in this documentation may be subject to change. {{end}}
+This is the home page for reference documentation about Strata, the open source market risk library from OpenGamma.
 
-## Overview
+## Modules
 
 The Strata codebase consists of a number of modules.
 Detailed reference documentation on each module will expand over time.

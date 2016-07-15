@@ -5,8 +5,6 @@ permalink: /calculation_flow/
 
 {% include macros.html %}
 
-## Overview
-
 Strata's functionality is built around a well-defined calculation flow, with stages that each serve one purpose.
 This is a key mechanism for achieving a separation of concerns between different parts of Strata, and ensuring that calculations fail fast.
 

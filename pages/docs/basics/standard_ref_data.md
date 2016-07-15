@@ -19,6 +19,7 @@ Future and past dates are an extrapolations of the known holiday dates.
 
 | Name | Holidays                                         | Weekends          | ISDA reference      |
 |------|--------------------------------------------------|-------------------|---------------------|
+| AUSY | Sydney (Australia) holidays                      | Saturday/Sunday   |                     |
 | CATO | Toronto (Canada) holidays                        | Saturday/Sunday   |                     |
 | CHZU | Zurich (Switzerland) holidays                    | Saturday/Sunday   |                     |
 | EUTA | TARGET interbank payment (Europe) holidays       | Saturday/Sunday   | section 1.8 (2006)  |
@@ -36,8 +37,8 @@ Future and past dates are an extrapolations of the known holiday dates.
 | Fri/Sat    | No holiday dates     | Friday/Saturday   |    |
 | Thu/Fri    | No holiday dates     | Thursday/Friday   |    |
 
-Note that most holiday calendars have a constant in `HolidayCalendarIds`.
-For those that do not, the identifier can be created dynamically using `HolidayCalendarId.of(name)`.
+Holiday calendars have a constant in `HolidayCalendarIds`.
+The identifier can also be created dynamically using `HolidayCalendarId.of(name)`.
 
 
 ## Indices
@@ -49,6 +50,7 @@ Overnight Indices:
 
 | Name           | Description              | Day Count    |
 |----------------|--------------------------|--------------|
+| AUD-AONIA      | AONIA index for AUD      | Act/365F     |
 | CAD-CORRA      | CORRA index for CAD      | Act/365F     |
 | CHF-TOIS       | TOIS index for CHF       | Act/360      |
 | EUR-EONIA      | EONIA index for EUR      | Act/360      |
@@ -61,6 +63,7 @@ Ibor Indices:
 
 | Name                 | Tenors                   | Description               | Day Count    |
 |----------------------|--------------------------|---------------------------|--------------|
+| AUD-BBSW-XX          | 1M,2M,3M,4M,5M,6M        | BBSW index for AUD        | Act/365F     |
 | CAD-CDOR-XX          | 1M,2M,3M,6M,12M          | CDOR index for CAD        | Act/365F     |
 | CHF-LIBOR-XX         | 1W,1M,2M,3M,6M,12M       | LIBOR index for CHF       | Act/360      |
 | EUR-LIBOR-XX         | 1W,1M,2M,3M,6M,12M       | LIBOR index for EUR       | Act/360      |

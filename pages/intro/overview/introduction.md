@@ -5,11 +5,10 @@ permalink: /introduction/
 
 ## What is Strata?
 
-**Strata is OpenGamma's next-generation, open source toolkit for market risk.**
+**Strata is the open source analytics and market risk library from OpenGamma.**
 
 Strata allows financial systems developers to build or enhance existing applications with standardized,
-off-the-shelf market risk components. It provides all the core concepts and market risk functionality
-at the heart of the OpenGamma Platform, including:
+off-the-shelf market risk components. It includes:
 
 * Pricing, financial analytics and curve calibration
 * Reporting

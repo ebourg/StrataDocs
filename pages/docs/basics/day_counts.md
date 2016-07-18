@@ -18,7 +18,7 @@ A year fraction is a floating point number, where one year is represented by 1 a
 Most day counts are relatively simple, operating solely on the two dates, returning the year fraction.
 Some day counts are more complicated, needing additional information about an associated schedule.
 
-See [Wikipedia](http://en.wikipedia.org/wiki/Day_count_convention) for more background information.
+See [Wikipedia](https://en.wikipedia.org/wiki/Day_count_convention) for more background information.
 
 
 ## Day Count

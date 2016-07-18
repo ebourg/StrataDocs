@@ -28,7 +28,7 @@ The following third party libraries are used in test code by Strata:
 | [TestNG](http://testng.org)                           | 6.9.10  | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
 | [Mockito](http://mockito.org/)                        | 1.10.19 | [MIT](https://github.com/mockito/mockito/blob/master/LICENSE) |
 | [AssertJ](http://joel-costigliola.github.io/assertj/) | 3.4.1   | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
-| [Hamcrest](http://hamcrest.org/)                      | 1.3     | [BSD 3-clause](http://opensource.org/licenses/BSD-3-Clause) |
+| [Hamcrest](http://hamcrest.org/)                      | 1.3     | [BSD 3-clause](https://opensource.org/licenses/BSD-3-Clause) |
 | [Objenesis](http://objenesis.org/)                    | 2.1     | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
 
 Strata itself is released as Open Source Software under the [Apache v2.0 license](http://www.apache.org/licenses/LICENSE-2.0.html).

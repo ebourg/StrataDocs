@@ -237,119 +237,35 @@ Strata releases in order to offer full control over all possible inputs.
 
 The `curves` directory must contain two files with specific names:
 
-* `groups.csv` -- defines the curve groups
-* `settings.csv` -- contains settings for each curve
+* `groups.csv` -- defines the [curve groups]({{site.baseurl}}/curve_groups_file)
+* `settings.csv` -- contains [settings]({{site.baseurl}}/curve_settings_file) for each curve
 
-Any other files in this directory are assumed to contain curves. Curves can be divided between files as appropriate, using any file name.
+Any other files in this directory are assumed to contain pre-calibrated curves.
+Each curve must be specified in a single file.
+See the [curves loader]({{site.baseurl}}/curves_loader) page for more details.
 
-#### Curve files
-
-A curve file contains one or more calibrated curves. Curve files are CSV-formatted with the following header row:
-
-```
-Valuation Date,Group Name,Curve Name,Date,Value,Label
-```
-
-The fields are described below.
-
-| Field          | Description                                                                                                                           |
-|----------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Valuation Date | The valuation date of the curve, in the form `yyyy-mm-dd`.                                                                            |
-| Group Name     | The curve group name. This must match a group defined in the curve groups file.                                                       |
-| Curve Name     | The name of the curve within the group.                                                                                               |
-| Date           | The date of the curve point, in the form `yyyy-mm-dd`.                                                                                |
-| Value          | The curve point value. The curve settings file specifies whether the values for a curve correspond to discount factors or zero rates. |
-| Label          | A description of the curve point used to identify it in bucketed sensitivity results.                                                 |
-
-#### Curve groups
-
-Curve groups assign purposes to curves. For example, they allow a curve to be identified as a USD discounting curve, or a forecasting curve for 3-month Libor.
+The curve groups are used to assign purposes to curves.
+For example, they allow a curve to be identified as a USD discounting curve, or a forecasting curve for 3-month LIBOR.
 
 The market data rules specify the name of the curve group to use for a given trade.
 In Strata, a fixed set of rules are used by the command-line tool which always use a single curve group with the name `Default`.
 The use of multiple curve groups would be the mechanism by which, for example, a different discounting curve could be used
 for different counterparties, or the same measure could be displayed side-by-side showing the effect of using different curves.
 
-There must be a single file called `groups.csv` which defines all available curve groups. This is a CSV-formatted file with the following header row:
-
-```
-Group Name,Curve Type,Reference,Curve Name
-```
-
-The fields are described below.
-
-| Field      | Description                                                                                                                               |
-|------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| Group Name | The name of the curve group.                                                                                                              |
-| Curve Type | `Discount` for a discounting curve, or `Forward` for a forward curve.                                                                     |
-| Reference  | The reference for which the curve is used. For `Discount` curve types, this is the ISO currency code of the curve. For `Forward` curve types, this is the name of the corresponding index. The example market data uses Strata's built-in index definitions. |
-| Curve Name | The name of the curve. This must correspond to a curve defined in this group in a curve file.                                             |
-
-The curve groups file allows a single curve to be used for multiple purposes.
-
-#### Curve settings
-
-There must also be a single file called `settings.csv` which specifies settings for each curve in the curves files.
-This is again a CSV-formatted file, with the following header row:
-
-```
-Group Name,Curve Name,Value Type,Day Count,Interpolator,Left Extrapolator,Right Extrapolator
-```
-
-The fields are described below.
-
-| Field              | Description                                                                                                                         |
-|--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Group Name         | The name of the curve group containing the curve.                                                                                   |
-| Curve Name         | The name of the curve.                                                                                                              |
-| Value Type         | Either `DF` or `Zero`, indicating that the values are discount factors or zero rates respectively.                                  |
-| Day Count          | A supported day count convention name.                                                                                              |
-| Interpolator       | A supported interpolator name. This corresponds to the interpolator to be used when reading from the curve.                         |
-| Left Extrapolator  | A supported extrapolator name. This corresponds to the extrapolator to be used when reading beyond the earliest point on the curve. |
-| Right Extrapolator | A supported extrapolator name. This corresponds to the extrapolator to be used when reading beyond the latest point on the curve.   |
-
-Each curve must occur exactly once in this file, or it will be ignored.
-
 ### Fixings
 
-The `historical-fixings` directory contains CSV-formatted files with historical fixing data. 
+The `historical-fixings` directory contains CSV-formatted files with historical fixing data.
+All files in the directory will be loaded and treated as fixing series files.
+Each fixing series must be specified in a single file.
 
-These are simple files with the following header row:
-
-```
-Reference,Date,Value
-```
-
-The fields are described below.
-
-| Field     | Description                                                                                                                                   |
-|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Reference | The name of the index definition to which the fixing data corresponds. The example market data refers to Strata's built-in index definitions. |
-| Date      | The date of the fixing, in the form `yyyy-mm-dd`.                                                                                             |
-| Value     | The numeric fixing value.                                                                                                                     |
-
-The values for each index define a fixing series. Each fixing series must be contained within a single CSV file, but a single file may contain multiple series.
-Historical fixing data may be divided among severval files as appropriate, and any file name is permitted.
-
+See the [fixings loader]({{site.baseurl}}/fixings_loader) page for more details.
 
 ### Quotes
 
-The `quotes` directory must contain a single file, `quotes.csv`. This is a simple CSV-formatted file with the following header row:
+The `quotes` directory contains CSV-formatted files containing market quotes.
+All files in the directory will be loaded and treated as quote files.
 
-```
-Date,Scheme,Ticker,Value
-```
-
-The fields are described below.
-
-| Field  | Description                                                                          |
-|--------|--------------------------------------------------------------------------------------|
-| Date   | The valuation date to which the quote value corresponds, in the format `yyyy-mm-dd`. |
-| Scheme | The scheme of the `StandardId` which identifies the quote.                           |
-| Ticker | The value of the `StandardId` which identifies the quote.                            |
-| Value  | The numeric quote value.                                                             |
-
-This file may be used to specify a snapshot of quotes for market observables.
+See the [quotes loader]({{site.baseurl}}/quotes_loader) page for more details.
 
 ### Credit
 

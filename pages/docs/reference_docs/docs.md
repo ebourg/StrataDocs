@@ -83,7 +83,8 @@ The `strata-market` module includes the representations of the market, including
 
 ### Loader module
 
-The `strata-loader` module provides the ability to load products and market data from files.
+The `strata-loader` module provides the ability to [load]({{site.baseurl}}/loaders)
+products and market data from files.
 This includes an FpML loader for products.
 
 

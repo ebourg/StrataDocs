@@ -19,7 +19,7 @@ Strata includes the following coverage:
   <tbody>
   <tr>
     <td><a href="{{site.baseurl}}/swap">Swap</a><br />
-    <span class="note">Including Vanilla, OIS, Basis, Cross Currency and Variable Notional</span></td>
+    <span class="note">Including Vanilla, OIS, Basis, Cross Currency, Variable Notional and Inflation</span></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
@@ -96,7 +96,7 @@ Strata includes the following coverage:
     <span class="note">Normal, Black, SABR</span></td>
     <td><i class="fa fa-check"></i></td>
     <td></td>
-    <td></td>
+    <td><i class="fa fa-check"></i></td>
   </tr>
   <tr>
     <td>Fixed-Coupon Bond</td>

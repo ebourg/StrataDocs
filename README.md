@@ -4,7 +4,7 @@ Strata Documentation
 [![Build Status](https://travis-ci.org/OpenGamma/StrataDocs.svg?branch=gh-pages)](https://travis-ci.org/OpenGamma/StrataDocs)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
-This is the documentation site for Strata (http://opengamma.github.io/StrataDocs).
+This is the documentation site for Strata (http://strata.opengamma.io).
 
 ## License
 

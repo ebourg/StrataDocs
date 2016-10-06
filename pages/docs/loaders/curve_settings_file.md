@@ -32,7 +32,8 @@ See [DayCounts]({{site.baseurl}}/day_counts) for valid day count names.
 See [CurveInterpolators]({{site.baseurl}}/apidocs/com/opengamma/strata/market/curve/interpolator/CurveInterpolators.html) for valid interpolator names.
 See [CurveExtrapolators]({{site.baseurl}}/apidocs/com/opengamma/strata/market/curve/interpolator/CurveExtrapolators.html) for valid extrapolator names.
 
-These settings are used when loading individual curve nodes via the ({{site.baseurl}}/curves_loader) or [curve calibration loader]({{site.baseurl}}/curve_calibration_loader).
+These settings are used when loading individual curve nodes via the
+[curve loader]({{site.baseurl}}/curves_loader) or [curve calibration loader]({{site.baseurl}}/curve_calibration_loader).
 
 
 ## Example

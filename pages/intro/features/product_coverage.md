@@ -101,7 +101,7 @@ Strata includes the following coverage:
   <tr>
     <td>Fixed-Coupon Bond</td>
     <td><i class="fa fa-check"></i></td>
-    <td></td>
+    <td><i class="fa fa-check"></i></td>
     <td></td>
     <td class="na"></td>
   </tr>
@@ -109,14 +109,14 @@ Strata includes the following coverage:
     <td>Capital Indexed Bond<br />
     <span class="note">Including support for US TIPS</span></td>
     <td><i class="fa fa-check"></i></td>
-    <td></td>
+    <td><i class="fa fa-check"></i></td>
     <td></td>
     <td class="na"></td>
   </tr>
   <tr>
     <td>Bond Future</td>
     <td><i class="fa fa-check"></i></td>
-    <td></td>
+    <td><i class="fa fa-check"></i></td>
     <td></td>
     <td class="na"></td>
   </tr>
@@ -124,7 +124,7 @@ Strata includes the following coverage:
     <td>Bond Future Option</td>
     <td><i class="fa fa-check"></i><br />
     <span class="note">Black</span></td>
-    <td></td>
+    <td><i class="fa fa-check"></i></td>
     <td></td>
     <td class="na"></td>
   </tr>
@@ -132,7 +132,7 @@ Strata includes the following coverage:
     <td>FX Vanilla Option</td>
     <td><i class="fa fa-check"></i><br />
     <span class="note">Black, Vanna Volga</span></td>
-    <td></td>
+    <td><i class="fa fa-check"></i></td>
     <td></td>
     <td></td>
   </tr>
@@ -140,7 +140,7 @@ Strata includes the following coverage:
     <td>FX Single Barrier Option</td>
     <td><i class="fa fa-check"></i><br />
     <span class="note">Black, Trinomial tree</span></td>
-    <td></td>
+    <td><i class="fa fa-check"></i></td>
     <td></td>
     <td></td>
   </tr>
@@ -157,7 +157,7 @@ Strata includes the following coverage:
     <td>Ibor cap/floor</td>
     <td><i class="fa fa-check"></i><br />
     <span class="note">Normal, Black</span></td>
-    <td></td>
+    <td><i class="fa fa-check"></i></td>
     <td></td>
     <td></td>
   </tr>
@@ -198,8 +198,7 @@ Code examples are included in the strata-examples module. This also indicates th
 The CDS product and pricing model is currently being reviewed and refactored.
 Applications should expect the CDS product model and pricers to change incompatibly in a subsequent release.
 
-Work is ongoing to broaden asset class coverage, to integrate the existing coverage into the
-Calculation API, and to provide examples.
+Work is ongoing to broaden asset class coverage, and to provide examples.
 
 ## Coverage roadmap
 

@@ -129,7 +129,7 @@ Strata includes the following coverage:
     <td class="na"></td>
   </tr>
   <tr>
-    <td>FX Vanilla Option</td>
+    <td><a href="{{site.baseurl}}/fx_vanilla_option">FX Vanilla Option</a><br />
     <td><i class="fa fa-check"></i><br />
     <span class="note">Black, Vanna Volga</span></td>
     <td><i class="fa fa-check"></i></td>

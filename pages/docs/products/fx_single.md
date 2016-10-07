@@ -24,7 +24,7 @@ An `FxSingle` can be created as follows:
 
 ```java
 FxSingle fx = FxSingle.of(CurrencyAmount.of(Currency.USD, 1000),
-                          FxRate.of(USD, EUR, 0.932),
+                          FxRate.of(EUR, USD, 1.115),
                           LocalDate.of(2015, 6, 15));
 ```
 
@@ -58,8 +58,8 @@ The following table summarizes the fields on `FxSingle` that can be used to cont
 For more detail on the meaning of each field, see the
 [Javadoc]({{site.baseurl}}/apidocs/com/opengamma/strata/product/fx/FxSingle.html);
 
-| Property name     | Description | Required/Optional |
-|-------------------|-------------|-------------------|
-| baseCurrencyAmount | The amount in the base currency | Required |
+| Property name         | Description | Required/Optional |
+|-----------------------|-------------|-------------------|
+| baseCurrencyAmount    | The amount in the base currency | Required |
 | counterCurrencyAmount | The amount in the counter currency | Required |
-| paymentDate       | The payment date | Required |
+| paymentDate           | The payment date | Required |

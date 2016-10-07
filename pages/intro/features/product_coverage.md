@@ -19,7 +19,7 @@ Strata includes the following coverage:
   <tbody>
   <tr>
     <td><a href="{{site.baseurl}}/swap">Swap</a><br />
-    <span class="note">Including Vanilla, OIS, Basis, Cross Currency, Variable Notional and Inflation</span></td>
+      <span class="note">Including Vanilla, OIS, Basis, Cross Currency, Variable Notional and Inflation</span></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
@@ -63,7 +63,7 @@ Strata includes the following coverage:
   <tr>
     <td>STIR Future Option</td>
     <td><i class="fa fa-check"></i><br />
-    <span class="note">Normal</span></td>
+      <span class="note">Normal</span></td>
     <td><i class="fa fa-check"></i></td>
     <td></td>
     <td class="na"></td>
@@ -91,9 +91,9 @@ Strata includes the following coverage:
   </tr>
   <tr>
     <td><a href="{{site.baseurl}}/swaption">Swaption</a><br />
-    <span class="note">Including physical and cash-settled</span></td>
+      <span class="note">Including physical and cash-settled</span></td>
     <td><i class="fa fa-check"></i><br />
-    <span class="note">Normal, Black, SABR</span></td>
+      <span class="note">Normal, Black, SABR</span></td>
     <td><i class="fa fa-check"></i></td>
     <td></td>
     <td><i class="fa fa-check"></i></td>
@@ -107,7 +107,7 @@ Strata includes the following coverage:
   </tr>
   <tr>
     <td>Capital Indexed Bond<br />
-    <span class="note">Including support for US TIPS</span></td>
+      <span class="note">Including support for US TIPS</span></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td></td>
@@ -123,15 +123,15 @@ Strata includes the following coverage:
   <tr>
     <td>Bond Future Option</td>
     <td><i class="fa fa-check"></i><br />
-    <span class="note">Black</span></td>
+      <span class="note">Black</span></td>
     <td><i class="fa fa-check"></i></td>
     <td></td>
     <td class="na"></td>
   </tr>
   <tr>
-    <td><a href="{{site.baseurl}}/fx_vanilla_option">FX Vanilla Option</a><br />
+    <td><a href="{{site.baseurl}}/fx_vanilla_option">FX Vanilla Option</a></td>
     <td><i class="fa fa-check"></i><br />
-    <span class="note">Black, Vanna Volga</span></td>
+      <span class="note">Black, Vanna Volga</span></td>
     <td><i class="fa fa-check"></i></td>
     <td></td>
     <td></td>
@@ -139,7 +139,7 @@ Strata includes the following coverage:
   <tr>
     <td>FX Single Barrier Option</td>
     <td><i class="fa fa-check"></i><br />
-    <span class="note">Black, Trinomial tree</span></td>
+      <span class="note">Black, Trinomial tree</span></td>
     <td><i class="fa fa-check"></i></td>
     <td></td>
     <td></td>
@@ -148,7 +148,7 @@ Strata includes the following coverage:
     <td>CMS<br />
     <span class="note">Including cap/floor</span></td>
     <td><i class="fa fa-check"></i><br />
-    <span class="note">SABR</span></td>
+      <span class="note">SABR</span></td>
     <td><i class="fa fa-check"></i></td>
     <td></td>
     <td></td>
@@ -156,7 +156,7 @@ Strata includes the following coverage:
   <tr>
     <td>Ibor cap/floor</td>
     <td><i class="fa fa-check"></i><br />
-    <span class="note">Normal, Black</span></td>
+      <span class="note">Normal, Black</span></td>
     <td><i class="fa fa-check"></i></td>
     <td></td>
     <td></td>
@@ -170,7 +170,7 @@ Strata includes the following coverage:
   </tr>
   <tr>
     <td>CDS <a id="cds" href="#cds-footnote"><sup>4</sup></a><br />
-    <span class="note">Including Single Name and Index</span></td>
+      <span class="note">Including Single Name and Index</span></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>

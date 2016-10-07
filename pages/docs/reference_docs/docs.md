@@ -66,6 +66,7 @@ For more information, see the following guides:
 * [Swaption]({{site.baseurl}}/swaption) - Options on swaps
 * [FX Forward/Spot]({{site.baseurl}}/fx_single) - FX Forward and FX spot
 * [FX Swap]({{site.baseurl}}/fx_swap) - FX Swap
+* [FX Vanilla Option]({{site.baseurl}}/fx_vanilla_option) - FX Vanilla Option
 * [Term Deposit]({{site.baseurl}}/term_deposit) - Fixed rate deposits
 * [Bullet Payment]({{site.baseurl}}/bullet_payment) - Unidirectional one-off payments
 

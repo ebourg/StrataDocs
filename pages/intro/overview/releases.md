@@ -10,39 +10,39 @@ To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obt
 
 *7 October 2016*
 
-This release contains [61 fixed issues](https://github.com/OpenGamma/Strata/milestone/11?closed=1) -
+This release contains [62 fixed issues](https://github.com/OpenGamma/Strata/milestone/11?closed=1) -
 15 of which are bug fixes.
 
 The key features are:
 
-* Measure-level and Calc-level API support for all asset classes
+* Measure-level and Calc-level API support for all asset classes:
 [#1263](https://github.com/OpenGamma/Strata/issues/1263), 
 [#1344](https://github.com/OpenGamma/Strata/issues/1344), 
 [#1331](https://github.com/OpenGamma/Strata/issues/1331)
-* Additional holiday calendars and indices for SEK, DKK and PLN
+* Additional holiday calendars and indices for SEK, DKK and PLN:
 [#1373](https://github.com/OpenGamma/Strata/issues/1373),
 [#1326](https://github.com/OpenGamma/Strata/issues/1326)
-* Enhanced performance for swap pricing
+* Enhanced performance for swap pricing:
 [#1293](https://github.com/OpenGamma/Strata/issues/1293),
 [#1329](https://github.com/OpenGamma/Strata/issues/1329)
-* More flexible loaders
+* More flexible loaders:
 [#1267](https://github.com/OpenGamma/Strata/issues/1267),
 [#1269](https://github.com/OpenGamma/Strata/issues/1269),
 [#1245](https://github.com/OpenGamma/Strata/issues/1245),
 [#1249](https://github.com/OpenGamma/Strata/issues/1249),
 [#1282](https://github.com/OpenGamma/Strata/issues/1282)
-* Support FpML parameterized notional schedule
+* Support FpML parameterized notional schedule:
 [#1242](https://github.com/OpenGamma/Strata/issues/1242)
-* Enhanced explain present value
+* Enhanced explain present value:
 [#1256](https://github.com/OpenGamma/Strata/issues/1256),
 [#1270](https://github.com/OpenGamma/Strata/issues/1270),
 [#1362](https://github.com/OpenGamma/Strata/issues/1362)
-* Better error messages
+* Better error messages:
 [#1280](https://github.com/OpenGamma/Strata/issues/1280),
 [#1275](https://github.com/OpenGamma/Strata/issues/1275),
 [#1225](https://github.com/OpenGamma/Strata/issues/1225),
 [#1254](https://github.com/OpenGamma/Strata/issues/1254)
-* FRA payment dates are now calculated correctly
+* FRA payment dates are now calculated correctly:
 [#1301](https://github.com/OpenGamma/Strata/issues/1301)
 
 Feel free to give us feedback or ask a question in the [forums](http://forums.opengamma.com/).
@@ -50,12 +50,14 @@ Feel free to give us feedback or ask a question in the [forums](http://forums.op
 #### Compatibility
 
 This release is backwards compatible except for bond pricing.
-For bonds, it was necessary to rename `BondGroup` to `RepoGroup` and to change
-`LegalEntityDiscountingProvider` from a class to an interface.
-Migration will mostly consist of simple renames.
-See this [pull request](https://github.com/OpenGamma/Strata/pull/1368) for more details.
+A total of 14 methods were marked as deprecated, all with documented replacements.
 
-In addition, 14 methods were marked as deprecated, all with documented replacements.
+The backwards incompatibility in bond pricing is unfortunate.
+The changes were necessary to enable bond pricing integration into the calculation-level API.
+It also allow us to add pricing for Bills in the future.
+Migration will mostly consist of simple renames, see this
+[pull request](https://github.com/OpenGamma/Strata/pull/1368) for more details.
+
 
 As an advance warning, the CDS code is likely to change in a backwards incompatible way
 in release v1.2. However, it remains our goal to avoid incompatibility as far as reasonably possible.

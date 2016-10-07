@@ -53,8 +53,13 @@ The ideal end user is one who:
 * Buys into the vision of transparent, standardised open source analytics.
 * Is open to extending and building out new functionality within the toolkit. 
 
+Support during the getting started phase is available via public forums.
+For support beyond the initial getting started phase, such as for use in production,
+we strongly recommend [commercial support]({{site.baseurl}}/support) with service level agreements.
+
 ## Why is Strata open source?
 
-Strata provides the same set of market risk foundations as we use ourselves in our own applications.
+Strata provides the same set of market risk foundations as we use ourselves in our
+[own applications](http://www.opengamma.com/).
 It is in our interest for this standard functionality to be widely-used, to allow it to be validated and
 extended externally, and for it to become the industry standard with its own developer community.

@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":9};
+var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -169,7 +169,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&gt;</code></td>
+<td class="colFirst"><code>static <a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/RatesCurvesCsvLoader.html#load-java.time.LocalDate-com.opengamma.strata.collect.io.ResourceLocator-com.opengamma.strata.collect.io.ResourceLocator-java.util.Collection-">load</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;marketDataDate,
     <a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;groupsResource,
     <a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;settingsResource,
@@ -178,11 +178,50 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ListMultimap.html?is-external=true" title="class or interface in com.google.common.collect">ListMultimap</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&gt;</code></td>
+<td class="colFirst"><code>static <a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableListMultimap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableListMultimap</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/RatesCurvesCsvLoader.html#loadAllDates-com.opengamma.strata.collect.io.ResourceLocator-com.opengamma.strata.collect.io.ResourceLocator-java.util.Collection-">loadAllDates</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;groupsResource,
             <a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;settingsResource,
             <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&gt;&nbsp;curveValueResources)</code>
 <div class="block">Loads one or more CSV format curve files for all available dates.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>static <a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableListMultimap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableListMultimap</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/RatesCurvesCsvLoader.html#parse-java.util.function.Predicate-com.google.common.io.CharSource-com.google.common.io.CharSource-java.util.Collection-">parse</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function">Predicate</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&gt;&nbsp;datePredicate,
+     <a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/io/CharSource.html?is-external=true" title="class or interface in com.google.common.io">CharSource</a>&nbsp;groupsCharSource,
+     <a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/io/CharSource.html?is-external=true" title="class or interface in com.google.common.io">CharSource</a>&nbsp;settingsCharSource,
+     <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/io/CharSource.html?is-external=true" title="class or interface in com.google.common.io">CharSource</a>&gt;&nbsp;curveValueCharSources)</code>
+<div class="block">Parses one or more CSV format curve files for all available dates.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/RatesCurvesCsvLoader.html#writeCurveNodes-java.lang.Appendable-java.time.LocalDate-com.opengamma.strata.market.curve.CurveGroup-">writeCurveNodes</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Appendable.html?is-external=true" title="class or interface in java.lang">Appendable</a>&nbsp;underlying,
+               <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+               <a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&nbsp;group)</code>
+<div class="block">Writes the curve nodes in a CSV format to an appendable.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/RatesCurvesCsvLoader.html#writeCurveNodes-java.io.File-java.time.LocalDate-com.opengamma.strata.market.curve.CurveGroup-">writeCurveNodes</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+               <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+               <a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&nbsp;group)</code>
+<div class="block">Writes the curve groups definition in a CSV format to a file.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/RatesCurvesCsvLoader.html#writeCurveSettings-java.lang.Appendable-com.opengamma.strata.market.curve.CurveGroup-">writeCurveSettings</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Appendable.html?is-external=true" title="class or interface in java.lang">Appendable</a>&nbsp;underlying,
+                  <a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&nbsp;group)</code>
+<div class="block">Writes the curve settings in a CSV format to an appendable.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/RatesCurvesCsvLoader.html#writeCurveSettings-java.io.File-com.opengamma.strata.market.curve.CurveGroup-">writeCurveSettings</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+                  <a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&nbsp;group)</code>
+<div class="block">Writes the curve settings in a CSV format to a file.</div>
 </td>
 </tr>
 </table>
@@ -213,10 +252,10 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>load</h4>
-<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&gt;&nbsp;load(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;marketDataDate,
-                                    <a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;groupsResource,
-                                    <a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;settingsResource,
-                                    <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&gt;&nbsp;curveValueResources)</pre>
+<pre>public static&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&gt;&nbsp;load(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;marketDataDate,
+                                             <a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;groupsResource,
+                                             <a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;settingsResource,
+                                             <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&gt;&nbsp;curveValueResources)</pre>
 <div class="block">Loads one or more CSV format curve files for a specific date.
  <p>
  Only those quotes that match the specified date will be loaded.
@@ -238,12 +277,12 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <a name="loadAllDates-com.opengamma.strata.collect.io.ResourceLocator-com.opengamma.strata.collect.io.ResourceLocator-java.util.Collection-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>loadAllDates</h4>
-<pre>public static&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ListMultimap.html?is-external=true" title="class or interface in com.google.common.collect">ListMultimap</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&gt;&nbsp;loadAllDates(<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;groupsResource,
-                                                              <a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;settingsResource,
-                                                              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&gt;&nbsp;curveValueResources)</pre>
+<pre>public static&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableListMultimap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableListMultimap</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&gt;&nbsp;loadAllDates(<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;groupsResource,
+                                                                       <a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&nbsp;settingsResource,
+                                                                       <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&gt;&nbsp;curveValueResources)</pre>
 <div class="block">Loads one or more CSV format curve files for all available dates.
  <p>
  If the files contain a duplicate entry an exception will be thrown.</div>
@@ -256,6 +295,103 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dd>the loaded curves, mapped by date and identifier</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the files contain a duplicate entry</dd>
+</dl>
+</li>
+</ul>
+<a name="parse-java.util.function.Predicate-com.google.common.io.CharSource-com.google.common.io.CharSource-java.util.Collection-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>parse</h4>
+<pre>public static&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableListMultimap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableListMultimap</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&gt;&nbsp;parse(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function">Predicate</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&gt;&nbsp;datePredicate,
+                                                                <a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/io/CharSource.html?is-external=true" title="class or interface in com.google.common.io">CharSource</a>&nbsp;groupsCharSource,
+                                                                <a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/io/CharSource.html?is-external=true" title="class or interface in com.google.common.io">CharSource</a>&nbsp;settingsCharSource,
+                                                                <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/io/CharSource.html?is-external=true" title="class or interface in com.google.common.io">CharSource</a>&gt;&nbsp;curveValueCharSources)</pre>
+<div class="block">Parses one or more CSV format curve files for all available dates.
+ <p>
+ A predicate is specified that is used to filter the dates that are returned.
+ This could match a single date, a set of dates or all dates.
+ <p>
+ If the files contain a duplicate entry an exception will be thrown.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>datePredicate</code> - the predicate used to select the dates</dd>
+<dd><code>groupsCharSource</code> - the curve groups CSV character source</dd>
+<dd><code>settingsCharSource</code> - the curve settings CSV character source</dd>
+<dd><code>curveValueCharSources</code> - the CSV character sources for curves</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the loaded curves, mapped by date and identifier</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the files contain a duplicate entry</dd>
+</dl>
+</li>
+</ul>
+<a name="writeCurveSettings-java.io.File-com.opengamma.strata.market.curve.CurveGroup-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeCurveSettings</h4>
+<pre>public static&nbsp;void&nbsp;writeCurveSettings(<a href="http://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+                                      <a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&nbsp;group)</pre>
+<div class="block">Writes the curve settings in a CSV format to a file.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>file</code> - the file</dd>
+<dd><code>group</code> - the curve group</dd>
+</dl>
+</li>
+</ul>
+<a name="writeCurveSettings-java.lang.Appendable-com.opengamma.strata.market.curve.CurveGroup-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeCurveSettings</h4>
+<pre>public static&nbsp;void&nbsp;writeCurveSettings(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Appendable.html?is-external=true" title="class or interface in java.lang">Appendable</a>&nbsp;underlying,
+                                      <a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&nbsp;group)</pre>
+<div class="block">Writes the curve settings in a CSV format to an appendable.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>underlying</code> - the underlying appendable destination</dd>
+<dd><code>group</code> - the curve group</dd>
+</dl>
+</li>
+</ul>
+<a name="writeCurveNodes-java.io.File-java.time.LocalDate-com.opengamma.strata.market.curve.CurveGroup-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeCurveNodes</h4>
+<pre>public static&nbsp;void&nbsp;writeCurveNodes(<a href="http://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+                                   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+                                   <a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&nbsp;group)</pre>
+<div class="block">Writes the curve groups definition in a CSV format to a file.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>file</code> - the file</dd>
+<dd><code>valuationDate</code> - the valuation date</dd>
+<dd><code>group</code> - the curve group</dd>
+</dl>
+</li>
+</ul>
+<a name="writeCurveNodes-java.lang.Appendable-java.time.LocalDate-com.opengamma.strata.market.curve.CurveGroup-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>writeCurveNodes</h4>
+<pre>public static&nbsp;void&nbsp;writeCurveNodes(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Appendable.html?is-external=true" title="class or interface in java.lang">Appendable</a>&nbsp;underlying,
+                                   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+                                   <a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&nbsp;group)</pre>
+<div class="block">Writes the curve nodes in a CSV format to an appendable.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>underlying</code> - the underlying appendable destination</dd>
+<dd><code>valuationDate</code> - the valuation date</dd>
+<dd><code>group</code> - the curve group</dd>
 </dl>
 </li>
 </ul>
@@ -329,6 +465,6 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -159,8 +159,15 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#BulletPaymentTradeCalculations-com.opengamma.strata.pricer.DiscountingPaymentPricer-">BulletPaymentTradeCalculations</a></span>(<a href="../../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html" title="class in com.opengamma.strata.pricer">DiscountingPaymentPricer</a>&nbsp;paymentPricer)</code>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#BulletPaymentTradeCalculations-com.opengamma.strata.pricer.payment.DiscountingBulletPaymentTradePricer-">BulletPaymentTradeCalculations</a></span>(<a href="../../../../../com/opengamma/strata/pricer/payment/DiscountingBulletPaymentTradePricer.html" title="class in com.opengamma.strata.pricer.payment">DiscountingBulletPaymentTradePricer</a>&nbsp;tradePricer)</code>
 <div class="block">Creates an instance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#BulletPaymentTradeCalculations-com.opengamma.strata.pricer.DiscountingPaymentPricer-">BulletPaymentTradeCalculations</a></span>(<a href="../../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html" title="class in com.opengamma.strata.pricer">DiscountingPaymentPricer</a>&nbsp;paymentPricer)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">use constructor taking <a href="../../../../../com/opengamma/strata/pricer/payment/DiscountingBulletPaymentTradePricer.html" title="class in com.opengamma.strata.pricer.payment"><code>DiscountingBulletPaymentTradePricer</code></a></span></div>
+</div>
 </td>
 </tr>
 </table>
@@ -179,6 +186,21 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario">ScenarioArray</a>&lt;<a href="../../../../../com/opengamma/strata/market/amount/CashFlows.html" title="class in com.opengamma.strata.market.amount">CashFlows</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#cashFlows-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">cashFlows</a></span>(<a href="../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
+         <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;lookup,
+         <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</code>
+<div class="block">Calculates cash flows across one or more scenarios.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/amount/CashFlows.html" title="class in com.opengamma.strata.market.amount">CashFlows</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#cashFlows-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.pricer.rate.RatesProvider-">cashFlows</a></span>(<a href="../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
+         <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</code>
+<div class="block">Calculates cash flows for a single set of market data.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/data/scenario/MultiCurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">MultiCurrencyScenarioArray</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#currencyExposure-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">currencyExposure</a></span>(<a href="../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
                 <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;lookup,
@@ -186,14 +208,14 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Calculates currency exposure across one or more scenarios.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#currencyExposure-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.pricer.rate.RatesProvider-">currencyExposure</a></span>(<a href="../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
                 <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</code>
 <div class="block">Calculates currency exposure for a single set of market data.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/data/scenario/CurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">CurrencyScenarioArray</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#currentCash-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">currentCash</a></span>(<a href="../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
            <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;lookup,
@@ -201,14 +223,14 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Calculates current cash across one or more scenarios.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#currentCash-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.pricer.rate.RatesProvider-">currentCash</a></span>(<a href="../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
            <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</code>
 <div class="block">Calculates current cash for a single set of market data.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/data/scenario/CurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">CurrencyScenarioArray</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#presentValue-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">presentValue</a></span>(<a href="../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
             <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;lookup,
@@ -216,14 +238,14 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Calculates present value across one or more scenarios.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#presentValue-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.pricer.rate.RatesProvider-">presentValue</a></span>(<a href="../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
             <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</code>
 <div class="block">Calculates present value for a single set of market data.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario">ScenarioArray</a>&lt;<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#pv01CalibratedBucketed-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">pv01CalibratedBucketed</a></span>(<a href="../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
                       <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;lookup,
@@ -231,14 +253,14 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Calculates present value sensitivity across one or more scenarios.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#pv01CalibratedBucketed-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.pricer.rate.RatesProvider-">pv01CalibratedBucketed</a></span>(<a href="../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
                       <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</code>
 <div class="block">Calculates present value sensitivity for a single set of market data.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/data/scenario/MultiCurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">MultiCurrencyScenarioArray</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#pv01CalibratedSum-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">pv01CalibratedSum</a></span>(<a href="../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
                  <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;lookup,
@@ -246,14 +268,14 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Calculates present value sensitivity across one or more scenarios.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#pv01CalibratedSum-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.pricer.rate.RatesProvider-">pv01CalibratedSum</a></span>(<a href="../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
                  <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</code>
 <div class="block">Calculates present value sensitivity for a single set of market data.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario">ScenarioArray</a>&lt;<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#pv01MarketQuoteBucketed-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">pv01MarketQuoteBucketed</a></span>(<a href="../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
                        <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;lookup,
@@ -261,14 +283,14 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Calculates present value sensitivity across one or more scenarios.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#pv01MarketQuoteBucketed-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.pricer.rate.RatesProvider-">pv01MarketQuoteBucketed</a></span>(<a href="../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
                        <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</code>
 <div class="block">Calculates present value sensitivity for a single set of market data.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/data/scenario/MultiCurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">MultiCurrencyScenarioArray</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#pv01MarketQuoteSum-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">pv01MarketQuoteSum</a></span>(<a href="../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
                   <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;lookup,
@@ -276,7 +298,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Calculates present value sensitivity across one or more scenarios.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#pv01MarketQuoteSum-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.pricer.rate.RatesProvider-">pv01MarketQuoteSum</a></span>(<a href="../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
                   <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</code>
@@ -326,16 +348,34 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <a name="BulletPaymentTradeCalculations-com.opengamma.strata.pricer.DiscountingPaymentPricer-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>BulletPaymentTradeCalculations</h4>
-<pre>public&nbsp;BulletPaymentTradeCalculations(<a href="../../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html" title="class in com.opengamma.strata.pricer">DiscountingPaymentPricer</a>&nbsp;paymentPricer)</pre>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public&nbsp;BulletPaymentTradeCalculations(<a href="../../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html" title="class in com.opengamma.strata.pricer">DiscountingPaymentPricer</a>&nbsp;paymentPricer)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">use constructor taking <a href="../../../../../com/opengamma/strata/pricer/payment/DiscountingBulletPaymentTradePricer.html" title="class in com.opengamma.strata.pricer.payment"><code>DiscountingBulletPaymentTradePricer</code></a></span></div>
 <div class="block">Creates an instance.
  <p>
  In most cases, applications should use the <a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#DEFAULT"><code>DEFAULT</code></a> instance.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>paymentPricer</code> - the pricer for <a href="../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency"><code>Payment</code></a></dd>
+</dl>
+</li>
+</ul>
+<a name="BulletPaymentTradeCalculations-com.opengamma.strata.pricer.payment.DiscountingBulletPaymentTradePricer-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>BulletPaymentTradeCalculations</h4>
+<pre>public&nbsp;BulletPaymentTradeCalculations(<a href="../../../../../com/opengamma/strata/pricer/payment/DiscountingBulletPaymentTradePricer.html" title="class in com.opengamma.strata.pricer.payment">DiscountingBulletPaymentTradePricer</a>&nbsp;tradePricer)</pre>
+<div class="block">Creates an instance.
+ <p>
+ In most cases, applications should use the <a href="../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#DEFAULT"><code>DEFAULT</code></a> instance.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>tradePricer</code> - the pricer for <a href="../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment"><code>ResolvedBulletPaymentTrade</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -577,6 +617,48 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </dl>
 </li>
 </ul>
+<a name="cashFlows-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cashFlows</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario">ScenarioArray</a>&lt;<a href="../../../../../com/opengamma/strata/market/amount/CashFlows.html" title="class in com.opengamma.strata.market.amount">CashFlows</a>&gt;&nbsp;cashFlows(<a href="../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
+                                          <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;lookup,
+                                          <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</pre>
+<div class="block">Calculates cash flows across one or more scenarios.
+ <p>
+ The cash flows provide details about the payments of the trade.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>trade</code> - the trade</dd>
+<dd><code>lookup</code> - the lookup used to query the market data</dd>
+<dd><code>marketData</code> - the market data</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the cash flows, one entry per scenario</dd>
+</dl>
+</li>
+</ul>
+<a name="cashFlows-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.pricer.rate.RatesProvider-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cashFlows</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/amount/CashFlows.html" title="class in com.opengamma.strata.market.amount">CashFlows</a>&nbsp;cashFlows(<a href="../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
+                           <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</pre>
+<div class="block">Calculates cash flows for a single set of market data.
+ <p>
+ The cash flows provide details about the payments of the trade.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>trade</code> - the trade</dd>
+<dd><code>ratesProvider</code> - the market data</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the cash flows</dd>
+</dl>
+</li>
+</ul>
 <a name="currencyExposure-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">
 <!--   -->
 </a>
@@ -731,6 +813,6 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

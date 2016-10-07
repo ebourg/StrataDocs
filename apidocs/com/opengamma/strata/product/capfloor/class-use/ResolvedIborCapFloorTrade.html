@@ -84,12 +84,18 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.measure.capfloor">com.opengamma.strata.measure.capfloor</a></td>
+<td class="colLast">
+<div class="block">Calculation functions for Ibor cap/floor products.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.capfloor">com.opengamma.strata.pricer.capfloor</a></td>
 <td class="colLast">
 <div class="block">Calculators for Ibor cap-floor.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.capfloor">com.opengamma.strata.product.capfloor</a></td>
 <td class="colLast">
 <div class="block">Entity objects describing Ibor cap/floor.</div>
@@ -100,6 +106,139 @@
 </li>
 <li class="blockList">
 <ul class="blockList">
+<li class="blockList"><a name="com.opengamma.strata.measure.capfloor">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a> in <a href="../../../../../../com/opengamma/strata/measure/capfloor/package-summary.html">com.opengamma.strata.measure.capfloor</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/measure/capfloor/package-summary.html">com.opengamma.strata.measure.capfloor</a> with parameters of type <a href="../../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/MultiCurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">MultiCurrencyScenarioArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborCapFloorTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorTradeCalculations.html#currencyExposure-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.measure.capfloor.IborCapFloorMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">currencyExposure</a></span>(<a href="../../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
+                <a href="../../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;ratesLookup,
+                <a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorMarketDataLookup.html" title="interface in com.opengamma.strata.measure.capfloor">IborCapFloorMarketDataLookup</a>&nbsp;capFloorLookup,
+                <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</code>
+<div class="block">Calculates currency exposure across one or more scenarios.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborCapFloorTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorTradeCalculations.html#currencyExposure-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">currencyExposure</a></span>(<a href="../../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
+                <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                <a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates currency exposure for a single set of market data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/MultiCurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">MultiCurrencyScenarioArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborCapFloorTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorTradeCalculations.html#currentCash-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.measure.capfloor.IborCapFloorMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">currentCash</a></span>(<a href="../../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
+           <a href="../../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;ratesLookup,
+           <a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorMarketDataLookup.html" title="interface in com.opengamma.strata.measure.capfloor">IborCapFloorMarketDataLookup</a>&nbsp;capFloorLookup,
+           <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</code>
+<div class="block">Calculates current cash across one or more scenarios.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborCapFloorTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorTradeCalculations.html#currentCash-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">currentCash</a></span>(<a href="../../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
+           <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+           <a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates current cash for a single set of market data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/MultiCurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">MultiCurrencyScenarioArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborCapFloorTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorTradeCalculations.html#presentValue-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.measure.capfloor.IborCapFloorMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
+            <a href="../../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;ratesLookup,
+            <a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorMarketDataLookup.html" title="interface in com.opengamma.strata.measure.capfloor">IborCapFloorMarketDataLookup</a>&nbsp;capFloorLookup,
+            <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</code>
+<div class="block">Calculates present value across one or more scenarios.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborCapFloorTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorTradeCalculations.html#presentValue-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
+            <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+            <a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates present value for a single set of market data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario">ScenarioArray</a>&lt;<a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">IborCapFloorTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorTradeCalculations.html#pv01RatesCalibratedBucketed-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.measure.capfloor.IborCapFloorMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">pv01RatesCalibratedBucketed</a></span>(<a href="../../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
+                           <a href="../../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;ratesLookup,
+                           <a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorMarketDataLookup.html" title="interface in com.opengamma.strata.measure.capfloor">IborCapFloorMarketDataLookup</a>&nbsp;capFloorLookup,
+                           <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</code>
+<div class="block">Calculates present value sensitivity across one or more scenarios.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborCapFloorTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorTradeCalculations.html#pv01RatesCalibratedBucketed-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">pv01RatesCalibratedBucketed</a></span>(<a href="../../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
+                           <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                           <a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates present value sensitivity for a single set of market data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/MultiCurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">MultiCurrencyScenarioArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborCapFloorTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorTradeCalculations.html#pv01RatesCalibratedSum-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.measure.capfloor.IborCapFloorMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">pv01RatesCalibratedSum</a></span>(<a href="../../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
+                      <a href="../../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;ratesLookup,
+                      <a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorMarketDataLookup.html" title="interface in com.opengamma.strata.measure.capfloor">IborCapFloorMarketDataLookup</a>&nbsp;capFloorLookup,
+                      <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</code>
+<div class="block">Calculates present value sensitivity across one or more scenarios.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborCapFloorTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorTradeCalculations.html#pv01RatesCalibratedSum-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">pv01RatesCalibratedSum</a></span>(<a href="../../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
+                      <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                      <a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates present value sensitivity for a single set of market data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario">ScenarioArray</a>&lt;<a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">IborCapFloorTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorTradeCalculations.html#pv01RatesMarketQuoteBucketed-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.measure.capfloor.IborCapFloorMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">pv01RatesMarketQuoteBucketed</a></span>(<a href="../../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
+                            <a href="../../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;ratesLookup,
+                            <a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorMarketDataLookup.html" title="interface in com.opengamma.strata.measure.capfloor">IborCapFloorMarketDataLookup</a>&nbsp;capFloorLookup,
+                            <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</code>
+<div class="block">Calculates present value sensitivity across one or more scenarios.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborCapFloorTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorTradeCalculations.html#pv01RatesMarketQuoteBucketed-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">pv01RatesMarketQuoteBucketed</a></span>(<a href="../../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
+                            <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                            <a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates present value sensitivity for a single set of market data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/MultiCurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">MultiCurrencyScenarioArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborCapFloorTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorTradeCalculations.html#pv01RatesMarketQuoteSum-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.measure.capfloor.IborCapFloorMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">pv01RatesMarketQuoteSum</a></span>(<a href="../../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
+                       <a href="../../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;ratesLookup,
+                       <a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorMarketDataLookup.html" title="interface in com.opengamma.strata.measure.capfloor">IborCapFloorMarketDataLookup</a>&nbsp;capFloorLookup,
+                       <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</code>
+<div class="block">Calculates present value sensitivity across one or more scenarios.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborCapFloorTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorTradeCalculations.html#pv01RatesMarketQuoteSum-com.opengamma.strata.product.capfloor.ResolvedIborCapFloorTrade-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">pv01RatesMarketQuoteSum</a></span>(<a href="../../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloorTrade.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloorTrade</a>&nbsp;trade,
+                       <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                       <a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilities</a>&nbsp;volatilities)</code>
+<div class="block">Calculates present value sensitivity for a single set of market data.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.pricer.capfloor">
 <!--   -->
 </a>
@@ -241,6 +380,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

@@ -90,6 +90,12 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.payment">com.opengamma.strata.pricer.payment</a></td>
+<td class="colLast">
+<div class="block">Calculators for payment instruments.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.payment">com.opengamma.strata.product.payment</a></td>
 <td class="colLast">
 <div class="block">Entity objects describing simple payment financial instruments.</div>
@@ -111,6 +117,21 @@
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario">ScenarioArray</a>&lt;<a href="../../../../../../com/opengamma/strata/market/amount/CashFlows.html" title="class in com.opengamma.strata.market.amount">CashFlows</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">BulletPaymentTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#cashFlows-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">cashFlows</a></span>(<a href="../../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
+         <a href="../../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;lookup,
+         <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</code>
+<div class="block">Calculates cash flows across one or more scenarios.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/amount/CashFlows.html" title="class in com.opengamma.strata.market.amount">CashFlows</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BulletPaymentTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#cashFlows-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.pricer.rate.RatesProvider-">cashFlows</a></span>(<a href="../../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
+         <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider)</code>
+<div class="block">Calculates cash flows for a single set of market data.</div>
+</td>
+</tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/data/scenario/MultiCurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">MultiCurrencyScenarioArray</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BulletPaymentTradeCalculations.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/payment/BulletPaymentTradeCalculations.html#currencyExposure-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.measure.rate.RatesMarketDataLookup-com.opengamma.strata.data.scenario.ScenarioMarketData-">currencyExposure</a></span>(<a href="../../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
@@ -219,6 +240,62 @@
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.payment">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a> in <a href="../../../../../../com/opengamma/strata/pricer/payment/package-summary.html">com.opengamma.strata.pricer.payment</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/payment/package-summary.html">com.opengamma.strata.pricer.payment</a> with parameters of type <a href="../../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/amount/CashFlows.html" title="class in com.opengamma.strata.market.amount">CashFlows</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountingBulletPaymentTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/payment/DiscountingBulletPaymentTradePricer.html#cashFlows-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.pricer.BaseProvider-">cashFlows</a></span>(<a href="../../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
+         <a href="../../../../../../com/opengamma/strata/pricer/BaseProvider.html" title="interface in com.opengamma.strata.pricer">BaseProvider</a>&nbsp;provider)</code>
+<div class="block">Calculates the future cash flow of the bullet payment trade.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountingBulletPaymentTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/payment/DiscountingBulletPaymentTradePricer.html#currencyExposure-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.pricer.BaseProvider-">currencyExposure</a></span>(<a href="../../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
+                <a href="../../../../../../com/opengamma/strata/pricer/BaseProvider.html" title="interface in com.opengamma.strata.pricer">BaseProvider</a>&nbsp;provider)</code>
+<div class="block">Calculates the currency exposure of the bullet payment trade.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountingBulletPaymentTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/payment/DiscountingBulletPaymentTradePricer.html#currentCash-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.pricer.BaseProvider-">currentCash</a></span>(<a href="../../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
+           <a href="../../../../../../com/opengamma/strata/pricer/BaseProvider.html" title="interface in com.opengamma.strata.pricer">BaseProvider</a>&nbsp;provider)</code>
+<div class="block">Calculates the current cash of the bullet payment trade.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/explain/ExplainMap.html" title="class in com.opengamma.strata.market.explain">ExplainMap</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountingBulletPaymentTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/payment/DiscountingBulletPaymentTradePricer.html#explainPresentValue-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.pricer.BaseProvider-">explainPresentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
+                   <a href="../../../../../../com/opengamma/strata/pricer/BaseProvider.html" title="interface in com.opengamma.strata.pricer">BaseProvider</a>&nbsp;provider)</code>
+<div class="block">Explains the present value of the bullet payment product.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountingBulletPaymentTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/payment/DiscountingBulletPaymentTradePricer.html#presentValue-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.pricer.BaseProvider-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
+            <a href="../../../../../../com/opengamma/strata/pricer/BaseProvider.html" title="interface in com.opengamma.strata.pricer">BaseProvider</a>&nbsp;provider)</code>
+<div class="block">Calculates the present value of the bullet payment trade.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountingBulletPaymentTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/payment/DiscountingBulletPaymentTradePricer.html#presentValueSensitivity-com.opengamma.strata.product.payment.ResolvedBulletPaymentTrade-com.opengamma.strata.pricer.BaseProvider-">presentValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/product/payment/ResolvedBulletPaymentTrade.html" title="class in com.opengamma.strata.product.payment">ResolvedBulletPaymentTrade</a>&nbsp;trade,
+                       <a href="../../../../../../com/opengamma/strata/pricer/BaseProvider.html" title="interface in com.opengamma.strata.pricer">BaseProvider</a>&nbsp;provider)</code>
+<div class="block">Calculates the present value sensitivity of the bullet payment trade.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.product.payment">
 <!--   -->
 </a>
@@ -313,6 +390,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

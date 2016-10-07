@@ -368,14 +368,14 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
+<h4>size</h4>
+<pre>int size</pre>
+<div class="block">The size of this array.</div>
+</li>
+<li class="blockListLast">
 <h4>values</h4>
 <pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSortedMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSortedMap</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSortedMap.html?is-external=true" title="class or interface in com.google.common.collect">K</a>,<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSortedMap.html?is-external=true" title="class or interface in com.google.common.collect">V</a>&gt; values</pre>
 <div class="block">The currency values, keyed by currency.</div>
-</li>
-<li class="blockListLast">
-<h4>size</h4>
-<pre>int size</pre>
-<div class="block">The number of values for each currency.</div>
 </li>
 </ul>
 </li>
@@ -1686,12 +1686,20 @@
  <p>
  This is used for the lifetime of the trade unless specifically varied.</div>
 </li>
-<li class="blockListLast">
+<li class="blockList">
 <h4>steps</h4>
 <pre><a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">E</a>&gt; steps</pre>
 <div class="block">The steps defining the change in the value.
  <p>
  Each step consists of a key locating the date of the change and the adjustment that occurs.</div>
+</li>
+<li class="blockListLast">
+<h4>stepSequence</h4>
+<pre><a href="com/opengamma/strata/basics/value/ValueStepSequence.html" title="class in com.opengamma.strata.basics.value">ValueStepSequence</a> stepSequence</pre>
+<div class="block">The sequence of steps changing the value.
+ <p>
+ This allows a regular pattern of steps to be encoded.
+ All step dates must be unique, thus the list of steps must not contain any date implied by this sequence.</div>
 </li>
 </ul>
 </li>
@@ -1741,6 +1749,60 @@
 <div class="block">The value representing the change that occurs.
  <p>
  The adjustment can be an absolute value, or various kinds of relative values.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.basics.value.ValueStepSequence">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/basics/value/ValueStepSequence.html" title="class in com.opengamma.strata.basics.value">com.opengamma.strata.basics.value.ValueStepSequence</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>firstStepDate</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a> firstStepDate</pre>
+<div class="block">The first date in the sequence.
+ <p>
+ This sequence will change the value on this date, but not before.
+ This must be one of the unadjusted dates in the schedule period schedule.
+ <p>
+ For example, consider a 5 year swap from 2012-02-01 to 2017-02-01 with 6 month frequency.
+ The date '2013-02-01' is an unadjusted schedule period boundary, and so may be specified here.</div>
+</li>
+<li class="blockList">
+<h4>lastStepDate</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a> lastStepDate</pre>
+<div class="block">The last date in the sequence.
+ <p>
+ This sequence will change the value on this date, but not after.
+ This must be one of the unadjusted dates in the schedule period schedule.
+ <p>
+ For example, consider a 5 year swap from 2012-02-01 to 2017-02-01 with 6 month frequency.
+ The date '2015-02-01' is an unadjusted schedule period boundary, and so may be specified here.</div>
+</li>
+<li class="blockList">
+<h4>frequency</h4>
+<pre><a href="com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a> frequency</pre>
+<div class="block">The frequency of the sequence.
+ <p>
+ This sequence will change the value on each date between the start and end defined by this frequency.
+ The frequency is interpreted relative to the frequency of a <a href="com/opengamma/strata/basics/schedule/Schedule.html" title="class in com.opengamma.strata.basics.schedule"><code>Schedule</code></a>.
+ It must be equal or greater than the related schedule.</div>
+</li>
+<li class="blockListLast">
+<h4>adjustment</h4>
+<pre><a href="com/opengamma/strata/basics/value/ValueAdjustment.html" title="class in com.opengamma.strata.basics.value">ValueAdjustment</a> adjustment</pre>
+<div class="block">The adjustment representing the change that occurs at each step.
+ <p>
+ The adjustment type must not be 'Replace'.</div>
 </li>
 </ul>
 </li>
@@ -2152,6 +2214,27 @@
 </li>
 </ul>
 </li>
+<li class="blockList"><a name="com.opengamma.strata.collect.result.FailureItems">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/collect/result/FailureItems.html" title="class in com.opengamma.strata.collect.result">com.opengamma.strata.collect.result.FailureItems</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockListLast">
+<h4>failures</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">E</a>&gt; failures</pre>
+<div class="block">The failures.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.collect.result.Result">
 <!--   -->
 </a>
@@ -2465,12 +2548,12 @@
 </li>
 <li class="blockList">
 <h4>values</h4>
-<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">K</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">V</a>&gt; values</pre>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">K</a>,<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">V</a>&gt; values</pre>
 <div class="block">The market data values.</div>
 </li>
 <li class="blockListLast">
 <h4>timeSeries</h4>
-<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">K</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">V</a>&gt; timeSeries</pre>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">K</a>,<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">V</a>&gt; timeSeries</pre>
 <div class="block">The time-series.
  <p>
  If a request is made for a time-series that is not in the map, an empty series will be returned.</div>
@@ -2482,7 +2565,7 @@
 <li class="blockList"><a name="com.opengamma.strata.data.MarketDataNotFoundException">
 <!--   -->
 </a>
-<h3>Class <a href="com/opengamma/strata/data/MarketDataNotFoundException.html" title="class in com.opengamma.strata.data">com.opengamma.strata.data.MarketDataNotFoundException</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a> implements Serializable</h3>
+<h3>Class <a href="com/opengamma/strata/data/MarketDataNotFoundException.html" title="class in com.opengamma.strata.data">com.opengamma.strata.data.MarketDataNotFoundException</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -2780,6 +2863,15 @@
 <dd>1L</dd>
 </dl>
 <ul class="blockList">
+<li class="blockList">
+<h3>Serialization Methods</h3>
+<ul class="blockList">
+<li class="blockListLast">
+<h4>readResolve</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;readResolve()</pre>
+</li>
+</ul>
+</li>
 <li class="blockList">
 <h3>Serialized Fields</h3>
 <ul class="blockList">
@@ -4278,6 +4370,29 @@
 <li class="blockList">
 <h2 title="Package">Package&nbsp;com.opengamma.strata.market.param</h2>
 <ul class="blockList">
+<li class="blockList"><a name="com.opengamma.strata.market.param.CrossGammaParameterSensitivities">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/market/param/CrossGammaParameterSensitivities.html" title="class in com.opengamma.strata.market.param">com.opengamma.strata.market.param.CrossGammaParameterSensitivities</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockListLast">
+<h4>sensitivities</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">E</a>&gt; sensitivities</pre>
+<div class="block">The parameter sensitivities.
+ <p>
+ Each entry includes details of the <a href="com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param"><code>ParameterizedData</code></a> it relates to.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.market.param.CurrencyParameterSensitivities">
 <!--   -->
 </a>
@@ -5273,14 +5388,59 @@
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="com.opengamma.strata.pricer.bond.BondGroup">
+<li class="blockList"><a name="com.opengamma.strata.pricer.bond.ImmutableLegalEntityDiscountingProvider">
 <!--   -->
 </a>
-<h3>Class <a href="com/opengamma/strata/pricer/bond/BondGroup.html" title="class in com.opengamma.strata.pricer.bond">com.opengamma.strata.pricer.bond.BondGroup</a> extends <a href="com/opengamma/strata/collect/TypedString.html" title="class in com.opengamma.strata.collect">TypedString</a>&lt;<a href="com/opengamma/strata/pricer/bond/BondGroup.html" title="class in com.opengamma.strata.pricer.bond">BondGroup</a>&gt; implements Serializable</h3>
+<h3>Class <a href="com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">com.opengamma.strata.pricer.bond.ImmutableLegalEntityDiscountingProvider</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
 </dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>valuationDate</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a> valuationDate</pre>
+<div class="block">The valuation date.
+ All curves and other data items in this provider are calibrated for this date.</div>
+</li>
+<li class="blockList">
+<h4>repoCurveGroups</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">K</a>,<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">V</a>&gt; repoCurveGroups</pre>
+<div class="block">The groups used to find a repo curve.
+ <p>
+ This maps either the security ID or the legal entity ID to a group.
+ The group is used to find the curve in <code>repoCurves</code>.
+ <p>
+ This property was renamed in version 1.1 of Strata from <code>bondMap</code>.</div>
+</li>
+<li class="blockList">
+<h4>repoCurves</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">K</a>,<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">V</a>&gt; repoCurves</pre>
+<div class="block">The repo curves, keyed by group and currency.
+ The curve data, predicting the future, associated with each repo group and currency.</div>
+</li>
+<li class="blockList">
+<h4>issuerCurveGroups</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">K</a>,<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">V</a>&gt; issuerCurveGroups</pre>
+<div class="block">The groups used to find an issuer curve.
+ <p>
+ This maps the legal entity ID to a group.
+ The group is used to find the curve in <code>issuerCurves</code>.
+ <p>
+ This property was renamed in version 1.1 of Strata from <code>legalEntityMap</code>.</div>
+</li>
+<li class="blockListLast">
+<h4>issuerCurves</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">K</a>,<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">V</a>&gt; issuerCurves</pre>
+<div class="block">The issuer curves, keyed by group and currency.
+ The curve data, predicting the future, associated with each legal entity group and currency.</div>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li class="blockList"><a name="com.opengamma.strata.pricer.bond.IssuerCurveDiscountFactors">
 <!--   -->
@@ -5356,60 +5516,6 @@
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider">
-<!--   -->
-</a>
-<h3>Class <a href="com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
-<dl class="nameValue">
-<dt>serialVersionUID:</dt>
-<dd>1L</dd>
-</dl>
-<ul class="blockList">
-<li class="blockList">
-<h3>Serialized Fields</h3>
-<ul class="blockList">
-<li class="blockList">
-<h4>valuationDate</h4>
-<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a> valuationDate</pre>
-<div class="block">The valuation date.
- All curves and other data items in this provider are calibrated for this date.</div>
-</li>
-<li class="blockList">
-<h4>bondMap</h4>
-<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">K</a>,<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">V</a>&gt; bondMap</pre>
-<div class="block">The bond group map.
- <p>
- This map is used to convert the <a href="com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics"><code>StandardId</code></a> that identifies the bond to
- the associated bond group in order to lookup a repo curve.
- <p>
- See <a href="com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html#repoCurveDiscountFactors-com.opengamma.strata.product.SecurityId-com.opengamma.strata.basics.StandardId-com.opengamma.strata.basics.currency.Currency-"><code>LegalEntityDiscountingProvider.repoCurveDiscountFactors(SecurityId, StandardId, Currency)</code></a>.</div>
-</li>
-<li class="blockList">
-<h4>repoCurves</h4>
-<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">K</a>,<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">V</a>&gt; repoCurves</pre>
-<div class="block">The repo curves, defaulted to an empty map.
- The curve data, predicting the future, associated with each bond group and currency.</div>
-</li>
-<li class="blockList">
-<h4>legalEntityMap</h4>
-<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">K</a>,<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">V</a>&gt; legalEntityMap</pre>
-<div class="block">The legal entity group map.
- <p>
- This map is used to convert the <a href="com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics"><code>StandardId</code></a> that identifies the legal entity to
- the associated legal entity group in order to lookup an issuer curve.
- <p>
- See <a href="com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html#issuerCurveDiscountFactors-com.opengamma.strata.basics.StandardId-com.opengamma.strata.basics.currency.Currency-"><code>LegalEntityDiscountingProvider.issuerCurveDiscountFactors(StandardId, Currency)</code></a>.</div>
-</li>
-<li class="blockListLast">
-<h4>issuerCurves</h4>
-<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">K</a>,<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">V</a>&gt; issuerCurves</pre>
-<div class="block">The issuer curves.
- The curve data, predicting the future, associated with each legal entity group and currency.</div>
-</li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="blockList"><a name="com.opengamma.strata.pricer.bond.LegalEntityGroup">
 <!--   -->
 </a>
@@ -5440,12 +5546,11 @@
  The discount factor, its point sensitivity and curve sensitivity are computed by this <code>DiscountFactors</code>.</div>
 </li>
 <li class="blockListLast">
-<h4>bondGroup</h4>
-<pre><a href="com/opengamma/strata/pricer/bond/BondGroup.html" title="class in com.opengamma.strata.pricer.bond">BondGroup</a> bondGroup</pre>
-<div class="block">The bond group.
+<h4>repoGroup</h4>
+<pre><a href="com/opengamma/strata/pricer/bond/RepoGroup.html" title="class in com.opengamma.strata.pricer.bond">RepoGroup</a> repoGroup</pre>
+<div class="block">The repo group.
  <p>
- This defines the bond group that the discount factors are for.
- The bond group typically represents the legal entity and bond security.</div>
+ This defines the group that the discount factors are for.</div>
 </li>
 </ul>
 </li>
@@ -5479,12 +5584,11 @@
 <div class="block">The currency of the sensitivity.</div>
 </li>
 <li class="blockList">
-<h4>bondGroup</h4>
-<pre><a href="com/opengamma/strata/pricer/bond/BondGroup.html" title="class in com.opengamma.strata.pricer.bond">BondGroup</a> bondGroup</pre>
-<div class="block">The bond group.
+<h4>repoGroup</h4>
+<pre><a href="com/opengamma/strata/pricer/bond/RepoGroup.html" title="class in com.opengamma.strata.pricer.bond">RepoGroup</a> repoGroup</pre>
+<div class="block">The repo group.
  <p>
- This defines the bond group that the discount factors are for.
- The bond group typically represents the legal entity and bond security.</div>
+ This defines the group that the discount factors are for.</div>
 </li>
 <li class="blockListLast">
 <h4>sensitivity</h4>
@@ -5494,6 +5598,15 @@
 </ul>
 </li>
 </ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.bond.RepoGroup">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/pricer/bond/RepoGroup.html" title="class in com.opengamma.strata.pricer.bond">com.opengamma.strata.pricer.bond.RepoGroup</a> extends <a href="com/opengamma/strata/collect/TypedString.html" title="class in com.opengamma.strata.collect">TypedString</a>&lt;<a href="com/opengamma/strata/pricer/bond/RepoGroup.html" title="class in com.opengamma.strata.pricer.bond">RepoGroup</a>&gt; implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -10108,12 +10221,22 @@
  This is associated with periodic payments based on Ibor rate.
  The payments are Ibor caplets or Ibor floorlets.</div>
 </li>
-<li class="blockListLast">
+<li class="blockList">
 <h4>payLeg</h4>
 <pre><a href="com/opengamma/strata/product/swap/ResolvedSwapLeg.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapLeg</a> payLeg</pre>
 <div class="block">The optional pay leg of the product.
  <p>
  These periodic payments are not made for typical cap/floor products. Instead the premium is paid upfront.</div>
+</li>
+<li class="blockList">
+<h4>currencies</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">E</a>&gt; currencies</pre>
+<div class="block">The set of currencies.</div>
+</li>
+<li class="blockListLast">
+<h4>indices</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">E</a>&gt; indices</pre>
+<div class="block">The set of indices.</div>
 </li>
 </ul>
 </li>
@@ -13162,9 +13285,7 @@
 <pre><a href="com/opengamma/strata/product/fx/FxSingle.html" title="class in com.opengamma.strata.product.fx">FxSingle</a> underlying</pre>
 <div class="block">The underlying foreign exchange transaction.
  <p>
- At expiry, if the option is in the money, this foreign exchange will occur.
- A call option permits the transaction as specified to occur.
- A put option permits the inverse transaction to occur.</div>
+ At expiry, if the option is in the money, this foreign exchange will occur.</div>
 </li>
 </ul>
 </li>
@@ -17657,6 +17778,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

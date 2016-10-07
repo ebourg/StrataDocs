@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -174,69 +174,83 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="../../../../com/opengamma/strata/market/amount/CashFlows.html" title="class in com.opengamma.strata.market.amount">CashFlows</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html#cashFlows-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.BaseProvider-">cashFlows</a></span>(<a href="../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
+         <a href="../../../../com/opengamma/strata/pricer/BaseProvider.html" title="interface in com.opengamma.strata.pricer">BaseProvider</a>&nbsp;provider)</code>
+<div class="block">Calculates the future cash flow of the payment.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html#currencyExposure-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.BaseProvider-">currencyExposure</a></span>(<a href="../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
                 <a href="../../../../com/opengamma/strata/pricer/BaseProvider.html" title="interface in com.opengamma.strata.pricer">BaseProvider</a>&nbsp;provider)</code>
 <div class="block">Calculates the currency exposure.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html#currentCash-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.BaseProvider-">currentCash</a></span>(<a href="../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
            <a href="../../../../com/opengamma/strata/pricer/BaseProvider.html" title="interface in com.opengamma.strata.pricer">BaseProvider</a>&nbsp;provider)</code>
 <div class="block">Calculates the current cash.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/opengamma/strata/market/explain/ExplainMap.html" title="class in com.opengamma.strata.market.explain">ExplainMap</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html#explainPresentValue-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.BaseProvider-">explainPresentValue</a></span>(<a href="../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
+                   <a href="../../../../com/opengamma/strata/pricer/BaseProvider.html" title="interface in com.opengamma.strata.pricer">BaseProvider</a>&nbsp;provider)</code>
+<div class="block">Explains the present value of the payment.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html#forecastValue-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.BaseProvider-">forecastValue</a></span>(<a href="../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
              <a href="../../../../com/opengamma/strata/pricer/BaseProvider.html" title="interface in com.opengamma.strata.pricer">BaseProvider</a>&nbsp;provider)</code>
 <div class="block">Computes the forecast value of the payment.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html#forecastValueAmount-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.BaseProvider-">forecastValueAmount</a></span>(<a href="../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
                    <a href="../../../../com/opengamma/strata/pricer/BaseProvider.html" title="interface in com.opengamma.strata.pricer">BaseProvider</a>&nbsp;provider)</code>
 <div class="block">Computes the forecast value of the payment.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html#presentValue-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.BaseProvider-">presentValue</a></span>(<a href="../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
             <a href="../../../../com/opengamma/strata/pricer/BaseProvider.html" title="interface in com.opengamma.strata.pricer">BaseProvider</a>&nbsp;provider)</code>
 <div class="block">Computes the present value of the payment by discounting.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html#presentValue-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.DiscountFactors-">presentValue</a></span>(<a href="../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
             <a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&nbsp;discountFactors)</code>
 <div class="block">Computes the present value of the payment by discounting.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html#presentValueAmount-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.BaseProvider-">presentValueAmount</a></span>(<a href="../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
                   <a href="../../../../com/opengamma/strata/pricer/BaseProvider.html" title="interface in com.opengamma.strata.pricer">BaseProvider</a>&nbsp;provider)</code>
 <div class="block">Computes the present value of the payment by discounting.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html#presentValueSensitivity-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.BaseProvider-">presentValueSensitivity</a></span>(<a href="../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
                        <a href="../../../../com/opengamma/strata/pricer/BaseProvider.html" title="interface in com.opengamma.strata.pricer">BaseProvider</a>&nbsp;provider)</code>
 <div class="block">Compute the present value curve sensitivity of the payment.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html#presentValueSensitivity-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.DiscountFactors-">presentValueSensitivity</a></span>(<a href="../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
                        <a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&nbsp;discountFactors)</code>
 <div class="block">Compute the present value curve sensitivity of the payment.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html#presentValueSensitivityWithSpread-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.DiscountFactors-double-com.opengamma.strata.pricer.CompoundedRateType-int-">presentValueSensitivityWithSpread</a></span>(<a href="../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
                                  <a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&nbsp;discountFactors,
@@ -246,7 +260,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Compute the present value curve sensitivity of the payment with z-spread.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountingPaymentPricer.html#presentValueWithSpread-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.DiscountFactors-double-com.opengamma.strata.pricer.CompoundedRateType-int-">presentValueWithSpread</a></span>(<a href="../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
                       <a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&nbsp;discountFactors,
@@ -328,7 +342,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>payment</code> - the payment</dd>
-<dd><code>provider</code> - the rates provider</dd>
+<dd><code>provider</code> - the provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the present value</dd>
 </dl>
@@ -370,7 +384,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>payment</code> - the payment</dd>
-<dd><code>provider</code> - the rates provider</dd>
+<dd><code>provider</code> - the provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the present value</dd>
 </dl>
@@ -407,6 +421,26 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </dl>
 </li>
 </ul>
+<a name="explainPresentValue-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.BaseProvider-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>explainPresentValue</h4>
+<pre>public&nbsp;<a href="../../../../com/opengamma/strata/market/explain/ExplainMap.html" title="class in com.opengamma.strata.market.explain">ExplainMap</a>&nbsp;explainPresentValue(<a href="../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
+                                      <a href="../../../../com/opengamma/strata/pricer/BaseProvider.html" title="interface in com.opengamma.strata.pricer">BaseProvider</a>&nbsp;provider)</pre>
+<div class="block">Explains the present value of the payment.
+ <p>
+ This returns explanatory information about the calculation.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>payment</code> - the payment</dd>
+<dd><code>provider</code> - the provider</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the explanatory information</dd>
+</dl>
+</li>
+</ul>
 <a name="presentValueSensitivity-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.BaseProvider-">
 <!--   -->
 </a>
@@ -423,7 +457,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>payment</code> - the payment</dd>
-<dd><code>provider</code> - the rates provider</dd>
+<dd><code>provider</code> - the provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the point sensitivity of the present value</dd>
 </dl>
@@ -500,7 +534,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>payment</code> - the payment</dd>
-<dd><code>provider</code> - the rates provider</dd>
+<dd><code>provider</code> - the provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the forecast value</dd>
 </dl>
@@ -520,9 +554,29 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>payment</code> - the payment</dd>
-<dd><code>provider</code> - the rates provider</dd>
+<dd><code>provider</code> - the provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the forecast value</dd>
+</dl>
+</li>
+</ul>
+<a name="cashFlows-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.pricer.BaseProvider-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cashFlows</h4>
+<pre>public&nbsp;<a href="../../../../com/opengamma/strata/market/amount/CashFlows.html" title="class in com.opengamma.strata.market.amount">CashFlows</a>&nbsp;cashFlows(<a href="../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment,
+                           <a href="../../../../com/opengamma/strata/pricer/BaseProvider.html" title="interface in com.opengamma.strata.pricer">BaseProvider</a>&nbsp;provider)</pre>
+<div class="block">Calculates the future cash flow of the payment.
+ <p>
+ The cash flow is returned, empty if the payment has already occurred.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>payment</code> - the payment</dd>
+<dd><code>provider</code> - the provider</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the cash flow, empty if the payment has occurred</dd>
 </dl>
 </li>
 </ul>
@@ -538,7 +592,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>payment</code> - the payment</dd>
-<dd><code>provider</code> - the rates provider</dd>
+<dd><code>provider</code> - the provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the currency exposure</dd>
 </dl>
@@ -556,7 +610,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>payment</code> - the payment</dd>
-<dd><code>provider</code> - the rates provider</dd>
+<dd><code>provider</code> - the provider</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the current cash</dd>
 </dl>
@@ -632,6 +686,6 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

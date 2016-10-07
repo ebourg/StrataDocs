@@ -144,13 +144,13 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>,<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">IborIndex.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
-<div class="block">Resolves this index using the specified reference data, returning a function.</div>
-</td>
+<td class="colLast"><span class="typeNameLabel">ImmutableIborIndex.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/ImmutableIborIndex.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>,<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableIborIndex.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/ImmutableIborIndex.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">IborIndex.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Resolves this index using the specified reference data, returning a function.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -197,6 +197,14 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>default double</code></td>
+<td class="colLast"><span class="typeNameLabel">IborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html#explainRate-com.opengamma.strata.basics.index.IborIndexObservation-com.opengamma.strata.market.explain.ExplainMapBuilder-java.util.function.Consumer-">explainRate</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation,
+           <a href="../../../../../../com/opengamma/strata/market/explain/ExplainMapBuilder.html" title="class in com.opengamma.strata.market.explain">ExplainMapBuilder</a>&nbsp;builder,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function">Consumer</a>&lt;<a href="../../../../../../com/opengamma/strata/market/explain/ExplainMapBuilder.html" title="class in com.opengamma.strata.market.explain">ExplainMapBuilder</a>&gt;&nbsp;consumer)</code>
+<div class="block">Explains the calculation of the the historic or forward rate at the specified fixing date.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/rate/IborRateSensitivity.html" title="class in com.opengamma.strata.pricer.rate">IborRateSensitivity</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborRateSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/IborRateSensitivity.html#of-com.opengamma.strata.basics.index.IborIndexObservation-com.opengamma.strata.basics.currency.Currency-double-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation,
   <a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;sensitivityCurrency,
@@ -205,20 +213,16 @@
  specifying the currency of the value.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/rate/IborRateSensitivity.html" title="class in com.opengamma.strata.pricer.rate">IborRateSensitivity</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborRateSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/IborRateSensitivity.html#of-com.opengamma.strata.basics.index.IborIndexObservation-double-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation,
   double&nbsp;sensitivity)</code>
 <div class="block">Obtains an instance from the observation and sensitivity value.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">SimpleIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/SimpleIborIndexRates.html#rate-com.opengamma.strata.basics.index.IborIndexObservation-">rate</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
-</tr>
 <tr class="rowColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html#rate-com.opengamma.strata.basics.index.IborIndexObservation-">rate</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">SimpleIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/SimpleIborIndexRates.html#rate-com.opengamma.strata.basics.index.IborIndexObservation-">rate</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>double</code></td>
@@ -228,11 +232,11 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">SimpleIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/SimpleIborIndexRates.html#rateIgnoringFixings-com.opengamma.strata.basics.index.IborIndexObservation-">rateIgnoringFixings</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html#rate-com.opengamma.strata.basics.index.IborIndexObservation-">rate</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html#rateIgnoringFixings-com.opengamma.strata.basics.index.IborIndexObservation-">rateIgnoringFixings</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">SimpleIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/SimpleIborIndexRates.html#rateIgnoringFixings-com.opengamma.strata.basics.index.IborIndexObservation-">rateIgnoringFixings</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>double</code></td>
@@ -242,12 +246,12 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SimpleIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/SimpleIborIndexRates.html#rateIgnoringFixingsPointSensitivity-com.opengamma.strata.basics.index.IborIndexObservation-">rateIgnoringFixingsPointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html#rateIgnoringFixings-com.opengamma.strata.basics.index.IborIndexObservation-">rateIgnoringFixings</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html#rateIgnoringFixingsPointSensitivity-com.opengamma.strata.basics.index.IborIndexObservation-">rateIgnoringFixingsPointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">SimpleIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/SimpleIborIndexRates.html#rateIgnoringFixingsPointSensitivity-com.opengamma.strata.basics.index.IborIndexObservation-">rateIgnoringFixingsPointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
@@ -258,17 +262,21 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SimpleIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/SimpleIborIndexRates.html#ratePointSensitivity-com.opengamma.strata.basics.index.IborIndexObservation-">ratePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html#rateIgnoringFixingsPointSensitivity-com.opengamma.strata.basics.index.IborIndexObservation-">rateIgnoringFixingsPointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html#ratePointSensitivity-com.opengamma.strata.basics.index.IborIndexObservation-">ratePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">SimpleIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/SimpleIborIndexRates.html#ratePointSensitivity-com.opengamma.strata.basics.index.IborIndexObservation-">ratePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html#ratePointSensitivity-com.opengamma.strata.basics.index.IborIndexObservation-">ratePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>
 <div class="block">Calculates the point sensitivity of the historic or forward rate at the specified fixing date.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html#ratePointSensitivity-com.opengamma.strata.basics.index.IborIndexObservation-">ratePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -292,14 +300,14 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborAveragedFixing.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/IborAveragedFixing.html#getObservation--">getObservation</a></span>()</code>
-<div class="block">Gets the Ibor index observation to use to determine a rate for the reset period.</div>
+<td class="colLast"><span class="typeNameLabel">IborRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/IborRateComputation.html#getObservation--">getObservation</a></span>()</code>
+<div class="block">Gets the underlying index observation.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/IborRateComputation.html#getObservation--">getObservation</a></span>()</code>
-<div class="block">Gets the underlying index observation.</div>
+<td class="colLast"><span class="typeNameLabel">IborAveragedFixing.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/IborAveragedFixing.html#getObservation--">getObservation</a></span>()</code>
+<div class="block">Gets the Ibor index observation to use to determine a rate for the reset period.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -325,13 +333,13 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">IborAveragedFixing.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/IborAveragedFixing.Meta.html#observation--">observation</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">IborRateComputation.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/IborRateComputation.Meta.html#observation--">observation</a></span>()</code>
 <div class="block">The meta-property for the <code>observation</code> property.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">IborRateComputation.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/IborRateComputation.Meta.html#observation--">observation</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">IborAveragedFixing.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/IborAveragedFixing.Meta.html#observation--">observation</a></span>()</code>
 <div class="block">The meta-property for the <code>observation</code> property.</div>
 </td>
 </tr>
@@ -357,15 +365,15 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/rate/IborAveragedFixing.html" title="class in com.opengamma.strata.product.rate">IborAveragedFixing</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborAveragedFixing.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/IborAveragedFixing.html#of-com.opengamma.strata.basics.index.IborIndexObservation-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>
-<div class="block">Creates a <code>IborAveragedFixing</code> from the fixing date with a weight of 1.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/rate/IborRateComputation.html" title="class in com.opengamma.strata.product.rate">IborRateComputation</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/IborRateComputation.html#of-com.opengamma.strata.basics.index.IborIndexObservation-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;underlyingObservation)</code>
 <div class="block">Creates an instance from the underlying index observation.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/rate/IborAveragedFixing.html" title="class in com.opengamma.strata.product.rate">IborAveragedFixing</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborAveragedFixing.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/IborAveragedFixing.html#of-com.opengamma.strata.basics.index.IborIndexObservation-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>
+<div class="block">Creates a <code>IborAveragedFixing</code> from the fixing date with a weight of 1.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -456,6 +464,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

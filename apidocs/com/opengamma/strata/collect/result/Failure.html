@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":9,"i6":10,"i7":10,"i8":10,"i9":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":9,"i6":10,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":10,"i14":10,"i15":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -123,7 +123,8 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
  There is a single reason and message and a set of detailed failure items.
  Each <a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html" title="class in com.opengamma.strata.collect.result"><code>FailureItem</code></a> has details of the actual cause.
  <p>
- Instances of <code>Failure</code> are public classes created via <a href="../../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result"><code>Result</code></a>.</div>
+ In most cases, instances of <code>Failure</code> should be created using one of the
+ <code>failure</code> methods on <a href="../../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result"><code>Result</code></a>.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../serialized-form.html#com.opengamma.strata.collect.result.Failure">Serialized Form</a></dd>
@@ -204,14 +205,57 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/Failure.html#metaBean--">metaBean</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/collect/result/Failure.html" title="class in com.opengamma.strata.collect.result">Failure</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/Failure.html#of-java.util.Collection-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a>&gt;&nbsp;items)</code>
+<div class="block">Obtains a failure for a non-empty collection of failure items.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/collect/result/Failure.html" title="class in com.opengamma.strata.collect.result">Failure</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/Failure.html#of-com.opengamma.strata.collect.result.FailureItem-">of</a></span>(<a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a>&nbsp;item)</code>
+<div class="block">Obtains a failure for a single failure item.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/collect/result/Failure.html" title="class in com.opengamma.strata.collect.result">Failure</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/Failure.html#of-com.opengamma.strata.collect.result.FailureItem-com.opengamma.strata.collect.result.FailureItem...-">of</a></span>(<a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a>&nbsp;item,
+  <a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a>...&nbsp;additionalItems)</code>
+<div class="block">Obtains a failure for multiple failure items.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/collect/result/Failure.html" title="class in com.opengamma.strata.collect.result">Failure</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/Failure.html#of-com.opengamma.strata.collect.result.FailureReason-java.lang.Exception-">of</a></span>(<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a>&nbsp;reason,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&nbsp;cause)</code>
+<div class="block">Obtains a failure from a reason and exception.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/collect/result/Failure.html" title="class in com.opengamma.strata.collect.result">Failure</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/Failure.html#of-com.opengamma.strata.collect.result.FailureReason-java.lang.Exception-java.lang.String-java.lang.Object...-">of</a></span>(<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a>&nbsp;reason,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&nbsp;cause,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;messageArgs)</code>
+<div class="block">Obtains a failure from a reason, message and exception.</div>
+</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/collect/result/Failure.html" title="class in com.opengamma.strata.collect.result">Failure</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/Failure.html#of-com.opengamma.strata.collect.result.FailureReason-java.lang.String-java.lang.Object...-">of</a></span>(<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a>&nbsp;reason,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;messageArgs)</code>
+<div class="block">Obtains a failure from a reason and message.</div>
+</td>
+</tr>
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>&lt;R&gt;&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Property.html?is-external=true" title="class or interface in org.joda.beans">Property</a>&lt;R&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/Failure.html#property-java.lang.String-">property</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/Failure.html#propertyNames--">propertyNames</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/Failure.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -237,6 +281,133 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="of-com.opengamma.strata.collect.result.FailureReason-java.lang.String-java.lang.Object...-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>of</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/Failure.html" title="class in com.opengamma.strata.collect.result">Failure</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a>&nbsp;reason,
+                         <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
+                         <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;messageArgs)</pre>
+<div class="block">Obtains a failure from a reason and message.
+ <p>
+ The message is produced using a template that contains zero to many "{}" placeholders.
+ Each placeholder is replaced by the next available argument.
+ If there are too few arguments, then the message will be left with placeholders.
+ If there are too many arguments, then the excess arguments are appended to the
+ end of the message. No attempt is made to format the arguments.
+ See <a href="../../../../../com/opengamma/strata/collect/Messages.html#format-java.lang.String-java.lang.Object...-"><code>Messages.format(String, Object...)</code></a> for more details.
+ <p>
+ An exception will be created internally to obtain a stack trace.
+ The cause type will not be present in the resulting failure.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>reason</code> - the reason</dd>
+<dd><code>message</code> - a message explaining the failure, not empty, uses "{}" for inserting <code>messageArgs</code></dd>
+<dd><code>messageArgs</code> - the arguments for the message</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the failure</dd>
+</dl>
+</li>
+</ul>
+<a name="of-com.opengamma.strata.collect.result.FailureReason-java.lang.Exception-java.lang.String-java.lang.Object...-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>of</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/Failure.html" title="class in com.opengamma.strata.collect.result">Failure</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a>&nbsp;reason,
+                         <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&nbsp;cause,
+                         <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
+                         <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;messageArgs)</pre>
+<div class="block">Obtains a failure from a reason, message and exception.
+ <p>
+ The message is produced using a template that contains zero to many "{}" placeholders.
+ Each placeholder is replaced by the next available argument.
+ If there are too few arguments, then the message will be left with placeholders.
+ If there are too many arguments, then the excess arguments are appended to the
+ end of the message. No attempt is made to format the arguments.
+ See <a href="../../../../../com/opengamma/strata/collect/Messages.html#format-java.lang.String-java.lang.Object...-"><code>Messages.format(String, Object...)</code></a> for more details.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>reason</code> - the reason</dd>
+<dd><code>cause</code> - the cause</dd>
+<dd><code>message</code> - the failure message, possibly containing placeholders, formatted using <a href="../../../../../com/opengamma/strata/collect/Messages.html#format-java.lang.String-java.lang.Object-"><code>Messages.format(java.lang.String, java.lang.Object)</code></a></dd>
+<dd><code>messageArgs</code> - arguments used to create the failure message</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the failure</dd>
+</dl>
+</li>
+</ul>
+<a name="of-com.opengamma.strata.collect.result.FailureReason-java.lang.Exception-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>of</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/Failure.html" title="class in com.opengamma.strata.collect.result">Failure</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a>&nbsp;reason,
+                         <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&nbsp;cause)</pre>
+<div class="block">Obtains a failure from a reason and exception.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>reason</code> - the reason</dd>
+<dd><code>cause</code> - the cause</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the failure</dd>
+</dl>
+</li>
+</ul>
+<a name="of-com.opengamma.strata.collect.result.FailureItem-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>of</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/Failure.html" title="class in com.opengamma.strata.collect.result">Failure</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a>&nbsp;item)</pre>
+<div class="block">Obtains a failure for a single failure item.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>item</code> - the failure item</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the failure</dd>
+</dl>
+</li>
+</ul>
+<a name="of-com.opengamma.strata.collect.result.FailureItem-com.opengamma.strata.collect.result.FailureItem...-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>of</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/Failure.html" title="class in com.opengamma.strata.collect.result">Failure</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a>&nbsp;item,
+                         <a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a>...&nbsp;additionalItems)</pre>
+<div class="block">Obtains a failure for multiple failure items.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>item</code> - the first failure item</dd>
+<dd><code>additionalItems</code> - additional failure items</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the failure</dd>
+</dl>
+</li>
+</ul>
+<a name="of-java.util.Collection-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>of</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/Failure.html" title="class in com.opengamma.strata.collect.result">Failure</a>&nbsp;of(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a>&gt;&nbsp;items)</pre>
+<div class="block">Obtains a failure for a non-empty collection of failure items.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>items</code> - the failures, not empty</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the failure</dd>
+</dl>
+</li>
+</ul>
 <a name="meta--">
 <!--   -->
 </a>
@@ -442,6 +613,6 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

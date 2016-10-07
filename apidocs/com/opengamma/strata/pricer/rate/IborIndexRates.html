@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":17,"i4":17,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6};
+var methods = {"i0":6,"i1":18,"i2":6,"i3":6,"i4":17,"i5":17,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -141,18 +141,26 @@ extends <a href="../../../../../com/opengamma/strata/market/MarketDataView.html"
 </td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code>default double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html#explainRate-com.opengamma.strata.basics.index.IborIndexObservation-com.opengamma.strata.market.explain.ExplainMapBuilder-java.util.function.Consumer-">explainRate</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation,
+           <a href="../../../../../com/opengamma/strata/market/explain/ExplainMapBuilder.html" title="class in com.opengamma.strata.market.explain">ExplainMapBuilder</a>&nbsp;builder,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function">Consumer</a>&lt;<a href="../../../../../com/opengamma/strata/market/explain/ExplainMapBuilder.html" title="class in com.opengamma.strata.market.explain">ExplainMapBuilder</a>&gt;&nbsp;consumer)</code>
+<div class="block">Explains the calculation of the the historic or forward rate at the specified fixing date.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html#getFixings--">getFixings</a></span>()</code>
 <div class="block">Gets the time-series of fixings for the index.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html#getIndex--">getIndex</a></span>()</code>
 <div class="block">Gets the Ibor index.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">IborIndexRates</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html#of-com.opengamma.strata.basics.index.IborIndex-java.time.LocalDate-com.opengamma.strata.market.curve.Curve-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
@@ -160,7 +168,7 @@ extends <a href="../../../../../com/opengamma/strata/market/MarketDataView.html"
 <div class="block">Obtains an instance from a forward curve, with an empty time-series of fixings.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">IborIndexRates</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html#of-com.opengamma.strata.basics.index.IborIndex-java.time.LocalDate-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
@@ -169,46 +177,46 @@ extends <a href="../../../../../com/opengamma/strata/market/MarketDataView.html"
 <div class="block">Obtains an instance from a curve and time-series of fixings.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html#parameterSensitivity-com.opengamma.strata.pricer.rate.IborRateSensitivity-">parameterSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/pricer/rate/IborRateSensitivity.html" title="class in com.opengamma.strata.pricer.rate">IborRateSensitivity</a>&nbsp;pointSensitivity)</code>
 <div class="block">Calculates the parameter sensitivity from the point sensitivity.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html#rate-com.opengamma.strata.basics.index.IborIndexObservation-">rate</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>
 <div class="block">Gets the historic or forward rate at the specified fixing date.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html#rateIgnoringFixings-com.opengamma.strata.basics.index.IborIndexObservation-">rateIgnoringFixings</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>
 <div class="block">Ignores the time-series of fixings to get the forward rate at the specified
  fixing date, used in rare and special cases.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html#rateIgnoringFixingsPointSensitivity-com.opengamma.strata.basics.index.IborIndexObservation-">rateIgnoringFixingsPointSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>
 <div class="block">Ignores the time-series of fixings to get the forward rate point sensitivity at the
  specified fixing date, used in rare and special cases.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html#ratePointSensitivity-com.opengamma.strata.basics.index.IborIndexObservation-">ratePointSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>
 <div class="block">Calculates the point sensitivity of the historic or forward rate at the specified fixing date.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">IborIndexRates</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html#withParameter-int-double-">withParameter</a></span>(int&nbsp;parameterIndex,
              double&nbsp;newValue)</code>
 <div class="block">Returns a copy of the data with the value at the specified index altered.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">IborIndexRates</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html#withPerturbation-com.opengamma.strata.market.param.ParameterPerturbation-">withPerturbation</a></span>(<a href="../../../../../com/opengamma/strata/market/param/ParameterPerturbation.html" title="interface in com.opengamma.strata.market.param">ParameterPerturbation</a>&nbsp;perturbation)</code>
 <div class="block">Returns a perturbed copy of the data.</div>
@@ -469,6 +477,32 @@ extends <a href="../../../../../com/opengamma/strata/market/MarketDataView.html"
 </dl>
 </li>
 </ul>
+<a name="explainRate-com.opengamma.strata.basics.index.IborIndexObservation-com.opengamma.strata.market.explain.ExplainMapBuilder-java.util.function.Consumer-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>explainRate</h4>
+<pre>default&nbsp;double&nbsp;explainRate(<a href="../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation,
+                           <a href="../../../../../com/opengamma/strata/market/explain/ExplainMapBuilder.html" title="class in com.opengamma.strata.market.explain">ExplainMapBuilder</a>&nbsp;builder,
+                           <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function">Consumer</a>&lt;<a href="../../../../../com/opengamma/strata/market/explain/ExplainMapBuilder.html" title="class in com.opengamma.strata.market.explain">ExplainMapBuilder</a>&gt;&nbsp;consumer)</pre>
+<div class="block">Explains the calculation of the the historic or forward rate at the specified fixing date.
+ <p>
+ This adds information to the <a href="../../../../../com/opengamma/strata/market/explain/ExplainMapBuilder.html" title="class in com.opengamma.strata.market.explain"><code>ExplainMapBuilder</code></a> to aid understanding of the computation.
+ It does this by adding a populated <a href="../../../../../com/opengamma/strata/market/explain/ExplainKey.html#OBSERVATIONS"><code>ExplainKey.OBSERVATIONS</code></a> entry.
+ The actual rate is also returned.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>observation</code> - the rate observation, including the fixing date</dd>
+<dd><code>builder</code> - the builder to populate</dd>
+<dd><code>consumer</code> - the consumer that receives the list entry builder and adds to it</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the rate of the index, either historic or forward</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a></code> - if the value cannot be obtained</dd>
+</dl>
+</li>
+</ul>
 <a name="parameterSensitivity-com.opengamma.strata.pricer.rate.IborRateSensitivity-">
 <!--   -->
 </a>
@@ -587,6 +621,6 @@ extends <a href="../../../../../com/opengamma/strata/market/MarketDataView.html"
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

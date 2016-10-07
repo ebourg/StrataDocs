@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":9,"i5":10,"i6":9,"i7":9,"i8":10,"i9":10,"i10":10,"i11":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":9,"i7":10,"i8":9,"i9":9,"i10":10,"i11":10,"i12":10,"i13":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -168,63 +168,75 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloor.html#allIndices--">allIndices</a></span>()</code>
+<div class="block">Returns the set of indices referred to by the cap/floor.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloor.html#allPaymentCurrencies--">allPaymentCurrencies</a></span>()</code>
+<div class="block">Returns the set of payment currencies referred to by the cap/floor.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloor.html#equals-java.lang.Object-">equals</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloorLeg.html" title="class in com.opengamma.strata.product.capfloor">IborCapFloorLeg</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloor.html#getCapFloorLeg--">getCapFloorLeg</a></span>()</code>
 <div class="block">Gets the Ibor cap/floor leg of the product.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html" title="interface in com.opengamma.strata.product.swap">SwapLeg</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloor.html#getPayLeg--">getPayLeg</a></span>()</code>
 <div class="block">Gets the optional pay leg of the product.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloor.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloor.Meta.html" title="class in com.opengamma.strata.product.capfloor">IborCapFloor.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloor.html#meta--">meta</a></span>()</code>
 <div class="block">The meta-bean for <code>IborCapFloor</code>.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloor.Meta.html" title="class in com.opengamma.strata.product.capfloor">IborCapFloor.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloor.html#metaBean--">metaBean</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloor.html" title="class in com.opengamma.strata.product.capfloor">IborCapFloor</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloor.html#of-com.opengamma.strata.product.capfloor.IborCapFloorLeg-">of</a></span>(<a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloorLeg.html" title="class in com.opengamma.strata.product.capfloor">IborCapFloorLeg</a>&nbsp;capFloorLeg)</code>
 <div class="block">Obtains an instance from a cap/floor leg with no pay leg.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloor.html" title="class in com.opengamma.strata.product.capfloor">IborCapFloor</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloor.html#of-com.opengamma.strata.product.capfloor.IborCapFloorLeg-com.opengamma.strata.product.swap.SwapLeg-">of</a></span>(<a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloorLeg.html" title="class in com.opengamma.strata.product.capfloor">IborCapFloorLeg</a>&nbsp;capFloorLeg,
   <a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html" title="interface in com.opengamma.strata.product.swap">SwapLeg</a>&nbsp;payLeg)</code>
 <div class="block">Obtains an instance from a cap/floor leg and a pay leg.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>&lt;R&gt;&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Property.html?is-external=true" title="class or interface in org.joda.beans">Property</a>&lt;R&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloor.html#property-java.lang.String-">property</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloor.html#propertyNames--">propertyNames</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloor.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloor</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloor.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Resolves this object using the specified reference data.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/capfloor/IborCapFloor.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -283,6 +295,40 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 <dd><code>payLeg</code> - the pay leg</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the cap/floor</dd>
+</dl>
+</li>
+</ul>
+<a name="allPaymentCurrencies--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>allPaymentCurrencies</h4>
+<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;allPaymentCurrencies()</pre>
+<div class="block">Returns the set of payment currencies referred to by the cap/floor.
+ <p>
+ This returns the complete set of payment currencies for the cap/floor.
+ This will typically return one currency, but could return two.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the set of payment currencies referred to by this swap</dd>
+</dl>
+</li>
+</ul>
+<a name="allIndices--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>allIndices</h4>
+<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;allIndices()</pre>
+<div class="block">Returns the set of indices referred to by the cap/floor.
+ <p>
+ A cap/floor will typically refer to one index, such as 'GBP-LIBOR-3M'.
+ Calling this method will return the complete list of indices.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the set of indices referred to by this cap/floor</dd>
 </dl>
 </li>
 </ul>
@@ -509,6 +555,6 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

@@ -50,7 +50,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/opengamma/strata/collect/result/FailureItem.Meta.html" title="class in com.opengamma.strata.collect.result"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/collect/result/FailureItemsBuilder.html" title="class in com.opengamma.strata.collect.result"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -143,7 +143,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?is
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html#CALCULATION_FAILED">CALCULATION_FAILED</a></span></code>
-<div class="block">Some aspect of the calculation in the function has failed.</div>
+<div class="block">The operation could not be performed.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -153,17 +153,17 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?is
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html#ERROR">ERROR</a></span></code>
-<div class="block">An error occurred during the calculation.</div>
+<div class="block">An error occurred.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html#INVALID">INVALID</a></span></code>
-<div class="block">The request was invalid.</div>
+<div class="block">The input was invalid.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html#MISSING_DATA">MISSING_DATA</a></span></code>
-<div class="block">Some data was missing.</div>
+<div class="block">The operation failed because data was missing.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -173,7 +173,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?is
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html#NOT_APPLICABLE">NOT_APPLICABLE</a></span></code>
-<div class="block">There was no applicable calculation to be performed.</div>
+<div class="block">The operation requested was not applicable.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -182,8 +182,13 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?is
 </td>
 </tr>
 <tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html#PARSING">PARSING</a></span></code>
+<div class="block">A parsing error occurred.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html#UNSUPPORTED">UNSUPPORTED</a></span></code>
-<div class="block">The request is not supported.</div>
+<div class="block">The operation requested is unsupported.</div>
 </td>
 </tr>
 </table>
@@ -251,7 +256,8 @@ the order they are declared.</div>
 <h4>MULTIPLE</h4>
 <pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> MULTIPLE</pre>
 <div class="block">There were multiple failures of different types.
- When a function is called it may produce zero to many errors.
+ <p>
+ An operation may produce zero to many errors.
  If there is one error then that reason is used.
  If there are many errors then the overall reason is "multiple".</div>
 </li>
@@ -263,8 +269,9 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>ERROR</h4>
 <pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> ERROR</pre>
-<div class="block">An error occurred during the calculation.
- Where possible, more specific reason codes should be used.</div>
+<div class="block">An error occurred.
+ <p>
+ Where possible, a more specific reason code should be used.</div>
 </li>
 </ul>
 <a name="INVALID">
@@ -274,8 +281,22 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>INVALID</h4>
 <pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> INVALID</pre>
-<div class="block">The request was invalid.
- This is used to indicate that the request was not valid.</div>
+<div class="block">The input was invalid.
+ <p>
+ One or more input parameters was invalid.</div>
+</li>
+</ul>
+<a name="PARSING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PARSING</h4>
+<pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> PARSING</pre>
+<div class="block">A parsing error occurred.
+ <p>
+ This is used when an error occurred during parsing.
+ Typically, this refers to parsing a file, such as CSV or XML.</div>
 </li>
 </ul>
 <a name="NOT_APPLICABLE">
@@ -285,10 +306,12 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>NOT_APPLICABLE</h4>
 <pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> NOT_APPLICABLE</pre>
-<div class="block">There was no applicable calculation to be performed.
- This is used to indicate a result that was not or could not be calculated,
- but where calculation was not desired or applicable. This might occur in a
- grid of results where not every column is applicable for a specific row.</div>
+<div class="block">The operation requested was not applicable.
+ <p>
+ This is used when the particular combination of inputs is not applicable,
+ but given a different combination a result could have been calculated.
+ For example, this might occur in a grid of results where the calculation
+ requested for a column is not applicable for every row.</div>
 </li>
 </ul>
 <a name="UNSUPPORTED">
@@ -298,8 +321,9 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>UNSUPPORTED</h4>
 <pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> UNSUPPORTED</pre>
-<div class="block">The request is not supported.
- This is used to indicate that the request is not supported and could not be calculated.</div>
+<div class="block">The operation requested is unsupported.
+ <p>
+ The operation failed because it is not supported.</div>
 </li>
 </ul>
 <a name="MISSING_DATA">
@@ -309,9 +333,9 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>MISSING_DATA</h4>
 <pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> MISSING_DATA</pre>
-<div class="block">Some data was missing.
- When performing calculations, all the necessary data must be available.
- This reason indicates that a piece of data was missing.</div>
+<div class="block">The operation failed because data was missing.
+ <p>
+ One or more pieces of data that the operation required were missing.</div>
 </li>
 </ul>
 <a name="CURRENCY_CONVERSION">
@@ -322,7 +346,8 @@ the order they are declared.</div>
 <h4>CURRENCY_CONVERSION</h4>
 <pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> CURRENCY_CONVERSION</pre>
 <div class="block">Currency conversion failed.
- An error occurred during currency conversion, perhaps due to missing FX rates.</div>
+ <p>
+ This is used to indicate that the operation failed during currency conversion, perhaps due to missing FX rates.</div>
 </li>
 </ul>
 <a name="CALCULATION_FAILED">
@@ -332,7 +357,9 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>CALCULATION_FAILED</h4>
 <pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> CALCULATION_FAILED</pre>
-<div class="block">Some aspect of the calculation in the function has failed.</div>
+<div class="block">The operation could not be performed.
+ <p>
+ This is used to indicate that a calculation failed.</div>
 </li>
 </ul>
 <a name="OTHER">
@@ -343,6 +370,7 @@ the order they are declared.</div>
 <h4>OTHER</h4>
 <pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a> OTHER</pre>
 <div class="block">Failure occurred for some other reason.
+ <p>
  This reason should only be used when no other type is applicable.
  If using this reason, please consider raising an issue to get another
  more descriptive reason added.</div>
@@ -427,7 +455,7 @@ not permitted.)</div>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/opengamma/strata/collect/result/FailureItem.Meta.html" title="class in com.opengamma.strata.collect.result"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/collect/result/FailureItemsBuilder.html" title="class in com.opengamma.strata.collect.result"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -468,6 +496,6 @@ not permitted.)</div>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

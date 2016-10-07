@@ -351,7 +351,7 @@
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DiscountingCapitalIndexedBondProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/DiscountingCapitalIndexedBondProductPricer.html#dirtyNominalPriceSensitivity-com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.basics.ReferenceData-">dirtyNominalPriceSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBond</a>&nbsp;bond,
                             <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                            <a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;issuerDiscountFactorsProvider,
+                            <a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
                             <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Calculates the dirty price sensitivity of the bond security.</div>
 </td>
@@ -360,7 +360,7 @@
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DiscountingCapitalIndexedBondProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/DiscountingCapitalIndexedBondProductPricer.html#dirtyNominalPriceSensitivityWithZSpread-com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.basics.ReferenceData-double-com.opengamma.strata.pricer.CompoundedRateType-int-">dirtyNominalPriceSensitivityWithZSpread</a></span>(<a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBond</a>&nbsp;bond,
                                        <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                       <a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;issuerDiscountFactorsProvider,
+                                       <a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
                                        <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData,
                                        double&nbsp;zSpread,
                                        <a href="../../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
@@ -371,7 +371,7 @@
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DiscountingFixedCouponBondProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/DiscountingFixedCouponBondProductPricer.html#dirtyPriceSensitivity-com.opengamma.strata.product.bond.ResolvedFixedCouponBond-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.basics.ReferenceData-">dirtyPriceSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.html" title="class in com.opengamma.strata.product.bond">ResolvedFixedCouponBond</a>&nbsp;bond,
-                     <a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
+                     <a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
                      <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Calculates the dirty price sensitivity of the fixed coupon bond product.</div>
 </td>
@@ -379,7 +379,7 @@
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DiscountingFixedCouponBondProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/DiscountingFixedCouponBondProductPricer.html#dirtyPriceSensitivityWithZspread-com.opengamma.strata.product.bond.ResolvedFixedCouponBond-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.basics.ReferenceData-double-com.opengamma.strata.pricer.CompoundedRateType-int-">dirtyPriceSensitivityWithZspread</a></span>(<a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.html" title="class in com.opengamma.strata.product.bond">ResolvedFixedCouponBond</a>&nbsp;bond,
-                                <a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
+                                <a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
                                 <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData,
                                 double&nbsp;zSpread,
                                 <a href="../../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
@@ -420,14 +420,14 @@
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DiscountingCapitalIndexedBondProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/DiscountingCapitalIndexedBondProductPricer.html#presentValueSensitivity-com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-">presentValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBond</a>&nbsp;bond,
                        <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                       <a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;issuerDiscountFactorsProvider)</code>
+                       <a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider)</code>
 <div class="block">Calculates the present value sensitivity of the bond product.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DiscountingFixedCouponBondProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/DiscountingFixedCouponBondProductPricer.html#presentValueSensitivity-com.opengamma.strata.product.bond.ResolvedFixedCouponBond-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-">presentValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.html" title="class in com.opengamma.strata.product.bond">ResolvedFixedCouponBond</a>&nbsp;bond,
-                       <a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider)</code>
+                       <a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider)</code>
 <div class="block">Calculates the present value sensitivity of the fixed coupon bond product.</div>
 </td>
 </tr>
@@ -456,7 +456,7 @@
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DiscountingCapitalIndexedBondProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/DiscountingCapitalIndexedBondProductPricer.html#presentValueSensitivityWithZSpread-com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-double-com.opengamma.strata.pricer.CompoundedRateType-int-">presentValueSensitivityWithZSpread</a></span>(<a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBond</a>&nbsp;bond,
                                   <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                  <a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;issuerDiscountFactorsProvider,
+                                  <a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
                                   double&nbsp;zSpread,
                                   <a href="../../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
                                   int&nbsp;periodsPerYear)</code>
@@ -466,7 +466,7 @@
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DiscountingFixedCouponBondProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/DiscountingFixedCouponBondProductPricer.html#presentValueSensitivityWithZSpread-com.opengamma.strata.product.bond.ResolvedFixedCouponBond-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-double-com.opengamma.strata.pricer.CompoundedRateType-int-">presentValueSensitivityWithZSpread</a></span>(<a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.html" title="class in com.opengamma.strata.product.bond">ResolvedFixedCouponBond</a>&nbsp;bond,
-                                  <a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
+                                  <a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
                                   double&nbsp;zSpread,
                                   <a href="../../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
                                   int&nbsp;periodsPerYear)</code>
@@ -678,27 +678,27 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountFxForwardRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fx/DiscountFxForwardRates.html#ratePointSensitivity-com.opengamma.strata.basics.currency.Currency-java.time.LocalDate-">ratePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;baseCurrency,
-                    <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FxForwardRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fx/FxForwardRates.html#ratePointSensitivity-com.opengamma.strata.basics.currency.Currency-java.time.LocalDate-">ratePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;baseCurrency,
                     <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate)</code>
 <div class="block">Calculates the point sensitivity of the forward rate at the specified fixing date.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ForwardFxIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fx/ForwardFxIndexRates.html#ratePointSensitivity-com.opengamma.strata.basics.index.FxIndexObservation-com.opengamma.strata.basics.currency.Currency-">ratePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/FxIndexObservation.html" title="class in com.opengamma.strata.basics.index">FxIndexObservation</a>&nbsp;observation,
-                    <a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;baseCurrency)</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountFxForwardRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fx/DiscountFxForwardRates.html#ratePointSensitivity-com.opengamma.strata.basics.currency.Currency-java.time.LocalDate-">ratePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;baseCurrency,
+                    <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FxIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fx/FxIndexRates.html#ratePointSensitivity-com.opengamma.strata.basics.index.FxIndexObservation-com.opengamma.strata.basics.currency.Currency-">ratePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/FxIndexObservation.html" title="class in com.opengamma.strata.basics.index">FxIndexObservation</a>&nbsp;observation,
                     <a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;baseCurrency)</code>
 <div class="block">Calculates the point sensitivity of the historic or forward rate at the specified fixing date.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ForwardFxIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fx/ForwardFxIndexRates.html#ratePointSensitivity-com.opengamma.strata.basics.index.FxIndexObservation-com.opengamma.strata.basics.currency.Currency-">ratePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/FxIndexObservation.html" title="class in com.opengamma.strata.basics.index">FxIndexObservation</a>&nbsp;observation,
+                    <a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;baseCurrency)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -832,15 +832,15 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountOvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountOvernightIndexRates.html#periodRatePointSensitivity-com.opengamma.strata.basics.index.OvernightIndexObservation-java.time.LocalDate-">periodRatePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndexObservation.html" title="class in com.opengamma.strata.basics.index">OvernightIndexObservation</a>&nbsp;startDateObservation,
-                          <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">OvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#periodRatePointSensitivity-com.opengamma.strata.basics.index.OvernightIndexObservation-java.time.LocalDate-">periodRatePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndexObservation.html" title="class in com.opengamma.strata.basics.index">OvernightIndexObservation</a>&nbsp;startDateObservation,
                           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate)</code>
 <div class="block">Calculates the point sensitivity of the historic or forward rate at the specified fixing period.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountOvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountOvernightIndexRates.html#periodRatePointSensitivity-com.opengamma.strata.basics.index.OvernightIndexObservation-java.time.LocalDate-">periodRatePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndexObservation.html" title="class in com.opengamma.strata.basics.index">OvernightIndexObservation</a>&nbsp;startDateObservation,
+                          <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
@@ -848,25 +848,25 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html#rateIgnoringFixingsPointSensitivity-com.opengamma.strata.basics.index.IborIndexObservation-">rateIgnoringFixingsPointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html#rateIgnoringFixingsPointSensitivity-com.opengamma.strata.basics.index.IborIndexObservation-">rateIgnoringFixingsPointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>
 <div class="block">Ignores the time-series of fixings to get the forward rate point sensitivity at the
  specified fixing date, used in rare and special cases.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountOvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountOvernightIndexRates.html#rateIgnoringFixingsPointSensitivity-com.opengamma.strata.basics.index.OvernightIndexObservation-">rateIgnoringFixingsPointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndexObservation.html" title="class in com.opengamma.strata.basics.index">OvernightIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html#rateIgnoringFixingsPointSensitivity-com.opengamma.strata.basics.index.IborIndexObservation-">rateIgnoringFixingsPointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">OvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#rateIgnoringFixingsPointSensitivity-com.opengamma.strata.basics.index.OvernightIndexObservation-">rateIgnoringFixingsPointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndexObservation.html" title="class in com.opengamma.strata.basics.index">OvernightIndexObservation</a>&nbsp;observation)</code>
 <div class="block">Ignores the time-series of fixings to get the forward rate point sensitivity at the
  specified fixing date, used in rare and special cases.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountOvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountOvernightIndexRates.html#rateIgnoringFixingsPointSensitivity-com.opengamma.strata.basics.index.OvernightIndexObservation-">rateIgnoringFixingsPointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndexObservation.html" title="class in com.opengamma.strata.basics.index">OvernightIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
@@ -874,23 +874,23 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html#ratePointSensitivity-com.opengamma.strata.basics.index.IborIndexObservation-">ratePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html#ratePointSensitivity-com.opengamma.strata.basics.index.IborIndexObservation-">ratePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>
 <div class="block">Calculates the point sensitivity of the historic or forward rate at the specified fixing date.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountOvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountOvernightIndexRates.html#ratePointSensitivity-com.opengamma.strata.basics.index.OvernightIndexObservation-">ratePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndexObservation.html" title="class in com.opengamma.strata.basics.index">OvernightIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
-</tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html#ratePointSensitivity-com.opengamma.strata.basics.index.IborIndexObservation-">ratePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndexObservation.html" title="class in com.opengamma.strata.basics.index">IborIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">OvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#ratePointSensitivity-com.opengamma.strata.basics.index.OvernightIndexObservation-">ratePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndexObservation.html" title="class in com.opengamma.strata.basics.index">OvernightIndexObservation</a>&nbsp;observation)</code>
 <div class="block">Calculates the point sensitivity of the historic or forward rate at the specified fixing date.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountOvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountOvernightIndexRates.html#ratePointSensitivity-com.opengamma.strata.basics.index.OvernightIndexObservation-">ratePointSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndexObservation.html" title="class in com.opengamma.strata.basics.index">OvernightIndexObservation</a>&nbsp;observation)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
@@ -941,16 +941,16 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SwapPaymentEventPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swap/SwapPaymentEventPricer.html#forecastValueSensitivity-T-com.opengamma.strata.pricer.rate.RatesProvider-">forecastValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/swap/SwapPaymentEventPricer.html" title="type parameter in SwapPaymentEventPricer">T</a>&nbsp;event,
+<td class="colLast"><span class="typeNameLabel">SwapPaymentPeriodPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swap/SwapPaymentPeriodPricer.html#forecastValueSensitivity-T-com.opengamma.strata.pricer.rate.RatesProvider-">forecastValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/swap/SwapPaymentPeriodPricer.html" title="type parameter in SwapPaymentPeriodPricer">T</a>&nbsp;period,
                         <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider)</code>
-<div class="block">Calculates the forecast value sensitivity of a single payment event.</div>
+<div class="block">Calculates the forecast value sensitivity of a single payment period.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SwapPaymentPeriodPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swap/SwapPaymentPeriodPricer.html#forecastValueSensitivity-T-com.opengamma.strata.pricer.rate.RatesProvider-">forecastValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/swap/SwapPaymentPeriodPricer.html" title="type parameter in SwapPaymentPeriodPricer">T</a>&nbsp;period,
+<td class="colLast"><span class="typeNameLabel">SwapPaymentEventPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swap/SwapPaymentEventPricer.html#forecastValueSensitivity-T-com.opengamma.strata.pricer.rate.RatesProvider-">forecastValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/swap/SwapPaymentEventPricer.html" title="type parameter in SwapPaymentEventPricer">T</a>&nbsp;event,
                         <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider)</code>
-<div class="block">Calculates the forecast value sensitivity of a single payment period.</div>
+<div class="block">Calculates the forecast value sensitivity of a single payment event.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -991,16 +991,16 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SwapPaymentEventPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swap/SwapPaymentEventPricer.html#presentValueSensitivity-T-com.opengamma.strata.pricer.rate.RatesProvider-">presentValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/swap/SwapPaymentEventPricer.html" title="type parameter in SwapPaymentEventPricer">T</a>&nbsp;event,
+<td class="colLast"><span class="typeNameLabel">SwapPaymentPeriodPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swap/SwapPaymentPeriodPricer.html#presentValueSensitivity-T-com.opengamma.strata.pricer.rate.RatesProvider-">presentValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/swap/SwapPaymentPeriodPricer.html" title="type parameter in SwapPaymentPeriodPricer">T</a>&nbsp;period,
                        <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider)</code>
-<div class="block">Calculates the present value sensitivity of a single payment event.</div>
+<div class="block">Calculates the present value sensitivity of a single payment period.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SwapPaymentPeriodPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swap/SwapPaymentPeriodPricer.html#presentValueSensitivity-T-com.opengamma.strata.pricer.rate.RatesProvider-">presentValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/swap/SwapPaymentPeriodPricer.html" title="type parameter in SwapPaymentPeriodPricer">T</a>&nbsp;period,
+<td class="colLast"><span class="typeNameLabel">SwapPaymentEventPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swap/SwapPaymentEventPricer.html#presentValueSensitivity-T-com.opengamma.strata.pricer.rate.RatesProvider-">presentValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/swap/SwapPaymentEventPricer.html" title="type parameter in SwapPaymentEventPricer">T</a>&nbsp;event,
                        <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider)</code>
-<div class="block">Calculates the present value sensitivity of a single payment period.</div>
+<div class="block">Calculates the present value sensitivity of a single payment event.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -1171,6 +1171,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

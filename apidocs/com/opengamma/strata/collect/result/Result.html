@@ -121,18 +121,15 @@ var activeTableTab = "activeTableTab";
 <pre>public final class <span class="typeNameLabel">Result&lt;T&gt;</span>
 extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
-<div class="block">An immutable calculation result.
+<div class="block">The result of an operation, either success or failure.
  <p>
- There are two types of result - success and failure.
- A success result contains the calculated non-null result value.
+ This provides a functional approach to error handling, that can be used instead of exceptions.
+ A success result contains a non-null result value.
  A failure result contains details of the <a href="../../../../../com/opengamma/strata/collect/result/Failure.html" title="class in com.opengamma.strata.collect.result">failure</a> that occurred.
  <p>
- The result model is typically used in a subsystem following functional programming style.
- Functions will be written to have <code>Result&lt;T&gt;</code> as the return type.
- Instead of using exceptions, code will return failure results. In line with
- this, all methods will attempt to catch exception that happen within their
- scope and and return a failure <code>Result</code> rather than propagating the
- exception.
+ Methods using this approach to error handling are expected to return <code>Result&lt;T&gt;</code>
+ and not throw exceptions. The factory method <a href="../../../../../com/opengamma/strata/collect/result/Result.html#of-java.util.function.Supplier-"><code>of(Supplier)</code></a> and related methods
+ can be used to capture exceptions and convert them to failure results.
  <p>
  Application code using a result should also operate in a functional style.
  Use <a href="../../../../../com/opengamma/strata/collect/result/Result.html#map-java.util.function.Function-"><code>map(Function)</code></a> and <a href="../../../../../com/opengamma/strata/collect/result/Result.html#flatMap-java.util.function.Function-"><code>flatMap(Function)</code></a> in preference to
@@ -1457,6 +1454,6 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

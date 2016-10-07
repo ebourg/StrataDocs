@@ -512,14 +512,16 @@ not permitted.)</div>
  The rules are as follows:
  <p>
  If the input frequency is month-based, then the implied convention is based on
- the day-of-month of the initial date.
+ the day-of-month of the initial date, where the initial date is the start date
+ if rolling forwards or the end date otherwise.
  If that date is on the 31st day, or if the 'preferEndOfMonth' flag is true and
  the relevant date is at the end of the month, then the implied convention is 'EOM'.
  For example, if the initial date of the sequence is 2014-06-20 and the periodic
  frequency is 'P3M' (month-based), then the implied convention is 'Day20'.
  <p>
  If the input frequency is week-based, then the implied convention is based on
- the day-of-week of the initial date.
+ the day-of-week of the initial date, where the initial date is the start date
+ if rolling forwards or the end date otherwise.
  For example, if the initial date of the sequence is 2014-06-20 and the periodic
  frequency is 'P2W' (week-based), then the implied convention is 'DayFri',
  because 2014-06-20 is a Friday.
@@ -694,6 +696,6 @@ not permitted.)</div>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

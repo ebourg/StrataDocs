@@ -131,7 +131,13 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
  <li>End date, the date on which the implied deposit ends
  <li>Fixing date, the date on which the index is to be observed, typically 2 business days before the start date
  <li>Payment date, the date on which payment is made, typically the same as the start date
- </ul></div>
+ </ul>
+ <p>
+ The start date, end date and payment date are determined when the trade if created,
+ adjusting to valid business days based on the holiday calendar dates known on the trade trade.
+ The payment date may be further adjusted when the FRA is resolved if an additional holiday has been added.
+ The data model does allow for the start and end dates to be adjusted when the FRA is resolved,
+ but this is typically not used.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../serialized-form.html#com.opengamma.strata.product.fra.Fra">Serialized Form</a></dd>
@@ -792,6 +798,6 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

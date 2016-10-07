@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":9,"i14":10,"i15":9,"i16":10,"i17":10,"i18":10,"i19":10};
+var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":9,"i16":10,"i17":9,"i18":10,"i19":10,"i20":10,"i21":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -170,105 +170,117 @@ implements <a href="../../../../com/opengamma/strata/data/MarketData.html" title
 </td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html" title="class in com.opengamma.strata.data">ImmutableMarketData</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#combinedWith-com.opengamma.strata.data.ImmutableMarketData-">combinedWith</a></span>(<a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html" title="class in com.opengamma.strata.data">ImmutableMarketData</a>&nbsp;other)</code>
+<div class="block">Combines this set of market data with another.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#combinedWith-com.opengamma.strata.data.MarketData-">combinedWith</a></span>(<a href="../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;other)</code>
+<div class="block">Combines this market data with another.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#containsValue-com.opengamma.strata.data.MarketDataId-">containsValue</a></span>(<a href="../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;?&gt;&nbsp;id)</code>
 <div class="block">Checks if this market data contains a value for the specified identifier.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#equals-java.lang.Object-">equals</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;T&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#findIds-com.opengamma.strata.data.MarketDataName-">findIds</a></span>(<a href="../../../../com/opengamma/strata/data/MarketDataName.html" title="class in com.opengamma.strata.data">MarketDataName</a>&lt;T&gt;&nbsp;name)</code>
 <div class="block">Finds the market data identifiers associated with the specified name.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;T&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#findValue-com.opengamma.strata.data.MarketDataId-">findValue</a></span>(<a href="../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;T&gt;&nbsp;id)</code>
 <div class="block">Finds the market data value associated with the specified identifier.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;?&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#getIds--">getIds</a></span>()</code>
 <div class="block">Gets the market data identifiers.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/opengamma/strata/data/ObservableId.html" title="interface in com.opengamma.strata.data">ObservableId</a>,<a href="../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&gt;</code></td>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="../../../../com/opengamma/strata/data/ObservableId.html" title="interface in com.opengamma.strata.data">ObservableId</a>,<a href="../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#getTimeSeries--">getTimeSeries</a></span>()</code>
 <div class="block">Gets the time-series.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#getTimeSeries-com.opengamma.strata.data.ObservableId-">getTimeSeries</a></span>(<a href="../../../../com/opengamma/strata/data/ObservableId.html" title="interface in com.opengamma.strata.data">ObservableId</a>&nbsp;id)</code>
 <div class="block">Gets the time-series identified by the specified identifier, empty if not found.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../com/opengamma/strata/data/ObservableId.html" title="interface in com.opengamma.strata.data">ObservableId</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#getTimeSeriesIds--">getTimeSeriesIds</a></span>()</code>
 <div class="block">Gets the time-series identifiers.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#getValuationDate--">getValuationDate</a></span>()</code>
 <div class="block">Gets the valuation date associated with the market data.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>&lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#getValue-com.opengamma.strata.data.MarketDataId-">getValue</a></span>(<a href="../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;T&gt;&nbsp;id)</code>
 <div class="block">Gets the market data value associated with the specified identifier.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;?&gt;,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;?&gt;,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#getValues--">getValues</a></span>()</code>
 <div class="block">Gets the market data values.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/data/ImmutableMarketData.Meta.html" title="class in com.opengamma.strata.data">ImmutableMarketData.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#meta--">meta</a></span>()</code>
 <div class="block">The meta-bean for <code>ImmutableMarketData</code>.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.Meta.html" title="class in com.opengamma.strata.data">ImmutableMarketData.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#metaBean--">metaBean</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html" title="class in com.opengamma.strata.data">ImmutableMarketData</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#of-java.time.LocalDate-java.util.Map-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;? extends <a href="../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;?&gt;,?&gt;&nbsp;values)</code>
 <div class="block">Obtains an instance from a valuation date and map of values.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>&lt;R&gt;&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Property.html?is-external=true" title="class or interface in org.joda.beans">Property</a>&lt;R&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#property-java.lang.String-">property</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#propertyNames--">propertyNames</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/data/ImmutableMarketDataBuilder.html" title="class in com.opengamma.strata.data">ImmutableMarketDataBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#toBuilder--">toBuilder</a></span>()</code>
 <div class="block">Returns a builder populated with the same data as this instance.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -285,7 +297,7 @@ implements <a href="../../../../com/opengamma/strata/data/MarketData.html" title
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.opengamma.strata.data.<a href="../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a></h3>
-<code><a href="../../../../com/opengamma/strata/data/MarketData.html#combinedWith-com.opengamma.strata.data.MarketData-">combinedWith</a>, <a href="../../../../com/opengamma/strata/data/MarketData.html#empty-java.time.LocalDate-">empty</a>, <a href="../../../../com/opengamma/strata/data/MarketData.html#of-java.time.LocalDate-java.util.Map-java.util.Map-">of</a>, <a href="../../../../com/opengamma/strata/data/MarketData.html#withValue-com.opengamma.strata.data.MarketDataId-T-">withValue</a></code></li>
+<code><a href="../../../../com/opengamma/strata/data/MarketData.html#empty-java.time.LocalDate-">empty</a>, <a href="../../../../com/opengamma/strata/data/MarketData.html#of-java.time.LocalDate-java.util.Map-java.util.Map-">of</a>, <a href="../../../../com/opengamma/strata/data/MarketData.html#withValue-com.opengamma.strata.data.MarketDataId-T-">withValue</a></code></li>
 </ul>
 </li>
 </ul>
@@ -372,6 +384,53 @@ implements <a href="../../../../com/opengamma/strata/data/MarketData.html" title
 <dd><code>id</code> - the identifier to find</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>true if the market data contains a value for the identifier</dd>
+</dl>
+</li>
+</ul>
+<a name="combinedWith-com.opengamma.strata.data.ImmutableMarketData-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>combinedWith</h4>
+<pre>public&nbsp;<a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html" title="class in com.opengamma.strata.data">ImmutableMarketData</a>&nbsp;combinedWith(<a href="../../../../com/opengamma/strata/data/ImmutableMarketData.html" title="class in com.opengamma.strata.data">ImmutableMarketData</a>&nbsp;other)</pre>
+<div class="block">Combines this set of market data with another.
+ <p>
+ The result combines both sets of market data.
+ Values are taken from this set of market data if available, otherwise they are taken
+ from the other set.
+ <p>
+ The valuation dates of the sets of market data must be the same.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>other</code> - the other market data</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the combined market data</dd>
+</dl>
+</li>
+</ul>
+<a name="combinedWith-com.opengamma.strata.data.MarketData-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>combinedWith</h4>
+<pre>public&nbsp;<a href="../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;combinedWith(<a href="../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;other)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../com/opengamma/strata/data/MarketData.html#combinedWith-com.opengamma.strata.data.MarketData-">MarketData</a></code></span></div>
+<div class="block">Combines this market data with another.
+ <p>
+ The result combines both sets of market data.
+ Values are taken from this set of market data if available, otherwise they are taken
+ from the other set.
+ <p>
+ The valuation dates of the sets of market data must be the same.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/opengamma/strata/data/MarketData.html#combinedWith-com.opengamma.strata.data.MarketData-">combinedWith</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>other</code> - the other market data</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the combined market data</dd>
 </dl>
 </li>
 </ul>
@@ -575,7 +634,7 @@ implements <a href="../../../../com/opengamma/strata/data/MarketData.html" title
 <ul class="blockList">
 <li class="blockList">
 <h4>getValues</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;?&gt;,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;getValues()</pre>
+<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="../../../../com/opengamma/strata/data/MarketDataId.html" title="interface in com.opengamma.strata.data">MarketDataId</a>&lt;?&gt;,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;getValues()</pre>
 <div class="block">Gets the market data values.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -589,7 +648,7 @@ implements <a href="../../../../com/opengamma/strata/data/MarketData.html" title
 <ul class="blockList">
 <li class="blockList">
 <h4>getTimeSeries</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/opengamma/strata/data/ObservableId.html" title="interface in com.opengamma.strata.data">ObservableId</a>,<a href="../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&gt;&nbsp;getTimeSeries()</pre>
+<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="../../../../com/opengamma/strata/data/ObservableId.html" title="interface in com.opengamma.strata.data">ObservableId</a>,<a href="../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&gt;&nbsp;getTimeSeries()</pre>
 <div class="block">Gets the time-series.
  <p>
  If a request is made for a time-series that is not in the map, an empty series will be returned.</div>
@@ -708,6 +767,6 @@ implements <a href="../../../../com/opengamma/strata/data/MarketData.html" title
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

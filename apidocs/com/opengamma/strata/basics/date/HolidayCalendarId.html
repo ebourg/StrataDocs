@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":9,"i6":10,"i7":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":9,"i6":10,"i7":10,"i8":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -183,11 +183,18 @@ implements <a href="../../../../../com/opengamma/strata/basics/ReferenceDataId.h
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/date/HolidayCalendar.html" title="interface in com.opengamma.strata.basics.date">HolidayCalendar</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/date/HolidayCalendarId.html#queryValueOrNull-com.opengamma.strata.basics.ReferenceData-">queryValueOrNull</a></span>(<a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Low-level method to query the reference data value associated with this identifier,
+ returning null if not found.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/date/HolidayCalendar.html" title="interface in com.opengamma.strata.basics.date">HolidayCalendar</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/date/HolidayCalendarId.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Resolves this identifier to a holiday calendar using the specified reference data.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/date/HolidayCalendarId.html#toString--">toString</a></span>()</code>
 <div class="block">Returns the name of the identifier.</div>
@@ -304,6 +311,29 @@ implements <a href="../../../../../com/opengamma/strata/basics/ReferenceDataId.h
 <dd>the resolved holiday calendar</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../../../../../com/opengamma/strata/basics/ReferenceDataNotFoundException.html" title="class in com.opengamma.strata.basics">ReferenceDataNotFoundException</a></code> - if the identifier is not found</dd>
+</dl>
+</li>
+</ul>
+<a name="queryValueOrNull-com.opengamma.strata.basics.ReferenceData-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>queryValueOrNull</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/date/HolidayCalendar.html" title="interface in com.opengamma.strata.basics.date">HolidayCalendar</a>&nbsp;queryValueOrNull(<a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/basics/ReferenceDataId.html#queryValueOrNull-com.opengamma.strata.basics.ReferenceData-">ReferenceDataId</a></code></span></div>
+<div class="block">Low-level method to query the reference data value associated with this identifier,
+ returning null if not found.
+ <p>
+ This is a low-level method that obtains the reference data value, returning null instead of an error.
+ Applications should use <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html#getValue-com.opengamma.strata.basics.ReferenceDataId-"><code>ReferenceData.getValue(ReferenceDataId)</code></a> in preference to this method.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/basics/ReferenceDataId.html#queryValueOrNull-com.opengamma.strata.basics.ReferenceData-">queryValueOrNull</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/basics/ReferenceDataId.html" title="interface in com.opengamma.strata.basics">ReferenceDataId</a>&lt;<a href="../../../../../com/opengamma/strata/basics/date/HolidayCalendar.html" title="interface in com.opengamma.strata.basics.date">HolidayCalendar</a>&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>refData</code> - the reference data to lookup the value in</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the reference data value, null if not found</dd>
 </dl>
 </li>
 </ul>
@@ -448,6 +478,6 @@ implements <a href="../../../../../com/opengamma/strata/basics/ReferenceDataId.h
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

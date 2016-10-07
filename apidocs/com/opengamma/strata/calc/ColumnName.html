@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9};
+var methods = {"i0":9,"i1":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -146,6 +146,12 @@ extends <a href="../../../../com/opengamma/strata/collect/TypedString.html" titl
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/calc/ColumnName.html" title="class in com.opengamma.strata.calc">ColumnName</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/ColumnName.html#of-com.opengamma.strata.calc.Measure-">of</a></span>(<a href="../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&nbsp;measure)</code>
+<div class="block">Obtains an instance from the specified measure.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/calc/ColumnName.html" title="class in com.opengamma.strata.calc">ColumnName</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/ColumnName.html#of-java.lang.String-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Obtains an instance from the specified name.</div>
 </td>
@@ -189,7 +195,7 @@ extends <a href="../../../../com/opengamma/strata/collect/TypedString.html" titl
 <a name="of-java.lang.String-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
 <pre>public static&nbsp;<a href="../../../../com/opengamma/strata/calc/ColumnName.html" title="class in com.opengamma.strata.calc">ColumnName</a>&nbsp;of(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
@@ -201,6 +207,24 @@ extends <a href="../../../../com/opengamma/strata/collect/TypedString.html" titl
 <dd><code>name</code> - the name of the column</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a column with the specified name</dd>
+</dl>
+</li>
+</ul>
+<a name="of-com.opengamma.strata.calc.Measure-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>of</h4>
+<pre>public static&nbsp;<a href="../../../../com/opengamma/strata/calc/ColumnName.html" title="class in com.opengamma.strata.calc">ColumnName</a>&nbsp;of(<a href="../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&nbsp;measure)</pre>
+<div class="block">Obtains an instance from the specified measure.
+ <p>
+ The column name will be the same as the name of the measure.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>measure</code> - the measure to extract the name from</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a column with the same name as the measure</dd>
 </dl>
 </li>
 </ul>
@@ -274,6 +298,6 @@ extends <a href="../../../../com/opengamma/strata/collect/TypedString.html" titl
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

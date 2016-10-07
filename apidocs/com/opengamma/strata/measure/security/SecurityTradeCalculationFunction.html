@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -171,13 +171,19 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
 </td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/security/SecurityTradeCalculationFunction.html#identifier-com.opengamma.strata.product.SecurityTrade-">identifier</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityTrade.html" title="class in com.opengamma.strata.product">SecurityTrade</a>&nbsp;target)</code>
+<div class="block">Returns an identifier that should uniquely identify the specified target.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/security/SecurityTradeCalculationFunction.html#naturalCurrency-com.opengamma.strata.product.SecurityTrade-com.opengamma.strata.basics.ReferenceData-">naturalCurrency</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityTrade.html" title="class in com.opengamma.strata.product">SecurityTrade</a>&nbsp;trade,
                <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Returns the "natural" currency for the specified target.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/calc/runner/FunctionRequirements.html" title="class in com.opengamma.strata.calc.runner">FunctionRequirements</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/security/SecurityTradeCalculationFunction.html#requirements-com.opengamma.strata.product.SecurityTrade-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.basics.ReferenceData-">requirements</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityTrade.html" title="class in com.opengamma.strata.product">SecurityTrade</a>&nbsp;trade,
             <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;&nbsp;measures,
@@ -186,13 +192,13 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
 <div class="block">Determines the market data required by this function to perform its calculations.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/security/SecurityTradeCalculationFunction.html#supportedMeasures--">supportedMeasures</a></span>()</code>
 <div class="block">Returns the set of measures that the function can calculate.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityTrade.html" title="class in com.opengamma.strata.product">SecurityTrade</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/security/SecurityTradeCalculationFunction.html#targetType--">targetType</a></span>()</code>
 <div class="block">Gets the target type that this function applies to.</div>
@@ -274,6 +280,31 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
 </dl>
 </li>
 </ul>
+<a name="identifier-com.opengamma.strata.product.SecurityTrade-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>identifier</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;identifier(<a href="../../../../../com/opengamma/strata/product/SecurityTrade.html" title="class in com.opengamma.strata.product">SecurityTrade</a>&nbsp;target)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#identifier-T-">CalculationFunction</a></code></span></div>
+<div class="block">Returns an identifier that should uniquely identify the specified target.
+ <p>
+ This identifier is used in error messages to identify the target.
+ This should normally be overridden to provide a suitable identifier.
+ For example, if the target is a trade, there will typically be a trade identifier available.
+ <p>
+ This method must not throw an exception.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#identifier-T-">identifier</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityTrade.html" title="class in com.opengamma.strata.product">SecurityTrade</a>&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>target</code> - the target of the calculation</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the identifier of the target, empty if no suitable identifier available</dd>
+</dl>
+</li>
+</ul>
 <a name="naturalCurrency-com.opengamma.strata.product.SecurityTrade-com.opengamma.strata.basics.ReferenceData-">
 <!--   -->
 </a>
@@ -319,7 +350,9 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#requirements-T-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.basics.ReferenceData-">CalculationFunction</a></code></span></div>
 <div class="block">Determines the market data required by this function to perform its calculations.
  <p>
- Any market data needed by the <code>calculate</code> method should be specified.</div>
+ Any market data needed by the <code>calculate</code> method should be specified.
+ <p>
+ The set of measures may include measures that are not supported by this function.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#requirements-T-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.basics.ReferenceData-">requirements</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityTrade.html" title="class in com.opengamma.strata.product">SecurityTrade</a>&gt;</code></dd>
@@ -440,6 +473,6 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

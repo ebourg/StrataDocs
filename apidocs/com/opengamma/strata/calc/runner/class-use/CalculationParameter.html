@@ -96,9 +96,21 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.measure.bond">com.opengamma.strata.measure.bond</a></td>
+<td class="colLast">
+<div class="block">Base package for calculation functions.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.measure.calc">com.opengamma.strata.measure.calc</a></td>
 <td class="colLast">
 <div class="block">Additional calculation parameters.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.measure.capfloor">com.opengamma.strata.measure.capfloor</a></td>
+<td class="colLast">
+<div class="block">Calculation functions for Ibor cap/floor products.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -108,18 +120,24 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.measure.fxopt">com.opengamma.strata.measure.fxopt</a></td>
+<td class="colLast">
+<div class="block">Calculation functions for FX option products.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.measure.index">com.opengamma.strata.measure.index</a></td>
 <td class="colLast">
 <div class="block">Calculation functions for index products.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.measure.rate">com.opengamma.strata.measure.rate</a></td>
 <td class="colLast">
 <div class="block">Base package for calculation functions.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.measure.swaption">com.opengamma.strata.measure.swaption</a></td>
 <td class="colLast">
 <div class="block">Calculation functions for swaption products.</div>
@@ -295,6 +313,53 @@
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="com.opengamma.strata.measure.bond">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a> in <a href="../../../../../../com/opengamma/strata/measure/bond/package-summary.html">com.opengamma.strata.measure.bond</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a> in <a href="../../../../../../com/opengamma/strata/measure/bond/package-summary.html">com.opengamma.strata.measure.bond</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/bond/BondFutureOptionMarketDataLookup.html" title="interface in com.opengamma.strata.measure.bond">BondFutureOptionMarketDataLookup</a></span></code>
+<div class="block">The lookup that provides access to bond future volatilities in market data.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/bond/LegalEntityDiscountingMarketDataLookup.html" title="interface in com.opengamma.strata.measure.bond">LegalEntityDiscountingMarketDataLookup</a></span></code>
+<div class="block">The lookup that provides access to legal entity discounting in market data.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/measure/bond/package-summary.html">com.opengamma.strata.measure.bond</a> that return types with arguments of type <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>default <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">LegalEntityDiscountingMarketDataLookup.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/bond/LegalEntityDiscountingMarketDataLookup.html#queryType--">queryType</a></span>()</code>
+<div class="block">Gets the type that the lookup will be queried by.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>default <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">BondFutureOptionMarketDataLookup.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/bond/BondFutureOptionMarketDataLookup.html#queryType--">queryType</a></span>()</code>
+<div class="block">Gets the type that the lookup will be queried by.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.measure.calc">
 <!--   -->
 </a>
@@ -329,13 +394,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a></code></td>
-<td class="colLast"><span class="typeNameLabel">TargetTypeCalculationParameter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/calc/TargetTypeCalculationParameter.html#getDefaultParameter--">getDefaultParameter</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">TradeCounterpartyCalculationParameter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/calc/TradeCounterpartyCalculationParameter.html#getDefaultParameter--">getDefaultParameter</a></span>()</code>
 <div class="block">Gets the default underlying parameter.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a></code></td>
-<td class="colLast"><span class="typeNameLabel">TradeCounterpartyCalculationParameter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/calc/TradeCounterpartyCalculationParameter.html#getDefaultParameter--">getDefaultParameter</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">TargetTypeCalculationParameter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/calc/TargetTypeCalculationParameter.html#getDefaultParameter--">getDefaultParameter</a></span>()</code>
 <div class="block">Gets the default underlying parameter.</div>
 </td>
 </tr>
@@ -350,45 +415,45 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">TargetTypeCalculationParameter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/calc/TargetTypeCalculationParameter.html#filter-com.opengamma.strata.basics.CalculationTarget-com.opengamma.strata.calc.Measure-">filter</a></span>(<a href="../../../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>&nbsp;target,
+<td class="colLast"><span class="typeNameLabel">TradeCounterpartyCalculationParameter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/calc/TradeCounterpartyCalculationParameter.html#filter-com.opengamma.strata.basics.CalculationTarget-com.opengamma.strata.calc.Measure-">filter</a></span>(<a href="../../../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>&nbsp;target,
       <a href="../../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&nbsp;measure)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">TradeCounterpartyCalculationParameter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/calc/TradeCounterpartyCalculationParameter.html#filter-com.opengamma.strata.basics.CalculationTarget-com.opengamma.strata.calc.Measure-">filter</a></span>(<a href="../../../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>&nbsp;target,
+<td class="colLast"><span class="typeNameLabel">TargetTypeCalculationParameter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/calc/TargetTypeCalculationParameter.html#filter-com.opengamma.strata.basics.CalculationTarget-com.opengamma.strata.calc.Measure-">filter</a></span>(<a href="../../../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>&nbsp;target,
       <a href="../../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&nbsp;measure)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;,<a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">TargetTypeCalculationParameter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/calc/TargetTypeCalculationParameter.html#getParameters--">getParameters</a></span>()</code>
-<div class="block">Gets the underlying parameters, keyed by target type.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>,<a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">TradeCounterpartyCalculationParameter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/calc/TradeCounterpartyCalculationParameter.html#getParameters--">getParameters</a></span>()</code>
 <div class="block">Gets the underlying parameters, keyed by counterparty ID.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">TargetTypeCalculationParameter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/calc/TargetTypeCalculationParameter.html#getQueryType--">getQueryType</a></span>()</code>
-<div class="block">Gets the parameter query type.</div>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;,<a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">TargetTypeCalculationParameter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/calc/TargetTypeCalculationParameter.html#getParameters--">getParameters</a></span>()</code>
+<div class="block">Gets the underlying parameters, keyed by target type.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">TradeCounterpartyCalculationParameter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/calc/TradeCounterpartyCalculationParameter.html#getQueryType--">getQueryType</a></span>()</code>
 <div class="block">Gets the parameter query type.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">TargetTypeCalculationParameter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/calc/TargetTypeCalculationParameter.html#getQueryType--">getQueryType</a></span>()</code>
+<div class="block">Gets the parameter query type.</div>
+</td>
+</tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">TargetTypeCalculationParameter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/calc/TargetTypeCalculationParameter.html#queryType--">queryType</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">TradeCounterpartyCalculationParameter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/calc/TradeCounterpartyCalculationParameter.html#queryType--">queryType</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">TradeCounterpartyCalculationParameter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/calc/TradeCounterpartyCalculationParameter.html#queryType--">queryType</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">TargetTypeCalculationParameter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/calc/TargetTypeCalculationParameter.html#queryType--">queryType</a></span>()</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -439,6 +504,41 @@
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="com.opengamma.strata.measure.capfloor">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a> in <a href="../../../../../../com/opengamma/strata/measure/capfloor/package-summary.html">com.opengamma.strata.measure.capfloor</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a> in <a href="../../../../../../com/opengamma/strata/measure/capfloor/package-summary.html">com.opengamma.strata.measure.capfloor</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorMarketDataLookup.html" title="interface in com.opengamma.strata.measure.capfloor">IborCapFloorMarketDataLookup</a></span></code>
+<div class="block">The lookup that provides access to cap/floor volatilities in market data.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/measure/capfloor/package-summary.html">com.opengamma.strata.measure.capfloor</a> that return types with arguments of type <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>default <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">IborCapFloorMarketDataLookup.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorMarketDataLookup.html#queryType--">queryType</a></span>()</code>
+<div class="block">Gets the type that the lookup will be queried by.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.measure.cms">
 <!--   -->
 </a>
@@ -469,6 +569,72 @@
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">CmsSabrExtrapolationParams.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/cms/CmsSabrExtrapolationParams.html#filter-com.opengamma.strata.basics.CalculationTarget-com.opengamma.strata.calc.Measure-">filter</a></span>(<a href="../../../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>&nbsp;target,
       <a href="../../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&nbsp;measure)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.measure.fxopt">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a> in <a href="../../../../../../com/opengamma/strata/measure/fxopt/package-summary.html">com.opengamma.strata.measure.fxopt</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a> in <a href="../../../../../../com/opengamma/strata/measure/fxopt/package-summary.html">com.opengamma.strata.measure.fxopt</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/fxopt/FxOptionMarketDataLookup.html" title="interface in com.opengamma.strata.measure.fxopt">FxOptionMarketDataLookup</a></span></code>
+<div class="block">The lookup that provides access to FX options volatilities in market data.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../com/opengamma/strata/measure/fxopt/package-summary.html">com.opengamma.strata.measure.fxopt</a> that implement <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/fxopt/FxSingleBarrierOptionMethod.html" title="enum in com.opengamma.strata.measure.fxopt">FxSingleBarrierOptionMethod</a></span></code>
+<div class="block">The method to use for pricing FX single barrier options.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/fxopt/FxVanillaOptionMethod.html" title="enum in com.opengamma.strata.measure.fxopt">FxVanillaOptionMethod</a></span></code>
+<div class="block">The method to use for pricing FX vanilla options.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/measure/fxopt/package-summary.html">com.opengamma.strata.measure.fxopt</a> that return types with arguments of type <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">FxVanillaOptionMethod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/fxopt/FxVanillaOptionMethod.html#filter-com.opengamma.strata.basics.CalculationTarget-com.opengamma.strata.calc.Measure-">filter</a></span>(<a href="../../../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>&nbsp;target,
+      <a href="../../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&nbsp;measure)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">FxSingleBarrierOptionMethod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/fxopt/FxSingleBarrierOptionMethod.html#filter-com.opengamma.strata.basics.CalculationTarget-com.opengamma.strata.calc.Measure-">filter</a></span>(<a href="../../../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>&nbsp;target,
+      <a href="../../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&nbsp;measure)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>default <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">FxOptionMarketDataLookup.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/fxopt/FxOptionMarketDataLookup.html#queryType--">queryType</a></span>()</code>
+<div class="block">Gets the type that the lookup will be queried by.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -630,6 +796,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

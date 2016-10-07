@@ -173,6 +173,49 @@
 <div class="block">Returns the details of the failure.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/collect/result/Failure.html" title="class in com.opengamma.strata.collect.result">Failure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Failure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/collect/result/Failure.html#of-java.util.Collection-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/result/FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a>&gt;&nbsp;items)</code>
+<div class="block">Obtains a failure for a non-empty collection of failure items.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/collect/result/Failure.html" title="class in com.opengamma.strata.collect.result">Failure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Failure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/collect/result/Failure.html#of-com.opengamma.strata.collect.result.FailureItem-">of</a></span>(<a href="../../../../../../com/opengamma/strata/collect/result/FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a>&nbsp;item)</code>
+<div class="block">Obtains a failure for a single failure item.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/collect/result/Failure.html" title="class in com.opengamma.strata.collect.result">Failure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Failure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/collect/result/Failure.html#of-com.opengamma.strata.collect.result.FailureItem-com.opengamma.strata.collect.result.FailureItem...-">of</a></span>(<a href="../../../../../../com/opengamma/strata/collect/result/FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a>&nbsp;item,
+  <a href="../../../../../../com/opengamma/strata/collect/result/FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a>...&nbsp;additionalItems)</code>
+<div class="block">Obtains a failure for multiple failure items.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/collect/result/Failure.html" title="class in com.opengamma.strata.collect.result">Failure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Failure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/collect/result/Failure.html#of-com.opengamma.strata.collect.result.FailureReason-java.lang.Exception-">of</a></span>(<a href="../../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a>&nbsp;reason,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&nbsp;cause)</code>
+<div class="block">Obtains a failure from a reason and exception.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/collect/result/Failure.html" title="class in com.opengamma.strata.collect.result">Failure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Failure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/collect/result/Failure.html#of-com.opengamma.strata.collect.result.FailureReason-java.lang.Exception-java.lang.String-java.lang.Object...-">of</a></span>(<a href="../../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a>&nbsp;reason,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&nbsp;cause,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;messageArgs)</code>
+<div class="block">Obtains a failure from a reason, message and exception.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/collect/result/Failure.html" title="class in com.opengamma.strata.collect.result">Failure</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Failure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/collect/result/Failure.html#of-com.opengamma.strata.collect.result.FailureReason-java.lang.String-java.lang.Object...-">of</a></span>(<a href="../../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a>&nbsp;reason,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;messageArgs)</code>
+<div class="block">Obtains a failure from a reason and message.</div>
+</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -295,6 +338,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":18,"i1":18,"i2":17,"i3":6,"i4":18,"i5":17,"i6":17};
+var methods = {"i0":18,"i1":18,"i2":17,"i3":6,"i4":18,"i5":17,"i6":17,"i7":18,"i8":17};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -163,11 +163,24 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/basics/ReferenceData.html#minimal--">minimal</a></span>()</code>
+<div class="block">Obtains the minimal set of reference data.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/basics/ReferenceData.html#of-java.util.Map-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;? extends <a href="../../../../com/opengamma/strata/basics/ReferenceDataId.html" title="interface in com.opengamma.strata.basics">ReferenceDataId</a>&lt;?&gt;,?&gt;&nbsp;values)</code>
 <div class="block">Obtains an instance from a map of reference data.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/basics/ReferenceData.html#queryValueOrNull-com.opengamma.strata.basics.ReferenceDataId-">queryValueOrNull</a></span>(<a href="../../../../com/opengamma/strata/basics/ReferenceDataId.html" title="interface in com.opengamma.strata.basics">ReferenceDataId</a>&lt;T&gt;&nbsp;id)</code>
+<div class="block">Low-level method to query the reference data value associated with the specified identifier,
+ returning null if not found.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/basics/ReferenceData.html#standard--">standard</a></span>()</code>
 <div class="block">Obtains an instance of standard reference data.</div>
@@ -200,7 +213,11 @@ var activeTableTab = "activeTableTab";
  Each entry in the map is a single piece of reference data, keyed by the matching identifier.
  For example, a <a href="../../../../com/opengamma/strata/basics/date/HolidayCalendar.html" title="interface in com.opengamma.strata.basics.date"><code>HolidayCalendar</code></a> can be looked up using a <a href="../../../../com/opengamma/strata/basics/date/HolidayCalendarId.html" title="class in com.opengamma.strata.basics.date"><code>HolidayCalendarId</code></a>.
  The caller must ensure that the each entry in the map corresponds with the parameterized
- type on the identifier.</div>
+ type on the identifier.
+ <p>
+ The resulting <code>ReferenceData</code> instance will include the <a href="../../../../com/opengamma/strata/basics/ReferenceData.html#minimal--">minimal</a>
+ set of reference data that includes non-controversial identifiers that are essential for pricing.
+ To exclude the minimal set of identifiers, use <a href="../../../../com/opengamma/strata/basics/ImmutableReferenceData.html#of-java.util.Map-"><code>ImmutableReferenceData.of(Map)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>values</code> - the reference data values</dd>
@@ -225,6 +242,26 @@ var activeTableTab = "activeTableTab";
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>standard reference data</dd>
+</dl>
+</li>
+</ul>
+<a name="minimal--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>minimal</h4>
+<pre>static&nbsp;<a href="../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;minimal()</pre>
+<div class="block">Obtains the minimal set of reference data.
+ <p>
+ The <a href="../../../../com/opengamma/strata/basics/ReferenceData.html#standard--">standard</a> reference data contains common holiday calendars
+ and indices, but may not be suitable for production use. The minimal reference data contains
+ just those identifiers that are needed by Strata, and that are non-controversial.
+ These are <a href="../../../../com/opengamma/strata/basics/date/HolidayCalendars.html#NO_HOLIDAYS"><code>HolidayCalendars.NO_HOLIDAYS</code></a>, <a href="../../../../com/opengamma/strata/basics/date/HolidayCalendars.html#SAT_SUN"><code>HolidayCalendars.SAT_SUN</code></a>,
+ <a href="../../../../com/opengamma/strata/basics/date/HolidayCalendars.html#FRI_SAT"><code>HolidayCalendars.FRI_SAT</code></a> and <a href="../../../../com/opengamma/strata/basics/date/HolidayCalendars.html#THU_FRI"><code>HolidayCalendars.THU_FRI</code></a>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>minimal reference data</dd>
 </dl>
 </li>
 </ul>
@@ -299,6 +336,28 @@ var activeTableTab = "activeTableTab";
 <dd><code>id</code> - the identifier to find</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the reference data value, empty if not found</dd>
+</dl>
+</li>
+</ul>
+<a name="queryValueOrNull-com.opengamma.strata.basics.ReferenceDataId-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>queryValueOrNull</h4>
+<pre>default&nbsp;&lt;T&gt;&nbsp;T&nbsp;queryValueOrNull(<a href="../../../../com/opengamma/strata/basics/ReferenceDataId.html" title="interface in com.opengamma.strata.basics">ReferenceDataId</a>&lt;T&gt;&nbsp;id)</pre>
+<div class="block">Low-level method to query the reference data value associated with the specified identifier,
+ returning null if not found.
+ <p>
+ This is a low-level method that obtains the reference data value, returning null instead of an error.
+ Applications should use <a href="../../../../com/opengamma/strata/basics/ReferenceData.html#getValue-com.opengamma.strata.basics.ReferenceDataId-"><code>getValue(ReferenceDataId)</code></a> in preference to this method.</div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - the type of the reference data value</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>id</code> - the identifier to find</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the reference data value, null if not found</dd>
 </dl>
 </li>
 </ul>
@@ -392,6 +451,6 @@ var activeTableTab = "activeTableTab";
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

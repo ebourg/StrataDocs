@@ -118,7 +118,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><a href="../../../../com/opengamma/strata/pricer/bond/BondGroup.html" title="class in com.opengamma.strata.pricer.bond">BondGroup</a>, <a href="../../../../com/opengamma/strata/calc/ColumnName.html" title="class in com.opengamma.strata.calc">ColumnName</a>, <a href="../../../../com/opengamma/strata/market/curve/CurveGroupName.html" title="class in com.opengamma.strata.market.curve">CurveGroupName</a>, <a href="../../../../com/opengamma/strata/market/curve/CurveInfoType.html" title="class in com.opengamma.strata.market.curve">CurveInfoType</a>, <a href="../../../../com/opengamma/strata/market/explain/ExplainKey.html" title="class in com.opengamma.strata.market.explain">ExplainKey</a>, <a href="../../../../com/opengamma/strata/data/FieldName.html" title="class in com.opengamma.strata.data">FieldName</a>, <a href="../../../../com/opengamma/strata/pricer/bond/LegalEntityGroup.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityGroup</a>, <a href="../../../../com/opengamma/strata/data/ObservableSource.html" title="class in com.opengamma.strata.data">ObservableSource</a>, <a href="../../../../com/opengamma/strata/product/PositionAttributeType.html" title="class in com.opengamma.strata.product">PositionAttributeType</a>, <a href="../../../../com/opengamma/strata/product/SecurityAttributeType.html" title="class in com.opengamma.strata.product">SecurityAttributeType</a>, <a href="../../../../com/opengamma/strata/market/option/StrikeType.html" title="class in com.opengamma.strata.market.option">StrikeType</a>, <a href="../../../../com/opengamma/strata/market/surface/SurfaceInfoType.html" title="class in com.opengamma.strata.market.surface">SurfaceInfoType</a>, <a href="../../../../com/opengamma/strata/product/TradeAttributeType.html" title="class in com.opengamma.strata.product">TradeAttributeType</a>, <a href="../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a></dd>
+<dd><a href="../../../../com/opengamma/strata/calc/ColumnName.html" title="class in com.opengamma.strata.calc">ColumnName</a>, <a href="../../../../com/opengamma/strata/market/curve/CurveGroupName.html" title="class in com.opengamma.strata.market.curve">CurveGroupName</a>, <a href="../../../../com/opengamma/strata/market/curve/CurveInfoType.html" title="class in com.opengamma.strata.market.curve">CurveInfoType</a>, <a href="../../../../com/opengamma/strata/market/explain/ExplainKey.html" title="class in com.opengamma.strata.market.explain">ExplainKey</a>, <a href="../../../../com/opengamma/strata/data/FieldName.html" title="class in com.opengamma.strata.data">FieldName</a>, <a href="../../../../com/opengamma/strata/pricer/bond/LegalEntityGroup.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityGroup</a>, <a href="../../../../com/opengamma/strata/data/ObservableSource.html" title="class in com.opengamma.strata.data">ObservableSource</a>, <a href="../../../../com/opengamma/strata/product/PositionAttributeType.html" title="class in com.opengamma.strata.product">PositionAttributeType</a>, <a href="../../../../com/opengamma/strata/pricer/bond/RepoGroup.html" title="class in com.opengamma.strata.pricer.bond">RepoGroup</a>, <a href="../../../../com/opengamma/strata/product/SecurityAttributeType.html" title="class in com.opengamma.strata.product">SecurityAttributeType</a>, <a href="../../../../com/opengamma/strata/market/option/StrikeType.html" title="class in com.opengamma.strata.market.option">StrikeType</a>, <a href="../../../../com/opengamma/strata/market/surface/SurfaceInfoType.html" title="class in com.opengamma.strata.market.surface">SurfaceInfoType</a>, <a href="../../../../com/opengamma/strata/product/TradeAttributeType.html" title="class in com.opengamma.strata.product">TradeAttributeType</a>, <a href="../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a></dd>
 </dl>
 <hr>
 <br>
@@ -179,6 +179,14 @@ implements <a href="../../../../com/opengamma/strata/collect/named/Named.html" t
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected </code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/TypedString.html#TypedString-java.lang.String-com.google.common.base.CharMatcher-java.lang.String-">TypedString</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+           <a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/CharMatcher.html?is-external=true" title="class or interface in com.google.common.base">CharMatcher</a>&nbsp;matcher,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;msg)</code>
+<div class="block">Creates an instance, validating the name against a matcher.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected </code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/TypedString.html#TypedString-java.lang.String-java.util.regex.Pattern-java.lang.String-">TypedString</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
            <a href="http://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex">Pattern</a>&nbsp;pattern,
@@ -277,17 +285,41 @@ implements <a href="../../../../com/opengamma/strata/collect/named/Named.html" t
 <a name="TypedString-java.lang.String-java.util.regex.Pattern-java.lang.String-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>TypedString</h4>
 <pre>protected&nbsp;TypedString(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                       <a href="http://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex">Pattern</a>&nbsp;pattern,
                       <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;msg)</pre>
-<div class="block">Creates an instance, validating the name against a regex.</div>
+<div class="block">Creates an instance, validating the name against a regex.
+ <p>
+ In most cases, a <a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/CharMatcher.html?is-external=true" title="class or interface in com.google.common.base"><code>CharMatcher</code></a> will be faster than a regex <a href="http://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex"><code>Pattern</code></a>,
+ typically by over an order of magnitude.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - the name, not empty</dd>
 <dd><code>pattern</code> - the regex pattern for validating the name</dd>
+<dd><code>msg</code> - the message to use to explain validation failure</dd>
+</dl>
+</li>
+</ul>
+<a name="TypedString-java.lang.String-com.google.common.base.CharMatcher-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>TypedString</h4>
+<pre>protected&nbsp;TypedString(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                      <a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/CharMatcher.html?is-external=true" title="class or interface in com.google.common.base">CharMatcher</a>&nbsp;matcher,
+                      <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;msg)</pre>
+<div class="block">Creates an instance, validating the name against a matcher.
+ <p>
+ In most cases, a <a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/CharMatcher.html?is-external=true" title="class or interface in com.google.common.base"><code>CharMatcher</code></a> will be faster than a regex <a href="http://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex"><code>Pattern</code></a>,
+ typically by over an order of magnitude.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - the name, not empty</dd>
+<dd><code>matcher</code> - the matcher for validating the name</dd>
 <dd><code>msg</code> - the message to use to explain validation failure</dd>
 </dl>
 </li>
@@ -460,6 +492,6 @@ implements <a href="../../../../com/opengamma/strata/collect/named/Named.html" t
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

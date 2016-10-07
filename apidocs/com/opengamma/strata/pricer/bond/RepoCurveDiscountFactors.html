@@ -175,21 +175,21 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/RepoCurveDiscountFactors.html#equals-java.lang.Object-">equals</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/bond/BondGroup.html" title="class in com.opengamma.strata.pricer.bond">BondGroup</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/RepoCurveDiscountFactors.html#getBondGroup--">getBondGroup</a></span>()</code>
-<div class="block">Gets the bond group.</div>
-</td>
-</tr>
-<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/RepoCurveDiscountFactors.html#getCurrency--">getCurrency</a></span>()</code>
 <div class="block">Gets the currency.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/RepoCurveDiscountFactors.html#getDiscountFactors--">getDiscountFactors</a></span>()</code>
 <div class="block">Gets the underlying discount factors for a single currency.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/bond/RepoGroup.html" title="class in com.opengamma.strata.pricer.bond">RepoGroup</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/RepoCurveDiscountFactors.html#getRepoGroup--">getRepoGroup</a></span>()</code>
+<div class="block">Gets the repo group.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -214,9 +214,9 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/pricer/bond/RepoCurveDiscountFactors.html" title="class in com.opengamma.strata.pricer.bond">RepoCurveDiscountFactors</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/RepoCurveDiscountFactors.html#of-com.opengamma.strata.pricer.DiscountFactors-com.opengamma.strata.pricer.bond.BondGroup-">of</a></span>(<a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&nbsp;discountFactors,
-  <a href="../../../../../com/opengamma/strata/pricer/bond/BondGroup.html" title="class in com.opengamma.strata.pricer.bond">BondGroup</a>&nbsp;bondGroup)</code>
-<div class="block">Obtains an instance based on discount factors and bond group.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/RepoCurveDiscountFactors.html#of-com.opengamma.strata.pricer.DiscountFactors-com.opengamma.strata.pricer.bond.RepoGroup-">of</a></span>(<a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&nbsp;discountFactors,
+  <a href="../../../../../com/opengamma/strata/pricer/bond/RepoGroup.html" title="class in com.opengamma.strata.pricer.bond">RepoGroup</a>&nbsp;group)</code>
+<div class="block">Obtains an instance based on discount factors and group.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
@@ -272,19 +272,19 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="of-com.opengamma.strata.pricer.DiscountFactors-com.opengamma.strata.pricer.bond.BondGroup-">
+<a name="of-com.opengamma.strata.pricer.DiscountFactors-com.opengamma.strata.pricer.bond.RepoGroup-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
 <pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/pricer/bond/RepoCurveDiscountFactors.html" title="class in com.opengamma.strata.pricer.bond">RepoCurveDiscountFactors</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&nbsp;discountFactors,
-                                          <a href="../../../../../com/opengamma/strata/pricer/bond/BondGroup.html" title="class in com.opengamma.strata.pricer.bond">BondGroup</a>&nbsp;bondGroup)</pre>
-<div class="block">Obtains an instance based on discount factors and bond group.</div>
+                                          <a href="../../../../../com/opengamma/strata/pricer/bond/RepoGroup.html" title="class in com.opengamma.strata.pricer.bond">RepoGroup</a>&nbsp;group)</pre>
+<div class="block">Obtains an instance based on discount factors and group.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>discountFactors</code> - the discount factors</dd>
-<dd><code>bondGroup</code> - the bond group</dd>
+<dd><code>group</code> - the group</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the repo curve discount factors</dd>
 </dl>
@@ -484,17 +484,16 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </dl>
 </li>
 </ul>
-<a name="getBondGroup--">
+<a name="getRepoGroup--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getBondGroup</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/bond/BondGroup.html" title="class in com.opengamma.strata.pricer.bond">BondGroup</a>&nbsp;getBondGroup()</pre>
-<div class="block">Gets the bond group.
+<h4>getRepoGroup</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/bond/RepoGroup.html" title="class in com.opengamma.strata.pricer.bond">RepoGroup</a>&nbsp;getRepoGroup()</pre>
+<div class="block">Gets the repo group.
  <p>
- This defines the bond group that the discount factors are for.
- The bond group typically represents the legal entity and bond security.</div>
+ This defines the group that the discount factors are for.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value of the property, not null</dd>
@@ -610,6 +609,6 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

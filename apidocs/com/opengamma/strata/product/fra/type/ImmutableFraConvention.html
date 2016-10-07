@@ -199,7 +199,7 @@ implements <a href="../../../../../../com/opengamma/strata/product/fra/type/FraC
            double&nbsp;notional,
            double&nbsp;fixedRate,
            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
-<div class="block">Creates a trade based on this convention.</div>
+<div class="block">Creates a trade based on this convention, specifying the end of the FRA.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -330,7 +330,7 @@ implements <a href="../../../../../../com/opengamma/strata/product/fra/type/FraC
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.fra.type.<a href="../../../../../../com/opengamma/strata/product/fra/type/FraConvention.html" title="interface in com.opengamma.strata.product.fra.type">FraConvention</a></h3>
-<code><a href="../../../../../../com/opengamma/strata/product/fra/type/FraConvention.html#calculateSpotDateFromTradeDate-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">calculateSpotDateFromTradeDate</a>, <a href="../../../../../../com/opengamma/strata/product/fra/type/FraConvention.html#extendedEnum--">extendedEnum</a>, <a href="../../../../../../com/opengamma/strata/product/fra/type/FraConvention.html#of-java.lang.String-">of</a>, <a href="../../../../../../com/opengamma/strata/product/fra/type/FraConvention.html#toTrade-java.time.LocalDate-java.time.LocalDate-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.product.common.BuySell-double-double-">toTrade</a></code></li>
+<code><a href="../../../../../../com/opengamma/strata/product/fra/type/FraConvention.html#calculateSpotDateFromTradeDate-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">calculateSpotDateFromTradeDate</a>, <a href="../../../../../../com/opengamma/strata/product/fra/type/FraConvention.html#createTrade-java.time.LocalDate-java.time.Period-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a>, <a href="../../../../../../com/opengamma/strata/product/fra/type/FraConvention.html#extendedEnum--">extendedEnum</a>, <a href="../../../../../../com/opengamma/strata/product/fra/type/FraConvention.html#of-java.lang.String-">of</a>, <a href="../../../../../../com/opengamma/strata/product/fra/type/FraConvention.html#toTrade-java.time.LocalDate-java.time.LocalDate-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.product.common.BuySell-double-double-">toTrade</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.collect.named.Named">
@@ -560,15 +560,22 @@ implements <a href="../../../../../../com/opengamma/strata/product/fra/type/FraC
                             double&nbsp;fixedRate,
                             <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../com/opengamma/strata/product/fra/type/FraConvention.html#createTrade-java.time.LocalDate-java.time.Period-java.time.Period-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">FraConvention</a></code></span></div>
-<div class="block">Creates a trade based on this convention.
+<div class="block">Creates a trade based on this convention, specifying the end of the FRA.
  <p>
  This returns a trade based on the specified periods.
  For example, a '2 x 5' FRA has a period to the start date of 2 months and
- a period to the end date of 5 months
+ a period to the end date of 5 months.
  <p>
  The notional is unsigned, with buy/sell determining the direction of the trade.
  If buying the FRA, the floating rate is received from the counterparty, with the fixed rate being paid.
- If selling the FRA, the floating rate is paid to the counterparty, with the fixed rate being received.</div>
+ If selling the FRA, the floating rate is paid to the counterparty, with the fixed rate being received.
+ <p>
+ The start date will be the trade date, plus spot offset, plus period to start, adjusted to a valid business day.
+ The end date will be the trade date, plus spot offset, plus period to end, adjusted to a valid business day.
+ The adjustment of the start and end date occurs at trade creation.
+ The payment date offset is also applied at trade creation.
+ When the Fra is <a href="../../../../../../com/opengamma/strata/product/fra/Fra.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolved</a>, the start and end date
+ are not adjusted again but the payment date is.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../com/opengamma/strata/product/fra/type/FraConvention.html#createTrade-java.time.LocalDate-java.time.Period-java.time.Period-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/product/fra/type/FraConvention.html" title="interface in com.opengamma.strata.product.fra.type">FraConvention</a></code></dd>
@@ -610,9 +617,9 @@ implements <a href="../../../../../../com/opengamma/strata/product/fra/type/FraC
 <dd><code><a href="../../../../../../com/opengamma/strata/product/fra/type/FraConvention.html#toTrade-com.opengamma.strata.product.TradeInfo-java.time.LocalDate-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.product.common.BuySell-double-double-">toTrade</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/product/fra/type/FraConvention.html" title="interface in com.opengamma.strata.product.fra.type">FraConvention</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>tradeInfo</code> - additional information about the trade</dd>
-<dd><code>startDate</code> - the start date</dd>
-<dd><code>endDate</code> - the end date</dd>
-<dd><code>paymentDate</code> - the payment date</dd>
+<dd><code>startDate</code> - the start date, which should be adjusted to be a valid business day</dd>
+<dd><code>endDate</code> - the end date, which should be adjusted to be a valid business day</dd>
+<dd><code>paymentDate</code> - the payment date, which should be adjusted to be a valid business day</dd>
 <dd><code>buySell</code> - the buy/sell flag</dd>
 <dd><code>notional</code> - the notional amount, in the payment currency of the template</dd>
 <dd><code>fixedRate</code> - the fixed rate, typically derived from the market</dd>
@@ -830,6 +837,6 @@ implements <a href="../../../../../../com/opengamma/strata/product/fra/type/FraC
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

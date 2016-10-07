@@ -51,7 +51,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../com/opengamma/strata/pricer/fxopt/VolatilityAndBucketedSensitivities.html" title="class in com.opengamma.strata.pricer.fxopt"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/pricer/fxopt/VannaVolgaFxVanillaOptionTradePricer.html" title="class in com.opengamma.strata.pricer.fxopt"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?com/opengamma/strata/pricer/fxopt/VannaVolgaFxVanillaOptionProductPricer.html" target="_top">Frames</a></li>
@@ -114,8 +114,8 @@ var activeTableTab = "activeTableTab";
 extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Pricing method for vanilla Forex option transactions with Vanna-Volga method.
  <p>
- The volatility provider must be an instance of <code>BlackVolatilitySmileFxProvider</code>. 
- Each smile of the simle term structure consists of 3 data points, where the middle point corresponds to ATM volatility.
+ The volatilities are expressed using <code>BlackFxOptionSmileVolatilities</code>. 
+ Each smile of the term structure consists of 3 data points, where the middle point corresponds to ATM volatility.
  <p>
  Reference: The vanna-volga method for implied volatilities (2007), A. Castagna and F. Mercurio, Risk, 106-111, January 2007.
  OG implementation: Vanna-volga method for Forex options, version 1.0, June 2012.</div>
@@ -423,7 +423,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html" title="interface in com.opengamma.strata.pricer.fxopt"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../com/opengamma/strata/pricer/fxopt/VolatilityAndBucketedSensitivities.html" title="class in com.opengamma.strata.pricer.fxopt"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/pricer/fxopt/VannaVolgaFxVanillaOptionTradePricer.html" title="class in com.opengamma.strata.pricer.fxopt"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?com/opengamma/strata/pricer/fxopt/VannaVolgaFxVanillaOptionProductPricer.html" target="_top">Frames</a></li>
@@ -463,6 +463,6 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

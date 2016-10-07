@@ -90,6 +90,18 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#com.opengamma.strata.measure.bond">com.opengamma.strata.measure.bond</a></td>
+<td class="colLast">
+<div class="block">Base package for calculation functions.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.measure.capfloor">com.opengamma.strata.measure.capfloor</a></td>
+<td class="colLast">
+<div class="block">Calculation functions for Ibor cap/floor products.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.measure.cms">com.opengamma.strata.measure.cms</a></td>
 <td class="colLast">
 <div class="block">Calculation functions for constant maturity swap (CMS) products.</div>
@@ -126,30 +138,36 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#com.opengamma.strata.measure.fxopt">com.opengamma.strata.measure.fxopt</a></td>
+<td class="colLast">
+<div class="block">Calculation functions for FX option products.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.measure.index">com.opengamma.strata.measure.index</a></td>
 <td class="colLast">
 <div class="block">Calculation functions for index products.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.measure.payment">com.opengamma.strata.measure.payment</a></td>
 <td class="colLast">
 <div class="block">Calculation functions for payment products.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.measure.security">com.opengamma.strata.measure.security</a></td>
 <td class="colLast">
 <div class="block">Calculation functions for futures products.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.measure.swap">com.opengamma.strata.measure.swap</a></td>
 <td class="colLast">
 <div class="block">Calculation functions for swap products.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.measure.swaption">com.opengamma.strata.measure.swaption</a></td>
 <td class="colLast">
 <div class="block">Calculation functions for swaption products.</div>
@@ -249,6 +267,64 @@
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationFunctions.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunctions</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CalculationFunctions.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/calc/runner/CalculationFunctions.html#of-java.util.Map-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;,? extends <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;?&gt;&gt;&nbsp;functions)</code>
 <div class="block">Obtains an instance from the specified functions.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.measure.bond">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a> in <a href="../../../../../../com/opengamma/strata/measure/bond/package-summary.html">com.opengamma.strata.measure.bond</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../com/opengamma/strata/measure/bond/package-summary.html">com.opengamma.strata.measure.bond</a> that implement <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/bond/BondFutureOptionTradeCalculationFunction.html" title="class in com.opengamma.strata.measure.bond">BondFutureOptionTradeCalculationFunction</a></span></code>
+<div class="block">Perform calculations on a single <code>BondFutureOptionTrade</code> for each of a set of scenarios.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="class in com.opengamma.strata.measure.bond">BondFutureTradeCalculationFunction</a></span></code>
+<div class="block">Perform calculations on a single <code>BondFutureTrade</code> for each of a set of scenarios.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/bond/CapitalIndexedBondTradeCalculationFunction.html" title="class in com.opengamma.strata.measure.bond">CapitalIndexedBondTradeCalculationFunction</a></span></code>
+<div class="block">Perform calculations on a single <code>CapitalIndexedBondTrade</code> for each of a set of scenarios.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/bond/FixedCouponBondTradeCalculationFunction.html" title="class in com.opengamma.strata.measure.bond">FixedCouponBondTradeCalculationFunction</a></span></code>
+<div class="block">Perform calculations on a single <code>FixedCouponBondTrade</code> for each of a set of scenarios.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.measure.capfloor">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a> in <a href="../../../../../../com/opengamma/strata/measure/capfloor/package-summary.html">com.opengamma.strata.measure.capfloor</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../com/opengamma/strata/measure/capfloor/package-summary.html">com.opengamma.strata.measure.capfloor</a> that implement <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/capfloor/IborCapFloorTradeCalculationFunction.html" title="class in com.opengamma.strata.measure.capfloor">IborCapFloorTradeCalculationFunction</a></span></code>
+<div class="block">Perform calculations on a single <code>IborCapFloorTrade</code> for each of a set of scenarios.</div>
 </td>
 </tr>
 </tbody>
@@ -381,6 +457,32 @@
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/fx/FxSwapTradeCalculationFunction.html" title="class in com.opengamma.strata.measure.fx">FxSwapTradeCalculationFunction</a></span></code>
 <div class="block">Perform calculations on a single <code>FxSwapTrade</code> for each of a set of scenarios.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.measure.fxopt">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a> in <a href="../../../../../../com/opengamma/strata/measure/fxopt/package-summary.html">com.opengamma.strata.measure.fxopt</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../com/opengamma/strata/measure/fxopt/package-summary.html">com.opengamma.strata.measure.fxopt</a> that implement <a href="../../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/fxopt/FxSingleBarrierOptionTradeCalculationFunction.html" title="class in com.opengamma.strata.measure.fxopt">FxSingleBarrierOptionTradeCalculationFunction</a></span></code>
+<div class="block">Perform calculations on an FX single barrier option trade for each of a set of scenarios.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/measure/fxopt/FxVanillaOptionTradeCalculationFunction.html" title="class in com.opengamma.strata.measure.fxopt">FxVanillaOptionTradeCalculationFunction</a></span></code>
+<div class="block">Perform calculations on an FX vanilla option trade for each of a set of scenarios.</div>
 </td>
 </tr>
 </tbody>
@@ -556,6 +658,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

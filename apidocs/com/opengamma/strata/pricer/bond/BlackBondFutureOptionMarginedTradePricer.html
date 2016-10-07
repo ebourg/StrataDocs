@@ -180,7 +180,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedTradePricer.html#currencyExposure-com.opengamma.strata.product.bond.ResolvedBondFutureOptionTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BondFutureVolatilities-double-">currencyExposure</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOptionTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOptionTrade</a>&nbsp;trade,
-                <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
                 <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BondFutureVolatilities</a>&nbsp;volatilities,
                 double&nbsp;lastOptionSettlementPrice)</code>
 <div class="block">Calculates the currency exposure of the bond future option trade.</div>
@@ -198,7 +198,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedTradePricer.html#presentValue-com.opengamma.strata.product.bond.ResolvedBondFutureOptionTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-double-double-">presentValue</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOptionTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOptionTrade</a>&nbsp;trade,
-            <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+            <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
             <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities,
             double&nbsp;futurePrice,
             double&nbsp;lastOptionSettlementPrice)</code>
@@ -208,7 +208,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedTradePricer.html#presentValue-com.opengamma.strata.product.bond.ResolvedBondFutureOptionTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BondFutureVolatilities-double-">presentValue</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOptionTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOptionTrade</a>&nbsp;trade,
-            <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+            <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
             <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BondFutureVolatilities</a>&nbsp;volatilities,
             double&nbsp;lastOptionSettlementPrice)</code>
 <div class="block">Calculates the present value of the bond future option trade.</div>
@@ -226,7 +226,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptionSensitivity.html" title="class in com.opengamma.strata.pricer.bond">BondFutureOptionSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedTradePricer.html#presentValueSensitivityModelParamsVolatility-com.opengamma.strata.product.bond.ResolvedBondFutureOptionTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-">presentValueSensitivityModelParamsVolatility</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOptionTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOptionTrade</a>&nbsp;futureOptionTrade,
-                                            <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                                            <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
                                             <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities)</code>
 <div class="block">Computes the present value sensitivity to the Black volatility used in the pricing.</div>
 </td>
@@ -234,7 +234,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptionSensitivity.html" title="class in com.opengamma.strata.pricer.bond">BondFutureOptionSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedTradePricer.html#presentValueSensitivityModelParamsVolatility-com.opengamma.strata.product.bond.ResolvedBondFutureOptionTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BlackBondFutureVolatilities-double-">presentValueSensitivityModelParamsVolatility</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOptionTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOptionTrade</a>&nbsp;futureOptionTrade,
-                                            <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                                            <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
                                             <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities,
                                             double&nbsp;futurePrice)</code>
 <div class="block">Computes the present value sensitivity to the Black volatility used in the pricing
@@ -244,7 +244,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedTradePricer.html#presentValueSensitivityRates-com.opengamma.strata.product.bond.ResolvedBondFutureOptionTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BondFutureVolatilities-">presentValueSensitivityRates</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOptionTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOptionTrade</a>&nbsp;trade,
-                            <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                            <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
                             <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BondFutureVolatilities</a>&nbsp;volatilities)</code>
 <div class="block">Calculates the present value sensitivity of the bond future option trade.</div>
 </td>
@@ -252,7 +252,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureOptionMarginedTradePricer.html#price-com.opengamma.strata.product.bond.ResolvedBondFutureOptionTrade-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.pricer.bond.BondFutureVolatilities-">price</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOptionTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOptionTrade</a>&nbsp;trade,
-     <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+     <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
      <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BondFutureVolatilities</a>&nbsp;volatilities)</code>
 <div class="block">Calculates the price of the bond future option trade.</div>
 </td>
@@ -326,7 +326,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>price</h4>
 <pre>public&nbsp;double&nbsp;price(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOptionTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOptionTrade</a>&nbsp;trade,
-                    <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                    <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
                     <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BondFutureVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the price of the bond future option trade.
  <p>
@@ -334,7 +334,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the trade</dd>
-<dd><code>ratesProvider</code> - the rates provider</dd>
+<dd><code>discountingProvider</code> - the discounting provider</dd>
 <dd><code>volatilities</code> - the volatilities</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the price of the product, in decimal form</dd>
@@ -376,7 +376,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>presentValue</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;presentValue(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOptionTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOptionTrade</a>&nbsp;trade,
-                                   <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                                   <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
                                    <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BondFutureVolatilities</a>&nbsp;volatilities,
                                    double&nbsp;lastOptionSettlementPrice)</pre>
 <div class="block">Calculates the present value of the bond future option trade.
@@ -389,7 +389,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the trade</dd>
-<dd><code>ratesProvider</code> - the rates provider</dd>
+<dd><code>discountingProvider</code> - the discounting provider</dd>
 <dd><code>volatilities</code> - the volatilities</dd>
 <dd><code>lastOptionSettlementPrice</code> - the last settlement price used for margining for the option, in decimal form</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -404,7 +404,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>presentValue</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;presentValue(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOptionTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOptionTrade</a>&nbsp;trade,
-                                   <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                                   <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
                                    <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities,
                                    double&nbsp;futurePrice,
                                    double&nbsp;lastOptionSettlementPrice)</pre>
@@ -418,7 +418,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the trade</dd>
-<dd><code>ratesProvider</code> - the rates provider</dd>
+<dd><code>discountingProvider</code> - the discounting provider</dd>
 <dd><code>volatilities</code> - the volatilities</dd>
 <dd><code>futurePrice</code> - the price of the underlying future</dd>
 <dd><code>lastOptionSettlementPrice</code> - the last settlement price used for margining for the option, in decimal form</dd>
@@ -434,7 +434,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>presentValueSensitivityRates</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&nbsp;presentValueSensitivityRates(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOptionTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOptionTrade</a>&nbsp;trade,
-                                                       <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                                                       <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
                                                        <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BondFutureVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Calculates the present value sensitivity of the bond future option trade.
  <p>
@@ -443,7 +443,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the trade</dd>
-<dd><code>ratesProvider</code> - the rates provider</dd>
+<dd><code>discountingProvider</code> - the discounting provider</dd>
 <dd><code>volatilities</code> - the volatilities</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the present value curve sensitivity of the trade</dd>
@@ -457,7 +457,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>presentValueSensitivityModelParamsVolatility</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptionSensitivity.html" title="class in com.opengamma.strata.pricer.bond">BondFutureOptionSensitivity</a>&nbsp;presentValueSensitivityModelParamsVolatility(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOptionTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOptionTrade</a>&nbsp;futureOptionTrade,
-                                                                                <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                                                                                <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
                                                                                 <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities)</pre>
 <div class="block">Computes the present value sensitivity to the Black volatility used in the pricing.
  <p>
@@ -468,7 +468,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>futureOptionTrade</code> - the trade</dd>
-<dd><code>ratesProvider</code> - the rates provider</dd>
+<dd><code>discountingProvider</code> - the discounting provider</dd>
 <dd><code>volatilities</code> - the volatilities</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the price sensitivity</dd>
@@ -482,7 +482,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>presentValueSensitivityModelParamsVolatility</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureOptionSensitivity.html" title="class in com.opengamma.strata.pricer.bond">BondFutureOptionSensitivity</a>&nbsp;presentValueSensitivityModelParamsVolatility(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOptionTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOptionTrade</a>&nbsp;futureOptionTrade,
-                                                                                <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                                                                                <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
                                                                                 <a href="../../../../../com/opengamma/strata/pricer/bond/BlackBondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BlackBondFutureVolatilities</a>&nbsp;volatilities,
                                                                                 double&nbsp;futurePrice)</pre>
 <div class="block">Computes the present value sensitivity to the Black volatility used in the pricing
@@ -493,7 +493,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>futureOptionTrade</code> - the trade</dd>
-<dd><code>ratesProvider</code> - the rates provider</dd>
+<dd><code>discountingProvider</code> - the discounting provider</dd>
 <dd><code>volatilities</code> - the volatilities</dd>
 <dd><code>futurePrice</code> - the price of the underlying future</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -508,7 +508,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>currencyExposure</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a>&nbsp;currencyExposure(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOptionTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOptionTrade</a>&nbsp;trade,
-                                            <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                                            <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
                                             <a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureVolatilities.html" title="interface in com.opengamma.strata.pricer.bond">BondFutureVolatilities</a>&nbsp;volatilities,
                                             double&nbsp;lastOptionSettlementPrice)</pre>
 <div class="block">Calculates the currency exposure of the bond future option trade.
@@ -518,7 +518,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>trade</code> - the trade</dd>
-<dd><code>ratesProvider</code> - the rates provider</dd>
+<dd><code>discountingProvider</code> - the discounting provider</dd>
 <dd><code>volatilities</code> - the volatilities</dd>
 <dd><code>lastOptionSettlementPrice</code> - the last settlement price used for margining for the option, in decimal form</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -621,6 +621,6 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://opengamma.github.io/StrataDocs">opengamma.github.io/StrataDocs</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
+<p class="legalCopy"><small><i>Copyright 2009-Present by OpenGamma Inc. and individual contributors</i><br/><i>Apache v2 licensed</i><br/><i>Additional documentation can be found at <a href="http://strata.opengamma.io">strata.opengamma.io</a>.</i><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-12092825-5']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script></small></p>
 </body>
 </html>

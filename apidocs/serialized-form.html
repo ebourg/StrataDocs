@@ -295,6 +295,51 @@
 </li>
 </ul>
 </li>
+<li class="blockList"><a name="com.opengamma.strata.basics.currency.FxMatrix">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/basics/currency/FxMatrix.html" title="class in com.opengamma.strata.basics.currency">com.opengamma.strata.basics.currency.FxMatrix</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>currencies</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">K</a>,<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">V</a>&gt; currencies</pre>
+<div class="block">The map between the currencies and their position within the
+ <code>rates</code> array. Generally the position reflects the order
+ in which the currencies were added, so the first currency added
+ will be assigned 0, the second 1 etc.
+ <p>
+ An ImmutableMap is used so that the currencies are correctly
+ ordered when the <a href="com/opengamma/strata/basics/currency/FxMatrix.html#toString--"><code>FxMatrix.toString()</code></a> method is called.</div>
+</li>
+<li class="blockListLast">
+<h4>rates</h4>
+<pre><a href="com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a> rates</pre>
+<div class="block">The matrix with all the exchange rates. Each row represents the
+ rates required to convert a unit of particular currency to all
+ other currencies in the matrix.
+ <p>
+ If currencies c1 and c2 are assigned indexes i and j respectively
+ in the <code>currencies</code> map, then the entry [i][j] is such that
+ 1 unit of currency c1 is worth <code>rates[i][j]</code> units of
+ currency c2.
+ <p>
+ If <code>currencies.get(EUR)</code> = 0 and <code>currencies.get(USD)</code> = 1,
+ then the element <code>rates[0][1]</code> is likely to be around
+ 1.40 and <code>rates[1][0]</code> around 0.7142. The rate <code>rates[1][0]</code>
+ will be computed from fxRate[0][1] when the object is constructed
+ by the builder. All the element of the matrix are meaningful and coherent.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.basics.currency.FxRate">
 <!--   -->
 </a>
@@ -2263,6 +2308,32 @@
 </li>
 </ul>
 </li>
+<li class="blockList"><a name="com.opengamma.strata.collect.result.ValueWithFailures">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">com.opengamma.strata.collect.result.ValueWithFailures</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>value</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> value</pre>
+<div class="block">The success value.</div>
+</li>
+<li class="blockListLast">
+<h4>failures</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">E</a>&gt; failures</pre>
+<div class="block">The failure items.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="blockList">
@@ -2562,6 +2633,40 @@
 </li>
 </ul>
 </li>
+<li class="blockList"><a name="com.opengamma.strata.data.MarketDataFxRateProvider">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/data/MarketDataFxRateProvider.html" title="class in com.opengamma.strata.data">com.opengamma.strata.data.MarketDataFxRateProvider</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>marketData</h4>
+<pre><a href="com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a> marketData</pre>
+<div class="block">The market data that provides the FX rates.</div>
+</li>
+<li class="blockList">
+<h4>fxRatesSource</h4>
+<pre><a href="com/opengamma/strata/data/ObservableSource.html" title="class in com.opengamma.strata.data">ObservableSource</a> fxRatesSource</pre>
+<div class="block">The source of market data for FX rates.</div>
+</li>
+<li class="blockListLast">
+<h4>triangulationCurrency</h4>
+<pre><a href="com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a> triangulationCurrency</pre>
+<div class="block">The triangulation currency to use.
+ <p>
+ If specified, this currency is used to triangulate FX rates in preference to the standard approach.
+ This would be useful if all FX rates are supplied relative to a currency other than USD.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.data.MarketDataNotFoundException">
 <!--   -->
 </a>
@@ -2585,6 +2690,77 @@
 <li class="blockList">
 <h2 title="Package">Package&nbsp;com.opengamma.strata.data.scenario</h2>
 <ul class="blockList">
+<li class="blockList"><a name="com.opengamma.strata.data.scenario.CurrencyScenarioArray">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/data/scenario/CurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">com.opengamma.strata.data.scenario.CurrencyScenarioArray</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockListLast">
+<h4>amounts</h4>
+<pre><a href="com/opengamma/strata/basics/currency/CurrencyAmountArray.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmountArray</a> amounts</pre>
+<div class="block">The currency amounts, one per scenario.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.data.scenario.DoubleScenarioArray">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/data/scenario/DoubleScenarioArray.html" title="class in com.opengamma.strata.data.scenario">com.opengamma.strata.data.scenario.DoubleScenarioArray</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockListLast">
+<h4>values</h4>
+<pre><a href="com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a> values</pre>
+<div class="block">The calculated values, one per scenario.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.data.scenario.FxRateScenarioArray">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/data/scenario/FxRateScenarioArray.html" title="class in com.opengamma.strata.data.scenario">com.opengamma.strata.data.scenario.FxRateScenarioArray</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>pair</h4>
+<pre><a href="com/opengamma/strata/basics/currency/CurrencyPair.html" title="class in com.opengamma.strata.basics.currency">CurrencyPair</a> pair</pre>
+<div class="block">The currency pair.
+ The pair is formed of two parts, the base and the counter.
+ In the pair 'AAA/BBB' the base is 'AAA' and the counter is 'BBB'.</div>
+</li>
+<li class="blockListLast">
+<h4>rates</h4>
+<pre><a href="com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a> rates</pre>
+<div class="block">The rates applicable to the currency pair.
+ One unit of the base currency is exchanged for this amount of the counter currency.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.data.scenario.ImmutableScenarioMarketData">
 <!--   -->
 </a>
@@ -2618,6 +2794,27 @@
 <div class="block">The time-series of market data values.
  <p>
  If a request is made for a time-series that is not in the map, an empty series will be returned.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.data.scenario.MultiCurrencyScenarioArray">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/data/scenario/MultiCurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">com.opengamma.strata.data.scenario.MultiCurrencyScenarioArray</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockListLast">
+<h4>amounts</h4>
+<pre><a href="com/opengamma/strata/basics/currency/MultiCurrencyAmountArray.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmountArray</a> amounts</pre>
+<div class="block">The multi-currency amounts, one per scenario.</div>
 </li>
 </ul>
 </li>
@@ -3241,6 +3438,32 @@
 </li>
 </ul>
 </li>
+<li class="blockList"><a name="com.opengamma.strata.market.curve.CurveParallelShifts">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/market/curve/CurveParallelShifts.html" title="class in com.opengamma.strata.market.curve">com.opengamma.strata.market.curve.CurveParallelShifts</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>shiftType</h4>
+<pre><a href="com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a> shiftType</pre>
+<div class="block">The type of shift to apply to the y-values of the curve.</div>
+</li>
+<li class="blockListLast">
+<h4>shiftAmounts</h4>
+<pre><a href="com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a> shiftAmounts</pre>
+<div class="block">The amount by which the y-values are shifted.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.market.curve.CurveParameterSize">
 <!--   -->
 </a>
@@ -3262,6 +3485,43 @@
 <h4>parameterCount</h4>
 <pre>int parameterCount</pre>
 <div class="block">The number of parameters.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.market.curve.CurvePointShifts">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/market/curve/CurvePointShifts.html" title="class in com.opengamma.strata.market.curve">com.opengamma.strata.market.curve.CurvePointShifts</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>shiftType</h4>
+<pre><a href="com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a> shiftType</pre>
+<div class="block">The type of shift applied to the curve rates.</div>
+</li>
+<li class="blockList">
+<h4>shifts</h4>
+<pre><a href="com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a> shifts</pre>
+<div class="block">The shift to apply to the rates.
+ <p>
+ There is one row in the matrix for each scenario and one column for each node in the curve.
+ Node indices are found using <code>nodeIndices</code>.</div>
+</li>
+<li class="blockListLast">
+<h4>nodeIndices</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">K</a>,<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">V</a>&gt; nodeIndices</pre>
+<div class="block">Indices of each curve node, keyed by an object identifying the node.
+ <p>
+ The key is typically the node <a href="com/opengamma/strata/market/param/ParameterMetadata.html#getIdentifier--">identifier</a>.
+ The key may also be the node <a href="com/opengamma/strata/market/param/ParameterMetadata.html#getLabel--">label</a>.</div>
 </li>
 </ul>
 </li>
@@ -4267,6 +4527,53 @@
 </li>
 </ul>
 </li>
+<li class="blockList"><a name="com.opengamma.strata.market.observable.QuoteScenarioArray">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/market/observable/QuoteScenarioArray.html" title="class in com.opengamma.strata.market.observable">com.opengamma.strata.market.observable.QuoteScenarioArray</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockListLast">
+<h4>quotes</h4>
+<pre><a href="com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a> quotes</pre>
+<div class="block">The values of the quotes.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.market.observable.QuoteScenarioArrayId">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/market/observable/QuoteScenarioArrayId.html" title="class in com.opengamma.strata.market.observable">com.opengamma.strata.market.observable.QuoteScenarioArrayId</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>id</h4>
+<pre><a href="com/opengamma/strata/market/observable/QuoteId.html" title="class in com.opengamma.strata.market.observable">QuoteId</a> id</pre>
+<div class="block">The market data key identifying the quote.</div>
+</li>
+<li class="blockListLast">
+<h4>cachedHashCode</h4>
+<pre>int cachedHashCode</pre>
+<div class="block">The cached hash code, using the racy single-check idiom.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="blockList">
@@ -4393,6 +4700,57 @@
 </li>
 </ul>
 </li>
+<li class="blockList"><a name="com.opengamma.strata.market.param.CrossGammaParameterSensitivity">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/market/param/CrossGammaParameterSensitivity.html" title="class in com.opengamma.strata.market.param">com.opengamma.strata.market.param.CrossGammaParameterSensitivity</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>marketDataName</h4>
+<pre><a href="com/opengamma/strata/data/MarketDataName.html" title="class in com.opengamma.strata.data">MarketDataName</a>&lt;<a href="com/opengamma/strata/data/MarketDataName.html" title="type parameter in MarketDataName">T</a>&gt; marketDataName</pre>
+<div class="block">The market data name.
+ <p>
+ This name is used in the market data system to identify the data that the sensitivities refer to.</div>
+</li>
+<li class="blockList">
+<h4>parameterMetadata</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">E</a>&gt; parameterMetadata</pre>
+<div class="block">The list of parameter metadata.
+ <p>
+ There is one entry for each parameter.</div>
+</li>
+<li class="blockList">
+<h4>order</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">E</a>&gt; order</pre>
+<div class="block">The sensitivity order.
+ <p>
+ This defines the order of sensitivity values, which can be used as a key to interpret <code>sensitivity</code>.</div>
+</li>
+<li class="blockList">
+<h4>currency</h4>
+<pre><a href="com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a> currency</pre>
+<div class="block">The currency of the sensitivity.</div>
+</li>
+<li class="blockListLast">
+<h4>sensitivity</h4>
+<pre><a href="com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a> sensitivity</pre>
+<div class="block">The parameter sensitivity values.
+ <p>
+ The curve delta sensitivities to parameterized market data.
+ This is a <code>n x m</code> matrix, where <code>n</code> must agree with the size of <code>parameterMetadata</code> and 
+ <code>m</code> must be the sum of parameter count in <code>order</code>.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.market.param.CurrencyParameterSensitivities">
 <!--   -->
 </a>
@@ -4411,6 +4769,48 @@
 <div class="block">The parameter sensitivities.
  <p>
  Each entry includes details of the <a href="com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param"><code>ParameterizedData</code></a> it relates to.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.market.param.CurrencyParameterSensitivity">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">com.opengamma.strata.market.param.CurrencyParameterSensitivity</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>marketDataName</h4>
+<pre><a href="com/opengamma/strata/data/MarketDataName.html" title="class in com.opengamma.strata.data">MarketDataName</a>&lt;<a href="com/opengamma/strata/data/MarketDataName.html" title="type parameter in MarketDataName">T</a>&gt; marketDataName</pre>
+<div class="block">The market data name.
+ <p>
+ This name is used in the market data system to identify the data that the sensitivities refer to.</div>
+</li>
+<li class="blockList">
+<h4>parameterMetadata</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">E</a>&gt; parameterMetadata</pre>
+<div class="block">The list of parameter metadata.
+ <p>
+ There is one entry for each parameter.</div>
+</li>
+<li class="blockList">
+<h4>currency</h4>
+<pre><a href="com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a> currency</pre>
+<div class="block">The currency of the sensitivity.</div>
+</li>
+<li class="blockListLast">
+<h4>sensitivity</h4>
+<pre><a href="com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a> sensitivity</pre>
+<div class="block">The parameter sensitivity values.
+ <p>
+ There is one sensitivity value for each parameter.</div>
 </li>
 </ul>
 </li>
@@ -4544,6 +4944,43 @@
 <div class="block">The parameter sensitivities.
  <p>
  Each entry includes details of the <a href="com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param"><code>ParameterizedData</code></a> it relates to.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.market.param.UnitParameterSensitivity">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/market/param/UnitParameterSensitivity.html" title="class in com.opengamma.strata.market.param">com.opengamma.strata.market.param.UnitParameterSensitivity</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>marketDataName</h4>
+<pre><a href="com/opengamma/strata/data/MarketDataName.html" title="class in com.opengamma.strata.data">MarketDataName</a>&lt;<a href="com/opengamma/strata/data/MarketDataName.html" title="type parameter in MarketDataName">T</a>&gt; marketDataName</pre>
+<div class="block">The market data name.
+ <p>
+ This name is used in the market data system to identify the data that the sensitivities refer to.</div>
+</li>
+<li class="blockList">
+<h4>parameterMetadata</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">E</a>&gt; parameterMetadata</pre>
+<div class="block">The list of parameter metadata.
+ <p>
+ There is one entry for each parameter.</div>
+</li>
+<li class="blockListLast">
+<h4>sensitivity</h4>
+<pre><a href="com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a> sensitivity</pre>
+<div class="block">The parameter sensitivity values.
+ <p>
+ There is one sensitivity value for each parameter.</div>
 </li>
 </ul>
 </li>
@@ -6815,6 +7252,52 @@
 </li>
 </ul>
 </li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.index.NormalIborFutureOptionExpirySimpleMoneynessVolatilities">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/pricer/index/NormalIborFutureOptionExpirySimpleMoneynessVolatilities.html" title="class in com.opengamma.strata.pricer.index">com.opengamma.strata.pricer.index.NormalIborFutureOptionExpirySimpleMoneynessVolatilities</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>index</h4>
+<pre><a href="com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a> index</pre>
+<div class="block">The index of the underlying future.</div>
+</li>
+<li class="blockList">
+<h4>valuationDateTime</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a> valuationDateTime</pre>
+<div class="block">The valuation date-time.
+ <p>
+ The volatilities are calibrated for this date-time.</div>
+</li>
+<li class="blockList">
+<h4>surface</h4>
+<pre><a href="com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a> surface</pre>
+<div class="block">The normal volatility surface.
+ <p>
+ The x-value of the surface is the expiry, as a year fraction.
+ The y-value of the surface is the simple moneyness.</div>
+</li>
+<li class="blockList">
+<h4>moneynessOnPrice</h4>
+<pre>boolean moneynessOnPrice</pre>
+<div class="block">Whether the moneyness is on the price (true) or on the rate (false).</div>
+</li>
+<li class="blockListLast">
+<h4>dayCount</h4>
+<pre><a href="com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a> dayCount</pre>
+<div class="block">The day count convention of the surface.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="blockList">
@@ -6885,6 +7368,73 @@
 <div class="block">The valuation date.
  <p>
  The volatilities are calibrated for this date-time.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.model.SabrInterestRateParameters">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/pricer/model/SabrInterestRateParameters.html" title="class in com.opengamma.strata.pricer.model">com.opengamma.strata.pricer.model.SabrInterestRateParameters</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>alphaSurface</h4>
+<pre><a href="com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a> alphaSurface</pre>
+<div class="block">The alpha (volatility level) surface.
+ <p>
+ The first dimension is the expiry and the second the tenor.</div>
+</li>
+<li class="blockList">
+<h4>betaSurface</h4>
+<pre><a href="com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a> betaSurface</pre>
+<div class="block">The beta (elasticity) surface.
+ <p>
+ The first dimension is the expiry and the second the tenor.</div>
+</li>
+<li class="blockList">
+<h4>rhoSurface</h4>
+<pre><a href="com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a> rhoSurface</pre>
+<div class="block">The rho (correlation) surface.
+ <p>
+ The first dimension is the expiry and the second the tenor.</div>
+</li>
+<li class="blockList">
+<h4>nuSurface</h4>
+<pre><a href="com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a> nuSurface</pre>
+<div class="block">The nu (volatility of volatility) surface.
+ <p>
+ The first dimension is the expiry and the second the tenor.</div>
+</li>
+<li class="blockList">
+<h4>shiftSurface</h4>
+<pre><a href="com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a> shiftSurface</pre>
+<div class="block">The shift parameter of shifted SABR model.
+ <p>
+ The first dimension is the expiry and the second the tenor.
+ The shift is set to be 0 unless specified.</div>
+</li>
+<li class="blockList">
+<h4>sabrVolatilityFormula</h4>
+<pre><a href="com/opengamma/strata/pricer/model/SabrVolatilityFormula.html" title="interface in com.opengamma.strata.pricer.model">SabrVolatilityFormula</a> sabrVolatilityFormula</pre>
+<div class="block">The SABR volatility formula.</div>
+</li>
+<li class="blockList">
+<h4>dayCount</h4>
+<pre><a href="com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a> dayCount</pre>
+<div class="block">The day count convention of the surfaces.</div>
+</li>
+<li class="blockListLast">
+<h4>paramCombiner</h4>
+<pre><a href="com/opengamma/strata/market/param/ParameterizedDataCombiner.html" title="class in com.opengamma.strata.market.param">ParameterizedDataCombiner</a> paramCombiner</pre>
+<div class="block">The parameter combiner.</div>
 </li>
 </ul>
 </li>
@@ -7448,6 +7998,76 @@
 <h4>dayCount</h4>
 <pre><a href="com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a> dayCount</pre>
 <div class="block">The day count convention of the surface.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.swaption.SabrParametersSwaptionVolatilities">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/pricer/swaption/SabrParametersSwaptionVolatilities.html" title="class in com.opengamma.strata.pricer.swaption">com.opengamma.strata.pricer.swaption.SabrParametersSwaptionVolatilities</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>name</h4>
+<pre><a href="com/opengamma/strata/pricer/swaption/SwaptionVolatilitiesName.html" title="class in com.opengamma.strata.pricer.swaption">SwaptionVolatilitiesName</a> name</pre>
+<div class="block">The name.</div>
+</li>
+<li class="blockList">
+<h4>convention</h4>
+<pre><a href="com/opengamma/strata/product/swap/type/FixedIborSwapConvention.html" title="interface in com.opengamma.strata.product.swap.type">FixedIborSwapConvention</a> convention</pre>
+<div class="block">The swap convention that the volatilities are to be used for.</div>
+</li>
+<li class="blockList">
+<h4>valuationDateTime</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a> valuationDateTime</pre>
+<div class="block">The valuation date-time.
+ <p>
+ The volatilities are calibrated for this date-time.</div>
+</li>
+<li class="blockList">
+<h4>parameters</h4>
+<pre><a href="com/opengamma/strata/pricer/model/SabrInterestRateParameters.html" title="class in com.opengamma.strata.pricer.model">SabrInterestRateParameters</a> parameters</pre>
+<div class="block">The SABR model parameters.
+ <p>
+ Each model parameter of SABR model is a surface.
+ The x-value of the surface is the expiry, as a year fraction.
+ The y-value of the surface is the swap tenor, as a year fraction rounded to the month.</div>
+</li>
+<li class="blockList">
+<h4>dataSensitivityAlpha</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">E</a>&gt; dataSensitivityAlpha</pre>
+<div class="block">The sensitivity of the Alpha parameters to the raw data used for calibration.
+ <p>
+ The order of the sensitivities have to be coherent with the surface parameter metadata.</div>
+</li>
+<li class="blockList">
+<h4>dataSensitivityBeta</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">E</a>&gt; dataSensitivityBeta</pre>
+<div class="block">The sensitivity of the Beta parameters to the raw data used for calibration.
+ <p>
+ The order of the sensitivities have to be coherent with the surface parameter metadata.</div>
+</li>
+<li class="blockList">
+<h4>dataSensitivityRho</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">E</a>&gt; dataSensitivityRho</pre>
+<div class="block">The sensitivity of the Rho parameters to the raw data used for calibration.
+ <p>
+ The order of the sensitivities have to be coherent with the surface parameter metadata.</div>
+</li>
+<li class="blockListLast">
+<h4>dataSensitivityNu</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">E</a>&gt; dataSensitivityNu</pre>
+<div class="block">The sensitivity of the Nu parameters to the raw data used for calibration.
+ <p>
+ The order of the sensitivities have to be coherent with the surface parameter metadata.</div>
 </li>
 </ul>
 </li>

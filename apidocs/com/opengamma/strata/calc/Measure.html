@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":6,"i2":17};
+var methods = {"i0":17,"i1":6,"i2":6,"i3":17};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -146,12 +146,18 @@ extends <a href="../../../../com/opengamma/strata/collect/named/Named.html" titl
 </td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/Measure.html#getName--">getName</a></span>()</code>
+<div class="block">Gets the name that uniquely identifies this measure.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/Measure.html#isCurrencyConvertible--">isCurrencyConvertible</a></span>()</code>
 <div class="block">Flag indicating whether measure values should be automatically converted to the reporting currency.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/calc/Measure.html#of-java.lang.String-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uniqueName)</code>
 <div class="block">Obtains an instance from the specified unique name.</div>
@@ -163,7 +169,7 @@ extends <a href="../../../../com/opengamma/strata/collect/named/Named.html" titl
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.opengamma.strata.collect.named.<a href="../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a></h3>
-<code><a href="../../../../com/opengamma/strata/collect/named/Named.html#getName--">getName</a>, <a href="../../../../com/opengamma/strata/collect/named/Named.html#of-java.lang.Class-java.lang.String-">of</a></code></li>
+<code><a href="../../../../com/opengamma/strata/collect/named/Named.html#of-java.lang.Class-java.lang.String-">of</a></code></li>
 </ul>
 </li>
 </ul>
@@ -194,6 +200,24 @@ extends <a href="../../../../com/opengamma/strata/collect/named/Named.html" titl
 <dd>the measure</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the name is not known</dd>
+</dl>
+</li>
+</ul>
+<a name="getName--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getName</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getName()</pre>
+<div class="block">Gets the name that uniquely identifies this measure.
+ <p>
+ This name is used in serialization and can be parsed using <a href="../../../../com/opengamma/strata/calc/Measure.html#of-java.lang.String-"><code>of(String)</code></a>.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/opengamma/strata/collect/named/Named.html#getName--">getName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the unique name</dd>
 </dl>
 </li>
 </ul>

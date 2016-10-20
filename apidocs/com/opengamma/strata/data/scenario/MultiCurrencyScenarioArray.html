@@ -110,13 +110,13 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario">ScenarioArray</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a>&gt;, <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioFxConvertible.html" title="interface in com.opengamma.strata.data.scenario">ScenarioFxConvertible</a>&lt;<a href="../../../../../com/opengamma/strata/data/scenario/CurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">CurrencyScenarioArray</a>&gt;, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a></dd>
+<dd><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario">ScenarioArray</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a>&gt;, <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioFxConvertible.html" title="interface in com.opengamma.strata.data.scenario">ScenarioFxConvertible</a>&lt;<a href="../../../../../com/opengamma/strata/data/scenario/CurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">CurrencyScenarioArray</a>&gt;, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">MultiCurrencyScenarioArray</span>
 extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
-implements <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario">ScenarioArray</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a>&gt;, <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioFxConvertible.html" title="interface in com.opengamma.strata.data.scenario">ScenarioFxConvertible</a>&lt;<a href="../../../../../com/opengamma/strata/data/scenario/CurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">CurrencyScenarioArray</a>&gt;, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a></pre>
+implements <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioArray.html" title="interface in com.opengamma.strata.data.scenario">ScenarioArray</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a>&gt;, <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioFxConvertible.html" title="interface in com.opengamma.strata.data.scenario">ScenarioFxConvertible</a>&lt;<a href="../../../../../com/opengamma/strata/data/scenario/CurrencyScenarioArray.html" title="class in com.opengamma.strata.data.scenario">CurrencyScenarioArray</a>&gt;, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
 <div class="block">A currency-convertible scenario array for multi-currency amounts, holding one amount for each scenario.
  <p>
  This contains a list of amounts in a multiple currencies, one amount for each scenario.
@@ -124,6 +124,10 @@ implements <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioAr
  <p>
  This class uses less memory than an instance based on a list of <a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency"><code>MultiCurrencyAmount</code></a> instances.
  Internally, it stores the data using a map of currency to <a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array"><code>DoubleArray</code></a>.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../serialized-form.html#com.opengamma.strata.data.scenario.MultiCurrencyScenarioArray">Serialized Form</a></dd>
+</dl>
 </li>
 </ul>
 </div>

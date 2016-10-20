@@ -6,6 +6,22 @@ permalink: /releases/
 Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
+## Strata v1.1.1
+
+*20 October 2016*
+
+This minor release contains 8 fixed issues - 3 bug fixes and 5 enhancements.
+
+* Bug fix - No scaling is applied to single-node bucketed gamma in the measures API: [#1383](https://github.com/OpenGamma/Strata/issues/1383)
+* Bug fix - ExplainKey.FROM_FIXING_SERIES is only populated if the fixing date equals the valuation date: [#1380](https://github.com/OpenGamma/Strata/issues/1380)
+* Bug fix - Measure is not Joda-convertible: [#1386](https://github.com/OpenGamma/Strata/issues/1386)
+* Enhancement - Add serializable interface: [#1393](https://github.com/OpenGamma/Strata/issues/1393)
+* Enhancement - Added GBP/EUR cross-currency convention: [#1390](https://github.com/OpenGamma/Strata/issues/1390)
+* Enhancement - Support single-node bucketed gamma for BulletPaymentTrade: [#1382](https://github.com/OpenGamma/Strata/issues/1382)
+* Enhancement - Add ValueWithFailures: [#1396](https://github.com/OpenGamma/Strata/issues/1396)
+* Enhancement - Allow Strata to be on the classpath more than once: [#1394](https://github.com/OpenGamma/Strata/issues/1394)
+
+
 ## Strata v1.1
 
 *7 October 2016*

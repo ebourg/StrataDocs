@@ -37,6 +37,7 @@ The main entry point is
 The following measures are available:
 
 * present value, and associated sensitivity
+* single-node bucketed gamma
 * currency exposure
 * current cash
 

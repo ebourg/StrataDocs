@@ -43,6 +43,7 @@ The main entry point is
 The following measures are available:
 
 * present value, detailed breakdown, and associated sensitivity
+* single-node bucketed gamma
 * par rate
 * par spread
 * currency exposure

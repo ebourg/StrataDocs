@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -183,24 +183,31 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinitionBuilder.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinitionBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinitionBuilder.html#addSeasonality-com.opengamma.strata.market.curve.CurveName-com.opengamma.strata.market.curve.SeasonalityDefinition-">addSeasonality</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&nbsp;curveName,
+              <a href="../../../../../com/opengamma/strata/market/curve/SeasonalityDefinition.html" title="class in com.opengamma.strata.market.curve">SeasonalityDefinition</a>&nbsp;seasonalityDefinition)</code>
+<div class="block">Adds a seasonality to the curve group definition.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinitionBuilder.html#build--">build</a></span>()</code>
 <div class="block">Builds the definition of the curve group from the data in this object.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinitionBuilder.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinitionBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinitionBuilder.html#computeJacobian-boolean-">computeJacobian</a></span>(boolean&nbsp;computeJacobian)</code>
 <div class="block">Sets the 'compute Jacobian' flag of the curve group definition.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinitionBuilder.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinitionBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinitionBuilder.html#computePvSensitivityToMarketQuote-boolean-">computePvSensitivityToMarketQuote</a></span>(boolean&nbsp;computePvSensitivityToMarketQuote)</code>
 <div class="block">Sets the 'compute PV sensitivity to market quote' flag of the curve group definition.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinitionBuilder.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinitionBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinitionBuilder.html#name-com.opengamma.strata.market.curve.CurveGroupName-">name</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupName.html" title="class in com.opengamma.strata.market.curve">CurveGroupName</a>&nbsp;name)</code>
 <div class="block">Sets the name of the curve group definition.</div>
@@ -409,6 +416,24 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dd><code>currency</code> - the currency for which the curve provides discount rates</dd>
 <dd><code>index</code> - the index for which the curve provides forward rates</dd>
 <dd><code>otherIndices</code> - the additional indices for which the curve provides forward rates</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this builder</dd>
+</dl>
+</li>
+</ul>
+<a name="addSeasonality-com.opengamma.strata.market.curve.CurveName-com.opengamma.strata.market.curve.SeasonalityDefinition-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addSeasonality</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinitionBuilder.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinitionBuilder</a>&nbsp;addSeasonality(<a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&nbsp;curveName,
+                                                  <a href="../../../../../com/opengamma/strata/market/curve/SeasonalityDefinition.html" title="class in com.opengamma.strata.market.curve">SeasonalityDefinition</a>&nbsp;seasonalityDefinition)</pre>
+<div class="block">Adds a seasonality to the curve group definition.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>curveName</code> - the name of the curve</dd>
+<dd><code>seasonalityDefinition</code> - the seasonality associated to the curve</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this builder</dd>
 </dl>

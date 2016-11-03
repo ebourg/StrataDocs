@@ -149,6 +149,11 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?is
 <div class="block">A relative shift where the value is scaled by the shift amount.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/market/ShiftType.html#SCALED">SCALED</a></span></code>
+<div class="block">A scaled shift where the value is multiplied by the shift.</div>
+</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -250,13 +255,25 @@ the order they are declared.</div>
 <a name="ABSOLUTE">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>ABSOLUTE</h4>
 <pre>public static final&nbsp;<a href="../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a> ABSOLUTE</pre>
 <div class="block">An absolute shift where the shift amount is added to the value.
  <p>
  <code>shiftedValue = (value + shiftAmount)</code></div>
+</li>
+</ul>
+<a name="SCALED">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>SCALED</h4>
+<pre>public static final&nbsp;<a href="../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a> SCALED</pre>
+<div class="block">A scaled shift where the value is multiplied by the shift.
+ <p>
+ <code>shiftedValue = (value * shiftAmount)</code></div>
 </li>
 </ul>
 </li>

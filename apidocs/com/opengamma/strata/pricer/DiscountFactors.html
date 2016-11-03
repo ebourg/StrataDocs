@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":18,"i3":6,"i4":18,"i5":6,"i6":17,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":18,"i13":18,"i14":6,"i15":18,"i16":18,"i17":6,"i18":18,"i19":18,"i20":18};
+var methods = {"i0":6,"i1":6,"i2":18,"i3":18,"i4":18,"i5":6,"i6":17,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":18,"i13":18,"i14":6,"i15":18,"i16":18,"i17":18,"i18":18,"i19":18,"i20":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -154,7 +154,7 @@ extends <a href="../../../../com/opengamma/strata/market/MarketDataView.html" ti
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code>double</code></td>
+<td class="colFirst"><code>default double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#discountFactorWithSpread-double-double-com.opengamma.strata.pricer.CompoundedRateType-int-">discountFactorWithSpread</a></span>(double&nbsp;yearFraction,
                         double&nbsp;zSpread,
                         <a href="../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
@@ -249,7 +249,7 @@ extends <a href="../../../../com/opengamma/strata/market/MarketDataView.html" ti
 </td>
 </tr>
 <tr id="i17" class="rowColor">
-<td class="colFirst"><code><a href="../../../../com/opengamma/strata/pricer/ZeroRateSensitivity.html" title="class in com.opengamma.strata.pricer">ZeroRateSensitivity</a></code></td>
+<td class="colFirst"><code>default <a href="../../../../com/opengamma/strata/pricer/ZeroRateSensitivity.html" title="class in com.opengamma.strata.pricer">ZeroRateSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#zeroRatePointSensitivityWithSpread-double-com.opengamma.strata.basics.currency.Currency-double-com.opengamma.strata.pricer.CompoundedRateType-int-">zeroRatePointSensitivityWithSpread</a></span>(double&nbsp;yearFraction,
                                   <a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;sensitivityCurrency,
                                   double&nbsp;zSpread,
@@ -508,10 +508,10 @@ extends <a href="../../../../com/opengamma/strata/market/MarketDataView.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>discountFactorWithSpread</h4>
-<pre>double&nbsp;discountFactorWithSpread(double&nbsp;yearFraction,
-                                double&nbsp;zSpread,
-                                <a href="../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
-                                int&nbsp;periodsPerYear)</pre>
+<pre>default&nbsp;double&nbsp;discountFactorWithSpread(double&nbsp;yearFraction,
+                                        double&nbsp;zSpread,
+                                        <a href="../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
+                                        int&nbsp;periodsPerYear)</pre>
 <div class="block">Gets the discount factor for the specified year fraction with z-spread.
  <p>
  The discount factor represents the time value of money for the specified currency
@@ -787,11 +787,11 @@ extends <a href="../../../../com/opengamma/strata/market/MarketDataView.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>zeroRatePointSensitivityWithSpread</h4>
-<pre><a href="../../../../com/opengamma/strata/pricer/ZeroRateSensitivity.html" title="class in com.opengamma.strata.pricer">ZeroRateSensitivity</a>&nbsp;zeroRatePointSensitivityWithSpread(double&nbsp;yearFraction,
-                                                       <a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;sensitivityCurrency,
-                                                       double&nbsp;zSpread,
-                                                       <a href="../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
-                                                       int&nbsp;periodsPerYear)</pre>
+<pre>default&nbsp;<a href="../../../../com/opengamma/strata/pricer/ZeroRateSensitivity.html" title="class in com.opengamma.strata.pricer">ZeroRateSensitivity</a>&nbsp;zeroRatePointSensitivityWithSpread(double&nbsp;yearFraction,
+                                                               <a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;sensitivityCurrency,
+                                                               double&nbsp;zSpread,
+                                                               <a href="../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
+                                                               int&nbsp;periodsPerYear)</pre>
 <div class="block">Calculates the zero rate point sensitivity with z-spread at the specified year fraction specifying
  the currency of the sensitivity.
  <p>

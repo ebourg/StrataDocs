@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":17,"i2":6,"i3":18,"i4":18,"i5":17,"i6":17,"i7":17,"i8":18};
+var methods = {"i0":6,"i1":17,"i2":18,"i3":6,"i4":18,"i5":18,"i6":17,"i7":17,"i8":17,"i9":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -153,43 +153,49 @@ extends <a href="../../../../../com/opengamma/strata/collect/named/Named.html" t
 </td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>default int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/RollConvention.html#getDayOfMonth--">getDayOfMonth</a></span>()</code>
+<div class="block">Gets the day-of-month that the roll convention implies.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/RollConvention.html#getName--">getName</a></span>()</code>
 <div class="block">Gets the name that uniquely identifies this convention.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>default boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/RollConvention.html#matches-java.time.LocalDate-">matches</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date)</code>
 <div class="block">Checks if the date matches the rules of the roll convention.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>default <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/RollConvention.html#next-java.time.LocalDate-com.opengamma.strata.basics.schedule.Frequency-">next</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date,
     <a href="../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;periodicFrequency)</code>
 <div class="block">Calculates the next date in the sequence after the input date.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/basics/schedule/RollConvention.html" title="interface in com.opengamma.strata.basics.schedule">RollConvention</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/RollConvention.html#of-java.lang.String-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uniqueName)</code>
 <div class="block">Obtains an instance from the specified unique name.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/basics/schedule/RollConvention.html" title="interface in com.opengamma.strata.basics.schedule">RollConvention</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/RollConvention.html#ofDayOfMonth-int-">ofDayOfMonth</a></span>(int&nbsp;dayOfMonth)</code>
 <div class="block">Obtains an instance from the day-of-month.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/basics/schedule/RollConvention.html" title="interface in com.opengamma.strata.basics.schedule">RollConvention</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/RollConvention.html#ofDayOfWeek-java.time.DayOfWeek-">ofDayOfWeek</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/DayOfWeek.html?is-external=true" title="class or interface in java.time">DayOfWeek</a>&nbsp;dayOfWeek)</code>
 <div class="block">Obtains an instance from the day-of-week.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>default <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/RollConvention.html#previous-java.time.LocalDate-com.opengamma.strata.basics.schedule.Frequency-">previous</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date,
         <a href="../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;periodicFrequency)</code>
@@ -393,6 +399,25 @@ extends <a href="../../../../../com/opengamma/strata/collect/named/Named.html" t
 <dd><code>periodicFrequency</code> - the periodic frequency of the schedule</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the adjusted date</dd>
+</dl>
+</li>
+</ul>
+<a name="getDayOfMonth--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDayOfMonth</h4>
+<pre>default&nbsp;int&nbsp;getDayOfMonth()</pre>
+<div class="block">Gets the day-of-month that the roll convention implies.
+ <p>
+ This extracts the day-of-month for simple roll conventions.
+ The numeric roll conventions will return their day-of-month.
+ The 'EOM' convention will return 31.
+ All other conventions will return zero.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the day-of-month that the roll convention implies, zero if not applicable</dd>
 </dl>
 </li>
 </ul>

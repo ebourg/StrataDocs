@@ -523,14 +523,15 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
  If the stub convention is present, then it will be validated against the stub dates.
  If the stub convention and stub dates are not present, then no stubs are allowed.
  <p>
- There is special handling for the last business day of month. If all the following
- conditions hold true, then the unadjusted start date is presumed to be the last day of the month.
+ There is special handling for pre-adjusted start dates to avoid creating incorrect stubs.
+ If all the following conditions hold true, then the unadjusted start date is treated
+ as being the day-of-month implied by the roll convention (the adjusted date is unaffected).
  <ul>
- <li>the roll convention is 'EOM'
- <li>the start date is the last business day of month, using the calendar from <code>businessDayAdjustment</code>
- <li>the <code>firstRegularStartDate</code> property is null
  <li>the <code>startDateBusinessDayAdjustment</code> property equals <a href="../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html#NONE"><code>BusinessDayAdjustment.NONE</code></a>
- <li>applying <code>businessDayAdjustment</code> to the last day of the month yields the last business day
+ <li>the <code>firstRegularStartDate</code> property is null
+ <li>the roll convention is numeric or 'EOM'
+ <li>applying <code>businessDayAdjustment</code> to the day-of-month implied by the roll convention
+  yields the specified start date
  </ul></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -590,14 +591,15 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
  If the stub convention and stub dates are not present, then no stubs are allowed.
  If the frequency is 'Term' explicit stub dates are disallowed, and the roll and stub convention are ignored.
  <p>
- There is special handling for the last business day of month. If all the following
- conditions hold true, then the unadjusted start date is presumed to be the last day of the month.
+ There is special handling for pre-adjusted start dates to avoid creating incorrect stubs.
+ If all the following conditions hold true, then the unadjusted start date is treated
+ as being the day-of-month implied by the roll convention (the adjusted date is unaffected).
  <ul>
- <li>the roll convention is 'EOM'
- <li>the start date is the last business day of month, using the calendar from <code>businessDayAdjustment</code>
- <li>the <code>firstRegularStartDate</code> property is null
  <li>the <code>startDateBusinessDayAdjustment</code> property equals <a href="../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html#NONE"><code>BusinessDayAdjustment.NONE</code></a>
- <li>applying <code>businessDayAdjustment</code> to the last day of the month yields the last business day
+ <li>the <code>firstRegularStartDate</code> property is null
+ <li>the roll convention is numeric or 'EOM'
+ <li>applying <code>businessDayAdjustment</code> to the day-of-month implied by the roll convention
+  yields the specified start date
  </ul></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -628,14 +630,15 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
  If the stub convention is present, then it will be validated against the stub dates.
  If the stub convention and stub dates are not present, then no stubs are allowed.
  <p>
- There is special handling for the last business day of month. If all the following
- conditions hold true, then the unadjusted start date is presumed to be the last day of the month.
+ There is special handling for pre-adjusted start dates to avoid creating incorrect stubs.
+ If all the following conditions hold true, then the unadjusted start date is treated
+ as being the day-of-month implied by the roll convention (the adjusted date is unaffected).
  <ul>
- <li>the roll convention is 'EOM'
- <li>the start date is the last business day of month, using the calendar from <code>businessDayAdjustment</code>
- <li>the <code>firstRegularStartDate</code> property is null
  <li>the <code>startDateBusinessDayAdjustment</code> property equals <a href="../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html#NONE"><code>BusinessDayAdjustment.NONE</code></a>
- <li>applying <code>businessDayAdjustment</code> to the last day of the month yields the last business day
+ <li>the <code>firstRegularStartDate</code> property is null
+ <li>the roll convention is numeric or 'EOM'
+ <li>applying <code>businessDayAdjustment</code> to the day-of-month implied by the roll convention
+  yields the specified start date
  </ul></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>

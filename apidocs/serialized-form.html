@@ -3155,6 +3155,13 @@
  the curve is not built by the Strata curve calibrator.</div>
 </li>
 <li class="blockList">
+<h4>seasonalityDefinitions</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">K</a>,<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">V</a>&gt; seasonalityDefinitions</pre>
+<div class="block">Definitions which specify which seasonality should be used for some price index curves.
+ <p>
+ If a curve linked to a price index does not have an entry in the map, no seasonality is used for that curve.</div>
+</li>
+<li class="blockList">
 <h4>computeJacobian</h4>
 <pre>boolean computeJacobian</pre>
 <div class="block">The flag indicating if the Jacobian matrices should be computed and stored in metadata or not.</div>
@@ -3585,6 +3592,50 @@
 </li>
 </ul>
 </li>
+<li class="blockList"><a name="com.opengamma.strata.market.curve.InflationNodalCurve">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/market/curve/InflationNodalCurve.html" title="class in com.opengamma.strata.market.curve">com.opengamma.strata.market.curve.InflationNodalCurve</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>underlying</h4>
+<pre><a href="com/opengamma/strata/market/curve/NodalCurve.html" title="interface in com.opengamma.strata.market.curve">NodalCurve</a> underlying</pre>
+<div class="block">The underlying curve, before the seasonality adjustment. 
+ This includes the fixed initial value, which is not treated as a parameter.</div>
+</li>
+<li class="blockList">
+<h4>seasonality</h4>
+<pre><a href="com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a> seasonality</pre>
+<div class="block">Describes the monthly seasonal adjustments.
+ The array has a dimension of 12, one element for each month.
+ The adjustments are described as a perturbation to the existing values.
+ No adjustment to the fixing value.</div>
+</li>
+<li class="blockList">
+<h4>adjustmentType</h4>
+<pre><a href="com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a> adjustmentType</pre>
+<div class="block">The shift type applied to the unadjusted value and the adjustment.
+ (value, seasonality) -> adjustmentType.applyShift(value, seasonality).</div>
+</li>
+<li class="blockList">
+<h4>xFixing</h4>
+<pre>double xFixing</pre>
+</li>
+<li class="blockListLast">
+<h4>yFixing</h4>
+<pre>double yFixing</pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.market.curve.InterpolatedNodalCurve">
 <!--   -->
 </a>
@@ -3779,6 +3830,37 @@
 <pre>double shiftAmount</pre>
 <div class="block">The amount by which y-values are shifted.
  The meaning of this amount is determined by <code>#getShiftType()</code>.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.market.curve.SeasonalityDefinition">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/market/curve/SeasonalityDefinition.html" title="class in com.opengamma.strata.market.curve">com.opengamma.strata.market.curve.SeasonalityDefinition</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>seasonalityMonthOnMonth</h4>
+<pre><a href="com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a> seasonalityMonthOnMonth</pre>
+<div class="block">The month on month adjustment.
+ <p>
+ This is an array of length 12, with the first element being the adjustment from
+ January to February, the second element being the adjustment from February to March,
+ and so on to the 12th element being the adjustment from December to January.</div>
+</li>
+<li class="blockListLast">
+<h4>adjustmentType</h4>
+<pre><a href="com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a> adjustmentType</pre>
+<div class="block">The shift type applied to the unadjusted value and the adjustment.
+ (value, seasonality) -> adjustmentType.applyShift(value, seasonality).</div>
 </li>
 </ul>
 </li>
@@ -7816,19 +7898,14 @@
  Only one value is stored per month. The value is stored in the time-series on the
  last date of each month (which may be a non-working day).</div>
 </li>
-<li class="blockList">
+<li class="blockListLast">
 <h4>seasonality</h4>
 <pre><a href="com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a> seasonality</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Kept for backward compatibility. The seasonality should be in the curve. See <a href="com/opengamma/strata/market/curve/InflationNodalCurve.html" title="class in com.opengamma.strata.market.curve"><code>InflationNodalCurve</code></a>.</span></div>
 <div class="block">Describes the seasonal adjustments.
  The array has a dimension of 12, one element for each month, starting from January.
  The adjustments are multiplicative. For each month, the price index is the one obtained
  from the interpolated part of the curve multiplied by the seasonal adjustment.</div>
-</li>
-<li class="blockListLast">
-<h4>extendedCurve</h4>
-<pre><a href="com/opengamma/strata/market/curve/NodalCurve.html" title="interface in com.opengamma.strata.market.curve">NodalCurve</a> extendedCurve</pre>
-<div class="block">The underlying extended curve.
- This has an additional curve node at the start equal to the last point in the time-series.</div>
 </li>
 </ul>
 </li>

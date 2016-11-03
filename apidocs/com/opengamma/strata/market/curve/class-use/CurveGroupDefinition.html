@@ -206,23 +206,39 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CurveGroupDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#bindTimeSeries-java.time.LocalDate-java.util.Map-">bindTimeSeries</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>,<a href="../../../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&gt;&nbsp;tsMap)</code>
+<div class="block">Returns a definition that is bound to a time-series.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CurveGroupDefinitionBuilder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/CurveGroupDefinitionBuilder.html#build--">build</a></span>()</code>
 <div class="block">Builds the definition of the curve group from the data in this object.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CurveGroupDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#filtered-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">filtered</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
         <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Returns a filtered version of this definition with no invalid nodes.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CurveGroupDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#of-com.opengamma.strata.market.curve.CurveGroupName-java.util.Collection-java.util.Collection-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/CurveGroupName.html" title="class in com.opengamma.strata.market.curve">CurveGroupName</a>&nbsp;name,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/CurveGroupEntry.html" title="class in com.opengamma.strata.market.curve">CurveGroupEntry</a>&gt;&nbsp;entries,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a>&gt;&nbsp;curveDefinitions)</code>
 <div class="block">Returns a curve group definition with the specified name and containing the specified entries.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CurveGroupDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#of-com.opengamma.strata.market.curve.CurveGroupName-java.util.Collection-java.util.Collection-java.util.Map-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/CurveGroupName.html" title="class in com.opengamma.strata.market.curve">CurveGroupName</a>&nbsp;name,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/CurveGroupEntry.html" title="class in com.opengamma.strata.market.curve">CurveGroupEntry</a>&gt;&nbsp;entries,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a>&gt;&nbsp;curveDefinitions,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>,<a href="../../../../../../com/opengamma/strata/market/curve/SeasonalityDefinition.html" title="class in com.opengamma.strata.market.curve">SeasonalityDefinition</a>&gt;&nbsp;seasonalityDefinitions)</code>
+<div class="block">Returns a curve group definition with the specified name and containing the specified entries and seasonality.</div>
 </td>
 </tr>
 <tr class="rowColor">

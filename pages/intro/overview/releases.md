@@ -6,6 +6,19 @@ permalink: /releases/
 Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
+## Strata v1.1.2
+
+*3 November 2016*
+
+This minor release contains 5 fixed issues - 1 bug fix and 4 enhancements.
+
+* Bug fix - Example should output to target directory: [#1404](https://github.com/OpenGamma/Strata/issues/1404)
+* Enhancement - Inflation seasonality: [#1407](https://github.com/OpenGamma/Strata/issues/1407)
+* Enhancement - Enhance schedule generation: [#1403](https://github.com/OpenGamma/Strata/issues/1403)
+* Enhancement - Add SCALED shift type: [#1402](https://github.com/OpenGamma/Strata/issues/1402)
+* Enhancement - More example: [#1391](https://github.com/OpenGamma/Strata/issues/1391)
+
+
 ## Strata v1.1.1
 
 *20 October 2016*

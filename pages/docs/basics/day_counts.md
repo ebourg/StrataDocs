@@ -365,7 +365,7 @@ The denominator is determined by examining the period end date (the date of the 
 The denominator is 366 if the schedule period contains February 29th, if not it is 365.<br />
 The first day in the schedule period is included, the last day is excluded.<br />
 Read the Javadoc for a discussion of the algorithm, the
-<a href="http://www.banque-france.fr/fileadmin/user_upload/banque_de_france/archipel/publications/bdf_bof/bdf_bof_1999/bdf_bof_01.pdf">original French text</a>
+<a href="http://www.acp.banque-france.fr/fileadmin/user_upload/banque_de_france/archipel/publications/bdf_bof/bdf_bof_1999/bdf_bof_01.pdf">original French text</a>
 and confusion with the <a href="http://www.isda.org/c_and_a/pdf/ACT-ACT-ISDA-1999.pdf">ISDA clarification</a>.</td>
 </tr>
 <tr>

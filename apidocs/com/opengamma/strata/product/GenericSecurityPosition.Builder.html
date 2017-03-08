@@ -197,7 +197,7 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.Builder.html" title="class in com.opengamma.strata.product">GenericSecurityPosition.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.Builder.html#shortQuantity-double-">shortQuantity</a></span>(double&nbsp;shortQuantity)</code>
-<div class="block">Sets the quantity that was traded.</div>
+<div class="block">Sets the short quantity of the security.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
@@ -336,7 +336,7 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
  This allows additional information to be attached to the position.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>info</code> - the new value</dd>
+<dd><code>info</code> - the new value, not null</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this, for chaining, not null</dd>
 </dl>
@@ -384,7 +384,7 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <li class="blockList">
 <h4>shortQuantity</h4>
 <pre>public&nbsp;<a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.Builder.html" title="class in com.opengamma.strata.product">GenericSecurityPosition.Builder</a>&nbsp;shortQuantity(double&nbsp;shortQuantity)</pre>
-<div class="block">Sets the quantity that was traded.
+<div class="block">Sets the short quantity of the security.
  <p>
  This is the quantity of the underlying security that has been short sold.
  The quantity cannot be negative, as that would imply the position is long.</div>

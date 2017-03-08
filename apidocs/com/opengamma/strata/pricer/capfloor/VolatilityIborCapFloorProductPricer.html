@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -110,7 +110,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><a href="../../../../../com/opengamma/strata/pricer/capfloor/BlackIborCapFloorProductPricer.html" title="class in com.opengamma.strata.pricer.capfloor">BlackIborCapFloorProductPricer</a>, <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapFloorProductPricer.html" title="class in com.opengamma.strata.pricer.capfloor">NormalIborCapFloorProductPricer</a></dd>
+<dd><a href="../../../../../com/opengamma/strata/pricer/capfloor/BlackIborCapFloorProductPricer.html" title="class in com.opengamma.strata.pricer.capfloor">BlackIborCapFloorProductPricer</a>, <a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapFloorProductPricer.html" title="class in com.opengamma.strata.pricer.capfloor">NormalIborCapFloorProductPricer</a>, <a href="../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapFloorProductPricer.html" title="class in com.opengamma.strata.pricer.capfloor">SabrIborCapFloorProductPricer</a></dd>
 </dl>
 <hr>
 <br>
@@ -198,6 +198,12 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../com/opengamma/strata/pricer/swap/DiscountingSwapLegPricer.html" title="class in com.opengamma.strata.pricer.swap">DiscountingSwapLegPricer</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/VolatilityIborCapFloorProductPricer.html#getPayLegPricer--">getPayLegPricer</a></span>()</code>
+<div class="block">Gets the pay leg pricer.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/VolatilityIborCapFloorProductPricer.html#presentValue-com.opengamma.strata.product.capfloor.ResolvedIborCapFloor-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">presentValue</a></span>(<a href="../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloor.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloor</a>&nbsp;capFloor,
             <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
@@ -205,7 +211,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Calculates the present value of the Ibor cap/floor product.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/VolatilityIborCapFloorProductPricer.html#presentValueDelta-com.opengamma.strata.product.capfloor.ResolvedIborCapFloor-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">presentValueDelta</a></span>(<a href="../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloor.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloor</a>&nbsp;capFloor,
                  <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
@@ -213,7 +219,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Calculates the present value delta of the Ibor cap/floor product.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/VolatilityIborCapFloorProductPricer.html#presentValueGamma-com.opengamma.strata.product.capfloor.ResolvedIborCapFloor-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">presentValueGamma</a></span>(<a href="../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloor.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloor</a>&nbsp;capFloor,
                  <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
@@ -221,7 +227,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Calculates the present value gamma of the Ibor cap/floor product.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/VolatilityIborCapFloorProductPricer.html#presentValueSensitivityModelParamsVolatility-com.opengamma.strata.product.capfloor.ResolvedIborCapFloor-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">presentValueSensitivityModelParamsVolatility</a></span>(<a href="../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloor.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloor</a>&nbsp;capFloor,
                                             <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
@@ -229,7 +235,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Calculates the present value volatility sensitivity of the Ibor cap/floor product.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/VolatilityIborCapFloorProductPricer.html#presentValueSensitivityRates-com.opengamma.strata.product.capfloor.ResolvedIborCapFloor-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">presentValueSensitivityRates</a></span>(<a href="../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloor.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloor</a>&nbsp;capFloor,
                             <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
@@ -237,7 +243,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Calculates the present value rates sensitivity of the Ibor cap/floor product.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/VolatilityIborCapFloorProductPricer.html#presentValueTheta-com.opengamma.strata.product.capfloor.ResolvedIborCapFloor-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">presentValueTheta</a></span>(<a href="../../../../../com/opengamma/strata/product/capfloor/ResolvedIborCapFloor.html" title="class in com.opengamma.strata.product.capfloor">ResolvedIborCapFloor</a>&nbsp;capFloor,
                  <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
@@ -309,6 +315,20 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="getPayLegPricer--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPayLegPricer</h4>
+<pre>protected&nbsp;<a href="../../../../../com/opengamma/strata/pricer/swap/DiscountingSwapLegPricer.html" title="class in com.opengamma.strata.pricer.swap">DiscountingSwapLegPricer</a>&nbsp;getPayLegPricer()</pre>
+<div class="block">Gets the pay leg pricer.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the pay leg pricer</dd>
+</dl>
+</li>
+</ul>
 <a name="presentValue-com.opengamma.strata.product.capfloor.ResolvedIborCapFloor-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilities-">
 <!--   -->
 </a>

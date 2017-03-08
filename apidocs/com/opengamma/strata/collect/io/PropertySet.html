@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":9,"i5":10,"i6":10,"i7":10,"i8":10,"i9":9,"i10":9,"i11":10,"i12":10,"i13":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":9,"i5":10,"i6":10,"i7":10,"i8":10,"i9":9,"i10":9,"i11":10,"i12":10,"i13":10,"i14":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -204,18 +204,24 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr id="i11" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/io/PropertySet.html" title="class in com.opengamma.strata.collect.io">PropertySet</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/io/PropertySet.html#overrideWith-com.opengamma.strata.collect.io.PropertySet-">overrideWith</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/PropertySet.html" title="class in com.opengamma.strata.collect.io">PropertySet</a>&nbsp;other)</code>
+<div class="block">Overrides this property set with another.</div>
+</td>
+</tr>
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/io/PropertySet.html#toString--">toString</a></span>()</code>
 <div class="block">Returns a string describing the property set.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/io/PropertySet.html#value-java.lang.String-">value</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</code>
 <div class="block">Gets a single value from this property set.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/io/PropertySet.html#valueList-java.lang.String-">valueList</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</code>
 <div class="block">Gets the list of values associated with the specified key.</div>
@@ -424,7 +430,28 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/collect/io/PropertySet.html" title="class in com.opengamma.strata.collect.io">PropertySet</a>&nbsp;combinedWith(<a href="../../../../../com/opengamma/strata/collect/io/PropertySet.html" title="class in com.opengamma.strata.collect.io">PropertySet</a>&nbsp;other)</pre>
 <div class="block">Combines this property set with another.
  <p>
- The specified property set takes precedence.</div>
+ This property set takes precedence.
+ Any order of any additional keys will be retained, with those keys located after the base set of keys.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>other</code> - the other property set</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the combined property set</dd>
+</dl>
+</li>
+</ul>
+<a name="overrideWith-com.opengamma.strata.collect.io.PropertySet-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>overrideWith</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/collect/io/PropertySet.html" title="class in com.opengamma.strata.collect.io">PropertySet</a>&nbsp;overrideWith(<a href="../../../../../com/opengamma/strata/collect/io/PropertySet.html" title="class in com.opengamma.strata.collect.io">PropertySet</a>&nbsp;other)</pre>
+<div class="block">Overrides this property set with another.
+ <p>
+ The specified property set takes precedence.
+ The order of any existing keys will be retained, with the value replaced.
+ Any order of any additional keys will be retained, with those keys located after the base set of keys.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - the other property set</dd>

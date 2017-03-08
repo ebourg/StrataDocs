@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -192,6 +192,12 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.Builder.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.Builder.html#upfrontFee-com.opengamma.strata.basics.currency.Payment-">upfrontFee</a></span>(<a href="../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;upfrontFee)</code>
+<div class="block">Sets the upfront fee of the product.</div>
+</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.org.joda.beans.impl.direct.DirectFieldsBeanBuilder">
@@ -324,7 +330,7 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
  This allows additional information to be attached to the trade.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>info</code> - the new value</dd>
+<dd><code>info</code> - the new value, not null</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this, for chaining, not null</dd>
 </dl>
@@ -343,6 +349,27 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>product</code> - the new value, not null</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this, for chaining, not null</dd>
+</dl>
+</li>
+</ul>
+<a name="upfrontFee-com.opengamma.strata.basics.currency.Payment-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>upfrontFee</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade.Builder</a>&nbsp;upfrontFee(<a href="../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;upfrontFee)</pre>
+<div class="block">Sets the upfront fee of the product.
+ <p>
+ This specifies a single amount payable by the buyer to the seller
+ Thus the sign must be compatible with the product Pay/Receive flag.
+ <p>
+ Some CDSs, especially legacy products, are traded at par and the upfront fee is not paid.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>upfrontFee</code> - the new value</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this, for chaining, not null</dd>
 </dl>

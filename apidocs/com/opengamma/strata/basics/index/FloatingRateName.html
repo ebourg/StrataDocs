@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":6,"i2":6,"i3":6,"i4":17,"i5":6,"i6":6,"i7":6};
+var methods = {"i0":17,"i1":17,"i2":17,"i3":6,"i4":6,"i5":6,"i6":6,"i7":17,"i8":6,"i9":18,"i10":6,"i11":6};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -148,48 +148,72 @@ extends <a href="../../../../../com/opengamma/strata/collect/named/Named.html" t
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html" title="interface in com.opengamma.strata.basics.index">FloatingRateName</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html#defaultIborIndex-com.opengamma.strata.basics.currency.Currency-">defaultIborIndex</a></span>(<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency)</code>
+<div class="block">Gets the default Ibor index for a currency.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html" title="interface in com.opengamma.strata.basics.index">FloatingRateName</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html#defaultOvernightIndex-com.opengamma.strata.basics.currency.Currency-">defaultOvernightIndex</a></span>(<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency)</code>
+<div class="block">Gets the default Overnight index for a currency.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/collect/named/ExtendedEnum.html" title="class in com.opengamma.strata.collect.named">ExtendedEnum</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html" title="interface in com.opengamma.strata.basics.index">FloatingRateName</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html#extendedEnum--">extendedEnum</a></span>()</code>
 <div class="block">Gets the extended enum helper.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html#getName--">getName</a></span>()</code>
 <div class="block">Gets the name that uniquely identifies this index.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html#getTenors--">getTenors</a></span>()</code>
 <div class="block">Gets the active tenors that are applicable for this floating rate.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateType.html" title="enum in com.opengamma.strata.basics.index">FloatingRateType</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html#getType--">getType</a></span>()</code>
 <div class="block">Gets the type of the index - Ibor, Overnight or Price.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html" title="interface in com.opengamma.strata.basics.index">FloatingRateName</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html#normalized--">normalized</a></span>()</code>
+<div class="block">Gets the normalized form of the floating rate name.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html" title="interface in com.opengamma.strata.basics.index">FloatingRateName</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html#of-java.lang.String-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uniqueName)</code>
 <div class="block">Obtains an instance from the specified unique name.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html#toIborIndex-com.opengamma.strata.basics.date.Tenor-">toIborIndex</a></span>(<a href="../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor)</code>
 <div class="block">Checks and returns an Ibor index.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html#toIborIndexFixingOffset--">toIborIndexFixingOffset</a></span>()</code>
+<div class="block">Checks and returns the fixing offset associated with the Ibor index.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html#toOvernightIndex--">toOvernightIndex</a></span>()</code>
 <div class="block">Converts to an <a href="../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index"><code>OvernightIndex</code></a>.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html#toPriceIndex--">toPriceIndex</a></span>()</code>
 <div class="block">Converts to an <a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index"><code>PriceIndex</code></a>.</div>
@@ -252,6 +276,42 @@ extends <a href="../../../../../com/opengamma/strata/collect/named/Named.html" t
 </dl>
 </li>
 </ul>
+<a name="defaultIborIndex-com.opengamma.strata.basics.currency.Currency-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>defaultIborIndex</h4>
+<pre>static&nbsp;<a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html" title="interface in com.opengamma.strata.basics.index">FloatingRateName</a>&nbsp;defaultIborIndex(<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency)</pre>
+<div class="block">Gets the default Ibor index for a currency.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>currency</code> - the currency to find the default for</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the floating rate</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if there is no default for the currency</dd>
+</dl>
+</li>
+</ul>
+<a name="defaultOvernightIndex-com.opengamma.strata.basics.currency.Currency-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>defaultOvernightIndex</h4>
+<pre>static&nbsp;<a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html" title="interface in com.opengamma.strata.basics.index">FloatingRateName</a>&nbsp;defaultOvernightIndex(<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency)</pre>
+<div class="block">Gets the default Overnight index for a currency.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>currency</code> - the currency to find the default for</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the floating rate</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if there is no default for the currency</dd>
+</dl>
+</li>
+</ul>
 <a name="getName--">
 <!--   -->
 </a>
@@ -301,6 +361,25 @@ extends <a href="../../../../../com/opengamma/strata/collect/named/Named.html" t
 </dl>
 </li>
 </ul>
+<a name="normalized--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>normalized</h4>
+<pre><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html" title="interface in com.opengamma.strata.basics.index">FloatingRateName</a>&nbsp;normalized()</pre>
+<div class="block">Gets the normalized form of the floating rate name.
+ <p>
+ The normalized for is the name that Strata uses for the index.
+ For example, the normalized form of 'GBP-LIBOR-BBA' is 'GBP-LIBOR',
+ and the normalized form of 'EUR-EURIBOR-Reuters' is 'EUR-EURIBOR'.
+ Note that for Ibor indices, the tenor is not present.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the normalized name</dd>
+</dl>
+</li>
+</ul>
 <a name="toIborIndex-com.opengamma.strata.basics.date.Tenor-">
 <!--   -->
 </a>
@@ -310,13 +389,38 @@ extends <a href="../../../../../com/opengamma/strata/collect/named/Named.html" t
 <pre><a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;toIborIndex(<a href="../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor)</pre>
 <div class="block">Checks and returns an Ibor index.
  <p>
- If this is an Ibor index, then this returns the matching <a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index"><code>IborIndex</code></a>.
+ If this name represents an Ibor index, then this method returns the matching <a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index"><code>IborIndex</code></a>.
  If not, an exception is thrown.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>tenor</code> - the tenor of the index</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the index</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the type is not an Ibor index type</dd>
+</dl>
+</li>
+</ul>
+<a name="toIborIndexFixingOffset--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toIborIndexFixingOffset</h4>
+<pre>default&nbsp;<a href="../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;toIborIndexFixingOffset()</pre>
+<div class="block">Checks and returns the fixing offset associated with the Ibor index.
+ <p>
+ If this name represents an Ibor index, then this method returns the associated fixing offset.
+ If not, an exception is thrown.
+ <p>
+ This method exists primarily to handle DKK CIBOR, where there are two floating rate names but
+ only one underlying index. The CIBOR index itself has a convention where the fixing date is 2 days
+ before the reset date and the effective date is 2 days after the fixing date, matching the name "DKK-CIBOR2-DKNA13".
+ The alternative name, "DKK-CIBOR-DKNA13", has the fixing date equal to the reset date, but with
+ the effective date two days later.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the fixing offset applicable to the index</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the type is not an Ibor index type</dd>
 </dl>
@@ -331,7 +435,7 @@ extends <a href="../../../../../com/opengamma/strata/collect/named/Named.html" t
 <pre><a href="../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;toOvernightIndex()</pre>
 <div class="block">Converts to an <a href="../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index"><code>OvernightIndex</code></a>.
  <p>
- If this is an Overnight index, then this returns the matching <a href="../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index"><code>OvernightIndex</code></a>.
+ If this name represents an Overnight index, then this method returns the matching <a href="../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index"><code>OvernightIndex</code></a>.
  If not, an exception is thrown.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -350,7 +454,7 @@ extends <a href="../../../../../com/opengamma/strata/collect/named/Named.html" t
 <pre><a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&nbsp;toPriceIndex()</pre>
 <div class="block">Converts to an <a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index"><code>PriceIndex</code></a>.
  <p>
- If this is a price index, then this returns the matching <a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index"><code>PriceIndex</code></a>.
+ If this name represents a price index, then this method returns the matching <a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index"><code>PriceIndex</code></a>.
  If not, an exception is thrown.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>

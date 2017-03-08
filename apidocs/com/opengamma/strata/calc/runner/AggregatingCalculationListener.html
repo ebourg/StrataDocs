@@ -18,8 +18,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":6,"i3":10,"i4":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
+var methods = {"i0":10,"i1":42,"i2":6,"i3":10,"i4":10,"i5":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -116,6 +116,10 @@ var activeTableTab = "activeTableTab";
 <dt>All Implemented Interfaces:</dt>
 <dd><a href="../../../../../com/opengamma/strata/calc/runner/CalculationListener.html" title="interface in com.opengamma.strata.calc.runner">CalculationListener</a></dd>
 </dl>
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../../../com/opengamma/strata/calc/runner/ResultsListener.html" title="class in com.opengamma.strata.calc.runner">ResultsListener</a></dd>
+</dl>
 <hr>
 <br>
 <pre>public abstract class <span class="typeNameLabel">AggregatingCalculationListener&lt;T&gt;</span>
@@ -153,7 +157,7 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationL
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t6" class="tableTab"><span><a href="javascript:show(32);">Deprecated Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
@@ -167,8 +171,9 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationL
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletionStage.html?is-external=true" title="class or interface in java.util.concurrent">CompletionStage</a>&lt;<a href="../../../../../com/opengamma/strata/calc/runner/AggregatingCalculationListener.html" title="type parameter in AggregatingCalculationListener">T</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/AggregatingCalculationListener.html#completionStage--">completionStage</a></span>()</code>
-<div class="block">A completion stage providing asynchronous notification when the aggregate result of the
- calculations is available.</div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">use <a href="../../../../../com/opengamma/strata/calc/runner/AggregatingCalculationListener.html#getFuture--"><code>getFuture()</code></a></span></div>
+</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -178,12 +183,18 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationL
 </td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;<a href="../../../../../com/opengamma/strata/calc/runner/AggregatingCalculationListener.html" title="type parameter in AggregatingCalculationListener">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/AggregatingCalculationListener.html#getFuture--">getFuture</a></span>()</code>
+<div class="block">A future providing asynchronous notification when the results are available.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/calc/runner/AggregatingCalculationListener.html" title="type parameter in AggregatingCalculationListener">T</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/AggregatingCalculationListener.html#result--">result</a></span>()</code>
 <div class="block">Returns the aggregate result of the calculations, blocking until it is available.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>abstract void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/AggregatingCalculationListener.html#resultReceived-com.opengamma.strata.basics.CalculationTarget-com.opengamma.strata.calc.runner.CalculationResult-">resultReceived</a></span>(<a href="../../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>&nbsp;target,
               <a href="../../../../../com/opengamma/strata/calc/runner/CalculationResult.html" title="class in com.opengamma.strata.calc.runner">CalculationResult</a>&nbsp;result)</code>
@@ -197,6 +208,13 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationL
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
 <code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.calc.runner.CalculationListener">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.calc.runner.<a href="../../../../../com/opengamma/strata/calc/runner/CalculationListener.html" title="interface in com.opengamma.strata.calc.runner">CalculationListener</a></h3>
+<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationListener.html#calculationsStarted-java.util.List-java.util.List-">calculationsStarted</a></code></li>
 </ul>
 </li>
 </ul>
@@ -239,7 +257,11 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationL
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationListener.html#calculationsComplete--">CalculationListener</a></code></span></div>
 <div class="block">Invoked when all calculations have completed.
  <p>
- This is guaranteed to be called after all results have been passed to <a href="../../../../../com/opengamma/strata/calc/runner/CalculationListener.html#resultReceived-com.opengamma.strata.basics.CalculationTarget-com.opengamma.strata.calc.runner.CalculationResult-"><code>CalculationListener.resultReceived(com.opengamma.strata.basics.CalculationTarget, com.opengamma.strata.calc.runner.CalculationResult)</code></a>.</div>
+ This is guaranteed to be called after all results have been passed to <a href="../../../../../com/opengamma/strata/calc/runner/CalculationListener.html#resultReceived-com.opengamma.strata.basics.CalculationTarget-com.opengamma.strata.calc.runner.CalculationResult-"><code>CalculationListener.resultReceived(com.opengamma.strata.basics.CalculationTarget, com.opengamma.strata.calc.runner.CalculationResult)</code></a>.
+ <p>
+ This method will be called immediately after <a href="../../../../../com/opengamma/strata/calc/runner/CalculationListener.html#calculationsStarted-java.util.List-java.util.List-"><code>CalculationListener.calculationsStarted(List, List)</code></a> and without any calls
+ to <a href="../../../../../com/opengamma/strata/calc/runner/CalculationListener.html#resultReceived-com.opengamma.strata.basics.CalculationTarget-com.opengamma.strata.calc.runner.CalculationResult-"><code>CalculationListener.resultReceived(CalculationTarget, CalculationResult)</code></a> if there are no calculations to be performed.
+ This can happen if an empty list of targets is passed to the calculation runner.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationListener.html#calculationsComplete--">calculationsComplete</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationListener.html" title="interface in com.opengamma.strata.calc.runner">CalculationListener</a></code></dd>
@@ -266,13 +288,29 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationL
 <ul class="blockList">
 <li class="blockList">
 <h4>completionStage</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletionStage.html?is-external=true" title="class or interface in java.util.concurrent">CompletionStage</a>&lt;<a href="../../../../../com/opengamma/strata/calc/runner/AggregatingCalculationListener.html" title="type parameter in AggregatingCalculationListener">T</a>&gt;&nbsp;completionStage()</pre>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletionStage.html?is-external=true" title="class or interface in java.util.concurrent">CompletionStage</a>&lt;<a href="../../../../../com/opengamma/strata/calc/runner/AggregatingCalculationListener.html" title="type parameter in AggregatingCalculationListener">T</a>&gt;&nbsp;completionStage()</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">use <a href="../../../../../com/opengamma/strata/calc/runner/AggregatingCalculationListener.html#getFuture--"><code>getFuture()</code></a></span></div>
 <div class="block">A completion stage providing asynchronous notification when the aggregate result of the
  calculations is available.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a completion stage providing asynchronous notification when the aggregate result of the
    calculations is available</dd>
+</dl>
+</li>
+</ul>
+<a name="getFuture--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFuture</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;<a href="../../../../../com/opengamma/strata/calc/runner/AggregatingCalculationListener.html" title="type parameter in AggregatingCalculationListener">T</a>&gt;&nbsp;getFuture()</pre>
+<div class="block">A future providing asynchronous notification when the results are available.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a future providing asynchronous notification when the results are available</dd>
 </dl>
 </li>
 </ul>
@@ -285,7 +323,13 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationL
 <pre>public abstract&nbsp;void&nbsp;resultReceived(<a href="../../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>&nbsp;target,
                                     <a href="../../../../../com/opengamma/strata/calc/runner/CalculationResult.html" title="class in com.opengamma.strata.calc.runner">CalculationResult</a>&nbsp;result)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationListener.html#resultReceived-com.opengamma.strata.basics.CalculationTarget-com.opengamma.strata.calc.runner.CalculationResult-">CalculationListener</a></code></span></div>
-<div class="block">Invoked when a calculation completes.</div>
+<div class="block">Invoked when a calculation completes.
+ <p>
+ It is guaranteed that <a href="../../../../../com/opengamma/strata/calc/runner/CalculationListener.html#calculationsStarted-java.util.List-java.util.List-"><code>CalculationListener.calculationsStarted(List, List)</code></a> will be called before
+ this method and that this method will never be called after <a href="../../../../../com/opengamma/strata/calc/runner/CalculationListener.html#calculationsComplete--"><code>CalculationListener.calculationsComplete()</code></a>.
+ <p>
+ It is possible that this method will never be called. This can happen if an empty list of targets
+ is passed to the calculation runner.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationListener.html#resultReceived-com.opengamma.strata.basics.CalculationTarget-com.opengamma.strata.calc.runner.CalculationResult-">resultReceived</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationListener.html" title="interface in com.opengamma.strata.calc.runner">CalculationListener</a></code></dd>

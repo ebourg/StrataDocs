@@ -110,7 +110,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a></dd>
+<dd><a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html" title="interface in com.opengamma.strata.market.curve">CurveDefinition</a>, <a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a></dd>
 </dl>
 <hr>
 <br>
@@ -296,7 +296,14 @@ implements <a href="../../../../../com/opengamma/strata/market/curve/NodalCurveD
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.opengamma.strata.market.curve.<a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a></h3>
-<code><a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html#getParameterCount--">getParameterCount</a>, <a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html#toCurveParameterSize--">toCurveParameterSize</a></code></li>
+<code><a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html#getParameterCount--">getParameterCount</a>, <a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html#initialGuess-com.opengamma.strata.data.MarketData-">initialGuess</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.market.curve.CurveDefinition">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.market.curve.<a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html" title="interface in com.opengamma.strata.market.curve">CurveDefinition</a></h3>
+<code><a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html#toCurveParameterSize--">toCurveParameterSize</a></code></li>
 </ul>
 </li>
 </ul>
@@ -320,7 +327,7 @@ implements <a href="../../../../../com/opengamma/strata/market/curve/NodalCurveD
 <h4>filtered</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurveDefinition.html" title="class in com.opengamma.strata.market.curve">InterpolatedNodalCurveDefinition</a>&nbsp;filtered(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
                                                  <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html#filtered-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">NodalCurveDefinition</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html#filtered-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">CurveDefinition</a></code></span></div>
 <div class="block">Returns a filtered version of this definition with no invalid nodes.
  <p>
  A curve is formed of a number of nodes, each of which has an associated date.
@@ -336,6 +343,8 @@ implements <a href="../../../../../com/opengamma/strata/market/curve/NodalCurveD
  This approach means that in most cases, only those nodes that have fixed dates,
  such as futures, need to be annotated with <code>CurveNodeDateOrder</code>.</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html#filtered-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">filtered</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html" title="interface in com.opengamma.strata.market.curve">CurveDefinition</a></code></dd>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html#filtered-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">filtered</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -354,7 +363,7 @@ implements <a href="../../../../../com/opengamma/strata/market/curve/NodalCurveD
 <h4>metadata</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
                               <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html#metadata-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">NodalCurveDefinition</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html#metadata-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">CurveDefinition</a></code></span></div>
 <div class="block">Creates the curve metadata.
  <p>
  This method returns metadata about the curve and the curve parameters.
@@ -367,7 +376,7 @@ implements <a href="../../../../../com/opengamma/strata/market/curve/NodalCurveD
  The size of the parameter-level metadata will match the number of parameters of this curve.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html#metadata-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">metadata</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a></code></dd>
+<dd><code><a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html#metadata-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">metadata</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html" title="interface in com.opengamma.strata.market.curve">CurveDefinition</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>valuationDate</code> - the valuation date</dd>
 <dd><code>refData</code> - the reference data</dd>
@@ -385,12 +394,14 @@ implements <a href="../../../../../com/opengamma/strata/market/curve/NodalCurveD
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/curve/NodalCurve.html" title="interface in com.opengamma.strata.market.curve">NodalCurve</a>&nbsp;curve(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
                         <a href="../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata,
                         <a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;parameters)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html#curve-java.time.LocalDate-com.opengamma.strata.market.curve.CurveMetadata-com.opengamma.strata.collect.array.DoubleArray-">NodalCurveDefinition</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html#curve-java.time.LocalDate-com.opengamma.strata.market.curve.CurveMetadata-com.opengamma.strata.collect.array.DoubleArray-">CurveDefinition</a></code></span></div>
 <div class="block">Creates the curve from an array of parameter values.
  <p>
  The meaning of the parameters is determined by the implementation.
- The size of the array must match the <a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html#getParameterCount--">count of parameters</a>.</div>
+ The size of the array must match the <a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html#getParameterCount--">count of parameters</a>.</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html#curve-java.time.LocalDate-com.opengamma.strata.market.curve.CurveMetadata-com.opengamma.strata.collect.array.DoubleArray-">curve</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html" title="interface in com.opengamma.strata.market.curve">CurveDefinition</a></code></dd>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html#curve-java.time.LocalDate-com.opengamma.strata.market.curve.CurveMetadata-com.opengamma.strata.collect.array.DoubleArray-">curve</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -479,7 +490,7 @@ implements <a href="../../../../../com/opengamma/strata/market/curve/NodalCurveD
 <div class="block">Gets the curve name.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html#getName--">getName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a></code></dd>
+<dd><code><a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html#getName--">getName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html" title="interface in com.opengamma.strata.market.curve">CurveDefinition</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value of the property, not null</dd>
 </dl>
@@ -519,7 +530,7 @@ implements <a href="../../../../../com/opengamma/strata/market/curve/NodalCurveD
  If using the builder, this defaults to <a href="../../../../../com/opengamma/strata/market/ValueType.html#UNKNOWN"><code>ValueType.UNKNOWN</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html#getYValueType--">getYValueType</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a></code></dd>
+<dd><code><a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html#getYValueType--">getYValueType</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html" title="interface in com.opengamma.strata.market.curve">CurveDefinition</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value of the property, not null</dd>
 </dl>
@@ -555,7 +566,7 @@ implements <a href="../../../../../com/opengamma/strata/market/curve/NodalCurveD
  There must be at least two nodes in the curve.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html#getNodes--">getNodes</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a></code></dd>
+<dd><code><a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html#getNodes--">getNodes</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html" title="interface in com.opengamma.strata.market.curve">CurveDefinition</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value of the property, not null</dd>
 </dl>

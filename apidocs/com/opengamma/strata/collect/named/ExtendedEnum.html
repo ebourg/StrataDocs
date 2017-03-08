@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":9,"i8":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":9,"i9":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -240,12 +240,18 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../com/opengamma/strata/collect/named/ExtendedEnum.html" title="type parameter in ExtendedEnum">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/named/ExtendedEnum.html#lookupAllNormalized--">lookupAllNormalized</a></span>()</code>
+<div class="block">Returns the map of known instances by normalized name.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>static &lt;R extends <a href="../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a>&gt;<br><a href="../../../../../com/opengamma/strata/collect/named/ExtendedEnum.html" title="class in com.opengamma.strata.collect.named">ExtendedEnum</a>&lt;R&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/named/ExtendedEnum.html#of-java.lang.Class-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;R&gt;&nbsp;type)</code>
 <div class="block">Obtains an extended enum instance.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/named/ExtendedEnum.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -374,8 +380,27 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
  This method returns all known instances.
  It is permitted for an enum provider implementation to return an empty map,
  thus the map may not be complete.
- The map may include instances keyed under an alternate name, however it
- will not include the base set of <a href="../../../../../com/opengamma/strata/collect/named/ExtendedEnum.html#alternateNames--">alternate names</a>.</div>
+ The map may include instances keyed under an alternate name, such as names
+ in upper case, however it will not include the base set of
+ <a href="../../../../../com/opengamma/strata/collect/named/ExtendedEnum.html#alternateNames--">alternate names</a>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the map of enum instance by name</dd>
+</dl>
+</li>
+</ul>
+<a name="lookupAllNormalized--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lookupAllNormalized</h4>
+<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../com/opengamma/strata/collect/named/ExtendedEnum.html" title="type parameter in ExtendedEnum">T</a>&gt;&nbsp;lookupAllNormalized()</pre>
+<div class="block">Returns the map of known instances by normalized name.
+ <p>
+ This method returns all known instances, keyed by the normalized name.
+ This is equivalent to the result of <a href="../../../../../com/opengamma/strata/collect/named/ExtendedEnum.html#lookupAll--"><code>lookupAll()</code></a> adjusted such
+ that each entry is keyed by the result of <a href="../../../../../com/opengamma/strata/collect/named/Named.html#getName--"><code>Named.getName()</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the map of enum instance by name</dd>

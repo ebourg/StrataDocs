@@ -150,6 +150,18 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.capfloor">com.opengamma.strata.pricer.capfloor</a></td>
+<td class="colLast">
+<div class="block">Calculators for Ibor cap-floor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.credit">com.opengamma.strata.pricer.credit</a></td>
+<td class="colLast">
+<div class="block">Calculators for credit instruments, such as Credit Default Swap (CDS).</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.curve">com.opengamma.strata.pricer.curve</a></td>
 <td class="colLast">
 <div class="block">Provides the ability to calibrate curves.</div>
@@ -852,61 +864,67 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html#getParameters--">getParameters</a></span>()</code>
+<div class="block">Gets the array of parameters for the curve function.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
 <td class="colLast"><span class="typeNameLabel">InflationNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InflationNodalCurve.html#getSeasonality--">getSeasonality</a></span>()</code>
 <div class="block">Gets describes the monthly seasonal adjustments.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SeasonalityDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/SeasonalityDefinition.html#getSeasonalityMonthOnMonth--">getSeasonalityMonthOnMonth</a></span>()</code>
 <div class="block">Gets the month on month adjustment.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CurveParallelShifts.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/CurveParallelShifts.html#getShiftAmounts--">getShiftAmounts</a></span>()</code>
 <div class="block">Gets the amount by which the y-values are shifted.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ConstantNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ConstantNodalCurve.html#getXValues--">getXValues</a></span>()</code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InflationNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InflationNodalCurve.html#getXValues--">getXValues</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
 <td class="colLast"><span class="typeNameLabel">InterpolatedNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html#getXValues--">getXValues</a></span>()</code>
 <div class="block">Gets the array of x-values, one for each point.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
 <td class="colLast"><span class="typeNameLabel">NodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/NodalCurve.html#getXValues--">getXValues</a></span>()</code>
 <div class="block">Gets the known x-values of the curve.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ConstantNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ConstantNodalCurve.html#getXValues--">getXValues</a></span>()</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
-<td class="colLast"><span class="typeNameLabel">InflationNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InflationNodalCurve.html#getXValues--">getXValues</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">ConstantNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ConstantNodalCurve.html#getYValues--">getYValues</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InflationNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InflationNodalCurve.html#getYValues--">getYValues</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
 <td class="colLast"><span class="typeNameLabel">InterpolatedNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html#getYValues--">getYValues</a></span>()</code>
 <div class="block">Gets the array of y-values, one for each point.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
 <td class="colLast"><span class="typeNameLabel">NodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/NodalCurve.html#getYValues--">getYValues</a></span>()</code>
 <div class="block">Gets the known y-values of the curve.</div>
 </td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ConstantNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ConstantNodalCurve.html#getYValues--">getYValues</a></span>()</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
-<td class="colLast"><span class="typeNameLabel">InflationNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InflationNodalCurve.html#getYValues--">getYValues</a></span>()</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -918,36 +936,138 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurveDefinition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurveDefinition.Meta.html#derivativeFunction--">derivativeFunction</a></span>()</code>
+<div class="block">The meta-property for the <code>derivativeFunction</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.Meta.html#derivativeFunction--">derivativeFunction</a></span>()</code>
+<div class="block">The meta-property for the <code>derivativeFunction</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurveDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurveDefinition.html#getDerivativeFunction--">getDerivativeFunction</a></span>()</code>
+<div class="block">Gets the derivative function.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html#getDerivativeFunction--">getDerivativeFunction</a></span>()</code>
+<div class="block">Gets the derivative function.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurveDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurveDefinition.html#getSensitivityFunction--">getSensitivityFunction</a></span>()</code>
+<div class="block">Gets the parameter sensitivity function.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurveDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurveDefinition.html#getSensitivityFunction--">getSensitivityFunction</a></span>()</code>
+<div class="block">Gets the parameter sensitivity function.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html#getSensitivityFunction--">getSensitivityFunction</a></span>()</code>
+<div class="block">Gets the parameter sensitivity function.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html#getSensitivityFunction--">getSensitivityFunction</a></span>()</code>
+<div class="block">Gets the parameter sensitivity function.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurveDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurveDefinition.html#getValueFunction--">getValueFunction</a></span>()</code>
+<div class="block">Gets the y-value function.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html#getValueFunction--">getValueFunction</a></span>()</code>
+<div class="block">Gets the y-value function.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.Meta.html#parameters--">parameters</a></span>()</code>
+<div class="block">The meta-property for the <code>parameters</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">InflationNodalCurve.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InflationNodalCurve.Meta.html#seasonality--">seasonality</a></span>()</code>
 <div class="block">The meta-property for the <code>seasonality</code> property.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">SeasonalityDefinition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/SeasonalityDefinition.Meta.html#seasonalityMonthOnMonth--">seasonalityMonthOnMonth</a></span>()</code>
 <div class="block">The meta-property for the <code>seasonalityMonthOnMonth</code> property.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurveDefinition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurveDefinition.Meta.html#sensitivityFunction--">sensitivityFunction</a></span>()</code>
+<div class="block">The meta-property for the <code>sensitivityFunction</code> property.</div>
+</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurveDefinition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurveDefinition.Meta.html#sensitivityFunction--">sensitivityFunction</a></span>()</code>
+<div class="block">The meta-property for the <code>sensitivityFunction</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.Meta.html#sensitivityFunction--">sensitivityFunction</a></span>()</code>
+<div class="block">The meta-property for the <code>sensitivityFunction</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.Meta.html#sensitivityFunction--">sensitivityFunction</a></span>()</code>
+<div class="block">The meta-property for the <code>sensitivityFunction</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">CurveParallelShifts.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/CurveParallelShifts.Meta.html#shiftAmounts--">shiftAmounts</a></span>()</code>
 <div class="block">The meta-property for the <code>shiftAmounts</code> property.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">JacobianCalibrationMatrix.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/JacobianCalibrationMatrix.html#splitValues-com.opengamma.strata.collect.array.DoubleArray-">splitValues</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;array)</code>
 <div class="block">Splits the array according to the curve order.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurveDefinition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurveDefinition.Meta.html#valueFunction--">valueFunction</a></span>()</code>
+<div class="block">The meta-property for the <code>valueFunction</code> property.</div>
+</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.Meta.html#valueFunction--">valueFunction</a></span>()</code>
+<div class="block">The meta-property for the <code>valueFunction</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">InterpolatedNodalCurve.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.Meta.html#xValues--">xValues</a></span>()</code>
 <div class="block">The meta-property for the <code>xValues</code> property.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">InterpolatedNodalCurve.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.Meta.html#yValues--">yValues</a></span>()</code>
 <div class="block">The meta-property for the <code>yValues</code> property.</div>
@@ -963,25 +1083,26 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
-<td class="colLast"><span class="typeNameLabel">InterpolatedNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
-                          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Curve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
                           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>
 <div class="block">Creates a parameter sensitivity instance for this curve when the sensitivity values are known.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ConstantNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ConstantNodalCurve.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
                           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InterpolatedNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+                          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/UnitParameterSensitivity.html" title="class in com.opengamma.strata.market.param">UnitParameterSensitivity</a></code></td>
-<td class="colLast"><span class="typeNameLabel">InterpolatedNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html#createParameterSensitivity-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+                          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/market/param/UnitParameterSensitivity.html" title="class in com.opengamma.strata.market.param">UnitParameterSensitivity</a></code></td>
@@ -994,17 +1115,54 @@
 <td class="colLast"><span class="typeNameLabel">ConstantNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ConstantNodalCurve.html#createParameterSensitivity-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/UnitParameterSensitivity.html" title="class in com.opengamma.strata.market.param">UnitParameterSensitivity</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InterpolatedNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html#createParameterSensitivity-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/UnitParameterSensitivity.html" title="class in com.opengamma.strata.market.param">UnitParameterSensitivity</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html#createParameterSensitivity-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html" title="class in com.opengamma.strata.market.curve">InterpolatedNodalCurve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCreditCurveDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/IsdaCreditCurveDefinition.html#curve-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-">curve</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;yearFractions,
+     <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;zeroRates)</code>
+<div class="block">Creates the ISDA compliant curve.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/NodalCurve.html" title="interface in com.opengamma.strata.market.curve">NodalCurve</a></code></td>
 <td class="colLast"><span class="typeNameLabel">InterpolatedNodalCurveDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurveDefinition.html#curve-java.time.LocalDate-com.opengamma.strata.market.curve.CurveMetadata-com.opengamma.strata.collect.array.DoubleArray-">curve</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
      <a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata,
      <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;parameters)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/NodalCurve.html" title="interface in com.opengamma.strata.market.curve">NodalCurve</a></code></td>
 <td class="colLast"><span class="typeNameLabel">NodalCurveDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html#curve-java.time.LocalDate-com.opengamma.strata.market.curve.CurveMetadata-com.opengamma.strata.collect.array.DoubleArray-">curve</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
      <a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata,
+     <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;parameters)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CurveDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/CurveDefinition.html#curve-java.time.LocalDate-com.opengamma.strata.market.curve.CurveMetadata-com.opengamma.strata.collect.array.DoubleArray-">curve</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+     <a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata,
      <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;parameters)</code>
 <div class="block">Creates the curve from an array of parameter values.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html" title="class in com.opengamma.strata.market.curve">ParameterizedFunctionalCurve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurveDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurveDefinition.html#curve-java.time.LocalDate-com.opengamma.strata.market.curve.CurveMetadata-com.opengamma.strata.collect.array.DoubleArray-">curve</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+     <a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata,
+     <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;parameters)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html" title="class in com.opengamma.strata.market.curve">ParameterizedFunctionalCurve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html#of-com.opengamma.strata.market.curve.CurveMetadata-com.opengamma.strata.collect.array.DoubleArray-java.util.function.BiFunction-java.util.function.BiFunction-java.util.function.BiFunction-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;parameters,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&nbsp;valueFunction,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&nbsp;derivativeFunction,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&nbsp;sensitivityFunction)</code>
+<div class="block">Obtains an instance.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -1053,10 +1211,32 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.Builder.html" title="class in com.opengamma.strata.market.curve">ParameterizedFunctionalCurve.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.Builder.html#parameters-com.opengamma.strata.collect.array.DoubleArray-">parameters</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;parameters)</code>
+<div class="block">Sets the array of parameters for the curve function.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">JacobianCalibrationMatrix.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/JacobianCalibrationMatrix.html#splitValues-com.opengamma.strata.collect.array.DoubleArray-">splitValues</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;array)</code>
 <div class="block">Splits the array according to the curve order.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html" title="class in com.opengamma.strata.market.curve">ParameterizedFunctionalCurve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html#withParameters-com.opengamma.strata.collect.array.DoubleArray-">withParameters</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;parameters)</code>
+<div class="block">Returns a copy of the curve with all of the parameters altered.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/ConstantNodalCurve.html" title="class in com.opengamma.strata.market.curve">ConstantNodalCurve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ConstantNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ConstantNodalCurve.html#withValues-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-">withValues</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;xValues,
+          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;yValues)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/InflationNodalCurve.html" title="class in com.opengamma.strata.market.curve">InflationNodalCurve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InflationNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InflationNodalCurve.html#withValues-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-">withValues</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;xValues,
+          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;yValues)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html" title="class in com.opengamma.strata.market.curve">InterpolatedNodalCurve</a></code></td>
@@ -1072,13 +1252,11 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/ConstantNodalCurve.html" title="class in com.opengamma.strata.market.curve">ConstantNodalCurve</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ConstantNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ConstantNodalCurve.html#withValues-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-">withValues</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;xValues,
-          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;yValues)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">ConstantNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ConstantNodalCurve.html#withYValues-com.opengamma.strata.collect.array.DoubleArray-">withYValues</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;yValues)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/InflationNodalCurve.html" title="class in com.opengamma.strata.market.curve">InflationNodalCurve</a></code></td>
-<td class="colLast"><span class="typeNameLabel">InflationNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InflationNodalCurve.html#withValues-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-">withValues</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;xValues,
-          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;yValues)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">InflationNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InflationNodalCurve.html#withYValues-com.opengamma.strata.collect.array.DoubleArray-">withYValues</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;values)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.html" title="class in com.opengamma.strata.market.curve">InterpolatedNodalCurve</a></code></td>
@@ -1091,14 +1269,6 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/ConstantNodalCurve.html" title="class in com.opengamma.strata.market.curve">ConstantNodalCurve</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ConstantNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ConstantNodalCurve.html#withYValues-com.opengamma.strata.collect.array.DoubleArray-">withYValues</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;yValues)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/InflationNodalCurve.html" title="class in com.opengamma.strata.market.curve">InflationNodalCurve</a></code></td>
-<td class="colLast"><span class="typeNameLabel">InflationNodalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InflationNodalCurve.html#withYValues-com.opengamma.strata.collect.array.DoubleArray-">withYValues</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;values)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.Builder.html" title="class in com.opengamma.strata.market.curve">InterpolatedNodalCurve.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">InterpolatedNodalCurve.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.Builder.html#xValues-com.opengamma.strata.collect.array.DoubleArray-">xValues</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;xValues)</code>
 <div class="block">Sets the array of x-values, one for each point.</div>
@@ -1108,6 +1278,103 @@
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.Builder.html" title="class in com.opengamma.strata.market.curve">InterpolatedNodalCurve.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">InterpolatedNodalCurve.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/InterpolatedNodalCurve.Builder.html#yValues-com.opengamma.strata.collect.array.DoubleArray-">yValues</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;yValues)</code>
 <div class="block">Sets the array of y-values, one for each point.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Method parameters in <a href="../../../../../../com/opengamma/strata/market/curve/package-summary.html">com.opengamma.strata.market.curve</a> with type arguments of type <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurveDefinition.Builder.html" title="class in com.opengamma.strata.market.curve">ParameterizedFunctionalCurveDefinition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurveDefinition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurveDefinition.Builder.html#derivativeFunction-java.util.function.BiFunction-">derivativeFunction</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&nbsp;derivativeFunction)</code>
+<div class="block">Sets the derivative function.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.Builder.html" title="class in com.opengamma.strata.market.curve">ParameterizedFunctionalCurve.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.Builder.html#derivativeFunction-java.util.function.BiFunction-">derivativeFunction</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&nbsp;derivativeFunction)</code>
+<div class="block">Sets the derivative function.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html" title="class in com.opengamma.strata.market.curve">ParameterizedFunctionalCurve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html#of-com.opengamma.strata.market.curve.CurveMetadata-com.opengamma.strata.collect.array.DoubleArray-java.util.function.BiFunction-java.util.function.BiFunction-java.util.function.BiFunction-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;parameters,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&nbsp;valueFunction,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&nbsp;derivativeFunction,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&nbsp;sensitivityFunction)</code>
+<div class="block">Obtains an instance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html" title="class in com.opengamma.strata.market.curve">ParameterizedFunctionalCurve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html#of-com.opengamma.strata.market.curve.CurveMetadata-com.opengamma.strata.collect.array.DoubleArray-java.util.function.BiFunction-java.util.function.BiFunction-java.util.function.BiFunction-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;parameters,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&nbsp;valueFunction,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&nbsp;derivativeFunction,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&nbsp;sensitivityFunction)</code>
+<div class="block">Obtains an instance.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html" title="class in com.opengamma.strata.market.curve">ParameterizedFunctionalCurve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html#of-com.opengamma.strata.market.curve.CurveMetadata-com.opengamma.strata.collect.array.DoubleArray-java.util.function.BiFunction-java.util.function.BiFunction-java.util.function.BiFunction-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;parameters,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&nbsp;valueFunction,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&nbsp;derivativeFunction,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&nbsp;sensitivityFunction)</code>
+<div class="block">Obtains an instance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html" title="class in com.opengamma.strata.market.curve">ParameterizedFunctionalCurve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html#of-com.opengamma.strata.market.curve.CurveMetadata-com.opengamma.strata.collect.array.DoubleArray-java.util.function.BiFunction-java.util.function.BiFunction-java.util.function.BiFunction-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;parameters,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&nbsp;valueFunction,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&nbsp;derivativeFunction,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&nbsp;sensitivityFunction)</code>
+<div class="block">Obtains an instance.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurveDefinition.Builder.html" title="class in com.opengamma.strata.market.curve">ParameterizedFunctionalCurveDefinition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurveDefinition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurveDefinition.Builder.html#sensitivityFunction-java.util.function.BiFunction-">sensitivityFunction</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&nbsp;sensitivityFunction)</code>
+<div class="block">Sets the parameter sensitivity function.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurveDefinition.Builder.html" title="class in com.opengamma.strata.market.curve">ParameterizedFunctionalCurveDefinition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurveDefinition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurveDefinition.Builder.html#sensitivityFunction-java.util.function.BiFunction-">sensitivityFunction</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&nbsp;sensitivityFunction)</code>
+<div class="block">Sets the parameter sensitivity function.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.Builder.html" title="class in com.opengamma.strata.market.curve">ParameterizedFunctionalCurve.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.Builder.html#sensitivityFunction-java.util.function.BiFunction-">sensitivityFunction</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&nbsp;sensitivityFunction)</code>
+<div class="block">Sets the parameter sensitivity function.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.Builder.html" title="class in com.opengamma.strata.market.curve">ParameterizedFunctionalCurve.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.Builder.html#sensitivityFunction-java.util.function.BiFunction-">sensitivityFunction</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&nbsp;sensitivityFunction)</code>
+<div class="block">Sets the parameter sensitivity function.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurveDefinition.Builder.html" title="class in com.opengamma.strata.market.curve">ParameterizedFunctionalCurveDefinition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurveDefinition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurveDefinition.Builder.html#valueFunction-java.util.function.BiFunction-">valueFunction</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&nbsp;valueFunction)</code>
+<div class="block">Sets the y-value function.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.Builder.html" title="class in com.opengamma.strata.market.curve">ParameterizedFunctionalCurve.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ParameterizedFunctionalCurve.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.Builder.html#valueFunction-java.util.function.BiFunction-">valueFunction</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt;&nbsp;valueFunction)</code>
+<div class="block">Sets the y-value function.</div>
 </td>
 </tr>
 </tbody>
@@ -1317,7 +1584,7 @@
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/param/UnitParameterSensitivity.html" title="class in com.opengamma.strata.market.param">UnitParameterSensitivity</a></code></td>
 <td class="colLast"><span class="typeNameLabel">UnitParameterSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/UnitParameterSensitivity.html#of-com.opengamma.strata.data.MarketDataName-com.opengamma.strata.collect.array.DoubleArray-">of</a></span>(<a href="../../../../../../com/opengamma/strata/data/MarketDataName.html" title="class in com.opengamma.strata.data">MarketDataName</a>&lt;?&gt;&nbsp;marketDataName,
   <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivity)</code>
-<div class="block">Obtains an instance from the market data name, currency and sensitivity.</div>
+<div class="block">Obtains an instance from the market data name and sensitivity.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -1330,11 +1597,42 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CurrencyParameterSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#of-com.opengamma.strata.data.MarketDataName-java.util.List-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-java.util.List-">of</a></span>(<a href="../../../../../../com/opengamma/strata/data/MarketDataName.html" title="class in com.opengamma.strata.data">MarketDataName</a>&lt;?&gt;&nbsp;marketDataName,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a>&gt;&nbsp;parameterMetadata,
+  <a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivity,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/market/param/ParameterSize.html" title="class in com.opengamma.strata.market.param">ParameterSize</a>&gt;&nbsp;parameterSplit)</code>
+<div class="block">Obtains an instance from the market data name, metadata, currency, sensitivity and parameter split.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/param/UnitParameterSensitivity.html" title="class in com.opengamma.strata.market.param">UnitParameterSensitivity</a></code></td>
 <td class="colLast"><span class="typeNameLabel">UnitParameterSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/UnitParameterSensitivity.html#of-com.opengamma.strata.data.MarketDataName-java.util.List-com.opengamma.strata.collect.array.DoubleArray-">of</a></span>(<a href="../../../../../../com/opengamma/strata/data/MarketDataName.html" title="class in com.opengamma.strata.data">MarketDataName</a>&lt;?&gt;&nbsp;marketDataName,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a>&gt;&nbsp;parameterMetadata,
   <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivity)</code>
 <div class="block">Obtains an instance from the market data name, metadata and sensitivity.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/param/UnitParameterSensitivity.html" title="class in com.opengamma.strata.market.param">UnitParameterSensitivity</a></code></td>
+<td class="colLast"><span class="typeNameLabel">UnitParameterSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/UnitParameterSensitivity.html#of-com.opengamma.strata.data.MarketDataName-java.util.List-com.opengamma.strata.collect.array.DoubleArray-java.util.List-">of</a></span>(<a href="../../../../../../com/opengamma/strata/data/MarketDataName.html" title="class in com.opengamma.strata.data">MarketDataName</a>&lt;?&gt;&nbsp;marketDataName,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a>&gt;&nbsp;parameterMetadata,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivity,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/market/param/ParameterSize.html" title="class in com.opengamma.strata.market.param">ParameterSize</a>&gt;&nbsp;parameterSplit)</code>
+<div class="block">Obtains an instance from the market data name, metadata, sensitivity and parameter split.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CurrencyParameterSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#plus-com.opengamma.strata.collect.array.DoubleArray-">plus</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;otherSensitivty)</code>
+<div class="block">Returns an instance with the specified sensitivity array added to the array in this instance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/UnitParameterSensitivity.html" title="class in com.opengamma.strata.market.param">UnitParameterSensitivity</a></code></td>
+<td class="colLast"><span class="typeNameLabel">UnitParameterSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/UnitParameterSensitivity.html#plus-com.opengamma.strata.collect.array.DoubleArray-">plus</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;otherSensitivty)</code>
+<div class="block">Returns an instance with the specified sensitivity array added to the array in this instance.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -1436,26 +1734,26 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
-<td class="colLast"><span class="typeNameLabel">InterpolatedNodalSurface.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/InterpolatedNodalSurface.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
-                          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Surface.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surface.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
                           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>
 <div class="block">Creates a parameter sensitivity instance for this surface when the sensitivity values are known.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/UnitParameterSensitivity.html" title="class in com.opengamma.strata.market.param">UnitParameterSensitivity</a></code></td>
-<td class="colLast"><span class="typeNameLabel">InterpolatedNodalSurface.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/InterpolatedNodalSurface.html#createParameterSensitivity-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
-</tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InterpolatedNodalSurface.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/InterpolatedNodalSurface.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+                          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/market/param/UnitParameterSensitivity.html" title="class in com.opengamma.strata.market.param">UnitParameterSensitivity</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Surface.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/Surface.html#createParameterSensitivity-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>
 <div class="block">Creates a parameter sensitivity instance for this surface when the sensitivity values are known.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/UnitParameterSensitivity.html" title="class in com.opengamma.strata.market.param">UnitParameterSensitivity</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InterpolatedNodalSurface.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/surface/InterpolatedNodalSurface.html#createParameterSensitivity-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/surface/InterpolatedNodalSurface.html" title="class in com.opengamma.strata.market.surface">InterpolatedNodalSurface</a></code></td>
@@ -1570,20 +1868,493 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ZeroRatePeriodicDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/ZeroRatePeriodicDiscountFactors.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
-                          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/DiscountFactors.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
                           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>
 <div class="block">Creates the parameter sensitivity when the sensitivity values are known.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SimpleDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/SimpleDiscountFactors.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
                           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ZeroRatePeriodicDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/ZeroRatePeriodicDiscountFactors.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+                          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.capfloor">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a> in <a href="../../../../../../com/opengamma/strata/pricer/capfloor/package-summary.html">com.opengamma.strata.pricer.capfloor</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/capfloor/package-summary.html">com.opengamma.strata.pricer.capfloor</a> that return <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html#createFullInitialValues--">createFullInitialValues</a></span>()</code>
+<div class="block">Create initial values for all the curve parameters.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html#getInitialParameters--">getInitialParameters</a></span>()</code>
+<div class="block">Gets the initial parameter values used in calibration.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/capfloor/package-summary.html">com.opengamma.strata.pricer.capfloor</a> that return types with arguments of type <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParametersIborCapletFloorletVolatilities.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Meta.html#dataSensitivityAlpha--">dataSensitivityAlpha</a></span>()</code>
+<div class="block">The meta-property for the <code>dataSensitivityAlpha</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParametersIborCapletFloorletVolatilities.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Meta.html#dataSensitivityBeta--">dataSensitivityBeta</a></span>()</code>
+<div class="block">The meta-property for the <code>dataSensitivityBeta</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParametersIborCapletFloorletVolatilities.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Meta.html#dataSensitivityNu--">dataSensitivityNu</a></span>()</code>
+<div class="block">The meta-property for the <code>dataSensitivityNu</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParametersIborCapletFloorletVolatilities.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Meta.html#dataSensitivityRho--">dataSensitivityRho</a></span>()</code>
+<div class="block">The meta-property for the <code>dataSensitivityRho</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParametersIborCapletFloorletVolatilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.html#getDataSensitivityAlpha--">getDataSensitivityAlpha</a></span>()</code>
+<div class="block">Gets the sensitivity of the Alpha parameters to the raw data used for calibration.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParametersIborCapletFloorletVolatilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.html#getDataSensitivityBeta--">getDataSensitivityBeta</a></span>()</code>
+<div class="block">Gets the sensitivity of the Beta parameters to the raw data used for calibration.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParametersIborCapletFloorletVolatilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.html#getDataSensitivityNu--">getDataSensitivityNu</a></span>()</code>
+<div class="block">Gets the sensitivity of the Nu parameters to the raw data used for calibration.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParametersIborCapletFloorletVolatilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.html#getDataSensitivityRho--">getDataSensitivityRho</a></span>()</code>
+<div class="block">Gets the sensitivity of the Rho parameters to the raw data used for calibration.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html#getParameterCurveNodes--">getParameterCurveNodes</a></span>()</code>
+<div class="block">Gets the nodes of SABR parameter curves.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.Meta.html#initialParameters--">initialParameters</a></span>()</code>
+<div class="block">The meta-property for the <code>initialParameters</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.Meta.html#parameterCurveNodes--">parameterCurveNodes</a></span>()</code>
+<div class="block">The meta-property for the <code>parameterCurveNodes</code> property.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/capfloor/package-summary.html">com.opengamma.strata.pricer.capfloor</a> with parameters of type <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DirectIborCapletFloorletVolatilityDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/DirectIborCapletFloorletVolatilityDefinition.html#computePenaltyMatrix-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-">computePenaltyMatrix</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;strikes,
+                    <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;expiries)</code>
+<div class="block">Computes penalty matrix.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html#createSabrParameterCurve-java.util.List-com.opengamma.strata.collect.array.DoubleArray-">createSabrParameterCurve</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&gt;&nbsp;metadata,
+                        <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;nodeValues)</code>
+<div class="block">Creates the parameter curves with parameter node values.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Builder.html" title="class in com.opengamma.strata.pricer.capfloor">SabrParametersIborCapletFloorletVolatilities.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParametersIborCapletFloorletVolatilities.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Builder.html#dataSensitivityAlpha-com.opengamma.strata.collect.array.DoubleArray...-">dataSensitivityAlpha</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>...&nbsp;dataSensitivityAlpha)</code>
+<div class="block">Sets the <code>dataSensitivityAlpha</code> property in the builder
+ from an array of objects.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Builder.html" title="class in com.opengamma.strata.pricer.capfloor">SabrParametersIborCapletFloorletVolatilities.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParametersIborCapletFloorletVolatilities.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Builder.html#dataSensitivityBeta-com.opengamma.strata.collect.array.DoubleArray...-">dataSensitivityBeta</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>...&nbsp;dataSensitivityBeta)</code>
+<div class="block">Sets the <code>dataSensitivityBeta</code> property in the builder
+ from an array of objects.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Builder.html" title="class in com.opengamma.strata.pricer.capfloor">SabrParametersIborCapletFloorletVolatilities.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParametersIborCapletFloorletVolatilities.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Builder.html#dataSensitivityNu-com.opengamma.strata.collect.array.DoubleArray...-">dataSensitivityNu</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>...&nbsp;dataSensitivityNu)</code>
+<div class="block">Sets the <code>dataSensitivityNu</code> property in the builder
+ from an array of objects.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Builder.html" title="class in com.opengamma.strata.pricer.capfloor">SabrParametersIborCapletFloorletVolatilities.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParametersIborCapletFloorletVolatilities.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Builder.html#dataSensitivityRho-com.opengamma.strata.collect.array.DoubleArray...-">dataSensitivityRho</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>...&nbsp;dataSensitivityRho)</code>
+<div class="block">Sets the <code>dataSensitivityRho</code> property in the builder
+ from an array of objects.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder.html" title="class in com.opengamma.strata.pricer.capfloor">SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder.html#initialParameters-com.opengamma.strata.collect.array.DoubleArray-">initialParameters</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;initialParameters)</code>
+<div class="block">Sets the initial parameter values used in calibration.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html" title="class in com.opengamma.strata.pricer.capfloor">SabrIborCapletFloorletVolatilityCalibrationDefinition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html#ofFixedBeta-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilitiesName-com.opengamma.strata.basics.index.IborIndex-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.pricer.model.SabrVolatilityFormula-">ofFixedBeta</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilitiesName.html" title="class in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilitiesName</a>&nbsp;name,
+           <a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
+           <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;alphaCurveNodes,
+           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;rhoCurveNodes,
+           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;nuCurveNodes,
+           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;initialParameters,
+           <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;interpolator,
+           <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;extrapolatorLeft,
+           <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;extrapolatorRight,
+           <a href="../../../../../../com/opengamma/strata/pricer/model/SabrVolatilityFormula.html" title="interface in com.opengamma.strata.pricer.model">SabrVolatilityFormula</a>&nbsp;sabrVolatilityFormula)</code>
+<div class="block">Obtains an instance with fixed beta, zero shift and initial values.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html" title="class in com.opengamma.strata.pricer.capfloor">SabrIborCapletFloorletVolatilityCalibrationDefinition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html#ofFixedBeta-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilitiesName-com.opengamma.strata.basics.index.IborIndex-com.opengamma.strata.basics.date.DayCount-double-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.pricer.model.SabrVolatilityFormula-">ofFixedBeta</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilitiesName.html" title="class in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilitiesName</a>&nbsp;name,
+           <a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
+           <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+           double&nbsp;beta,
+           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;alphaCurveNodes,
+           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;rhoCurveNodes,
+           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;nuCurveNodes,
+           <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;interpolator,
+           <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;extrapolatorLeft,
+           <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;extrapolatorRight,
+           <a href="../../../../../../com/opengamma/strata/pricer/model/SabrVolatilityFormula.html" title="interface in com.opengamma.strata.pricer.model">SabrVolatilityFormula</a>&nbsp;sabrVolatilityFormula)</code>
+<div class="block">Obtains an instance with fixed beta and zero shift.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html" title="class in com.opengamma.strata.pricer.capfloor">SabrIborCapletFloorletVolatilityCalibrationDefinition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html#ofFixedBeta-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilitiesName-com.opengamma.strata.basics.index.IborIndex-com.opengamma.strata.basics.date.DayCount-double-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.pricer.model.SabrVolatilityFormula-">ofFixedBeta</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilitiesName.html" title="class in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilitiesName</a>&nbsp;name,
+           <a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
+           <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+           double&nbsp;shift,
+           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;alphaCurveNodes,
+           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;rhoCurveNodes,
+           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;nuCurveNodes,
+           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;initialParameters,
+           <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;interpolator,
+           <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;extrapolatorLeft,
+           <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;extrapolatorRight,
+           <a href="../../../../../../com/opengamma/strata/pricer/model/SabrVolatilityFormula.html" title="interface in com.opengamma.strata.pricer.model">SabrVolatilityFormula</a>&nbsp;sabrVolatilityFormula)</code>
+<div class="block">Obtains an instance with fixed beta, nonzero shift and initial values.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html" title="class in com.opengamma.strata.pricer.capfloor">SabrIborCapletFloorletVolatilityCalibrationDefinition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html#ofFixedBeta-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilitiesName-com.opengamma.strata.basics.index.IborIndex-com.opengamma.strata.basics.date.DayCount-double-double-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.pricer.model.SabrVolatilityFormula-">ofFixedBeta</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilitiesName.html" title="class in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilitiesName</a>&nbsp;name,
+           <a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
+           <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+           double&nbsp;beta,
+           double&nbsp;shift,
+           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;alphaCurveNodes,
+           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;rhoCurveNodes,
+           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;nuCurveNodes,
+           <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;interpolator,
+           <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;extrapolatorLeft,
+           <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;extrapolatorRight,
+           <a href="../../../../../../com/opengamma/strata/pricer/model/SabrVolatilityFormula.html" title="interface in com.opengamma.strata.pricer.model">SabrVolatilityFormula</a>&nbsp;sabrVolatilityFormula)</code>
+<div class="block">Obtains an instance with fixed beta and nonzero shift.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html" title="class in com.opengamma.strata.pricer.capfloor">SabrIborCapletFloorletVolatilityCalibrationDefinition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html#ofFixedRho-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilitiesName-com.opengamma.strata.basics.index.IborIndex-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.pricer.model.SabrVolatilityFormula-">ofFixedRho</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilitiesName.html" title="class in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilitiesName</a>&nbsp;name,
+          <a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
+          <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;alphaCurveNodes,
+          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;betaCurveNodes,
+          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;nuCurveNodes,
+          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;initialParameters,
+          <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;interpolator,
+          <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;extrapolatorLeft,
+          <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;extrapolatorRight,
+          <a href="../../../../../../com/opengamma/strata/pricer/model/SabrVolatilityFormula.html" title="interface in com.opengamma.strata.pricer.model">SabrVolatilityFormula</a>&nbsp;sabrVolatilityFormula)</code>
+<div class="block">Obtains an instance with fixed rho, zero shift and initial values.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html" title="class in com.opengamma.strata.pricer.capfloor">SabrIborCapletFloorletVolatilityCalibrationDefinition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html#ofFixedRho-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilitiesName-com.opengamma.strata.basics.index.IborIndex-com.opengamma.strata.basics.date.DayCount-double-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.pricer.model.SabrVolatilityFormula-">ofFixedRho</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilitiesName.html" title="class in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilitiesName</a>&nbsp;name,
+          <a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
+          <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+          double&nbsp;rho,
+          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;alphaCurveNodes,
+          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;betaCurveNodes,
+          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;nuCurveNodes,
+          <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;interpolator,
+          <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;extrapolatorLeft,
+          <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;extrapolatorRight,
+          <a href="../../../../../../com/opengamma/strata/pricer/model/SabrVolatilityFormula.html" title="interface in com.opengamma.strata.pricer.model">SabrVolatilityFormula</a>&nbsp;sabrVolatilityFormula)</code>
+<div class="block">Obtains an instance with fixed rho and zero shift.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html" title="class in com.opengamma.strata.pricer.capfloor">SabrIborCapletFloorletVolatilityCalibrationDefinition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html#ofFixedRho-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilitiesName-com.opengamma.strata.basics.index.IborIndex-com.opengamma.strata.basics.date.DayCount-double-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.pricer.model.SabrVolatilityFormula-">ofFixedRho</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilitiesName.html" title="class in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilitiesName</a>&nbsp;name,
+          <a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
+          <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+          double&nbsp;shift,
+          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;alphaCurveNodes,
+          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;betaCurveNodes,
+          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;nuCurveNodes,
+          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;initialParameters,
+          <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;interpolator,
+          <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;extrapolatorLeft,
+          <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;extrapolatorRight,
+          <a href="../../../../../../com/opengamma/strata/pricer/model/SabrVolatilityFormula.html" title="interface in com.opengamma.strata.pricer.model">SabrVolatilityFormula</a>&nbsp;sabrVolatilityFormula)</code>
+<div class="block">Obtains an instance with fixed rho, nonzero shift and initial values.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html" title="class in com.opengamma.strata.pricer.capfloor">SabrIborCapletFloorletVolatilityCalibrationDefinition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html#ofFixedRho-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilitiesName-com.opengamma.strata.basics.index.IborIndex-com.opengamma.strata.basics.date.DayCount-double-double-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.market.curve.interpolator.CurveExtrapolator-com.opengamma.strata.pricer.model.SabrVolatilityFormula-">ofFixedRho</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilitiesName.html" title="class in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilitiesName</a>&nbsp;name,
+          <a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
+          <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+          double&nbsp;rho,
+          double&nbsp;shift,
+          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;alphaCurveNodes,
+          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;betaCurveNodes,
+          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;nuCurveNodes,
+          <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;interpolator,
+          <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;extrapolatorLeft,
+          <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a>&nbsp;extrapolatorRight,
+          <a href="../../../../../../com/opengamma/strata/pricer/model/SabrVolatilityFormula.html" title="interface in com.opengamma.strata.pricer.model">SabrVolatilityFormula</a>&nbsp;sabrVolatilityFormula)</code>
+<div class="block">Obtains an instance with fixed rho and nonzero shift.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder.html" title="class in com.opengamma.strata.pricer.capfloor">SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder.html#parameterCurveNodes-com.opengamma.strata.collect.array.DoubleArray...-">parameterCurveNodes</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>...&nbsp;parameterCurveNodes)</code>
+<div class="block">Sets the <code>parameterCurveNodes</code> property in the builder
+ from an array of objects.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Method parameters in <a href="../../../../../../com/opengamma/strata/pricer/capfloor/package-summary.html">com.opengamma.strata.pricer.capfloor</a> with type arguments of type <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Builder.html" title="class in com.opengamma.strata.pricer.capfloor">SabrParametersIborCapletFloorletVolatilities.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParametersIborCapletFloorletVolatilities.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Builder.html#dataSensitivityAlpha-java.util.List-">dataSensitivityAlpha</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&nbsp;dataSensitivityAlpha)</code>
+<div class="block">Sets the sensitivity of the Alpha parameters to the raw data used for calibration.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Builder.html" title="class in com.opengamma.strata.pricer.capfloor">SabrParametersIborCapletFloorletVolatilities.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParametersIborCapletFloorletVolatilities.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Builder.html#dataSensitivityBeta-java.util.List-">dataSensitivityBeta</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&nbsp;dataSensitivityBeta)</code>
+<div class="block">Sets the sensitivity of the Beta parameters to the raw data used for calibration.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Builder.html" title="class in com.opengamma.strata.pricer.capfloor">SabrParametersIborCapletFloorletVolatilities.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParametersIborCapletFloorletVolatilities.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Builder.html#dataSensitivityNu-java.util.List-">dataSensitivityNu</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&nbsp;dataSensitivityNu)</code>
+<div class="block">Sets the sensitivity of the Nu parameters to the raw data used for calibration.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Builder.html" title="class in com.opengamma.strata.pricer.capfloor">SabrParametersIborCapletFloorletVolatilities.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParametersIborCapletFloorletVolatilities.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.Builder.html#dataSensitivityRho-java.util.List-">dataSensitivityRho</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&nbsp;dataSensitivityRho)</code>
+<div class="block">Sets the sensitivity of the Rho parameters to the raw data used for calibration.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder.html" title="class in com.opengamma.strata.pricer.capfloor">SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder.html#parameterCurveNodes-java.util.List-">parameterCurveNodes</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&nbsp;parameterCurveNodes)</code>
+<div class="block">Sets the nodes of SABR parameter curves.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.credit">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a> in <a href="../../../../../../com/opengamma/strata/pricer/credit/package-summary.html">com.opengamma.strata.pricer.credit</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/credit/package-summary.html">com.opengamma.strata.pricer.credit</a> that return <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DoublesScheduleGenerator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/DoublesScheduleGenerator.html#getIntegrationsPoints-double-double-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-">getIntegrationsPoints</a></span>(double&nbsp;start,
+                     double&nbsp;end,
+                     <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;discountCurveNodes,
+                     <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;creditCurveNodes)</code>
+<div class="block">Combines the discount curve nodes and credit curve nodes.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CreditDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/CreditDiscountFactors.html#getParameterKeys--">getParameterKeys</a></span>()</code>
+<div class="block">Obtains the parameter keys of the underlying curve.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">LegalEntitySurvivalProbabilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/LegalEntitySurvivalProbabilities.html#getParameterKeys--">getParameterKeys</a></span>()</code>
+<div class="block">Obtains the parameter keys of the underlying curve.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCreditDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCreditDiscountFactors.html#getParameterKeys--">getParameterKeys</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SpreadSensitivityCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/SpreadSensitivityCalculator.html#impliedSpread-java.util.List-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">impliedSpread</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;bucketCds,
+             <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+             <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DoublesScheduleGenerator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/DoublesScheduleGenerator.html#truncateSetInclusive-double-double-com.opengamma.strata.collect.array.DoubleArray-">truncateSetInclusive</a></span>(double&nbsp;lower,
+                    double&nbsp;upper,
+                    <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;set)</code>
+<div class="block">Truncates an array of doubles.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/credit/package-summary.html">com.opengamma.strata.pricer.credit</a> with parameters of type <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/NodalCurve.html" title="interface in com.opengamma.strata.market.curve">NodalCurve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SimpleCreditCurveCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/SimpleCreditCurveCalibrator.html#calibrate-java.util.List-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.curve.CurveName-java.time.LocalDate-com.opengamma.strata.pricer.credit.CreditDiscountFactors-com.opengamma.strata.pricer.credit.RecoveryRates-com.opengamma.strata.basics.ReferenceData-">calibrate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;calibrationCDSs,
+         <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;premiums,
+         <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;pointsUpfront,
+         <a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&nbsp;name,
+         <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+         <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditDiscountFactors.html" title="interface in com.opengamma.strata.pricer.credit">CreditDiscountFactors</a>&nbsp;discountFactors,
+         <a href="../../../../../../com/opengamma/strata/pricer/credit/RecoveryRates.html" title="interface in com.opengamma.strata.pricer.credit">RecoveryRates</a>&nbsp;recoveryRates,
+         <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract <a href="../../../../../../com/opengamma/strata/market/curve/NodalCurve.html" title="interface in com.opengamma.strata.market.curve">NodalCurve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCompliantCreditCurveCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCompliantCreditCurveCalibrator.html#calibrate-java.util.List-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.curve.CurveName-java.time.LocalDate-com.opengamma.strata.pricer.credit.CreditDiscountFactors-com.opengamma.strata.pricer.credit.RecoveryRates-com.opengamma.strata.basics.ReferenceData-">calibrate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;calibrationCDSs,
+         <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;flactionalSpreads,
+         <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;pointsUpfront,
+         <a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&nbsp;name,
+         <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+         <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditDiscountFactors.html" title="interface in com.opengamma.strata.pricer.credit">CreditDiscountFactors</a>&nbsp;discountFactors,
+         <a href="../../../../../../com/opengamma/strata/pricer/credit/RecoveryRates.html" title="interface in com.opengamma.strata.pricer.credit">RecoveryRates</a>&nbsp;recoveryRates,
+         <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calibrate the ISDA compliant credit curve to points upfront and fractional spread.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/NodalCurve.html" title="interface in com.opengamma.strata.market.curve">NodalCurve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FastCreditCurveCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/FastCreditCurveCalibrator.html#calibrate-java.util.List-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.curve.CurveName-java.time.LocalDate-com.opengamma.strata.pricer.credit.CreditDiscountFactors-com.opengamma.strata.pricer.credit.RecoveryRates-com.opengamma.strata.basics.ReferenceData-">calibrate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;calibrationCDSs,
+         <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;flactionalSpreads,
+         <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;pointsUpfront,
+         <a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&nbsp;name,
+         <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+         <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditDiscountFactors.html" title="interface in com.opengamma.strata.pricer.credit">CreditDiscountFactors</a>&nbsp;discountFactors,
+         <a href="../../../../../../com/opengamma/strata/pricer/credit/RecoveryRates.html" title="interface in com.opengamma.strata.pricer.credit">RecoveryRates</a>&nbsp;recoveryRates,
+         <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CreditDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/CreditDiscountFactors.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+                          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>
+<div class="block">Creates the parameter sensitivity when the sensitivity values are known.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCreditDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCreditDiscountFactors.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+                          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DoublesScheduleGenerator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/DoublesScheduleGenerator.html#getIntegrationsPoints-double-double-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-">getIntegrationsPoints</a></span>(double&nbsp;start,
+                     double&nbsp;end,
+                     <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;discountCurveNodes,
+                     <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;creditCurveNodes)</code>
+<div class="block">Combines the discount curve nodes and credit curve nodes.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCreditDiscountFactors.html" title="class in com.opengamma.strata.pricer.credit">IsdaCreditDiscountFactors</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCreditDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCreditDiscountFactors.html#of-com.opengamma.strata.basics.currency.Currency-java.time.LocalDate-com.opengamma.strata.market.curve.CurveName-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.basics.date.DayCount-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+  <a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&nbsp;curveName,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;yearFractions,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;zeroRates,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Creates an instance from year fraction and zero rate values.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DoublesScheduleGenerator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/DoublesScheduleGenerator.html#truncateSetInclusive-double-double-com.opengamma.strata.collect.array.DoubleArray-">truncateSetInclusive</a></span>(double&nbsp;lower,
+                    double&nbsp;upper,
+                    <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;set)</code>
+<div class="block">Truncates an array of doubles.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1706,13 +2477,13 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
-<td class="colLast"><span class="typeNameLabel">InterpolatedStrikeSmileDeltaTermStructure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html#getExpiries--">getExpiries</a></span>()</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SmileDeltaTermStructure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html#getExpiries--">getExpiries</a></span>()</code>
 <div class="block">Gets the expiries associated with the volatility term.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InterpolatedStrikeSmileDeltaTermStructure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html#getExpiries--">getExpiries</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
@@ -1892,15 +2663,15 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileAndBucketedSensitivities.html" title="class in com.opengamma.strata.pricer.fxopt">SmileAndBucketedSensitivities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">InterpolatedStrikeSmileDeltaTermStructure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html#smileAndSensitivitiesForExpiry-double-com.opengamma.strata.collect.array.DoubleArray-">smileAndSensitivitiesForExpiry</a></span>(double&nbsp;expiry,
-                              <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;volatilityAtTimeSensitivity)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileAndBucketedSensitivities.html" title="class in com.opengamma.strata.pricer.fxopt">SmileAndBucketedSensitivities</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SmileDeltaTermStructure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileDeltaTermStructure.html#smileAndSensitivitiesForExpiry-double-com.opengamma.strata.collect.array.DoubleArray-">smileAndSensitivitiesForExpiry</a></span>(double&nbsp;expiry,
                               <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;volatilityAtTimeSensitivity)</code>
 <div class="block">Calculates the smile at a given time and the sensitivities with respect to the volatility data points.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/fxopt/SmileAndBucketedSensitivities.html" title="class in com.opengamma.strata.pricer.fxopt">SmileAndBucketedSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InterpolatedStrikeSmileDeltaTermStructure.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fxopt/InterpolatedStrikeSmileDeltaTermStructure.html#smileAndSensitivitiesForExpiry-double-com.opengamma.strata.collect.array.DoubleArray-">smileAndSensitivitiesForExpiry</a></span>(double&nbsp;expiry,
+                              <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;volatilityAtTimeSensitivity)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -2033,6 +2804,17 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/option/RawOptionData.html" title="class in com.opengamma.strata.pricer.option">RawOptionData</a></code></td>
+<td class="colLast"><span class="typeNameLabel">RawOptionData.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/option/RawOptionData.html#of-java.util.List-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.ValueType-com.opengamma.strata.collect.array.DoubleMatrix-com.opengamma.strata.collect.array.DoubleMatrix-com.opengamma.strata.market.ValueType-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&gt;&nbsp;expiries,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;strikes,
+  <a href="../../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;strikeType,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a>&nbsp;data,
+  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a>&nbsp;error,
+  <a href="../../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;dataType)</code>
+<div class="block">Obtains an instance of the raw data with error.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/option/RawOptionData.html" title="class in com.opengamma.strata.pricer.option">RawOptionData</a></code></td>
 <td class="colLast"><span class="typeNameLabel">RawOptionData.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/option/RawOptionData.html#of-java.util.List-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.ValueType-com.opengamma.strata.collect.array.DoubleMatrix-com.opengamma.strata.market.ValueType-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&gt;&nbsp;expiries,
   <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;strikes,
   <a href="../../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;strikeType,
@@ -2041,7 +2823,7 @@
 <div class="block">Obtains an instance of the raw volatility.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/option/RawOptionData.html" title="class in com.opengamma.strata.pricer.option">RawOptionData</a></code></td>
 <td class="colLast"><span class="typeNameLabel">RawOptionData.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/option/RawOptionData.html#ofBlackVolatility-java.util.List-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.ValueType-com.opengamma.strata.collect.array.DoubleMatrix-java.lang.Double-">ofBlackVolatility</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&gt;&nbsp;expiries,
                  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;strikes,
@@ -2049,6 +2831,17 @@
                  <a href="../../../../../../com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a>&nbsp;data,
                  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&nbsp;shift)</code>
 <div class="block">Obtains an instance of the raw volatility for shifted Black (log-normal) volatility.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/option/RawOptionData.html" title="class in com.opengamma.strata.pricer.option">RawOptionData</a></code></td>
+<td class="colLast"><span class="typeNameLabel">RawOptionData.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/option/RawOptionData.html#ofBlackVolatility-java.util.List-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.ValueType-com.opengamma.strata.collect.array.DoubleMatrix-com.opengamma.strata.collect.array.DoubleMatrix-java.lang.Double-">ofBlackVolatility</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&gt;&nbsp;expiries,
+                 <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;strikes,
+                 <a href="../../../../../../com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a>&nbsp;strikeType,
+                 <a href="../../../../../../com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a>&nbsp;data,
+                 <a href="../../../../../../com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a>&nbsp;error,
+                 <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&nbsp;shift)</code>
+<div class="block">Obtains an instance of the raw data with error for shifted Black (log-normal) volatility.</div>
 </td>
 </tr>
 </tbody>
@@ -2118,12 +2911,14 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SimpleIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/SimpleIborIndexRates.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
-                          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">OvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+                          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>
+<div class="block">Creates the parameter sensitivity when the sensitivity values are known.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+<td class="colLast"><span class="typeNameLabel">SimplePriceIndexValues.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/SimplePriceIndexValues.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
                           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -2133,19 +2928,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SimplePriceIndexValues.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/SimplePriceIndexValues.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
-                          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
 <td class="colLast"><span class="typeNameLabel">PriceIndexValues.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/PriceIndexValues.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
-                          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>
-<div class="block">Creates the parameter sensitivity when the sensitivity values are known.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
                           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>
 <div class="block">Creates the parameter sensitivity when the sensitivity values are known.</div>
 </td>
@@ -2156,6 +2939,16 @@
                           <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>
 <div class="block">Creates the parameter sensitivity when the sensitivity values are known.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+                          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SimpleIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/SimpleIborIndexRates.html#createParameterSensitivity-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">createParameterSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+                          <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivities)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/rate/SimplePriceIndexValues.html" title="class in com.opengamma.strata.pricer.rate">SimplePriceIndexValues</a></code></td>

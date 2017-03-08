@@ -102,30 +102,36 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.credit">com.opengamma.strata.pricer.credit</a></td>
+<td class="colLast">
+<div class="block">Calculators for credit instruments, such as Credit Default Swap (CDS).</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.fx">com.opengamma.strata.pricer.fx</a></td>
 <td class="colLast">
 <div class="block">Calculators for FX instruments, such as FX forward and FX swap.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.fxopt">com.opengamma.strata.pricer.fxopt</a></td>
 <td class="colLast">
 <div class="block">Calculators for FX options.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.index">com.opengamma.strata.pricer.index</a></td>
 <td class="colLast">
 <div class="block">Calculators for products based on rate indices, such as Short Term Interest Rate futures (STIRs).</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.rate">com.opengamma.strata.pricer.rate</a></td>
 <td class="colLast">
 <div class="block">Calculators for rates instruments, such as Forward Rate Agreement (FRA) and interest rate swap.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.swaption">com.opengamma.strata.pricer.swaption</a></td>
 <td class="colLast">
 <div class="block">Calculators for swaptions.</div>
@@ -253,6 +259,12 @@
 <div class="block">Volatility for Ibor caplet/floorlet in the normal or Bachelier model.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilities.html" title="interface in com.opengamma.strata.pricer.capfloor">SabrIborCapletFloorletVolatilities</a></span></code>
+<div class="block">Volatility for Ibor caplet/floorlet in SABR model.</div>
+</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
@@ -272,6 +284,65 @@
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/NormalIborCapletFloorletExpiryStrikeVolatilities.html" title="class in com.opengamma.strata.pricer.capfloor">NormalIborCapletFloorletExpiryStrikeVolatilities</a></span></code>
 <div class="block">Volatility for Ibor caplet/floorlet in the normal or Bachelier model based on a surface.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/SabrParametersIborCapletFloorletVolatilities.html" title="class in com.opengamma.strata.pricer.capfloor">SabrParametersIborCapletFloorletVolatilities</a></span></code>
+<div class="block">Volatility environment for Ibor caplet/floorlet in the SABR model.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/capfloor/ShiftedBlackIborCapletFloorletExpiryStrikeVolatilities.html" title="class in com.opengamma.strata.pricer.capfloor">ShiftedBlackIborCapletFloorletExpiryStrikeVolatilities</a></span></code>
+<div class="block">Volatility for Ibor caplet/floorlet in the shifted log-normal or shifted Black model based on a surface.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.credit">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../com/opengamma/strata/market/MarketDataView.html" title="interface in com.opengamma.strata.market">MarketDataView</a> in <a href="../../../../../com/opengamma/strata/pricer/credit/package-summary.html">com.opengamma.strata.pricer.credit</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../com/opengamma/strata/market/MarketDataView.html" title="interface in com.opengamma.strata.market">MarketDataView</a> in <a href="../../../../../com/opengamma/strata/pricer/credit/package-summary.html">com.opengamma.strata.pricer.credit</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/credit/CreditDiscountFactors.html" title="interface in com.opengamma.strata.pricer.credit">CreditDiscountFactors</a></span></code>
+<div class="block">Provides access to discount factors for a single currency.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/credit/RecoveryRates.html" title="interface in com.opengamma.strata.pricer.credit">RecoveryRates</a></span></code>
+<div class="block">Recovery rates.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../com/opengamma/strata/pricer/credit/package-summary.html">com.opengamma.strata.pricer.credit</a> that implement <a href="../../../../../com/opengamma/strata/market/MarketDataView.html" title="interface in com.opengamma.strata.market">MarketDataView</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/credit/ConstantRecoveryRates.html" title="class in com.opengamma.strata.pricer.credit">ConstantRecoveryRates</a></span></code>
+<div class="block">The constant recovery rate.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaCreditDiscountFactors.html" title="class in com.opengamma.strata.pricer.credit">IsdaCreditDiscountFactors</a></span></code>
+<div class="block">ISDA compliant zero rate discount factors.</div>
 </td>
 </tr>
 </tbody>

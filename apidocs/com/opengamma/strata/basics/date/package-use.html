@@ -138,6 +138,18 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.capfloor">com.opengamma.strata.pricer.capfloor</a></td>
+<td class="colLast">
+<div class="block">Calculators for Ibor cap-floor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.credit">com.opengamma.strata.pricer.credit</a></td>
+<td class="colLast">
+<div class="block">Calculators for credit instruments, such as Credit Default Swap (CDS).</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.fxopt">com.opengamma.strata.pricer.fxopt</a></td>
 <td class="colLast">
 <div class="block">Calculators for FX options.</div>
@@ -182,14 +194,12 @@
 <tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.credit">com.opengamma.strata.product.credit</a></td>
 <td class="colLast">
-<div class="block">Entity objects describing credit products.</div>
+<div class="block">Entity objects describing Credit Default Swap (CDS) and CDS index.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.credit.type">com.opengamma.strata.product.credit.type</a></td>
-<td class="colLast">
-<div class="block">Conventions and templates to aid the construction of credit default swaps.</div>
-</td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.deposit">com.opengamma.strata.product.deposit</a></td>
@@ -557,8 +567,23 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colOne"><a href="../../../../../com/opengamma/strata/basics/date/class-use/BusinessDayAdjustment.html#com.opengamma.strata.market.curve">BusinessDayAdjustment</a>
+<div class="block">An adjustment that alters a date if it falls on a day other than a business day.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><a href="../../../../../com/opengamma/strata/basics/date/class-use/DayCount.html#com.opengamma.strata.market.curve">DayCount</a>
 <div class="block">A convention defining how to calculate fractions of a year.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../com/opengamma/strata/basics/date/class-use/DaysAdjustment.html#com.opengamma.strata.market.curve">DaysAdjustment</a>
+<div class="block">An adjustment that alters a date by adding a period of days.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><a href="../../../../../com/opengamma/strata/basics/date/class-use/Tenor.html#com.opengamma.strata.market.curve">Tenor</a>
+<div class="block">A tenor indicating how long it will take for a financial instrument to reach maturity.</div>
 </td>
 </tr>
 </tbody>
@@ -609,6 +634,40 @@
 <tbody>
 <tr class="altColor">
 <td class="colOne"><a href="../../../../../com/opengamma/strata/basics/date/class-use/DayCount.html#com.opengamma.strata.market.surface">DayCount</a>
+<div class="block">A convention defining how to calculate fractions of a year.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.capfloor">
+<!--   -->
+</a>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../com/opengamma/strata/basics/date/package-summary.html">com.opengamma.strata.basics.date</a> used by <a href="../../../../../com/opengamma/strata/pricer/capfloor/package-summary.html">com.opengamma.strata.pricer.capfloor</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../com/opengamma/strata/basics/date/class-use/DayCount.html#com.opengamma.strata.pricer.capfloor">DayCount</a>
+<div class="block">A convention defining how to calculate fractions of a year.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.credit">
+<!--   -->
+</a>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../com/opengamma/strata/basics/date/package-summary.html">com.opengamma.strata.basics.date</a> used by <a href="../../../../../com/opengamma/strata/pricer/credit/package-summary.html">com.opengamma.strata.pricer.credit</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../com/opengamma/strata/basics/date/class-use/DayCount.html#com.opengamma.strata.pricer.credit">DayCount</a>
 <div class="block">A convention defining how to calculate fractions of a year.</div>
 </td>
 </tr>
@@ -774,13 +833,18 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colOne"><a href="../../../../../com/opengamma/strata/basics/date/class-use/BusinessDayAdjustment.html#com.opengamma.strata.product.credit">BusinessDayAdjustment</a>
-<div class="block">An adjustment that alters a date if it falls on a day other than a business day.</div>
+<td class="colOne"><a href="../../../../../com/opengamma/strata/basics/date/class-use/DayCount.html#com.opengamma.strata.product.credit">DayCount</a>
+<div class="block">A convention defining how to calculate fractions of a year.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><a href="../../../../../com/opengamma/strata/basics/date/class-use/DayCount.html#com.opengamma.strata.product.credit">DayCount</a>
-<div class="block">A convention defining how to calculate fractions of a year.</div>
+<td class="colOne"><a href="../../../../../com/opengamma/strata/basics/date/class-use/DaysAdjustment.html#com.opengamma.strata.product.credit">DaysAdjustment</a>
+<div class="block">An adjustment that alters a date by adding a period of days.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../com/opengamma/strata/basics/date/class-use/HolidayCalendarId.html#com.opengamma.strata.product.credit">HolidayCalendarId</a>
+<div class="block">An identifier for a holiday calendar.</div>
 </td>
 </tr>
 </tbody>
@@ -801,18 +865,18 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><a href="../../../../../com/opengamma/strata/basics/date/class-use/BusinessDayConvention.html#com.opengamma.strata.product.credit.type">BusinessDayConvention</a>
-<div class="block">A convention defining how to adjust a date if it falls on a day other than a business day.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colOne"><a href="../../../../../com/opengamma/strata/basics/date/class-use/DayCount.html#com.opengamma.strata.product.credit.type">DayCount</a>
 <div class="block">A convention defining how to calculate fractions of a year.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../com/opengamma/strata/basics/date/class-use/DaysAdjustment.html#com.opengamma.strata.product.credit.type">DaysAdjustment</a>
+<div class="block">An adjustment that alters a date by adding a period of days.</div>
+</td>
+</tr>
 <tr class="rowColor">
-<td class="colOne"><a href="../../../../../com/opengamma/strata/basics/date/class-use/HolidayCalendarId.html#com.opengamma.strata.product.credit.type">HolidayCalendarId</a>
-<div class="block">An identifier for a holiday calendar.</div>
+<td class="colOne"><a href="../../../../../com/opengamma/strata/basics/date/class-use/Tenor.html#com.opengamma.strata.product.credit.type">Tenor</a>
+<div class="block">A tenor indicating how long it will take for a financial instrument to reach maturity.</div>
 </td>
 </tr>
 </tbody>

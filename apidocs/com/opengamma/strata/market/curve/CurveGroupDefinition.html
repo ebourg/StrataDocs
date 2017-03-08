@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":9,"i16":10,"i17":10,"i18":9,"i19":9,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10};
+var methods = {"i0":10,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":9,"i16":10,"i17":10,"i18":9,"i19":9,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -191,7 +191,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a>&gt;</code></td>
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html" title="interface in com.opengamma.strata.market.curve">CurveDefinition</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#findCurveDefinition-com.opengamma.strata.market.curve.CurveName-">findCurveDefinition</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&nbsp;curveName)</code>
 <div class="block">Finds the definition for the curve with the specified name.</div>
 </td>
@@ -203,7 +203,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a>&gt;</code></td>
+<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html" title="interface in com.opengamma.strata.market.curve">CurveDefinition</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#getCurveDefinitions--">getCurveDefinitions</a></span>()</code>
 <div class="block">Gets definitions which specify how the curves are calibrated.</div>
 </td>
@@ -275,7 +275,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#of-com.opengamma.strata.market.curve.CurveGroupName-java.util.Collection-java.util.Collection-">of</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupName.html" title="class in com.opengamma.strata.market.curve">CurveGroupName</a>&nbsp;name,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupEntry.html" title="class in com.opengamma.strata.market.curve">CurveGroupEntry</a>&gt;&nbsp;entries,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a>&gt;&nbsp;curveDefinitions)</code>
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html" title="interface in com.opengamma.strata.market.curve">CurveDefinition</a>&gt;&nbsp;curveDefinitions)</code>
 <div class="block">Returns a curve group definition with the specified name and containing the specified entries.</div>
 </td>
 </tr>
@@ -283,7 +283,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#of-com.opengamma.strata.market.curve.CurveGroupName-java.util.Collection-java.util.Collection-java.util.Map-">of</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupName.html" title="class in com.opengamma.strata.market.curve">CurveGroupName</a>&nbsp;name,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupEntry.html" title="class in com.opengamma.strata.market.curve">CurveGroupEntry</a>&gt;&nbsp;entries,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a>&gt;&nbsp;curveDefinitions,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html" title="interface in com.opengamma.strata.market.curve">CurveDefinition</a>&gt;&nbsp;curveDefinitions,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>,<a href="../../../../../com/opengamma/strata/market/curve/SeasonalityDefinition.html" title="class in com.opengamma.strata.market.curve">SeasonalityDefinition</a>&gt;&nbsp;seasonalityDefinitions)</code>
 <div class="block">Returns a curve group definition with the specified name and containing the specified entries and seasonality.</div>
 </td>
@@ -305,7 +305,9 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </tr>
 <tr id="i23" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinitionBuilder.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinitionBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#toBuilder--">toBuilder</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#toBuilder--">toBuilder</a></span>()</code>
+<div class="block">Converts to builder.</div>
+</td>
 </tr>
 <tr id="i24" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
@@ -313,7 +315,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </tr>
 <tr id="i25" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#withCurveDefinitions-java.util.List-">withCurveDefinitions</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a>&gt;&nbsp;curveDefinitions)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#withCurveDefinitions-java.util.List-">withCurveDefinitions</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html" title="interface in com.opengamma.strata.market.curve">CurveDefinition</a>&gt;&nbsp;curveDefinitions)</code>
 <div class="block">Returns a copy of this object containing the specified curve definitions.</div>
 </td>
 </tr>
@@ -321,6 +323,12 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#withName-com.opengamma.strata.market.curve.CurveGroupName-">withName</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupName.html" title="class in com.opengamma.strata.market.curve">CurveGroupName</a>&nbsp;name)</code>
 <div class="block">Returns a copy of this definition with a different name.</div>
+</td>
+</tr>
+<tr id="i27" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#withSeasonalityDefinitions-java.util.Map-">withSeasonalityDefinitions</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>,<a href="../../../../../com/opengamma/strata/market/curve/SeasonalityDefinition.html" title="class in com.opengamma.strata.market.curve">SeasonalityDefinition</a>&gt;&nbsp;seasonalityDefinitions)</code>
+<div class="block">Returns a copy of this object containing the specified seasonality definitions.</div>
 </td>
 </tr>
 </table>
@@ -367,7 +375,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <h4>of</h4>
 <pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupName.html" title="class in com.opengamma.strata.market.curve">CurveGroupName</a>&nbsp;name,
                                       <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupEntry.html" title="class in com.opengamma.strata.market.curve">CurveGroupEntry</a>&gt;&nbsp;entries,
-                                      <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a>&gt;&nbsp;curveDefinitions)</pre>
+                                      <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html" title="interface in com.opengamma.strata.market.curve">CurveDefinition</a>&gt;&nbsp;curveDefinitions)</pre>
 <div class="block">Returns a curve group definition with the specified name and containing the specified entries.
  <p>
  The Jacobian matrices are computed. The Present Value sensitivity to Market quotes are not computed.</div>
@@ -389,7 +397,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <h4>of</h4>
 <pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupName.html" title="class in com.opengamma.strata.market.curve">CurveGroupName</a>&nbsp;name,
                                       <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupEntry.html" title="class in com.opengamma.strata.market.curve">CurveGroupEntry</a>&gt;&nbsp;entries,
-                                      <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a>&gt;&nbsp;curveDefinitions,
+                                      <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html" title="interface in com.opengamma.strata.market.curve">CurveDefinition</a>&gt;&nbsp;curveDefinitions,
                                       <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>,<a href="../../../../../com/opengamma/strata/market/curve/SeasonalityDefinition.html" title="class in com.opengamma.strata.market.curve">SeasonalityDefinition</a>&gt;&nbsp;seasonalityDefinitions)</pre>
 <div class="block">Returns a curve group definition with the specified name and containing the specified entries and seasonality.
  <p>
@@ -477,7 +485,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <ul class="blockList">
 <li class="blockList">
 <h4>findCurveDefinition</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a>&gt;&nbsp;findCurveDefinition(<a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&nbsp;curveName)</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html" title="interface in com.opengamma.strata.market.curve">CurveDefinition</a>&gt;&nbsp;findCurveDefinition(<a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&nbsp;curveName)</pre>
 <div class="block">Finds the definition for the curve with the specified name.
  <p>
  If the curve is not found, optional empty is returned.</div>
@@ -575,7 +583,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <ul class="blockList">
 <li class="blockList">
 <h4>withCurveDefinitions</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&nbsp;withCurveDefinitions(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a>&gt;&nbsp;curveDefinitions)</pre>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&nbsp;withCurveDefinitions(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html" title="interface in com.opengamma.strata.market.curve">CurveDefinition</a>&gt;&nbsp;curveDefinitions)</pre>
 <div class="block">Returns a copy of this object containing the specified curve definitions.
  <p>
  Curves are ignored if there is no entry in this definition with the same curve name.</div>
@@ -584,6 +592,24 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <dd><code>curveDefinitions</code> - curve definitions</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a copy of this object containing the specified curve definitions</dd>
+</dl>
+</li>
+</ul>
+<a name="withSeasonalityDefinitions-java.util.Map-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withSeasonalityDefinitions</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&nbsp;withSeasonalityDefinitions(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>,<a href="../../../../../com/opengamma/strata/market/curve/SeasonalityDefinition.html" title="class in com.opengamma.strata.market.curve">SeasonalityDefinition</a>&gt;&nbsp;seasonalityDefinitions)</pre>
+<div class="block">Returns a copy of this object containing the specified seasonality definitions.
+ <p>
+ Seasonality definitions are ignored if there is no entry in this definition with the same curve name.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>seasonalityDefinitions</code> - seasonality definitions</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a copy of this object containing the specified seasonality definitions</dd>
 </dl>
 </li>
 </ul>
@@ -610,6 +636,11 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <li class="blockList">
 <h4>toBuilder</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinitionBuilder.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinitionBuilder</a>&nbsp;toBuilder()</pre>
+<div class="block">Converts to builder.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the builder</dd>
+</dl>
 </li>
 </ul>
 <a name="meta--">
@@ -699,7 +730,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <ul class="blockList">
 <li class="blockList">
 <h4>getCurveDefinitions</h4>
-<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/NodalCurveDefinition.html" title="interface in com.opengamma.strata.market.curve">NodalCurveDefinition</a>&gt;&nbsp;getCurveDefinitions()</pre>
+<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveDefinition.html" title="interface in com.opengamma.strata.market.curve">CurveDefinition</a>&gt;&nbsp;getCurveDefinitions()</pre>
 <div class="block">Gets definitions which specify how the curves are calibrated.
  <p>
  Curve definitions are required for curves that need to be calibrated. A definition is not necessary if

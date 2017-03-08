@@ -139,13 +139,20 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/io/CsvOutput.html#CsvOutput-java.lang.Appendable-">CsvOutput</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Appendable.html?is-external=true" title="class or interface in java.lang">Appendable</a>&nbsp;underlying)</code>
-<div class="block">Creates an instance, using the system default line separator.</div>
+<div class="block">Creates an instance, using the system default line separator and using a comma separator.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/io/CsvOutput.html#CsvOutput-java.lang.Appendable-java.lang.String-">CsvOutput</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Appendable.html?is-external=true" title="class or interface in java.lang">Appendable</a>&nbsp;underlying,
          <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;newLine)</code>
-<div class="block">Creates an instance, allowing the new line charactor to be controlled.</div>
+<div class="block">Creates an instance, allowing the new line character to be controlled and using a comma separator.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/io/CsvOutput.html#CsvOutput-java.lang.Appendable-java.lang.String-java.lang.String-">CsvOutput</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Appendable.html?is-external=true" title="class or interface in java.lang">Appendable</a>&nbsp;underlying,
+         <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;newLine,
+         <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;separator)</code>
+<div class="block">Creates an instance, allowing the new line character to be controlled, specifying the separator.</div>
 </td>
 </tr>
 </table>
@@ -212,7 +219,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>CsvOutput</h4>
 <pre>public&nbsp;CsvOutput(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Appendable.html?is-external=true" title="class or interface in java.lang">Appendable</a>&nbsp;underlying)</pre>
-<div class="block">Creates an instance, using the system default line separator.</div>
+<div class="block">Creates an instance, using the system default line separator and using a comma separator.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>underlying</code> - the underlying writer</dd>
@@ -222,16 +229,34 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <a name="CsvOutput-java.lang.Appendable-java.lang.String-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>CsvOutput</h4>
 <pre>public&nbsp;CsvOutput(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Appendable.html?is-external=true" title="class or interface in java.lang">Appendable</a>&nbsp;underlying,
                  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;newLine)</pre>
-<div class="block">Creates an instance, allowing the new line charactor to be controlled.</div>
+<div class="block">Creates an instance, allowing the new line character to be controlled and using a comma separator.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>underlying</code> - the underlying writer</dd>
 <dd><code>newLine</code> - the new line string</dd>
+</dl>
+</li>
+</ul>
+<a name="CsvOutput-java.lang.Appendable-java.lang.String-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>CsvOutput</h4>
+<pre>public&nbsp;CsvOutput(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Appendable.html?is-external=true" title="class or interface in java.lang">Appendable</a>&nbsp;underlying,
+                 <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;newLine,
+                 <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;separator)</pre>
+<div class="block">Creates an instance, allowing the new line character to be controlled, specifying the separator.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>underlying</code> - the underlying writer</dd>
+<dd><code>newLine</code> - the new line string</dd>
+<dd><code>separator</code> - the separator used to separate each field, typically a comma, but a tab is sometimes used</dd>
 </dl>
 </li>
 </ul>

@@ -86,7 +86,7 @@
 <tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.credit">com.opengamma.strata.product.credit</a></td>
 <td class="colLast">
-<div class="block">Entity objects describing credit products.</div>
+<div class="block">Entity objects describing Credit Default Swap (CDS) and CDS index.</div>
 </td>
 </tr>
 </tbody>
@@ -106,73 +106,62 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#accrualDayCount-com.opengamma.strata.basics.date.DayCount-">accrualDayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;accrualDayCount)</code>
-<div class="block">Sets the day count convention to be used for calculating the accrual.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedCds.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html#builder--">builder</a></span>()</code>
 <div class="block">Returns a builder used to create an instance of the bean.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedCds.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Meta.html#builder--">builder</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#businessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">businessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</code>
-<div class="block">Sets the business day adjustment to apply to the start and end dates.</div>
-</td>
-</tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#buySellProtection-com.opengamma.strata.product.common.BuySell-">buySellProtection</a></span>(<a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySellProtection)</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#buySell-com.opengamma.strata.product.common.BuySell-">buySell</a></span>(<a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell)</code>
 <div class="block">Sets whether the CDS is buy or sell.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#coupon-double-">coupon</a></span>(double&nbsp;coupon)</code>
-<div class="block">Sets the coupon used to calculate fee payments.</div>
+<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Sets the day count convention.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#currency-com.opengamma.strata.basics.currency.Currency-">currency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency)</code>
-<div class="block">Sets the primary currency.</div>
+<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#legalEntityId-com.opengamma.strata.basics.StandardId-">legalEntityId</a></span>(<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;legalEntityId)</code>
+<div class="block">Sets the legal entity identifier.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#endDate-java.time.LocalDate-">endDate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate)</code>
-<div class="block">Sets the date that the contract expires and protection ends.</div>
+<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#paymentOnDefault-com.opengamma.strata.product.credit.PaymentOnDefault-">paymentOnDefault</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/PaymentOnDefault.html" title="enum in com.opengamma.strata.product.credit">PaymentOnDefault</a>&nbsp;paymentOnDefault)</code>
+<div class="block">Sets the payment on default.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#notional-double-">notional</a></span>(double&nbsp;notional)</code>
-<div class="block">Sets the notional amount used to calculate fee payments.</div>
+<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#paymentPeriods-com.opengamma.strata.product.credit.CreditCouponPaymentPeriod...-">paymentPeriods</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/CreditCouponPaymentPeriod.html" title="class in com.opengamma.strata.product.credit">CreditCouponPaymentPeriod</a>...&nbsp;paymentPeriods)</code>
+<div class="block">Sets the <code>paymentPeriods</code> property in the builder
+ from an array of objects.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#payAccruedOnDefault-boolean-">payAccruedOnDefault</a></span>(boolean&nbsp;payAccruedOnDefault)</code>
-<div class="block">Sets whether the accrued premium is paid in the event of a default.</div>
+<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#paymentPeriods-java.util.List-">paymentPeriods</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/CreditCouponPaymentPeriod.html" title="class in com.opengamma.strata.product.credit">CreditCouponPaymentPeriod</a>&gt;&nbsp;paymentPeriods)</code>
+<div class="block">Sets the periodic payments based on the fixed rate.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#paymentInterval-java.time.Period-">paymentInterval</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;paymentInterval)</code>
-<div class="block">Sets the nominal period between premium payments, such as 3 months or 6 months.</div>
+<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#protectionEndDate-java.time.LocalDate-">protectionEndDate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;protectionEndDate)</code>
+<div class="block">Sets the protection end date.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#referenceInformation-com.opengamma.strata.product.credit.ReferenceInformation-">referenceInformation</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ReferenceInformation.html" title="interface in com.opengamma.strata.product.credit">ReferenceInformation</a>&nbsp;referenceInformation)</code>
-<div class="block">Sets the reference against which protection applies.</div>
+<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#protectionStart-com.opengamma.strata.product.credit.ProtectionStartOfDay-">protectionStart</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ProtectionStartOfDay.html" title="enum in com.opengamma.strata.product.credit">ProtectionStartOfDay</a>&nbsp;protectionStart)</code>
+<div class="block">Sets the protection start of the day.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -201,32 +190,20 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#startDate-java.time.LocalDate-">startDate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate)</code>
-<div class="block">Sets the date that the CDS nominally starts in terms of premium payments.</div>
+<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#settlementDateOffset-com.opengamma.strata.basics.date.DaysAdjustment-">settlementDateOffset</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;settlementDateOffset)</code>
+<div class="block">Sets the number of days between valuation date and settlement date.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#stubConvention-com.opengamma.strata.basics.schedule.StubConvention-">stubConvention</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/StubConvention.html" title="enum in com.opengamma.strata.basics.schedule">StubConvention</a>&nbsp;stubConvention)</code>
-<div class="block">Sets the stub convention to use.</div>
+<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#stepinDateOffset-com.opengamma.strata.basics.date.DaysAdjustment-">stepinDateOffset</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;stepinDateOffset)</code>
+<div class="block">Sets the number of days between valuation date and step-in date.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedCds.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html#toBuilder--">toBuilder</a></span>()</code>
 <div class="block">Returns a builder that allows this bean to be mutated.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#upfrontFeeAmount-java.lang.Double-">upfrontFeeAmount</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&nbsp;upfrontFeeAmount)</code>
-<div class="block">Sets the upfront fee amount, optional.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#upfrontFeePaymentDate-java.time.LocalDate-">upfrontFeePaymentDate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;upfrontFeePaymentDate)</code>
-<div class="block">Sets the upfront fee date, optional.</div>
 </td>
 </tr>
 </tbody>

@@ -92,7 +92,7 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.credit">com.opengamma.strata.product.credit</a></td>
 <td class="colLast">
-<div class="block">Entity objects describing credit products.</div>
+<div class="block">Entity objects describing Credit Default Swap (CDS) and CDS index.</div>
 </td>
 </tr>
 </tbody>
@@ -112,145 +112,113 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IsdaCdsPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsPricer.html#cs01BucketedHazard-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.IsdaYieldCurveInputs-com.opengamma.strata.pricer.credit.IsdaCreditCurveInputs-java.time.LocalDate-double-double-">cs01BucketedHazard</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;product,
-                  <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaYieldCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaYieldCurveInputs</a>&nbsp;yieldCurveInputs,
-                  <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCreditCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaCreditCurveInputs</a>&nbsp;creditCurveInputs,
-                  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-                  double&nbsp;recoveryRate,
-                  double&nbsp;scalingFactor)</code>
-<div class="block">Calculates the vector PV change to a series of 1 basis point shifts in par credit spread rates at each curve node.</div>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsProductPricer.html#expectedLoss-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.CreditRatesProvider-">expectedLoss</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;cds,
+            <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider)</code>
+<div class="block">Calculates the expected loss of the CDS product.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IsdaCdsPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsPricer.html#cs01BucketedPar-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.IsdaYieldCurveInputs-com.opengamma.strata.pricer.credit.IsdaCreditCurveInputs-java.time.LocalDate-double-double-">cs01BucketedPar</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;product,
-               <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaYieldCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaYieldCurveInputs</a>&nbsp;yieldCurveInputs,
-               <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCreditCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaCreditCurveInputs</a>&nbsp;creditCurveInputs,
-               <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-               double&nbsp;recoveryRate,
-               double&nbsp;scalingFactor)</code>
-<div class="block">Calculates the vector PV change to a series of 1 basis point shifts in par credit spread rates at each curve node.</div>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/credit/JumpToDefault.html" title="class in com.opengamma.strata.pricer.credit">JumpToDefault</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsProductPricer.html#jumpToDefault-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.CreditRatesProvider-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">jumpToDefault</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;cds,
+             <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+             <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate,
+             <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the jump-to-default of the CDS product.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IsdaCdsPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsPricer.html#cs01ParallelHazard-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.IsdaYieldCurveInputs-com.opengamma.strata.pricer.credit.IsdaCreditCurveInputs-java.time.LocalDate-double-double-">cs01ParallelHazard</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;product,
-                  <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaYieldCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaYieldCurveInputs</a>&nbsp;yieldCurveInputs,
-                  <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCreditCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaCreditCurveInputs</a>&nbsp;creditCurveInputs,
-                  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-                  double&nbsp;recoveryRate,
-                  double&nbsp;scalingFactor)</code>
-<div class="block">Calculates the scalar PV change to a 1 basis point shift in hazard rates.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IsdaCdsPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsPricer.html#cs01ParallelPar-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.IsdaYieldCurveInputs-com.opengamma.strata.pricer.credit.IsdaCreditCurveInputs-java.time.LocalDate-double-double-">cs01ParallelPar</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;product,
-               <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaYieldCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaYieldCurveInputs</a>&nbsp;yieldCurveInputs,
-               <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCreditCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaCreditCurveInputs</a>&nbsp;creditCurveInputs,
-               <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-               double&nbsp;recoveryRate,
-               double&nbsp;scalingFactor)</code>
-<div class="block">Calculates the scalar PV change to a 1 basis point shift in par credit spread rates.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IsdaCdsPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsPricer.html#ir01BucketedPar-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.IsdaYieldCurveInputs-com.opengamma.strata.pricer.credit.IsdaCreditCurveInputs-java.time.LocalDate-double-double-">ir01BucketedPar</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;product,
-               <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaYieldCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaYieldCurveInputs</a>&nbsp;yieldCurveInputs,
-               <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCreditCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaCreditCurveInputs</a>&nbsp;creditCurveInputs,
-               <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-               double&nbsp;recoveryRate,
-               double&nbsp;scalingFactor)</code>
-<div class="block">Calculates the vector PV change to a series of 1 basis point shifts in par interest rates at each curve node.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IsdaCdsPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsPricer.html#ir01BucketedZero-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.IsdaYieldCurveInputs-com.opengamma.strata.pricer.credit.IsdaCreditCurveInputs-java.time.LocalDate-double-double-">ir01BucketedZero</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;product,
-                <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaYieldCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaYieldCurveInputs</a>&nbsp;yieldCurveInputs,
-                <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCreditCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaCreditCurveInputs</a>&nbsp;creditCurveInputs,
-                <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-                double&nbsp;recoveryRate,
-                double&nbsp;scalingFactor)</code>
-<div class="block">Calculates the vector PV change to a series of 1 basis point shifts in par interest rates at each curve node.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IsdaCdsPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsPricer.html#ir01ParallelPar-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.IsdaYieldCurveInputs-com.opengamma.strata.pricer.credit.IsdaCreditCurveInputs-java.time.LocalDate-double-double-">ir01ParallelPar</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;product,
-               <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaYieldCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaYieldCurveInputs</a>&nbsp;yieldCurveInputs,
-               <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCreditCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaCreditCurveInputs</a>&nbsp;creditCurveInputs,
-               <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-               double&nbsp;recoveryRate,
-               double&nbsp;scalingFactor)</code>
-<div class="block">Calculates the scalar PV change to a 1 basis point shift in par interest rates.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IsdaCdsPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsPricer.html#ir01ParallelZero-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.IsdaYieldCurveInputs-com.opengamma.strata.pricer.credit.IsdaCreditCurveInputs-java.time.LocalDate-double-double-">ir01ParallelZero</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;product,
-                <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaYieldCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaYieldCurveInputs</a>&nbsp;yieldCurveInputs,
-                <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCreditCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaCreditCurveInputs</a>&nbsp;creditCurveInputs,
-                <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-                double&nbsp;recoveryRate,
-                double&nbsp;scalingFactor)</code>
-<div class="block">Calculates the scalar PV change to a 1 basis point shift in zero rates.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IsdaCdsPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsPricer.html#jumpToDefault-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.IsdaYieldCurveInputs-com.opengamma.strata.pricer.credit.IsdaCreditCurveInputs-java.time.LocalDate-double-double-">jumpToDefault</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;product,
-             <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaYieldCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaYieldCurveInputs</a>&nbsp;yieldCurveInputs,
-             <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCreditCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaCreditCurveInputs</a>&nbsp;creditCurveInputs,
-             <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-             double&nbsp;recoveryRate,
-             double&nbsp;scalingFactor)</code>
-<div class="block">Calculates the risk of default by subtracting from current MTM the Notional amount times Recovery Rate - 1.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">IsdaCdsPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsPricer.html#parRate-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.IsdaYieldCurveInputs-com.opengamma.strata.pricer.credit.IsdaCreditCurveInputs-java.time.LocalDate-double-">parRate</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;product,
-       <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaYieldCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaYieldCurveInputs</a>&nbsp;yieldCurveInputs,
-       <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCreditCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaCreditCurveInputs</a>&nbsp;creditCurveInputs,
-       <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-       double&nbsp;recoveryRate)</code>
-<div class="block">Calculates the par rate of the expanded CDS product.</div>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsProductPricer.html#parSpread-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.CreditRatesProvider-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">parSpread</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;cds,
+         <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+         <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate,
+         <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the par spread of the CDS product.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsProductPricer.html#parSpreadSensitivity-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.CreditRatesProvider-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">parSpreadSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;cds,
+                    <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+                    <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate,
+                    <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the par spread sensitivity of the product.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IsdaCdsPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsPricer.html#presentValue-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.IsdaYieldCurveInputs-com.opengamma.strata.pricer.credit.IsdaCreditCurveInputs-java.time.LocalDate-double-double-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;product,
-            <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaYieldCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaYieldCurveInputs</a>&nbsp;yieldCurveInputs,
-            <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCreditCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaCreditCurveInputs</a>&nbsp;creditCurveInputs,
-            <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-            double&nbsp;recoveryRate,
-            double&nbsp;scalingFactor)</code>
-<div class="block">Calculates the present value of the expanded CDS product.</div>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsProductPricer.html#presentValue-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.CreditRatesProvider-java.time.LocalDate-com.opengamma.strata.pricer.common.PriceType-com.opengamma.strata.basics.ReferenceData-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;cds,
+            <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+            <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate,
+            <a href="../../../../../../com/opengamma/strata/pricer/common/PriceType.html" title="enum in com.opengamma.strata.pricer.common">PriceType</a>&nbsp;priceType,
+            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the present value of the CDS product.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsProductPricer.html#presentValueSensitivity-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.CreditRatesProvider-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">presentValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;cds,
+                       <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+                       <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate,
+                       <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the present value sensitivity of the product.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsProductPricer.html#price-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.CreditRatesProvider-java.time.LocalDate-com.opengamma.strata.pricer.common.PriceType-com.opengamma.strata.basics.ReferenceData-">price</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;cds,
+     <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+     <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate,
+     <a href="../../../../../../com/opengamma/strata/pricer/common/PriceType.html" title="enum in com.opengamma.strata.pricer.common">PriceType</a>&nbsp;priceType,
+     <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the price of the CDS product, which is the present value per unit notional.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsProductPricer.html#priceSensitivity-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.CreditRatesProvider-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">priceSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;cds,
+                <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+                <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate,
+                <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the price sensitivity of the product.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsProductPricer.html#protectionLeg-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.CreditRatesProvider-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">protectionLeg</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;cds,
+             <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+             <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate,
+             <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the price of the protection leg, which is the protection leg present value per unit notional.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IsdaCdsPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsPricer.html#presentValue-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.market.curve.NodalCurve-com.opengamma.strata.market.curve.NodalCurve-java.time.LocalDate-double-double-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;product,
-            <a href="../../../../../../com/opengamma/strata/market/curve/NodalCurve.html" title="interface in com.opengamma.strata.market.curve">NodalCurve</a>&nbsp;yieldCurve,
-            <a href="../../../../../../com/opengamma/strata/market/curve/NodalCurve.html" title="interface in com.opengamma.strata.market.curve">NodalCurve</a>&nbsp;creditCurve,
-            <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-            double&nbsp;recoveryRate,
-            double&nbsp;scalingFactor)</code>
-<div class="block">Calculates the present value of the expanded CDS product.</div>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsProductPricer.html#recovery01-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.CreditRatesProvider-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">recovery01</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;cds,
+          <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+          <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate,
+          <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the recovery01 of the CDS product.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsProductPricer.html#riskyAnnuity-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.CreditRatesProvider-java.time.LocalDate-com.opengamma.strata.pricer.common.PriceType-com.opengamma.strata.basics.ReferenceData-">riskyAnnuity</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;cds,
+            <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+            <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate,
+            <a href="../../../../../../com/opengamma/strata/pricer/common/PriceType.html" title="enum in com.opengamma.strata.pricer.common">PriceType</a>&nbsp;priceType,
+            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the risky annuity, which is RPV01 per unit notional.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IsdaCdsPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsPricer.html#recovery01-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.IsdaYieldCurveInputs-com.opengamma.strata.pricer.credit.IsdaCreditCurveInputs-java.time.LocalDate-double-double-">recovery01</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;product,
-          <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaYieldCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaYieldCurveInputs</a>&nbsp;yieldCurveInputs,
-          <a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCreditCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaCreditCurveInputs</a>&nbsp;creditCurveInputs,
-          <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-          double&nbsp;recoveryRate,
-          double&nbsp;scalingFactor)</code>
-<div class="block">Calculates the scalar PV change to a 1 basis point shift in recovery rate.</div>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsProductPricer.html#rpv01-com.opengamma.strata.product.credit.ResolvedCds-com.opengamma.strata.pricer.credit.CreditRatesProvider-java.time.LocalDate-com.opengamma.strata.pricer.common.PriceType-com.opengamma.strata.basics.ReferenceData-">rpv01</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;cds,
+     <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+     <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate,
+     <a href="../../../../../../com/opengamma/strata/pricer/common/PriceType.html" title="enum in com.opengamma.strata.pricer.common">PriceType</a>&nbsp;priceType,
+     <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the risky PV01 of the CDS product.</div>
 </td>
 </tr>
 </tbody>
@@ -281,6 +249,12 @@
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Cds.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/Cds.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedCdsIndex.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsIndex.html#toSingleNameCds--">toSingleNameCds</a></span>()</code>
+<div class="block">Reduce this instance to <code>ResolvedCds</code>.</div>
+</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -310,13 +284,6 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCdsTrade.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html#of-com.opengamma.strata.product.TradeInfo-com.opengamma.strata.product.credit.ResolvedCds-">of</a></span>(<a href="../../../../../../com/opengamma/strata/product/TradeInfo.html" title="class in com.opengamma.strata.product">TradeInfo</a>&nbsp;info,
-  <a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;product)</code>
-<div class="block">Obtains an instance of a resolved CDS trade.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedCdsTrade.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.Builder.html#product-com.opengamma.strata.product.credit.ResolvedCds-">product</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;product)</code>
 <div class="block">Sets the resolved CDS product.</div>

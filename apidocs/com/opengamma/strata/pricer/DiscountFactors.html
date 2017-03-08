@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":18,"i3":18,"i4":18,"i5":6,"i6":17,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":18,"i13":18,"i14":6,"i15":18,"i16":18,"i17":18,"i18":18,"i19":18,"i20":18};
+var methods = {"i0":6,"i1":6,"i2":18,"i3":6,"i4":18,"i5":18,"i6":6,"i7":17,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":18,"i14":18,"i15":6,"i16":18,"i17":18,"i18":18,"i19":18,"i20":18,"i21":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -154,6 +154,12 @@ extends <a href="../../../../com/opengamma/strata/market/MarketDataView.html" ti
 </td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#discountFactorTimeDerivative-double-">discountFactorTimeDerivative</a></span>(double&nbsp;yearFraction)</code>
+<div class="block">Returns the discount factor derivative with respect to the year fraction or time.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>default double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#discountFactorWithSpread-double-double-com.opengamma.strata.pricer.CompoundedRateType-int-">discountFactorWithSpread</a></span>(double&nbsp;yearFraction,
                         double&nbsp;zSpread,
@@ -162,7 +168,7 @@ extends <a href="../../../../com/opengamma/strata/market/MarketDataView.html" ti
 <div class="block">Gets the discount factor for the specified year fraction with z-spread.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>default double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#discountFactorWithSpread-java.time.LocalDate-double-com.opengamma.strata.pricer.CompoundedRateType-int-">discountFactorWithSpread</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date,
                         double&nbsp;zSpread,
@@ -171,13 +177,13 @@ extends <a href="../../../../com/opengamma/strata/market/MarketDataView.html" ti
 <div class="block">Gets the discount factor for the specified date with z-spread.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#getCurrency--">getCurrency</a></span>()</code>
 <div class="block">Gets the currency.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#of-com.opengamma.strata.basics.currency.Currency-java.time.LocalDate-com.opengamma.strata.market.curve.Curve-">of</a></span>(<a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
@@ -185,70 +191,70 @@ extends <a href="../../../../com/opengamma/strata/market/MarketDataView.html" ti
 <div class="block">Obtains an instance from a curve.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#parameterSensitivity-com.opengamma.strata.pricer.ZeroRateSensitivity-">parameterSensitivity</a></span>(<a href="../../../../com/opengamma/strata/pricer/ZeroRateSensitivity.html" title="class in com.opengamma.strata.pricer">ZeroRateSensitivity</a>&nbsp;pointSensitivity)</code>
 <div class="block">Calculates the parameter sensitivity from the point sensitivity.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#relativeYearFraction-java.time.LocalDate-">relativeYearFraction</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date)</code>
 <div class="block">Calculates the relative time between the valuation date and the specified date.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#withParameter-int-double-">withParameter</a></span>(int&nbsp;parameterIndex,
              double&nbsp;newValue)</code>
 <div class="block">Returns a copy of the data with the value at the specified index altered.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#withPerturbation-com.opengamma.strata.market.param.ParameterPerturbation-">withPerturbation</a></span>(<a href="../../../../com/opengamma/strata/market/param/ParameterPerturbation.html" title="interface in com.opengamma.strata.market.param">ParameterPerturbation</a>&nbsp;perturbation)</code>
 <div class="block">Returns a perturbed copy of the data.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#zeroRate-double-">zeroRate</a></span>(double&nbsp;yearFraction)</code>
 <div class="block">Gets the continuously compounded zero rate for specified year fraction.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>default double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#zeroRate-java.time.LocalDate-">zeroRate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date)</code>
 <div class="block">Gets the continuously compounded zero rate for the specified date.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>default <a href="../../../../com/opengamma/strata/pricer/ZeroRateSensitivity.html" title="class in com.opengamma.strata.pricer">ZeroRateSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#zeroRatePointSensitivity-double-">zeroRatePointSensitivity</a></span>(double&nbsp;yearFraction)</code>
 <div class="block">Calculates the zero rate point sensitivity at the specified year fraction.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/pricer/ZeroRateSensitivity.html" title="class in com.opengamma.strata.pricer">ZeroRateSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#zeroRatePointSensitivity-double-com.opengamma.strata.basics.currency.Currency-">zeroRatePointSensitivity</a></span>(double&nbsp;yearFraction,
                         <a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;sensitivityCurrency)</code>
 <div class="block">Calculates the zero rate point sensitivity at the specified year fraction specifying the currency of the sensitivity.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>default <a href="../../../../com/opengamma/strata/pricer/ZeroRateSensitivity.html" title="class in com.opengamma.strata.pricer">ZeroRateSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#zeroRatePointSensitivity-java.time.LocalDate-">zeroRatePointSensitivity</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date)</code>
 <div class="block">Calculates the zero rate point sensitivity at the specified date.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../com/opengamma/strata/pricer/ZeroRateSensitivity.html" title="class in com.opengamma.strata.pricer">ZeroRateSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#zeroRatePointSensitivity-java.time.LocalDate-com.opengamma.strata.basics.currency.Currency-">zeroRatePointSensitivity</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date,
                         <a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;sensitivityCurrency)</code>
 <div class="block">Calculates the zero rate point sensitivity at the specified date specifying the currency of the sensitivity.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>default <a href="../../../../com/opengamma/strata/pricer/ZeroRateSensitivity.html" title="class in com.opengamma.strata.pricer">ZeroRateSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#zeroRatePointSensitivityWithSpread-double-com.opengamma.strata.basics.currency.Currency-double-com.opengamma.strata.pricer.CompoundedRateType-int-">zeroRatePointSensitivityWithSpread</a></span>(double&nbsp;yearFraction,
                                   <a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;sensitivityCurrency,
@@ -259,7 +265,7 @@ extends <a href="../../../../com/opengamma/strata/market/MarketDataView.html" ti
  the currency of the sensitivity.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../com/opengamma/strata/pricer/ZeroRateSensitivity.html" title="class in com.opengamma.strata.pricer">ZeroRateSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#zeroRatePointSensitivityWithSpread-double-double-com.opengamma.strata.pricer.CompoundedRateType-int-">zeroRatePointSensitivityWithSpread</a></span>(double&nbsp;yearFraction,
                                   double&nbsp;zSpread,
@@ -268,7 +274,7 @@ extends <a href="../../../../com/opengamma/strata/market/MarketDataView.html" ti
 <div class="block">Calculates the zero rate point sensitivity with z-spread at the specified year fraction.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>default <a href="../../../../com/opengamma/strata/pricer/ZeroRateSensitivity.html" title="class in com.opengamma.strata.pricer">ZeroRateSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#zeroRatePointSensitivityWithSpread-java.time.LocalDate-com.opengamma.strata.basics.currency.Currency-double-com.opengamma.strata.pricer.CompoundedRateType-int-">zeroRatePointSensitivityWithSpread</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date,
                                   <a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;sensitivityCurrency,
@@ -279,7 +285,7 @@ extends <a href="../../../../com/opengamma/strata/market/MarketDataView.html" ti
  the currency of the sensitivity.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../com/opengamma/strata/pricer/ZeroRateSensitivity.html" title="class in com.opengamma.strata.pricer">ZeroRateSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/pricer/DiscountFactors.html#zeroRatePointSensitivityWithSpread-java.time.LocalDate-double-com.opengamma.strata.pricer.CompoundedRateType-int-">zeroRatePointSensitivityWithSpread</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date,
                                   double&nbsp;zSpread,
@@ -465,6 +471,26 @@ extends <a href="../../../../com/opengamma/strata/market/MarketDataView.html" ti
 <dd><code>yearFraction</code> - the year fraction</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the discount factor</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a></code> - if the value cannot be obtained</dd>
+</dl>
+</li>
+</ul>
+<a name="discountFactorTimeDerivative-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>discountFactorTimeDerivative</h4>
+<pre>double&nbsp;discountFactorTimeDerivative(double&nbsp;yearFraction)</pre>
+<div class="block">Returns the discount factor derivative with respect to the year fraction or time.
+ <p>
+ The year fraction must be based on <code>#relativeYearFraction(LocalDate)</code>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>yearFraction</code> - the year fraction</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the discount factor derivative</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a></code> - if the value cannot be obtained</dd>
 </dl>

@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":18,"i1":18,"i2":17,"i3":17,"i4":18,"i5":18,"i6":17,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":17,"i18":6};
+var methods = {"i0":18,"i1":18,"i2":18,"i3":18,"i4":18,"i5":18,"i6":17,"i7":6,"i8":6,"i9":6,"i10":17,"i11":6,"i12":6};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -50,7 +50,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li>Prev&nbsp;Class</li>
+<li><a href="../../../../../../com/opengamma/strata/product/credit/type/AccrualStart.html" title="enum in com.opengamma.strata.product.credit.type"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConventions.html" title="class in com.opengamma.strata.product.credit.type"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -112,12 +112,7 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public interface <span class="typeNameLabel">CdsConvention</span>
 extends <a href="../../../../../../com/opengamma/strata/product/TradeConvention.html" title="interface in com.opengamma.strata.product">TradeConvention</a>, <a href="../../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a></pre>
-<div class="block">A market convention for credit default swap (CDS) trades.
- <p>
- This defines the market convention for CDS trades in different regions and currencies.
- <p>
- To manually create a convention, see <a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.html" title="class in com.opengamma.strata.product.credit.type"><code>ImmutableCdsConvention</code></a>.
- To register a specific convention, see <code>CdsConvention.ini</code>.</div>
+<div class="block">A market convention for credit default swap trades.</div>
 </li>
 </ul>
 </div>
@@ -137,44 +132,82 @@ extends <a href="../../../../../../com/opengamma/strata/product/TradeConvention.
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>default <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#calculateAdjustedSettleDate-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">calculateAdjustedSettleDate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-                           <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
-<div class="block">Gets the adjusted settlement date.</div>
+<td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/product/credit/CdsTrade.html" title="class in com.opengamma.strata.product.credit">CdsTrade</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#createTrade-com.opengamma.strata.basics.StandardId-java.time.LocalDate-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.currency.AdjustablePayment-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;legalEntityId,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate,
+           <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+           double&nbsp;notional,
+           double&nbsp;fixedRate,
+           <a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html" title="class in com.opengamma.strata.basics.currency">AdjustablePayment</a>&nbsp;upFrontFee,
+           <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Creates a CDS trade with upfront fee from trade date, start date and end date.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>default <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#calculateAdjustedStartDate-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">calculateAdjustedStartDate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-                          <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
-<div class="block">Gets the adjusted start date.</div>
+<td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/product/credit/CdsTrade.html" title="class in com.opengamma.strata.product.credit">CdsTrade</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#createTrade-com.opengamma.strata.basics.StandardId-java.time.LocalDate-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;legalEntityId,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate,
+           <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+           double&nbsp;notional,
+           double&nbsp;fixedRate,
+           <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Creates a CDS trade from trade date, start date and end date.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#calculateUnadjustedAccrualStartDate-java.time.LocalDate-">calculateUnadjustedAccrualStartDate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate)</code>
-<div class="block">Gets the previous CDS date.</div>
+<td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/product/credit/CdsTrade.html" title="class in com.opengamma.strata.product.credit">CdsTrade</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#createTrade-com.opengamma.strata.basics.StandardId-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.currency.AdjustablePayment-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;legalEntityId,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
+           <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
+           <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+           double&nbsp;notional,
+           double&nbsp;fixedRate,
+           <a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html" title="class in com.opengamma.strata.basics.currency">AdjustablePayment</a>&nbsp;upFrontFee,
+           <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Creates a CDS trade with upfront fee based on the trade date, start date and the IMM date logic.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#calculateUnadjustedMaturityDate-java.time.LocalDate-com.opengamma.strata.basics.schedule.Frequency-java.time.Period-">calculateUnadjustedMaturityDate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-                               <a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;paymentFrequency,
-                               <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;period)</code>
-<div class="block">Gets the unadjusted maturity date.</div>
+<td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/product/credit/CdsTrade.html" title="class in com.opengamma.strata.product.credit">CdsTrade</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#createTrade-com.opengamma.strata.basics.StandardId-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;legalEntityId,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
+           <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
+           <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+           double&nbsp;notional,
+           double&nbsp;fixedRate,
+           <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Creates a CDS trade based on the trade date, start date and the IMM date logic.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code>default <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#calculateUnadjustedMaturityDateFromValuationDate-java.time.LocalDate-java.time.Period-">calculateUnadjustedMaturityDateFromValuationDate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-                                                <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;period)</code>
-<div class="block">Used in curve point calculation.</div>
+<td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/product/credit/CdsTrade.html" title="class in com.opengamma.strata.product.credit">CdsTrade</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#createTrade-com.opengamma.strata.basics.StandardId-java.time.LocalDate-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.currency.AdjustablePayment-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;legalEntityId,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+           <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
+           <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+           double&nbsp;notional,
+           double&nbsp;fixedRate,
+           <a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html" title="class in com.opengamma.strata.basics.currency">AdjustablePayment</a>&nbsp;upFrontFee,
+           <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Creates a CDS trade with upfront fee based on the trade date and the IMM date logic.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code>default <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#calculateUnadjustedStepInDate-java.time.LocalDate-">calculateUnadjustedStepInDate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate)</code>
-<div class="block">Gets the unadjusted step-in date.</div>
+<td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/product/credit/CdsTrade.html" title="class in com.opengamma.strata.product.credit">CdsTrade</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#createTrade-com.opengamma.strata.basics.StandardId-java.time.LocalDate-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;legalEntityId,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+           <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
+           <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+           double&nbsp;notional,
+           double&nbsp;fixedRate,
+           <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Creates a CDS trade based on the trade date and the IMM date logic.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -184,82 +217,52 @@ extends <a href="../../../../../../com/opengamma/strata/product/TradeConvention.
 </td>
 </tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#getBusinessDayAdjustment--">getBusinessDayAdjustment</a></span>()</code>
-<div class="block">Gets the business day adjustment.</div>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#getCurrency--">getCurrency</a></span>()</code>
+<div class="block">Get the currency of the CDS.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#getCurrency--">getCurrency</a></span>()</code>
-<div class="block">Gets the currency.</div>
-</td>
-</tr>
-<tr id="i9" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#getDayCount--">getDayCount</a></span>()</code>
-<div class="block">Gets the day count convention.</div>
-</td>
-</tr>
-<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#getName--">getName</a></span>()</code>
 <div class="block">Gets the name that uniquely identifies this convention.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#getPaymentFrequency--">getPaymentFrequency</a></span>()</code>
-<div class="block">Gets the payment frequency.</div>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#getSettlementDateOffset--">getSettlementDateOffset</a></span>()</code>
+<div class="block">Get the number of days between valuation date and settlement date.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/RollConvention.html" title="interface in com.opengamma.strata.basics.schedule">RollConvention</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#getRollConvention--">getRollConvention</a></span>()</code>
-<div class="block">Gets the roll convention.</div>
-</td>
-</tr>
-<tr id="i13" class="rowColor">
-<td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#getSettleLagDays--">getSettleLagDays</a></span>()</code>
-<div class="block">Gets the settlement lag in days.</div>
-</td>
-</tr>
-<tr id="i14" class="altColor">
-<td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#getStepInDays--">getStepInDays</a></span>()</code>
-<div class="block">Gets the number of step-in days.</div>
-</td>
-</tr>
-<tr id="i15" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/StubConvention.html" title="enum in com.opengamma.strata.basics.schedule">StubConvention</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#getStubConvention--">getStubConvention</a></span>()</code>
-<div class="block">Gets the stub convention.</div>
-</td>
-</tr>
-<tr id="i16" class="altColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#isPayAccruedOnDefault--">isPayAccruedOnDefault</a></span>()</code>
-<div class="block">Gets whether the accrued premium is paid in the event of a default.</div>
-</td>
-</tr>
-<tr id="i17" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html" title="interface in com.opengamma.strata.product.credit.type">CdsConvention</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#of-java.lang.String-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uniqueName)</code>
 <div class="block">Obtains an instance from the specified unique name.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/CdsTrade.html" title="class in com.opengamma.strata.product.credit">CdsTrade</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#toTrade-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.product.credit.ReferenceInformation-double-java.time.LocalDate-">toTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#toTrade-com.opengamma.strata.basics.StandardId-com.opengamma.strata.product.TradeInfo-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.product.common.BuySell-double-double-">toTrade</a></span>(<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;legalEntityId,
+       <a href="../../../../../../com/opengamma/strata/product/TradeInfo.html" title="class in com.opengamma.strata.product">TradeInfo</a>&nbsp;tradeInfo,
+       <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
        <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate,
        <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
        double&nbsp;notional,
-       double&nbsp;coupon,
-       <a href="../../../../../../com/opengamma/strata/product/credit/ReferenceInformation.html" title="interface in com.opengamma.strata.product.credit">ReferenceInformation</a>&nbsp;referenceInformation,
-       double&nbsp;upfrontFeeAmount,
-       <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;upfrontFeePaymentDate)</code>
-<div class="block">Creates a CDS from the convention.</div>
+       double&nbsp;fixedRate)</code>
+<div class="block">Creates a CDS trade with <code>TradeInfo</code>.</div>
+</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/CdsTrade.html" title="class in com.opengamma.strata.product.credit">CdsTrade</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#toTrade-com.opengamma.strata.basics.StandardId-com.opengamma.strata.product.TradeInfo-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.currency.AdjustablePayment-">toTrade</a></span>(<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;legalEntityId,
+       <a href="../../../../../../com/opengamma/strata/product/TradeInfo.html" title="class in com.opengamma.strata.product">TradeInfo</a>&nbsp;tradeInfo,
+       <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
+       <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate,
+       <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+       double&nbsp;notional,
+       double&nbsp;fixedRate,
+       <a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html" title="class in com.opengamma.strata.basics.currency">AdjustablePayment</a>&nbsp;upFrontFee)</code>
+<div class="block">Creates a CDS trade with upfront fee and <code>TradeInfo</code>.</div>
 </td>
 </tr>
 </table>
@@ -319,6 +322,22 @@ extends <a href="../../../../../../com/opengamma/strata/product/TradeConvention.
 </dl>
 </li>
 </ul>
+<a name="getSettlementDateOffset--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSettlementDateOffset</h4>
+<pre><a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;getSettlementDateOffset()</pre>
+<div class="block">Get the number of days between valuation date and settlement date.
+ <p>
+ It is usually 3 business days for standardised CDS contracts.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>days adjustment</dd>
+</dl>
+</li>
+</ul>
 <a name="getCurrency--">
 <!--   -->
 </a>
@@ -326,268 +345,264 @@ extends <a href="../../../../../../com/opengamma/strata/product/TradeConvention.
 <li class="blockList">
 <h4>getCurrency</h4>
 <pre><a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;getCurrency()</pre>
-<div class="block">Gets the currency.</div>
+<div class="block">Get the currency of the CDS.
+ <p>
+ The amounts of the notional are expressed in terms of this currency.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the currency</dd>
 </dl>
 </li>
 </ul>
-<a name="getDayCount--">
+<a name="createTrade-com.opengamma.strata.basics.StandardId-java.time.LocalDate-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getDayCount</h4>
-<pre><a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;getDayCount()</pre>
-<div class="block">Gets the day count convention.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the day count convention</dd>
-</dl>
-</li>
-</ul>
-<a name="getBusinessDayAdjustment--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getBusinessDayAdjustment</h4>
-<pre><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;getBusinessDayAdjustment()</pre>
-<div class="block">Gets the business day adjustment.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the business day adjustment</dd>
-</dl>
-</li>
-</ul>
-<a name="getPaymentFrequency--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getPaymentFrequency</h4>
-<pre><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;getPaymentFrequency()</pre>
-<div class="block">Gets the payment frequency.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the payment frequency</dd>
-</dl>
-</li>
-</ul>
-<a name="getRollConvention--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getRollConvention</h4>
-<pre><a href="../../../../../../com/opengamma/strata/basics/schedule/RollConvention.html" title="interface in com.opengamma.strata.basics.schedule">RollConvention</a>&nbsp;getRollConvention()</pre>
-<div class="block">Gets the roll convention.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the roll convention</dd>
-</dl>
-</li>
-</ul>
-<a name="isPayAccruedOnDefault--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>isPayAccruedOnDefault</h4>
-<pre>boolean&nbsp;isPayAccruedOnDefault()</pre>
-<div class="block">Gets whether the accrued premium is paid in the event of a default.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>whether the accrued premium is paid in the event of a default</dd>
-</dl>
-</li>
-</ul>
-<a name="getStubConvention--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getStubConvention</h4>
-<pre><a href="../../../../../../com/opengamma/strata/basics/schedule/StubConvention.html" title="enum in com.opengamma.strata.basics.schedule">StubConvention</a>&nbsp;getStubConvention()</pre>
-<div class="block">Gets the stub convention.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the stub convention</dd>
-</dl>
-</li>
-</ul>
-<a name="getStepInDays--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getStepInDays</h4>
-<pre>int&nbsp;getStepInDays()</pre>
-<div class="block">Gets the number of step-in days.
+<h4>createTrade</h4>
+<pre>default&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/CdsTrade.html" title="class in com.opengamma.strata.product.credit">CdsTrade</a>&nbsp;createTrade(<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;legalEntityId,
+                             <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+                             <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
+                             <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+                             double&nbsp;notional,
+                             double&nbsp;fixedRate,
+                             <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
+<div class="block">Creates a CDS trade based on the trade date and the IMM date logic. 
  <p>
- This is the date from which the issuer is deemed to be on risk.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the number of step-in days</dd>
-</dl>
-</li>
-</ul>
-<a name="getSettleLagDays--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getSettleLagDays</h4>
-<pre>int&nbsp;getSettleLagDays()</pre>
-<div class="block">Gets the settlement lag in days.
- <p>
- This is the number of days after the start date that any upfront fees are paid.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the settlement lag in days</dd>
-</dl>
-</li>
-</ul>
-<a name="toTrade-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.product.credit.ReferenceInformation-double-java.time.LocalDate-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>toTrade</h4>
-<pre><a href="../../../../../../com/opengamma/strata/product/credit/CdsTrade.html" title="class in com.opengamma.strata.product.credit">CdsTrade</a>&nbsp;toTrade(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
-                 <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate,
-                 <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
-                 double&nbsp;notional,
-                 double&nbsp;coupon,
-                 <a href="../../../../../../com/opengamma/strata/product/credit/ReferenceInformation.html" title="interface in com.opengamma.strata.product.credit">ReferenceInformation</a>&nbsp;referenceInformation,
-                 double&nbsp;upfrontFeeAmount,
-                 <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;upfrontFeePaymentDate)</pre>
-<div class="block">Creates a CDS from the convention.
- <p>
- A single name CDS can be specified using <a href="../../../../../../com/opengamma/strata/product/credit/SingleNameReferenceInformation.html" title="class in com.opengamma.strata.product.credit"><code>SingleNameReferenceInformation</code></a>.
- An index CDS can be specified using <a href="../../../../../../com/opengamma/strata/product/credit/IndexReferenceInformation.html" title="class in com.opengamma.strata.product.credit"><code>IndexReferenceInformation</code></a>.</div>
+ The start date and end date are computed from trade date with the standard semi-annual roll convention.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>startDate</code> - the date that the CDS starts</dd>
-<dd><code>endDate</code> - the date that the CDS ends</dd>
-<dd><code>buySell</code> - whether protection is being bought or sold</dd>
-<dd><code>notional</code> - the notional amount</dd>
-<dd><code>coupon</code> - the coupon amount</dd>
-<dd><code>referenceInformation</code> - the reference information of the CDS</dd>
-<dd><code>upfrontFeeAmount</code> - the amount of the upfront fee</dd>
-<dd><code>upfrontFeePaymentDate</code> - the payment date of the upfront fee</dd>
+<dd><code>legalEntityId</code> - the legal entity ID</dd>
+<dd><code>tradeDate</code> - the trade date</dd>
+<dd><code>tenor</code> - the tenor</dd>
+<dd><code>buySell</code> - buy or sell</dd>
+<dd><code>notional</code> - the notional</dd>
+<dd><code>fixedRate</code> - the fixed rate</dd>
+<dd><code>refData</code> - the reference data</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the CDS trade</dd>
 </dl>
 </li>
 </ul>
-<a name="calculateUnadjustedMaturityDateFromValuationDate-java.time.LocalDate-java.time.Period-">
+<a name="createTrade-com.opengamma.strata.basics.StandardId-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>calculateUnadjustedMaturityDateFromValuationDate</h4>
-<pre>default&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;calculateUnadjustedMaturityDateFromValuationDate(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-                                                                   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;period)</pre>
-<div class="block">Used in curve point calculation.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>valuationDate</code> - the date of the curve calibration</dd>
-<dd><code>period</code> - the term for this point</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>unadjusted maturity date</dd>
-</dl>
-</li>
-</ul>
-<a name="calculateUnadjustedMaturityDate-java.time.LocalDate-com.opengamma.strata.basics.schedule.Frequency-java.time.Period-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>calculateUnadjustedMaturityDate</h4>
-<pre>static&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;calculateUnadjustedMaturityDate(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-                                                 <a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;paymentFrequency,
-                                                 <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;period)</pre>
-<div class="block">Gets the unadjusted maturity date.
+<h4>createTrade</h4>
+<pre>default&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/CdsTrade.html" title="class in com.opengamma.strata.product.credit">CdsTrade</a>&nbsp;createTrade(<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;legalEntityId,
+                             <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+                             <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
+                             <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
+                             <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+                             double&nbsp;notional,
+                             double&nbsp;fixedRate,
+                             <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
+<div class="block">Creates a CDS trade based on the trade date, start date and the IMM date logic. 
  <p>
- Standard maturity dates are unadjusted, always Mar/Jun/Sep/Dec 20th.
- For example, from February 2009 the 1y standard CDS contract would protect the buyer until 20 March 2010.</div>
+ The end date is computed from the start date with the standard semi-annual roll convention.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>valuationDate</code> - the valuation date</dd>
-<dd><code>paymentFrequency</code> - the payment frequency</dd>
-<dd><code>period</code> - the term for this point</dd>
+<dd><code>legalEntityId</code> - the legal entity ID</dd>
+<dd><code>tradeDate</code> - the trade date</dd>
+<dd><code>startDate</code> - the start date</dd>
+<dd><code>tenor</code> - the tenor</dd>
+<dd><code>buySell</code> - buy or sell</dd>
+<dd><code>notional</code> - the notional</dd>
+<dd><code>fixedRate</code> - the fixed rate</dd>
+<dd><code>refData</code> - the reference data</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>unadjusted accrual maturity date</dd>
+<dd>the CDS trade</dd>
 </dl>
 </li>
 </ul>
-<a name="calculateUnadjustedAccrualStartDate-java.time.LocalDate-">
+<a name="createTrade-com.opengamma.strata.basics.StandardId-java.time.LocalDate-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>calculateUnadjustedAccrualStartDate</h4>
-<pre>static&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;calculateUnadjustedAccrualStartDate(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate)</pre>
-<div class="block">Gets the previous CDS date.</div>
+<h4>createTrade</h4>
+<pre>default&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/CdsTrade.html" title="class in com.opengamma.strata.product.credit">CdsTrade</a>&nbsp;createTrade(<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;legalEntityId,
+                             <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+                             <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
+                             <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate,
+                             <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+                             double&nbsp;notional,
+                             double&nbsp;fixedRate,
+                             <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
+<div class="block">Creates a CDS trade from trade date, start date and end date.
+ <p>
+ The settlement date is computed from the trade date using <code>settlementDateOffset</code> defined in the convention.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>valuationDate</code> - the valuation date</dd>
+<dd><code>legalEntityId</code> - the legal entity ID</dd>
+<dd><code>tradeDate</code> - the trade date</dd>
+<dd><code>startDate</code> - the start date</dd>
+<dd><code>endDate</code> - the end date</dd>
+<dd><code>buySell</code> - buy or sell</dd>
+<dd><code>notional</code> - the notional</dd>
+<dd><code>fixedRate</code> - the fixed rate</dd>
+<dd><code>refData</code> - the reference data</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>unadjusted accrual start date</dd>
+<dd>the CDS trade</dd>
 </dl>
 </li>
 </ul>
-<a name="calculateAdjustedStartDate-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">
+<a name="toTrade-com.opengamma.strata.basics.StandardId-com.opengamma.strata.product.TradeInfo-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.product.common.BuySell-double-double-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>calculateAdjustedStartDate</h4>
-<pre>default&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;calculateAdjustedStartDate(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-                                             <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
-<div class="block">Gets the adjusted start date.</div>
+<h4>toTrade</h4>
+<pre><a href="../../../../../../com/opengamma/strata/product/credit/CdsTrade.html" title="class in com.opengamma.strata.product.credit">CdsTrade</a>&nbsp;toTrade(<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;legalEntityId,
+                 <a href="../../../../../../com/opengamma/strata/product/TradeInfo.html" title="class in com.opengamma.strata.product">TradeInfo</a>&nbsp;tradeInfo,
+                 <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
+                 <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate,
+                 <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+                 double&nbsp;notional,
+                 double&nbsp;fixedRate)</pre>
+<div class="block">Creates a CDS trade with <code>TradeInfo</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>valuationDate</code> - the valuation date</dd>
-<dd><code>refData</code> - the reference data to use</dd>
+<dd><code>legalEntityId</code> - the legal entity ID</dd>
+<dd><code>tradeInfo</code> - the trade info</dd>
+<dd><code>startDate</code> - the start date</dd>
+<dd><code>endDate</code> - the end date</dd>
+<dd><code>buySell</code> - buy or sell</dd>
+<dd><code>notional</code> - the notional</dd>
+<dd><code>fixedRate</code> - the fixed rate</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>adjusted start date</dd>
+<dd>the CDS trade</dd>
 </dl>
 </li>
 </ul>
-<a name="calculateAdjustedSettleDate-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">
+<a name="createTrade-com.opengamma.strata.basics.StandardId-java.time.LocalDate-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.currency.AdjustablePayment-com.opengamma.strata.basics.ReferenceData-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>calculateAdjustedSettleDate</h4>
-<pre>default&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;calculateAdjustedSettleDate(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-                                              <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
-<div class="block">Gets the adjusted settlement date.</div>
+<h4>createTrade</h4>
+<pre>default&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/CdsTrade.html" title="class in com.opengamma.strata.product.credit">CdsTrade</a>&nbsp;createTrade(<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;legalEntityId,
+                             <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+                             <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
+                             <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+                             double&nbsp;notional,
+                             double&nbsp;fixedRate,
+                             <a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html" title="class in com.opengamma.strata.basics.currency">AdjustablePayment</a>&nbsp;upFrontFee,
+                             <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
+<div class="block">Creates a CDS trade with upfront fee based on the trade date and the IMM date logic. 
+ <p>
+ The start date and end date are computed from trade date with the standard semi-annual roll convention.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>valuationDate</code> - the valuation date</dd>
-<dd><code>refData</code> - the reference data to use</dd>
+<dd><code>legalEntityId</code> - the legal entity ID</dd>
+<dd><code>tradeDate</code> - the trade date</dd>
+<dd><code>tenor</code> - the tenor</dd>
+<dd><code>buySell</code> - buy or sell</dd>
+<dd><code>notional</code> - the notional</dd>
+<dd><code>fixedRate</code> - the fixed rate</dd>
+<dd><code>upFrontFee</code> - the upFront fee</dd>
+<dd><code>refData</code> - the reference data</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>unadjusted settle date</dd>
+<dd>the CDS trade</dd>
 </dl>
 </li>
 </ul>
-<a name="calculateUnadjustedStepInDate-java.time.LocalDate-">
+<a name="createTrade-com.opengamma.strata.basics.StandardId-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.currency.AdjustablePayment-com.opengamma.strata.basics.ReferenceData-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>calculateUnadjustedStepInDate</h4>
-<pre>default&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;calculateUnadjustedStepInDate(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate)</pre>
-<div class="block">Gets the unadjusted step-in date.</div>
+<h4>createTrade</h4>
+<pre>default&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/CdsTrade.html" title="class in com.opengamma.strata.product.credit">CdsTrade</a>&nbsp;createTrade(<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;legalEntityId,
+                             <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+                             <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
+                             <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
+                             <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+                             double&nbsp;notional,
+                             double&nbsp;fixedRate,
+                             <a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html" title="class in com.opengamma.strata.basics.currency">AdjustablePayment</a>&nbsp;upFrontFee,
+                             <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
+<div class="block">Creates a CDS trade with upfront fee based on the trade date, start date and the IMM date logic. 
+ <p>
+ The end date is computed from the start date with the standard semi-annual roll convention.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>valuationDate</code> - the valuation date</dd>
+<dd><code>legalEntityId</code> - the legal entity ID</dd>
+<dd><code>tradeDate</code> - the trade date</dd>
+<dd><code>startDate</code> - the start date</dd>
+<dd><code>tenor</code> - the tenor</dd>
+<dd><code>buySell</code> - buy or sell</dd>
+<dd><code>notional</code> - the notional</dd>
+<dd><code>fixedRate</code> - the fixed rate</dd>
+<dd><code>upFrontFee</code> - the upFront fee</dd>
+<dd><code>refData</code> - the reference data</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>unadjusted step in date</dd>
+<dd>the CDS trade</dd>
+</dl>
+</li>
+</ul>
+<a name="createTrade-com.opengamma.strata.basics.StandardId-java.time.LocalDate-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.currency.AdjustablePayment-com.opengamma.strata.basics.ReferenceData-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createTrade</h4>
+<pre>default&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/CdsTrade.html" title="class in com.opengamma.strata.product.credit">CdsTrade</a>&nbsp;createTrade(<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;legalEntityId,
+                             <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+                             <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
+                             <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate,
+                             <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+                             double&nbsp;notional,
+                             double&nbsp;fixedRate,
+                             <a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html" title="class in com.opengamma.strata.basics.currency">AdjustablePayment</a>&nbsp;upFrontFee,
+                             <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
+<div class="block">Creates a CDS trade with upfront fee from trade date, start date and end date.
+ <p>
+ The settlement date is computed from the trade date using <code>settlementDateOffset</code> defined in the convention.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>legalEntityId</code> - the legal entity ID</dd>
+<dd><code>tradeDate</code> - the trade date</dd>
+<dd><code>startDate</code> - the start date</dd>
+<dd><code>endDate</code> - the end date</dd>
+<dd><code>buySell</code> - buy or sell</dd>
+<dd><code>notional</code> - the notional</dd>
+<dd><code>fixedRate</code> - the fixed rate</dd>
+<dd><code>upFrontFee</code> - the upFront fee</dd>
+<dd><code>refData</code> - the reference data</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the CDS trade</dd>
+</dl>
+</li>
+</ul>
+<a name="toTrade-com.opengamma.strata.basics.StandardId-com.opengamma.strata.product.TradeInfo-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.currency.AdjustablePayment-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toTrade</h4>
+<pre><a href="../../../../../../com/opengamma/strata/product/credit/CdsTrade.html" title="class in com.opengamma.strata.product.credit">CdsTrade</a>&nbsp;toTrade(<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;legalEntityId,
+                 <a href="../../../../../../com/opengamma/strata/product/TradeInfo.html" title="class in com.opengamma.strata.product">TradeInfo</a>&nbsp;tradeInfo,
+                 <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
+                 <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate,
+                 <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+                 double&nbsp;notional,
+                 double&nbsp;fixedRate,
+                 <a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html" title="class in com.opengamma.strata.basics.currency">AdjustablePayment</a>&nbsp;upFrontFee)</pre>
+<div class="block">Creates a CDS trade with upfront fee and <code>TradeInfo</code>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>legalEntityId</code> - the legal entity ID</dd>
+<dd><code>tradeInfo</code> - the trade info</dd>
+<dd><code>startDate</code> - the start date</dd>
+<dd><code>endDate</code> - the end date</dd>
+<dd><code>buySell</code> - buy or sell</dd>
+<dd><code>notional</code> - the notional</dd>
+<dd><code>fixedRate</code> - the fixed rate</dd>
+<dd><code>upFrontFee</code> - the upFront fee</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the CDS trade</dd>
 </dl>
 </li>
 </ul>
@@ -638,7 +653,7 @@ extends <a href="../../../../../../com/opengamma/strata/product/TradeConvention.
 </div>
 <div class="subNav">
 <ul class="navList">
-<li>Prev&nbsp;Class</li>
+<li><a href="../../../../../../com/opengamma/strata/product/credit/type/AccrualStart.html" title="enum in com.opengamma.strata.product.credit.type"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConventions.html" title="class in com.opengamma.strata.product.credit.type"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">

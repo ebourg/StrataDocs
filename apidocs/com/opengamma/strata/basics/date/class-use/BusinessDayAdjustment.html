@@ -102,22 +102,20 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#com.opengamma.strata.market.curve">com.opengamma.strata.market.curve</a></td>
+<td class="colLast">
+<div class="block">Definitions of curves.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.swaption">com.opengamma.strata.pricer.swaption</a></td>
 <td class="colLast">
 <div class="block">Calculators for swaptions.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><a href="#com.opengamma.strata.product.credit">com.opengamma.strata.product.credit</a></td>
-<td class="colLast">
-<div class="block">Entity objects describing credit products.</div>
-</td>
-</tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.credit.type">com.opengamma.strata.product.credit.type</a></td>
-<td class="colLast">
-<div class="block">Conventions and templates to aid the construction of credit default swaps.</div>
-</td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.deposit">com.opengamma.strata.product.deposit</a></td>
@@ -216,14 +214,14 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">AdjustableDate.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/date/AdjustableDate.html#getAdjustment--">getAdjustment</a></span>()</code>
-<div class="block">Gets the business day adjustment that is to be applied to the unadjusted date.</div>
+<td class="colLast"><span class="typeNameLabel">TenorAdjustment.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/date/TenorAdjustment.html#getAdjustment--">getAdjustment</a></span>()</code>
+<div class="block">Gets the business day adjustment that is performed to the result of the addition.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">TenorAdjustment.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/date/TenorAdjustment.html#getAdjustment--">getAdjustment</a></span>()</code>
-<div class="block">Gets the business day adjustment that is performed to the result of the addition.</div>
+<td class="colLast"><span class="typeNameLabel">AdjustableDate.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/date/AdjustableDate.html#getAdjustment--">getAdjustment</a></span>()</code>
+<div class="block">Gets the business day adjustment that is to be applied to the unadjusted date.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -256,13 +254,13 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">AdjustableDate.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/date/AdjustableDate.Meta.html#adjustment--">adjustment</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">TenorAdjustment.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/date/TenorAdjustment.Meta.html#adjustment--">adjustment</a></span>()</code>
 <div class="block">The meta-property for the <code>adjustment</code> property.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">TenorAdjustment.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/date/TenorAdjustment.Meta.html#adjustment--">adjustment</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">AdjustableDate.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/date/AdjustableDate.Meta.html#adjustment--">adjustment</a></span>()</code>
 <div class="block">The meta-property for the <code>adjustment</code> property.</div>
 </td>
 </tr>
@@ -513,6 +511,95 @@
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="com.opengamma.strata.market.curve">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a> in <a href="../../../../../../com/opengamma/strata/market/curve/package-summary.html">com.opengamma.strata.market.curve</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/market/curve/package-summary.html">com.opengamma.strata.market.curve</a> that return <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DepositIsdaCreditCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/DepositIsdaCreditCurveNode.html#getBusinessDayAdjustment--">getBusinessDayAdjustment</a></span>()</code>
+<div class="block">Gets the business day adjustment to apply to the start and end date.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SwapIsdaCreditCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/SwapIsdaCreditCurveNode.html#getBusinessDayAdjustment--">getBusinessDayAdjustment</a></span>()</code>
+<div class="block">Gets the business day adjustment to apply to the start date, end date and accrual schedule.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/market/curve/package-summary.html">com.opengamma.strata.market.curve</a> that return types with arguments of type <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">DepositIsdaCreditCurveNode.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/DepositIsdaCreditCurveNode.Meta.html#businessDayAdjustment--">businessDayAdjustment</a></span>()</code>
+<div class="block">The meta-property for the <code>businessDayAdjustment</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SwapIsdaCreditCurveNode.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/SwapIsdaCreditCurveNode.Meta.html#businessDayAdjustment--">businessDayAdjustment</a></span>()</code>
+<div class="block">The meta-property for the <code>businessDayAdjustment</code> property.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/market/curve/package-summary.html">com.opengamma.strata.market.curve</a> with parameters of type <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/DepositIsdaCreditCurveNode.Builder.html" title="class in com.opengamma.strata.market.curve">DepositIsdaCreditCurveNode.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DepositIsdaCreditCurveNode.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/DepositIsdaCreditCurveNode.Builder.html#businessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">businessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</code>
+<div class="block">Sets the business day adjustment to apply to the start and end date.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/SwapIsdaCreditCurveNode.Builder.html" title="class in com.opengamma.strata.market.curve">SwapIsdaCreditCurveNode.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SwapIsdaCreditCurveNode.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/SwapIsdaCreditCurveNode.Builder.html#businessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">businessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</code>
+<div class="block">Sets the business day adjustment to apply to the start date, end date and accrual schedule.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/DepositIsdaCreditCurveNode.html" title="class in com.opengamma.strata.market.curve">DepositIsdaCreditCurveNode</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DepositIsdaCreditCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/DepositIsdaCreditCurveNode.html#of-com.opengamma.strata.data.ObservableId-com.opengamma.strata.basics.date.DaysAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.basics.date.DayCount-">of</a></span>(<a href="../../../../../../com/opengamma/strata/data/ObservableId.html" title="interface in com.opengamma.strata.data">ObservableId</a>&nbsp;observableId,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;spotDateOffset,
+  <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment,
+  <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
+<div class="block">Returns a curve node for a term deposit.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/SwapIsdaCreditCurveNode.html" title="class in com.opengamma.strata.market.curve">SwapIsdaCreditCurveNode</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SwapIsdaCreditCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/SwapIsdaCreditCurveNode.html#of-com.opengamma.strata.data.ObservableId-com.opengamma.strata.basics.date.DaysAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.basics.schedule.Frequency-">of</a></span>(<a href="../../../../../../com/opengamma/strata/data/ObservableId.html" title="interface in com.opengamma.strata.data">ObservableId</a>&nbsp;observableId,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;spotDateOffset,
+  <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment,
+  <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+  <a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;paymentFrequency)</code>
+<div class="block">Returns a curve node for a standard fixed-Ibor swap.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.pricer.swaption">
 <!--   -->
 </a>
@@ -605,89 +692,6 @@
 </tbody>
 </table>
 </li>
-<li class="blockList"><a name="com.opengamma.strata.product.credit">
-<!--   -->
-</a>
-<h3>Uses of <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a> in <a href="../../../../../../com/opengamma/strata/product/credit/package-summary.html">com.opengamma.strata.product.credit</a></h3>
-<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
-<caption><span>Fields in <a href="../../../../../../com/opengamma/strata/product/credit/package-summary.html">com.opengamma.strata.product.credit</a> declared as <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Field and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCds.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html#businessDayAdjustment">businessDayAdjustment</a></span></code>
-<div class="block">The business day adjustment to apply to the start and end dates.</div>
-</td>
-</tr>
-</tbody>
-</table>
-<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
-<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/product/credit/package-summary.html">com.opengamma.strata.product.credit</a> that return <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCds.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html#getBusinessDayAdjustment--">getBusinessDayAdjustment</a></span>()</code>
-<div class="block">Gets the business day adjustment to apply to the start and end dates.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Cds.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/Cds.html#getBusinessDayAdjustment--">getBusinessDayAdjustment</a></span>()</code>
-<div class="block">Gets the business day adjustment to apply to the start and end dates.</div>
-</td>
-</tr>
-</tbody>
-</table>
-<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
-<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/product/credit/package-summary.html">com.opengamma.strata.product.credit</a> that return types with arguments of type <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCds.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Meta.html#businessDayAdjustment--">businessDayAdjustment</a></span>()</code>
-<div class="block">The meta-property for the <code>businessDayAdjustment</code> property.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">Cds.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/Cds.Meta.html#businessDayAdjustment--">businessDayAdjustment</a></span>()</code>
-<div class="block">The meta-property for the <code>businessDayAdjustment</code> property.</div>
-</td>
-</tr>
-</tbody>
-</table>
-<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
-<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/product/credit/package-summary.html">com.opengamma.strata.product.credit</a> with parameters of type <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html#businessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">businessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</code>
-<div class="block">Sets the business day adjustment to apply to the start and end dates.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/Cds.Builder.html" title="class in com.opengamma.strata.product.credit">Cds.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Cds.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/Cds.Builder.html#businessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">businessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</code>
-<div class="block">Sets the business day adjustment to apply to the start and end dates.</div>
-</td>
-</tr>
-</tbody>
-</table>
-</li>
 <li class="blockList"><a name="com.opengamma.strata.product.credit.type">
 <!--   -->
 </a>
@@ -702,13 +706,21 @@
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ImmutableCdsConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.html#getBusinessDayAdjustment--">getBusinessDayAdjustment</a></span>()</code>
-<div class="block">Gets the business day adjustment.</div>
+<div class="block">Gets the business day adjustment to apply to payment schedule dates.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CdsConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#getBusinessDayAdjustment--">getBusinessDayAdjustment</a></span>()</code>
-<div class="block">Gets the business day adjustment.</div>
+<td class="colLast"><span class="typeNameLabel">ImmutableCdsConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.html#getEndDateBusinessDayAdjustment--">getEndDateBusinessDayAdjustment</a></span>()</code>
+<div class="block">Gets the business day adjustment to apply to the end date,
+ providing a default result if no override specified.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableCdsConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.html#getStartDateBusinessDayAdjustment--">getStartDateBusinessDayAdjustment</a></span>()</code>
+<div class="block">Gets the business day adjustment to apply to the start date,
+ providing a default result if no override specified.</div>
 </td>
 </tr>
 </tbody>
@@ -726,6 +738,18 @@
 <div class="block">The meta-property for the <code>businessDayAdjustment</code> property.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableCdsConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html#endDateBusinessDayAdjustment--">endDateBusinessDayAdjustment</a></span>()</code>
+<div class="block">The meta-property for the <code>endDateBusinessDayAdjustment</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableCdsConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html#startDateBusinessDayAdjustment--">startDateBusinessDayAdjustment</a></span>()</code>
+<div class="block">The meta-property for the <code>startDateBusinessDayAdjustment</code> property.</div>
+</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -738,7 +762,30 @@
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ImmutableCdsConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#businessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">businessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</code>
-<div class="block">Sets the business day adjustment.</div>
+<div class="block">Sets the business day adjustment to apply to payment schedule dates.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableCdsConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#endDateBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">endDateBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;endDateBusinessDayAdjustment)</code>
+<div class="block">Sets the business day adjustment to apply to the end date, optional with defaulting getter.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableCdsConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.html#of-java.lang.String-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.basics.schedule.Frequency-com.opengamma.strata.basics.date.BusinessDayAdjustment-com.opengamma.strata.basics.date.DaysAdjustment-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+  <a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+  <a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;paymentFrequency,
+  <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;settlementDateOffset)</code>
+<div class="block">Obtains a convention based on the specified parameters.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableCdsConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#startDateBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">startDateBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;startDateBusinessDayAdjustment)</code>
+<div class="block">Sets the business day adjustment to apply to the start date, optional with defaulting getter.</div>
 </td>
 </tr>
 </tbody>
@@ -757,25 +804,25 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">TermDeposit.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/TermDeposit.Meta.html#businessDayAdjustment--">businessDayAdjustment</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">IborFixingDeposit.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/IborFixingDeposit.Meta.html#businessDayAdjustment--">businessDayAdjustment</a></span>()</code>
 <div class="block">The meta-property for the <code>businessDayAdjustment</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">IborFixingDeposit.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/IborFixingDeposit.Meta.html#businessDayAdjustment--">businessDayAdjustment</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">TermDeposit.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/TermDeposit.Meta.html#businessDayAdjustment--">businessDayAdjustment</a></span>()</code>
 <div class="block">The meta-property for the <code>businessDayAdjustment</code> property.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">TermDeposit.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/TermDeposit.html#getBusinessDayAdjustment--">getBusinessDayAdjustment</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">IborFixingDeposit.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/IborFixingDeposit.html#getBusinessDayAdjustment--">getBusinessDayAdjustment</a></span>()</code>
 <div class="block">Gets the business day adjustment to apply to the start and end date, optional.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">IborFixingDeposit.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/IborFixingDeposit.html#getBusinessDayAdjustment--">getBusinessDayAdjustment</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">TermDeposit.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/TermDeposit.html#getBusinessDayAdjustment--">getBusinessDayAdjustment</a></span>()</code>
 <div class="block">Gets the business day adjustment to apply to the start and end date, optional.</div>
 </td>
 </tr>
@@ -789,14 +836,14 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/deposit/TermDeposit.Builder.html" title="class in com.opengamma.strata.product.deposit">TermDeposit.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">TermDeposit.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/TermDeposit.Builder.html#businessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">businessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</code>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/deposit/IborFixingDeposit.Builder.html" title="class in com.opengamma.strata.product.deposit">IborFixingDeposit.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFixingDeposit.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/IborFixingDeposit.Builder.html#businessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">businessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</code>
 <div class="block">Sets the business day adjustment to apply to the start and end date, optional.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/deposit/IborFixingDeposit.Builder.html" title="class in com.opengamma.strata.product.deposit">IborFixingDeposit.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborFixingDeposit.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/IborFixingDeposit.Builder.html#businessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">businessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</code>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/deposit/TermDeposit.Builder.html" title="class in com.opengamma.strata.product.deposit">TermDeposit.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">TermDeposit.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/TermDeposit.Builder.html#businessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">businessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</code>
 <div class="block">Sets the business day adjustment to apply to the start and end date, optional.</div>
 </td>
 </tr>
@@ -816,15 +863,15 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableIborFixingDepositConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableIborFixingDepositConvention.html#getBusinessDayAdjustment--">getBusinessDayAdjustment</a></span>()</code>
-<div class="block">Gets the business day adjustment to apply to the start and end date,
- providing a default result if no override specified.</div>
+<td class="colLast"><span class="typeNameLabel">ImmutableTermDepositConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.html#getBusinessDayAdjustment--">getBusinessDayAdjustment</a></span>()</code>
+<div class="block">Gets the business day adjustment to apply to the start and end date.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableTermDepositConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.html#getBusinessDayAdjustment--">getBusinessDayAdjustment</a></span>()</code>
-<div class="block">Gets the business day adjustment to apply to the start and end date.</div>
+<td class="colLast"><span class="typeNameLabel">ImmutableIborFixingDepositConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableIborFixingDepositConvention.html#getBusinessDayAdjustment--">getBusinessDayAdjustment</a></span>()</code>
+<div class="block">Gets the business day adjustment to apply to the start and end date,
+ providing a default result if no override specified.</div>
 </td>
 </tr>
 </tbody>
@@ -838,13 +885,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableIborFixingDepositConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableIborFixingDepositConvention.Meta.html#businessDayAdjustment--">businessDayAdjustment</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ImmutableTermDepositConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.Meta.html#businessDayAdjustment--">businessDayAdjustment</a></span>()</code>
 <div class="block">The meta-property for the <code>businessDayAdjustment</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableTermDepositConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.Meta.html#businessDayAdjustment--">businessDayAdjustment</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ImmutableIborFixingDepositConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableIborFixingDepositConvention.Meta.html#businessDayAdjustment--">businessDayAdjustment</a></span>()</code>
 <div class="block">The meta-property for the <code>businessDayAdjustment</code> property.</div>
 </td>
 </tr>
@@ -858,15 +905,15 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableIborFixingDepositConvention.Builder.html" title="class in com.opengamma.strata.product.deposit.type">ImmutableIborFixingDepositConvention.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableIborFixingDepositConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableIborFixingDepositConvention.Builder.html#businessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">businessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</code>
-<div class="block">Sets the business day adjustment to apply to the start and end date, optional with defaulting getter.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.Builder.html" title="class in com.opengamma.strata.product.deposit.type">ImmutableTermDepositConvention.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ImmutableTermDepositConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableTermDepositConvention.Builder.html#businessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">businessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</code>
 <div class="block">Sets the business day adjustment to apply to the start and end date.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableIborFixingDepositConvention.Builder.html" title="class in com.opengamma.strata.product.deposit.type">ImmutableIborFixingDepositConvention.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableIborFixingDepositConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/deposit/type/ImmutableIborFixingDepositConvention.Builder.html#businessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">businessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</code>
+<div class="block">Sets the business day adjustment to apply to the start and end date, optional with defaulting getter.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -1247,6 +1294,19 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.html#getAccrualBusinessDayAdjustment--">getAccrualBusinessDayAdjustment</a></span>()</code>
+<div class="block">Gets the business day adjustment to apply to accrual schedule dates,
+ providing a default result if no override specified.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.html#getAccrualBusinessDayAdjustment--">getAccrualBusinessDayAdjustment</a></span>()</code>
+<div class="block">Gets the business day adjustment to apply to accrual schedule dates.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.html#getAccrualBusinessDayAdjustment--">getAccrualBusinessDayAdjustment</a></span>()</code>
 <div class="block">Gets the business day adjustment to apply to accrual schedule dates,
  providing a default result if no override specified.</div>
@@ -1254,15 +1314,16 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.html#getAccrualBusinessDayAdjustment--">getAccrualBusinessDayAdjustment</a></span>()</code>
-<div class="block">Gets the business day adjustment to apply to accrual schedule dates,
+<td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.html#getEndDateBusinessDayAdjustment--">getEndDateBusinessDayAdjustment</a></span>()</code>
+<div class="block">Gets the business day adjustment to apply to the end date,
  providing a default result if no override specified.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.html#getAccrualBusinessDayAdjustment--">getAccrualBusinessDayAdjustment</a></span>()</code>
-<div class="block">Gets the business day adjustment to apply to accrual schedule dates.</div>
+<td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.html#getEndDateBusinessDayAdjustment--">getEndDateBusinessDayAdjustment</a></span>()</code>
+<div class="block">Gets the business day adjustment to apply to the end date,
+ providing a default result if no override specified.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -1274,35 +1335,21 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.html#getEndDateBusinessDayAdjustment--">getEndDateBusinessDayAdjustment</a></span>()</code>
-<div class="block">Gets the business day adjustment to apply to the end date,
+<td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.html#getStartDateBusinessDayAdjustment--">getStartDateBusinessDayAdjustment</a></span>()</code>
+<div class="block">Gets the business day adjustment to apply to the start date,
  providing a default result if no override specified.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.html#getEndDateBusinessDayAdjustment--">getEndDateBusinessDayAdjustment</a></span>()</code>
-<div class="block">Gets the business day adjustment to apply to the end date,
+<td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.html#getStartDateBusinessDayAdjustment--">getStartDateBusinessDayAdjustment</a></span>()</code>
+<div class="block">Gets the business day adjustment to apply to the start date,
  providing a default result if no override specified.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.html#getStartDateBusinessDayAdjustment--">getStartDateBusinessDayAdjustment</a></span>()</code>
-<div class="block">Gets the business day adjustment to apply to the start date,
- providing a default result if no override specified.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.html#getStartDateBusinessDayAdjustment--">getStartDateBusinessDayAdjustment</a></span>()</code>
-<div class="block">Gets the business day adjustment to apply to the start date,
- providing a default result if no override specified.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.html#getStartDateBusinessDayAdjustment--">getStartDateBusinessDayAdjustment</a></span>()</code>
 <div class="block">Gets the business day adjustment to apply to the start date,
  providing a default result if no override specified.</div>
 </td>
@@ -1318,18 +1365,6 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Meta.html#accrualBusinessDayAdjustment--">accrualBusinessDayAdjustment</a></span>()</code>
-<div class="block">The meta-property for the <code>accrualBusinessDayAdjustment</code> property.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">InflationRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.Meta.html#accrualBusinessDayAdjustment--">accrualBusinessDayAdjustment</a></span>()</code>
-<div class="block">The meta-property for the <code>accrualBusinessDayAdjustment</code> property.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Meta.html#accrualBusinessDayAdjustment--">accrualBusinessDayAdjustment</a></span>()</code>
 <div class="block">The meta-property for the <code>accrualBusinessDayAdjustment</code> property.</div>
 </td>
@@ -1342,37 +1377,49 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Meta.html#accrualBusinessDayAdjustment--">accrualBusinessDayAdjustment</a></span>()</code>
+<div class="block">The meta-property for the <code>accrualBusinessDayAdjustment</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">InflationRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.Meta.html#accrualBusinessDayAdjustment--">accrualBusinessDayAdjustment</a></span>()</code>
+<div class="block">The meta-property for the <code>accrualBusinessDayAdjustment</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Meta.html#endDateBusinessDayAdjustment--">endDateBusinessDayAdjustment</a></span>()</code>
+<div class="block">The meta-property for the <code>endDateBusinessDayAdjustment</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Meta.html#endDateBusinessDayAdjustment--">endDateBusinessDayAdjustment</a></span>()</code>
+<div class="block">The meta-property for the <code>endDateBusinessDayAdjustment</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Meta.html#endDateBusinessDayAdjustment--">endDateBusinessDayAdjustment</a></span>()</code>
 <div class="block">The meta-property for the <code>endDateBusinessDayAdjustment</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Meta.html#endDateBusinessDayAdjustment--">endDateBusinessDayAdjustment</a></span>()</code>
-<div class="block">The meta-property for the <code>endDateBusinessDayAdjustment</code> property.</div>
+<td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Meta.html#startDateBusinessDayAdjustment--">startDateBusinessDayAdjustment</a></span>()</code>
+<div class="block">The meta-property for the <code>startDateBusinessDayAdjustment</code> property.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Meta.html#endDateBusinessDayAdjustment--">endDateBusinessDayAdjustment</a></span>()</code>
-<div class="block">The meta-property for the <code>endDateBusinessDayAdjustment</code> property.</div>
+<td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Meta.html#startDateBusinessDayAdjustment--">startDateBusinessDayAdjustment</a></span>()</code>
+<div class="block">The meta-property for the <code>startDateBusinessDayAdjustment</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Meta.html#startDateBusinessDayAdjustment--">startDateBusinessDayAdjustment</a></span>()</code>
-<div class="block">The meta-property for the <code>startDateBusinessDayAdjustment</code> property.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Meta.html#startDateBusinessDayAdjustment--">startDateBusinessDayAdjustment</a></span>()</code>
-<div class="block">The meta-property for the <code>startDateBusinessDayAdjustment</code> property.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Meta.html#startDateBusinessDayAdjustment--">startDateBusinessDayAdjustment</a></span>()</code>
 <div class="block">The meta-property for the <code>startDateBusinessDayAdjustment</code> property.</div>
 </td>
 </tr>
@@ -1385,18 +1432,6 @@
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tbody>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">OvernightRateSwapLegConvention.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html#accrualBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">accrualBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;accrualBusinessDayAdjustment)</code>
-<div class="block">Sets the business day adjustment to apply to accrual schedule dates.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">InflationRateSwapLegConvention.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">InflationRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.Builder.html#accrualBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">accrualBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;accrualBusinessDayAdjustment)</code>
-<div class="block">Sets the business day adjustment to apply to accrual schedule dates.</div>
-</td>
-</tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">IborRateSwapLegConvention.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Builder.html#accrualBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">accrualBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;accrualBusinessDayAdjustment)</code>
@@ -1411,19 +1446,31 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">OvernightRateSwapLegConvention.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html#endDateBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">endDateBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;endDateBusinessDayAdjustment)</code>
-<div class="block">Sets the business day adjustment to apply to the end date, optional with defaulting getter.</div>
+<td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html#accrualBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">accrualBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;accrualBusinessDayAdjustment)</code>
+<div class="block">Sets the business day adjustment to apply to accrual schedule dates.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">InflationRateSwapLegConvention.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">InflationRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.Builder.html#accrualBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">accrualBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;accrualBusinessDayAdjustment)</code>
+<div class="block">Sets the business day adjustment to apply to accrual schedule dates.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">IborRateSwapLegConvention.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Builder.html#endDateBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">endDateBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;endDateBusinessDayAdjustment)</code>
 <div class="block">Sets the business day adjustment to apply to the end date, optional with defaulting getter.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">FixedRateSwapLegConvention.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Builder.html#endDateBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">endDateBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;endDateBusinessDayAdjustment)</code>
+<div class="block">Sets the business day adjustment to apply to the end date, optional with defaulting getter.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">OvernightRateSwapLegConvention.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html#endDateBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">endDateBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;endDateBusinessDayAdjustment)</code>
 <div class="block">Sets the business day adjustment to apply to the end date, optional with defaulting getter.</div>
 </td>
 </tr>
@@ -1445,20 +1492,20 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">OvernightRateSwapLegConvention.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html#startDateBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">startDateBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;startDateBusinessDayAdjustment)</code>
-<div class="block">Sets the business day adjustment to apply to the start date, optional with defaulting getter.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">IborRateSwapLegConvention.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Builder.html#startDateBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">startDateBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;startDateBusinessDayAdjustment)</code>
 <div class="block">Sets the business day adjustment to apply to the start date, optional with defaulting getter.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">FixedRateSwapLegConvention.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Builder.html#startDateBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">startDateBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;startDateBusinessDayAdjustment)</code>
+<div class="block">Sets the business day adjustment to apply to the start date, optional with defaulting getter.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">OvernightRateSwapLegConvention.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html#startDateBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">startDateBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;startDateBusinessDayAdjustment)</code>
 <div class="block">Sets the business day adjustment to apply to the start date, optional with defaulting getter.</div>
 </td>
 </tr>

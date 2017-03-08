@@ -166,7 +166,9 @@ var activeTableTab = "activeTableTab";
  <p>
  The name contains enough information to be able to recreate the instance.
  The lookup should return null if the name is not known.
- The lookup should be case sensitive.
+ The lookup must match the name where the match is case sensitive.
+ Where possible implementations should match the upper-case form of the name, using <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true#ENGLISH" title="class or interface in java.util"><code>Locale.ENGLISH</code></a>.
+ Implementations can match completely case insensitive if desired, however this is not required.
  An exception should only be thrown if an error occurs during lookup.
  <p>
  The default implementation uses <a href="../../../../../com/opengamma/strata/collect/named/NamedLookup.html#lookupAll--"><code>lookupAll()</code></a>.</div>
@@ -190,7 +192,8 @@ var activeTableTab = "activeTableTab";
  This method returns all known instances.
  It is permitted for an implementation to return an empty map, however this will
  reduce the usefulness of the matching method on <a href="../../../../../com/opengamma/strata/collect/named/ExtendedEnum.html" title="class in com.opengamma.strata.collect.named"><code>ExtendedEnum</code></a>.
- The map may include instances keyed under an alternate name.</div>
+ The map may include instances keyed under an alternate name.
+ For example, the map will often contain the same entry keyed under the upper-cased form of the name.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the immutable map of enum instance by name</dd>

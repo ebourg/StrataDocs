@@ -102,18 +102,36 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.capfloor">com.opengamma.strata.pricer.capfloor</a></td>
+<td class="colLast">
+<div class="block">Calculators for Ibor cap-floor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.credit">com.opengamma.strata.pricer.credit</a></td>
+<td class="colLast">
+<div class="block">Calculators for credit instruments, such as Credit Default Swap (CDS).</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.fxopt">com.opengamma.strata.pricer.fxopt</a></td>
 <td class="colLast">
 <div class="block">Calculators for FX options.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.model">com.opengamma.strata.pricer.model</a></td>
+<td class="colLast">
+<div class="block">Common code for model pricing.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.rate">com.opengamma.strata.pricer.rate</a></td>
 <td class="colLast">
 <div class="block">Calculators for rates instruments, such as Forward Rate Agreement (FRA) and interest rate swap.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.sensitivity">com.opengamma.strata.pricer.sensitivity</a></td>
 <td class="colLast">
 <div class="block">Calculators for sensitivities.</div>
@@ -186,6 +204,12 @@
 <div class="block">A curve with a parallel shift applied to its y-values.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParameterizedFunctionalCurve.html" title="class in com.opengamma.strata.market.curve">ParameterizedFunctionalCurve</a></span></code>
+<div class="block">A curve based on a parameterized function.</div>
+</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -197,34 +221,42 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CurveDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/CurveDefinition.html#curve-java.time.LocalDate-com.opengamma.strata.market.curve.CurveMetadata-com.opengamma.strata.collect.array.DoubleArray-">curve</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+     <a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata,
+     <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;parameters)</code>
+<div class="block">Creates the curve from an array of parameter values.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></code></td>
 <td class="colLast"><span class="typeNameLabel">AddFixedCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/AddFixedCurve.html#getFixedCurve--">getFixedCurve</a></span>()</code>
 <div class="block">Gets the fixed curve.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></code></td>
 <td class="colLast"><span class="typeNameLabel">AddFixedCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/AddFixedCurve.html#getSpreadCurve--">getSpreadCurve</a></span>()</code>
 <div class="block">Gets the spread curve.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ParallelShiftedCurve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/ParallelShiftedCurve.html#getUnderlyingCurve--">getUnderlyingCurve</a></span>()</code>
 <div class="block">Gets the underlying curve.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Curve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html#withMetadata-com.opengamma.strata.market.curve.CurveMetadata-">withMetadata</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&nbsp;metadata)</code>
 <div class="block">Returns a new curve with the specified metadata.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Curve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html#withParameter-int-double-">withParameter</a></span>(int&nbsp;parameterIndex,
              double&nbsp;newValue)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Curve.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html#withPerturbation-com.opengamma.strata.market.param.ParameterPerturbation-">withPerturbation</a></span>(<a href="../../../../../../com/opengamma/strata/market/param/ParameterPerturbation.html" title="interface in com.opengamma.strata.market.param">ParameterPerturbation</a>&nbsp;perturbation)</code>&nbsp;</td>
 </tr>
@@ -467,13 +499,13 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ZeroRatePeriodicDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/ZeroRatePeriodicDiscountFactors.html#getCurve--">getCurve</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">SimpleDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/SimpleDiscountFactors.html#getCurve--">getCurve</a></span>()</code>
 <div class="block">Gets the underlying curve.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SimpleDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/SimpleDiscountFactors.html#getCurve--">getCurve</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ZeroRatePeriodicDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/ZeroRatePeriodicDiscountFactors.html#getCurve--">getCurve</a></span>()</code>
 <div class="block">Gets the underlying curve.</div>
 </td>
 </tr>
@@ -494,13 +526,13 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ZeroRatePeriodicDiscountFactors.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/ZeroRatePeriodicDiscountFactors.Meta.html#curve--">curve</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">SimpleDiscountFactors.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/SimpleDiscountFactors.Meta.html#curve--">curve</a></span>()</code>
 <div class="block">The meta-property for the <code>curve</code> property.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">SimpleDiscountFactors.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/SimpleDiscountFactors.Meta.html#curve--">curve</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ZeroRatePeriodicDiscountFactors.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/ZeroRatePeriodicDiscountFactors.Meta.html#curve--">curve</a></span>()</code>
 <div class="block">The meta-property for the <code>curve</code> property.</div>
 </td>
 </tr>
@@ -522,14 +554,6 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/ZeroRatePeriodicDiscountFactors.html" title="class in com.opengamma.strata.pricer">ZeroRatePeriodicDiscountFactors</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ZeroRatePeriodicDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/ZeroRatePeriodicDiscountFactors.html#of-com.opengamma.strata.basics.currency.Currency-java.time.LocalDate-com.opengamma.strata.market.curve.Curve-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-  <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;underlyingCurve)</code>
-<div class="block">Obtains an instance based on a zero-rates curve.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/DiscountFactors.html#of-com.opengamma.strata.basics.currency.Currency-java.time.LocalDate-com.opengamma.strata.market.curve.Curve-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
@@ -537,12 +561,20 @@
 <div class="block">Obtains an instance from a curve.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/SimpleDiscountFactors.html" title="class in com.opengamma.strata.pricer">SimpleDiscountFactors</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SimpleDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/SimpleDiscountFactors.html#of-com.opengamma.strata.basics.currency.Currency-java.time.LocalDate-com.opengamma.strata.market.curve.Curve-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
   <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;underlyingCurve)</code>
 <div class="block">Obtains an instance based on a discount factor curve.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/ZeroRatePeriodicDiscountFactors.html" title="class in com.opengamma.strata.pricer">ZeroRatePeriodicDiscountFactors</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ZeroRatePeriodicDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/ZeroRatePeriodicDiscountFactors.html#of-com.opengamma.strata.basics.currency.Currency-java.time.LocalDate-com.opengamma.strata.market.curve.Curve-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+  <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;underlyingCurve)</code>
+<div class="block">Obtains an instance based on a zero-rates curve.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -552,15 +584,276 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/SimpleDiscountFactors.html" title="class in com.opengamma.strata.pricer">SimpleDiscountFactors</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SimpleDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/SimpleDiscountFactors.html#withCurve-com.opengamma.strata.market.curve.Curve-">withCurve</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;curve)</code>
+<div class="block">Returns a new instance with a different curve.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/ZeroRatePeriodicDiscountFactors.html" title="class in com.opengamma.strata.pricer">ZeroRatePeriodicDiscountFactors</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ZeroRatePeriodicDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/ZeroRatePeriodicDiscountFactors.html#withCurve-com.opengamma.strata.market.curve.Curve-">withCurve</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;curve)</code>
 <div class="block">Returns a new instance with a different curve.</div>
 </td>
 </tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.capfloor">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a> in <a href="../../../../../../com/opengamma/strata/pricer/capfloor/package-summary.html">com.opengamma.strata.pricer.capfloor</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/capfloor/package-summary.html">com.opengamma.strata.pricer.capfloor</a> that return <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/SimpleDiscountFactors.html" title="class in com.opengamma.strata.pricer">SimpleDiscountFactors</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SimpleDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/SimpleDiscountFactors.html#withCurve-com.opengamma.strata.market.curve.Curve-">withCurve</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;curve)</code>
-<div class="block">Returns a new instance with a different curve.</div>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityBootstrapDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityBootstrapDefinition.html#getShiftCurve--">getShiftCurve</a></span>()</code>
+<div class="block">Gets the shift curve.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html#getShiftCurve--">getShiftCurve</a></span>()</code>
+<div class="block">Gets the shift curve.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ShiftedBlackIborCapletFloorletExpiryStrikeVolatilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/ShiftedBlackIborCapletFloorletExpiryStrikeVolatilities.html#getShiftCurve--">getShiftCurve</a></span>()</code>
+<div class="block">Gets the shift parameter of shifted Black model.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/capfloor/package-summary.html">com.opengamma.strata.pricer.capfloor</a> that return types with arguments of type <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityBootstrapDefinition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityBootstrapDefinition.Meta.html#betaCurve--">betaCurve</a></span>()</code>
+<div class="block">The meta-property for the <code>betaCurve</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.Meta.html#betaCurve--">betaCurve</a></span>()</code>
+<div class="block">The meta-property for the <code>betaCurve</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html#createSabrParameterCurve-java.util.List-com.opengamma.strata.collect.array.DoubleArray-">createSabrParameterCurve</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/CurveMetadata.html" title="interface in com.opengamma.strata.market.curve">CurveMetadata</a>&gt;&nbsp;metadata,
+                        <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;nodeValues)</code>
+<div class="block">Creates the parameter curves with parameter node values.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityBootstrapDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityBootstrapDefinition.html#getBetaCurve--">getBetaCurve</a></span>()</code>
+<div class="block">Gets the beta (elasticity) curve.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html#getBetaCurve--">getBetaCurve</a></span>()</code>
+<div class="block">Gets the beta (elasticity) curve.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityBootstrapDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityBootstrapDefinition.html#getRhoCurve--">getRhoCurve</a></span>()</code>
+<div class="block">Gets the rho (correlation) curve.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.html#getRhoCurve--">getRhoCurve</a></span>()</code>
+<div class="block">Gets the rho (correlation) curve.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SurfaceIborCapletFloorletVolatilityBootstrapDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SurfaceIborCapletFloorletVolatilityBootstrapDefinition.html#getShiftCurve--">getShiftCurve</a></span>()</code>
+<div class="block">Gets the shift parameter of shifted Black model.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">DirectIborCapletFloorletVolatilityDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/DirectIborCapletFloorletVolatilityDefinition.html#getShiftCurve--">getShiftCurve</a></span>()</code>
+<div class="block">Gets the shift parameter of shifted Black model.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityBootstrapDefinition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityBootstrapDefinition.Meta.html#rhoCurve--">rhoCurve</a></span>()</code>
+<div class="block">The meta-property for the <code>rhoCurve</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.Meta.html#rhoCurve--">rhoCurve</a></span>()</code>
+<div class="block">The meta-property for the <code>rhoCurve</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityBootstrapDefinition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityBootstrapDefinition.Meta.html#shiftCurve--">shiftCurve</a></span>()</code>
+<div class="block">The meta-property for the <code>shiftCurve</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SurfaceIborCapletFloorletVolatilityBootstrapDefinition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SurfaceIborCapletFloorletVolatilityBootstrapDefinition.Meta.html#shiftCurve--">shiftCurve</a></span>()</code>
+<div class="block">The meta-property for the <code>shiftCurve</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">DirectIborCapletFloorletVolatilityDefinition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/DirectIborCapletFloorletVolatilityDefinition.Meta.html#shiftCurve--">shiftCurve</a></span>()</code>
+<div class="block">The meta-property for the <code>shiftCurve</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.Meta.html#shiftCurve--">shiftCurve</a></span>()</code>
+<div class="block">The meta-property for the <code>shiftCurve</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ShiftedBlackIborCapletFloorletExpiryStrikeVolatilities.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/ShiftedBlackIborCapletFloorletExpiryStrikeVolatilities.Meta.html#shiftCurve--">shiftCurve</a></span>()</code>
+<div class="block">The meta-property for the <code>shiftCurve</code> property.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/capfloor/package-summary.html">com.opengamma.strata.pricer.capfloor</a> with parameters of type <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityBootstrapDefinition.Builder.html" title="class in com.opengamma.strata.pricer.capfloor">SabrIborCapletFloorletVolatilityBootstrapDefinition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityBootstrapDefinition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityBootstrapDefinition.Builder.html#betaCurve-com.opengamma.strata.market.curve.Curve-">betaCurve</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;betaCurve)</code>
+<div class="block">Sets the beta (elasticity) curve.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder.html" title="class in com.opengamma.strata.pricer.capfloor">SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder.html#betaCurve-com.opengamma.strata.market.curve.Curve-">betaCurve</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;betaCurve)</code>
+<div class="block">Sets the beta (elasticity) curve.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/capfloor/SurfaceIborCapletFloorletVolatilityBootstrapDefinition.html" title="class in com.opengamma.strata.pricer.capfloor">SurfaceIborCapletFloorletVolatilityBootstrapDefinition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SurfaceIborCapletFloorletVolatilityBootstrapDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SurfaceIborCapletFloorletVolatilityBootstrapDefinition.html#of-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilitiesName-com.opengamma.strata.basics.index.IborIndex-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.interpolator.CurveInterpolator-com.opengamma.strata.market.curve.Curve-">of</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilitiesName.html" title="class in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilitiesName</a>&nbsp;name,
+  <a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;timeInterpolator,
+  <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a>&nbsp;strikeInterpolator,
+  <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;shiftCurve)</code>
+<div class="block">Obtains an instance with time interpolator, strike interpolator and shift curve.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/capfloor/DirectIborCapletFloorletVolatilityDefinition.html" title="class in com.opengamma.strata.pricer.capfloor">DirectIborCapletFloorletVolatilityDefinition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DirectIborCapletFloorletVolatilityDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/DirectIborCapletFloorletVolatilityDefinition.html#of-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilitiesName-com.opengamma.strata.basics.index.IborIndex-com.opengamma.strata.basics.date.DayCount-double-double-com.opengamma.strata.market.surface.interpolator.GridSurfaceInterpolator-com.opengamma.strata.market.curve.Curve-">of</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilitiesName.html" title="class in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilitiesName</a>&nbsp;name,
+  <a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+  double&nbsp;lambdaExpiry,
+  double&nbsp;lambdaStrike,
+  <a href="../../../../../../com/opengamma/strata/market/surface/interpolator/GridSurfaceInterpolator.html" title="class in com.opengamma.strata.market.surface.interpolator">GridSurfaceInterpolator</a>&nbsp;interpolator,
+  <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;shiftCurve)</code>
+<div class="block">Obtains an instance with shift curve.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/capfloor/SurfaceIborCapletFloorletVolatilityBootstrapDefinition.html" title="class in com.opengamma.strata.pricer.capfloor">SurfaceIborCapletFloorletVolatilityBootstrapDefinition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SurfaceIborCapletFloorletVolatilityBootstrapDefinition.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SurfaceIborCapletFloorletVolatilityBootstrapDefinition.html#of-com.opengamma.strata.pricer.capfloor.IborCapletFloorletVolatilitiesName-com.opengamma.strata.basics.index.IborIndex-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.market.surface.interpolator.GridSurfaceInterpolator-com.opengamma.strata.market.curve.Curve-">of</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/capfloor/IborCapletFloorletVolatilitiesName.html" title="class in com.opengamma.strata.pricer.capfloor">IborCapletFloorletVolatilitiesName</a>&nbsp;name,
+  <a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+  <a href="../../../../../../com/opengamma/strata/market/surface/interpolator/GridSurfaceInterpolator.html" title="class in com.opengamma.strata.market.surface.interpolator">GridSurfaceInterpolator</a>&nbsp;interpolator,
+  <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;shiftCurve)</code>
+<div class="block">Obtains an instance with gird surface interpolator and shift curve.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/capfloor/ShiftedBlackIborCapletFloorletExpiryStrikeVolatilities.html" title="class in com.opengamma.strata.pricer.capfloor">ShiftedBlackIborCapletFloorletExpiryStrikeVolatilities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ShiftedBlackIborCapletFloorletExpiryStrikeVolatilities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/ShiftedBlackIborCapletFloorletExpiryStrikeVolatilities.html#of-com.opengamma.strata.basics.index.IborIndex-java.time.ZonedDateTime-com.opengamma.strata.market.surface.Surface-com.opengamma.strata.market.curve.Curve-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;valuationDateTime,
+  <a href="../../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface">Surface</a>&nbsp;surface,
+  <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;shiftCurve)</code>
+<div class="block">Obtains an instance from the implied volatility surface and the date-time for which it is valid.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityBootstrapDefinition.Builder.html" title="class in com.opengamma.strata.pricer.capfloor">SabrIborCapletFloorletVolatilityBootstrapDefinition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityBootstrapDefinition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityBootstrapDefinition.Builder.html#rhoCurve-com.opengamma.strata.market.curve.Curve-">rhoCurve</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;rhoCurve)</code>
+<div class="block">Sets the rho (correlation) curve.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder.html" title="class in com.opengamma.strata.pricer.capfloor">SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder.html#rhoCurve-com.opengamma.strata.market.curve.Curve-">rhoCurve</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;rhoCurve)</code>
+<div class="block">Sets the rho (correlation) curve.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityBootstrapDefinition.Builder.html" title="class in com.opengamma.strata.pricer.capfloor">SabrIborCapletFloorletVolatilityBootstrapDefinition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityBootstrapDefinition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityBootstrapDefinition.Builder.html#shiftCurve-com.opengamma.strata.market.curve.Curve-">shiftCurve</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;shiftCurve)</code>
+<div class="block">Sets the shift curve.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/capfloor/DirectIborCapletFloorletVolatilityDefinition.Builder.html" title="class in com.opengamma.strata.pricer.capfloor">DirectIborCapletFloorletVolatilityDefinition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DirectIborCapletFloorletVolatilityDefinition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/DirectIborCapletFloorletVolatilityDefinition.Builder.html#shiftCurve-com.opengamma.strata.market.curve.Curve-">shiftCurve</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;shiftCurve)</code>
+<div class="block">Sets the shift parameter of shifted Black model.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder.html" title="class in com.opengamma.strata.pricer.capfloor">SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/capfloor/SabrIborCapletFloorletVolatilityCalibrationDefinition.Builder.html#shiftCurve-com.opengamma.strata.market.curve.Curve-">shiftCurve</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;shiftCurve)</code>
+<div class="block">Sets the shift curve.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.credit">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a> in <a href="../../../../../../com/opengamma/strata/pricer/credit/package-summary.html">com.opengamma.strata.pricer.credit</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/credit/package-summary.html">com.opengamma.strata.pricer.credit</a> with parameters of type <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditDiscountFactors.html" title="interface in com.opengamma.strata.pricer.credit">CreditDiscountFactors</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CreditDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/CreditDiscountFactors.html#of-com.opengamma.strata.basics.currency.Currency-java.time.LocalDate-com.opengamma.strata.market.curve.Curve-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+  <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;curve)</code>
+<div class="block">Obtains an instance from a curve.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/credit/RecoveryRates.html" title="interface in com.opengamma.strata.pricer.credit">RecoveryRates</a></code></td>
+<td class="colLast"><span class="typeNameLabel">RecoveryRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/RecoveryRates.html#of-com.opengamma.strata.basics.StandardId-java.time.LocalDate-com.opengamma.strata.market.curve.Curve-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;legalEntityId,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+  <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;curve)</code>
+<div class="block">Obtains an instance from a curve.</div>
 </td>
 </tr>
 </tbody>
@@ -619,6 +912,80 @@
   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html?is-external=true" title="class or interface in java.time">ZonedDateTime</a>&nbsp;valuationDateTime,
   <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;curve)</code>
 <div class="block">Obtains an instance from an expiry-volatility curve and the date-time for which it is valid.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.model">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a> in <a href="../../../../../../com/opengamma/strata/pricer/model/package-summary.html">com.opengamma.strata.pricer.model</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/model/package-summary.html">com.opengamma.strata.pricer.model</a> that return <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParameters.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/model/SabrParameters.html#getAlphaCurve--">getAlphaCurve</a></span>()</code>
+<div class="block">Gets the alpha (volatility level) curve.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParameters.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/model/SabrParameters.html#getBetaCurve--">getBetaCurve</a></span>()</code>
+<div class="block">Gets the beta (elasticity) curve.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParameters.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/model/SabrParameters.html#getNuCurve--">getNuCurve</a></span>()</code>
+<div class="block">Gets the nu (volatility of volatility) curve.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParameters.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/model/SabrParameters.html#getRhoCurve--">getRhoCurve</a></span>()</code>
+<div class="block">Gets the rho (correlation) curve.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParameters.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/model/SabrParameters.html#getShiftCurve--">getShiftCurve</a></span>()</code>
+<div class="block">Gets the shift parameter of shifted SABR model.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/model/package-summary.html">com.opengamma.strata.pricer.model</a> with parameters of type <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/model/SabrParameters.html" title="class in com.opengamma.strata.pricer.model">SabrParameters</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParameters.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/model/SabrParameters.html#of-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.pricer.model.SabrVolatilityFormula-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;alphaCurve,
+  <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;betaCurve,
+  <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;rhoCurve,
+  <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;nuCurve,
+  <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;shiftCurve,
+  <a href="../../../../../../com/opengamma/strata/pricer/model/SabrVolatilityFormula.html" title="interface in com.opengamma.strata.pricer.model">SabrVolatilityFormula</a>&nbsp;sabrFormula)</code>
+<div class="block">Obtains an instance with shift from nodal curves and volatility function provider.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/model/SabrParameters.html" title="class in com.opengamma.strata.pricer.model">SabrParameters</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SabrParameters.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/model/SabrParameters.html#of-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.pricer.model.SabrVolatilityFormula-">of</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;alphaCurve,
+  <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;betaCurve,
+  <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;rhoCurve,
+  <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;nuCurve,
+  <a href="../../../../../../com/opengamma/strata/pricer/model/SabrVolatilityFormula.html" title="interface in com.opengamma.strata.pricer.model">SabrVolatilityFormula</a>&nbsp;sabrFormula)</code>
+<div class="block">Obtains an instance without shift from nodal curves and volatility function provider.</div>
 </td>
 </tr>
 </tbody>
@@ -727,14 +1094,6 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/rate/SimpleIborIndexRates.html" title="class in com.opengamma.strata.pricer.rate">SimpleIborIndexRates</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SimpleIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/SimpleIborIndexRates.html#of-com.opengamma.strata.basics.index.IborIndex-java.time.LocalDate-com.opengamma.strata.market.curve.Curve-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-  <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;curve)</code>
-<div class="block">Obtains an instance from a curve, with an empty time-series of fixings.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">IborIndexRates</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html#of-com.opengamma.strata.basics.index.IborIndex-java.time.LocalDate-com.opengamma.strata.market.curve.Curve-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
@@ -742,22 +1101,30 @@
 <div class="block">Obtains an instance from a forward curve, with an empty time-series of fixings.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/rate/SimpleIborIndexRates.html" title="class in com.opengamma.strata.pricer.rate">SimpleIborIndexRates</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SimpleIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/SimpleIborIndexRates.html#of-com.opengamma.strata.basics.index.IborIndex-java.time.LocalDate-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
+<td class="colLast"><span class="typeNameLabel">SimpleIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/SimpleIborIndexRates.html#of-com.opengamma.strata.basics.index.IborIndex-java.time.LocalDate-com.opengamma.strata.market.curve.Curve-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-  <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;curve,
-  <a href="../../../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&nbsp;fixings)</code>
-<div class="block">Obtains an instance from a curve and time-series of fixing.</div>
+  <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;curve)</code>
+<div class="block">Obtains an instance from a curve, with an empty time-series of fixings.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">IborIndexRates</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html#of-com.opengamma.strata.basics.index.IborIndex-java.time.LocalDate-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
   <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;forwardCurve,
   <a href="../../../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&nbsp;fixings)</code>
 <div class="block">Obtains an instance from a curve and time-series of fixings.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/rate/SimpleIborIndexRates.html" title="class in com.opengamma.strata.pricer.rate">SimpleIborIndexRates</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SimpleIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/SimpleIborIndexRates.html#of-com.opengamma.strata.basics.index.IborIndex-java.time.LocalDate-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+  <a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;curve,
+  <a href="../../../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&nbsp;fixings)</code>
+<div class="block">Obtains an instance from a curve and time-series of fixing.</div>
 </td>
 </tr>
 <tr class="rowColor">

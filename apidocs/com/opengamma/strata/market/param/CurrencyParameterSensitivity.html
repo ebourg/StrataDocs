@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":9,"i12":10,"i13":10,"i14":9,"i15":9,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10};
+var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":9,"i14":10,"i15":10,"i16":9,"i17":9,"i18":9,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -124,7 +124,12 @@ implements <a href="../../../../../com/opengamma/strata/basics/currency/FxConver
  Common <code>ParameterizedData</code> implementations include <a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve"><code>Curve</code></a> and <a href="../../../../../com/opengamma/strata/market/surface/Surface.html" title="interface in com.opengamma.strata.market.surface"><code>Surface</code></a>.
  <p>
  The sensitivity is expressed as an array, with one entry for each parameter in the <code>ParameterizedData</code>.
- The sensitivity represents a monetary value in the specified currency.</div>
+ The sensitivity represents a monetary value in the specified currency.
+ <p>
+ A single <code>CurrencyParameterSensitivity</code> represents the sensitivity to a single <code>ParameterizedData</code> instance.
+ However, a <code>ParameterizedData</code> instance can itself be backed by more than one underlying instance.
+ For example, a curve formed from two underlying curves.
+ Information about the split between these underlying instances can optionally be stored.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../serialized-form.html#com.opengamma.strata.market.param.CurrencyParameterSensitivity">Serialized Form</a></dd>
@@ -169,85 +174,98 @@ implements <a href="../../../../../com/opengamma/strata/basics/currency/FxConver
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#combine-com.opengamma.strata.data.MarketDataName-com.opengamma.strata.market.param.CurrencyParameterSensitivity...-">combine</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketDataName.html" title="class in com.opengamma.strata.data">MarketDataName</a>&lt;?&gt;&nbsp;marketDataName,
+       <a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a>...&nbsp;sensitivities)</code>
+<div class="block">Combines two or more instances to form a single sensitivity instance.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#compareKey-com.opengamma.strata.market.param.CurrencyParameterSensitivity-">compareKey</a></span>(<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a>&nbsp;other)</code>
 <div class="block">Compares the key of two sensitivity objects, excluding the parameter sensitivity values.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#convertedTo-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.basics.currency.FxRateProvider-">convertedTo</a></span>(<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;resultCurrency,
            <a href="../../../../../com/opengamma/strata/basics/currency/FxRateProvider.html" title="interface in com.opengamma.strata.basics.currency">FxRateProvider</a>&nbsp;rateProvider)</code>
 <div class="block">Converts this sensitivity to an equivalent in the specified currency.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#equals-java.lang.Object-">equals</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#getCurrency--">getCurrency</a></span>()</code>
 <div class="block">Gets the currency of the sensitivity.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/data/MarketDataName.html" title="class in com.opengamma.strata.data">MarketDataName</a>&lt;?&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#getMarketDataName--">getMarketDataName</a></span>()</code>
 <div class="block">Gets the market data name.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#getParameterCount--">getParameterCount</a></span>()</code>
 <div class="block">Gets the number of parameters.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#getParameterMetadata--">getParameterMetadata</a></span>()</code>
 <div class="block">Gets the list of parameter metadata.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#getParameterMetadata-int-">getParameterMetadata</a></span>(int&nbsp;parameterIndex)</code>
 <div class="block">Gets the parameter metadata at the specified index.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/param/ParameterSize.html" title="class in com.opengamma.strata.market.param">ParameterSize</a>&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#getParameterSplit--">getParameterSplit</a></span>()</code>
+<div class="block">Gets the split of parameters between the underlying parameterized data.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#getSensitivity--">getSensitivity</a></span>()</code>
 <div class="block">Gets the parameter sensitivity values.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#mapSensitivity-java.util.function.DoubleUnaryOperator-">mapSensitivity</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/DoubleUnaryOperator.html?is-external=true" title="class or interface in java.util.function">DoubleUnaryOperator</a>&nbsp;operator)</code>
 <div class="block">Returns an instance with the specified operation applied to the sensitivity values.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.Meta.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#meta--">meta</a></span>()</code>
 <div class="block">The meta-bean for <code>CurrencyParameterSensitivity</code>.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.Meta.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#metaBean--">metaBean</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#multipliedBy-double-">multipliedBy</a></span>(double&nbsp;factor)</code>
 <div class="block">Returns an instance with the sensitivity values multiplied by the specified factor.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#of-com.opengamma.strata.data.MarketDataName-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">of</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketDataName.html" title="class in com.opengamma.strata.data">MarketDataName</a>&lt;?&gt;&nbsp;marketDataName,
   <a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
@@ -255,7 +273,7 @@ implements <a href="../../../../../com/opengamma/strata/basics/currency/FxConver
 <div class="block">Obtains an instance from the market data name, currency and sensitivity.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#of-com.opengamma.strata.data.MarketDataName-java.util.List-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-">of</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketDataName.html" title="class in com.opengamma.strata.data">MarketDataName</a>&lt;?&gt;&nbsp;marketDataName,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a>&gt;&nbsp;parameterMetadata,
@@ -264,31 +282,59 @@ implements <a href="../../../../../com/opengamma/strata/basics/currency/FxConver
 <div class="block">Obtains an instance from the market data name, metadata, currency and sensitivity.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i18" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#of-com.opengamma.strata.data.MarketDataName-java.util.List-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-java.util.List-">of</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketDataName.html" title="class in com.opengamma.strata.data">MarketDataName</a>&lt;?&gt;&nbsp;marketDataName,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a>&gt;&nbsp;parameterMetadata,
+  <a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+  <a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivity,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/param/ParameterSize.html" title="class in com.opengamma.strata.market.param">ParameterSize</a>&gt;&nbsp;parameterSplit)</code>
+<div class="block">Obtains an instance from the market data name, metadata, currency, sensitivity and parameter split.</div>
+</td>
+</tr>
+<tr id="i19" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#plus-com.opengamma.strata.market.param.CurrencyParameterSensitivity-">plus</a></span>(<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a>&nbsp;otherSensitivty)</code>
+<div class="block">Returns an instance with the specified sensitivity array added to the array in this instance.</div>
+</td>
+</tr>
+<tr id="i20" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#plus-com.opengamma.strata.collect.array.DoubleArray-">plus</a></span>(<a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;otherSensitivty)</code>
+<div class="block">Returns an instance with the specified sensitivity array added to the array in this instance.</div>
+</td>
+</tr>
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>&lt;R&gt;&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Property.html?is-external=true" title="class or interface in org.joda.beans">Property</a>&lt;R&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#property-java.lang.String-">property</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#propertyNames--">propertyNames</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i23" class="rowColor">
+<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#split--">split</a></span>()</code>
+<div class="block">Splits this sensitivity instance.</div>
+</td>
+</tr>
+<tr id="i24" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#total--">total</a></span>()</code>
 <div class="block">Returns the total of the sensitivity values.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/UnitParameterSensitivity.html" title="class in com.opengamma.strata.market.param">UnitParameterSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#toUnitParameterSensitivity--">toUnitParameterSensitivity</a></span>()</code>
 <div class="block">Converts this instance to the equivalent unit sensitivity.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#withSensitivity-com.opengamma.strata.collect.array.DoubleArray-">withSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivity)</code>
 <div class="block">Returns an instance with new parameter sensitivity values.</div>
@@ -363,6 +409,58 @@ implements <a href="../../../../../com/opengamma/strata/basics/currency/FxConver
 <dd><code>sensitivity</code> - the sensitivity values, one for each parameter</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the sensitivity object</dd>
+</dl>
+</li>
+</ul>
+<a name="of-com.opengamma.strata.data.MarketDataName-java.util.List-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.collect.array.DoubleArray-java.util.List-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>of</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/data/MarketDataName.html" title="class in com.opengamma.strata.data">MarketDataName</a>&lt;?&gt;&nbsp;marketDataName,
+                                              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../com/opengamma/strata/market/param/ParameterMetadata.html" title="interface in com.opengamma.strata.market.param">ParameterMetadata</a>&gt;&nbsp;parameterMetadata,
+                                              <a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+                                              <a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;sensitivity,
+                                              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/param/ParameterSize.html" title="class in com.opengamma.strata.market.param">ParameterSize</a>&gt;&nbsp;parameterSplit)</pre>
+<div class="block">Obtains an instance from the market data name, metadata, currency, sensitivity and parameter split.
+ <p>
+ The market data name identifies the <a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param"><code>ParameterizedData</code></a> instance that was queried.
+ The parameter metadata provides information on each parameter.
+ The size of the parameter metadata list must match the size of the sensitivity array.
+ <p>
+ The parameter split allows the sensitivity to represent the split between two or more
+ underlying <a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param"><code>ParameterizedData</code></a> instances. The sum of the parameters in the split
+ must equal the size of the sensitivity array, and each name must be unique.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>marketDataName</code> - the name of the market data that the sensitivity refers to</dd>
+<dd><code>parameterMetadata</code> - the parameter metadata</dd>
+<dd><code>currency</code> - the currency of the sensitivity</dd>
+<dd><code>sensitivity</code> - the sensitivity values, one for each parameter</dd>
+<dd><code>parameterSplit</code> - the split between the underlying <code>ParameterizedData</code> instances</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the sensitivity object</dd>
+</dl>
+</li>
+</ul>
+<a name="combine-com.opengamma.strata.data.MarketDataName-com.opengamma.strata.market.param.CurrencyParameterSensitivity...-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>combine</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a>&nbsp;combine(<a href="../../../../../com/opengamma/strata/data/MarketDataName.html" title="class in com.opengamma.strata.data">MarketDataName</a>&lt;?&gt;&nbsp;marketDataName,
+                                                   <a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a>...&nbsp;sensitivities)</pre>
+<div class="block">Combines two or more instances to form a single sensitivity instance.
+ <p>
+ The result will store information about the separate instances allowing it to be <a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#split--"><code>split()</code></a> later.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>marketDataName</code> - the combined name of the market data that the sensitivity refers to</dd>
+<dd><code>sensitivities</code> - the sensitivity instances to combine, two or more</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the combined sensitivity object</dd>
 </dl>
 </li>
 </ul>
@@ -496,6 +594,66 @@ implements <a href="../../../../../com/opengamma/strata/basics/currency/FxConver
 <dd><code>sensitivity</code> - the new sensitivity values</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an instance based on this one, with the specified sensitivity values</dd>
+</dl>
+</li>
+</ul>
+<a name="plus-com.opengamma.strata.collect.array.DoubleArray-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>plus</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a>&nbsp;plus(<a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;otherSensitivty)</pre>
+<div class="block">Returns an instance with the specified sensitivity array added to the array in this instance.
+ <p>
+ The specified array must match the size of the array in this instance.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>otherSensitivty</code> - the other parameter sensitivity</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>an instance based on this one, with the other instance added</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the market data name, metadata or parameter split differs</dd>
+</dl>
+</li>
+</ul>
+<a name="plus-com.opengamma.strata.market.param.CurrencyParameterSensitivity-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>plus</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a>&nbsp;plus(<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a>&nbsp;otherSensitivty)</pre>
+<div class="block">Returns an instance with the specified sensitivity array added to the array in this instance.
+ <p>
+ The specified instance must have the same name, metadata, currency and parameter split as this instance.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>otherSensitivty</code> - the other parameter sensitivity</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>an instance based on this one, with the other instance added</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the market data name, metadata or parameter split differs</dd>
+</dl>
+</li>
+</ul>
+<a name="split--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>split</h4>
+<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a>&gt;&nbsp;split()</pre>
+<div class="block">Splits this sensitivity instance.
+ <p>
+ A single sensitivity instance may be based on more than one underlying <a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param"><code>ParameterizedData</code></a>,
+ as represented by <a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#getParameterSplit--"><code>getParameterSplit()</code></a>. Calling this method returns a list
+ where the sensitivity of this instance has been split into multiple instances as per
+ the parameter split definition. In the common case where there is a single underlying
+ <code>ParameterizedData</code>, the list will be of size one containing this instance.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this sensitivity split as per the defined parameter split, ordered as per this instance</dd>
 </dl>
 </li>
 </ul>
@@ -641,6 +799,25 @@ implements <a href="../../../../../com/opengamma/strata/basics/currency/FxConver
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value of the property, not null</dd>
+</dl>
+</li>
+</ul>
+<a name="getParameterSplit--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getParameterSplit</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/param/ParameterSize.html" title="class in com.opengamma.strata.market.param">ParameterSize</a>&gt;&gt;&nbsp;getParameterSplit()</pre>
+<div class="block">Gets the split of parameters between the underlying parameterized data.
+ <p>
+ A single <code>CurrencyParameterSensitivity</code> represents the sensitivity to a single <a href="../../../../../com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param"><code>ParameterizedData</code></a> instance.
+ However, a <code>ParameterizedData</code> instance can itself be backed by more than one underlying instance.
+ For example, a curve formed from two underlying curves.
+ This list is present, it represents how to split this sensitivity between the underlying instances.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the optional value of the property, not null</dd>
 </dl>
 </li>
 </ul>

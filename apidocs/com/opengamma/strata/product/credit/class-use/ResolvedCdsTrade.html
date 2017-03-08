@@ -84,9 +84,15 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.credit">com.opengamma.strata.pricer.credit</a></td>
+<td class="colLast">
+<div class="block">Calculators for credit instruments, such as Credit Default Swap (CDS).</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.credit">com.opengamma.strata.product.credit</a></td>
 <td class="colLast">
-<div class="block">Entity objects describing credit products.</div>
+<div class="block">Entity objects describing Credit Default Swap (CDS) and CDS index.</div>
 </td>
 </tr>
 </tbody>
@@ -94,6 +100,303 @@
 </li>
 <li class="blockList">
 <ul class="blockList">
+<li class="blockList"><a name="com.opengamma.strata.pricer.credit">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a> in <a href="../../../../../../com/opengamma/strata/pricer/credit/package-summary.html">com.opengamma.strata.pricer.credit</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/pricer/credit/package-summary.html">com.opengamma.strata.pricer.credit</a> with parameters of type <a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SpreadSensitivityCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/SpreadSensitivityCalculator.html#bucketedCs01-com.opengamma.strata.product.credit.ResolvedCdsTrade-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">bucketedCs01</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+            <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Computes bucketed CS01 for CDS.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SpreadSensitivityCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/SpreadSensitivityCalculator.html#bucketedCs01-com.opengamma.strata.product.credit.ResolvedCdsTrade-java.util.List-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">bucketedCs01</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+            <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;bucketCds,
+            <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Computes bucketed CS01 for CDS.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><span class="typeNameLabel">SpreadSensitivityCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/SpreadSensitivityCalculator.html#checkCdsBucket-com.opengamma.strata.product.credit.ResolvedCdsTrade-java.util.List-">checkCdsBucket</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;bucketCds)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><span class="typeNameLabel">CdsMarketQuoteConverter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/CdsMarketQuoteConverter.html#cleanPrice-com.opengamma.strata.product.credit.ResolvedCdsTrade-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">cleanPrice</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+          <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+          <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Computes the market clean price.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsTradePricer.html#expectedLoss-com.opengamma.strata.product.credit.ResolvedCdsTrade-com.opengamma.strata.pricer.credit.CreditRatesProvider-">expectedLoss</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+            <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider)</code>
+<div class="block">Calculates the expected loss of the underlying product.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/credit/JumpToDefault.html" title="class in com.opengamma.strata.pricer.credit">JumpToDefault</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsTradePricer.html#jumpToDefault-com.opengamma.strata.product.credit.ResolvedCdsTrade-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">jumpToDefault</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+             <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+             <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the jump-to-default of the underlying product.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SpreadSensitivityCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/SpreadSensitivityCalculator.html#parallelCs01-com.opengamma.strata.product.credit.ResolvedCdsTrade-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">parallelCs01</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+            <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Computes parallel CS01 for CDS.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract <a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SpreadSensitivityCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/SpreadSensitivityCalculator.html#parallelCs01-com.opengamma.strata.product.credit.ResolvedCdsTrade-java.util.List-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">parallelCs01</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+            <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;bucketCds,
+            <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Computes parallel CS01 for CDS.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">AnalyticSpreadSensitivityCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/AnalyticSpreadSensitivityCalculator.html#parallelCs01-com.opengamma.strata.product.credit.ResolvedCdsTrade-java.util.List-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">parallelCs01</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+            <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;bucketCds,
+            <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FiniteDifferenceSpreadSensitivityCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/FiniteDifferenceSpreadSensitivityCalculator.html#parallelCs01-com.opengamma.strata.product.credit.ResolvedCdsTrade-java.util.List-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">parallelCs01</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+            <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;bucketCds,
+            <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsTradePricer.html#parSpread-com.opengamma.strata.product.credit.ResolvedCdsTrade-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">parSpread</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+         <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+         <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the par spread of the underlying product.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsTradePricer.html#parSpreadSensitivity-com.opengamma.strata.product.credit.ResolvedCdsTrade-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">parSpreadSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+                    <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+                    <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the par spread sensitivity of the underling product.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><span class="typeNameLabel">CdsMarketQuoteConverter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/CdsMarketQuoteConverter.html#pointsUpfront-com.opengamma.strata.product.credit.ResolvedCdsTrade-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">pointsUpfront</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+             <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+             <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Computes the points upfront.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/CdsQuote.html" title="class in com.opengamma.strata.product.credit">CdsQuote</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CdsMarketQuoteConverter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/CdsMarketQuoteConverter.html#pointsUpFrontFromQuotedSpread-com.opengamma.strata.product.credit.ResolvedCdsTrade-com.opengamma.strata.product.credit.CdsQuote-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">pointsUpFrontFromQuotedSpread</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+                             <a href="../../../../../../com/opengamma/strata/product/credit/CdsQuote.html" title="class in com.opengamma.strata.product.credit">CdsQuote</a>&nbsp;quote,
+                             <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+                             <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Converts quoted spread to points upfront.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsTradePricer.html#presentValue-com.opengamma.strata.product.credit.ResolvedCdsTrade-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.pricer.common.PriceType-com.opengamma.strata.basics.ReferenceData-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+            <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+            <a href="../../../../../../com/opengamma/strata/pricer/common/PriceType.html" title="enum in com.opengamma.strata.pricer.common">PriceType</a>&nbsp;priceType,
+            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the present value of the trade.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsTradePricer.html#presentValueOnSettle-com.opengamma.strata.product.credit.ResolvedCdsTrade-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.pricer.common.PriceType-com.opengamma.strata.basics.ReferenceData-">presentValueOnSettle</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+                    <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+                    <a href="../../../../../../com/opengamma/strata/pricer/common/PriceType.html" title="enum in com.opengamma.strata.pricer.common">PriceType</a>&nbsp;priceType,
+                    <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the present value of the underlying product.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsTradePricer.html#presentValueOnSettleSensitivity-com.opengamma.strata.product.credit.ResolvedCdsTrade-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">presentValueOnSettleSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+                               <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+                               <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the present value sensitivity of the underlying product.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsTradePricer.html#presentValueSensitivity-com.opengamma.strata.product.credit.ResolvedCdsTrade-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">presentValueSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+                       <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+                       <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the present value sensitivity of the trade.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsTradePricer.html#price-com.opengamma.strata.product.credit.ResolvedCdsTrade-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.pricer.common.PriceType-com.opengamma.strata.basics.ReferenceData-">price</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+     <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+     <a href="../../../../../../com/opengamma/strata/pricer/common/PriceType.html" title="enum in com.opengamma.strata.pricer.common">PriceType</a>&nbsp;priceType,
+     <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the price of the underlying product, which is the present value per unit notional.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsTradePricer.html#priceSensitivity-com.opengamma.strata.product.credit.ResolvedCdsTrade-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">priceSensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+                <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+                <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the price sensitivity of the underlying product.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/CdsQuote.html" title="class in com.opengamma.strata.product.credit">CdsQuote</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CdsMarketQuoteConverter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/CdsMarketQuoteConverter.html#quotedSpreadFromPointsUpfront-com.opengamma.strata.product.credit.ResolvedCdsTrade-com.opengamma.strata.product.credit.CdsQuote-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">quotedSpreadFromPointsUpfront</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+                             <a href="../../../../../../com/opengamma/strata/product/credit/CdsQuote.html" title="class in com.opengamma.strata.product.credit">CdsQuote</a>&nbsp;quote,
+                             <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+                             <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Converts points upfront to quoted spread.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsTradePricer.html#recovery01OnSettle-com.opengamma.strata.product.credit.ResolvedCdsTrade-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">recovery01OnSettle</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+                  <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+                  <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the recovery01 of the underlying product.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCdsTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCdsTradePricer.html#rpv01OnSettle-com.opengamma.strata.product.credit.ResolvedCdsTrade-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.pricer.common.PriceType-com.opengamma.strata.basics.ReferenceData-">rpv01OnSettle</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+             <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+             <a href="../../../../../../com/opengamma/strata/pricer/common/PriceType.html" title="enum in com.opengamma.strata.pricer.common">PriceType</a>&nbsp;priceType,
+             <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calculates the risky PV01 of the underlying product.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Method parameters in <a href="../../../../../../com/opengamma/strata/pricer/credit/package-summary.html">com.opengamma.strata.pricer.credit</a> with type arguments of type <a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SpreadSensitivityCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/SpreadSensitivityCalculator.html#bucketedCs01-com.opengamma.strata.product.credit.ResolvedCdsTrade-java.util.List-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">bucketedCs01</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+            <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;bucketCds,
+            <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Computes bucketed CS01 for CDS.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/NodalCurve.html" title="interface in com.opengamma.strata.market.curve">NodalCurve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SimpleCreditCurveCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/SimpleCreditCurveCalibrator.html#calibrate-java.util.List-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.curve.CurveName-java.time.LocalDate-com.opengamma.strata.pricer.credit.CreditDiscountFactors-com.opengamma.strata.pricer.credit.RecoveryRates-com.opengamma.strata.basics.ReferenceData-">calibrate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;calibrationCDSs,
+         <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;premiums,
+         <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;pointsUpfront,
+         <a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&nbsp;name,
+         <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+         <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditDiscountFactors.html" title="interface in com.opengamma.strata.pricer.credit">CreditDiscountFactors</a>&nbsp;discountFactors,
+         <a href="../../../../../../com/opengamma/strata/pricer/credit/RecoveryRates.html" title="interface in com.opengamma.strata.pricer.credit">RecoveryRates</a>&nbsp;recoveryRates,
+         <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract <a href="../../../../../../com/opengamma/strata/market/curve/NodalCurve.html" title="interface in com.opengamma.strata.market.curve">NodalCurve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCompliantCreditCurveCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/IsdaCompliantCreditCurveCalibrator.html#calibrate-java.util.List-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.curve.CurveName-java.time.LocalDate-com.opengamma.strata.pricer.credit.CreditDiscountFactors-com.opengamma.strata.pricer.credit.RecoveryRates-com.opengamma.strata.basics.ReferenceData-">calibrate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;calibrationCDSs,
+         <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;flactionalSpreads,
+         <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;pointsUpfront,
+         <a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&nbsp;name,
+         <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+         <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditDiscountFactors.html" title="interface in com.opengamma.strata.pricer.credit">CreditDiscountFactors</a>&nbsp;discountFactors,
+         <a href="../../../../../../com/opengamma/strata/pricer/credit/RecoveryRates.html" title="interface in com.opengamma.strata.pricer.credit">RecoveryRates</a>&nbsp;recoveryRates,
+         <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calibrate the ISDA compliant credit curve to points upfront and fractional spread.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/NodalCurve.html" title="interface in com.opengamma.strata.market.curve">NodalCurve</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FastCreditCurveCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/FastCreditCurveCalibrator.html#calibrate-java.util.List-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.collect.array.DoubleArray-com.opengamma.strata.market.curve.CurveName-java.time.LocalDate-com.opengamma.strata.pricer.credit.CreditDiscountFactors-com.opengamma.strata.pricer.credit.RecoveryRates-com.opengamma.strata.basics.ReferenceData-">calibrate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;calibrationCDSs,
+         <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;flactionalSpreads,
+         <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;pointsUpfront,
+         <a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&nbsp;name,
+         <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
+         <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditDiscountFactors.html" title="interface in com.opengamma.strata.pricer.credit">CreditDiscountFactors</a>&nbsp;discountFactors,
+         <a href="../../../../../../com/opengamma/strata/pricer/credit/RecoveryRates.html" title="interface in com.opengamma.strata.pricer.credit">RecoveryRates</a>&nbsp;recoveryRates,
+         <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><span class="typeNameLabel">SpreadSensitivityCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/SpreadSensitivityCalculator.html#checkCdsBucket-com.opengamma.strata.product.credit.ResolvedCdsTrade-java.util.List-">checkCdsBucket</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;bucketCds)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SpreadSensitivityCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/SpreadSensitivityCalculator.html#impliedSpread-java.util.List-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">impliedSpread</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;bucketCds,
+             <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+             <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract <a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SpreadSensitivityCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/SpreadSensitivityCalculator.html#parallelCs01-com.opengamma.strata.product.credit.ResolvedCdsTrade-java.util.List-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">parallelCs01</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+            <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;bucketCds,
+            <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Computes parallel CS01 for CDS.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">AnalyticSpreadSensitivityCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/AnalyticSpreadSensitivityCalculator.html#parallelCs01-com.opengamma.strata.product.credit.ResolvedCdsTrade-java.util.List-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">parallelCs01</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+            <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;bucketCds,
+            <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FiniteDifferenceSpreadSensitivityCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/FiniteDifferenceSpreadSensitivityCalculator.html#parallelCs01-com.opengamma.strata.product.credit.ResolvedCdsTrade-java.util.List-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">parallelCs01</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+            <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;bucketCds,
+            <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/CdsQuote.html" title="class in com.opengamma.strata.product.credit">CdsQuote</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">CdsMarketQuoteConverter.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/CdsMarketQuoteConverter.html#quotesFromParSpread-java.util.List-java.util.List-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.product.credit.type.CdsQuoteConvention-com.opengamma.strata.basics.ReferenceData-">quotesFromParSpread</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;trades,
+                   <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/CdsQuote.html" title="class in com.opengamma.strata.product.credit">CdsQuote</a>&gt;&nbsp;quotes,
+                   <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+                   <a href="../../../../../../com/opengamma/strata/product/credit/type/CdsQuoteConvention.html" title="enum in com.opengamma.strata.product.credit.type">CdsQuoteConvention</a>&nbsp;targetConvention,
+                   <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">The par spread quotes are converted to points upfronts or quoted spreads.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.product.credit">
 <!--   -->
 </a>
@@ -110,15 +413,14 @@
 <td class="colLast"><span class="typeNameLabel">ResolvedCdsTrade.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.Builder.html#build--">build</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCdsTrade.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html#of-com.opengamma.strata.product.TradeInfo-com.opengamma.strata.product.credit.ResolvedCds-">of</a></span>(<a href="../../../../../../com/opengamma/strata/product/TradeInfo.html" title="class in com.opengamma.strata.product">TradeInfo</a>&nbsp;info,
-  <a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a>&nbsp;product)</code>
-<div class="block">Obtains an instance of a resolved CDS trade.</div>
-</td>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CdsTrade.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/CdsTrade.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CdsTrade.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/CdsTrade.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">ResolvedCdsIndexTrade.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsIndexTrade.html#toSingleNameCds--">toSingleNameCds</a></span>()</code>
+<div class="block">Reduce this instance to <code>ResolvedCdsTrade</code>.</div>
+</td>
 </tr>
 </tbody>
 </table>

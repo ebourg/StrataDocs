@@ -80,6 +80,35 @@
 <div class="contentContainer">
 <ul class="blockList">
 <li class="blockList">
+<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Interface Summary table, listing interfaces, and an explanation">
+<caption><span>Interface Summary</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Interface</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/CreditDiscountFactors.html" title="interface in com.opengamma.strata.pricer.credit">CreditDiscountFactors</a></td>
+<td class="colLast">
+<div class="block">Provides access to discount factors for a single currency.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a></td>
+<td class="colLast">
+<div class="block">The rates provider, used to calculate analytic measures.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/RecoveryRates.html" title="interface in com.opengamma.strata.pricer.credit">RecoveryRates</a></td>
+<td class="colLast">
+<div class="block">Recovery rates.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList">
 <table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Class Summary table, listing classes, and an explanation">
 <caption><span>Class Summary</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -88,109 +117,165 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/CdsRecoveryRate.html" title="class in com.opengamma.strata.pricer.credit">CdsRecoveryRate</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/AnalyticSpreadSensitivityCalculator.html" title="class in com.opengamma.strata.pricer.credit">AnalyticSpreadSensitivityCalculator</a></td>
 <td class="colLast">
-<div class="block">The expected recovery rate for a CDS product based upon the underlying issue or index.</div>
+<div class="block">Analytic spread sensitivity calculator.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/CdsRecoveryRate.Meta.html" title="class in com.opengamma.strata.pricer.credit">CdsRecoveryRate.Meta</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/CdsMarketQuoteConverter.html" title="class in com.opengamma.strata.pricer.credit">CdsMarketQuoteConverter</a></td>
 <td class="colLast">
-<div class="block">The meta-bean for <code>CdsRecoveryRate</code>.</div>
+<div class="block">The market quote converter for credit default swaps.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaCdsPricer.html" title="class in com.opengamma.strata.pricer.credit">IsdaCdsPricer</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/ConstantRecoveryRates.html" title="class in com.opengamma.strata.pricer.credit">ConstantRecoveryRates</a></td>
 <td class="colLast">
-<div class="block">Pricer for for CDS products using the ISDA methodology.</div>
+<div class="block">The constant recovery rate.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaCreditCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaCreditCurveInputs</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/ConstantRecoveryRates.Meta.html" title="class in com.opengamma.strata.pricer.credit">ConstantRecoveryRates.Meta</a></td>
 <td class="colLast">
-<div class="block">The par rates used when calibrating an ISDA credit curve.</div>
+<div class="block">The meta-bean for <code>ConstantRecoveryRates</code>.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaCreditCurveInputs.Meta.html" title="class in com.opengamma.strata.pricer.credit">IsdaCreditCurveInputs.Meta</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/CreditCurveZeroRateSensitivity.html" title="class in com.opengamma.strata.pricer.credit">CreditCurveZeroRateSensitivity</a></td>
 <td class="colLast">
-<div class="block">The meta-bean for <code>IsdaCreditCurveInputs</code>.</div>
+<div class="block">Point sensitivity to the zero hazard rate curve.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaIndexCreditCurveInputsId.html" title="class in com.opengamma.strata.pricer.credit">IsdaIndexCreditCurveInputsId</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/CreditCurveZeroRateSensitivity.Meta.html" title="class in com.opengamma.strata.pricer.credit">CreditCurveZeroRateSensitivity.Meta</a></td>
 <td class="colLast">
-<div class="block">Market data ID for a set of par rates to be used in the ISDA credit model's credit curve
- calibration for an index.</div>
+<div class="block">The meta-bean for <code>CreditCurveZeroRateSensitivity</code>.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaIndexCreditCurveInputsId.Meta.html" title="class in com.opengamma.strata.pricer.credit">IsdaIndexCreditCurveInputsId.Meta</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/DoublesScheduleGenerator.html" title="class in com.opengamma.strata.pricer.credit">DoublesScheduleGenerator</a></td>
 <td class="colLast">
-<div class="block">The meta-bean for <code>IsdaIndexCreditCurveInputsId</code>.</div>
+<div class="block">The Doubles schedule generator.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaIndexRecoveryRateId.html" title="class in com.opengamma.strata.pricer.credit">IsdaIndexRecoveryRateId</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/FastCreditCurveCalibrator.html" title="class in com.opengamma.strata.pricer.credit">FastCreditCurveCalibrator</a></td>
 <td class="colLast">
-<div class="block">Market data ID for a recovery rate to be used in the ISDA credit model's pricing for an index.</div>
+<div class="block">Fast credit curve calibrator.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaIndexRecoveryRateId.Meta.html" title="class in com.opengamma.strata.pricer.credit">IsdaIndexRecoveryRateId.Meta</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/FiniteDifferenceSpreadSensitivityCalculator.html" title="class in com.opengamma.strata.pricer.credit">FiniteDifferenceSpreadSensitivityCalculator</a></td>
 <td class="colLast">
-<div class="block">The meta-bean for <code>IsdaIndexRecoveryRateId</code>.</div>
+<div class="block">Finite difference spread sensitivity calculator.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaSingleNameCreditCurveInputsId.html" title="class in com.opengamma.strata.pricer.credit">IsdaSingleNameCreditCurveInputsId</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/ImmutableCreditRatesProvider.html" title="class in com.opengamma.strata.pricer.credit">ImmutableCreditRatesProvider</a></td>
 <td class="colLast">
-<div class="block">Market data ID for a set of par rates to be used in the ISDA credit model's credit curve
- calibration for a single-name.</div>
+<div class="block">The immutable rates provider, used to calculate analytic measures.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaSingleNameCreditCurveInputsId.Meta.html" title="class in com.opengamma.strata.pricer.credit">IsdaSingleNameCreditCurveInputsId.Meta</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/ImmutableCreditRatesProvider.Builder.html" title="class in com.opengamma.strata.pricer.credit">ImmutableCreditRatesProvider.Builder</a></td>
 <td class="colLast">
-<div class="block">The meta-bean for <code>IsdaSingleNameCreditCurveInputsId</code>.</div>
+<div class="block">The bean-builder for <code>ImmutableCreditRatesProvider</code>.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaSingleNameRecoveryRateId.html" title="class in com.opengamma.strata.pricer.credit">IsdaSingleNameRecoveryRateId</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/ImmutableCreditRatesProvider.Meta.html" title="class in com.opengamma.strata.pricer.credit">ImmutableCreditRatesProvider.Meta</a></td>
 <td class="colLast">
-<div class="block">Market data ID for a recovery rate to be used in the ISDA credit model's
- pricing for a single-name.</div>
+<div class="block">The meta-bean for <code>ImmutableCreditRatesProvider</code>.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaSingleNameRecoveryRateId.Meta.html" title="class in com.opengamma.strata.pricer.credit">IsdaSingleNameRecoveryRateId.Meta</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaCdsProductPricer.html" title="class in com.opengamma.strata.pricer.credit">IsdaCdsProductPricer</a></td>
 <td class="colLast">
-<div class="block">The meta-bean for <code>IsdaSingleNameRecoveryRateId</code>.</div>
+<div class="block">Pricer for single-name credit default swaps (CDS) based on ISDA standard model.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaYieldCurveInputs.html" title="class in com.opengamma.strata.pricer.credit">IsdaYieldCurveInputs</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaCdsTradePricer.html" title="class in com.opengamma.strata.pricer.credit">IsdaCdsTradePricer</a></td>
 <td class="colLast">
-<div class="block">The par rates used when calibrating an ISDA yield curve.</div>
+<div class="block">Pricer for single-name credit default swaps (CDS) trade based on ISDA standard model.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaYieldCurveInputs.Meta.html" title="class in com.opengamma.strata.pricer.credit">IsdaYieldCurveInputs.Meta</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaCompliantCreditCurveCalibrator.html" title="class in com.opengamma.strata.pricer.credit">IsdaCompliantCreditCurveCalibrator</a></td>
 <td class="colLast">
-<div class="block">The meta-bean for <code>IsdaYieldCurveInputs</code>.</div>
+<div class="block">ISDA compliant credit curve calibrator.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaYieldCurveInputsId.html" title="class in com.opengamma.strata.pricer.credit">IsdaYieldCurveInputsId</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaCompliantDiscountCurveCalibrator.html" title="class in com.opengamma.strata.pricer.credit">IsdaCompliantDiscountCurveCalibrator</a></td>
 <td class="colLast">
-<div class="block">Market data ID identifying a set of par rates to be used in the ISDA credit model's yield
- curve calibration for a currency.</div>
+<div class="block">ISDA compliant discount curve calibrator.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaYieldCurveInputsId.Meta.html" title="class in com.opengamma.strata.pricer.credit">IsdaYieldCurveInputsId.Meta</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaCompliantIndexCurveCalibrator.html" title="class in com.opengamma.strata.pricer.credit">IsdaCompliantIndexCurveCalibrator</a></td>
 <td class="colLast">
-<div class="block">The meta-bean for <code>IsdaYieldCurveInputsId</code>.</div>
+<div class="block">ISDA compliant index curve calibrator.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaCreditDiscountFactors.html" title="class in com.opengamma.strata.pricer.credit">IsdaCreditDiscountFactors</a></td>
+<td class="colLast">
+<div class="block">ISDA compliant zero rate discount factors.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaCreditDiscountFactors.Meta.html" title="class in com.opengamma.strata.pricer.credit">IsdaCreditDiscountFactors.Meta</a></td>
+<td class="colLast">
+<div class="block">The meta-bean for <code>IsdaCreditDiscountFactors</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaHomogenousCdsIndexProductPricer.html" title="class in com.opengamma.strata.pricer.credit">IsdaHomogenousCdsIndexProductPricer</a></td>
+<td class="colLast">
+<div class="block">Pricer for CDS portfolio index based on ISDA standard model.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaHomogenousCdsIndexTradePricer.html" title="class in com.opengamma.strata.pricer.credit">IsdaHomogenousCdsIndexTradePricer</a></td>
+<td class="colLast">
+<div class="block">Pricer for CDS portfolio index trade based on ISDA standard model.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/JumpToDefault.html" title="class in com.opengamma.strata.pricer.credit">JumpToDefault</a></td>
+<td class="colLast">
+<div class="block">The result of calculating Jump-To-Default.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/JumpToDefault.Meta.html" title="class in com.opengamma.strata.pricer.credit">JumpToDefault.Meta</a></td>
+<td class="colLast">
+<div class="block">The meta-bean for <code>JumpToDefault</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/LegalEntitySurvivalProbabilities.html" title="class in com.opengamma.strata.pricer.credit">LegalEntitySurvivalProbabilities</a></td>
+<td class="colLast">
+<div class="block">The legal entity survival probabilities.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/LegalEntitySurvivalProbabilities.Meta.html" title="class in com.opengamma.strata.pricer.credit">LegalEntitySurvivalProbabilities.Meta</a></td>
+<td class="colLast">
+<div class="block">The meta-bean for <code>LegalEntitySurvivalProbabilities</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/SimpleCreditCurveCalibrator.html" title="class in com.opengamma.strata.pricer.credit">SimpleCreditCurveCalibrator</a></td>
+<td class="colLast">
+<div class="block">Simple credit curve calibrator.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/SpreadSensitivityCalculator.html" title="class in com.opengamma.strata.pricer.credit">SpreadSensitivityCalculator</a></td>
+<td class="colLast">
+<div class="block">The spread sensitivity calculator.</div>
 </td>
 </tr>
 </tbody>
@@ -205,9 +290,15 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaYieldCurveUnderlyingType.html" title="enum in com.opengamma.strata.pricer.credit">IsdaYieldCurveUnderlyingType</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/AccrualOnDefaultFormula.html" title="enum in com.opengamma.strata.pricer.credit">AccrualOnDefaultFormula</a></td>
 <td class="colLast">
-<div class="block">Enumerates the supported types of underlying instruments on an ISDA yield curve.</div>
+<div class="block">The formula for accrual on default.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/pricer/credit/ArbitrageHandling.html" title="enum in com.opengamma.strata.pricer.credit">ArbitrageHandling</a></td>
+<td class="colLast">
+<div class="block">The formula for accrual on default.</div>
 </td>
 </tr>
 </tbody>
@@ -218,9 +309,7 @@
 <!--   -->
 </a>
 <h2 title="Package com.opengamma.strata.pricer.credit Description">Package com.opengamma.strata.pricer.credit Description</h2>
-<div class="block">Calculators for credit instruments, such as Credit Default Swap (CDS).
- <p>
- <b>This package is currently being reviewed and refactored. Incompatible changes are expected.</b></div>
+<div class="block">Calculators for credit instruments, such as Credit Default Swap (CDS).</div>
 </div>
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
 <div class="bottomNav"><a name="navbar.bottom">

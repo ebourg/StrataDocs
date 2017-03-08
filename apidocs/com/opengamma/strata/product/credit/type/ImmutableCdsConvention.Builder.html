@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -151,7 +151,7 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#businessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">businessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</code>
-<div class="block">Sets the business day adjustment.</div>
+<div class="block">Sets the business day adjustment to apply to payment schedule dates.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -163,80 +163,98 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#dayCount-com.opengamma.strata.basics.date.DayCount-">dayCount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</code>
-<div class="block">Sets the day count convention.</div>
+<div class="block">Sets the day count convention applicable.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#endDateBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">endDateBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;endDateBusinessDayAdjustment)</code>
+<div class="block">Sets the business day adjustment to apply to the end date, optional with defaulting getter.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#get-java.lang.String-">get</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#name-java.lang.String-">name</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
-<div class="block">Sets the convention name, such as 'USD-European'.</div>
-</td>
-</tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#payAccruedOnDefault-boolean-">payAccruedOnDefault</a></span>(boolean&nbsp;payAccruedOnDefault)</code>
-<div class="block">Sets whether the accrued premium is paid in the event of a default.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#name-java.lang.String-">name</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Sets the convention name.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#paymentFrequency-com.opengamma.strata.basics.schedule.Frequency-">paymentFrequency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;paymentFrequency)</code>
-<div class="block">Sets the payment frequency.</div>
+<div class="block">Sets the periodic frequency of payments.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#rollConvention-com.opengamma.strata.basics.schedule.RollConvention-">rollConvention</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/RollConvention.html" title="interface in com.opengamma.strata.basics.schedule">RollConvention</a>&nbsp;rollConvention)</code>
-<div class="block">Sets the roll convention.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#paymentOnDefault-com.opengamma.strata.product.credit.PaymentOnDefault-">paymentOnDefault</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/PaymentOnDefault.html" title="enum in com.opengamma.strata.product.credit">PaymentOnDefault</a>&nbsp;paymentOnDefault)</code>
+<div class="block">Sets the payment on default.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#protectionStart-com.opengamma.strata.product.credit.ProtectionStartOfDay-">protectionStart</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ProtectionStartOfDay.html" title="enum in com.opengamma.strata.product.credit">ProtectionStartOfDay</a>&nbsp;protectionStart)</code>
+<div class="block">Sets the protection start of the day.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#rollConvention-com.opengamma.strata.basics.schedule.RollConvention-">rollConvention</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/RollConvention.html" title="interface in com.opengamma.strata.basics.schedule">RollConvention</a>&nbsp;rollConvention)</code>
+<div class="block">Sets the convention defining how to roll dates, optional with defaulting getter.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#set-org.joda.beans.MetaProperty-java.lang.Object-">set</a></span>(<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;?&gt;&nbsp;property,
    <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#set-java.lang.String-java.lang.Object-">set</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName,
    <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;newValue)</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#setAll-java.util.Map-">setAll</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,? extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;propertyValueMap)</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#setString-org.joda.beans.MetaProperty-java.lang.String-">setString</a></span>(<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;?&gt;&nbsp;property,
          <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#setString-java.lang.String-java.lang.String-">setString</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName,
          <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#settleLagDays-int-">settleLagDays</a></span>(int&nbsp;settleLagDays)</code>
-<div class="block">Sets the settlement lag in days.</div>
-</td>
-</tr>
-<tr id="i15" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#stepInDays-int-">stepInDays</a></span>(int&nbsp;stepInDays)</code>
-<div class="block">Sets the number of step-in days.</div>
-</td>
-</tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#stubConvention-com.opengamma.strata.basics.schedule.StubConvention-">stubConvention</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/StubConvention.html" title="enum in com.opengamma.strata.basics.schedule">StubConvention</a>&nbsp;stubConvention)</code>
-<div class="block">Sets the stub convention.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#settlementDateOffset-com.opengamma.strata.basics.date.DaysAdjustment-">settlementDateOffset</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;settlementDateOffset)</code>
+<div class="block">Sets the number of days between valuation date and settlement date.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#startDateBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">startDateBusinessDayAdjustment</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;startDateBusinessDayAdjustment)</code>
+<div class="block">Sets the business day adjustment to apply to the start date, optional with defaulting getter.</div>
+</td>
+</tr>
+<tr id="i18" class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#stepinDateOffset-com.opengamma.strata.basics.date.DaysAdjustment-">stepinDateOffset</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;stepinDateOffset)</code>
+<div class="block">Sets the number of days between valuation date and step-in date.</div>
+</td>
+</tr>
+<tr id="i19" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#stubConvention-com.opengamma.strata.basics.schedule.StubConvention-">stubConvention</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/StubConvention.html" title="enum in com.opengamma.strata.basics.schedule">StubConvention</a>&nbsp;stubConvention)</code>
+<div class="block">Sets the convention defining how to handle stubs, optional with defaulting getter.</div>
+</td>
+</tr>
+<tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -367,7 +385,7 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <li class="blockList">
 <h4>name</h4>
 <pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a>&nbsp;name(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
-<div class="block">Sets the convention name, such as 'USD-European'.</div>
+<div class="block">Sets the convention name.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - the new value, not null</dd>
@@ -383,7 +401,9 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <li class="blockList">
 <h4>currency</h4>
 <pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a>&nbsp;currency(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency)</pre>
-<div class="block">Sets the currency of the CDS.</div>
+<div class="block">Sets the currency of the CDS.
+ <p>
+ The amounts of the notional are expressed in terms of this currency.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>currency</code> - the new value, not null</dd>
@@ -399,26 +419,12 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <li class="blockList">
 <h4>dayCount</h4>
 <pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a>&nbsp;dayCount(<a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount)</pre>
-<div class="block">Sets the day count convention.</div>
+<div class="block">Sets the day count convention applicable.
+ <p>
+ This is used to convert schedule period dates to a numerical value.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>dayCount</code> - the new value, not null</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>this, for chaining, not null</dd>
-</dl>
-</li>
-</ul>
-<a name="businessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>businessDayAdjustment</h4>
-<pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a>&nbsp;businessDayAdjustment(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</pre>
-<div class="block">Sets the business day adjustment.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>businessDayAdjustment</code> - the new value, not null</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this, for chaining, not null</dd>
 </dl>
@@ -431,7 +437,10 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <li class="blockList">
 <h4>paymentFrequency</h4>
 <pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a>&nbsp;paymentFrequency(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;paymentFrequency)</pre>
-<div class="block">Sets the payment frequency.</div>
+<div class="block">Sets the periodic frequency of payments.
+ <p>
+ Regular payments will be made at the specified periodic frequency.
+ This also defines the accrual periodic frequency.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>paymentFrequency</code> - the new value, not null</dd>
@@ -440,33 +449,65 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 </dl>
 </li>
 </ul>
-<a name="rollConvention-com.opengamma.strata.basics.schedule.RollConvention-">
+<a name="businessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>rollConvention</h4>
-<pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a>&nbsp;rollConvention(<a href="../../../../../../com/opengamma/strata/basics/schedule/RollConvention.html" title="interface in com.opengamma.strata.basics.schedule">RollConvention</a>&nbsp;rollConvention)</pre>
-<div class="block">Sets the roll convention.</div>
+<h4>businessDayAdjustment</h4>
+<pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a>&nbsp;businessDayAdjustment(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</pre>
+<div class="block">Sets the business day adjustment to apply to payment schedule dates.
+ <p>
+ Each date in the calculated schedule is determined without taking into account weekends and holidays.
+ The adjustment specified here is used to convert those dates to valid business days.
+ <p>
+ The start date and end date may have their own business day adjustment rules.
+ If those are not present, then this adjustment is used instead.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>rollConvention</code> - the new value, not null</dd>
+<dd><code>businessDayAdjustment</code> - the new value, not null</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this, for chaining, not null</dd>
 </dl>
 </li>
 </ul>
-<a name="payAccruedOnDefault-boolean-">
+<a name="startDateBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>payAccruedOnDefault</h4>
-<pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a>&nbsp;payAccruedOnDefault(boolean&nbsp;payAccruedOnDefault)</pre>
-<div class="block">Sets whether the accrued premium is paid in the event of a default.</div>
+<h4>startDateBusinessDayAdjustment</h4>
+<pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a>&nbsp;startDateBusinessDayAdjustment(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;startDateBusinessDayAdjustment)</pre>
+<div class="block">Sets the business day adjustment to apply to the start date, optional with defaulting getter.
+ <p>
+ The start date property is an unadjusted date and as such might be a weekend or holiday.
+ The adjustment specified here is used to convert the start date to a valid business day.
+ <p>
+ This will default to the <code>businessDayAdjustment</code> if not specified.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>payAccruedOnDefault</code> - the new value</dd>
+<dd><code>startDateBusinessDayAdjustment</code> - the new value</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this, for chaining, not null</dd>
+</dl>
+</li>
+</ul>
+<a name="endDateBusinessDayAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>endDateBusinessDayAdjustment</h4>
+<pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a>&nbsp;endDateBusinessDayAdjustment(<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;endDateBusinessDayAdjustment)</pre>
+<div class="block">Sets the business day adjustment to apply to the end date, optional with defaulting getter.
+ <p>
+ The end date property is an unadjusted date and as such might be a weekend or holiday.
+ The adjustment specified here is used to convert the end date to a valid business day.
+ <p>
+ This will default to the 'None' if not specified.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>endDateBusinessDayAdjustment</code> - the new value</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this, for chaining, not null</dd>
 </dl>
@@ -479,7 +520,13 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <li class="blockList">
 <h4>stubConvention</h4>
 <pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a>&nbsp;stubConvention(<a href="../../../../../../com/opengamma/strata/basics/schedule/StubConvention.html" title="enum in com.opengamma.strata.basics.schedule">StubConvention</a>&nbsp;stubConvention)</pre>
-<div class="block">Sets the stub convention.</div>
+<div class="block">Sets the convention defining how to handle stubs, optional with defaulting getter.
+ <p>
+ The stub convention is used during schedule construction to determine whether the irregular
+ remaining period occurs at the start or end of the schedule.
+ It also determines whether the irregular period is shorter or longer than the regular period.
+ <p>
+ This will default to 'short initial' if not specified.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>stubConvention</code> - the new value, not null</dd>
@@ -488,37 +535,101 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 </dl>
 </li>
 </ul>
-<a name="stepInDays-int-">
+<a name="rollConvention-com.opengamma.strata.basics.schedule.RollConvention-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>stepInDays</h4>
-<pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a>&nbsp;stepInDays(int&nbsp;stepInDays)</pre>
-<div class="block">Sets the number of step-in days.
+<h4>rollConvention</h4>
+<pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a>&nbsp;rollConvention(<a href="../../../../../../com/opengamma/strata/basics/schedule/RollConvention.html" title="interface in com.opengamma.strata.basics.schedule">RollConvention</a>&nbsp;rollConvention)</pre>
+<div class="block">Sets the convention defining how to roll dates, optional with defaulting getter.
  <p>
- This is the date from which the issuer is deemed to be on risk.</div>
+ The schedule periods are determined at the high level by repeatedly adding
+ the frequency to the start date, or subtracting it from the end date.
+ The roll convention provides the detailed rule to adjust the day-of-month or day-of-week.
+ <p>
+ This will default to 'Day20' if not specified.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>stepInDays</code> - the new value</dd>
+<dd><code>rollConvention</code> - the new value, not null</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this, for chaining, not null</dd>
 </dl>
 </li>
 </ul>
-<a name="settleLagDays-int-">
+<a name="paymentOnDefault-com.opengamma.strata.product.credit.PaymentOnDefault-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>settleLagDays</h4>
-<pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a>&nbsp;settleLagDays(int&nbsp;settleLagDays)</pre>
-<div class="block">Sets the settlement lag in days.
+<h4>paymentOnDefault</h4>
+<pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a>&nbsp;paymentOnDefault(<a href="../../../../../../com/opengamma/strata/product/credit/PaymentOnDefault.html" title="enum in com.opengamma.strata.product.credit">PaymentOnDefault</a>&nbsp;paymentOnDefault)</pre>
+<div class="block">Sets the payment on default.
  <p>
- This is the number of days after the start date that any upfront fees are paid.</div>
+ Whether the accrued premium is paid in the event of a default.
+ <p>
+ This will default to 'accrued premium' if not specified.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>settleLagDays</code> - the new value</dd>
+<dd><code>paymentOnDefault</code> - the new value, not null</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this, for chaining, not null</dd>
+</dl>
+</li>
+</ul>
+<a name="protectionStart-com.opengamma.strata.product.credit.ProtectionStartOfDay-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>protectionStart</h4>
+<pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a>&nbsp;protectionStart(<a href="../../../../../../com/opengamma/strata/product/credit/ProtectionStartOfDay.html" title="enum in com.opengamma.strata.product.credit">ProtectionStartOfDay</a>&nbsp;protectionStart)</pre>
+<div class="block">Sets the protection start of the day.
+ <p>
+ When the protection starts on the start date.
+ <p>
+ This will default to 'beginning of the start day' if not specified.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>protectionStart</code> - the new value, not null</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this, for chaining, not null</dd>
+</dl>
+</li>
+</ul>
+<a name="stepinDateOffset-com.opengamma.strata.basics.date.DaysAdjustment-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>stepinDateOffset</h4>
+<pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a>&nbsp;stepinDateOffset(<a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;stepinDateOffset)</pre>
+<div class="block">Sets the number of days between valuation date and step-in date.
+ <p>
+ The step-in date is also called protection effective date.
+ <p>
+ This will default to '1 calendar day' if not specified.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>stepinDateOffset</code> - the new value, not null</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this, for chaining, not null</dd>
+</dl>
+</li>
+</ul>
+<a name="settlementDateOffset-com.opengamma.strata.basics.date.DaysAdjustment-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>settlementDateOffset</h4>
+<pre>public&nbsp;<a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a>&nbsp;settlementDateOffset(<a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;settlementDateOffset)</pre>
+<div class="block">Sets the number of days between valuation date and settlement date.
+ <p>
+ It is usually 3 business days for standardised CDS contracts.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>settlementDateOffset</code> - the new value, not null</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this, for chaining, not null</dd>
 </dl>

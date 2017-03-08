@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10};
+var methods = {"i0":10,"i1":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -175,6 +175,13 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/sensitivity/MarketQuoteSensitivityCalculator.html#sensitivity-com.opengamma.strata.market.param.CurrencyParameterSensitivities-com.opengamma.strata.pricer.credit.CreditRatesProvider-">sensitivity</a></span>(<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&nbsp;paramSensitivities,
+           <a href="../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;provider)</code>
+<div class="block">Calculates the market quote sensitivities from parameter sensitivity.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/sensitivity/MarketQuoteSensitivityCalculator.html#sensitivity-com.opengamma.strata.market.param.CurrencyParameterSensitivities-com.opengamma.strata.pricer.rate.RatesProvider-">sensitivity</a></span>(<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&nbsp;paramSensitivities,
            <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider)</code>
 <div class="block">Calculates the market quote sensitivities from parameter sensitivity.</div>
@@ -240,7 +247,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <a name="sensitivity-com.opengamma.strata.market.param.CurrencyParameterSensitivities-com.opengamma.strata.pricer.rate.RatesProvider-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>sensitivity</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&nbsp;sensitivity(<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&nbsp;paramSensitivities,
@@ -250,6 +257,27 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>paramSensitivities</code> - the curve parameter sensitivities</dd>
 <dd><code>provider</code> - the rates provider, containing Jacobian calibration information</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the market quote sensitivities</dd>
+</dl>
+</li>
+</ul>
+<a name="sensitivity-com.opengamma.strata.market.param.CurrencyParameterSensitivities-com.opengamma.strata.pricer.credit.CreditRatesProvider-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>sensitivity</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&nbsp;sensitivity(<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&nbsp;paramSensitivities,
+                                                  <a href="../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;provider)</pre>
+<div class="block">Calculates the market quote sensitivities from parameter sensitivity.
+ <p>
+ This calculates the market quote sensitivities of credit derivatives.
+ The input parameter sensitivities must be computed based on the credit rates provider.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>paramSensitivities</code> - the curve parameter sensitivities</dd>
+<dd><code>provider</code> - the credit rates provider, containing Jacobian calibration information</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the market quote sensitivities</dd>
 </dl>

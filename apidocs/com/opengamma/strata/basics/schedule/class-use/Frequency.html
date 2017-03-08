@@ -114,30 +114,34 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#com.opengamma.strata.market.curve">com.opengamma.strata.market.curve</a></td>
+<td class="colLast">
+<div class="block">Definitions of curves.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.bond">com.opengamma.strata.product.bond</a></td>
 <td class="colLast">
 <div class="block">Entity objects describing bonds.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.credit">com.opengamma.strata.product.credit</a></td>
 <td class="colLast">
-<div class="block">Entity objects describing credit products.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="#com.opengamma.strata.product.credit.type">com.opengamma.strata.product.credit.type</a></td>
-<td class="colLast">
-<div class="block">Conventions and templates to aid the construction of credit default swaps.</div>
+<div class="block">Entity objects describing Credit Default Swap (CDS) and CDS index.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.product.credit.type">com.opengamma.strata.product.credit.type</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.swap">com.opengamma.strata.product.swap</a></td>
 <td class="colLast">
 <div class="block">Entity objects describing a swap.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.swap.type">com.opengamma.strata.product.swap.type</a></td>
 <td class="colLast">
 <div class="block">Conventions and templates to aid the construction of rate swaps.</div>
@@ -330,14 +334,14 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
-<td class="colLast"><span class="typeNameLabel">PeriodicSchedule.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/schedule/PeriodicSchedule.html#getFrequency--">getFrequency</a></span>()</code>
-<div class="block">Gets the regular periodic frequency to use.</div>
+<td class="colLast"><span class="typeNameLabel">Schedule.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/schedule/Schedule.html#getFrequency--">getFrequency</a></span>()</code>
+<div class="block">Gets the periodic frequency used when building the schedule.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Schedule.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/schedule/Schedule.html#getFrequency--">getFrequency</a></span>()</code>
-<div class="block">Gets the periodic frequency used when building the schedule.</div>
+<td class="colLast"><span class="typeNameLabel">PeriodicSchedule.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/schedule/PeriodicSchedule.html#getFrequency--">getFrequency</a></span>()</code>
+<div class="block">Gets the regular periodic frequency to use.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -393,13 +397,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">PeriodicSchedule.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/schedule/PeriodicSchedule.Meta.html#frequency--">frequency</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">Schedule.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/schedule/Schedule.Meta.html#frequency--">frequency</a></span>()</code>
 <div class="block">The meta-property for the <code>frequency</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">Schedule.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/schedule/Schedule.Meta.html#frequency--">frequency</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">PeriodicSchedule.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/schedule/PeriodicSchedule.Meta.html#frequency--">frequency</a></span>()</code>
 <div class="block">The meta-property for the <code>frequency</code> property.</div>
 </td>
 </tr>
@@ -419,15 +423,15 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/PeriodicSchedule.Builder.html" title="class in com.opengamma.strata.basics.schedule">PeriodicSchedule.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">PeriodicSchedule.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/schedule/PeriodicSchedule.Builder.html#frequency-com.opengamma.strata.basics.schedule.Frequency-">frequency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;frequency)</code>
-<div class="block">Sets the regular periodic frequency to use.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Schedule.Builder.html" title="class in com.opengamma.strata.basics.schedule">Schedule.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Schedule.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/schedule/Schedule.Builder.html#frequency-com.opengamma.strata.basics.schedule.Frequency-">frequency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;frequency)</code>
 <div class="block">Sets the periodic frequency used when building the schedule.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/PeriodicSchedule.Builder.html" title="class in com.opengamma.strata.basics.schedule">PeriodicSchedule.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">PeriodicSchedule.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/schedule/PeriodicSchedule.Builder.html#frequency-com.opengamma.strata.basics.schedule.Frequency-">frequency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;frequency)</code>
+<div class="block">Sets the regular periodic frequency to use.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -574,6 +578,67 @@
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="com.opengamma.strata.market.curve">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a> in <a href="../../../../../../com/opengamma/strata/market/curve/package-summary.html">com.opengamma.strata.market.curve</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/market/curve/package-summary.html">com.opengamma.strata.market.curve</a> that return <a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SwapIsdaCreditCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/SwapIsdaCreditCurveNode.html#getPaymentFrequency--">getPaymentFrequency</a></span>()</code>
+<div class="block">Gets the periodic frequency of payments, optional with defaulting getter.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/market/curve/package-summary.html">com.opengamma.strata.market.curve</a> that return types with arguments of type <a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SwapIsdaCreditCurveNode.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/SwapIsdaCreditCurveNode.Meta.html#paymentFrequency--">paymentFrequency</a></span>()</code>
+<div class="block">The meta-property for the <code>paymentFrequency</code> property.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/market/curve/package-summary.html">com.opengamma.strata.market.curve</a> with parameters of type <a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/SwapIsdaCreditCurveNode.html" title="class in com.opengamma.strata.market.curve">SwapIsdaCreditCurveNode</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SwapIsdaCreditCurveNode.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/SwapIsdaCreditCurveNode.html#of-com.opengamma.strata.data.ObservableId-com.opengamma.strata.basics.date.DaysAdjustment-com.opengamma.strata.basics.date.BusinessDayAdjustment-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.basics.schedule.Frequency-">of</a></span>(<a href="../../../../../../com/opengamma/strata/data/ObservableId.html" title="interface in com.opengamma.strata.data">ObservableId</a>&nbsp;observableId,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;spotDateOffset,
+  <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment,
+  <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+  <a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;paymentFrequency)</code>
+<div class="block">Returns a curve node for a standard fixed-Ibor swap.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/curve/SwapIsdaCreditCurveNode.Builder.html" title="class in com.opengamma.strata.market.curve">SwapIsdaCreditCurveNode.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SwapIsdaCreditCurveNode.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/SwapIsdaCreditCurveNode.Builder.html#paymentFrequency-com.opengamma.strata.basics.schedule.Frequency-">paymentFrequency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;paymentFrequency)</code>
+<div class="block">Sets the periodic frequency of payments, optional with defaulting getter.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.product.bond">
 <!--   -->
 </a>
@@ -587,13 +652,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedFixedCouponBond.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.html#getFrequency--">getFrequency</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedCapitalIndexedBond.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.html#getFrequency--">getFrequency</a></span>()</code>
 <div class="block">Gets the frequency of the bond payments.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCapitalIndexedBond.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.html#getFrequency--">getFrequency</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedFixedCouponBond.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.html#getFrequency--">getFrequency</a></span>()</code>
 <div class="block">Gets the frequency of the bond payments.</div>
 </td>
 </tr>
@@ -608,13 +673,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedFixedCouponBond.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.Meta.html#frequency--">frequency</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedCapitalIndexedBond.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.Meta.html#frequency--">frequency</a></span>()</code>
 <div class="block">The meta-property for the <code>frequency</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCapitalIndexedBond.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.Meta.html#frequency--">frequency</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedFixedCouponBond.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.Meta.html#frequency--">frequency</a></span>()</code>
 <div class="block">The meta-property for the <code>frequency</code> property.</div>
 </td>
 </tr>
@@ -628,14 +693,14 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedFixedCouponBond.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedFixedCouponBond.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.Builder.html#frequency-com.opengamma.strata.basics.schedule.Frequency-">frequency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;frequency)</code>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBond.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedCapitalIndexedBond.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.Builder.html#frequency-com.opengamma.strata.basics.schedule.Frequency-">frequency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;frequency)</code>
 <div class="block">Sets the frequency of the bond payments.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBond.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCapitalIndexedBond.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.Builder.html#frequency-com.opengamma.strata.basics.schedule.Frequency-">frequency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;frequency)</code>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedFixedCouponBond.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedFixedCouponBond.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.Builder.html#frequency-com.opengamma.strata.basics.schedule.Frequency-">frequency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;frequency)</code>
 <div class="block">Sets the frequency of the bond payments.</div>
 </td>
 </tr>
@@ -647,36 +712,6 @@
 </a>
 <h3>Uses of <a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a> in <a href="../../../../../../com/opengamma/strata/product/credit/package-summary.html">com.opengamma.strata.product.credit</a></h3>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
-<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/product/credit/package-summary.html">com.opengamma.strata.product.credit</a> that return <a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
-<td class="colLast"><span class="typeNameLabel">PeriodicPayments.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/PeriodicPayments.html#getPaymentFrequency--">getPaymentFrequency</a></span>()</code>
-<div class="block">Gets the periodic frequency defining when payments are made.</div>
-</td>
-</tr>
-</tbody>
-</table>
-<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
-<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/product/credit/package-summary.html">com.opengamma.strata.product.credit</a> that return types with arguments of type <a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">PeriodicPayments.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/PeriodicPayments.Meta.html#paymentFrequency--">paymentFrequency</a></span>()</code>
-<div class="block">The meta-property for the <code>paymentFrequency</code> property.</div>
-</td>
-</tr>
-</tbody>
-</table>
-<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../com/opengamma/strata/product/credit/package-summary.html">com.opengamma.strata.product.credit</a> with parameters of type <a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
@@ -684,20 +719,32 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/credit/PeriodicPayments.html" title="class in com.opengamma.strata.product.credit">PeriodicPayments</a></code></td>
-<td class="colLast"><span class="typeNameLabel">PeriodicPayments.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/PeriodicPayments.html#of-com.opengamma.strata.basics.currency.CurrencyAmount-double-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.basics.schedule.Frequency-com.opengamma.strata.basics.schedule.StubConvention-com.opengamma.strata.basics.schedule.RollConvention-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;notional,
-  double&nbsp;coupon,
-  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/credit/Cds.html" title="class in com.opengamma.strata.product.credit">Cds</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Cds.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/Cds.html#of-com.opengamma.strata.product.common.BuySell-com.opengamma.strata.basics.StandardId-com.opengamma.strata.basics.currency.Currency-double-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.basics.schedule.Frequency-com.opengamma.strata.basics.date.HolidayCalendarId-double-">of</a></span>(<a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+  <a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;legalEntityId,
+  <a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+  double&nbsp;notional,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate,
   <a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;paymentFrequency,
-  <a href="../../../../../../com/opengamma/strata/basics/schedule/StubConvention.html" title="enum in com.opengamma.strata.basics.schedule">StubConvention</a>&nbsp;stubConvention,
-  <a href="../../../../../../com/opengamma/strata/basics/schedule/RollConvention.html" title="interface in com.opengamma.strata.basics.schedule">RollConvention</a>&nbsp;rollConvention)</code>
-<div class="block">Creates an instance.</div>
+  <a href="../../../../../../com/opengamma/strata/basics/date/HolidayCalendarId.html" title="class in com.opengamma.strata.basics.date">HolidayCalendarId</a>&nbsp;calendar,
+  double&nbsp;fixedRate)</code>
+<div class="block">Creates an instance of a standardized CDS.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/PeriodicPayments.Builder.html" title="class in com.opengamma.strata.product.credit">PeriodicPayments.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">PeriodicPayments.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/PeriodicPayments.Builder.html#paymentFrequency-com.opengamma.strata.basics.schedule.Frequency-">paymentFrequency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;paymentFrequency)</code>
-<div class="block">Sets the periodic frequency defining when payments are made.</div>
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/credit/CdsIndex.html" title="class in com.opengamma.strata.product.credit">CdsIndex</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CdsIndex.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/CdsIndex.html#of-com.opengamma.strata.product.common.BuySell-com.opengamma.strata.basics.StandardId-java.util.List-com.opengamma.strata.basics.currency.Currency-double-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.basics.schedule.Frequency-com.opengamma.strata.basics.date.HolidayCalendarId-double-">of</a></span>(<a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+  <a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;cdsIndexId,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&gt;&nbsp;legalEntityIds,
+  <a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+  double&nbsp;notional,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate,
+  <a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;paymentFrequency,
+  <a href="../../../../../../com/opengamma/strata/basics/date/HolidayCalendarId.html" title="class in com.opengamma.strata.basics.date">HolidayCalendarId</a>&nbsp;calendar,
+  double&nbsp;fixedRate)</code>
+<div class="block">Creates an instance of a standardized CDS index.</div>
 </td>
 </tr>
 </tbody>
@@ -716,20 +763,8 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IsdaYieldCurveConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/IsdaYieldCurveConvention.html#getFixedPaymentFrequency--">getFixedPaymentFrequency</a></span>()</code>
-<div class="block">Gets the payment periodic frequency for the fixed leg of any underlying swap instruments.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ImmutableCdsConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.html#getPaymentFrequency--">getPaymentFrequency</a></span>()</code>
-<div class="block">Gets the payment frequency.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CdsConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#getPaymentFrequency--">getPaymentFrequency</a></span>()</code>
-<div class="block">Gets the payment frequency.</div>
+<div class="block">Gets the periodic frequency of payments.</div>
 </td>
 </tr>
 </tbody>
@@ -757,17 +792,20 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CdsConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/CdsConvention.html#calculateUnadjustedMaturityDate-java.time.LocalDate-com.opengamma.strata.basics.schedule.Frequency-java.time.Period-">calculateUnadjustedMaturityDate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate,
-                               <a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;paymentFrequency,
-                               <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;period)</code>
-<div class="block">Gets the unadjusted maturity date.</div>
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableCdsConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.html#of-java.lang.String-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.basics.date.DayCount-com.opengamma.strata.basics.schedule.Frequency-com.opengamma.strata.basics.date.BusinessDayAdjustment-com.opengamma.strata.basics.date.DaysAdjustment-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+  <a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a>&nbsp;dayCount,
+  <a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;paymentFrequency,
+  <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment,
+  <a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;settlementDateOffset)</code>
+<div class="block">Obtains a convention based on the specified parameters.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type">ImmutableCdsConvention.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ImmutableCdsConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html#paymentFrequency-com.opengamma.strata.basics.schedule.Frequency-">paymentFrequency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;paymentFrequency)</code>
-<div class="block">Sets the payment frequency.</div>
+<div class="block">Sets the periodic frequency of payments.</div>
 </td>
 </tr>
 </tbody>
@@ -854,39 +892,39 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.html#getAccrualFrequency--">getAccrualFrequency</a></span>()</code>
+<div class="block">Gets the periodic frequency of accrual.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.html#getAccrualFrequency--">getAccrualFrequency</a></span>()</code>
+<div class="block">Gets the periodic frequency of accrual.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
 <td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.html#getAccrualFrequency--">getAccrualFrequency</a></span>()</code>
 <div class="block">Gets the periodic frequency of accrual.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.html#getAccrualFrequency--">getAccrualFrequency</a></span>()</code>
-<div class="block">Gets the periodic frequency of accrual.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.html#getAccrualFrequency--">getAccrualFrequency</a></span>()</code>
-<div class="block">Gets the periodic frequency of accrual.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.html#getPaymentFrequency--">getPaymentFrequency</a></span>()</code>
-<div class="block">Gets the periodic frequency of payments,
- providing a default result if no override specified.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.html#getPaymentFrequency--">getPaymentFrequency</a></span>()</code>
 <div class="block">Gets the periodic frequency of payments,
  providing a default result if no override specified.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.html#getPaymentFrequency--">getPaymentFrequency</a></span>()</code>
+<div class="block">Gets the periodic frequency of payments,
+ providing a default result if no override specified.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.html#getPaymentFrequency--">getPaymentFrequency</a></span>()</code>
 <div class="block">Gets the periodic frequency of payments,
  providing a default result if no override specified.</div>
 </td>
@@ -902,37 +940,37 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Meta.html#accrualFrequency--">accrualFrequency</a></span>()</code>
+<div class="block">The meta-property for the <code>accrualFrequency</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Meta.html#accrualFrequency--">accrualFrequency</a></span>()</code>
+<div class="block">The meta-property for the <code>accrualFrequency</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Meta.html#accrualFrequency--">accrualFrequency</a></span>()</code>
 <div class="block">The meta-property for the <code>accrualFrequency</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Meta.html#accrualFrequency--">accrualFrequency</a></span>()</code>
-<div class="block">The meta-property for the <code>accrualFrequency</code> property.</div>
+<td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Meta.html#paymentFrequency--">paymentFrequency</a></span>()</code>
+<div class="block">The meta-property for the <code>paymentFrequency</code> property.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Meta.html#accrualFrequency--">accrualFrequency</a></span>()</code>
-<div class="block">The meta-property for the <code>accrualFrequency</code> property.</div>
+<td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Meta.html#paymentFrequency--">paymentFrequency</a></span>()</code>
+<div class="block">The meta-property for the <code>paymentFrequency</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Meta.html#paymentFrequency--">paymentFrequency</a></span>()</code>
-<div class="block">The meta-property for the <code>paymentFrequency</code> property.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Meta.html#paymentFrequency--">paymentFrequency</a></span>()</code>
-<div class="block">The meta-property for the <code>paymentFrequency</code> property.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Meta.html#paymentFrequency--">paymentFrequency</a></span>()</code>
 <div class="block">The meta-property for the <code>paymentFrequency</code> property.</div>
 </td>
 </tr>
@@ -946,20 +984,20 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">OvernightRateSwapLegConvention.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html#accrualFrequency-com.opengamma.strata.basics.schedule.Frequency-">accrualFrequency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;accrualFrequency)</code>
-<div class="block">Sets the periodic frequency of accrual.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">IborRateSwapLegConvention.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Builder.html#accrualFrequency-com.opengamma.strata.basics.schedule.Frequency-">accrualFrequency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;accrualFrequency)</code>
 <div class="block">Sets the periodic frequency of accrual.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">FixedRateSwapLegConvention.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Builder.html#accrualFrequency-com.opengamma.strata.basics.schedule.Frequency-">accrualFrequency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;accrualFrequency)</code>
+<div class="block">Sets the periodic frequency of accrual.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">OvernightRateSwapLegConvention.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html#accrualFrequency-com.opengamma.strata.basics.schedule.Frequency-">accrualFrequency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;accrualFrequency)</code>
 <div class="block">Sets the periodic frequency of accrual.</div>
 </td>
 </tr>
@@ -990,20 +1028,20 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">OvernightRateSwapLegConvention.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html#paymentFrequency-com.opengamma.strata.basics.schedule.Frequency-">paymentFrequency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;paymentFrequency)</code>
-<div class="block">Sets the periodic frequency of payments, optional with defaulting getter.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">IborRateSwapLegConvention.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/IborRateSwapLegConvention.Builder.html#paymentFrequency-com.opengamma.strata.basics.schedule.Frequency-">paymentFrequency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;paymentFrequency)</code>
 <div class="block">Sets the periodic frequency of payments, optional with defaulting getter.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">FixedRateSwapLegConvention.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FixedRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedRateSwapLegConvention.Builder.html#paymentFrequency-com.opengamma.strata.basics.schedule.Frequency-">paymentFrequency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;paymentFrequency)</code>
+<div class="block">Sets the periodic frequency of payments, optional with defaulting getter.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">OvernightRateSwapLegConvention.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightRateSwapLegConvention.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/OvernightRateSwapLegConvention.Builder.html#paymentFrequency-com.opengamma.strata.basics.schedule.Frequency-">paymentFrequency</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;paymentFrequency)</code>
 <div class="block">Sets the periodic frequency of payments, optional with defaulting getter.</div>
 </td>
 </tr>

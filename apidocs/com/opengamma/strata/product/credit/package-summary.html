@@ -73,29 +73,12 @@
 <div class="header">
 <h1 title="Package" class="title">Package&nbsp;com.opengamma.strata.product.credit</h1>
 <div class="docSummary">
-<div class="block">Entity objects describing credit products.</div>
+<div class="block">Entity objects describing Credit Default Swap (CDS) and CDS index.</div>
 </div>
 <p>See:&nbsp;<a href="#package.description">Description</a></p>
 </div>
 <div class="contentContainer">
 <ul class="blockList">
-<li class="blockList">
-<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Interface Summary table, listing interfaces, and an explanation">
-<caption><span>Interface Summary</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Interface</th>
-<th class="colLast" scope="col">Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/ReferenceInformation.html" title="interface in com.opengamma.strata.product.credit">ReferenceInformation</a></td>
-<td class="colLast">
-<div class="block">Identifies the reference that credit protection applies to.</div>
-</td>
-</tr>
-</tbody>
-</table>
-</li>
 <li class="blockList">
 <table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Class Summary table, listing classes, and an explanation">
 <caption><span>Class Summary</span><span class="tabEnd">&nbsp;</span></caption>
@@ -107,7 +90,7 @@
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/Cds.html" title="class in com.opengamma.strata.product.credit">Cds</a></td>
 <td class="colLast">
-<div class="block">A credit default swap (CDS), including single-name and index swaps.</div>
+<div class="block">A single-name credit default swap (CDS).</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -123,135 +106,183 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CdsDatesLogic.html" title="class in com.opengamma.strata.product.credit">CdsDatesLogic</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CdsCalibrationTrade.html" title="class in com.opengamma.strata.product.credit">CdsCalibrationTrade</a></td>
 <td class="colLast">
-<div class="block">Utility for producing sets of CDS dates.</div>
+<div class="block">A trade in a single-name credit default swap (CDS) used for credit curve calibration.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CdsTrade.html" title="class in com.opengamma.strata.product.credit">CdsTrade</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CdsCalibrationTrade.Meta.html" title="class in com.opengamma.strata.product.credit">CdsCalibrationTrade.Meta</a></td>
 <td class="colLast">
-<div class="block">A trade in a credit default swap (CDS).</div>
+<div class="block">The meta-bean for <code>CdsCalibrationTrade</code>.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CdsIndex.html" title="class in com.opengamma.strata.product.credit">CdsIndex</a></td>
+<td class="colLast">
+<div class="block">A CDS (portfolio) index product.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CdsIndex.Builder.html" title="class in com.opengamma.strata.product.credit">CdsIndex.Builder</a></td>
+<td class="colLast">
+<div class="block">The bean-builder for <code>CdsIndex</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CdsIndex.Meta.html" title="class in com.opengamma.strata.product.credit">CdsIndex.Meta</a></td>
+<td class="colLast">
+<div class="block">The meta-bean for <code>CdsIndex</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CdsIndexCalibrationTrade.html" title="class in com.opengamma.strata.product.credit">CdsIndexCalibrationTrade</a></td>
+<td class="colLast">
+<div class="block">A trade in a CDS index used for credit curve calibration.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CdsIndexCalibrationTrade.Meta.html" title="class in com.opengamma.strata.product.credit">CdsIndexCalibrationTrade.Meta</a></td>
+<td class="colLast">
+<div class="block">The meta-bean for <code>CdsIndexCalibrationTrade</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CdsIndexTrade.html" title="class in com.opengamma.strata.product.credit">CdsIndexTrade</a></td>
+<td class="colLast">
+<div class="block">A trade in a CDS index.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CdsIndexTrade.Builder.html" title="class in com.opengamma.strata.product.credit">CdsIndexTrade.Builder</a></td>
+<td class="colLast">
+<div class="block">The bean-builder for <code>CdsIndexTrade</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CdsIndexTrade.Meta.html" title="class in com.opengamma.strata.product.credit">CdsIndexTrade.Meta</a></td>
+<td class="colLast">
+<div class="block">The meta-bean for <code>CdsIndexTrade</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CdsQuote.html" title="class in com.opengamma.strata.product.credit">CdsQuote</a></td>
+<td class="colLast">
+<div class="block">Market quote for a single-name credit default swap (CDS).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CdsQuote.Meta.html" title="class in com.opengamma.strata.product.credit">CdsQuote.Meta</a></td>
+<td class="colLast">
+<div class="block">The meta-bean for <code>CdsQuote</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CdsTrade.html" title="class in com.opengamma.strata.product.credit">CdsTrade</a></td>
+<td class="colLast">
+<div class="block">A trade in a single-name credit default swap (CDS).</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CdsTrade.Builder.html" title="class in com.opengamma.strata.product.credit">CdsTrade.Builder</a></td>
 <td class="colLast">
 <div class="block">The bean-builder for <code>CdsTrade</code>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CdsTrade.Meta.html" title="class in com.opengamma.strata.product.credit">CdsTrade.Meta</a></td>
 <td class="colLast">
 <div class="block">The meta-bean for <code>CdsTrade</code>.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/FeeLeg.html" title="class in com.opengamma.strata.product.credit">FeeLeg</a></td>
-<td class="colLast">
-<div class="block">The fee leg of a credit default swap (CDS).</div>
-</td>
-</tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/FeeLeg.Builder.html" title="class in com.opengamma.strata.product.credit">FeeLeg.Builder</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CreditCouponPaymentPeriod.html" title="class in com.opengamma.strata.product.credit">CreditCouponPaymentPeriod</a></td>
 <td class="colLast">
-<div class="block">The bean-builder for <code>FeeLeg</code>.</div>
+<div class="block">A period over which a fixed coupon is paid.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/FeeLeg.Meta.html" title="class in com.opengamma.strata.product.credit">FeeLeg.Meta</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CreditCouponPaymentPeriod.Builder.html" title="class in com.opengamma.strata.product.credit">CreditCouponPaymentPeriod.Builder</a></td>
 <td class="colLast">
-<div class="block">The meta-bean for <code>FeeLeg</code>.</div>
+<div class="block">The bean-builder for <code>CreditCouponPaymentPeriod</code>.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/IndexReferenceInformation.html" title="class in com.opengamma.strata.product.credit">IndexReferenceInformation</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/CreditCouponPaymentPeriod.Meta.html" title="class in com.opengamma.strata.product.credit">CreditCouponPaymentPeriod.Meta</a></td>
 <td class="colLast">
-<div class="block">Reference data for a CDS index.</div>
+<div class="block">The meta-bean for <code>CreditCouponPaymentPeriod</code>.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/IndexReferenceInformation.Builder.html" title="class in com.opengamma.strata.product.credit">IndexReferenceInformation.Builder</a></td>
-<td class="colLast">
-<div class="block">The bean-builder for <code>IndexReferenceInformation</code>.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/IndexReferenceInformation.Meta.html" title="class in com.opengamma.strata.product.credit">IndexReferenceInformation.Meta</a></td>
-<td class="colLast">
-<div class="block">The meta-bean for <code>IndexReferenceInformation</code>.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/PeriodicPayments.html" title="class in com.opengamma.strata.product.credit">PeriodicPayments</a></td>
-<td class="colLast">
-<div class="block">Specifies a periodic schedule of fixed amounts</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/PeriodicPayments.Builder.html" title="class in com.opengamma.strata.product.credit">PeriodicPayments.Builder</a></td>
-<td class="colLast">
-<div class="block">The bean-builder for <code>PeriodicPayments</code>.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/PeriodicPayments.Meta.html" title="class in com.opengamma.strata.product.credit">PeriodicPayments.Meta</a></td>
-<td class="colLast">
-<div class="block">The meta-bean for <code>PeriodicPayments</code>.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/ResolvedCds.html" title="class in com.opengamma.strata.product.credit">ResolvedCds</a></td>
 <td class="colLast">
-<div class="block">A credit default swap (CDS), resolved for pricing.</div>
+<div class="block">A single-name credit default swap (CDS), resolved for pricing.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/ResolvedCds.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Builder</a></td>
 <td class="colLast">
 <div class="block">The bean-builder for <code>ResolvedCds</code>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/ResolvedCds.Meta.html" title="class in com.opengamma.strata.product.credit">ResolvedCds.Meta</a></td>
 <td class="colLast">
 <div class="block">The meta-bean for <code>ResolvedCds</code>.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a></td>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/ResolvedCdsIndex.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsIndex</a></td>
 <td class="colLast">
-<div class="block">A trade in a credit default swap (CDS), resolved for pricing.</div>
+<div class="block">A CDS (portfolio) index, resolved for pricing.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/ResolvedCdsIndex.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsIndex.Builder</a></td>
+<td class="colLast">
+<div class="block">The bean-builder for <code>ResolvedCdsIndex</code>.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/ResolvedCdsIndex.Meta.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsIndex.Meta</a></td>
+<td class="colLast">
+<div class="block">The meta-bean for <code>ResolvedCdsIndex</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/ResolvedCdsIndexTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsIndexTrade</a></td>
+<td class="colLast">
+<div class="block">A trade in a CDS index, resolved for pricing.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/ResolvedCdsIndexTrade.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsIndexTrade.Builder</a></td>
+<td class="colLast">
+<div class="block">The bean-builder for <code>ResolvedCdsIndexTrade</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/ResolvedCdsIndexTrade.Meta.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsIndexTrade.Meta</a></td>
+<td class="colLast">
+<div class="block">The meta-bean for <code>ResolvedCdsIndexTrade</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a></td>
+<td class="colLast">
+<div class="block">A trade in a single-name credit default swap (CDS), resolved for pricing.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.Builder.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade.Builder</a></td>
 <td class="colLast">
 <div class="block">The bean-builder for <code>ResolvedCdsTrade</code>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.Meta.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade.Meta</a></td>
 <td class="colLast">
 <div class="block">The meta-bean for <code>ResolvedCdsTrade</code>.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/SingleNameReferenceInformation.html" title="class in com.opengamma.strata.product.credit">SingleNameReferenceInformation</a></td>
-<td class="colLast">
-<div class="block">Reference data for a CDS single-name.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/SingleNameReferenceInformation.Builder.html" title="class in com.opengamma.strata.product.credit">SingleNameReferenceInformation.Builder</a></td>
-<td class="colLast">
-<div class="block">The bean-builder for <code>SingleNameReferenceInformation</code>.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/SingleNameReferenceInformation.Meta.html" title="class in com.opengamma.strata.product.credit">SingleNameReferenceInformation.Meta</a></td>
-<td class="colLast">
-<div class="block">The meta-bean for <code>SingleNameReferenceInformation</code>.</div>
 </td>
 </tr>
 </tbody>
@@ -266,21 +297,15 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/ReferenceInformationType.html" title="enum in com.opengamma.strata.product.credit">ReferenceInformationType</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/PaymentOnDefault.html" title="enum in com.opengamma.strata.product.credit">PaymentOnDefault</a></td>
 <td class="colLast">
-<div class="block">Defines the type of the CDS underlying that protection applies to.</div>
+<div class="block">The payment on default.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/RestructuringClause.html" title="enum in com.opengamma.strata.product.credit">RestructuringClause</a></td>
+<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/ProtectionStartOfDay.html" title="enum in com.opengamma.strata.product.credit">ProtectionStartOfDay</a></td>
 <td class="colLast">
-<div class="block">Specifies the form of the restructuring credit event that is applicable to the credit default swap.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../../com/opengamma/strata/product/credit/SeniorityLevel.html" title="enum in com.opengamma.strata.product.credit">SeniorityLevel</a></td>
-<td class="colLast">
-<div class="block">Specifies the repayment precedence of a debt instrument.</div>
+<div class="block">The protection start of the day.</div>
 </td>
 </tr>
 </tbody>
@@ -291,16 +316,7 @@
 <!--   -->
 </a>
 <h2 title="Package com.opengamma.strata.product.credit Description">Package com.opengamma.strata.product.credit Description</h2>
-<div class="block">Entity objects describing credit products.
- <p>
- <b>This package is currently being reviewed and refactored. Incompatible changes are expected.</b>
- <p>
- A CDS is a financial instrument where the protection seller agrees to compensate
- the protection buyer if a specified specified company or Sovereign entity experiences
- a credit event, indicating it is or may be unable to service its debts.
- The protection seller is typically paid a fee and/or premium, expressed as an annualized
- percentage of the notional in basis points, regularly over the life of the transaction or
- otherwise as agreed by the parties.</div>
+<div class="block">Entity objects describing Credit Default Swap (CDS) and CDS index.</div>
 </div>
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
 <div class="bottomNav"><a name="navbar.bottom">

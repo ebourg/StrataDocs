@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -51,7 +51,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../../com/opengamma/strata/product/credit/type/IsdaYieldCurveConvention.html" title="interface in com.opengamma.strata.product.credit.type"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../../com/opengamma/strata/product/credit/type/TenorCdsTemplate.html" title="class in com.opengamma.strata.product.credit.type"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html" target="_top">Frames</a></li>
@@ -191,23 +191,23 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 </td>
 </tr>
 <tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html#endDateBusinessDayAdjustment--">endDateBusinessDayAdjustment</a></span>()</code>
+<div class="block">The meta-property for the <code>endDateBusinessDayAdjustment</code> property.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>protected <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;?&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html#metaPropertyGet-java.lang.String-">metaPropertyGet</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;?&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html#metaPropertyMap--">metaPropertyMap</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html#name--">name</a></span>()</code>
 <div class="block">The meta-property for the <code>name</code> property.</div>
-</td>
-</tr>
-<tr id="i8" class="altColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html#payAccruedOnDefault--">payAccruedOnDefault</a></span>()</code>
-<div class="block">The meta-property for the <code>payAccruedOnDefault</code> property.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -217,37 +217,55 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 </td>
 </tr>
 <tr id="i10" class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/PaymentOnDefault.html" title="enum in com.opengamma.strata.product.credit">PaymentOnDefault</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html#paymentOnDefault--">paymentOnDefault</a></span>()</code>
+<div class="block">The meta-property for the <code>paymentOnDefault</code> property.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html#propertyGet-org.joda.beans.Bean-java.lang.String-boolean-">propertyGet</a></span>(<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a>&nbsp;bean,
            <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName,
            boolean&nbsp;quiet)</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html#propertySet-org.joda.beans.Bean-java.lang.String-java.lang.Object-boolean-">propertySet</a></span>(<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a>&nbsp;bean,
            <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName,
            <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;newValue,
            boolean&nbsp;quiet)</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ProtectionStartOfDay.html" title="enum in com.opengamma.strata.product.credit">ProtectionStartOfDay</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html#protectionStart--">protectionStart</a></span>()</code>
+<div class="block">The meta-property for the <code>protectionStart</code> property.</div>
+</td>
+</tr>
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/schedule/RollConvention.html" title="interface in com.opengamma.strata.basics.schedule">RollConvention</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html#rollConvention--">rollConvention</a></span>()</code>
 <div class="block">The meta-property for the <code>rollConvention</code> property.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html#settleLagDays--">settleLagDays</a></span>()</code>
-<div class="block">The meta-property for the <code>settleLagDays</code> property.</div>
-</td>
-</tr>
-<tr id="i14" class="altColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html#stepInDays--">stepInDays</a></span>()</code>
-<div class="block">The meta-property for the <code>stepInDays</code> property.</div>
-</td>
-</tr>
 <tr id="i15" class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html#settlementDateOffset--">settlementDateOffset</a></span>()</code>
+<div class="block">The meta-property for the <code>settlementDateOffset</code> property.</div>
+</td>
+</tr>
+<tr id="i16" class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html#startDateBusinessDayAdjustment--">startDateBusinessDayAdjustment</a></span>()</code>
+<div class="block">The meta-property for the <code>startDateBusinessDayAdjustment</code> property.</div>
+</td>
+</tr>
+<tr id="i17" class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html#stepinDateOffset--">stepinDateOffset</a></span>()</code>
+<div class="block">The meta-property for the <code>stepinDateOffset</code> property.</div>
+</td>
+</tr>
+<tr id="i18" class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/schedule/StubConvention.html" title="enum in com.opengamma.strata.basics.schedule">StubConvention</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html#stubConvention--">stubConvention</a></span>()</code>
 <div class="block">The meta-property for the <code>stubConvention</code> property.</div>
@@ -371,20 +389,6 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 </dl>
 </li>
 </ul>
-<a name="businessDayAdjustment--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>businessDayAdjustment</h4>
-<pre>public&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;&nbsp;businessDayAdjustment()</pre>
-<div class="block">The meta-property for the <code>businessDayAdjustment</code> property.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the meta-property, not null</dd>
-</dl>
-</li>
-</ul>
 <a name="paymentFrequency--">
 <!--   -->
 </a>
@@ -399,28 +403,42 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 </dl>
 </li>
 </ul>
-<a name="rollConvention--">
+<a name="businessDayAdjustment--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>rollConvention</h4>
-<pre>public&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/schedule/RollConvention.html" title="interface in com.opengamma.strata.basics.schedule">RollConvention</a>&gt;&nbsp;rollConvention()</pre>
-<div class="block">The meta-property for the <code>rollConvention</code> property.</div>
+<h4>businessDayAdjustment</h4>
+<pre>public&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;&nbsp;businessDayAdjustment()</pre>
+<div class="block">The meta-property for the <code>businessDayAdjustment</code> property.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the meta-property, not null</dd>
 </dl>
 </li>
 </ul>
-<a name="payAccruedOnDefault--">
+<a name="startDateBusinessDayAdjustment--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>payAccruedOnDefault</h4>
-<pre>public&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;payAccruedOnDefault()</pre>
-<div class="block">The meta-property for the <code>payAccruedOnDefault</code> property.</div>
+<h4>startDateBusinessDayAdjustment</h4>
+<pre>public&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;&nbsp;startDateBusinessDayAdjustment()</pre>
+<div class="block">The meta-property for the <code>startDateBusinessDayAdjustment</code> property.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the meta-property, not null</dd>
+</dl>
+</li>
+</ul>
+<a name="endDateBusinessDayAdjustment--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>endDateBusinessDayAdjustment</h4>
+<pre>public&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;&nbsp;endDateBusinessDayAdjustment()</pre>
+<div class="block">The meta-property for the <code>endDateBusinessDayAdjustment</code> property.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the meta-property, not null</dd>
@@ -441,28 +459,70 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 </dl>
 </li>
 </ul>
-<a name="stepInDays--">
+<a name="rollConvention--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>stepInDays</h4>
-<pre>public&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;stepInDays()</pre>
-<div class="block">The meta-property for the <code>stepInDays</code> property.</div>
+<h4>rollConvention</h4>
+<pre>public&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/schedule/RollConvention.html" title="interface in com.opengamma.strata.basics.schedule">RollConvention</a>&gt;&nbsp;rollConvention()</pre>
+<div class="block">The meta-property for the <code>rollConvention</code> property.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the meta-property, not null</dd>
 </dl>
 </li>
 </ul>
-<a name="settleLagDays--">
+<a name="paymentOnDefault--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>settleLagDays</h4>
-<pre>public&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;settleLagDays()</pre>
-<div class="block">The meta-property for the <code>settleLagDays</code> property.</div>
+<h4>paymentOnDefault</h4>
+<pre>public&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/PaymentOnDefault.html" title="enum in com.opengamma.strata.product.credit">PaymentOnDefault</a>&gt;&nbsp;paymentOnDefault()</pre>
+<div class="block">The meta-property for the <code>paymentOnDefault</code> property.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the meta-property, not null</dd>
+</dl>
+</li>
+</ul>
+<a name="protectionStart--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>protectionStart</h4>
+<pre>public&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ProtectionStartOfDay.html" title="enum in com.opengamma.strata.product.credit">ProtectionStartOfDay</a>&gt;&nbsp;protectionStart()</pre>
+<div class="block">The meta-property for the <code>protectionStart</code> property.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the meta-property, not null</dd>
+</dl>
+</li>
+</ul>
+<a name="stepinDateOffset--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>stepinDateOffset</h4>
+<pre>public&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&gt;&nbsp;stepinDateOffset()</pre>
+<div class="block">The meta-property for the <code>stepinDateOffset</code> property.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the meta-property, not null</dd>
+</dl>
+</li>
+</ul>
+<a name="settlementDateOffset--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>settlementDateOffset</h4>
+<pre>public&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&gt;&nbsp;settlementDateOffset()</pre>
+<div class="block">The meta-property for the <code>settlementDateOffset</code> property.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the meta-property, not null</dd>
@@ -530,7 +590,7 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Builder.html" title="class in com.opengamma.strata.product.credit.type"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../../com/opengamma/strata/product/credit/type/IsdaYieldCurveConvention.html" title="interface in com.opengamma.strata.product.credit.type"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../../com/opengamma/strata/product/credit/type/TenorCdsTemplate.html" title="class in com.opengamma.strata.product.credit.type"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?com/opengamma/strata/product/credit/type/ImmutableCdsConvention.Meta.html" target="_top">Frames</a></li>

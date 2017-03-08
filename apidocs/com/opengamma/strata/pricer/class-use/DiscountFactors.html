@@ -96,12 +96,18 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.credit">com.opengamma.strata.pricer.credit</a></td>
+<td class="colLast">
+<div class="block">Calculators for credit instruments, such as Credit Default Swap (CDS).</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.fx">com.opengamma.strata.pricer.fx</a></td>
 <td class="colLast">
 <div class="block">Calculators for FX instruments, such as FX forward and FX swap.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.rate">com.opengamma.strata.pricer.rate</a></td>
 <td class="colLast">
 <div class="block">Calculators for rates instruments, such as Forward Rate Agreement (FRA) and interest rate swap.</div>
@@ -232,13 +238,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IssuerCurveDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/IssuerCurveDiscountFactors.html#getDiscountFactors--">getDiscountFactors</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">RepoCurveDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/RepoCurveDiscountFactors.html#getDiscountFactors--">getDiscountFactors</a></span>()</code>
 <div class="block">Gets the underlying discount factors for a single currency.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a></code></td>
-<td class="colLast"><span class="typeNameLabel">RepoCurveDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/RepoCurveDiscountFactors.html#getDiscountFactors--">getDiscountFactors</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">IssuerCurveDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/IssuerCurveDiscountFactors.html#getDiscountFactors--">getDiscountFactors</a></span>()</code>
 <div class="block">Gets the underlying discount factors for a single currency.</div>
 </td>
 </tr>
@@ -253,13 +259,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">IssuerCurveDiscountFactors.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/IssuerCurveDiscountFactors.Meta.html#discountFactors--">discountFactors</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">RepoCurveDiscountFactors.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/RepoCurveDiscountFactors.Meta.html#discountFactors--">discountFactors</a></span>()</code>
 <div class="block">The meta-property for the <code>discountFactors</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">RepoCurveDiscountFactors.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/RepoCurveDiscountFactors.Meta.html#discountFactors--">discountFactors</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">IssuerCurveDiscountFactors.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/IssuerCurveDiscountFactors.Meta.html#discountFactors--">discountFactors</a></span>()</code>
 <div class="block">The meta-property for the <code>discountFactors</code> property.</div>
 </td>
 </tr>
@@ -318,6 +324,30 @@
 <td class="colLast"><span class="typeNameLabel">ImmutableLegalEntityDiscountingProvider.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.Builder.html#repoCurves-java.util.Map-">repoCurves</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/collect/tuple/Pair.html" title="class in com.opengamma.strata.collect.tuple">Pair</a>&lt;<a href="../../../../../com/opengamma/strata/pricer/bond/RepoGroup.html" title="class in com.opengamma.strata.pricer.bond">RepoGroup</a>,<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;,<a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&gt;&nbsp;repoCurves)</code>
 <div class="block">Sets the repo curves, keyed by group and currency.</div>
 </td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.credit">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a> in <a href="../../../../../com/opengamma/strata/pricer/credit/package-summary.html">com.opengamma.strata.pricer.credit</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../com/opengamma/strata/pricer/credit/package-summary.html">com.opengamma.strata.pricer.credit</a> that return <a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CreditDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/credit/CreditDiscountFactors.html#toDiscountFactors--">toDiscountFactors</a></span>()</code>
+<div class="block">Creates an instance of <a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer"><code>DiscountFactors</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IsdaCreditDiscountFactors.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/credit/IsdaCreditDiscountFactors.html#toDiscountFactors--">toDiscountFactors</a></span>()</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -411,13 +441,13 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html#getDiscountFactors--">getDiscountFactors</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">DiscountOvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/DiscountOvernightIndexRates.html#getDiscountFactors--">getDiscountFactors</a></span>()</code>
 <div class="block">Gets the underlying discount factor curve.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountOvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/DiscountOvernightIndexRates.html#getDiscountFactors--">getDiscountFactors</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html#getDiscountFactors--">getDiscountFactors</a></span>()</code>
 <div class="block">Gets the underlying discount factor curve.</div>
 </td>
 </tr>
@@ -432,13 +462,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.Meta.html#discountFactors--">discountFactors</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">DiscountOvernightIndexRates.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/DiscountOvernightIndexRates.Meta.html#discountFactors--">discountFactors</a></span>()</code>
 <div class="block">The meta-property for the <code>discountFactors</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountOvernightIndexRates.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/DiscountOvernightIndexRates.Meta.html#discountFactors--">discountFactors</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.Meta.html#discountFactors--">discountFactors</a></span>()</code>
 <div class="block">The meta-property for the <code>discountFactors</code> property.</div>
 </td>
 </tr>
@@ -482,14 +512,14 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html" title="class in com.opengamma.strata.pricer.rate">DiscountIborIndexRates</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html#withDiscountFactors-com.opengamma.strata.pricer.DiscountFactors-">withDiscountFactors</a></span>(<a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&nbsp;factors)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/DiscountOvernightIndexRates.html" title="class in com.opengamma.strata.pricer.rate">DiscountOvernightIndexRates</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountOvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/DiscountOvernightIndexRates.html#withDiscountFactors-com.opengamma.strata.pricer.DiscountFactors-">withDiscountFactors</a></span>(<a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&nbsp;factors)</code>
 <div class="block">Returns a new instance with different discount factors.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/DiscountOvernightIndexRates.html" title="class in com.opengamma.strata.pricer.rate">DiscountOvernightIndexRates</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountOvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/DiscountOvernightIndexRates.html#withDiscountFactors-com.opengamma.strata.pricer.DiscountFactors-">withDiscountFactors</a></span>(<a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&nbsp;factors)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html" title="class in com.opengamma.strata.pricer.rate">DiscountIborIndexRates</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountIborIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/DiscountIborIndexRates.html#withDiscountFactors-com.opengamma.strata.pricer.DiscountFactors-">withDiscountFactors</a></span>(<a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&nbsp;factors)</code>
 <div class="block">Returns a new instance with different discount factors.</div>
 </td>
 </tr>

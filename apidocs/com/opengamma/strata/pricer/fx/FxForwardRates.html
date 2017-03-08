@@ -162,21 +162,21 @@ extends <a href="../../../../../com/opengamma/strata/market/MarketDataView.html"
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fx/FxForwardRates.html#rate-com.opengamma.strata.basics.currency.Currency-java.time.LocalDate-">rate</a></span>(<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;baseCurrency,
     <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate)</code>
-<div class="block">Gets the forward rate at the specified fixing date.</div>
+<div class="block">Gets the forward rate at the specified payment date.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fx/FxForwardRates.html#rateFxSpotSensitivity-com.opengamma.strata.basics.currency.Currency-java.time.LocalDate-">rateFxSpotSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;baseCurrency,
                      <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate)</code>
-<div class="block">Calculates the sensitivity of the forward rate to the spot FX rate.</div>
+<div class="block">Calculates the sensitivity of the forward rate to the current FX rate.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/fx/FxForwardRates.html#ratePointSensitivity-com.opengamma.strata.basics.currency.Currency-java.time.LocalDate-">ratePointSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;baseCurrency,
                     <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate)</code>
-<div class="block">Calculates the point sensitivity of the forward rate at the specified fixing date.</div>
+<div class="block">Calculates the point sensitivity of the forward rate at the specified payment date.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -311,10 +311,10 @@ extends <a href="../../../../../com/opengamma/strata/market/MarketDataView.html"
 <h4>rate</h4>
 <pre>double&nbsp;rate(<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;baseCurrency,
             <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate)</pre>
-<div class="block">Gets the forward rate at the specified fixing date.
+<div class="block">Gets the forward rate at the specified payment date.
  <p>
  The exchange rate of the currency pair varies over time.
- This method obtains the estimated rate for the fixing date.
+ This method obtains the estimated rate for the payment date.
  <p>
  This method specifies which of the two currencies in the currency pair is to be treated
  as the base currency for the purposes of the returned rate.
@@ -345,7 +345,7 @@ extends <a href="../../../../../com/opengamma/strata/market/MarketDataView.html"
 <h4>ratePointSensitivity</h4>
 <pre><a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivityBuilder.html" title="interface in com.opengamma.strata.market.sensitivity">PointSensitivityBuilder</a>&nbsp;ratePointSensitivity(<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;baseCurrency,
                                              <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate)</pre>
-<div class="block">Calculates the point sensitivity of the forward rate at the specified fixing date.
+<div class="block">Calculates the point sensitivity of the forward rate at the specified payment date.
  <p>
  This returns a sensitivity instance referring to the points that were queried in the market data.
  The sensitivity refers to the result of <a href="../../../../../com/opengamma/strata/pricer/fx/FxForwardRates.html#rate-com.opengamma.strata.basics.currency.Currency-java.time.LocalDate-"><code>rate(Currency, LocalDate)</code></a>.</div>
@@ -368,16 +368,16 @@ extends <a href="../../../../../com/opengamma/strata/market/MarketDataView.html"
 <h4>rateFxSpotSensitivity</h4>
 <pre>double&nbsp;rateFxSpotSensitivity(<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;baseCurrency,
                              <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;referenceDate)</pre>
-<div class="block">Calculates the sensitivity of the forward rate to the spot FX rate.
+<div class="block">Calculates the sensitivity of the forward rate to the current FX rate.
  <p>
- This returns the sensitivity to the FX spot rate used to determine the forward rate.
+ This returns the sensitivity to the current FX rate that was used to determine the FX forward rate.
  The sensitivity refers to the result of <a href="../../../../../com/opengamma/strata/pricer/fx/FxForwardRates.html#rate-com.opengamma.strata.basics.currency.Currency-java.time.LocalDate-"><code>rate(Currency, LocalDate)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>baseCurrency</code> - the base currency that the rate should be expressed against</dd>
 <dd><code>referenceDate</code> - the date to find the sensitivity for</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the spot sensitivity of the rate</dd>
+<dd>the sensitivity of the FX forward rate to the current FX rate</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a></code> - if the value cannot be obtained</dd>
 </dl>

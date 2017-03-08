@@ -175,20 +175,32 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolators.html#PCHIP">PCHIP</a></span></code>
+<div class="block">Piecewise cubic Hermite interpolator with monotonicity.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolators.html#PRODUCT_LINEAR">PRODUCT_LINEAR</a></span></code>
 <div class="block">Product linear interpolator.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolators.html#PRODUCT_NATURAL_SPLINE">PRODUCT_NATURAL_SPLINE</a></span></code>
 <div class="block">Product natural spline interpolator.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolators.html#SQUARE_LINEAR">SQUARE_LINEAR</a></span></code>
 <div class="block">Square linear interpolator.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolators.html#STEP_UPPER">STEP_UPPER</a></span></code>
+<div class="block">Step upper interpolator.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -370,7 +382,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <a name="PRODUCT_LINEAR">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>PRODUCT_LINEAR</h4>
 <pre>public static final&nbsp;<a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a> PRODUCT_LINEAR</pre>
@@ -381,6 +393,28 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
  As a curve for the product <code>x * y</code> is not well-defined at <code>x = 0</code>, we impose
  the condition that all of the x data to be the same sign, such that the origin is not within data range.
  The x key value must not be close to zero.</div>
+</li>
+</ul>
+<a name="STEP_UPPER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STEP_UPPER</h4>
+<pre>public static final&nbsp;<a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a> STEP_UPPER</pre>
+<div class="block">Step upper interpolator.
+ <p>
+ The interpolated value at <i>x</i> s.t. <i>x<sub>1</sub> < x =< x<sub>2</sub></i> is the value at <i>x<sub>2</sub></i>.</div>
+</li>
+</ul>
+<a name="PCHIP">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PCHIP</h4>
+<pre>public static final&nbsp;<a href="../../../../../../com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a> PCHIP</pre>
+<div class="block">Piecewise cubic Hermite interpolator with monotonicity.</div>
 </li>
 </ul>
 </li>

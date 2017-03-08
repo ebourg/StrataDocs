@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -162,87 +162,99 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">IborRateCalculation.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html#firstRegularRate-java.lang.Double-">firstRegularRate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&nbsp;firstRegularRate)</code>
-<div class="block">Sets the first rate of the first regular reset period, optional.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html#firstFixingDateOffset-com.opengamma.strata.basics.date.DaysAdjustment-">firstFixingDateOffset</a></span>(<a href="../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;firstFixingDateOffset)</code>
+<div class="block">Sets the offset of the first fixing date from the first adjusted reset date, optional.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">IborRateCalculation.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html#firstRate-java.lang.Double-">firstRate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&nbsp;firstRate)</code>
+<div class="block">Sets the rate of the first reset period, which may be a stub, optional.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">IborRateCalculation.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html#firstRegularRate-java.lang.Double-">firstRegularRate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&nbsp;firstRegularRate)</code>
+<div class="block">Sets the rate of the first regular reset period, optional.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">IborRateCalculation.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html#fixingDateOffset-com.opengamma.strata.basics.date.DaysAdjustment-">fixingDateOffset</a></span>(<a href="../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;fixingDateOffset)</code>
 <div class="block">Sets the offset of the fixing date from each adjusted reset date.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">IborRateCalculation.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html#fixingRelativeTo-com.opengamma.strata.product.swap.FixingRelativeTo-">fixingRelativeTo</a></span>(<a href="../../../../../com/opengamma/strata/product/swap/FixingRelativeTo.html" title="enum in com.opengamma.strata.product.swap">FixingRelativeTo</a>&nbsp;fixingRelativeTo)</code>
 <div class="block">Sets the base date that each fixing is made relative to, defaulted to 'PeriodStart'.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">IborRateCalculation.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html#gearing-com.opengamma.strata.basics.value.ValueSchedule-">gearing</a></span>(<a href="../../../../../com/opengamma/strata/basics/value/ValueSchedule.html" title="class in com.opengamma.strata.basics.value">ValueSchedule</a>&nbsp;gearing)</code>
 <div class="block">Sets the gearing multiplier, optional.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html#get-java.lang.String-">get</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">IborRateCalculation.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html#index-com.opengamma.strata.basics.index.IborIndex-">index</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index)</code>
 <div class="block">Sets the Ibor index.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">IborRateCalculation.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html#initialStub-com.opengamma.strata.product.swap.IborRateStubCalculation-">initialStub</a></span>(<a href="../../../../../com/opengamma/strata/product/swap/IborRateStubCalculation.html" title="class in com.opengamma.strata.product.swap">IborRateStubCalculation</a>&nbsp;initialStub)</code>
 <div class="block">Sets the rate to be used in initial stub, optional.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">IborRateCalculation.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html#negativeRateMethod-com.opengamma.strata.product.swap.NegativeRateMethod-">negativeRateMethod</a></span>(<a href="../../../../../com/opengamma/strata/product/swap/NegativeRateMethod.html" title="enum in com.opengamma.strata.product.swap">NegativeRateMethod</a>&nbsp;negativeRateMethod)</code>
 <div class="block">Sets the negative rate method, defaulted to 'AllowNegative'.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">IborRateCalculation.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html#resetPeriods-com.opengamma.strata.product.swap.ResetSchedule-">resetPeriods</a></span>(<a href="../../../../../com/opengamma/strata/product/swap/ResetSchedule.html" title="class in com.opengamma.strata.product.swap">ResetSchedule</a>&nbsp;resetPeriods)</code>
 <div class="block">Sets the reset schedule, used when averaging rates, optional.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">IborRateCalculation.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html#set-org.joda.beans.MetaProperty-java.lang.Object-">set</a></span>(<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;?&gt;&nbsp;property,
    <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">IborRateCalculation.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html#set-java.lang.String-java.lang.Object-">set</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName,
    <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;newValue)</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">IborRateCalculation.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html#setAll-java.util.Map-">setAll</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,? extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;propertyValueMap)</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">IborRateCalculation.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html#setString-org.joda.beans.MetaProperty-java.lang.String-">setString</a></span>(<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;?&gt;&nbsp;property,
          <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">IborRateCalculation.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html#setString-java.lang.String-java.lang.String-">setString</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName,
          <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">IborRateCalculation.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html#spread-com.opengamma.strata.basics.value.ValueSchedule-">spread</a></span>(<a href="../../../../../com/opengamma/strata/basics/value/ValueSchedule.html" title="class in com.opengamma.strata.basics.value">ValueSchedule</a>&nbsp;spread)</code>
 <div class="block">Sets the spread rate, with a 5% rate expressed as 0.05, optional.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -501,22 +513,82 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <li class="blockList">
 <h4>firstRegularRate</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">IborRateCalculation.Builder</a>&nbsp;firstRegularRate(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&nbsp;firstRegularRate)</pre>
-<div class="block">Sets the first rate of the first regular reset period, optional.
+<div class="block">Sets the rate of the first regular reset period, optional.
  A 5% rate will be expressed as 0.05.
  <p>
- In certain circumstances two counterparties agree the rate of the first fixing when the contract starts.
- The rate is applicable for the first reset period of the first <i>regular</i> accrual period.
- It is used in place of an observed fixing.
- Other calculation elements, such as gearing or spread, still apply.
- After the first reset period, the rate is observed via the normal fixing process.
+ In certain circumstances two counterparties agree the rate of the first fixing
+ when the contract starts, and it is used in place of one observed fixing.
+ For all other fixings, the rate is observed via the normal fixing process.
  <p>
- If the first floating rate applies to the initial stub rather than the regular accrual periods
- it must be specified using <code>initialStub</code>.
+ This property allows the rate of the first reset period of the first <i>regular</i> accrual period
+ to be controlled. Note that if there is an initial stub, this will be the second reset period.
+ Other calculation elements, such as gearing or spread, still apply to the rate specified here.
+ <p>
+ If the first rate applies to the initial stub rather than the regular accrual periods
+ it must be specified using <code>initialStub</code>. Alternatively, <code>firstRate</code> can be used.
+ <p>
+ This property follows the definition in FpML. See also <code>firstRate</code>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>firstRegularRate</code> - the new value</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this, for chaining, not null</dd>
+</dl>
+</li>
+</ul>
+<a name="firstRate-java.lang.Double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>firstRate</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">IborRateCalculation.Builder</a>&nbsp;firstRate(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&nbsp;firstRate)</pre>
+<div class="block">Sets the rate of the first reset period, which may be a stub, optional.
+ A 5% rate will be expressed as 0.05.
+ <p>
+ In certain circumstances two counterparties agree the rate of the first fixing
+ when the contract starts, and it is used in place of one observed fixing.
+ For all other fixings, the rate is observed via the normal fixing process.
+ <p>
+ This property allows the rate of the first reset period to be controlled,
+ irrespective of whether that is an initial stub or a regular period.
+ Other calculation elements, such as gearing or spread, still apply to the rate specified here.
+ <p>
+ This property is similar to <code>firstRegularRate</code>.
+ This property operates on the first reset period, whether that is an initial stub or a regular period.
+ By contrast, <code>firstRegularRate</code> operates on the first regular period, and never on a stub.
+ <p>
+ If either <code>firstRegularRate</code> or <code>initialStub</code> are present, this property is ignored.
  <p>
  If this property is not present, then the first rate is observed via the normal fixing process.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>firstRegularRate</code> - the new value</dd>
+<dd><code>firstRate</code> - the new value</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this, for chaining, not null</dd>
+</dl>
+</li>
+</ul>
+<a name="firstFixingDateOffset-com.opengamma.strata.basics.date.DaysAdjustment-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>firstFixingDateOffset</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/swap/IborRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">IborRateCalculation.Builder</a>&nbsp;firstFixingDateOffset(<a href="../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;firstFixingDateOffset)</pre>
+<div class="block">Sets the offset of the first fixing date from the first adjusted reset date, optional.
+ <p>
+ If present, this offset is used instead of <code>fixingDateOffset</code> for the first
+ reset period of the swap, which will be either an initial stub or the first reset
+ period of the first <i>regular</i> accrual period.
+ <p>
+ The offset is applied to the base date specified by <code>fixingRelativeTo</code>.
+ The offset is typically a negative number of business days.
+ <p>
+ If this property is not present, then the <code>fixingDateOffset</code> applies to all fixings.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>firstFixingDateOffset</code> - the new value</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this, for chaining, not null</dd>
 </dl>

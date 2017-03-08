@@ -8,6 +8,7 @@ Support for Strata is available via a number of routes.
 ## Commercial support
 OpenGamma offers commercial support for Strata and all its software offerings. This may include:
 
+ * Additional products, such FX Binary Options
  * On site developer training (for example, assistance in integration of trade and market data)
  * Evaluation period developer support
  * Consulting
@@ -16,7 +17,7 @@ OpenGamma offers commercial support for Strata and all its software offerings. T
  * Production support
  * Service level agreements
 
-Please [contact us directly](http://www.opengamma.com/contact) to discuss commercial support.
+Please [contact us directly](http://www.opengamma.com/#contact) to discuss commercial support.
 
 ## Open source support
 Community driven support for Strata is available through the [OpenGamma community forums](http://forums.opengamma.com).

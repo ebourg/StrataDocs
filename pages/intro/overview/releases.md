@@ -6,6 +6,65 @@ permalink: /releases/
 Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
+## Strata v1.2
+
+*8 March 2017*
+
+This release contains [61 fixed issues](https://github.com/OpenGamma/Strata/milestone/12?closed=1) -
+9 of which are bug fixes.
+
+* Refactor CDS
+ [#1466](https://github.com/OpenGamma/Strata/issues/1466),
+ [#1474](https://github.com/OpenGamma/Strata/issues/1474)
+* Caplet stripping: direct and SABR:
+ [#1448](https://github.com/OpenGamma/Strata/issues/1448),
+ [#1422](https://github.com/OpenGamma/Strata/issues/1422)
+* Enhance CalculationListener:
+ [#1454](https://github.com/OpenGamma/Strata/issues/1454),
+ [#1455](https://github.com/OpenGamma/Strata/issues/1455),
+ [#1458](https://github.com/OpenGamma/Strata/issues/1458)
+* Remove Easter Monday from CATO calendar:
+ [#1440](https://github.com/OpenGamma/Strata/issues/1440)
+* Add inflation seasonality in curves:
+ [#1465](https://github.com/OpenGamma/Strata/issues/1465)
+* Smith-Wilson method:
+ [#1484](https://github.com/OpenGamma/Strata/issues/1484)
+* Add holidays and indices for CZK, ZAR, HUF, MXN, BRL and DKK-CIBOR2-DKNA13:
+ [#1428](https://github.com/OpenGamma/Strata/issues/1428),
+ [#1429](https://github.com/OpenGamma/Strata/issues/1429),
+ [#1445](https://github.com/OpenGamma/Strata/issues/1445),
+ [#1435](https://github.com/OpenGamma/Strata/issues/1435),
+ [#1491](https://github.com/OpenGamma/Strata/issues/1491)
+* Enhance indices, FloatingRateName and enum lookup:
+ [#1438](https://github.com/OpenGamma/Strata/issues/1438),
+ [#1442](https://github.com/OpenGamma/Strata/issues/1442),
+ [#1436](https://github.com/OpenGamma/Strata/issues/1436)
+* Allow base sensitivity to be split:
+ [#1424](https://github.com/OpenGamma/Strata/issues/1424)
+* Interpolator calculations supplied on demand:
+ [#1463](https://github.com/OpenGamma/Strata/issues/1463),
+ [#1464](https://github.com/OpenGamma/Strata/issues/1464)
+* Add support for overriding first fixing offset and first rate:
+ [#1447](https://github.com/OpenGamma/Strata/issues/1447),
+ [#1453](https://github.com/OpenGamma/Strata/issues/1453)
+
+
+#### Compatibility
+
+The following incompatible changes have been made:
+
+* CDS code has been rewritten from scratch and has an entirely new API (as warned in advance in v1.1)
+* A new interface `CurveDefinition` has been added above `NodalCurveDefinition`, with `CurveGroupDefinition` making use of it. Only code that queried `CurveGroupDefinition` will break.
+* A number of methods have moved from `IborIndex` and `OvernightIndex` to the parent interface `RateIndex`. Only code that implemented `RateIndex` will break.
+* A new method was added to an interface, `FloatingRateName.normalized()`. Only code that implemented `FloatingRateName` will break.
+* A new method was added to an interface, `RateIndex.getFloatingRateName()`. Only code that implemented `RateIndex` will break.
+* A new method was added to an interface, `PriceIndex.getFloatingRateName()`. Only code that implemented `PriceIndex` will break.
+* A new method was added to an interface, `DiscountFactors.discountFactorTimeDerivative()`. Only code that implemented `DiscountFactors` will break.
+
+In general, we try to maintain backwards compatibility.
+We break compatibility mainly in areas where a change is likely to have minimal impact yet produce clearer, cleaner code.
+
+
 ## Strata v1.1.2
 
 *3 November 2016*

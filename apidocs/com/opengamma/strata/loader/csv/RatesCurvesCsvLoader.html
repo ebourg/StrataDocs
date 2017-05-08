@@ -149,7 +149,10 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
  </ul>
  <p>
  Each curve must be contained entirely within a single file, but each file may contain more than
- one curve. The curve points do not need to be ordered.</div>
+ one curve. The curve points do not need to be ordered.
+ <p>
+ CSV files sometimes contain a Unicode Byte Order Mark.
+ Callers are responsible for handling this, such as by using <a href="../../../../../com/opengamma/strata/collect/io/UnicodeBom.html" title="class in com.opengamma.strata.collect.io"><code>UnicodeBom</code></a>.</div>
 </li>
 </ul>
 </div>

@@ -498,14 +498,14 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">MultiCurrencyAmount.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html#stream--">stream</a></span>()</code>
-<div class="block">Returns a stream over the currency amounts.</div>
+<td class="colLast"><span class="typeNameLabel">CurrencyAmountArray.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmountArray.html#stream--">stream</a></span>()</code>
+<div class="block">Returns a stream of the amounts.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">CurrencyAmountArray.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmountArray.html#stream--">stream</a></span>()</code>
-<div class="block">Returns a stream of the amounts.</div>
+<td class="colLast"><span class="typeNameLabel">MultiCurrencyAmount.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html#stream--">stream</a></span>()</code>
+<div class="block">Returns a stream over the currency amounts.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -550,21 +550,21 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmountArray.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmountArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CurrencyAmountArray.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmountArray.html#minus-com.opengamma.strata.basics.currency.CurrencyAmount-">minus</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount)</code>
+<div class="block">Returns a new array containing the values from this array with the values from the amount subtracted.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">MultiCurrencyAmount</a></code></td>
 <td class="colLast"><span class="typeNameLabel">MultiCurrencyAmount.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/MultiCurrencyAmount.html#minus-com.opengamma.strata.basics.currency.CurrencyAmount-">minus</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amountToSubtract)</code>
 <div class="block">Returns a copy of this <code>MultiCurrencyAmount</code> with the specified amount subtracted.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CurrencyAmount.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html#minus-com.opengamma.strata.basics.currency.CurrencyAmount-">minus</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amountToSubtract)</code>
 <div class="block">Returns a copy of this <code>CurrencyAmount</code> with the specified amount subtracted.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmountArray.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmountArray</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CurrencyAmountArray.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmountArray.html#minus-com.opengamma.strata.basics.currency.CurrencyAmount-">minus</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount)</code>
-<div class="block">Returns a new array containing the values from this array with the values from the amount subtracted.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -574,66 +574,78 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/basics/currency/Money.html" title="class in com.opengamma.strata.basics.currency">Money</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Money.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/Money.html#of-com.opengamma.strata.basics.currency.CurrencyAmount-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;currencyAmount)</code>
+<div class="block">Obtains an instance of <code>Money</code> for the specified <a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency"><code>CurrencyAmount</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html" title="class in com.opengamma.strata.basics.currency">AdjustablePayment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">AdjustablePayment.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html#of-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.basics.date.AdjustableDate-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;value,
   <a href="../../../../../../com/opengamma/strata/basics/date/AdjustableDate.html" title="class in com.opengamma.strata.basics.date">AdjustableDate</a>&nbsp;date)</code>
 <div class="block">Obtains an instance representing an amount where the date is adjustable.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html" title="class in com.opengamma.strata.basics.currency">AdjustablePayment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">AdjustablePayment.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html#of-com.opengamma.strata.basics.currency.CurrencyAmount-java.time.LocalDate-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;value,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date)</code>
 <div class="block">Obtains an instance representing an amount where the date is fixed.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Payment.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html#of-com.opengamma.strata.basics.currency.CurrencyAmount-java.time.LocalDate-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;value,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date)</code>
 <div class="block">Obtains an instance representing an amount.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html" title="class in com.opengamma.strata.basics.currency">AdjustablePayment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">AdjustablePayment.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html#ofPay-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.basics.date.AdjustableDate-">ofPay</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;value,
      <a href="../../../../../../com/opengamma/strata/basics/date/AdjustableDate.html" title="class in com.opengamma.strata.basics.date">AdjustableDate</a>&nbsp;date)</code>
 <div class="block">Obtains an instance representing an amount to be paid where the date is adjustable.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html" title="class in com.opengamma.strata.basics.currency">AdjustablePayment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">AdjustablePayment.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html#ofPay-com.opengamma.strata.basics.currency.CurrencyAmount-java.time.LocalDate-">ofPay</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;value,
      <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date)</code>
 <div class="block">Obtains an instance representing an amount to be paid where the date is fixed.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Payment.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html#ofPay-com.opengamma.strata.basics.currency.CurrencyAmount-java.time.LocalDate-">ofPay</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;value,
      <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date)</code>
 <div class="block">Obtains an instance representing an amount to be paid.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html" title="class in com.opengamma.strata.basics.currency">AdjustablePayment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">AdjustablePayment.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html#ofReceive-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.basics.date.AdjustableDate-">ofReceive</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;value,
          <a href="../../../../../../com/opengamma/strata/basics/date/AdjustableDate.html" title="class in com.opengamma.strata.basics.date">AdjustableDate</a>&nbsp;date)</code>
 <div class="block">Obtains an instance representing an amount to be received where the date is adjustable.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html" title="class in com.opengamma.strata.basics.currency">AdjustablePayment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">AdjustablePayment.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/AdjustablePayment.html#ofReceive-com.opengamma.strata.basics.currency.CurrencyAmount-java.time.LocalDate-">ofReceive</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;value,
          <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date)</code>
 <div class="block">Obtains an instance representing an amount to be received where the date is fixed.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Payment.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/Payment.html#ofReceive-com.opengamma.strata.basics.currency.CurrencyAmount-java.time.LocalDate-">ofReceive</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;value,
          <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date)</code>
 <div class="block">Obtains an instance representing an amount to be received.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmountArray.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmountArray</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CurrencyAmountArray.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmountArray.html#plus-com.opengamma.strata.basics.currency.CurrencyAmount-">plus</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount)</code>
+<div class="block">Returns a new array containing the values from this array with the values from the amount added.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -649,12 +661,6 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmountArray.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmountArray</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CurrencyAmountArray.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmountArray.html#plus-com.opengamma.strata.basics.currency.CurrencyAmount-">plus</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount)</code>
-<div class="block">Returns a new array containing the values from this array with the values from the amount added.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/Payment.Builder.html" title="class in com.opengamma.strata.basics.currency">Payment.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Payment.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/currency/Payment.Builder.html#value-com.opengamma.strata.basics.currency.CurrencyAmount-">value</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;value)</code>
 <div class="block">Sets the amount of the payment.</div>
@@ -970,14 +976,14 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CrossGammaParameterSensitivities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/CrossGammaParameterSensitivities.html#total-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.basics.currency.FxRateProvider-">total</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;resultCurrency,
+<td class="colLast"><span class="typeNameLabel">CurrencyParameterSensitivities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html#total-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.basics.currency.FxRateProvider-">total</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;resultCurrency,
      <a href="../../../../../../com/opengamma/strata/basics/currency/FxRateProvider.html" title="interface in com.opengamma.strata.basics.currency">FxRateProvider</a>&nbsp;rateProvider)</code>
 <div class="block">Returns the total of the sensitivity values.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CurrencyParameterSensitivities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html#total-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.basics.currency.FxRateProvider-">total</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;resultCurrency,
+<td class="colLast"><span class="typeNameLabel">CrossGammaParameterSensitivities.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/CrossGammaParameterSensitivities.html#total-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.basics.currency.FxRateProvider-">total</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;resultCurrency,
      <a href="../../../../../../com/opengamma/strata/basics/currency/FxRateProvider.html" title="interface in com.opengamma.strata.basics.currency">FxRateProvider</a>&nbsp;rateProvider)</code>
 <div class="block">Returns the total of the sensitivity values.</div>
 </td>
@@ -1560,7 +1566,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">DiscountingCapitalIndexedBondProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/DiscountingCapitalIndexedBondProductPricer.html#zSpreadFromCurvesAndPV-com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.basics.ReferenceData-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.pricer.CompoundedRateType-int-">zSpreadFromCurvesAndPV</a></span>(<a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBond</a>&nbsp;bond,
+<td class="colLast"><span class="typeNameLabel">DiscountingCapitalIndexedBondProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/DiscountingCapitalIndexedBondProductPricer.html#zSpreadFromCurvesAndPv-com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.basics.ReferenceData-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.pricer.CompoundedRateType-int-">zSpreadFromCurvesAndPv</a></span>(<a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBond</a>&nbsp;bond,
                       <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
                       <a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
                       <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData,
@@ -1568,6 +1574,20 @@
                       <a href="../../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
                       int&nbsp;periodsPerYear)</code>
 <div class="block">Calculates the z-spread of the bond from curves and present value.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><span class="typeNameLabel">DiscountingCapitalIndexedBondProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/DiscountingCapitalIndexedBondProductPricer.html#zSpreadFromCurvesAndPV-com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.basics.ReferenceData-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.pricer.CompoundedRateType-int-">zSpreadFromCurvesAndPV</a></span>(<a href="../../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBond</a>&nbsp;bond,
+                      <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                      <a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
+                      <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData,
+                      <a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;presentValue,
+                      <a href="../../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
+                      int&nbsp;periodsPerYear)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">Use <a href="../../../../../../com/opengamma/strata/pricer/bond/DiscountingCapitalIndexedBondProductPricer.html#zSpreadFromCurvesAndPv-com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.basics.ReferenceData-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.pricer.CompoundedRateType-int-"><code>DiscountingCapitalIndexedBondProductPricer.zSpreadFromCurvesAndPv(com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider, com.opengamma.strata.basics.ReferenceData, com.opengamma.strata.basics.currency.CurrencyAmount, com.opengamma.strata.pricer.CompoundedRateType, int)</code></a> which has the correct name</span></div>
+</div>
 </td>
 </tr>
 </tbody>
@@ -1776,6 +1796,13 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">AnalyticSpreadSensitivityCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/AnalyticSpreadSensitivityCalculator.html#parallelCs01-com.opengamma.strata.product.credit.ResolvedCdsTrade-java.util.List-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">parallelCs01</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
+            <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;bucketCds,
+            <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
+            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>abstract <a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SpreadSensitivityCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/SpreadSensitivityCalculator.html#parallelCs01-com.opengamma.strata.product.credit.ResolvedCdsTrade-java.util.List-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">parallelCs01</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
             <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;bucketCds,
@@ -1783,13 +1810,6 @@
             <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Computes parallel CS01 for CDS.</div>
 </td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">AnalyticSpreadSensitivityCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/credit/AnalyticSpreadSensitivityCalculator.html#parallelCs01-com.opengamma.strata.product.credit.ResolvedCdsTrade-java.util.List-com.opengamma.strata.pricer.credit.CreditRatesProvider-com.opengamma.strata.basics.ReferenceData-">parallelCs01</a></span>(<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&nbsp;trade,
-            <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/product/credit/ResolvedCdsTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsTrade</a>&gt;&nbsp;bucketCds,
-            <a href="../../../../../../com/opengamma/strata/pricer/credit/CreditRatesProvider.html" title="interface in com.opengamma.strata.pricer.credit">CreditRatesProvider</a>&nbsp;ratesProvider,
-            <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
@@ -2447,6 +2467,20 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BlackSwaptionTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/BlackSwaptionTradePricer.html#currentCash-com.opengamma.strata.product.swaption.ResolvedSwaptionTrade-java.time.LocalDate-">currentCash</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaptionTrade.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaptionTrade</a>&nbsp;trade,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate)</code>
+<div class="block">Calculates the current cash of the swaption trade.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">NormalSwaptionTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/NormalSwaptionTradePricer.html#currentCash-com.opengamma.strata.product.swaption.ResolvedSwaptionTrade-java.time.LocalDate-">currentCash</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaptionTrade.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaptionTrade</a>&nbsp;trade,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate)</code>
+<div class="block">Calculates the current cash of the swaption trade.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><span class="typeNameLabel">HullWhiteSwaptionPhysicalTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/HullWhiteSwaptionPhysicalTradePricer.html#currentCash-com.opengamma.strata.product.swaption.ResolvedSwaptionTrade-java.time.LocalDate-">currentCash</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaptionTrade.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaptionTrade</a>&nbsp;trade,
            <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate)</code>
 <div class="block">Calculates the current cash of the swaption trade.</div>
@@ -2461,20 +2495,6 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">NormalSwaptionTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/NormalSwaptionTradePricer.html#currentCash-com.opengamma.strata.product.swaption.ResolvedSwaptionTrade-java.time.LocalDate-">currentCash</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaptionTrade.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaptionTrade</a>&nbsp;trade,
-           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate)</code>
-<div class="block">Calculates the current cash of the swaption trade.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BlackSwaptionTradePricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/BlackSwaptionTradePricer.html#currentCash-com.opengamma.strata.product.swaption.ResolvedSwaptionTrade-java.time.LocalDate-">currentCash</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaptionTrade.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaptionTrade</a>&nbsp;trade,
-           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valuationDate)</code>
-<div class="block">Calculates the current cash of the swaption trade.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><span class="typeNameLabel">HullWhiteSwaptionPhysicalProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/HullWhiteSwaptionPhysicalProductPricer.html#presentValue-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.model.HullWhiteOneFactorPiecewiseConstantParametersProvider-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
             <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
             <a href="../../../../../../com/opengamma/strata/pricer/model/HullWhiteOneFactorPiecewiseConstantParametersProvider.html" title="class in com.opengamma.strata.pricer.model">HullWhiteOneFactorPiecewiseConstantParametersProvider</a>&nbsp;hwProvider)</code>
@@ -2483,7 +2503,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionPhysicalProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionPhysicalProductPricer.html#presentValue-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
+<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionProductPricer.html#presentValue-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
             <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
             <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
 <div class="block">Calculates the present value of the swaption.</div>
@@ -2491,7 +2511,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionCashParYieldProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionCashParYieldProductPricer.html#presentValue-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
+<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionPhysicalProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionPhysicalProductPricer.html#presentValue-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
             <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
             <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
 <div class="block">Calculates the present value of the swaption.</div>
@@ -2499,7 +2519,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionProductPricer.html#presentValue-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
+<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionCashParYieldProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionCashParYieldProductPricer.html#presentValue-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValue</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
             <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
             <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
 <div class="block">Calculates the present value of the swaption.</div>
@@ -2547,22 +2567,6 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionPhysicalProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionPhysicalProductPricer.html#presentValueDelta-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValueDelta</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
-                 <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                 <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
-<div class="block">Calculates the present value delta of the swaption.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionCashParYieldProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionCashParYieldProductPricer.html#presentValueDelta-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValueDelta</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
-                 <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                 <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
-<div class="block">Calculates the present value delta of the swaption.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><span class="typeNameLabel">VolatilitySwaptionProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionProductPricer.html#presentValueDelta-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValueDelta</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
                  <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
                  <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
@@ -2571,18 +2575,18 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionPhysicalProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionPhysicalProductPricer.html#presentValueGamma-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValueGamma</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
+<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionPhysicalProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionPhysicalProductPricer.html#presentValueDelta-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValueDelta</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
                  <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
                  <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
-<div class="block">Calculates the present value gamma of the swaption.</div>
+<div class="block">Calculates the present value delta of the swaption.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionCashParYieldProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionCashParYieldProductPricer.html#presentValueGamma-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValueGamma</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
+<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionCashParYieldProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionCashParYieldProductPricer.html#presentValueDelta-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValueDelta</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
                  <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
                  <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
-<div class="block">Calculates the present value gamma of the swaption.</div>
+<div class="block">Calculates the present value delta of the swaption.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -2595,7 +2599,23 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionPhysicalProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionPhysicalProductPricer.html#presentValueTheta-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValueTheta</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
+<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionPhysicalProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionPhysicalProductPricer.html#presentValueGamma-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValueGamma</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
+                 <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                 <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
+<div class="block">Calculates the present value gamma of the swaption.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionCashParYieldProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionCashParYieldProductPricer.html#presentValueGamma-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValueGamma</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
+                 <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                 <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
+<div class="block">Calculates the present value gamma of the swaption.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionProductPricer.html#presentValueTheta-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValueTheta</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
                  <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
                  <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
 <div class="block">Calculates the present value of the swaption.</div>
@@ -2603,7 +2623,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionCashParYieldProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionCashParYieldProductPricer.html#presentValueTheta-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValueTheta</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
+<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionPhysicalProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionPhysicalProductPricer.html#presentValueTheta-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValueTheta</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
                  <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
                  <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
 <div class="block">Calculates the present value of the swaption.</div>
@@ -2611,7 +2631,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionProductPricer.html#presentValueTheta-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValueTheta</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
+<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionCashParYieldProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionCashParYieldProductPricer.html#presentValueTheta-com.opengamma.strata.product.swaption.ResolvedSwaption-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.swaption.SwaptionVolatilities-">presentValueTheta</a></span>(<a href="../../../../../../com/opengamma/strata/product/swaption/ResolvedSwaption.html" title="class in com.opengamma.strata.product.swaption">ResolvedSwaption</a>&nbsp;swaption,
                  <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
                  <a href="../../../../../../com/opengamma/strata/pricer/swaption/SwaptionVolatilities.html" title="interface in com.opengamma.strata.pricer.swaption">SwaptionVolatilities</a>&nbsp;swaptionVolatilities)</code>
 <div class="block">Calculates the present value of the swaption.</div>
@@ -2719,13 +2739,13 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FxSingle.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/FxSingle.html#getReceiveCurrencyAmount--">getReceiveCurrencyAmount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedFxSingle.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/ResolvedFxSingle.html#getReceiveCurrencyAmount--">getReceiveCurrencyAmount</a></span>()</code>
 <div class="block">Gets the currency amount in which the amount is received.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedFxSingle.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/ResolvedFxSingle.html#getReceiveCurrencyAmount--">getReceiveCurrencyAmount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">FxSingle.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/FxSingle.html#getReceiveCurrencyAmount--">getReceiveCurrencyAmount</a></span>()</code>
 <div class="block">Gets the currency amount in which the amount is received.</div>
 </td>
 </tr>
@@ -2784,19 +2804,19 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/fx/FxSingle.html" title="class in com.opengamma.strata.product.fx">FxSingle</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FxSingle.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/FxSingle.html#of-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.basics.currency.CurrencyAmount-java.time.LocalDate-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount1,
-  <a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount2,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate)</code>
-<div class="block">Creates an <code>FxSingle</code> from two amounts and the value date.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/fx/ResolvedFxSingle.html" title="class in com.opengamma.strata.product.fx">ResolvedFxSingle</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedFxSingle.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/ResolvedFxSingle.html#of-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.basics.currency.CurrencyAmount-java.time.LocalDate-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount1,
   <a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount2,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;valueDate)</code>
 <div class="block">Creates an <code>ResolvedFxSingle</code> from two amounts and the value date.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/fx/FxSingle.html" title="class in com.opengamma.strata.product.fx">FxSingle</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FxSingle.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/FxSingle.html#of-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.basics.currency.CurrencyAmount-java.time.LocalDate-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount1,
+  <a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount2,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate)</code>
+<div class="block">Creates an <code>FxSingle</code> from two amounts and the value date.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -2809,19 +2829,19 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/fx/FxSingle.html" title="class in com.opengamma.strata.product.fx">FxSingle</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FxSingle.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/FxSingle.html#of-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.basics.currency.FxRate-java.time.LocalDate-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount,
-  <a href="../../../../../../com/opengamma/strata/basics/currency/FxRate.html" title="class in com.opengamma.strata.basics.currency">FxRate</a>&nbsp;fxRate,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate)</code>
-<div class="block">Creates an <code>FxSingle</code> using a rate.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/fx/ResolvedFxSingle.html" title="class in com.opengamma.strata.product.fx">ResolvedFxSingle</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedFxSingle.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/ResolvedFxSingle.html#of-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.basics.currency.FxRate-java.time.LocalDate-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amountCurrency1,
   <a href="../../../../../../com/opengamma/strata/basics/currency/FxRate.html" title="class in com.opengamma.strata.basics.currency">FxRate</a>&nbsp;fxRate,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate)</code>
 <div class="block">Creates an <code>ResolvedFxSingle</code> using a rate.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/fx/FxSingle.html" title="class in com.opengamma.strata.product.fx">FxSingle</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FxSingle.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fx/FxSingle.html#of-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.basics.currency.FxRate-java.time.LocalDate-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount,
+  <a href="../../../../../../com/opengamma/strata/basics/currency/FxRate.html" title="class in com.opengamma.strata.basics.currency">FxRate</a>&nbsp;fxRate,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate)</code>
+<div class="block">Creates an <code>FxSingle</code> using a rate.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -2893,27 +2913,27 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">FxSingleBarrierOption.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fxopt/FxSingleBarrierOption.html#getRebate--">getRebate</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedFxSingleBarrierOption.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOption.html#getRebate--">getRebate</a></span>()</code>
 <div class="block">Gets for a 'out' option, the amount is paid when the barrier is reached;
  for a 'in' option, the amount is paid at expiry if the barrier is not reached.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedFxSingleBarrierOption.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOption.html#getRebate--">getRebate</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">FxSingleBarrierOption.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fxopt/FxSingleBarrierOption.html#getRebate--">getRebate</a></span>()</code>
 <div class="block">Gets for a 'out' option, the amount is paid when the barrier is reached;
  for a 'in' option, the amount is paid at expiry if the barrier is not reached.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">FxSingleBarrierOption.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fxopt/FxSingleBarrierOption.Meta.html#rebate--">rebate</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedFxSingleBarrierOption.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOption.Meta.html#rebate--">rebate</a></span>()</code>
 <div class="block">The meta-property for the <code>rebate</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedFxSingleBarrierOption.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fxopt/ResolvedFxSingleBarrierOption.Meta.html#rebate--">rebate</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">FxSingleBarrierOption.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/fxopt/FxSingleBarrierOption.Meta.html#rebate--">rebate</a></span>()</code>
 <div class="block">The meta-property for the <code>rebate</code> property.</div>
 </td>
 </tr>
@@ -3015,7 +3035,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">KnownAmountNotionalSwapPaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountNotionalSwapPaymentPeriod.html#getNotionalAmount--">getNotionalAmount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">RatePaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RatePaymentPeriod.html#getNotionalAmount--">getNotionalAmount</a></span>()</code>
 <div class="block">Gets the notional amount, positive if receiving, negative if paying.</div>
 </td>
 </tr>
@@ -3027,7 +3047,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
-<td class="colLast"><span class="typeNameLabel">RatePaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RatePaymentPeriod.html#getNotionalAmount--">getNotionalAmount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">KnownAmountNotionalSwapPaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountNotionalSwapPaymentPeriod.html#getNotionalAmount--">getNotionalAmount</a></span>()</code>
 <div class="block">Gets the notional amount, positive if receiving, negative if paying.</div>
 </td>
 </tr>
@@ -3060,37 +3080,37 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">IborRateStubCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/IborRateStubCalculation.html#getKnownAmount--">getKnownAmount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">FixedRateStubCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/FixedRateStubCalculation.html#getKnownAmount--">getKnownAmount</a></span>()</code>
 <div class="block">Gets the known amount to pay/receive for the stub.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">FixedRateStubCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/FixedRateStubCalculation.html#getKnownAmount--">getKnownAmount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">IborRateStubCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/IborRateStubCalculation.html#getKnownAmount--">getKnownAmount</a></span>()</code>
 <div class="block">Gets the known amount to pay/receive for the stub.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">IborRateStubCalculation.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/IborRateStubCalculation.Meta.html#knownAmount--">knownAmount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">FixedRateStubCalculation.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/FixedRateStubCalculation.Meta.html#knownAmount--">knownAmount</a></span>()</code>
 <div class="block">The meta-property for the <code>knownAmount</code> property.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">FixedRateStubCalculation.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/FixedRateStubCalculation.Meta.html#knownAmount--">knownAmount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">IborRateStubCalculation.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/IborRateStubCalculation.Meta.html#knownAmount--">knownAmount</a></span>()</code>
 <div class="block">The meta-property for the <code>knownAmount</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">KnownAmountNotionalSwapPaymentPeriod.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountNotionalSwapPaymentPeriod.Meta.html#notionalAmount--">notionalAmount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">FxResetNotionalExchange.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.Meta.html#notionalAmount--">notionalAmount</a></span>()</code>
 <div class="block">The meta-property for the <code>notionalAmount</code> property.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">FxResetNotionalExchange.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/FxResetNotionalExchange.Meta.html#notionalAmount--">notionalAmount</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">KnownAmountNotionalSwapPaymentPeriod.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountNotionalSwapPaymentPeriod.Meta.html#notionalAmount--">notionalAmount</a></span>()</code>
 <div class="block">The meta-property for the <code>notionalAmount</code> property.</div>
 </td>
 </tr>
@@ -3154,14 +3174,14 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/swap/IborRateStubCalculation.html" title="class in com.opengamma.strata.product.swap">IborRateStubCalculation</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborRateStubCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/IborRateStubCalculation.html#ofKnownAmount-com.opengamma.strata.basics.currency.CurrencyAmount-">ofKnownAmount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;knownAmount)</code>
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/swap/FixedRateStubCalculation.html" title="class in com.opengamma.strata.product.swap">FixedRateStubCalculation</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FixedRateStubCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/FixedRateStubCalculation.html#ofKnownAmount-com.opengamma.strata.basics.currency.CurrencyAmount-">ofKnownAmount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;knownAmount)</code>
 <div class="block">Obtains an instance with a known amount of interest.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/swap/FixedRateStubCalculation.html" title="class in com.opengamma.strata.product.swap">FixedRateStubCalculation</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FixedRateStubCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/FixedRateStubCalculation.html#ofKnownAmount-com.opengamma.strata.basics.currency.CurrencyAmount-">ofKnownAmount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;knownAmount)</code>
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/swap/IborRateStubCalculation.html" title="class in com.opengamma.strata.product.swap">IborRateStubCalculation</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborRateStubCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/IborRateStubCalculation.html#ofKnownAmount-com.opengamma.strata.basics.currency.CurrencyAmount-">ofKnownAmount</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;knownAmount)</code>
 <div class="block">Obtains an instance with a known amount of interest.</div>
 </td>
 </tr>

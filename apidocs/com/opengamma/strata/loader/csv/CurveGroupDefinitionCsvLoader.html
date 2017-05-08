@@ -122,7 +122,10 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
    <li>The 'Curve Type' column is the type of the curve, "forward" or "discount".
    <li>The 'Reference' column is the reference the curve is used for, such as "USD" or "USD-LIBOR-3M".
    <li>The 'Curve Name' column is the name of the curve.
- </ul></div>
+ </ul>
+ <p>
+ CSV files sometimes contain a Unicode Byte Order Mark.
+ Callers are responsible for handling this, such as by using <a href="../../../../../com/opengamma/strata/collect/io/UnicodeBom.html" title="class in com.opengamma.strata.collect.io"><code>UnicodeBom</code></a>.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve"><code>CurveGroupDefinition</code></a></dd>

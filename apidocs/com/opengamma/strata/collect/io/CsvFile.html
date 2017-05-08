@@ -261,7 +261,10 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>of</h4>
 <pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/collect/io/CsvFile.html" title="class in com.opengamma.strata.collect.io">CsvFile</a>&nbsp;of(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/io/CharSource.html?is-external=true" title="class or interface in com.google.common.io">CharSource</a>&nbsp;source,
                          boolean&nbsp;headerRow)</pre>
-<div class="block">Parses the specified source as a CSV file, using a comma as the separator.</div>
+<div class="block">Parses the specified source as a CSV file, using a comma as the separator.
+ <p>
+ CSV files sometimes contain a Unicode Byte Order Mark.
+ Callers are responsible for handling this, such as by using <a href="../../../../../com/opengamma/strata/collect/io/UnicodeBom.html" title="class in com.opengamma.strata.collect.io"><code>UnicodeBom</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the CSV file resource</dd>
@@ -286,7 +289,10 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Parses the specified source as a CSV file where the separator is specified and might not be a comma.
  <p>
  This overload allows the separator to be controlled.
- For example, a tab-separated file is very similar to a CSV file, the only difference is the separator.</div>
+ For example, a tab-separated file is very similar to a CSV file, the only difference is the separator.
+ <p>
+ CSV files sometimes contain a Unicode Byte Order Mark.
+ Callers are responsible for handling this, such as by using <a href="../../../../../com/opengamma/strata/collect/io/UnicodeBom.html" title="class in com.opengamma.strata.collect.io"><code>UnicodeBom</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the file resource</dd>
@@ -315,7 +321,10 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
  as it allows the resource to be safely managed.
  <p>
  This factory method allows the separator to be controlled.
- For example, a tab-separated file is very similar to a CSV file, the only difference is the separator.</div>
+ For example, a tab-separated file is very similar to a CSV file, the only difference is the separator.
+ <p>
+ CSV files sometimes contain a Unicode Byte Order Mark.
+ Callers are responsible for handling this, such as by using <a href="../../../../../com/opengamma/strata/collect/io/UnicodeBom.html" title="class in com.opengamma.strata.collect.io"><code>UnicodeBom</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>reader</code> - the file resource</dd>
@@ -344,7 +353,10 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
  as it allows the resource to be safely managed.
  <p>
  This factory method allows the separator to be controlled.
- For example, a tab-separated file is very similar to a CSV file, the only difference is the separator.</div>
+ For example, a tab-separated file is very similar to a CSV file, the only difference is the separator.
+ <p>
+ CSV files sometimes contain a Unicode Byte Order Mark.
+ Callers are responsible for handling this, such as by using <a href="../../../../../com/opengamma/strata/collect/io/UnicodeBom.html" title="class in com.opengamma.strata.collect.io"><code>UnicodeBom</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>reader</code> - the file resource</dd>

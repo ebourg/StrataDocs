@@ -135,7 +135,10 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
  2014-01-22, OG-FutOpt, Eurex-OGBL-Mar14-C150, MarketValue, 1.5
  2014-01-22, OG-Future, CME-ED-Mar14, MarketValue, 99.620
  </pre>
- Note that Microsoft Excel prefers the CSV file to have no space after the comma.</div>
+ Note that Microsoft Excel prefers the CSV file to have no space after the comma.
+ <p>
+ CSV files sometimes contain a Unicode Byte Order Mark.
+ Callers are responsible for handling this, such as by using <a href="../../../../../com/opengamma/strata/collect/io/UnicodeBom.html" title="class in com.opengamma.strata.collect.io"><code>UnicodeBom</code></a>.</div>
 </li>
 </ul>
 </div>

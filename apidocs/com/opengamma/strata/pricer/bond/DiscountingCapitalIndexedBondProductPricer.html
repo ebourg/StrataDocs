@@ -18,8 +18,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":42};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -172,7 +172,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t6" class="tableTab"><span><a href="javascript:show(32);">Deprecated Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
@@ -439,7 +439,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </tr>
 <tr id="i28" class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingCapitalIndexedBondProductPricer.html#zSpreadFromCurvesAndPV-com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.basics.ReferenceData-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.pricer.CompoundedRateType-int-">zSpreadFromCurvesAndPV</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBond</a>&nbsp;bond,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingCapitalIndexedBondProductPricer.html#zSpreadFromCurvesAndPv-com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.basics.ReferenceData-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.pricer.CompoundedRateType-int-">zSpreadFromCurvesAndPv</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBond</a>&nbsp;bond,
                       <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
                       <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
                       <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData,
@@ -447,6 +447,20 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
                       <a href="../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
                       int&nbsp;periodsPerYear)</code>
 <div class="block">Calculates the z-spread of the bond from curves and present value.</div>
+</td>
+</tr>
+<tr id="i29" class="rowColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingCapitalIndexedBondProductPricer.html#zSpreadFromCurvesAndPV-com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.basics.ReferenceData-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.pricer.CompoundedRateType-int-">zSpreadFromCurvesAndPV</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBond</a>&nbsp;bond,
+                      <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                      <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
+                      <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData,
+                      <a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;presentValue,
+                      <a href="../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
+                      int&nbsp;periodsPerYear)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">Use <a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingCapitalIndexedBondProductPricer.html#zSpreadFromCurvesAndPv-com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.basics.ReferenceData-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.pricer.CompoundedRateType-int-"><code>zSpreadFromCurvesAndPv(com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider, com.opengamma.strata.basics.ReferenceData, com.opengamma.strata.basics.currency.CurrencyAmount, com.opengamma.strata.pricer.CompoundedRateType, int)</code></a> which has the correct name</span></div>
+</div>
 </td>
 </tr>
 </table>
@@ -1238,10 +1252,44 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <a name="zSpreadFromCurvesAndPV-com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.basics.ReferenceData-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.pricer.CompoundedRateType-int-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>zSpreadFromCurvesAndPV</h4>
-<pre>public&nbsp;double&nbsp;zSpreadFromCurvesAndPV(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBond</a>&nbsp;bond,
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public&nbsp;double&nbsp;zSpreadFromCurvesAndPV(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBond</a>&nbsp;bond,
+                                                 <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                                                 <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
+                                                 <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData,
+                                                 <a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;presentValue,
+                                                 <a href="../../../../../com/opengamma/strata/pricer/CompoundedRateType.html" title="enum in com.opengamma.strata.pricer">CompoundedRateType</a>&nbsp;compoundedRateType,
+                                                 int&nbsp;periodsPerYear)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use <a href="../../../../../com/opengamma/strata/pricer/bond/DiscountingCapitalIndexedBondProductPricer.html#zSpreadFromCurvesAndPv-com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.basics.ReferenceData-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.pricer.CompoundedRateType-int-"><code>zSpreadFromCurvesAndPv(com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond, com.opengamma.strata.pricer.rate.RatesProvider, com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider, com.opengamma.strata.basics.ReferenceData, com.opengamma.strata.basics.currency.CurrencyAmount, com.opengamma.strata.pricer.CompoundedRateType, int)</code></a> which has the correct name</span></div>
+<div class="block">Calculates the z-spread of the bond from curves and present value.
+ <p>
+ The z-spread is a parallel shift applied to continuously compounded rates or periodic
+ compounded rates of the discounting curve associated to the bond (Issuer Entity)
+ to match the present value.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>bond</code> - the product</dd>
+<dd><code>ratesProvider</code> - the rates provider, used to determine price index values</dd>
+<dd><code>discountingProvider</code> - the discount factors provider</dd>
+<dd><code>refData</code> - the reference data used to calculate the settlement date</dd>
+<dd><code>presentValue</code> - the present value</dd>
+<dd><code>compoundedRateType</code> - the compounded rate type</dd>
+<dd><code>periodsPerYear</code> - the number of periods per year</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the z-spread of the bond product</dd>
+</dl>
+</li>
+</ul>
+<a name="zSpreadFromCurvesAndPv-com.opengamma.strata.product.bond.ResolvedCapitalIndexedBond-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-com.opengamma.strata.basics.ReferenceData-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.pricer.CompoundedRateType-int-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>zSpreadFromCurvesAndPv</h4>
+<pre>public&nbsp;double&nbsp;zSpreadFromCurvesAndPv(<a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBond</a>&nbsp;bond,
                                      <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
                                      <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;discountingProvider,
                                      <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData,

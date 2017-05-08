@@ -227,7 +227,10 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Parses the specified source as a properties file.
  <p>
  This parses the specified character source expecting a properties file format.
- The resulting instance can be queried for each key and value.</div>
+ The resulting instance can be queried for each key and value.
+ <p>
+ Properties files sometimes contain a Unicode Byte Order Mark.
+ Callers are responsible for handling this, such as by using <a href="../../../../../com/opengamma/strata/collect/io/UnicodeBom.html" title="class in com.opengamma.strata.collect.io"><code>UnicodeBom</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the properties file resource</dd>

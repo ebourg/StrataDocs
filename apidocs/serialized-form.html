@@ -249,12 +249,14 @@
 <h4>currency</h4>
 <pre><a href="com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a> currency</pre>
 <div class="block">The currency.
+ <p>
  For example, in the value 'GBP 12.34' the currency is 'GBP'.</div>
 </li>
 <li class="blockListLast">
 <h4>amount</h4>
 <pre>double amount</pre>
 <div class="block">The amount of the currency.
+ <p>
  For example, in the value 'GBP 12.34' the amount is 12.34.</div>
 </li>
 </ul>
@@ -385,6 +387,36 @@
 <pre>double rate</pre>
 <div class="block">The rate applicable to the currency pair.
  One unit of the base currency is exchanged for this amount of the counter currency.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.basics.currency.Money">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/basics/currency/Money.html" title="class in com.opengamma.strata.basics.currency">com.opengamma.strata.basics.currency.Money</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>currency</h4>
+<pre><a href="com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a> currency</pre>
+<div class="block">The currency.
+ <p>
+ For example, in the value 'GBP 12.34' the currency is 'GBP'.</div>
+</li>
+<li class="blockListLast">
+<h4>amount</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a> amount</pre>
+<div class="block">The amount of the currency.
+ <p>
+ For example, in the value 'GBP 12.34' the amount is 12.34.</div>
 </li>
 </ul>
 </li>
@@ -2866,6 +2898,74 @@
 <li class="blockList">
 <h2 title="Package">Package&nbsp;com.opengamma.strata.market</h2>
 <ul class="blockList">
+<li class="blockList"><a name="com.opengamma.strata.market.FxRateShifts">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/market/FxRateShifts.html" title="class in com.opengamma.strata.market">com.opengamma.strata.market.FxRateShifts</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>shiftType</h4>
+<pre><a href="com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a> shiftType</pre>
+<div class="block">The type of shift applied to the FX rate.</div>
+</li>
+<li class="blockList">
+<h4>shiftAmount</h4>
+<pre><a href="com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a> shiftAmount</pre>
+<div class="block">The shifts to apply to <code>FxRate</code>.
+ <p>
+ Each element in the array corresponds to each scenario.</div>
+</li>
+<li class="blockListLast">
+<h4>currencyPair</h4>
+<pre><a href="com/opengamma/strata/basics/currency/CurrencyPair.html" title="class in com.opengamma.strata.basics.currency">CurrencyPair</a> currencyPair</pre>
+<div class="block">The currency pair for which the shifts are applied.
+ <p>
+ This also defines the direction of the FX rate to be shifted.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.market.GenericDoubleShifts">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/market/GenericDoubleShifts.html" title="class in com.opengamma.strata.market">com.opengamma.strata.market.GenericDoubleShifts</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>shiftType</h4>
+<pre><a href="com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a> shiftType</pre>
+<div class="block">The type of shift applied to a <code>Double</code> value.</div>
+</li>
+<li class="blockList">
+<h4>shiftAmount</h4>
+<pre><a href="com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a> shiftAmount</pre>
+<div class="block">The shifts to apply to a <code>Double</code> value.
+ <p>
+ Each element in the array corresponds to each scenario.</div>
+</li>
+<li class="blockListLast">
+<h4>spread</h4>
+<pre>double spread</pre>
+<div class="block">The constant spread.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.market.ValueType">
 <!--   -->
 </a>
@@ -12500,6 +12600,32 @@
 </ul>
 </li>
 <li class="blockList">
+<h2 title="Package">Package&nbsp;com.opengamma.strata.product.common</h2>
+<ul class="blockList">
+<li class="blockList"><a name="com.opengamma.strata.product.common.ExchangeId">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/product/common/ExchangeId.html" title="class in com.opengamma.strata.product.common">com.opengamma.strata.product.common.ExchangeId</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockListLast">
+<h4>name</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> name</pre>
+<div class="block">The Market Identifier Code (MIC) identifying the exchange.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList">
 <h2 title="Package">Package&nbsp;com.opengamma.strata.product.credit</h2>
 <ul class="blockList">
 <li class="blockList"><a name="com.opengamma.strata.product.credit.Cds">
@@ -14369,6 +14495,443 @@
  Strata uses <i>decimal prices</i> for DSFs in the trade model, pricers and market data.
  The decimal price is based on the decimal multiplier equivalent to the implied percentage.
  Thus the market price of 100.182 is represented in Strata by 1.00182.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList">
+<h2 title="Package">Package&nbsp;com.opengamma.strata.product.etd</h2>
+<ul class="blockList">
+<li class="blockList"><a name="com.opengamma.strata.product.etd.EtdContractCode">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/product/etd/EtdContractCode.html" title="class in com.opengamma.strata.product.etd">com.opengamma.strata.product.etd.EtdContractCode</a> extends <a href="com/opengamma/strata/collect/TypedString.html" title="class in com.opengamma.strata.collect">TypedString</a>&lt;<a href="com/opengamma/strata/product/etd/EtdContractCode.html" title="class in com.opengamma.strata.product.etd">EtdContractCode</a>&gt; implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.product.etd.EtdContractSpec">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/product/etd/EtdContractSpec.html" title="class in com.opengamma.strata.product.etd">com.opengamma.strata.product.etd.EtdContractSpec</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>id</h4>
+<pre><a href="com/opengamma/strata/product/etd/EtdContractSpecId.html" title="class in com.opengamma.strata.product.etd">EtdContractSpecId</a> id</pre>
+<div class="block">The ID of this contract specification.
+ <p>
+ When building, this will be defaulted using <a href="com/opengamma/strata/product/etd/EtdIdUtils.html" title="class in com.opengamma.strata.product.etd"><code>EtdIdUtils</code></a>.</div>
+</li>
+<li class="blockList">
+<h4>type</h4>
+<pre><a href="com/opengamma/strata/product/etd/EtdType.html" title="enum in com.opengamma.strata.product.etd">EtdType</a> type</pre>
+<div class="block">The type of the contract - future or option.</div>
+</li>
+<li class="blockList">
+<h4>exchangeId</h4>
+<pre><a href="com/opengamma/strata/product/common/ExchangeId.html" title="class in com.opengamma.strata.product.common">ExchangeId</a> exchangeId</pre>
+<div class="block">The ID of the exchange where the instruments derived from the product are traded.</div>
+</li>
+<li class="blockList">
+<h4>contractCode</h4>
+<pre><a href="com/opengamma/strata/product/etd/EtdContractCode.html" title="class in com.opengamma.strata.product.etd">EtdContractCode</a> contractCode</pre>
+<div class="block">The code supplied by the exchange for use in clearing and margining, such as in SPAN.</div>
+</li>
+<li class="blockList">
+<h4>description</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> description</pre>
+<div class="block">The human readable description of the product.</div>
+</li>
+<li class="blockList">
+<h4>priceInfo</h4>
+<pre><a href="com/opengamma/strata/product/SecurityPriceInfo.html" title="class in com.opengamma.strata.product">SecurityPriceInfo</a> priceInfo</pre>
+<div class="block">The information about the security price.
+ This includes details of the currency, tick size, tick value, contract size.</div>
+</li>
+<li class="blockListLast">
+<h4>attributes</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">K</a>,<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">V</a>&gt; attributes</pre>
+<div class="block">The attributes.
+ <p>
+ Security attributes, provide the ability to associate arbitrary information
+ with a security contract specification in a key-value map.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.product.etd.EtdContractSpecId">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/product/etd/EtdContractSpecId.html" title="class in com.opengamma.strata.product.etd">com.opengamma.strata.product.etd.EtdContractSpecId</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialization Methods</h3>
+<ul class="blockList">
+<li class="blockListLast">
+<h4>readResolve</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;readResolve()</pre>
+</li>
+</ul>
+</li>
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockListLast">
+<h4>standardId</h4>
+<pre><a href="com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a> standardId</pre>
+<div class="block">The identifier, expressed as a standard two-part identifier.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.product.etd.EtdFuturePosition">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/product/etd/EtdFuturePosition.html" title="class in com.opengamma.strata.product.etd">com.opengamma.strata.product.etd.EtdFuturePosition</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>info</h4>
+<pre><a href="com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a> info</pre>
+<div class="block">The additional position information, defaulted to an empty instance.
+ <p>
+ This allows additional information to be attached to the position.</div>
+</li>
+<li class="blockList">
+<h4>security</h4>
+<pre><a href="com/opengamma/strata/product/etd/EtdFutureSecurity.html" title="class in com.opengamma.strata.product.etd">EtdFutureSecurity</a> security</pre>
+<div class="block">The underlying security.</div>
+</li>
+<li class="blockList">
+<h4>longQuantity</h4>
+<pre>double longQuantity</pre>
+<div class="block">The long quantity of the security.
+ <p>
+ This is the quantity of the underlying security that is held.
+ The quantity cannot be negative, as that would imply short selling.</div>
+</li>
+<li class="blockListLast">
+<h4>shortQuantity</h4>
+<pre>double shortQuantity</pre>
+<div class="block">The short quantity of the security.
+ <p>
+ This is the quantity of the underlying security that has been short sold.
+ The quantity cannot be negative, as that would imply the position is long.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.product.etd.EtdFutureSecurity">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/product/etd/EtdFutureSecurity.html" title="class in com.opengamma.strata.product.etd">com.opengamma.strata.product.etd.EtdFutureSecurity</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>info</h4>
+<pre><a href="com/opengamma/strata/product/SecurityInfo.html" title="class in com.opengamma.strata.product">SecurityInfo</a> info</pre>
+<div class="block">The standard security information.
+ <p>
+ This includes the security identifier.</div>
+</li>
+<li class="blockList">
+<h4>contractSpecId</h4>
+<pre><a href="com/opengamma/strata/product/etd/EtdContractSpecId.html" title="class in com.opengamma.strata.product.etd">EtdContractSpecId</a> contractSpecId</pre>
+<div class="block">The ID of the contract specification from which this security is derived.</div>
+</li>
+<li class="blockList">
+<h4>expiry</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html?is-external=true" title="class or interface in java.time">YearMonth</a> expiry</pre>
+<div class="block">The year-month of the expiry.
+ <p>
+ Expiry will occur on a date implied by the variant of the ETD.</div>
+</li>
+<li class="blockListLast">
+<h4>variant</h4>
+<pre><a href="com/opengamma/strata/product/etd/EtdVariant.html" title="class in com.opengamma.strata.product.etd">EtdVariant</a> variant</pre>
+<div class="block">The variant of ETD.
+ <p>
+ This captures the variant of the ETD. The most common variant is 'Monthly'.
+ Other variants are 'Weekly', 'Daily' and 'Flex'.
+ <p>
+ When building, this defaults to 'Monthly'.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.product.etd.EtdFutureTrade">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/product/etd/EtdFutureTrade.html" title="class in com.opengamma.strata.product.etd">com.opengamma.strata.product.etd.EtdFutureTrade</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>info</h4>
+<pre><a href="com/opengamma/strata/product/TradeInfo.html" title="class in com.opengamma.strata.product">TradeInfo</a> info</pre>
+<div class="block">The additional trade information, defaulted to an empty instance.
+ <p>
+ This allows additional information to be attached to the trade.</div>
+</li>
+<li class="blockList">
+<h4>security</h4>
+<pre><a href="com/opengamma/strata/product/etd/EtdFutureSecurity.html" title="class in com.opengamma.strata.product.etd">EtdFutureSecurity</a> security</pre>
+<div class="block">The security that was traded.</div>
+</li>
+<li class="blockList">
+<h4>quantity</h4>
+<pre>double quantity</pre>
+<div class="block">The quantity that was traded.
+ <p>
+ This is the number of contracts that were traded.
+ This will be positive if buying and negative if selling.</div>
+</li>
+<li class="blockListLast">
+<h4>price</h4>
+<pre>double price</pre>
+<div class="block">The price that was traded, in decimal form.
+ <p>
+ This is the price agreed when the trade occurred.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.product.etd.EtdOptionPosition">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/product/etd/EtdOptionPosition.html" title="class in com.opengamma.strata.product.etd">com.opengamma.strata.product.etd.EtdOptionPosition</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>info</h4>
+<pre><a href="com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a> info</pre>
+<div class="block">The additional position information, defaulted to an empty instance.
+ <p>
+ This allows additional information to be attached to the position.</div>
+</li>
+<li class="blockList">
+<h4>security</h4>
+<pre><a href="com/opengamma/strata/product/etd/EtdOptionSecurity.html" title="class in com.opengamma.strata.product.etd">EtdOptionSecurity</a> security</pre>
+<div class="block">The underlying security.</div>
+</li>
+<li class="blockList">
+<h4>longQuantity</h4>
+<pre>double longQuantity</pre>
+<div class="block">The long quantity of the security.
+ <p>
+ This is the quantity of the underlying security that is held.
+ The quantity cannot be negative, as that would imply short selling.</div>
+</li>
+<li class="blockListLast">
+<h4>shortQuantity</h4>
+<pre>double shortQuantity</pre>
+<div class="block">The short quantity of the security.
+ <p>
+ This is the quantity of the underlying security that has been short sold.
+ The quantity cannot be negative, as that would imply the position is long.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.product.etd.EtdOptionSecurity">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/product/etd/EtdOptionSecurity.html" title="class in com.opengamma.strata.product.etd">com.opengamma.strata.product.etd.EtdOptionSecurity</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>info</h4>
+<pre><a href="com/opengamma/strata/product/SecurityInfo.html" title="class in com.opengamma.strata.product">SecurityInfo</a> info</pre>
+<div class="block">The standard security information.
+ <p>
+ This includes the security identifier.</div>
+</li>
+<li class="blockList">
+<h4>contractSpecId</h4>
+<pre><a href="com/opengamma/strata/product/etd/EtdContractSpecId.html" title="class in com.opengamma.strata.product.etd">EtdContractSpecId</a> contractSpecId</pre>
+<div class="block">The ID of the contract specification from which this security is derived.</div>
+</li>
+<li class="blockList">
+<h4>expiry</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html?is-external=true" title="class or interface in java.time">YearMonth</a> expiry</pre>
+<div class="block">The year-month of the expiry.
+ <p>
+ Expiry will occur on a date implied by the variant of the ETD.</div>
+</li>
+<li class="blockList">
+<h4>variant</h4>
+<pre><a href="com/opengamma/strata/product/etd/EtdVariant.html" title="class in com.opengamma.strata.product.etd">EtdVariant</a> variant</pre>
+<div class="block">The variant of ETD.
+ <p>
+ This captures the variant of the ETD. The most common variant is 'Monthly'.
+ Other variants are 'Weekly', 'Daily' and 'Flex'.
+ <p>
+ When building, this defaults to 'Monthly'.</div>
+</li>
+<li class="blockList">
+<h4>version</h4>
+<pre>int version</pre>
+<div class="block">The version of the option, defaulted to zero.
+ <p>
+ Some options can have multiple versions, representing some kind of change over time.
+ Version zero is the baseline, version one and later indicates some kind of change occurred.</div>
+</li>
+<li class="blockList">
+<h4>putCall</h4>
+<pre><a href="com/opengamma/strata/product/common/PutCall.html" title="enum in com.opengamma.strata.product.common">PutCall</a> putCall</pre>
+<div class="block">Whether the option is a put or call.</div>
+</li>
+<li class="blockListLast">
+<h4>strikePrice</h4>
+<pre>double strikePrice</pre>
+<div class="block">The strike price, in decimal form, may be negative.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.product.etd.EtdOptionTrade">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/product/etd/EtdOptionTrade.html" title="class in com.opengamma.strata.product.etd">com.opengamma.strata.product.etd.EtdOptionTrade</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>info</h4>
+<pre><a href="com/opengamma/strata/product/TradeInfo.html" title="class in com.opengamma.strata.product">TradeInfo</a> info</pre>
+<div class="block">The additional trade information, defaulted to an empty instance.
+ <p>
+ This allows additional information to be attached to the trade.</div>
+</li>
+<li class="blockList">
+<h4>security</h4>
+<pre><a href="com/opengamma/strata/product/etd/EtdOptionSecurity.html" title="class in com.opengamma.strata.product.etd">EtdOptionSecurity</a> security</pre>
+<div class="block">The security that was traded.</div>
+</li>
+<li class="blockList">
+<h4>quantity</h4>
+<pre>double quantity</pre>
+<div class="block">The quantity that was traded.
+ <p>
+ This is the number of contracts that were traded.
+ This will be positive if buying and negative if selling.</div>
+</li>
+<li class="blockListLast">
+<h4>price</h4>
+<pre>double price</pre>
+<div class="block">The price that was traded, in decimal form.
+ <p>
+ This is the price agreed when the trade occurred.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.product.etd.EtdVariant">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/product/etd/EtdVariant.html" title="class in com.opengamma.strata.product.etd">com.opengamma.strata.product.etd.EtdVariant</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialization Methods</h3>
+<ul class="blockList">
+<li class="blockListLast">
+<h4>readResolve</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;readResolve()</pre>
+</li>
+</ul>
+</li>
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>type</h4>
+<pre><a href="com/opengamma/strata/product/etd/EtdExpiryType.html" title="enum in com.opengamma.strata.product.etd">EtdExpiryType</a> type</pre>
+<div class="block">The type of ETD - Monthly, Weekly or Daily.
+ <p>
+ Flex Futures and Options are always Daily.</div>
+</li>
+<li class="blockList">
+<h4>dateCode</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a> dateCode</pre>
+<div class="block">The optional date code, populated for Weekly and Daily.
+ <p>
+ This will be the week number for Weekly and the day-of-week for Daily.</div>
+</li>
+<li class="blockList">
+<h4>settlementType</h4>
+<pre><a href="com/opengamma/strata/product/etd/EtdSettlementType.html" title="enum in com.opengamma.strata.product.etd">EtdSettlementType</a> settlementType</pre>
+<div class="block">The optional settlement type, such as 'Cash' or 'Physical', populated for Flex Futures and Flex Options.</div>
+</li>
+<li class="blockList">
+<h4>optionType</h4>
+<pre><a href="com/opengamma/strata/product/etd/EtdOptionType.html" title="enum in com.opengamma.strata.product.etd">EtdOptionType</a> optionType</pre>
+<div class="block">The optional option type, 'American' or 'European', populated for Flex Options.</div>
+</li>
+<li class="blockListLast">
+<h4>code</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> code</pre>
+<div class="block">The short code.</div>
 </li>
 </ul>
 </li>

@@ -6,6 +6,36 @@ permalink: /releases/
 Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
+## Strata v1.3
+
+*5 May 2017*
+
+This release contains [61 fixed issues](https://github.com/OpenGamma/Strata/milestone/13?closed=1).
+
+* Domain model for ETD futures/options
+[#1488](https://github.com/OpenGamma/Strata/pull/1488),
+[#1496](https://github.com/OpenGamma/Strata/pull/1496),
+[#1497](https://github.com/OpenGamma/Strata/pull/1497),
+[#1508](https://github.com/OpenGamma/Strata/pull/1508)
+* More lenient schedule calculator
+[#1515](https://github.com/OpenGamma/Strata/pull/1515)
+* Better support for Unicode file formats
+[#1511](https://github.com/OpenGamma/Strata/pull/1511),
+[#1514](https://github.com/OpenGamma/Strata/pull/1514)
+
+#### Compatibility
+
+The method `DiscountingCapitalIndexedBondProductPricer::zSpreadFromCurvesAndPV` was renamed to
+`DiscountingCapitalIndexedBondProductPricer::zSpreadFromCurvesAndPv`, with the old name deprecated.
+
+The Joda-Beans dependency was updated, and some methods are now deprecated.
+It is unlikely that these methods were in use, but if they were, consult the Joda-Beans documentation.
+
+The quantile calculation methods have changed return type, but these are in an internal package
+and should not have been used directly.
+
+
+
 ## Strata v1.2
 
 *8 March 2017*

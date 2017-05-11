@@ -10,7 +10,7 @@ To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obt
 
 *5 May 2017*
 
-This release contains [61 fixed issues](https://github.com/OpenGamma/Strata/milestone/13?closed=1).
+This release contains [19 fixed issues](https://github.com/OpenGamma/Strata/milestone/13?closed=1).
 
 * Domain model for ETD futures/options
 [#1488](https://github.com/OpenGamma/Strata/pull/1488),

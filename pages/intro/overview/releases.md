@@ -6,6 +6,16 @@ permalink: /releases/
 Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
+## Strata v1.3.1
+
+*26 June 2017*
+
+This minor release contains 2 fixed issues - 1 bug fix and 1 enhancement.
+
+* Bug fix - Floating rate names for MXN were not processed correctly: [#1523](https://github.com/OpenGamma/Strata/issues/1523)
+* Enhancement - Add low level ArrayByteSource utility class: [#1524](https://github.com/OpenGamma/Strata/issues/1524)
+
+
 ## Strata v1.3
 
 *5 May 2017*

@@ -67,6 +67,7 @@ extended externally, and for it to become the industry standard with its own dev
 
 ## Awards
 
-Strata won the [Duke's Choice Award for Financial Services 2016](https://www.oracle.com/javaone/dukes-choice-award.html):
+Strata won the [Duke's Choice Award for Financial Services 2016](https://web.archive.org/web/20170101145841/https://www.oracle.com/javaone/dukes-choice-award.html),
+presented at JavaOne:
 
 <img style="max-width:100%;width:30%;height:auto;" alt="Duke's Choice award 2016" src="{{site.baseurl}}/images/dukeschoice.png" />

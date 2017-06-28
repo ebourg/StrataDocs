@@ -6,6 +6,18 @@ permalink: /releases/
 Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
+## Strata v1.3.2
+
+*28 June 2017*
+
+This minor release contains 2 fixed issues - 1 bug fix and 1 enhancement.
+
+* Bug fix - Schedule generation enhancements:
+[#1526](https://github.com/OpenGamma/Strata/issues/1526),
+[#1527](https://github.com/OpenGamma/Strata/issues/1527)
+* Enhancement - Update Joda-Convert to v1.8.2
+
+
 ## Strata v1.3.1
 
 *26 June 2017*

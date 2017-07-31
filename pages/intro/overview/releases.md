@@ -6,6 +6,17 @@ permalink: /releases/
 Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
+## Strata v1.3.3
+
+*31 July 2017*
+
+This minor release contains 1 fixed issue.
+
+* Bug fix - Inflation swap conventions:
+[#1539](https://github.com/OpenGamma/Strata/issues/1539),
+[#1535](https://github.com/OpenGamma/Strata/issues/1535)
+
+
 ## Strata v1.3.2
 
 *28 June 2017*

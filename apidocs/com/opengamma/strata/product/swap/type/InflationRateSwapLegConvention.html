@@ -18,8 +18,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":9,"i9":10,"i10":9,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10};
-var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":9,"i9":10,"i10":41,"i11":9,"i12":10,"i13":10,"i14":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -165,7 +165,7 @@ implements <a href="../../../../../../com/opengamma/strata/product/swap/type/Swa
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t6" class="tableTab"><span><a href="javascript:show(32);">Deprecated Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
@@ -230,24 +230,27 @@ implements <a href="../../../../../../com/opengamma/strata/product/swap/type/Swa
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.html#of-com.opengamma.strata.basics.index.PriceIndex-java.time.Period-com.opengamma.strata.basics.date.BusinessDayAdjustment-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&nbsp;index,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;lag,
   <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</code>
-<div class="block">Obtains a convention based on the specified index.</div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">Use of() method which takes <a href="../../../../../../com/opengamma/strata/product/swap/PriceIndexCalculationMethod.html" title="enum in com.opengamma.strata.product.swap"><code>PriceIndexCalculationMethod</code></a> parameter</span></div>
+</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
-<td class="colFirst"><code>&lt;R&gt;&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Property.html?is-external=true" title="class or interface in org.joda.beans">Property</a>&lt;R&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.html#property-java.lang.String-">property</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.html" title="class in com.opengamma.strata.product.swap.type">InflationRateSwapLegConvention</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.html#of-com.opengamma.strata.basics.index.PriceIndex-java.time.Period-com.opengamma.strata.product.swap.PriceIndexCalculationMethod-com.opengamma.strata.basics.date.BusinessDayAdjustment-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&nbsp;index,
+  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;lag,
+  <a href="../../../../../../com/opengamma/strata/product/swap/PriceIndexCalculationMethod.html" title="enum in com.opengamma.strata.product.swap">PriceIndexCalculationMethod</a>&nbsp;priceIndexCalculationMethod,
+  <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</code>
+<div class="block">Obtains a convention based on the specified index.</div>
+</td>
 </tr>
 <tr id="i12" class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.html#propertyNames--">propertyNames</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.Builder.html" title="class in com.opengamma.strata.product.swap.type">InflationRateSwapLegConvention.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.html#toBuilder--">toBuilder</a></span>()</code>
 <div class="block">Returns a builder that allows this bean to be mutated.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/RateCalculationSwapLeg.html" title="class in com.opengamma.strata.product.swap">RateCalculationSwapLeg</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.html#toLeg-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.product.common.PayReceive-double-">toLeg</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
      <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate,
@@ -256,7 +259,7 @@ implements <a href="../../../../../../com/opengamma/strata/product/swap/type/Swa
 <div class="block">Creates a leg based on this convention.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -267,6 +270,13 @@ implements <a href="../../../../../../com/opengamma/strata/product/swap/type/Swa
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
 <code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.org.joda.beans.Bean">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;org.joda.beans.<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a></h3>
+<code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true#property-java.lang.String-" title="class or interface in org.joda.beans">property</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true#propertyNames--" title="class or interface in org.joda.beans">propertyNames</a></code></li>
 </ul>
 </li>
 </ul>
@@ -288,8 +298,34 @@ implements <a href="../../../../../../com/opengamma/strata/product/swap/type/Swa
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public static&nbsp;<a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.html" title="class in com.opengamma.strata.product.swap.type">InflationRateSwapLegConvention</a>&nbsp;of(<a href="../../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&nbsp;index,
+                                                            <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;lag,
+                                                            <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use of() method which takes <a href="../../../../../../com/opengamma/strata/product/swap/PriceIndexCalculationMethod.html" title="enum in com.opengamma.strata.product.swap"><code>PriceIndexCalculationMethod</code></a> parameter</span></div>
+<div class="block">Obtains a convention based on the specified index, defaulting the PriceIndexCalculationMethod to MONTHLY.
+ <p>
+ The standard market convention for an Inflation rate leg is based on the index.
+ Use the <a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.html#builder--">builder</a> for unusual conventions.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>index</code> - the index, the market convention values are extracted from the index</dd>
+<dd><code>lag</code> - the lag between the price index and the accrual date, typically a number of months</dd>
+<dd><code>businessDayAdjustment</code> - the business day</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the convention</dd>
+</dl>
+</li>
+</ul>
+<a name="of-com.opengamma.strata.basics.index.PriceIndex-java.time.Period-com.opengamma.strata.product.swap.PriceIndexCalculationMethod-com.opengamma.strata.basics.date.BusinessDayAdjustment-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>of</h4>
 <pre>public static&nbsp;<a href="../../../../../../com/opengamma/strata/product/swap/type/InflationRateSwapLegConvention.html" title="class in com.opengamma.strata.product.swap.type">InflationRateSwapLegConvention</a>&nbsp;of(<a href="../../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&nbsp;index,
                                                 <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;lag,
+                                                <a href="../../../../../../com/opengamma/strata/product/swap/PriceIndexCalculationMethod.html" title="enum in com.opengamma.strata.product.swap">PriceIndexCalculationMethod</a>&nbsp;priceIndexCalculationMethod,
                                                 <a href="../../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;businessDayAdjustment)</pre>
 <div class="block">Obtains a convention based on the specified index.
  <p>
@@ -299,6 +335,7 @@ implements <a href="../../../../../../com/opengamma/strata/product/swap/type/Swa
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>index</code> - the index, the market convention values are extracted from the index</dd>
 <dd><code>lag</code> - the lag between the price index and the accrual date, typically a number of months</dd>
+<dd><code>priceIndexCalculationMethod</code> - the price index calculation method, typically interpolated or monthly</dd>
 <dd><code>businessDayAdjustment</code> - the business day</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the convention</dd>
@@ -384,32 +421,6 @@ implements <a href="../../../../../../com/opengamma/strata/product/swap/type/Swa
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true#metaBean--" title="class or interface in org.joda.beans">metaBean</a></code>&nbsp;in interface&nbsp;<code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="property-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>property</h4>
-<pre>public&nbsp;&lt;R&gt;&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Property.html?is-external=true" title="class or interface in org.joda.beans">Property</a>&lt;R&gt;&nbsp;property(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true#property-java.lang.String-" title="class or interface in org.joda.beans">property</a></code>&nbsp;in interface&nbsp;<code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="propertyNames--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>propertyNames</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;propertyNames()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true#propertyNames--" title="class or interface in org.joda.beans">propertyNames</a></code>&nbsp;in interface&nbsp;<code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a></code></dd>
 </dl>
 </li>
 </ul>

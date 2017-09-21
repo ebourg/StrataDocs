@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":9,"i8":10,"i9":9,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":9,"i8":10,"i9":9,"i10":10,"i11":10,"i12":10,"i13":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -187,7 +187,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityGroup.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityGroup</a></code></td>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/curve/LegalEntityGroup.html" title="class in com.opengamma.strata.market.curve">LegalEntityGroup</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/IssuerCurveDiscountFactors.html#getLegalEntityGroup--">getLegalEntityGroup</a></span>()</code>
 <div class="block">Gets the legal entity group.</div>
 </td>
@@ -214,8 +214,8 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/pricer/bond/IssuerCurveDiscountFactors.html" title="class in com.opengamma.strata.pricer.bond">IssuerCurveDiscountFactors</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/IssuerCurveDiscountFactors.html#of-com.opengamma.strata.pricer.DiscountFactors-com.opengamma.strata.pricer.bond.LegalEntityGroup-">of</a></span>(<a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&nbsp;discountFactors,
-  <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityGroup.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityGroup</a>&nbsp;legalEntityGroup)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/IssuerCurveDiscountFactors.html#of-com.opengamma.strata.pricer.DiscountFactors-com.opengamma.strata.market.curve.LegalEntityGroup-">of</a></span>(<a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&nbsp;discountFactors,
+  <a href="../../../../../com/opengamma/strata/market/curve/LegalEntityGroup.html" title="class in com.opengamma.strata.market.curve">LegalEntityGroup</a>&nbsp;legalEntityGroup)</code>
 <div class="block">Obtains an instance based on discount factors and legal entity group.</div>
 </td>
 </tr>
@@ -226,24 +226,16 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </td>
 </tr>
 <tr id="i11" class="rowColor">
-<td class="colFirst"><code>&lt;R&gt;&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Property.html?is-external=true" title="class or interface in org.joda.beans">Property</a>&lt;R&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/IssuerCurveDiscountFactors.html#property-java.lang.String-">property</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
-</tr>
-<tr id="i12" class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/IssuerCurveDiscountFactors.html#propertyNames--">propertyNames</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/IssuerCurveDiscountFactors.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/bond/IssuerCurveZeroRateSensitivity.html" title="class in com.opengamma.strata.pricer.bond">IssuerCurveZeroRateSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/IssuerCurveDiscountFactors.html#zeroRatePointSensitivity-java.time.LocalDate-">zeroRatePointSensitivity</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date)</code>
 <div class="block">Calculates the zero rate point sensitivity at the specified date.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/bond/IssuerCurveZeroRateSensitivity.html" title="class in com.opengamma.strata.pricer.bond">IssuerCurveZeroRateSensitivity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/IssuerCurveDiscountFactors.html#zeroRatePointSensitivity-java.time.LocalDate-com.opengamma.strata.basics.currency.Currency-">zeroRatePointSensitivity</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;date,
                         <a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;sensitivityCurrency)</code>
@@ -257,6 +249,13 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
 <code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.org.joda.beans.Bean">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;org.joda.beans.<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a></h3>
+<code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true#property-java.lang.String-" title="class or interface in org.joda.beans">property</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true#propertyNames--" title="class or interface in org.joda.beans">propertyNames</a></code></li>
 </ul>
 </li>
 </ul>
@@ -272,14 +271,14 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="of-com.opengamma.strata.pricer.DiscountFactors-com.opengamma.strata.pricer.bond.LegalEntityGroup-">
+<a name="of-com.opengamma.strata.pricer.DiscountFactors-com.opengamma.strata.market.curve.LegalEntityGroup-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
 <pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/pricer/bond/IssuerCurveDiscountFactors.html" title="class in com.opengamma.strata.pricer.bond">IssuerCurveDiscountFactors</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/pricer/DiscountFactors.html" title="interface in com.opengamma.strata.pricer">DiscountFactors</a>&nbsp;discountFactors,
-                                            <a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityGroup.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityGroup</a>&nbsp;legalEntityGroup)</pre>
+                                            <a href="../../../../../com/opengamma/strata/market/curve/LegalEntityGroup.html" title="class in com.opengamma.strata.market.curve">LegalEntityGroup</a>&nbsp;legalEntityGroup)</pre>
 <div class="block">Obtains an instance based on discount factors and legal entity group.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -441,32 +440,6 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </dl>
 </li>
 </ul>
-<a name="property-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>property</h4>
-<pre>public&nbsp;&lt;R&gt;&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Property.html?is-external=true" title="class or interface in org.joda.beans">Property</a>&lt;R&gt;&nbsp;property(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true#property-java.lang.String-" title="class or interface in org.joda.beans">property</a></code>&nbsp;in interface&nbsp;<code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="propertyNames--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>propertyNames</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;propertyNames()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true#propertyNames--" title="class or interface in org.joda.beans">propertyNames</a></code>&nbsp;in interface&nbsp;<code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a></code></dd>
-</dl>
-</li>
-</ul>
 <a name="getDiscountFactors--">
 <!--   -->
 </a>
@@ -490,7 +463,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <ul class="blockList">
 <li class="blockList">
 <h4>getLegalEntityGroup</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityGroup.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityGroup</a>&nbsp;getLegalEntityGroup()</pre>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/curve/LegalEntityGroup.html" title="class in com.opengamma.strata.market.curve">LegalEntityGroup</a>&nbsp;getLegalEntityGroup()</pre>
 <div class="block">Gets the legal entity group.
  <p>
  The group defines the legal entity that the discount factors are for.</div>

@@ -107,6 +107,12 @@
 <div class="block">Definitions of curves.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.market.param">com.opengamma.strata.market.param</a></td>
+<td class="colLast">
+<div class="block">Market data based on parameters.</div>
+</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -156,12 +162,21 @@
 <tr class="altColor">
 <td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="../../../../../../com/opengamma/strata/calc/marketdata/PerturbationMapping.html" title="class in com.opengamma.strata.calc.marketdata">PerturbationMapping</a>&lt;T&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">PerturbationMapping.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/calc/marketdata/PerturbationMapping.html#of-java.lang.Class-com.opengamma.strata.calc.marketdata.MarketDataFilter-com.opengamma.strata.data.scenario.ScenarioPerturbation-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;marketDataType,
-  <a href="../../../../../../com/opengamma/strata/calc/marketdata/MarketDataFilter.html" title="interface in com.opengamma.strata.calc.marketdata">MarketDataFilter</a>&lt;T,?&gt;&nbsp;filter,
+  <a href="../../../../../../com/opengamma/strata/calc/marketdata/MarketDataFilter.html" title="interface in com.opengamma.strata.calc.marketdata">MarketDataFilter</a>&lt;? extends T,?&gt;&nbsp;filter,
+  <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html" title="interface in com.opengamma.strata.data.scenario">ScenarioPerturbation</a>&lt;T&gt;&nbsp;perturbation)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">Use the two-argument version, now that <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html" title="interface in com.opengamma.strata.data.scenario"><code>ScenarioPerturbation</code></a> knows its type</span></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="../../../../../../com/opengamma/strata/calc/marketdata/PerturbationMapping.html" title="class in com.opengamma.strata.calc.marketdata">PerturbationMapping</a>&lt;T&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">PerturbationMapping.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/calc/marketdata/PerturbationMapping.html#of-com.opengamma.strata.calc.marketdata.MarketDataFilter-com.opengamma.strata.data.scenario.ScenarioPerturbation-">of</a></span>(<a href="../../../../../../com/opengamma/strata/calc/marketdata/MarketDataFilter.html" title="interface in com.opengamma.strata.calc.marketdata">MarketDataFilter</a>&lt;? extends T,?&gt;&nbsp;filter,
   <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html" title="interface in com.opengamma.strata.data.scenario">ScenarioPerturbation</a>&lt;T&gt;&nbsp;perturbation)</code>
 <div class="block">Returns a mapping containing a single perturbation.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/calc/marketdata/PerturbationMapping.Builder.html" title="class in com.opengamma.strata.calc.marketdata">PerturbationMapping.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/calc/marketdata/PerturbationMapping.Builder.html" title="type parameter in PerturbationMapping.Builder">T</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">PerturbationMapping.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/calc/marketdata/PerturbationMapping.Builder.html#perturbation-com.opengamma.strata.data.scenario.ScenarioPerturbation-">perturbation</a></span>(<a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html" title="interface in com.opengamma.strata.data.scenario">ScenarioPerturbation</a>&lt;<a href="../../../../../../com/opengamma/strata/calc/marketdata/PerturbationMapping.Builder.html" title="type parameter in PerturbationMapping.Builder">T</a>&gt;&nbsp;perturbation)</code>
 <div class="block">Sets perturbation that should be applied to market data as part of a scenario.</div>
@@ -253,7 +268,29 @@
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/CurvePointShifts.html" title="class in com.opengamma.strata.market.curve">CurvePointShifts</a></span></code>
-<div class="block">A perturbation that applies different shifts to specific points on a curve.</div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">Use <a href="../../../../../../com/opengamma/strata/market/param/PointShifts.html" title="class in com.opengamma.strata.market.param"><code>PointShifts</code></a>.</span></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.market.param">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html" title="interface in com.opengamma.strata.data.scenario">ScenarioPerturbation</a> in <a href="../../../../../../com/opengamma/strata/market/param/package-summary.html">com.opengamma.strata.market.param</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../com/opengamma/strata/market/param/package-summary.html">com.opengamma.strata.market.param</a> that implement <a href="../../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html" title="interface in com.opengamma.strata.data.scenario">ScenarioPerturbation</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/param/PointShifts.html" title="class in com.opengamma.strata.market.param">PointShifts</a></span></code>
+<div class="block">A perturbation that applies different shifts to specific points in a parameterized data.</div>
 </td>
 </tr>
 </tbody>

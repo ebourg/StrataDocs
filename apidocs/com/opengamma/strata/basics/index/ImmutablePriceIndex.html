@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":9,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10};
+var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":9,"i10":10,"i11":10,"i12":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -110,7 +110,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>, <a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>, <a href="../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a></dd>
+<dd><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateIndex.html" title="interface in com.opengamma.strata.basics.index">FloatingRateIndex</a>, <a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>, <a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>, <a href="../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a></dd>
 </dl>
 <hr>
 <br>
@@ -235,20 +235,12 @@ implements <a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/index/ImmutablePriceIndex.html#metaBean--">metaBean</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i11" class="rowColor">
-<td class="colFirst"><code>&lt;R&gt;&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Property.html?is-external=true" title="class or interface in org.joda.beans">Property</a>&lt;R&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/index/ImmutablePriceIndex.html#property-java.lang.String-">property</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
-</tr>
-<tr id="i12" class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/index/ImmutablePriceIndex.html#propertyNames--">propertyNames</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/index/ImmutablePriceIndex.Builder.html" title="class in com.opengamma.strata.basics.index">ImmutablePriceIndex.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/index/ImmutablePriceIndex.html#toBuilder--">toBuilder</a></span>()</code>
 <div class="block">Returns a builder that allows this bean to be mutated.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/index/ImmutablePriceIndex.html#toString--">toString</a></span>()</code>
 <div class="block">Returns the name of the index.</div>
@@ -267,7 +259,14 @@ implements <a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.opengamma.strata.basics.index.<a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a></h3>
-<code><a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html#extendedEnum--">extendedEnum</a>, <a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html#of-java.lang.String-">of</a></code></li>
+<code><a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html#extendedEnum--">extendedEnum</a>, <a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html#getDayCount--">getDayCount</a>, <a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html#of-java.lang.String-">of</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.basics.index.FloatingRateIndex">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.basics.index.<a href="../../../../../com/opengamma/strata/basics/index/FloatingRateIndex.html" title="interface in com.opengamma.strata.basics.index">FloatingRateIndex</a></h3>
+<code><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateIndex.html#getDefaultFixedLegDayCount--">getDefaultFixedLegDayCount</a>, <a href="../../../../../com/opengamma/strata/basics/index/FloatingRateIndex.html#parse-java.lang.String-">parse</a>, <a href="../../../../../com/opengamma/strata/basics/index/FloatingRateIndex.html#parse-java.lang.String-com.opengamma.strata.basics.date.Tenor-">parse</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.collect.named.Named">
@@ -275,6 +274,13 @@ implements <a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.
 </a>
 <h3>Methods inherited from interface&nbsp;com.opengamma.strata.collect.named.<a href="../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a></h3>
 <code><a href="../../../../../com/opengamma/strata/collect/named/Named.html#of-java.lang.Class-java.lang.String-">of</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.org.joda.beans.Bean">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;org.joda.beans.<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a></h3>
+<code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true#property-java.lang.String-" title="class or interface in org.joda.beans">property</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true#propertyNames--" title="class or interface in org.joda.beans">propertyNames</a></code></li>
 </ul>
 </li>
 </ul>
@@ -297,11 +303,14 @@ implements <a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.
 <li class="blockList">
 <h4>getFloatingRateName</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html" title="interface in com.opengamma.strata.basics.index">FloatingRateName</a>&nbsp;getFloatingRateName()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html#getFloatingRateName--">PriceIndex</a></code></span></div>
-<div class="block">Gets the floating rate name for this index.</div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateIndex.html#getFloatingRateName--">FloatingRateIndex</a></code></span></div>
+<div class="block">Gets the floating rate name for this index.
+ <p>
+ For an Ibor index, the <a href="../../../../../com/opengamma/strata/basics/index/FloatingRateName.html" title="interface in com.opengamma.strata.basics.index"><code>FloatingRateName</code></a> does not include the tenor.
+ It can be used to find the other tenors available for this index.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html#getFloatingRateName--">getFloatingRateName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a></code></dd>
+<dd><code><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateIndex.html#getFloatingRateName--">getFloatingRateName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateIndex.html" title="interface in com.opengamma.strata.basics.index">FloatingRateIndex</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the floating rate name</dd>
 </dl>
@@ -390,32 +399,6 @@ implements <a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.
 </dl>
 </li>
 </ul>
-<a name="property-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>property</h4>
-<pre>public&nbsp;&lt;R&gt;&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Property.html?is-external=true" title="class or interface in org.joda.beans">Property</a>&lt;R&gt;&nbsp;property(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true#property-java.lang.String-" title="class or interface in org.joda.beans">property</a></code>&nbsp;in interface&nbsp;<code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="propertyNames--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>propertyNames</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;propertyNames()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true#propertyNames--" title="class or interface in org.joda.beans">propertyNames</a></code>&nbsp;in interface&nbsp;<code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a></code></dd>
-</dl>
-</li>
-</ul>
 <a name="getName--">
 <!--   -->
 </a>
@@ -460,7 +443,7 @@ implements <a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.
 <div class="block">Gets the currency of the index.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html#getCurrency--">getCurrency</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a></code></dd>
+<dd><code><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateIndex.html#getCurrency--">getCurrency</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateIndex.html" title="interface in com.opengamma.strata.basics.index">FloatingRateIndex</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value of the property, not null</dd>
 </dl>
@@ -479,7 +462,7 @@ implements <a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.
  If this occurs, this flag will be set to false.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html#isActive--">isActive</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a></code></dd>
+<dd><code><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateIndex.html#isActive--">isActive</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/basics/index/FloatingRateIndex.html" title="interface in com.opengamma.strata.basics.index">FloatingRateIndex</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value of the property</dd>
 </dl>

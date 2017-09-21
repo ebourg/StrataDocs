@@ -407,9 +407,9 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </tr>
 <tr id="i36" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/fpml/FpmlDocument.html#validateScheme-com.opengamma.strata.collect.io.XmlElement-java.lang.String-java.lang.String-">validateScheme</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/XmlElement.html" title="class in com.opengamma.strata.collect.io">XmlElement</a>&nbsp;baseEl,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/fpml/FpmlDocument.html#validateScheme-com.opengamma.strata.collect.io.XmlElement-java.lang.String-java.lang.String...-">validateScheme</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/XmlElement.html" title="class in com.opengamma.strata.collect.io">XmlElement</a>&nbsp;baseEl,
               <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;schemeAttr,
-              <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;schemeValue)</code>
+              <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;schemeValues)</code>
 <div class="block">Validates that the scheme attribute is known.</div>
 </td>
 </tr>
@@ -1134,7 +1134,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </dl>
 </li>
 </ul>
-<a name="validateScheme-com.opengamma.strata.collect.io.XmlElement-java.lang.String-java.lang.String-">
+<a name="validateScheme-com.opengamma.strata.collect.io.XmlElement-java.lang.String-java.lang.String...-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -1142,13 +1142,13 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>validateScheme</h4>
 <pre>public&nbsp;void&nbsp;validateScheme(<a href="../../../../../com/opengamma/strata/collect/io/XmlElement.html" title="class in com.opengamma.strata.collect.io">XmlElement</a>&nbsp;baseEl,
                            <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;schemeAttr,
-                           <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;schemeValue)</pre>
+                           <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;schemeValues)</pre>
 <div class="block">Validates that the scheme attribute is known.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>baseEl</code> - the FpML element to parse</dd>
 <dd><code>schemeAttr</code> - the scheme attribute name</dd>
-<dd><code>schemeValue</code> - the scheme attribute value</dd>
+<dd><code>schemeValues</code> - the scheme attribute values that are accepted</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../../../../../com/opengamma/strata/loader/fpml/FpmlParseException.html" title="class in com.opengamma.strata.loader.fpml">FpmlParseException</a></code> - if the scheme does not match</dd>
 </dl>

@@ -994,6 +994,14 @@
  <p>
  The fixing date is when the rate is determined.</div>
 </li>
+<li class="blockList">
+<h4>fixingDateOffset</h4>
+<pre><a href="com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a> fixingDateOffset</pre>
+<div class="block">The adjustment applied to the maturity date to obtain the fixing date.
+ <p>
+ The maturity date is the start date of the indexed deposit.
+ In most cases, the fixing date is 2 days before the maturity date.</div>
+</li>
 <li class="blockListLast">
 <h4>maturityDateOffset</h4>
 <pre><a href="com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a> maturityDateOffset</pre>
@@ -1092,10 +1100,19 @@
  The maturity date is the end date of the indexed deposit and is relative to the effective date.
  This data structure allows the complex rules of some indices to be represented.</div>
 </li>
-<li class="blockListLast">
+<li class="blockList">
 <h4>dayCount</h4>
 <pre><a href="com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a> dayCount</pre>
 <div class="block">The day count convention.</div>
+</li>
+<li class="blockListLast">
+<h4>defaultFixedLegDayCount</h4>
+<pre><a href="com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a> defaultFixedLegDayCount</pre>
+<div class="block">The default day count convention for the associated fixed leg.
+ <p>
+ A rate index is often paid against a fixed leg, such as in a vanilla Swap.
+ The day count convention of the fixed leg often differs from that of the index,
+ and the default is value is available here.</div>
 </li>
 </ul>
 </li>
@@ -1157,10 +1174,19 @@
  This property is zero if settlement is on the fixing date, or one if it is the next day.
  Maturity is always one business day after the settlement date.</div>
 </li>
-<li class="blockListLast">
+<li class="blockList">
 <h4>dayCount</h4>
 <pre><a href="com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a> dayCount</pre>
 <div class="block">The day count convention.</div>
+</li>
+<li class="blockListLast">
+<h4>defaultFixedLegDayCount</h4>
+<pre><a href="com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a> defaultFixedLegDayCount</pre>
+<div class="block">The default day count convention for the associated fixed leg.
+ <p>
+ A rate index is often paid against a fixed leg, such as in a vanilla Swap.
+ The day count convention of the fixed leg often differs from that of the index,
+ and the default is value is available here.</div>
 </li>
 </ul>
 </li>
@@ -1541,6 +1567,9 @@
  If specified, it overrides the start date of the first period once schedule generation has been completed.
  Note that all schedule generation rules apply to 'startDate', with this applied as a final step.
  This field primarily exists to support the FpML 'firstPeriodStartDate' concept.
+ <p>
+ If a roll convention is explicitly specified and the regular start date does not match it,
+ then the override will be used when generating regular periods.
  <p>
  If set, it should be different to the start date, although this is not validated.
  Validation does check that it is before the 'firstRegularStartDate'.
@@ -3638,11 +3667,13 @@
 <li class="blockList">
 <h4>shiftType</h4>
 <pre><a href="com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a> shiftType</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block">The type of shift applied to the curve rates.</div>
 </li>
 <li class="blockList">
 <h4>shifts</h4>
 <pre><a href="com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a> shifts</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block">The shift to apply to the rates.
  <p>
  There is one row in the matrix for each scenario and one column for each node in the curve.
@@ -3651,6 +3682,7 @@
 <li class="blockListLast">
 <h4>nodeIndices</h4>
 <pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">K</a>,<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">V</a>&gt; nodeIndices</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block">Indices of each curve node, keyed by an object identifying the node.
  <p>
  The key is typically the node <a href="com/opengamma/strata/market/param/ParameterMetadata.html#getIdentifier--">identifier</a>.
@@ -4048,6 +4080,46 @@
 </li>
 </ul>
 </li>
+<li class="blockList"><a name="com.opengamma.strata.market.curve.LegalEntityCurveGroup">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/market/curve/LegalEntityCurveGroup.html" title="class in com.opengamma.strata.market.curve">com.opengamma.strata.market.curve.LegalEntityCurveGroup</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>name</h4>
+<pre><a href="com/opengamma/strata/market/curve/CurveGroupName.html" title="class in com.opengamma.strata.market.curve">CurveGroupName</a> name</pre>
+<div class="block">The name of the curve group.</div>
+</li>
+<li class="blockList">
+<h4>repoCurves</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">K</a>,<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">V</a>&gt; repoCurves</pre>
+<div class="block">The repo curves in the curve group, keyed by repo group and currency.</div>
+</li>
+<li class="blockListLast">
+<h4>issuerCurves</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">K</a>,<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">V</a>&gt; issuerCurves</pre>
+<div class="block">The issuer curves in the curve group, keyed by legal entity group and currency.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.market.curve.LegalEntityGroup">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/market/curve/LegalEntityGroup.html" title="class in com.opengamma.strata.market.curve">com.opengamma.strata.market.curve.LegalEntityGroup</a> extends <a href="com/opengamma/strata/collect/TypedString.html" title="class in com.opengamma.strata.collect">TypedString</a>&lt;<a href="com/opengamma/strata/market/curve/LegalEntityGroup.html" title="class in com.opengamma.strata.market.curve">LegalEntityGroup</a>&gt; implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.market.curve.ParallelShiftedCurve">
 <!--   -->
 </a>
@@ -4080,6 +4152,15 @@
 </ul>
 </li>
 </ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.market.curve.RepoGroup">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/market/curve/RepoGroup.html" title="class in com.opengamma.strata.market.curve">com.opengamma.strata.market.curve.RepoGroup</a> extends <a href="com/opengamma/strata/collect/TypedString.html" title="class in com.opengamma.strata.collect">TypedString</a>&lt;<a href="com/opengamma/strata/market/curve/RepoGroup.html" title="class in com.opengamma.strata.market.curve">RepoGroup</a>&gt; implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
 </li>
 <li class="blockList"><a name="com.opengamma.strata.market.curve.SeasonalityDefinition">
 <!--   -->
@@ -5466,6 +5547,43 @@
 </li>
 </ul>
 </li>
+<li class="blockList"><a name="com.opengamma.strata.market.param.PointShifts">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/market/param/PointShifts.html" title="class in com.opengamma.strata.market.param">com.opengamma.strata.market.param.PointShifts</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>shiftType</h4>
+<pre><a href="com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a> shiftType</pre>
+<div class="block">The type of shift applied to the parameters.</div>
+</li>
+<li class="blockList">
+<h4>shifts</h4>
+<pre><a href="com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a> shifts</pre>
+<div class="block">The shift to apply to the rates.
+ <p>
+ There is one row in the matrix for each scenario and one column for each parameter in the data.
+ Node indices are found using <code>nodeIndices</code>.</div>
+</li>
+<li class="blockListLast">
+<h4>nodeIndices</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">K</a>,<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">V</a>&gt; nodeIndices</pre>
+<div class="block">Indices of each parameter, keyed by an object identifying the node.
+ <p>
+ The key is typically the node <a href="com/opengamma/strata/market/param/ParameterMetadata.html#getIdentifier--">identifier</a>.
+ The key may also be the node <a href="com/opengamma/strata/market/param/ParameterMetadata.html#getLabel--">label</a>.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="blockList"><a name="com.opengamma.strata.market.param.ResolvedTradeParameterMetadata">
 <!--   -->
 </a>
@@ -6548,7 +6666,7 @@
 </li>
 <li class="blockListLast">
 <h4>legalEntityGroup</h4>
-<pre><a href="com/opengamma/strata/pricer/bond/LegalEntityGroup.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityGroup</a> legalEntityGroup</pre>
+<pre><a href="com/opengamma/strata/market/curve/LegalEntityGroup.html" title="class in com.opengamma.strata.market.curve">LegalEntityGroup</a> legalEntityGroup</pre>
 <div class="block">The legal entity group.
  <p>
  The group defines the legal entity that the discount factors are for.</div>
@@ -6586,7 +6704,7 @@
 </li>
 <li class="blockList">
 <h4>legalEntityGroup</h4>
-<pre><a href="com/opengamma/strata/pricer/bond/LegalEntityGroup.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityGroup</a> legalEntityGroup</pre>
+<pre><a href="com/opengamma/strata/market/curve/LegalEntityGroup.html" title="class in com.opengamma.strata.market.curve">LegalEntityGroup</a> legalEntityGroup</pre>
 <div class="block">The legal entity group.
  <p>
  The group defines the legal entity that the discount factors are for.</div>
@@ -6599,15 +6717,6 @@
 </ul>
 </li>
 </ul>
-</li>
-<li class="blockList"><a name="com.opengamma.strata.pricer.bond.LegalEntityGroup">
-<!--   -->
-</a>
-<h3>Class <a href="com/opengamma/strata/pricer/bond/LegalEntityGroup.html" title="class in com.opengamma.strata.pricer.bond">com.opengamma.strata.pricer.bond.LegalEntityGroup</a> extends <a href="com/opengamma/strata/collect/TypedString.html" title="class in com.opengamma.strata.collect">TypedString</a>&lt;<a href="com/opengamma/strata/pricer/bond/LegalEntityGroup.html" title="class in com.opengamma.strata.pricer.bond">LegalEntityGroup</a>&gt; implements Serializable</h3>
-<dl class="nameValue">
-<dt>serialVersionUID:</dt>
-<dd>1L</dd>
-</dl>
 </li>
 <li class="blockList"><a name="com.opengamma.strata.pricer.bond.RepoCurveDiscountFactors">
 <!--   -->
@@ -6631,7 +6740,7 @@
 </li>
 <li class="blockListLast">
 <h4>repoGroup</h4>
-<pre><a href="com/opengamma/strata/pricer/bond/RepoGroup.html" title="class in com.opengamma.strata.pricer.bond">RepoGroup</a> repoGroup</pre>
+<pre><a href="com/opengamma/strata/market/curve/RepoGroup.html" title="class in com.opengamma.strata.market.curve">RepoGroup</a> repoGroup</pre>
 <div class="block">The repo group.
  <p>
  This defines the group that the discount factors are for.</div>
@@ -6669,7 +6778,7 @@
 </li>
 <li class="blockList">
 <h4>repoGroup</h4>
-<pre><a href="com/opengamma/strata/pricer/bond/RepoGroup.html" title="class in com.opengamma.strata.pricer.bond">RepoGroup</a> repoGroup</pre>
+<pre><a href="com/opengamma/strata/market/curve/RepoGroup.html" title="class in com.opengamma.strata.market.curve">RepoGroup</a> repoGroup</pre>
 <div class="block">The repo group.
  <p>
  This defines the group that the discount factors are for.</div>
@@ -6682,15 +6791,6 @@
 </ul>
 </li>
 </ul>
-</li>
-<li class="blockList"><a name="com.opengamma.strata.pricer.bond.RepoGroup">
-<!--   -->
-</a>
-<h3>Class <a href="com/opengamma/strata/pricer/bond/RepoGroup.html" title="class in com.opengamma.strata.pricer.bond">com.opengamma.strata.pricer.bond.RepoGroup</a> extends <a href="com/opengamma/strata/collect/TypedString.html" title="class in com.opengamma.strata.collect">TypedString</a>&lt;<a href="com/opengamma/strata/pricer/bond/RepoGroup.html" title="class in com.opengamma.strata.pricer.bond">RepoGroup</a>&gt; implements Serializable</h3>
-<dl class="nameValue">
-<dt>serialVersionUID:</dt>
-<dd>1L</dd>
-</dl>
 </li>
 </ul>
 </li>
@@ -17755,13 +17855,26 @@
  <p>
  The FX reset fixing date is relative to either the start or end of each accrual period.</div>
 </li>
-<li class="blockListLast">
+<li class="blockList">
 <h4>fixingDateOffset</h4>
 <pre><a href="com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a> fixingDateOffset</pre>
 <div class="block">The offset of the FX reset fixing date from each adjusted accrual date.
  <p>
  The offset is applied to the base date specified by <code>fixingRelativeTo</code>.
- The offset is typically a negative number of business days.</div>
+ The offset is typically a negative number of business days.
+ <p>
+ When building, this will default to the fixing offset of the index if not specified.</div>
+</li>
+<li class="blockListLast">
+<h4>initialNotionalValue</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a> initialNotionalValue</pre>
+<div class="block">The initial notional value, specified in the payment currency.
+ <p>
+ If present, this fixed amount represents the notional of the initial period of the
+ swap leg, with no FX reset being applied.
+ <p>
+ If not present, the initial notional amount is calculated by applying an fx conversion
+ to the reference currency in the same manner as all other period notional calculations.</div>
 </li>
 </ul>
 </li>
@@ -18445,7 +18558,8 @@
  exchange of money between the counterparties.
  <p>
  When building the notional schedule, if an <code>FxResetCalculation</code> is present,
- then the notional exchange flags will be set to true.</div>
+ then at least one of the notional exchange flags should be set to true. If all notional
+ exchange flags are false then an IllegalArgumentException is thrown.</div>
 </li>
 <li class="blockList">
 <h4>amount</h4>

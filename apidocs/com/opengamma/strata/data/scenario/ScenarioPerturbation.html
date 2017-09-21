@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":17};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":17};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -106,7 +106,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../../../../../com/opengamma/strata/market/curve/CurveParallelShifts.html" title="class in com.opengamma.strata.market.curve">CurveParallelShifts</a>, <a href="../../../../../com/opengamma/strata/market/curve/CurvePointShifts.html" title="class in com.opengamma.strata.market.curve">CurvePointShifts</a>, <a href="../../../../../com/opengamma/strata/market/FxRateShifts.html" title="class in com.opengamma.strata.market">FxRateShifts</a>, <a href="../../../../../com/opengamma/strata/market/GenericDoubleShifts.html" title="class in com.opengamma.strata.market">GenericDoubleShifts</a></dd>
+<dd><a href="../../../../../com/opengamma/strata/market/curve/CurveParallelShifts.html" title="class in com.opengamma.strata.market.curve">CurveParallelShifts</a>, <a href="../../../../../com/opengamma/strata/market/curve/CurvePointShifts.html" title="class in com.opengamma.strata.market.curve">CurvePointShifts</a>, <a href="../../../../../com/opengamma/strata/market/FxRateShifts.html" title="class in com.opengamma.strata.market">FxRateShifts</a>, <a href="../../../../../com/opengamma/strata/market/GenericDoubleShifts.html" title="class in com.opengamma.strata.market">GenericDoubleShifts</a>, <a href="../../../../../com/opengamma/strata/market/param/PointShifts.html" title="class in com.opengamma.strata.market.param">PointShifts</a></dd>
 </dl>
 <hr>
 <br>
@@ -145,12 +145,18 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html" title="type parameter in ScenarioPerturbation">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html#getMarketDataType--">getMarketDataType</a></span>()</code>
+<div class="block">Returns the market data type that the perturbation changes.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html#getScenarioCount--">getScenarioCount</a></span>()</code>
 <div class="block">Returns the number of scenarios for which this perturbation generates data.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html" title="interface in com.opengamma.strata.data.scenario">ScenarioPerturbation</a>&lt;T&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html#none--">none</a></span>()</code>
 <div class="block">Returns an instance that does not perturb the input.</div>
@@ -215,7 +221,7 @@ var activeTableTab = "activeTableTab";
 <a name="getScenarioCount--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getScenarioCount</h4>
 <pre>int&nbsp;getScenarioCount()</pre>
@@ -223,6 +229,20 @@ var activeTableTab = "activeTableTab";
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the number of scenarios for which this perturbation generates data</dd>
+</dl>
+</li>
+</ul>
+<a name="getMarketDataType--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getMarketDataType</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../../com/opengamma/strata/data/scenario/ScenarioPerturbation.html" title="type parameter in ScenarioPerturbation">T</a>&gt;&nbsp;getMarketDataType()</pre>
+<div class="block">Returns the market data type that the perturbation changes.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the data type</dd>
 </dl>
 </li>
 </ul>

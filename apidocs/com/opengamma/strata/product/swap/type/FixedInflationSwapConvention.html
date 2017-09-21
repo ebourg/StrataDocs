@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":18,"i1":18,"i2":17,"i3":6,"i4":6,"i5":6,"i6":6,"i7":17,"i8":18,"i9":6};
+var methods = {"i0":18,"i1":18,"i2":17,"i3":6,"i4":6,"i5":6,"i6":17,"i7":18,"i8":6};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -102,7 +102,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Superinterfaces:</dt>
-<dd><a href="../../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a>, <a href="../../../../../../com/opengamma/strata/product/TradeConvention.html" title="interface in com.opengamma.strata.product">TradeConvention</a></dd>
+<dd><a href="../../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a>, <a href="../../../../../../com/opengamma/strata/product/swap/type/SingleCurrencySwapConvention.html" title="interface in com.opengamma.strata.product.swap.type">SingleCurrencySwapConvention</a>, <a href="../../../../../../com/opengamma/strata/product/TradeConvention.html" title="interface in com.opengamma.strata.product">TradeConvention</a></dd>
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
@@ -111,7 +111,7 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public interface <span class="typeNameLabel">FixedInflationSwapConvention</span>
-extends <a href="../../../../../../com/opengamma/strata/product/TradeConvention.html" title="interface in com.opengamma.strata.product">TradeConvention</a>, <a href="../../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a></pre>
+extends <a href="../../../../../../com/opengamma/strata/product/swap/type/SingleCurrencySwapConvention.html" title="interface in com.opengamma.strata.product.swap.type">SingleCurrencySwapConvention</a>, <a href="../../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a></pre>
 <div class="block">A market convention for Inflation swap trades.
  <p>
  This defines the market convention for an Inflation swap.
@@ -138,10 +138,15 @@ extends <a href="../../../../../../com/opengamma/strata/product/TradeConvention.
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>default <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedInflationSwapConvention.html#calculateSpotDateFromTradeDate-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">calculateSpotDateFromTradeDate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
-                              <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
-<div class="block">Calculates the spot date from the trade date.</div>
+<td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedInflationSwapConvention.html#createTrade-java.time.LocalDate-java.time.Period-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;periodToStart,
+           <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
+           <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+           double&nbsp;notional,
+           double&nbsp;fixedRate,
+           <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Creates a forward-starting trade based on this convention.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -180,18 +185,12 @@ extends <a href="../../../../../../com/opengamma/strata/product/TradeConvention.
 </td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedInflationSwapConvention.html#getSpotDateOffset--">getSpotDateOffset</a></span>()</code>
-<div class="block">Gets the offset of the spot value date from the trade date.</div>
-</td>
-</tr>
-<tr id="i7" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/product/swap/type/FixedInflationSwapConvention.html" title="interface in com.opengamma.strata.product.swap.type">FixedInflationSwapConvention</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedInflationSwapConvention.html#of-java.lang.String-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uniqueName)</code>
 <div class="block">Obtains an instance from the specified unique name.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedInflationSwapConvention.html#toTrade-java.time.LocalDate-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.product.common.BuySell-double-double-">toTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
        <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
@@ -202,7 +201,7 @@ extends <a href="../../../../../../com/opengamma/strata/product/TradeConvention.
 <div class="block">Creates a trade based on this convention.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/type/FixedInflationSwapConvention.html#toTrade-com.opengamma.strata.product.TradeInfo-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.product.common.BuySell-double-double-">toTrade</a></span>(<a href="../../../../../../com/opengamma/strata/product/TradeInfo.html" title="class in com.opengamma.strata.product">TradeInfo</a>&nbsp;tradeInfo,
        <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;startDate,
@@ -214,6 +213,13 @@ extends <a href="../../../../../../com/opengamma/strata/product/TradeConvention.
 </td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.swap.type.SingleCurrencySwapConvention">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.swap.type.<a href="../../../../../../com/opengamma/strata/product/swap/type/SingleCurrencySwapConvention.html" title="interface in com.opengamma.strata.product.swap.type">SingleCurrencySwapConvention</a></h3>
+<code><a href="../../../../../../com/opengamma/strata/product/swap/type/SingleCurrencySwapConvention.html#calculateSpotDateFromTradeDate-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">calculateSpotDateFromTradeDate</a>, <a href="../../../../../../com/opengamma/strata/product/swap/type/SingleCurrencySwapConvention.html#getSpotDateOffset--">getSpotDateOffset</a></code></li>
+</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.collect.named.Named">
 <!--   -->
@@ -244,6 +250,8 @@ extends <a href="../../../../../../com/opengamma/strata/product/TradeConvention.
 <pre>static&nbsp;<a href="../../../../../../com/opengamma/strata/product/swap/type/FixedInflationSwapConvention.html" title="interface in com.opengamma.strata.product.swap.type">FixedInflationSwapConvention</a>&nbsp;of(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uniqueName)</pre>
 <div class="block">Obtains an instance from the specified unique name.</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../../com/opengamma/strata/product/swap/type/SingleCurrencySwapConvention.html#of-java.lang.String-">of</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/product/swap/type/SingleCurrencySwapConvention.html" title="interface in com.opengamma.strata.product.swap.type">SingleCurrencySwapConvention</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>uniqueName</code> - the unique name</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -298,23 +306,6 @@ extends <a href="../../../../../../com/opengamma/strata/product/TradeConvention.
 </dl>
 </li>
 </ul>
-<a name="getSpotDateOffset--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getSpotDateOffset</h4>
-<pre><a href="../../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;getSpotDateOffset()</pre>
-<div class="block">Gets the offset of the spot value date from the trade date.
- <p>
- The offset is applied to the trade date to find the start date.
- A typical value is "plus 2 business days".</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the spot date offset, not null</dd>
-</dl>
-</li>
-</ul>
 <a name="createTrade-java.time.LocalDate-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">
 <!--   -->
 </a>
@@ -329,12 +320,57 @@ extends <a href="../../../../../../com/opengamma/strata/product/TradeConvention.
                               <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
 <div class="block">Creates a forward-starting trade based on this convention.
  <p>
+ This returns a trade based on the specified tenor. For example, a tenor
+ of 5 years creates a swap starting on the spot date and maturing 5 years later.
+ <p>
  The notional is unsigned, with buy/sell determining the direction of the trade.
  If buying the swap, the floating rate is received from the counterparty, with the fixed rate being paid.
  If selling the swap, the floating rate is paid to the counterparty, with the fixed rate being received.</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../../com/opengamma/strata/product/swap/type/SingleCurrencySwapConvention.html#createTrade-java.time.LocalDate-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/product/swap/type/SingleCurrencySwapConvention.html" title="interface in com.opengamma.strata.product.swap.type">SingleCurrencySwapConvention</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>tradeDate</code> - the date of the trade</dd>
+<dd><code>tenor</code> - the tenor of the trade</dd>
+<dd><code>buySell</code> - the buy/sell flag</dd>
+<dd><code>notional</code> - the notional amount</dd>
+<dd><code>fixedRate</code> - the fixed rate, typically derived from the market</dd>
+<dd><code>refData</code> - the reference data, used to resolve the trade dates</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the trade</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="../../../../../../com/opengamma/strata/basics/ReferenceDataNotFoundException.html" title="class in com.opengamma.strata.basics">ReferenceDataNotFoundException</a></code> - if an identifier cannot be resolved in the reference data</dd>
+</dl>
+</li>
+</ul>
+<a name="createTrade-java.time.LocalDate-java.time.Period-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createTrade</h4>
+<pre>default&nbsp;<a href="../../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a>&nbsp;createTrade(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+                              <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;periodToStart,
+                              <a href="../../../../../../com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a>&nbsp;tenor,
+                              <a href="../../../../../../com/opengamma/strata/product/common/BuySell.html" title="enum in com.opengamma.strata.product.common">BuySell</a>&nbsp;buySell,
+                              double&nbsp;notional,
+                              double&nbsp;fixedRate,
+                              <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
+<div class="block">Creates a forward-starting trade based on this convention.
+ <p>
+ This returns a trade based on the specified period and tenor. For example, a period of
+ 3 months and a tenor of 5 years creates a swap starting three months after the spot date
+ and maturing 5 years later.
+ <p>
+ The notional is unsigned, with buy/sell determining the direction of the trade.
+ If buying the swap, the floating rate is received from the counterparty, with the fixed rate being paid.
+ If selling the swap, the floating rate is paid to the counterparty, with the fixed rate being received.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../../com/opengamma/strata/product/swap/type/SingleCurrencySwapConvention.html#createTrade-java.time.LocalDate-java.time.Period-com.opengamma.strata.basics.date.Tenor-com.opengamma.strata.product.common.BuySell-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/product/swap/type/SingleCurrencySwapConvention.html" title="interface in com.opengamma.strata.product.swap.type">SingleCurrencySwapConvention</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>tradeDate</code> - the date of the trade</dd>
+<dd><code>periodToStart</code> - the period between the spot date and the start date</dd>
 <dd><code>tenor</code> - the tenor of the trade</dd>
 <dd><code>buySell</code> - the buy/sell flag</dd>
 <dd><code>notional</code> - the notional amount</dd>
@@ -367,6 +403,8 @@ extends <a href="../../../../../../com/opengamma/strata/product/TradeConvention.
  If buying the swap, the floating rate is received from the counterparty, with the fixed rate being paid.
  If selling the swap, the floating rate is paid to the counterparty, with the fixed rate being received.</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../../com/opengamma/strata/product/swap/type/SingleCurrencySwapConvention.html#toTrade-java.time.LocalDate-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.product.common.BuySell-double-double-">toTrade</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/product/swap/type/SingleCurrencySwapConvention.html" title="interface in com.opengamma.strata.product.swap.type">SingleCurrencySwapConvention</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>tradeDate</code> - the date of the trade</dd>
 <dd><code>startDate</code> - the start date</dd>
@@ -399,6 +437,8 @@ extends <a href="../../../../../../com/opengamma/strata/product/TradeConvention.
  If buying the swap, the floating rate is received from the counterparty, with the fixed rate being paid.
  If selling the swap, the floating rate is paid to the counterparty, with the fixed rate being received.</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../../com/opengamma/strata/product/swap/type/SingleCurrencySwapConvention.html#toTrade-com.opengamma.strata.product.TradeInfo-java.time.LocalDate-java.time.LocalDate-com.opengamma.strata.product.common.BuySell-double-double-">toTrade</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/product/swap/type/SingleCurrencySwapConvention.html" title="interface in com.opengamma.strata.product.swap.type">SingleCurrencySwapConvention</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>tradeInfo</code> - additional information about the trade</dd>
 <dd><code>startDate</code> - the start date</dd>
@@ -408,26 +448,6 @@ extends <a href="../../../../../../com/opengamma/strata/product/TradeConvention.
 <dd><code>fixedRate</code> - the fixed rate, typically derived from the market</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the trade</dd>
-</dl>
-</li>
-</ul>
-<a name="calculateSpotDateFromTradeDate-java.time.LocalDate-com.opengamma.strata.basics.ReferenceData-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>calculateSpotDateFromTradeDate</h4>
-<pre>default&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;calculateSpotDateFromTradeDate(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
-                                                 <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
-<div class="block">Calculates the spot date from the trade date.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>tradeDate</code> - the trade date</dd>
-<dd><code>refData</code> - the reference data, used to resolve the date</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the spot date</dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../../com/opengamma/strata/basics/ReferenceDataNotFoundException.html" title="class in com.opengamma.strata.basics">ReferenceDataNotFoundException</a></code> - if an identifier cannot be resolved in the reference data</dd>
 </dl>
 </li>
 </ul>
@@ -444,6 +464,8 @@ extends <a href="../../../../../../com/opengamma/strata/product/TradeConvention.
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../com/opengamma/strata/collect/named/Named.html#getName--">getName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../../com/opengamma/strata/product/swap/type/SingleCurrencySwapConvention.html#getName--">getName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/opengamma/strata/product/swap/type/SingleCurrencySwapConvention.html" title="interface in com.opengamma.strata.product.swap.type">SingleCurrencySwapConvention</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the unique name</dd>
 </dl>

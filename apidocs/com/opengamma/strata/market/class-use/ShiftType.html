@@ -95,6 +95,12 @@
 <div class="block">Definitions of curves.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.market.param">com.opengamma.strata.market.param</a></td>
+<td class="colLast">
+<div class="block">Market data based on parameters.</div>
+</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -113,20 +119,20 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FxRateShifts.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/FxRateShifts.html#getShiftType--">getShiftType</a></span>()</code>
-<div class="block">Gets the type of shift applied to the FX rate.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a></code></td>
 <td class="colLast"><span class="typeNameLabel">GenericDoubleShifts.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/GenericDoubleShifts.html#getShiftType--">getShiftType</a></span>()</code>
 <div class="block">Gets the type of shift applied to a <code>Double</code> value.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FxRateShifts.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/FxRateShifts.html#getShiftType--">getShiftType</a></span>()</code>
+<div class="block">Gets the type of shift applied to the FX rate.</div>
+</td>
+</tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ShiftType.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/ShiftType.html#of-java.lang.String-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uniqueName)</code>
-<div class="block">Obtains an instance from the specified unique name.</div>
+<td class="colLast"><span class="typeNameLabel">ShiftType.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/ShiftType.html#of-java.lang.String-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Obtains an instance from the specified name.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -153,13 +159,13 @@ the order they are declared.</div>
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">FxRateShifts.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/FxRateShifts.Meta.html#shiftType--">shiftType</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">GenericDoubleShifts.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/GenericDoubleShifts.Meta.html#shiftType--">shiftType</a></span>()</code>
 <div class="block">The meta-property for the <code>shiftType</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">GenericDoubleShifts.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/GenericDoubleShifts.Meta.html#shiftType--">shiftType</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">FxRateShifts.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/FxRateShifts.Meta.html#shiftType--">shiftType</a></span>()</code>
 <div class="block">The meta-property for the <code>shiftType</code> property.</div>
 </td>
 </tr>
@@ -223,20 +229,21 @@ the order they are declared.</div>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CurvePointShifts.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurvePointShifts.html#getShiftType--">getShiftType</a></span>()</code>
-<div class="block">Gets the type of shift applied to the curve rates.</div>
+<td class="colLast"><span class="typeNameLabel">ParallelShiftedCurve.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/ParallelShiftedCurve.html#getShiftType--">getShiftType</a></span>()</code>
+<div class="block">Gets the type of shift to apply to the y-values of the curve.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ParallelShiftedCurve.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/ParallelShiftedCurve.html#getShiftType--">getShiftType</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">CurveParallelShifts.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveParallelShifts.html#getShiftType--">getShiftType</a></span>()</code>
 <div class="block">Gets the type of shift to apply to the y-values of the curve.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CurveParallelShifts.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveParallelShifts.html#getShiftType--">getShiftType</a></span>()</code>
-<div class="block">Gets the type of shift to apply to the y-values of the curve.</div>
+<td class="colLast"><span class="typeNameLabel">CurvePointShifts.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurvePointShifts.html#getShiftType--">getShiftType</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Gets the type of shift applied to the curve rates.</div>
 </td>
 </tr>
 </tbody>
@@ -262,19 +269,19 @@ the order they are declared.</div>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">CurvePointShifts.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurvePointShifts.Meta.html#shiftType--">shiftType</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ParallelShiftedCurve.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/ParallelShiftedCurve.Meta.html#shiftType--">shiftType</a></span>()</code>
 <div class="block">The meta-property for the <code>shiftType</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ParallelShiftedCurve.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/ParallelShiftedCurve.Meta.html#shiftType--">shiftType</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">CurveParallelShifts.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveParallelShifts.Meta.html#shiftType--">shiftType</a></span>()</code>
 <div class="block">The meta-property for the <code>shiftType</code> property.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">CurveParallelShifts.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveParallelShifts.Meta.html#shiftType--">shiftType</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">CurvePointShifts.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurvePointShifts.Meta.html#shiftType--">shiftType</a></span>()</code>
 <div class="block">The meta-property for the <code>shiftType</code> property.</div>
 </td>
 </tr>
@@ -290,6 +297,7 @@ the order they are declared.</div>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/curve/CurvePointShiftsBuilder.html" title="class in com.opengamma.strata.market.curve">CurvePointShiftsBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CurvePointShifts.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurvePointShifts.html#builder-com.opengamma.strata.market.ShiftType-">builder</a></span>(<a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a>&nbsp;shiftType)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block">Returns a new mutable builder for building instances of <code>CurvePointShift</code>.</div>
 </td>
 </tr>
@@ -314,6 +322,56 @@ the order they are declared.</div>
   <a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;seasonality,
   <a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a>&nbsp;adjustmentType)</code>
 <div class="block">Obtains an instance of the curve.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.market.param">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a> in <a href="../../../../../com/opengamma/strata/market/param/package-summary.html">com.opengamma.strata.market.param</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../com/opengamma/strata/market/param/package-summary.html">com.opengamma.strata.market.param</a> that return <a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a></code></td>
+<td class="colLast"><span class="typeNameLabel">PointShifts.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/PointShifts.html#getShiftType--">getShiftType</a></span>()</code>
+<div class="block">Gets the type of shift applied to the parameters.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../com/opengamma/strata/market/param/package-summary.html">com.opengamma.strata.market.param</a> that return types with arguments of type <a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">PointShifts.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/PointShifts.Meta.html#shiftType--">shiftType</a></span>()</code>
+<div class="block">The meta-property for the <code>shiftType</code> property.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../com/opengamma/strata/market/param/package-summary.html">com.opengamma.strata.market.param</a> with parameters of type <a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/param/PointShiftsBuilder.html" title="class in com.opengamma.strata.market.param">PointShiftsBuilder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">PointShifts.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/PointShifts.html#builder-com.opengamma.strata.market.ShiftType-">builder</a></span>(<a href="../../../../../com/opengamma/strata/market/ShiftType.html" title="enum in com.opengamma.strata.market">ShiftType</a>&nbsp;shiftType)</code>
+<div class="block">Returns a new mutable builder for building instances of <code>ParameterizedDataPointShifts</code>.</div>
 </td>
 </tr>
 </tbody>

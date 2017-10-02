@@ -16,7 +16,7 @@ script:
   - bundle exec jekyll build -d ./_site/strata/$TRAVIS_BRANCH
   - bundle exec htmlproofer _site --url-ignore /github.com/,/www.opengamma.com/support-services/ --file-ignore /strata/$TRAVIS_BRANCH/apidocs/
 after_success:
-  - aws s3 sync --quiet --delete _site/strata/ s3://strata-docs-ci.dev.opengamma.com/
+  - aws s3 sync --quiet --delete _site/strata/ s3://strata-docs-ci.dev.opengamma.com/strata/
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer

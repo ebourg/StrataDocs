@@ -1164,7 +1164,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CsvInfoResolver.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/CsvInfoResolver.html#getReferenceData--">getReferenceData</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">PositionCsvInfoResolver.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvInfoResolver.html#getReferenceData--">getReferenceData</a></span>()</code>
+<div class="block">Gets the reference data being used.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a></code></td>
+<td class="colLast"><span class="typeNameLabel">TradeCsvInfoResolver.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvInfoResolver.html#getReferenceData--">getReferenceData</a></span>()</code>
 <div class="block">Gets the reference data being used.</div>
 </td>
 </tr>
@@ -1180,18 +1186,31 @@
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/loader/csv/CsvInfoResolver.html" title="interface in com.opengamma.strata.loader.csv">CsvInfoResolver</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CsvInfoResolver.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/CsvInfoResolver.html#of-com.opengamma.strata.basics.ReferenceData-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block">Obtains an instance that uses the specified set of reference data.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvInfoResolver.html" title="interface in com.opengamma.strata.loader.csv">PositionCsvInfoResolver</a></code></td>
+<td class="colLast"><span class="typeNameLabel">PositionCsvInfoResolver.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvInfoResolver.html#of-com.opengamma.strata.basics.ReferenceData-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Obtains an instance that uses the specified set of reference data.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html" title="class in com.opengamma.strata.loader.csv">TradeCsvLoader</a></code></td>
 <td class="colLast"><span class="typeNameLabel">TradeCsvLoader.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#of-com.opengamma.strata.basics.ReferenceData-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Obtains an instance that uses the specified set of reference data.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvLoader.html" title="class in com.opengamma.strata.loader.csv">PositionCsvLoader</a></code></td>
 <td class="colLast"><span class="typeNameLabel">PositionCsvLoader.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvLoader.html#of-com.opengamma.strata.basics.ReferenceData-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Obtains an instance that uses the specified set of reference data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvInfoResolver.html" title="interface in com.opengamma.strata.loader.csv">TradeCsvInfoResolver</a></code></td>
+<td class="colLast"><span class="typeNameLabel">TradeCsvInfoResolver.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvInfoResolver.html#of-com.opengamma.strata.basics.ReferenceData-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Obtains an instance that uses the specified set of reference data.</div>
 </td>
 </tr>
@@ -3443,7 +3462,7 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a></code></td>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/data/ImmutableMarketData.html" title="class in com.opengamma.strata.data">ImmutableMarketData</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SyntheticCurveCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/curve/SyntheticCurveCalibrator.html#marketData-com.opengamma.strata.market.curve.CurveGroupDefinition-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.basics.ReferenceData-">marketData</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&nbsp;group,
           <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;inputProvider,
           <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>

@@ -6,6 +6,21 @@ permalink: /releases/
 Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
+## Strata v1.4.1
+
+*4 October 2017*
+
+This minor release contains 7 fixed issues.
+
+* Enhancement - Parse variable notional/rates [#1572](https://github.com/OpenGamma/Strata/issues/1572)
+* Enhancement - New Asian Exchanges [#1571](https://github.com/OpenGamma/Strata/issues/1571)
+* Enhancement - CsvInfoResolver [#1570](https://github.com/OpenGamma/Strata/issues/1570)
+* Enhancement - Synthetic calibrator: typed market data object [#1568](https://github.com/OpenGamma/Strata/issues/1568)
+* Bug fix - Fix CurrencyAmountArray minus() bug [#1569](https://github.com/OpenGamma/Strata/issues/1569)
+* Bug fix - Remove duplicate dependency
+* Bug fix - Update Joda-Convert dependency [#](https://github.com/OpenGamma/Strata/issues/1539)
+
+
 ## Strata v1.4.0
 
 *21 September 2017*

@@ -6,6 +6,18 @@ permalink: /releases/
 Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
+
+## Strata v1.4.2
+
+*5 October 2017*
+
+This minor release contains 3 fixed issues.
+
+* Enhancement - Add DoubleArray.of(DoubleStream) [#1576](https://github.com/OpenGamma/Strata/issues/1576)
+* Enhancement - Update to Joda-Beans v2.0.2  [#1575](https://github.com/OpenGamma/Strata/issues/1575)
+* Enhancement - Handle single digit hours in loader [#1574](https://github.com/OpenGamma/Strata/issues/1574)
+
+
 ## Strata v1.4.1
 
 *4 October 2017*

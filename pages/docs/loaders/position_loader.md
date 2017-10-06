@@ -63,7 +63,7 @@ Valid combinations of conditional fields are as follows (other combinations are 
 |-----------------------|-------------|-------------|
 | Strata Position Type  | Mandatory   | The type of the position, "FUT"/"Future" |
 | Exchange              | Mandatory   | The exchange code, which should be a MIC code |
-| Contract Code         | Mandatory   | The contract code, which should be the code defined by the exchange |
+| Contract Code         | Mandatory   | The contract code supplied by the exchange for use in clearing and margining, such as in SPAN |
 | Expiry                | Mandatory   | The year-month of the expiry, such as '2017-09', see [accepted formats]({{site.baseurl}}/common_formats/) |
 | Expiry Week           | Optional    | The week number for weekly-expiring futures |
 | Expiry Day            | Optional    | The day-of-month for daily-expiring or flex futures |
@@ -86,7 +86,7 @@ Valid combinations of conditional quantity fields are as follows (other combinat
 |-----------------------|-------------|-------------|
 | Strata Position Type  | Mandatory   | The type of the position, "OPT"/"Option" |
 | Exchange              | Mandatory   | The exchange code, which should be a MIC code |
-| Contract Code         | Mandatory   | The contract code, which should be the code defined by the exchange |
+| Contract Code         | Mandatory   | The contract code supplied by the exchange for use in clearing and margining, such as in SPAN |
 | Expiry                | Mandatory   | The year-month of the expiry, such as '2017-09', see [accepted formats]({{site.baseurl}}/common_formats/) |
 | Expiry Week           | Optional    | The week number for weekly-expiring futures |
 | Expiry Day            | Optional    | The day-of-month for daily-expiring or flex futures |

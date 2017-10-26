@@ -49,6 +49,8 @@ These columns are common to all formats:
 | Trade Date            | Optional   | The trade date, such as "2017-06-01", see [accepted formats]({{site.baseurl}}/common_formats/) |
 | Trade Time            | Optional   | The trade time-of-day, such as "11:00", see [accepted formats]({{site.baseurl}}/common_formats/) |
 | Trade Zone            | Optional   | The trade zone, such as "Europe/Paris" (IANA time zone names) or "+02:00" |
+| Counterparty Scheme   | Optional   | The scheme (symbology) within which the counterparty is unique, default "OG-Counterparty" |
+| Counterparty          | Optional   | The counterparty |
 
 Note that the columns above can be added to any of the formats below even if not explicitly mentioned.
 
@@ -316,3 +318,23 @@ Valid combinations of conditional fields are as follows (other combinations are 
 | Day Count             | Mandatory   | The [day count convention]({{site.baseurl}}/day_counts/), such as "Act/360" |
 | Date Convention       | Optional    | The [business day convention]({{site.baseurl}}/date_adjustments/), such as "Following" or "ModifiedFollowing" |
 | Date Calendar         | Optional    | The [holiday calendar]({{site.baseurl}}/holiday_data/) to use, such as "GBLO" |
+
+
+### FX Single
+
+FX forwards/spots can be specified as follows:
+
+| Column name             | Mandatory?  | Description |
+|-------------------------|-------------|-------------|
+| Strata Trade Type       | Mandatory   | The type of the trade, "FxSingle" |
+| Payment Date            | Mandatory   | The payment date, such as "2017-06-01", see [accepted formats]({{site.baseurl}}/common_formats/) |
+| Payment Date Convention | Optional    | The payment [business day convention]({{site.baseurl}}/date_adjustments/), such as "Following" or "ModifiedFollowing" |
+| Payment Date Calendar   | Optional    | The payment [holiday calendar]({{site.baseurl}}/holiday_data/) to use, such as "GBLO" |
+| Leg 1 Direction         | Mandatory   | The direction of the leg, "Pay" or "Receive" |
+| Leg 1 Currency          | Mandatory   | The payment currency, such as "GBP" |
+| Leg 1 Notional          | Mandatory   | The notional amount, in the currency of the leg |
+| Leg 2 Direction         | Mandatory   | The direction of the leg, "Pay" or "Receive" |
+| Leg 2 Currency          | Mandatory   | The payment currency, such as "GBP" |
+| Leg 2 Notional          | Mandatory   | The notional amount, in the currency of the leg |
+
+One leg must be "Pay" and the other "Receive".

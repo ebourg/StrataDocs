@@ -10,13 +10,13 @@ The following third party libraries are used by Strata:
 
 | Library name          | Version | License                                                                     |
 |:---------------------:|:-------:|:--------------------------------------------------------------:|
-| [Commons Math](http://commons.apache.org/math/)             | 3.6.1   | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
-| [Guava](https://github.com/google/guava)                    | 23.0    | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
-| [Joda-Beans](http://www.joda.org/joda-beans/)               | 2.0     | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
-| [Joda-Convert](http://www.joda.org/joda-convert/)           | 1.9.2   | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
-| [SLF4J](http://slf4j.org/)                                  | 1.7.25  | [MIT](http://www.opensource.org/licenses/mit-license.php) |
-| [JCommander](http://jcommander.org/)                        | 1.72    | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
-| [JSR-305 annotations](https://jcp.org/en/jsr/detail?id=305) | 1.3.9   | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
+| [Commons Math](http://commons.apache.org/math/)             | 3.6.1    | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
+| [Guava](https://github.com/google/guava)                    | 23.2-jre | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
+| [Joda-Beans](http://www.joda.org/joda-beans/)               | 2.0.2    | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
+| [Joda-Convert](http://www.joda.org/joda-convert/)           | 1.9.2    | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
+| [SLF4J](http://slf4j.org/)                                  | 1.7.25   | [MIT](http://www.opensource.org/licenses/mit-license.php) |
+| [JCommander](http://jcommander.org/)                        | 1.72     | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
+| [JSR-305 annotations](https://jcp.org/en/jsr/detail?id=305) | 1.3.9    | [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0.html) |
 
 The following third party libraries are used in test code by Strata:
 

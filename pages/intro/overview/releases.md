@@ -7,6 +7,31 @@ Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
 
+## Strata v1.5.0
+
+*26 October 2017*
+
+This release contains [35 fixed issues](https://github.com/OpenGamma/Strata/milestone/15?closed=1).
+This includes the issues fixed in v1.4.1 and v1.4.2 (see below).
+
+* Enhance payment schedule stub handling [#1581](https://github.com/OpenGamma/Strata/issues/1581)
+* Extended handling of pre-adjusted schedule dates [#1580](https://github.com/OpenGamma/Strata/issues/1580)
+* Trade CSV loader extended to support FX forward/spot [#1578](https://github.com/OpenGamma/Strata/issues/1578)
+* Trade CSV loader extended to support counterparty [#1583](https://github.com/OpenGamma/Strata/issues/1583)
+* Position CSV loader extended to avoid using reference data [#1584](https://github.com/OpenGamma/Strata/issues/1584)
+* Extended quoting of CSV [#1586](https://github.com/OpenGamma/Strata/issues/1586)
+* Reset dates optional in FpML [#1585](https://github.com/OpenGamma/Strata/issues/1585)
+* Plus/minus methods on CurrencyScenarioArray [#1577](https://github.com/OpenGamma/Strata/issues/1577)
+* Fix Interpolator-based curve extrapolator [#1588](https://github.com/OpenGamma/Strata/issues/1588)
+* Add IntArray.of(IntStream) [#1587](https://github.com/OpenGamma/Strata/issues/1587)
+* Upgrade Guava to v23.2-jre [#1589](https://github.com/OpenGamma/Strata/issues/1589)
+
+#### Compatibility
+
+There are no compatibility issues with this release.
+
+
+
 ## Strata v1.4.2
 
 *5 October 2017*

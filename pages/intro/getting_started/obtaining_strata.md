@@ -14,7 +14,7 @@ Strata is available in [Maven Central](http://search.maven.org/#search%7Cga%7C1%
 <dependency>
   <groupId>com.opengamma.strata</groupId>
   <artifactId>strata-measure</artifactId>
-  <version>1.4.2</version>
+  <version>1.5.0</version>
 </dependency>
 ```
 

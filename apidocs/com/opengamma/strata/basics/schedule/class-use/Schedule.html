@@ -129,31 +129,39 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Schedule.html" title="class in com.opengamma.strata.basics.schedule">Schedule</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Schedule.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/schedule/Schedule.html#merge-int-java.time.LocalDate-java.time.LocalDate-">merge</a></span>(int&nbsp;groupSize,
+     <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;firstRegularStartDate,
+     <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;lastRegularEndDate)</code>
+<div class="block">Merges this schedule to form a new schedule by combining the schedule periods.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Schedule.html" title="class in com.opengamma.strata.basics.schedule">Schedule</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Schedule.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/schedule/Schedule.html#mergeRegular-int-boolean-">mergeRegular</a></span>(int&nbsp;groupSize,
             boolean&nbsp;rollForwards)</code>
 <div class="block">Merges this schedule to form a new schedule by combining the regular schedule periods.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Schedule.html" title="class in com.opengamma.strata.basics.schedule">Schedule</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Schedule.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/schedule/Schedule.html#mergeToTerm--">mergeToTerm</a></span>()</code>
 <div class="block">Merges this schedule to form a new schedule with a single 'Term' period.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/basics/schedule/Schedule.html" title="class in com.opengamma.strata.basics.schedule">Schedule</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Schedule.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/schedule/Schedule.html#ofTerm-com.opengamma.strata.basics.schedule.SchedulePeriod-">ofTerm</a></span>(<a href="../../../../../../com/opengamma/strata/basics/schedule/SchedulePeriod.html" title="class in com.opengamma.strata.basics.schedule">SchedulePeriod</a>&nbsp;period)</code>
 <div class="block">Obtains a 'Term' instance based on a single period.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Schedule.html" title="class in com.opengamma.strata.basics.schedule">Schedule</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Schedule.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/schedule/Schedule.html#toAdjusted-com.opengamma.strata.basics.date.DateAdjuster-">toAdjusted</a></span>(<a href="../../../../../../com/opengamma/strata/basics/date/DateAdjuster.html" title="interface in com.opengamma.strata.basics.date">DateAdjuster</a>&nbsp;adjuster)</code>
 <div class="block">Converts this schedule to a schedule where all the start and end dates are
  adjusted using the specified adjuster.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/schedule/Schedule.html" title="class in com.opengamma.strata.basics.schedule">Schedule</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Schedule.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/schedule/Schedule.html#toUnadjusted--">toUnadjusted</a></span>()</code>
 <div class="block">Converts this schedule to a schedule where every adjusted date is reset

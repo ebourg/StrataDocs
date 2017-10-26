@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":9,"i20":10,"i21":9,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10};
+var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":9,"i24":10,"i25":9,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -255,74 +255,100 @@ implements <a href="../../../../../com/opengamma/strata/basics/date/DayCount.Sch
 </td>
 </tr>
 <tr id="i14" class="altColor">
+<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html#getUnadjustedDates--">getUnadjustedDates</a></span>()</code>
+<div class="block">Gets the complete list of unadjusted dates.</div>
+</td>
+</tr>
+<tr id="i15" class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html#getUnadjustedEndDate--">getUnadjustedEndDate</a></span>()</code>
+<div class="block">Gets the unadjusted end date.</div>
+</td>
+</tr>
+<tr id="i16" class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html#getUnadjustedStartDate--">getUnadjustedStartDate</a></span>()</code>
+<div class="block">Gets the unadjusted start date.</div>
+</td>
+</tr>
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html#isEndOfMonthConvention--">isEndOfMonthConvention</a></span>()</code>
 <div class="block">Checks if the end of month convention is in use.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html#isTerm--">isTerm</a></span>()</code>
 <div class="block">Checks if this schedule represents a single 'Term' period.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i20" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html" title="class in com.opengamma.strata.basics.schedule">Schedule</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html#merge-int-java.time.LocalDate-java.time.LocalDate-">merge</a></span>(int&nbsp;groupSize,
+     <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;firstRegularStartDate,
+     <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;lastRegularEndDate)</code>
+<div class="block">Merges this schedule to form a new schedule by combining the schedule periods.</div>
+</td>
+</tr>
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html" title="class in com.opengamma.strata.basics.schedule">Schedule</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html#mergeRegular-int-boolean-">mergeRegular</a></span>(int&nbsp;groupSize,
             boolean&nbsp;rollForwards)</code>
 <div class="block">Merges this schedule to form a new schedule by combining the regular schedule periods.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html" title="class in com.opengamma.strata.basics.schedule">Schedule</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html#mergeToTerm--">mergeToTerm</a></span>()</code>
 <div class="block">Merges this schedule to form a new schedule with a single 'Term' period.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.Meta.html" title="class in com.opengamma.strata.basics.schedule">Schedule.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html#meta--">meta</a></span>()</code>
 <div class="block">The meta-bean for <code>Schedule</code>.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.Meta.html" title="class in com.opengamma.strata.basics.schedule">Schedule.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html#metaBean--">metaBean</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html" title="class in com.opengamma.strata.basics.schedule">Schedule</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html#ofTerm-com.opengamma.strata.basics.schedule.SchedulePeriod-">ofTerm</a></span>(<a href="../../../../../com/opengamma/strata/basics/schedule/SchedulePeriod.html" title="class in com.opengamma.strata.basics.schedule">SchedulePeriod</a>&nbsp;period)</code>
 <div class="block">Obtains a 'Term' instance based on a single period.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html#size--">size</a></span>()</code>
 <div class="block">Gets the number of periods in the schedule.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html" title="class in com.opengamma.strata.basics.schedule">Schedule</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html#toAdjusted-com.opengamma.strata.basics.date.DateAdjuster-">toAdjusted</a></span>(<a href="../../../../../com/opengamma/strata/basics/date/DateAdjuster.html" title="interface in com.opengamma.strata.basics.date">DateAdjuster</a>&nbsp;adjuster)</code>
 <div class="block">Converts this schedule to a schedule where all the start and end dates are
  adjusted using the specified adjuster.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.Builder.html" title="class in com.opengamma.strata.basics.schedule">Schedule.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html#toBuilder--">toBuilder</a></span>()</code>
 <div class="block">Returns a builder that allows this bean to be mutated.</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i30" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html" title="class in com.opengamma.strata.basics.schedule">Schedule</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html#toUnadjusted--">toUnadjusted</a></span>()</code>
 <div class="block">Converts this schedule to a schedule where every adjusted date is reset
@@ -494,6 +520,38 @@ implements <a href="../../../../../com/opengamma/strata/basics/date/DayCount.Sch
 </dl>
 </li>
 </ul>
+<a name="getUnadjustedStartDate--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getUnadjustedStartDate</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;getUnadjustedStartDate()</pre>
+<div class="block">Gets the unadjusted start date.
+ <p>
+ The start date before any business day adjustment.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the unadjusted schedule start date</dd>
+</dl>
+</li>
+</ul>
+<a name="getUnadjustedEndDate--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getUnadjustedEndDate</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;getUnadjustedEndDate()</pre>
+<div class="block">Gets the unadjusted end date.
+ <p>
+ The end date before any business day adjustment.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the unadjusted schedule end date</dd>
+</dl>
+</li>
+</ul>
 <a name="getInitialStub--">
 <!--   -->
 </a>
@@ -544,6 +602,24 @@ implements <a href="../../../../../com/opengamma/strata/basics/date/DayCount.Sch
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the non-stub schedule periods</dd>
+</dl>
+</li>
+</ul>
+<a name="getUnadjustedDates--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getUnadjustedDates</h4>
+<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&gt;&nbsp;getUnadjustedDates()</pre>
+<div class="block">Gets the complete list of unadjusted dates.
+ <p>
+ This returns a list including all the unadjusted period boundary dates.
+ This is the same as a list containing the unadjusted start date of the schedule
+ followed by the unadjusted end date of each period.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the list of unadjusted dates, in order</dd>
 </dl>
 </li>
 </ul>
@@ -601,6 +677,49 @@ implements <a href="../../../../../com/opengamma/strata/basics/date/DayCount.Sch
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the merged 'Term' schedule</dd>
+</dl>
+</li>
+</ul>
+<a name="merge-int-java.time.LocalDate-java.time.LocalDate-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>merge</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/schedule/Schedule.html" title="class in com.opengamma.strata.basics.schedule">Schedule</a>&nbsp;merge(int&nbsp;groupSize,
+                      <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;firstRegularStartDate,
+                      <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;lastRegularEndDate)</pre>
+<div class="block">Merges this schedule to form a new schedule by combining the schedule periods.
+ <p>
+ This produces a schedule where some periods are merged together.
+ For example, this could be used to convert a 3 monthly schedule into a 6 monthly schedule.
+ <p>
+ The merging is controlled by the group size, which defines the number of periods
+ to merge together in the result. For example, to convert a 3 monthly schedule into
+ a 6 monthly schedule the group size would be 2 (6 divided by 3).
+ <p>
+ A group size of zero or less will throw an exception.
+ A group size of 1 will return this schedule providing that the specified start and end date match.
+ A larger group size will return a schedule where each group of regular periods are merged.
+ <p>
+ The specified dates must be one of the dates of this schedule (unadjusted or adjusted).
+ All periods of this schedule before the first regular start date, if any, will form a single period in the result.
+ All periods of this schedule after the last regular start date, if any, will form a single period in the result.
+ If this schedule has an initial or final stub, it may be merged with a regular period as part of the process.
+ <p>
+ For example, a schedule with an initial stub and 5 regular periods can be grouped by 2 if the
+ specified <code>firstRegularStartDate</code> equals the end of the first regular period.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>groupSize</code> - the group size</dd>
+<dd><code>firstRegularStartDate</code> - the unadjusted start date of the first regular payment period</dd>
+<dd><code>lastRegularEndDate</code> - the unadjusted end date of the last regular payment period</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the merged schedule</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the group size is zero or less</dd>
+<dd><code><a href="../../../../../com/opengamma/strata/basics/schedule/ScheduleException.html" title="class in com.opengamma.strata.basics.schedule">ScheduleException</a></code> - if the merged schedule cannot be created because the dates don't
+   match this schedule or the regular periods don't match the grouping size</dd>
 </dl>
 </li>
 </ul>

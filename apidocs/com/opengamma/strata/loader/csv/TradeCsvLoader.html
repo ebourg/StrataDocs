@@ -128,6 +128,10 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
    identifier is unique within, such as 'OG-Trade'
  <li>The 'Id' column is optional, and is the identifier of the trade,
    such as 'FRA12345'
+ <li>The 'Counterparty Scheme' column is optional, and is the name of the scheme that the trade
+   identifier is unique within, such as 'OG-Counterparty'
+ <li>The 'Counterparty' column is optional, and is the identifier of the trade's counterparty,
+   such as 'Bank-A'
  <li>The 'Trade Date' column is optional, and is the date that the trade occurred,
    such as '2017-08-01'
  <li>The 'Trade Time' column is optional, and is the time of day that the trade occurred,
@@ -211,6 +215,21 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
  <li>'Convention', 'Trade Date', 'Period To Start'
  <li>'Convention', 'Start Date', 'End Date'
  <li>'Start Date', 'End Date', 'Currency', 'Day Count'
+ </ul>
+
+ <h4>FX Singles</h4>
+ <p>
+ The following columns are supported for 'FX Singles' (FX Spots and FX Forwards) trades:
+ <ul>
+ <li>Payment Date - mandatory
+ <li>Payment Date Convention - optional field. See <a href="../../../../../com/opengamma/strata/basics/date/BusinessDayConventions.html" title="class in com.opengamma.strata.basics.date"><code>BusinessDayConventions</code></a> for possible values.
+ <li>Payment Date Calendar - optional field. See <a href="../../../../../com/opengamma/strata/basics/date/HolidayCalendarIds.html" title="class in com.opengamma.strata.basics.date"><code>HolidayCalendarIds</code></a> for possible values.
+ <li>Leg 1 Direction - mandatory, see <a href="../../../../../com/opengamma/strata/product/common/PayReceive.html" title="enum in com.opengamma.strata.product.common"><code>PayReceive</code></a>
+ <li>Leg 1 Currency - mandatory
+ <li>Leg 1 Notional - mandatory
+ <li>Leg 2 Direction - mandatory, see <a href="../../../../../com/opengamma/strata/product/common/PayReceive.html" title="enum in com.opengamma.strata.product.common"><code>PayReceive</code></a>
+ <li>Leg 2 Currency - mandatory
+ <li>Leg 2 Notional - mandatory
  </ul>
  
  <h4>Security</h4>

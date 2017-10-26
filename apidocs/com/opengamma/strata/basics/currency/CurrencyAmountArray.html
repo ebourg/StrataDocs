@@ -210,7 +210,7 @@ implements <a href="../../../../../com/opengamma/strata/basics/currency/FxConver
 <tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmountArray.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmountArray</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmountArray.html#minus-com.opengamma.strata.basics.currency.CurrencyAmount-">minus</a></span>(<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount)</code>
-<div class="block">Returns a new array containing the values from this array with the values from the amount subtracted.</div>
+<div class="block">Returns a new array containing the values from this array with the specified amount subtracted.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -242,7 +242,7 @@ implements <a href="../../../../../com/opengamma/strata/basics/currency/FxConver
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmountArray.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmountArray</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmountArray.html#plus-com.opengamma.strata.basics.currency.CurrencyAmount-">plus</a></span>(<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount)</code>
-<div class="block">Returns a new array containing the values from this array with the values from the amount added.</div>
+<div class="block">Returns a new array containing the values from this array with the specified amount added.</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
@@ -446,7 +446,7 @@ implements <a href="../../../../../com/opengamma/strata/basics/currency/FxConver
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a new array containing the values from this array added to the values in the other array</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the arrays have different sizes</dd>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the arrays have different sizes or different currencies</dd>
 </dl>
 </li>
 </ul>
@@ -457,7 +457,7 @@ implements <a href="../../../../../com/opengamma/strata/basics/currency/FxConver
 <li class="blockList">
 <h4>plus</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmountArray.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmountArray</a>&nbsp;plus(<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount)</pre>
-<div class="block">Returns a new array containing the values from this array with the values from the amount added.
+<div class="block">Returns a new array containing the values from this array with the specified amount added.
  <p>
  The amount is added to each element in this array.
  The currency must be the same as the currency of this array.</div>
@@ -465,7 +465,9 @@ implements <a href="../../../../../com/opengamma/strata/basics/currency/FxConver
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>amount</code> - the amount to add</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a new array containing the values from this array added to the values in the other array</dd>
+<dd>a new array containing the values from this array with the specified amount added</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the array and the amount have different currencies</dd>
 </dl>
 </li>
 </ul>
@@ -485,9 +487,9 @@ implements <a href="../../../../../com/opengamma/strata/basics/currency/FxConver
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - another array of multiple currency values.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a new array containing the values from this array added with the values from the other array subtracted</dd>
+<dd>a new array containing the values from this array with the values from the other array subtracted</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the arrays have different sizes</dd>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the arrays have different sizes or different currencies</dd>
 </dl>
 </li>
 </ul>
@@ -498,7 +500,7 @@ implements <a href="../../../../../com/opengamma/strata/basics/currency/FxConver
 <li class="blockList">
 <h4>minus</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmountArray.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmountArray</a>&nbsp;minus(<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount)</pre>
-<div class="block">Returns a new array containing the values from this array with the values from the amount subtracted.
+<div class="block">Returns a new array containing the values from this array with the specified amount subtracted.
  <p>
  The amount is subtracted from each element in this array.
  The currency must be the same as the currency of this array.</div>
@@ -506,7 +508,9 @@ implements <a href="../../../../../com/opengamma/strata/basics/currency/FxConver
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>amount</code> - the amount to subtract</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a new array containing the values from this array with the values from the amount subtracted</dd>
+<dd>a new array containing the values from this array with the specified amount subtracted</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the array and the amount have different currencies</dd>
 </dl>
 </li>
 </ul>

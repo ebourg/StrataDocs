@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":10,"i4":10,"i5":9,"i6":10};
+var methods = {"i0":6,"i1":6,"i2":10,"i3":6,"i4":10,"i5":10,"i6":9,"i7":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -179,31 +179,37 @@ implements <a href="../../../../../../com/opengamma/strata/market/curve/interpol
 </td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>protected double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/interpolator/AbstractBoundCurveInterpolator.html#doInterpolateFromExtrapolator-double-">doInterpolateFromExtrapolator</a></span>(double&nbsp;xValue)</code>
+<div class="block">Method for <code>InterpolatorCurveExtrapolator</code> to calculate the interpolated value.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>protected abstract <a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/interpolator/AbstractBoundCurveInterpolator.html#doParameterSensitivity-double-">doParameterSensitivity</a></span>(double&nbsp;xValue)</code>
 <div class="block">Method for subclasses to calculate parameter sensitivity.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/interpolator/AbstractBoundCurveInterpolator.html#firstDerivative-double-">firstDerivative</a></span>(double&nbsp;xValue)</code>
 <div class="block">Computes the first derivative of the y-value for the specified x-value.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/interpolator/AbstractBoundCurveInterpolator.html#interpolate-double-">interpolate</a></span>(double&nbsp;xValue)</code>
 <div class="block">Computes the y-value for the specified x-value by interpolation.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/interpolator/AbstractBoundCurveInterpolator.html#lowerBoundIndex-double-double:A-">lowerBoundIndex</a></span>(double&nbsp;xValue,
                double[]&nbsp;xValues)</code>
 <div class="block">Returns the index of the last value in the input array which is lower than the specified value.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/interpolator/AbstractBoundCurveInterpolator.html#parameterSensitivity-double-">parameterSensitivity</a></span>(double&nbsp;xValue)</code>
 <div class="block">Computes the sensitivity of the y-value with respect to the curve parameters.</div>
@@ -306,7 +312,28 @@ implements <a href="../../../../../../com/opengamma/strata/market/curve/interpol
 <li class="blockList">
 <h4>doInterpolate</h4>
 <pre>protected abstract&nbsp;double&nbsp;doInterpolate(double&nbsp;xValue)</pre>
-<div class="block">Method for subclasses to calculate the interpolated value.</div>
+<div class="block">Method for subclasses to calculate the interpolated value.
+ <p>
+ Callers can assume that <code>xValue</code> is less than the x-value of the last node.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>xValue</code> - the x-value</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the interpolated y-value</dd>
+</dl>
+</li>
+</ul>
+<a name="doInterpolateFromExtrapolator-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>doInterpolateFromExtrapolator</h4>
+<pre>protected&nbsp;double&nbsp;doInterpolateFromExtrapolator(double&nbsp;xValue)</pre>
+<div class="block">Method for <code>InterpolatorCurveExtrapolator</code> to calculate the interpolated value.
+ <p>
+ This is separated from <a href="../../../../../../com/opengamma/strata/market/curve/interpolator/AbstractBoundCurveInterpolator.html#doInterpolate-double-"><code>doInterpolate(double)</code></a> to allow the check for x-values
+ beyond the last node to be treated separately.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>xValue</code> - the x-value</dd>

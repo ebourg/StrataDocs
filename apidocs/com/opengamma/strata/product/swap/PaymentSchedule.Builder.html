@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -161,38 +161,50 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 </td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.Builder.html" title="class in com.opengamma.strata.product.swap">PaymentSchedule.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.Builder.html#firstRegularStartDate-java.time.LocalDate-">firstRegularStartDate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;firstRegularStartDate)</code>
+<div class="block">Sets the optional start date of the first regular payment schedule period, which is the end date of the initial stub.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.Builder.html#get-java.lang.String-">get</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.Builder.html" title="class in com.opengamma.strata.product.swap">PaymentSchedule.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.Builder.html#lastRegularEndDate-java.time.LocalDate-">lastRegularEndDate</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;lastRegularEndDate)</code>
+<div class="block">Sets the optional end date of the last regular payment schedule period, which is the start date of the final stub.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.Builder.html" title="class in com.opengamma.strata.product.swap">PaymentSchedule.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.Builder.html#paymentDateOffset-com.opengamma.strata.basics.date.DaysAdjustment-">paymentDateOffset</a></span>(<a href="../../../../../com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a>&nbsp;paymentDateOffset)</code>
 <div class="block">Sets the offset of payment from the base calculation period date.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.Builder.html" title="class in com.opengamma.strata.product.swap">PaymentSchedule.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.Builder.html#paymentFrequency-com.opengamma.strata.basics.schedule.Frequency-">paymentFrequency</a></span>(<a href="../../../../../com/opengamma/strata/basics/schedule/Frequency.html" title="class in com.opengamma.strata.basics.schedule">Frequency</a>&nbsp;paymentFrequency)</code>
 <div class="block">Sets the periodic frequency of payments.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.Builder.html" title="class in com.opengamma.strata.product.swap">PaymentSchedule.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.Builder.html#paymentRelativeTo-com.opengamma.strata.product.swap.PaymentRelativeTo-">paymentRelativeTo</a></span>(<a href="../../../../../com/opengamma/strata/product/swap/PaymentRelativeTo.html" title="enum in com.opengamma.strata.product.swap">PaymentRelativeTo</a>&nbsp;paymentRelativeTo)</code>
 <div class="block">Sets the base date that each payment is made relative to, defaulted to 'PeriodEnd'.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.Builder.html" title="class in com.opengamma.strata.product.swap">PaymentSchedule.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.Builder.html#set-org.joda.beans.MetaProperty-java.lang.Object-">set</a></span>(<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;?&gt;&nbsp;property,
    <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.Builder.html" title="class in com.opengamma.strata.product.swap">PaymentSchedule.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.Builder.html#set-java.lang.String-java.lang.Object-">set</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName,
    <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;newValue)</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.Builder.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -372,6 +384,63 @@ extends <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dire
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>compoundingMethod</code> - the new value, not null</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this, for chaining, not null</dd>
+</dl>
+</li>
+</ul>
+<a name="firstRegularStartDate-java.time.LocalDate-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>firstRegularStartDate</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.Builder.html" title="class in com.opengamma.strata.product.swap">PaymentSchedule.Builder</a>&nbsp;firstRegularStartDate(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;firstRegularStartDate)</pre>
+<div class="block">Sets the optional start date of the first regular payment schedule period, which is the end date of the initial stub.
+ <p>
+ This is used to identify the boundary date between the initial stub and the first regular period.
+ In most cases there is no need to specify this as it can be worked out from other information.
+ It must be used when there is a need to produce a payment schedule with an initial stub that combines
+ an initial stub from the accrual schedule with the first regular period of the accrual schedule.
+ <p>
+ This is an unadjusted date, and as such it might not be a valid business day.
+ It must equal one of the unadjusted dates on the accrual schedule.
+ <p>
+ If <a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.html#getPaymentRelativeTo--">paymentRelativeTo</a> is 'PeriodEnd' then this field
+ corresponds to <code>firstPaymentDate</code> in FpML.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>firstRegularStartDate</code> - the new value</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this, for chaining, not null</dd>
+</dl>
+</li>
+</ul>
+<a name="lastRegularEndDate-java.time.LocalDate-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lastRegularEndDate</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.Builder.html" title="class in com.opengamma.strata.product.swap">PaymentSchedule.Builder</a>&nbsp;lastRegularEndDate(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;lastRegularEndDate)</pre>
+<div class="block">Sets the optional end date of the last regular payment schedule period, which is the start date of the final stub.
+ <p>
+ This is used to identify the boundary date between the last regular period and the final stub.
+ In most cases there is no need to specify this as it can be worked out from other information.
+ It must be used when there is a need to produce a payment schedule with a final stub that combines
+ a final stub from the accrual schedule with the last regular period of the accrual schedule.
+ <p>
+ This is used to identify the boundary date between the last regular schedule period and the final stub.
+ <p>
+ This is an unadjusted date, and as such it might not be a valid business day.
+ This date must be after 'firstPaymentDate'.
+ It must equal one of the unadjusted dates on the accrual schedule.
+ <p>
+ If <a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.html#getPaymentRelativeTo--">paymentRelativeTo</a> is 'PeriodEnd' then this field
+ corresponds to <code>lastRegularPaymentDate</code> in FpML.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>lastRegularEndDate</code> - the new value</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this, for chaining, not null</dd>
 </dl>

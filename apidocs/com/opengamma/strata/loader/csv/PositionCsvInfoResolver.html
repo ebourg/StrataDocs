@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":18,"i1":18,"i2":18,"i3":6,"i4":17,"i5":18,"i6":18,"i7":17};
+var methods = {"i0":18,"i1":18,"i2":18,"i3":6,"i4":17,"i5":18,"i6":18,"i7":18,"i8":18,"i9":18,"i10":18,"i11":17};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -173,13 +173,41 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i6" class="altColor">
+<td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvInfoResolver.html#parseEtdFuturePosition-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.PositionInfo-">parseEtdFuturePosition</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/CsvRow.html" title="class in com.opengamma.strata.collect.io">CsvRow</a>&nbsp;row,
+                      <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<div class="block">Parses an ETD future position from the CSV row.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/product/SecurityPosition.html" title="class in com.opengamma.strata.product">SecurityPosition</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvInfoResolver.html#parseEtdFutureSecurityPosition-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.PositionInfo-">parseEtdFutureSecurityPosition</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/CsvRow.html" title="class in com.opengamma.strata.collect.io">CsvRow</a>&nbsp;row,
+                              <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<div class="block">Parses an ETD future position from the CSV row without using reference data.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvInfoResolver.html#parseEtdOptionPosition-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.PositionInfo-">parseEtdOptionPosition</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/CsvRow.html" title="class in com.opengamma.strata.collect.io">CsvRow</a>&nbsp;row,
+                      <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<div class="block">Parses an ETD future position from the CSV row.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/product/SecurityPosition.html" title="class in com.opengamma.strata.product">SecurityPosition</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvInfoResolver.html#parseEtdOptionSecurityPosition-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.PositionInfo-">parseEtdOptionSecurityPosition</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/CsvRow.html" title="class in com.opengamma.strata.collect.io">CsvRow</a>&nbsp;row,
+                              <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<div class="block">Parses an ETD option position from the CSV row without using reference data.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>default void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvInfoResolver.html#parsePositionInfo-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.PositionInfoBuilder-">parsePositionInfo</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/CsvRow.html" title="class in com.opengamma.strata.collect.io">CsvRow</a>&nbsp;row,
                  <a href="../../../../../com/opengamma/strata/product/PositionInfoBuilder.html" title="class in com.opengamma.strata.product">PositionInfoBuilder</a>&nbsp;builder)</code>
 <div class="block">Parses attributes into <code>PositionInfo</code>.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvInfoResolver.html" title="interface in com.opengamma.strata.loader.csv">PositionCsvInfoResolver</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvInfoResolver.html#standard--">standard</a></span>()</code>
 <div class="block">Obtains an instance that uses the standard set of reference data.</div>
@@ -333,7 +361,7 @@ var activeTableTab = "activeTableTab";
 <a name="parseEtdContractSpec-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.etd.EtdType-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>parseEtdContractSpec</h4>
 <pre>default&nbsp;<a href="../../../../../com/opengamma/strata/product/etd/EtdContractSpec.html" title="class in com.opengamma.strata.product.etd">EtdContractSpec</a>&nbsp;parseEtdContractSpec(<a href="../../../../../com/opengamma/strata/collect/io/CsvRow.html" title="class in com.opengamma.strata.collect.io">CsvRow</a>&nbsp;row,
@@ -344,7 +372,103 @@ var activeTableTab = "activeTableTab";
 <dd><code>row</code> - the CSV row to parse</dd>
 <dd><code>type</code> - the ETD type</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
+<dd>the contract specification</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the specification is not found</dd>
+</dl>
+</li>
+</ul>
+<a name="parseEtdFuturePosition-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.PositionInfo-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>parseEtdFuturePosition</h4>
+<pre>default&nbsp;<a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>&nbsp;parseEtdFuturePosition(<a href="../../../../../com/opengamma/strata/collect/io/CsvRow.html" title="class in com.opengamma.strata.collect.io">CsvRow</a>&nbsp;row,
+                                        <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</pre>
+<div class="block">Parses an ETD future position from the CSV row.
+ <p>
+ This is intended to use reference data to find the ETD future security,
+ returning it as an instance of <a href="../../../../../com/opengamma/strata/product/etd/EtdFuturePosition.html" title="class in com.opengamma.strata.product.etd"><code>EtdFuturePosition</code></a>.
+ The reference data lookup uses <a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvInfoResolver.html#parseEtdContractSpec-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.etd.EtdType-"><code>parseEtdContractSpec(CsvRow, EtdType)</code></a> by default,
+ however it could be overridden to lookup the security directly in reference data.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>row</code> - the CSV row to parse</dd>
+<dd><code>info</code> - the position information</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the parsed position</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the row cannot be parsed</dd>
+</dl>
+</li>
+</ul>
+<a name="parseEtdOptionPosition-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.PositionInfo-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>parseEtdOptionPosition</h4>
+<pre>default&nbsp;<a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>&nbsp;parseEtdOptionPosition(<a href="../../../../../com/opengamma/strata/collect/io/CsvRow.html" title="class in com.opengamma.strata.collect.io">CsvRow</a>&nbsp;row,
+                                        <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</pre>
+<div class="block">Parses an ETD future position from the CSV row.
+ <p>
+ This is intended to use reference data to find the ETD future security,
+ returning it as an instance of <a href="../../../../../com/opengamma/strata/product/etd/EtdOptionPosition.html" title="class in com.opengamma.strata.product.etd"><code>EtdOptionPosition</code></a>.
+ The reference data lookup uses <a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvInfoResolver.html#parseEtdContractSpec-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.etd.EtdType-"><code>parseEtdContractSpec(CsvRow, EtdType)</code></a> by default,
+ however it could be overridden to lookup the security directly in reference data.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>row</code> - the CSV row</dd>
+<dd><code>info</code> - the position info</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the parsed position</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the row cannot be parsed</dd>
+</dl>
+</li>
+</ul>
+<a name="parseEtdFutureSecurityPosition-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.PositionInfo-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>parseEtdFutureSecurityPosition</h4>
+<pre>default&nbsp;<a href="../../../../../com/opengamma/strata/product/SecurityPosition.html" title="class in com.opengamma.strata.product">SecurityPosition</a>&nbsp;parseEtdFutureSecurityPosition(<a href="../../../../../com/opengamma/strata/collect/io/CsvRow.html" title="class in com.opengamma.strata.collect.io">CsvRow</a>&nbsp;row,
+                                                        <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</pre>
+<div class="block">Parses an ETD future position from the CSV row without using reference data.
+ <p>
+ This returns a <a href="../../../../../com/opengamma/strata/product/SecurityPosition.html" title="class in com.opengamma.strata.product"><code>SecurityPosition</code></a> based on a standard ETD identifier from <a href="../../../../../com/opengamma/strata/product/etd/EtdIdUtils.html" title="class in com.opengamma.strata.product.etd"><code>EtdIdUtils</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>row</code> - the CSV row to parse</dd>
+<dd><code>info</code> - the position information</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
 <dd>the loaded positions, position-level errors are captured in the result</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the row cannot be parsed</dd>
+</dl>
+</li>
+</ul>
+<a name="parseEtdOptionSecurityPosition-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.PositionInfo-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>parseEtdOptionSecurityPosition</h4>
+<pre>default&nbsp;<a href="../../../../../com/opengamma/strata/product/SecurityPosition.html" title="class in com.opengamma.strata.product">SecurityPosition</a>&nbsp;parseEtdOptionSecurityPosition(<a href="../../../../../com/opengamma/strata/collect/io/CsvRow.html" title="class in com.opengamma.strata.collect.io">CsvRow</a>&nbsp;row,
+                                                        <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</pre>
+<div class="block">Parses an ETD option position from the CSV row without using reference data.
+ <p>
+ This returns a <a href="../../../../../com/opengamma/strata/product/SecurityPosition.html" title="class in com.opengamma.strata.product"><code>SecurityPosition</code></a> based on a standard ETD identifier from <a href="../../../../../com/opengamma/strata/product/etd/EtdIdUtils.html" title="class in com.opengamma.strata.product.etd"><code>EtdIdUtils</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>row</code> - the CSV row to parse</dd>
+<dd><code>info</code> - the position information</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the loaded positions, position-level errors are captured in the result</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the row cannot be parsed</dd>
 </dl>
 </li>
 </ul>

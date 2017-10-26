@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":18,"i1":18,"i2":18,"i3":18,"i4":6,"i5":17,"i6":18,"i7":17};
+var methods = {"i0":18,"i1":18,"i2":18,"i3":18,"i4":18,"i5":6,"i6":17,"i7":18,"i8":17};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -137,46 +137,53 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/product/fx/FxSingleTrade.html" title="class in com.opengamma.strata.product.fx">FxSingleTrade</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvInfoResolver.html#completeTrade-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.fx.FxSingleTrade-">completeTrade</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/CsvRow.html" title="class in com.opengamma.strata.collect.io">CsvRow</a>&nbsp;row,
+             <a href="../../../../../com/opengamma/strata/product/fx/FxSingleTrade.html" title="class in com.opengamma.strata.product.fx">FxSingleTrade</a>&nbsp;trade)</code>
+<div class="block">Completes the FX Forward trade, potentially parsing additional columns.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/product/SecurityTrade.html" title="class in com.opengamma.strata.product">SecurityTrade</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvInfoResolver.html#completeTrade-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.SecurityTrade-">completeTrade</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/CsvRow.html" title="class in com.opengamma.strata.collect.io">CsvRow</a>&nbsp;row,
              <a href="../../../../../com/opengamma/strata/product/SecurityTrade.html" title="class in com.opengamma.strata.product">SecurityTrade</a>&nbsp;trade)</code>
 <div class="block">Completes the trade, potentially parsing additional columns.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvInfoResolver.html#completeTrade-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.swap.SwapTrade-">completeTrade</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/CsvRow.html" title="class in com.opengamma.strata.collect.io">CsvRow</a>&nbsp;row,
              <a href="../../../../../com/opengamma/strata/product/swap/SwapTrade.html" title="class in com.opengamma.strata.product.swap">SwapTrade</a>&nbsp;trade)</code>
 <div class="block">Completes the FRA trade, potentially parsing additional columns.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/product/deposit/TermDepositTrade.html" title="class in com.opengamma.strata.product.deposit">TermDepositTrade</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvInfoResolver.html#completeTrade-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.deposit.TermDepositTrade-">completeTrade</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/CsvRow.html" title="class in com.opengamma.strata.collect.io">CsvRow</a>&nbsp;row,
              <a href="../../../../../com/opengamma/strata/product/deposit/TermDepositTrade.html" title="class in com.opengamma.strata.product.deposit">TermDepositTrade</a>&nbsp;trade)</code>
 <div class="block">Completes the trade, potentially parsing additional columns.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvInfoResolver.html#getReferenceData--">getReferenceData</a></span>()</code>
 <div class="block">Gets the reference data being used.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvInfoResolver.html" title="interface in com.opengamma.strata.loader.csv">TradeCsvInfoResolver</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvInfoResolver.html#of-com.opengamma.strata.basics.ReferenceData-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Obtains an instance that uses the specified set of reference data.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>default void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvInfoResolver.html#parseTradeInfo-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.TradeInfoBuilder-">parseTradeInfo</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/CsvRow.html" title="class in com.opengamma.strata.collect.io">CsvRow</a>&nbsp;row,
               <a href="../../../../../com/opengamma/strata/product/TradeInfoBuilder.html" title="class in com.opengamma.strata.product">TradeInfoBuilder</a>&nbsp;builder)</code>
 <div class="block">Parses attributes into <code>TradeInfo</code>.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvInfoResolver.html" title="interface in com.opengamma.strata.loader.csv">TradeCsvInfoResolver</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvInfoResolver.html#standard--">standard</a></span>()</code>
 <div class="block">Obtains an instance that uses the standard set of reference data.</div>
@@ -327,7 +334,7 @@ var activeTableTab = "activeTableTab";
 <a name="completeTrade-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.deposit.TermDepositTrade-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>completeTrade</h4>
 <pre>default&nbsp;<a href="../../../../../com/opengamma/strata/product/deposit/TermDepositTrade.html" title="class in com.opengamma.strata.product.deposit">TermDepositTrade</a>&nbsp;completeTrade(<a href="../../../../../com/opengamma/strata/collect/io/CsvRow.html" title="class in com.opengamma.strata.collect.io">CsvRow</a>&nbsp;row,
@@ -342,6 +349,27 @@ var activeTableTab = "activeTableTab";
 <dd><code>trade</code> - the parsed trade</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the updated trade</dd>
+</dl>
+</li>
+</ul>
+<a name="completeTrade-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.fx.FxSingleTrade-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>completeTrade</h4>
+<pre>default&nbsp;<a href="../../../../../com/opengamma/strata/product/fx/FxSingleTrade.html" title="class in com.opengamma.strata.product.fx">FxSingleTrade</a>&nbsp;completeTrade(<a href="../../../../../com/opengamma/strata/collect/io/CsvRow.html" title="class in com.opengamma.strata.collect.io">CsvRow</a>&nbsp;row,
+                                    <a href="../../../../../com/opengamma/strata/product/fx/FxSingleTrade.html" title="class in com.opengamma.strata.product.fx">FxSingleTrade</a>&nbsp;trade)</pre>
+<div class="block">Completes the FX Forward trade, potentially parsing additional columns.
+ <p>
+ This is called after the trade has been parsed and after
+ <a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvInfoResolver.html#parseTradeInfo-com.opengamma.strata.collect.io.CsvRow-com.opengamma.strata.product.TradeInfoBuilder-"><code>parseTradeInfo(CsvRow, TradeInfoBuilder)</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>row</code> - the CSV row to parse</dd>
+<dd><code>trade</code> - the parsed trade, as an instance of <a href="../../../../../com/opengamma/strata/product/fx/FxSingleTrade.html" title="class in com.opengamma.strata.product.fx"><code>FxSingleTrade</code></a></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the updated trade, as an instance of <a href="../../../../../com/opengamma/strata/product/fx/FxSingleTrade.html" title="class in com.opengamma.strata.product.fx"><code>FxSingleTrade</code></a></dd>
 </dl>
 </li>
 </ul>

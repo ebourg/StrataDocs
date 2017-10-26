@@ -11,7 +11,7 @@ To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obt
 
 *26 October 2017*
 
-This release contains [35 fixed issues](https://github.com/OpenGamma/Strata/milestone/15?closed=1).
+This release contains [19 fixed issues](https://github.com/OpenGamma/Strata/milestone/15?closed=1).
 This includes the issues fixed in v1.4.1 and v1.4.2 (see below).
 
 * Enhance payment schedule stub handling [#1581](https://github.com/OpenGamma/Strata/issues/1581)

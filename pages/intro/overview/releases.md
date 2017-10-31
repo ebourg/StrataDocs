@@ -6,6 +6,23 @@ permalink: /releases/
 Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
+## Strata v1.5.2
+
+*31 October 2017*
+
+This minor release contains 1 bug fix.
+
+* Return EOM when calculating roll convention from stub [#1590](https://github.com/OpenGamma/Strata/issues/1590)
+
+
+## Strata v1.5.1
+
+*26 October 2017*
+
+This minor release contains 1 bug fix.
+
+* Fix for CSV outputter when numeric value is prefixed with a sign
+
 
 ## Strata v1.5.0
 

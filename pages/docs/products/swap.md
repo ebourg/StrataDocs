@@ -33,7 +33,7 @@ SwapLeg payLeg = RateCalculationSwapLeg.builder()
     .startDate(LocalDate.of(2014, 9, 12))
     .endDate(LocalDate.of(2021, 9, 12))
     .frequency(Frequency.P6M)
-    .businessDayAdjustment(BusinessDayAdjustment.of(MODIFIED_FOLLOWING, HolidayCalendars.USNY))
+    .businessDayAdjustment(BusinessDayAdjustment.of(MODIFIED_FOLLOWING, HolidayCalendarIds.USNY))
     .build())
   .paymentSchedule(PaymentSchedule.builder()
     .paymentFrequency(Frequency.P6M)
@@ -49,7 +49,7 @@ SwapLeg receiveLeg = RateCalculationSwapLeg.builder()
     .startDate(LocalDate.of(2014, 9, 12))
     .endDate(LocalDate.of(2021, 9, 12))
     .frequency(Frequency.P3M)
-    .businessDayAdjustment(BusinessDayAdjustment.of(MODIFIED_FOLLOWING, HolidayCalendars.USNY))
+    .businessDayAdjustment(BusinessDayAdjustment.of(MODIFIED_FOLLOWING, HolidayCalendarIds.USNY))
     .build())
   .paymentSchedule(PaymentSchedule.builder()
     .paymentFrequency(Frequency.P3M)
@@ -62,7 +62,7 @@ SwapLeg receiveLeg = RateCalculationSwapLeg.builder()
 Swap swap = Swap.of(payLeg, receiveLeg);
 ```
 
-{{tip}}The strata-loader project provides the ability to load a swap from FpML.{{end}}
+{{tip}}The strata-loader project provides the ability to load a swap from FpML and CSV.{{end}}
 
 
 ## Risk measures

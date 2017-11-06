@@ -33,7 +33,7 @@ TermDeposit td = TermDeposit.builder()
   .build();
 ```
 
-{{tip}}The strata-loader project provides the ability to load a term deposit from FpML.{{end}}
+{{tip}}The strata-loader project provides the ability to load a term deposit from FpML and CSV.{{end}}
 
 
 ## Risk measures

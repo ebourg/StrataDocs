@@ -25,14 +25,20 @@ Usually this is from today to tomorrow, but it can be from tomorrow to the day a
 | DKK-TNR        | TNR index for CHF        | Act/360      |
 | EUR-EONIA      | EONIA index for EUR      | Act/360      |
 | GBP-SONIA      | SONIA index for GBP      | Act/365F     |
+| INR-OMIBOR *   | OMIBOR index for INR     | Act/365F     |
 | NOK-NOWA       | NOWA index for NOK       | Act/Act Year |
+| NZD-NZIONA     | NZIONA index for AUD     | Act/365F     |
 | PLN-POLONIA    | POLONIA index for PLN    | Act/365F     |
 | SEK-SIOR       | SIOR index for SEK       | Act/360      |
+| SGD-SONAR *    | SONAR index for SGD      | Act/365F     |
 | JPY-TONAR      | TONAR index for JPY      | Act/365F     |
 | USD-FED-FUND   | Fed-Fund index for USD   | Act/360      |
 
 Overnight indices have a constant in `OvernightIndices`.
 The identifier can also be obtained dynamically using `OvernightIndex.of(name)`.
+
+* Indices marked with a star do not have a constant in `OvernightIndices`,
+nor do they have holiday calendar data available.
 
 
 ## Ibor Indices:
@@ -50,14 +56,19 @@ The deposit period is known as the tenor, and a rate is published for a number o
 | EUR-LIBOR-XX         | 1W,1M,2M,3M,6M,12M       | LIBOR index for EUR       | Act/360      |
 | EUR-EURIBOR-XX       | 1W,2W,1M,2M,3M,6M,9M,12M | EURIBOR index for EUR     | Act/360      |
 | GBP-LIBOR-XX         | 1W,1M,2M,3M,6M,12M       | LIBOR index for GBP       | Act/365F     |
+| HKD-HIBOR-XX *       | 1W,2W,1M,2M,3M,6M,12M    | HIBOR index for HKD       | Act/365F     |
 | HUF-BUBOR-XX         | 1W,2W,1M,2M,3M,6M,9M,12M | BUBOR index for HUF       | Act/360      |
+| KRW-CD-XX *          | 13W                      | CD index for KRW          | Act/365F     |
 | MXN-TIIE-XX          | 4W,13W,26W               | TIIE index for MXN        | Act/360      |
 | JPY-LIBOR-XX         | 1W,1M,2M,3M,6M,12M       | LIBOR index for JPY       | Act/360      |
 | JPY-TIBOR-JAPAN-XX   | 1W,1M,2M,3M,6M,12M       | TIBOR index for JPY       | Act/365F     |
 | JPY-TIBOR-EUROYEN-XX | 1W,1M,2M,3M,6M,12M       | TIBOR index for JPY       | Act/360      |
 | NOK-NIBOR-XX         | 1W,1M,2M,3M,6M           | NIBOR index for NOK       | Act/360      |
+| NZD-BKBM-XX          | 1M,2M,3M,4M,5M,6M        | BKBM index for NZD        | Act/365F     |
 | PLN-WIBOR-XX         | 1W,1M,3M,6M,12M          | WIBOR index for PLN       | Act/365F     |
 | SEK-STIBOR-XX        | 1W,1M,2M,3M,6M           | STIBOR index for SEK      | Act/360      |
+| SGD-SIBOR-XX *       | 1M,3M,6M,12M             | SIBOR index for SGD       | Act/365F     |
+| SGD-SOR-XX *         | 1M,3M,6M                 | SOR index for SGD         | Act/365F     |
 | USD-LIBOR-XX         | 1W,1M,2M,3M,6M,12M       | LIBOR index for USD       | Act/360      |
 | ZAR-JIBAR-XX         | 1M,3M,6M,9M,12M          | JIBAR index for ZAR       | Act/365F     |
 
@@ -66,6 +77,9 @@ For example, "GBP-LIBOR-3M" is a valid index name.
 
 Ibor indices have a constant in `IborIndices`.
 The identifier can also be obtained dynamically using `IborIndex.of(name)`.
+
+* Indices marked with a star do not have a constant in `IborIndices`,
+nor do they have holiday calendar data available.
 
 
 ## Prices Indices (for inflation):

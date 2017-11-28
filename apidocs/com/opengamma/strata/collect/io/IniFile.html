@@ -121,6 +121,8 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
  <p>
  The basic element is a key-value pair.
  The key is separated from the value using the '=' symbol.
+ The string ' = ' is searched for before '=' to allow an equals sign to be present
+ in the key, which implies that this string cannot be in either the key or the value.
  Duplicate keys are allowed.
  For example 'key = value'.
  The equals sign and value may be omitted, in which case the value is an empty string.

@@ -375,8 +375,7 @@ implements <a href="../../../../../com/opengamma/strata/basics/currency/FxConver
 <pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a>...&nbsp;sensitivities)</pre>
 <div class="block">Obtains an instance from an array of sensitivity entries.
  <p>
- The order of sensitivities is typically unimportant, however it is retained
- and exposed in <a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html#equals-java.lang.Object-"><code>equals(Object)</code></a>.</div>
+ The sensitivities are sorted using <a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#compareKey-com.opengamma.strata.market.param.CurrencyParameterSensitivity-"><code>CurrencyParameterSensitivity.compareKey(com.opengamma.strata.market.param.CurrencyParameterSensitivity)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>sensitivities</code> - the sensitivities</dd>
@@ -394,8 +393,7 @@ implements <a href="../../../../../com/opengamma/strata/basics/currency/FxConver
 <pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&nbsp;of(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a>&gt;&nbsp;sensitivities)</pre>
 <div class="block">Obtains an instance from a list of sensitivity entries.
  <p>
- The order of sensitivities is typically unimportant, however it is retained
- and exposed in <a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html#equals-java.lang.Object-"><code>equals(Object)</code></a>.</div>
+ The sensitivities are sorted using <a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html#compareKey-com.opengamma.strata.market.param.CurrencyParameterSensitivity-"><code>CurrencyParameterSensitivity.compareKey(com.opengamma.strata.market.param.CurrencyParameterSensitivity)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>sensitivities</code> - the list of sensitivity entries</dd>

@@ -5420,7 +5420,7 @@
  A single <code>CurrencyParameterSensitivity</code> represents the sensitivity to a single <a href="com/opengamma/strata/market/param/ParameterizedData.html" title="interface in com.opengamma.strata.market.param"><code>ParameterizedData</code></a> instance.
  However, a <code>ParameterizedData</code> instance can itself be backed by more than one underlying instance.
  For example, a curve formed from two underlying curves.
- This list is present, it represents how to split this sensitivity between the underlying instances.</div>
+ If this list is present, it represents how to split this sensitivity between the underlying instances.</div>
 </li>
 </ul>
 </li>
@@ -6094,6 +6094,49 @@
 </ul>
 </li>
 <li class="blockList">
+<h2 title="Package">Package&nbsp;com.opengamma.strata.measure</h2>
+<ul class="blockList">
+<li class="blockList"><a name="com.opengamma.strata.measure.ValuationZoneTimeDefinition">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/measure/ValuationZoneTimeDefinition.html" title="class in com.opengamma.strata.measure">com.opengamma.strata.measure.ValuationZoneTimeDefinition</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>defaultLocalTime</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html?is-external=true" title="class or interface in java.time">LocalTime</a> defaultLocalTime</pre>
+<div class="block">The default local time.
+ <p>
+ The default local time will be used if the input date is not scenario value or 
+ if the scenario size of the input date exceeds the size of <code>localTimes</code>.</div>
+</li>
+<li class="blockList">
+<h4>zoneId</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZoneId.html?is-external=true" title="class or interface in java.time">ZoneId</a> zoneId</pre>
+<div class="block">The zone ID.</div>
+</li>
+<li class="blockListLast">
+<h4>localTimes</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">E</a>&gt; localTimes</pre>
+<div class="block">The local time.
+ <p>
+ The local time in <code>zoneId</code>. 
+ The size is not necessarily the same as the scenario size. 
+ <code>defaultLocalTime</code> will be used if extra <code>LocalTime</code> is required.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList">
 <h2 title="Package">Package&nbsp;com.opengamma.strata.measure.calc</h2>
 <ul class="blockList">
 <li class="blockList"><a name="com.opengamma.strata.measure.calc.TargetTypeCalculationParameter">
@@ -6224,6 +6267,236 @@
 <h4>maximumSteps</h4>
 <pre>int maximumSteps</pre>
 <div class="block">The maximum number of steps for the root finder.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList">
+<h2 title="Package">Package&nbsp;com.opengamma.strata.measure.fxopt</h2>
+<ul class="blockList">
+<li class="blockList"><a name="com.opengamma.strata.measure.fxopt.BlackFxOptionInterpolatedNodalSurfaceVolatilitiesSpecification">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/measure/fxopt/BlackFxOptionInterpolatedNodalSurfaceVolatilitiesSpecification.html" title="class in com.opengamma.strata.measure.fxopt">com.opengamma.strata.measure.fxopt.BlackFxOptionInterpolatedNodalSurfaceVolatilitiesSpecification</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>name</h4>
+<pre><a href="com/opengamma/strata/pricer/fxopt/FxOptionVolatilitiesName.html" title="class in com.opengamma.strata.pricer.fxopt">FxOptionVolatilitiesName</a> name</pre>
+</li>
+<li class="blockList">
+<h4>currencyPair</h4>
+<pre><a href="com/opengamma/strata/basics/currency/CurrencyPair.html" title="class in com.opengamma.strata.basics.currency">CurrencyPair</a> currencyPair</pre>
+</li>
+<li class="blockList">
+<h4>dayCount</h4>
+<pre><a href="com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a> dayCount</pre>
+</li>
+<li class="blockList">
+<h4>nodes</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">E</a>&gt; nodes</pre>
+</li>
+<li class="blockList">
+<h4>timeInterpolator</h4>
+<pre><a href="com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a> timeInterpolator</pre>
+<div class="block">The interpolator used in the time dimension.</div>
+</li>
+<li class="blockList">
+<h4>timeExtrapolatorLeft</h4>
+<pre><a href="com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a> timeExtrapolatorLeft</pre>
+<div class="block">The left extrapolator used in the time dimension.</div>
+</li>
+<li class="blockList">
+<h4>timeExtrapolatorRight</h4>
+<pre><a href="com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a> timeExtrapolatorRight</pre>
+<div class="block">The right extrapolator used in the time dimension.</div>
+</li>
+<li class="blockList">
+<h4>strikeInterpolator</h4>
+<pre><a href="com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a> strikeInterpolator</pre>
+<div class="block">The interpolator used in the strike dimension.</div>
+</li>
+<li class="blockList">
+<h4>strikeExtrapolatorLeft</h4>
+<pre><a href="com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a> strikeExtrapolatorLeft</pre>
+<div class="block">The left extrapolator used in the strike dimension.</div>
+</li>
+<li class="blockListLast">
+<h4>strikeExtrapolatorRight</h4>
+<pre><a href="com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a> strikeExtrapolatorRight</pre>
+<div class="block">The right extrapolator used in the strike dimension.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.measure.fxopt.BlackFxOptionSmileVolatilitiesSpecification">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/measure/fxopt/BlackFxOptionSmileVolatilitiesSpecification.html" title="class in com.opengamma.strata.measure.fxopt">com.opengamma.strata.measure.fxopt.BlackFxOptionSmileVolatilitiesSpecification</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>name</h4>
+<pre><a href="com/opengamma/strata/pricer/fxopt/FxOptionVolatilitiesName.html" title="class in com.opengamma.strata.pricer.fxopt">FxOptionVolatilitiesName</a> name</pre>
+<div class="block">The name of the volatilities.</div>
+</li>
+<li class="blockList">
+<h4>currencyPair</h4>
+<pre><a href="com/opengamma/strata/basics/currency/CurrencyPair.html" title="class in com.opengamma.strata.basics.currency">CurrencyPair</a> currencyPair</pre>
+<div class="block">The currency pair that the volatilities are for.</div>
+</li>
+<li class="blockList">
+<h4>dayCount</h4>
+<pre><a href="com/opengamma/strata/basics/date/DayCount.html" title="interface in com.opengamma.strata.basics.date">DayCount</a> dayCount</pre>
+<div class="block">The day count convention used for the expiry.</div>
+</li>
+<li class="blockList">
+<h4>nodes</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">E</a>&gt; nodes</pre>
+<div class="block">The nodes in the FX option volatilities.
+ <p>
+ The nodes are used to find the quotes and build the volatilities.</div>
+</li>
+<li class="blockList">
+<h4>timeInterpolator</h4>
+<pre><a href="com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a> timeInterpolator</pre>
+<div class="block">The interpolator used in the time dimension.</div>
+</li>
+<li class="blockList">
+<h4>timeExtrapolatorLeft</h4>
+<pre><a href="com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a> timeExtrapolatorLeft</pre>
+<div class="block">The left extrapolator used in the time dimension.</div>
+</li>
+<li class="blockList">
+<h4>timeExtrapolatorRight</h4>
+<pre><a href="com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a> timeExtrapolatorRight</pre>
+<div class="block">The right extrapolator used in the time dimension.</div>
+</li>
+<li class="blockList">
+<h4>strikeInterpolator</h4>
+<pre><a href="com/opengamma/strata/market/curve/interpolator/CurveInterpolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveInterpolator</a> strikeInterpolator</pre>
+<div class="block">The interpolator used in the strike dimension.</div>
+</li>
+<li class="blockList">
+<h4>strikeExtrapolatorLeft</h4>
+<pre><a href="com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a> strikeExtrapolatorLeft</pre>
+<div class="block">The left extrapolator used in the strike dimension.</div>
+</li>
+<li class="blockListLast">
+<h4>strikeExtrapolatorRight</h4>
+<pre><a href="com/opengamma/strata/market/curve/interpolator/CurveExtrapolator.html" title="interface in com.opengamma.strata.market.curve.interpolator">CurveExtrapolator</a> strikeExtrapolatorRight</pre>
+<div class="block">The right extrapolator used in the strike dimension.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.measure.fxopt.FxOptionVolatilitiesDefinition">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/measure/fxopt/FxOptionVolatilitiesDefinition.html" title="class in com.opengamma.strata.measure.fxopt">com.opengamma.strata.measure.fxopt.FxOptionVolatilitiesDefinition</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockListLast">
+<h4>specification</h4>
+<pre><a href="com/opengamma/strata/measure/fxopt/FxOptionVolatilitiesSpecification.html" title="interface in com.opengamma.strata.measure.fxopt">FxOptionVolatilitiesSpecification</a> specification</pre>
+<div class="block">The FX option volatility specification.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.measure.fxopt.FxOptionVolatilitiesNode">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/measure/fxopt/FxOptionVolatilitiesNode.html" title="class in com.opengamma.strata.measure.fxopt">com.opengamma.strata.measure.fxopt.FxOptionVolatilitiesNode</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>currencyPair</h4>
+<pre><a href="com/opengamma/strata/basics/currency/CurrencyPair.html" title="class in com.opengamma.strata.basics.currency">CurrencyPair</a> currencyPair</pre>
+<div class="block">The currency pair.
+ <p>
+ The quote must be based on this currency pair and direction.</div>
+</li>
+<li class="blockList">
+<h4>label</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> label</pre>
+<div class="block">The label to use for the node.</div>
+</li>
+<li class="blockList">
+<h4>spotDateOffset</h4>
+<pre><a href="com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a> spotDateOffset</pre>
+<div class="block">The offset of the spot value date from the valuation date.
+ <p>
+ Typically this is the same as the standard convention of the spot date offset of the underlying FX forward.</div>
+</li>
+<li class="blockList">
+<h4>businessDayAdjustment</h4>
+<pre><a href="com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a> businessDayAdjustment</pre>
+<div class="block">The business day adjustment to apply to the delivery date.
+ <p>
+ Typically this is the same as the standard convention of the business day adjustment 
+ applied to the delivery date of the underlying FX forward.</div>
+</li>
+<li class="blockList">
+<h4>expiryDateOffset</h4>
+<pre><a href="com/opengamma/strata/basics/date/DaysAdjustment.html" title="class in com.opengamma.strata.basics.date">DaysAdjustment</a> expiryDateOffset</pre>
+<div class="block">The offset of the expiry date from the delivery date.
+ <p>
+ By default the expiry date offset is the inverse of <code>spotDateOffset</code>. 
+ In this case <code>BusinessDayAdjustment</code> in <code>spotDateOffset</code> must be <code>NONE</code>.</div>
+</li>
+<li class="blockList">
+<h4>quoteValueType</h4>
+<pre><a href="com/opengamma/strata/market/ValueType.html" title="class in com.opengamma.strata.market">ValueType</a> quoteValueType</pre>
+<div class="block">The value type of the quote.</div>
+</li>
+<li class="blockList">
+<h4>quoteId</h4>
+<pre><a href="com/opengamma/strata/market/observable/QuoteId.html" title="class in com.opengamma.strata.market.observable">QuoteId</a> quoteId</pre>
+<div class="block">The quote ID.</div>
+</li>
+<li class="blockList">
+<h4>tenor</h4>
+<pre><a href="com/opengamma/strata/basics/date/Tenor.html" title="class in com.opengamma.strata.basics.date">Tenor</a> tenor</pre>
+<div class="block">The tenor.
+ <p>
+ Typically the tenor is coherent to that of the underlying FX forward. 
+ Thus it spans the period between spot date to delivery date.</div>
+</li>
+<li class="blockListLast">
+<h4>strike</h4>
+<pre><a href="com/opengamma/strata/market/option/Strike.html" title="interface in com.opengamma.strata.market.option">Strike</a> strike</pre>
+<div class="block">The strike.</div>
 </li>
 </ul>
 </li>
@@ -7973,6 +8246,11 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
+<h4>name</h4>
+<pre><a href="com/opengamma/strata/pricer/fxopt/FxOptionVolatilitiesName.html" title="class in com.opengamma.strata.pricer.fxopt">FxOptionVolatilitiesName</a> name</pre>
+<div class="block">The name of the volatilities.</div>
+</li>
+<li class="blockList">
 <h4>currencyPair</h4>
 <pre><a href="com/opengamma/strata/basics/currency/CurrencyPair.html" title="class in com.opengamma.strata.basics.currency">CurrencyPair</a> currencyPair</pre>
 <div class="block">The currency pair that the volatilities are for.</div>
@@ -8293,10 +8571,14 @@
  Must be positive and sorted in ascending order.
  The put will have as delta the opposite of the numbers.</div>
 </li>
-<li class="blockListLast">
+<li class="blockList">
 <h4>volatility</h4>
 <pre><a href="com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a> volatility</pre>
 <div class="block">The volatilities associated with the strikes.</div>
+</li>
+<li class="blockListLast">
+<h4>parameterMetadata</h4>
+<pre><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">E</a>&gt; parameterMetadata</pre>
 </li>
 </ul>
 </li>

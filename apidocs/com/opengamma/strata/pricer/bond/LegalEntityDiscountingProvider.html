@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -174,6 +174,13 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/bond/RepoCurveDiscountFactors.html" title="class in com.opengamma.strata.pricer.bond">RepoCurveDiscountFactors</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html#repoCurveDiscountFactors-com.opengamma.strata.basics.StandardId-com.opengamma.strata.basics.currency.Currency-">repoCurveDiscountFactors</a></span>(<a href="../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;issuerId,
+                        <a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency)</code>
+<div class="block">Gets the discount factors from a repo curve based on the issuer ID and currency.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">ImmutableLegalEntityDiscountingProvider</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html#toImmutableLegalEntityDiscountingProvider--">toImmutableLegalEntityDiscountingProvider</a></span>()</code>
 <div class="block">Converts this provider to an equivalent <code>ImmutableLegalEntityDiscountingProvider</code>.</div>
@@ -228,6 +235,30 @@ var activeTableTab = "activeTableTab";
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>securityId</code> - the standard ID of security to get the discount factors for</dd>
+<dd><code>issuerId</code> - the standard ID of legal entity to get the discount factors for</dd>
+<dd><code>currency</code> - the currency to get the discount factors for</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the discount factors</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the discount factors are not available</dd>
+</dl>
+</li>
+</ul>
+<a name="repoCurveDiscountFactors-com.opengamma.strata.basics.StandardId-com.opengamma.strata.basics.currency.Currency-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>repoCurveDiscountFactors</h4>
+<pre><a href="../../../../../com/opengamma/strata/pricer/bond/RepoCurveDiscountFactors.html" title="class in com.opengamma.strata.pricer.bond">RepoCurveDiscountFactors</a>&nbsp;repoCurveDiscountFactors(<a href="../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;issuerId,
+                                                  <a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency)</pre>
+<div class="block">Gets the discount factors from a repo curve based on the issuer ID and currency.
+ <p>
+ This searches for a curve associated with the issuer ID and currency.
+ <p>
+ If the valuation date is on or after the specified date, the discount factor is 1.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>issuerId</code> - the standard ID of legal entity to get the discount factors for</dd>
 <dd><code>currency</code> - the currency to get the discount factors for</dd>
 <dt><span class="returnLabel">Returns:</span></dt>

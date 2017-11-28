@@ -6,6 +6,35 @@ permalink: /releases/
 Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
+## Strata v1.6.0
+
+*28 November 2017*
+
+This release contains [31 fixed issues](https://github.com/OpenGamma/Strata/milestone/16?closed=1).
+This includes the issues fixed in v1.5.1 and v1.5.2 (see below).
+
+* Add index data for HKD, SGD, KRW, INR and NZD [#1603](https://github.com/OpenGamma/Strata/issues/1603),
+ [#1612](https://github.com/OpenGamma/Strata/issues/1612),
+ [#1615](https://github.com/OpenGamma/Strata/issues/1615),
+ [#1617](https://github.com/OpenGamma/Strata/issues/1617),
+ [#1618](https://github.com/OpenGamma/Strata/issues/1618),
+ [#1619](https://github.com/OpenGamma/Strata/issues/1619)
+* Swap schedules treat single stub period differently from single term period [#1615](https://github.com/OpenGamma/Strata/issues/1615)
+* Improve par spread for swaps with only one period [#1608](https://github.com/OpenGamma/Strata/issues/1608)
+* Lenient mode for extended enum parsing [#1606](https://github.com/OpenGamma/Strata/issues/1606)
+* Conventional currency pair for EUR/GBP swap [#1595](https://github.com/OpenGamma/Strata/issues/1595)
+* Add Quote object [#1611](https://github.com/OpenGamma/Strata/issues/1611)
+* Validate price index fixings in the loader [#1598](https://github.com/OpenGamma/Strata/issues/1598)
+* A repo curve can be looked up without specifying a security [#1621](https://github.com/OpenGamma/Strata/issues/1621)
+
+#### Compatibility
+
+A method was added to the interface `LegalEntityDiscountingProvider`.
+In the unlikely event that you have implemented the interface you will need to implement the new method.
+
+The fixed day count associated with various indices has been updated, see [#1592](https://github.com/OpenGamma/Strata/pull/1592).
+
+
 ## Strata v1.5.2
 
 *31 October 2017*

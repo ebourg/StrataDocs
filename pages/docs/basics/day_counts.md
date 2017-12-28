@@ -336,7 +336,8 @@ The first day in the period is included, the last day is excluded.</td>
 </tr>
 <tr>
   <th>Definition</th>
-  <td>2006 ISDA definitions 4.16c and ICMA rule 251.1(iii) and 251.3 as later clarified by ISDA</td>
+  <td>2006 ISDA definitions 4.16c and ICMA rule 251.1(iii) and 251.3 as
+<a href="https://www.isda.org/a/AIJEE/1998-ISDA-memo-%E2%80%9CEMU-and-Market-Conventions-Recent-Developments%E2%80%9D.pdf">later clarified</a> by ISDA</td>
 </tr>
 </table>
 
@@ -365,7 +366,7 @@ The denominator is 366 if the schedule period contains February 29th, if not it 
 The first day in the schedule period is included, the last day is excluded.<br />
 Read the Javadoc for a discussion of the algorithm, the
 <a href="http://www.acp.banque-france.fr/fileadmin/user_upload/banque_de_france/archipel/publications/bdf_bof/bdf_bof_1999/bdf_bof_01.pdf">original French text</a>
-and confusion with the ISDA clarification.</td>
+and confusion with the <a href="https://www.isda.org/a/pIJEE/The-Actual-Actual-Day-Count-Fraction-1999.pdf">ISDA clarification</a>.</td>
 </tr>
 <tr>
   <th>Definition</th>

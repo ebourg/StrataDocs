@@ -24,6 +24,7 @@ Future and past dates are an extrapolations of the known holiday dates.
 |------|--------------------------------------------------|-------------------|---------------------|
 | AUSY | Sydney (Australia) holidays                      | Saturday/Sunday   |                     |
 | BRBD | Brazil holidays                                  | Saturday/Sunday   |                     |
+| CAMO | Montreal (Canada) holidays                       | Saturday/Sunday   |                     |
 | CATO | Toronto (Canada) holidays                        | Saturday/Sunday   |                     |
 | CHZU | Zurich (Switzerland) holidays                    | Saturday/Sunday   |                     |
 | CZPR | Prague (Czech Republic) holidays                 | Saturday/Sunday   |                     |

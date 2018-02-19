@@ -6,6 +6,32 @@ permalink: /releases/
 Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
+## Strata v1.7.0
+
+*19 February 2018*
+
+This release contains over 30 [fixed issues](https://github.com/OpenGamma/Strata/milestone/17?closed=1).
+
+* Provide summaries for trades and positions,
+ [#1626](https://github.com/OpenGamma/Strata/issues/1626),
+ [#1627](https://github.com/OpenGamma/Strata/issues/1627),
+ [#1631](https://github.com/OpenGamma/Strata/issues/1631)
+* Additional floating rate index names,
+ [#1632](https://github.com/OpenGamma/Strata/issues/1632),
+ [#1656](https://github.com/OpenGamma/Strata/issues/1656)
+* Better failure messages,
+ [#1649](https://github.com/OpenGamma/Strata/issues/1649),
+ [#1651](https://github.com/OpenGamma/Strata/issues/1651),
+ [#1655](https://github.com/OpenGamma/Strata/issues/1655)
+* Add Montreal holiday calendar,
+ [#1645](https://github.com/OpenGamma/Strata/issues/1645)
+* Add roll conventions,
+ [#1647](https://github.com/OpenGamma/Strata/issues/1647)
+* Enhance schedule builder,
+ [#1652](https://github.com/OpenGamma/Strata/issues/1652),
+ [#1646](https://github.com/OpenGamma/Strata/issues/1646)
+
+
 ## Strata v1.6.0
 
 *28 November 2017*

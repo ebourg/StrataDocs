@@ -31,6 +31,11 @@ This release contains over 30 [fixed issues](https://github.com/OpenGamma/Strata
  [#1652](https://github.com/OpenGamma/Strata/issues/1652),
  [#1646](https://github.com/OpenGamma/Strata/issues/1646)
 
+#### Compatibility
+
+The single method on the interface `FpmlPartySelector` has changed return type.
+In the unlikely event that you have implemented the interface you will need to implement the new method.
+
 
 ## Strata v1.6.0
 

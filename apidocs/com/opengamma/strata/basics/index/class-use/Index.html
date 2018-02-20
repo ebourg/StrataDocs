@@ -324,6 +324,21 @@
 </a>
 <h3>Uses of <a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a> in <a href="../../../../../../com/opengamma/strata/market/curve/package-summary.html">com.opengamma.strata.market.curve</a></h3>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../com/opengamma/strata/market/curve/package-summary.html">com.opengamma.strata.market.curve</a> with type parameters of type <a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>&lt;T extends <a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;<br><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;T&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">CurveGroupEntry.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/market/curve/CurveGroupEntry.html#getIndices-java.lang.Class-">getIndices</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;indexType)</code>
+<div class="block">Gets the subset of indices matching the specified type for which the curve provides forward rates.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../com/opengamma/strata/market/curve/package-summary.html">com.opengamma.strata.market.curve</a> that return types with arguments of type <a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
@@ -640,6 +655,16 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableRatesProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html#getTimeSeriesIndices--">getTimeSeriesIndices</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>default <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">RatesProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#getTimeSeriesIndices--">getTimeSeriesIndices</a></span>()</code>
+<div class="block">Gets the set of indices that have time-series available.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>,<a href="../../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&gt;&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">ImmutableRatesProvider.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.Meta.html#indexCurves--">indexCurves</a></span>()</code>
 <div class="block">The meta-property for the <code>indexCurves</code> property.</div>
@@ -753,11 +778,11 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">CapitalIndexedBondPaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondPaymentPeriod.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">FixedCouponBondPaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/FixedCouponBondPaymentPeriod.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">FixedCouponBondPaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/FixedCouponBondPaymentPeriod.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">CapitalIndexedBondPaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondPaymentPeriod.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -821,19 +846,11 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">InflationInterpolatedRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/InflationInterpolatedRateComputation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">OvernightCompoundedRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/OvernightCompoundedRateComputation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">InflationEndInterpolatedRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/InflationEndInterpolatedRateComputation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">InflationEndMonthRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/InflationEndMonthRateComputation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">IborRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/IborRateComputation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">InflationMonthlyRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/InflationMonthlyRateComputation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -841,7 +858,15 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightAveragedRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/OvernightAveragedRateComputation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">IborRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/IborRateComputation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">InflationInterpolatedRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/InflationInterpolatedRateComputation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">InflationEndMonthRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/InflationEndMonthRateComputation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -851,19 +876,19 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">InflationMonthlyRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/InflationMonthlyRateComputation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">InflationEndInterpolatedRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/InflationEndInterpolatedRateComputation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">IborAveragedRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/IborAveragedRateComputation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightAveragedRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/OvernightAveragedRateComputation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">FixedRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/FixedRateComputation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">IborAveragedRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/IborAveragedRateComputation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightCompoundedRateComputation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/OvernightCompoundedRateComputation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -910,20 +935,20 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">Swap.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/Swap.html#allIndices--">allIndices</a></span>()</code>
-<div class="block">Returns the set of indices referred to by the swap.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>default <a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">SwapLeg.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/SwapLeg.html#allIndices--">allIndices</a></span>()</code>
 <div class="block">Returns the set of indices referred to by the leg.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedSwap.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwap.html#allIndices--">allIndices</a></span>()</code>
+<div class="block">Returns the set of indices referred to by the swap.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">Swap.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/Swap.html#allIndices--">allIndices</a></span>()</code>
 <div class="block">Returns the set of indices referred to by the swap.</div>
 </td>
 </tr>
@@ -938,25 +963,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">KnownAmountSwapPaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountSwapPaymentPeriod.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">IborRateCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/IborRateCalculation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedSwapLeg.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>
-<div class="block">Collects all the indices referred to by this leg.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightRateCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/OvernightRateCalculation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">RatePaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RatePaymentPeriod.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">RateCalculationSwapLeg.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RateCalculationSwapLeg.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -970,9 +977,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">RateCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RateCalculation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>
-<div class="block">Collects all the indices referred to by this calculation.</div>
-</td>
+<td class="colLast"><span class="typeNameLabel">IborRateCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/IborRateCalculation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -980,11 +985,23 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">RateCalculationSwapLeg.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RateCalculationSwapLeg.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">ResolvedSwapLeg.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>
+<div class="block">Collects all the indices referred to by this leg.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">RatePeriodSwapLeg.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RatePeriodSwapLeg.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">RatePaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RatePaymentPeriod.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">FixedRateCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/FixedRateCalculation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">RateCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RateCalculation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>
+<div class="block">Collects all the indices referred to by this calculation.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -994,11 +1011,19 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">FixedRateCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/FixedRateCalculation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">KnownAmountNotionalSwapPaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountNotionalSwapPaymentPeriod.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">KnownAmountNotionalSwapPaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountNotionalSwapPaymentPeriod.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">OvernightRateCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/OvernightRateCalculation.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">KnownAmountSwapPaymentPeriod.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountSwapPaymentPeriod.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">RatePeriodSwapLeg.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RatePeriodSwapLeg.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

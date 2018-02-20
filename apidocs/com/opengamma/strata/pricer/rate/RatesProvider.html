@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":18,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":18,"i10":6,"i11":6,"i12":6};
+var methods = {"i0":18,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":18,"i8":6,"i9":6,"i10":18,"i11":6,"i12":6,"i13":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -181,36 +181,42 @@ extends <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html" t
 </td>
 </tr>
 <tr id="i7" class="rowColor">
+<td class="colFirst"><code>default <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#getTimeSeriesIndices--">getTimeSeriesIndices</a></span>()</code>
+<div class="block">Gets the set of indices that have time-series available.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/IborIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">IborIndexRates</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#iborIndexRates-com.opengamma.strata.basics.index.IborIndex-">iborIndexRates</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&nbsp;index)</code>
 <div class="block">Gets the rates for an Ibor index.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">OvernightIndexRates</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#overnightIndexRates-com.opengamma.strata.basics.index.OvernightIndex-">overnightIndexRates</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index)</code>
 <div class="block">Gets the rates for an Overnight index.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#parameterSensitivity-com.opengamma.strata.market.sensitivity.PointSensitivities-">parameterSensitivity</a></span>(<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&nbsp;pointSensitivities)</code>
 <div class="block">Computes the parameter sensitivity.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/PriceIndexValues.html" title="interface in com.opengamma.strata.pricer.rate">PriceIndexValues</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#priceIndexValues-com.opengamma.strata.basics.index.PriceIndex-">priceIndexValues</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&nbsp;index)</code>
 <div class="block">Gets the values for an Price index.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#timeSeries-com.opengamma.strata.basics.index.Index-">timeSeries</a></span>(<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&nbsp;index)</code>
 <div class="block">Gets the time series.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#toImmutableRatesProvider--">toImmutableRatesProvider</a></span>()</code>
 <div class="block">Converts this provider to an equivalent <code>ImmutableRatesProvider</code>.</div>
@@ -252,7 +258,10 @@ extends <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html" t
 <li class="blockList">
 <h4>getIborIndices</h4>
 <pre><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a>&gt;&nbsp;getIborIndices()</pre>
-<div class="block">Gets the set of Ibor indices that are available.</div>
+<div class="block">Gets the set of Ibor indices that are available.
+ <p>
+ If an index is present in the result of this method, then
+ <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#iborIndexRates-com.opengamma.strata.basics.index.IborIndex-"><code>iborIndexRates(IborIndex)</code></a> should not throw an exception.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the set of Ibor indices</dd>
@@ -266,7 +275,10 @@ extends <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html" t
 <li class="blockList">
 <h4>getOvernightIndices</h4>
 <pre><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&gt;&nbsp;getOvernightIndices()</pre>
-<div class="block">Gets the set of Overnight indices that are available.</div>
+<div class="block">Gets the set of Overnight indices that are available.
+ <p>
+ If an index is present in the result of this method, then
+ <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#overnightIndexRates-com.opengamma.strata.basics.index.OvernightIndex-"><code>overnightIndexRates(OvernightIndex)</code></a> should not throw an exception.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the set of Overnight indices</dd>
@@ -280,10 +292,31 @@ extends <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html" t
 <li class="blockList">
 <h4>getPriceIndices</h4>
 <pre><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&gt;&nbsp;getPriceIndices()</pre>
-<div class="block">Gets the set of Price indices that are available.</div>
+<div class="block">Gets the set of Price indices that are available.
+ <p>
+ If an index is present in the result of this method, then
+ <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#priceIndexValues-com.opengamma.strata.basics.index.PriceIndex-"><code>priceIndexValues(PriceIndex)</code></a> should not throw an exception.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the set of Price indices</dd>
+</dl>
+</li>
+</ul>
+<a name="getTimeSeriesIndices--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTimeSeriesIndices</h4>
+<pre>default&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;getTimeSeriesIndices()</pre>
+<div class="block">Gets the set of indices that have time-series available.
+ <p>
+ Note that the method <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#timeSeries-com.opengamma.strata.basics.index.Index-"><code>timeSeries(Index)</code></a> returns an empty time-series
+ when the index is not known, thus this method is useful to determine if there
+ actually is a time-series in the underlying data.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the set of indices with time-series</dd>
 </dl>
 </li>
 </ul>
@@ -478,7 +511,7 @@ extends <a href="../../../../../com/opengamma/strata/pricer/BaseProvider.html" t
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>index</code> - the index</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the time series</dd>
+<dd>the time series, empty if time-series not found</dd>
 </dl>
 </li>
 </ul>

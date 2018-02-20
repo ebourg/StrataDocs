@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":18,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6};
+var methods = {"i0":18,"i1":18,"i2":18,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -147,48 +147,60 @@ extends <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" tit
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>default <a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#allCurrencies--">allCurrencies</a></span>()</code>
+<div class="block">Returns the set of currencies referred to by the leg.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>default <a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#allIndices--">allIndices</a></span>()</code>
 <div class="block">Returns the set of indices referred to by the leg.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>default void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#collectCurrencies-com.google.common.collect.ImmutableSet.Builder-">collectCurrencies</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;builder)</code>
+<div class="block">Collects all the currencies referred to by this leg.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>
 <div class="block">Collects all the indices referred to by this leg.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#getCurrency--">getCurrency</a></span>()</code>
-<div class="block">Gets the currency of the leg.</div>
+<div class="block">Gets the payment currency of the leg.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/date/AdjustableDate.html" title="class in com.opengamma.strata.basics.date">AdjustableDate</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#getEndDate--">getEndDate</a></span>()</code>
 <div class="block">Gets the accrual end date of the leg.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/common/PayReceive.html" title="enum in com.opengamma.strata.product.common">PayReceive</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#getPayReceive--">getPayReceive</a></span>()</code>
 <div class="block">Gets whether the leg is pay or receive.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/date/AdjustableDate.html" title="class in com.opengamma.strata.basics.date">AdjustableDate</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#getStartDate--">getStartDate</a></span>()</code>
 <div class="block">Gets the accrual start date of the leg.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/SwapLegType.html" title="enum in com.opengamma.strata.product.swap">SwapLegType</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#getType--">getType</a></span>()</code>
 <div class="block">Gets the type of the leg, such as Fixed or Ibor.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapLeg</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Resolves this swap leg using the specified reference data.</div>
@@ -287,12 +299,46 @@ extends <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" tit
 <li class="blockList">
 <h4>getCurrency</h4>
 <pre><a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;getCurrency()</pre>
-<div class="block">Gets the currency of the leg.
+<div class="block">Gets the payment currency of the leg.
  <p>
- A swap leg has a single currency.</div>
+ A swap leg has a single payment currency.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the currency of the leg</dd>
+<dd>the payment currency of the leg</dd>
+</dl>
+</li>
+</ul>
+<a name="allCurrencies--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>allCurrencies</h4>
+<pre>default&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;allCurrencies()</pre>
+<div class="block">Returns the set of currencies referred to by the leg.
+ <p>
+ This returns the complete set of currencies for the leg, not just the payment currencies.
+ For example, if there is an FX reset, then this set contains both the currency of the
+ payment and the currency of the notional.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the set of currencies referred to by this leg</dd>
+</dl>
+</li>
+</ul>
+<a name="collectCurrencies-com.google.common.collect.ImmutableSet.Builder-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>collectCurrencies</h4>
+<pre>default&nbsp;void&nbsp;collectCurrencies(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;builder)</pre>
+<div class="block">Collects all the currencies referred to by this leg.
+ <p>
+ This collects the complete set of currencies for the leg, not just the payment currencies.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>builder</code> - the builder to populate</dd>
 </dl>
 </li>
 </ul>
@@ -327,7 +373,7 @@ extends <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" tit
  Each index that is referred to must be added to the specified builder.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>builder</code> - the builder to use</dd>
+<dd><code>builder</code> - the builder to populate</dd>
 </dl>
 </li>
 </ul>

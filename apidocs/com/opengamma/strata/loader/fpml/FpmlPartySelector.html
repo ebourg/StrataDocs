@@ -152,9 +152,10 @@ public interface <span class="typeNameLabel">FpmlPartySelector</span></pre>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/fpml/FpmlPartySelector.html#selectParty-com.google.common.collect.ListMultimap-">selectParty</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ListMultimap.html?is-external=true" title="class or interface in com.google.common.collect">ListMultimap</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;allParties)</code>
-<div class="block">Selects "our" party from the specified set.</div>
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/fpml/FpmlPartySelector.html#selectParties-com.google.common.collect.ListMultimap-">selectParties</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ListMultimap.html?is-external=true" title="class or interface in com.google.common.collect">ListMultimap</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;allParties)</code>
+<div class="block">Given a map of all parties in the FpML document, extract those that
+ represent "our" side of the trade.</div>
 </td>
 </tr>
 </table>
@@ -229,19 +230,20 @@ public interface <span class="typeNameLabel">FpmlPartySelector</span></pre>
 </dl>
 </li>
 </ul>
-<a name="selectParty-com.google.common.collect.ListMultimap-">
+<a name="selectParties-com.google.common.collect.ListMultimap-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>selectParty</h4>
-<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;selectParty(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ListMultimap.html?is-external=true" title="class or interface in com.google.common.collect">ListMultimap</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;allParties)</pre>
-<div class="block">Selects "our" party from the specified set.</div>
+<h4>selectParties</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;selectParties(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ListMultimap.html?is-external=true" title="class or interface in com.google.common.collect">ListMultimap</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;allParties)</pre>
+<div class="block">Given a map of all parties in the FpML document, extract those that
+ represent "our" side of the trade.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>allParties</code> - the multimap of party href id to associated partyId</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the party href id to use, empty if unable to find "our" party</dd>
+<dd>the party href ids to use, empty if unable to find "our" party</dd>
 </dl>
 </li>
 </ul>

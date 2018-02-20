@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":9,"i7":10,"i8":10,"i9":10,"i10":10};
+var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":9,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -110,7 +110,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>, <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" title="interface in com.opengamma.strata.basics">Resolvable</a>&lt;<a href="../../../../../com/opengamma/strata/product/credit/ResolvedCdsIndexTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsIndexTrade</a>&gt;, <a href="../../../../../com/opengamma/strata/product/ResolvableTrade.html" title="interface in com.opengamma.strata.product">ResolvableTrade</a>&lt;<a href="../../../../../com/opengamma/strata/product/credit/ResolvedCdsIndexTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsIndexTrade</a>&gt;, <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a></dd>
+<dd><a href="../../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>, <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" title="interface in com.opengamma.strata.basics">Resolvable</a>&lt;<a href="../../../../../com/opengamma/strata/product/credit/ResolvedCdsIndexTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsIndexTrade</a>&gt;, <a href="../../../../../com/opengamma/strata/product/PortfolioItem.html" title="interface in com.opengamma.strata.product">PortfolioItem</a>, <a href="../../../../../com/opengamma/strata/product/ResolvableTrade.html" title="interface in com.opengamma.strata.product">ResolvableTrade</a>&lt;<a href="../../../../../com/opengamma/strata/product/credit/ResolvedCdsIndexTrade.html" title="class in com.opengamma.strata.product.credit">ResolvedCdsIndexTrade</a>&gt;, <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a></dd>
 </dl>
 <hr>
 <br>
@@ -222,12 +222,18 @@ implements <a href="../../../../../com/opengamma/strata/product/ResolvableTrade.
 </td>
 </tr>
 <tr id="i9" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/PortfolioItemSummary.html" title="class in com.opengamma.strata.product">PortfolioItemSummary</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/credit/CdsIndexTrade.html#summarize--">summarize</a></span>()</code>
+<div class="block">Summarizes the portfolio item.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/credit/CdsIndexTrade.Builder.html" title="class in com.opengamma.strata.product.credit">CdsIndexTrade.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/credit/CdsIndexTrade.html#toBuilder--">toBuilder</a></span>()</code>
 <div class="block">Returns a builder that allows this bean to be mutated.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/credit/CdsIndexTrade.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -238,6 +244,13 @@ implements <a href="../../../../../com/opengamma/strata/product/ResolvableTrade.
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
 <code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.Trade">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a></h3>
+<code><a href="../../../../../com/opengamma/strata/product/Trade.html#getId--">getId</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.org.joda.beans.Bean">
@@ -260,6 +273,27 @@ implements <a href="../../../../../com/opengamma/strata/product/ResolvableTrade.
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="summarize--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>summarize</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/product/PortfolioItemSummary.html" title="class in com.opengamma.strata.product">PortfolioItemSummary</a>&nbsp;summarize()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/product/PortfolioItem.html#summarize--">PortfolioItem</a></code></span></div>
+<div class="block">Summarizes the portfolio item.
+ <p>
+ This provides a summary, including a human readable description.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/product/PortfolioItem.html#summarize--">summarize</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/product/PortfolioItem.html" title="interface in com.opengamma.strata.product">PortfolioItem</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/product/Trade.html#summarize--">summarize</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the summary of the item</dd>
+</dl>
+</li>
+</ul>
 <a name="resolve-com.opengamma.strata.basics.ReferenceData-">
 <!--   -->
 </a>

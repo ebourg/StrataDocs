@@ -18,8 +18,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var methods = {"i0":18,"i1":6,"i2":6,"i3":6,"i4":18};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -50,7 +50,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../com/opengamma/strata/product/GenericSecurityTrade.Meta.html" title="class in com.opengamma.strata.product"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../com/opengamma/strata/product/PortfolioItemType.html" title="enum in com.opengamma.strata.product"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../com/opengamma/strata/product/PositionAttributeType.html" title="class in com.opengamma.strata.product"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -102,7 +102,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Superinterfaces:</dt>
-<dd><a href="../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>, <a href="../../../../com/opengamma/strata/product/SecurityQuantity.html" title="interface in com.opengamma.strata.product">SecurityQuantity</a></dd>
+<dd><a href="../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>, <a href="../../../../com/opengamma/strata/product/PortfolioItem.html" title="interface in com.opengamma.strata.product">PortfolioItem</a>, <a href="../../../../com/opengamma/strata/product/SecurityQuantity.html" title="interface in com.opengamma.strata.product">SecurityQuantity</a></dd>
 </dl>
 <dl>
 <dt>All Known Subinterfaces:</dt>
@@ -115,7 +115,7 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public interface <span class="typeNameLabel">Position</span>
-extends <a href="../../../../com/opengamma/strata/product/SecurityQuantity.html" title="interface in com.opengamma.strata.product">SecurityQuantity</a>, <a href="../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a></pre>
+extends <a href="../../../../com/opengamma/strata/product/PortfolioItem.html" title="interface in com.opengamma.strata.product">PortfolioItem</a>, <a href="../../../../com/opengamma/strata/product/SecurityQuantity.html" title="interface in com.opengamma.strata.product">SecurityQuantity</a>, <a href="../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a></pre>
 <div class="block">A position in a security.
  <p>
  This is used to represent the total quantity of a <a href="../../../../com/opengamma/strata/product/Security.html" title="interface in com.opengamma.strata.product"><code>Security</code></a>.
@@ -135,27 +135,39 @@ extends <a href="../../../../com/opengamma/strata/product/SecurityQuantity.html"
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t5" class="tableTab"><span><a href="javascript:show(16);">Default Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>default <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/Position.html#getId--">getId</a></span>()</code>
+<div class="block">Gets the primary identifier for the portfolio item, optional.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/Position.html#getInfo--">getInfo</a></span>()</code>
 <div class="block">Gets the standard position information.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/Position.html#getQuantity--">getQuantity</a></span>()</code>
 <div class="block">Gets the net quantity of the security.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/Position.html#getSecurityId--">getSecurityId</a></span>()</code>
 <div class="block">Gets the identifier of the underlying security.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>default <a href="../../../../com/opengamma/strata/product/PortfolioItemSummary.html" title="class in com.opengamma.strata.product">PortfolioItemSummary</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/Position.html#summarize--">summarize</a></span>()</code>
+<div class="block">Summarizes the portfolio item.</div>
 </td>
 </tr>
 </table>
@@ -173,6 +185,49 @@ extends <a href="../../../../com/opengamma/strata/product/SecurityQuantity.html"
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="getId--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getId</h4>
+<pre>default&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&gt;&nbsp;getId()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../com/opengamma/strata/product/PortfolioItem.html#getId--">PortfolioItem</a></code></span></div>
+<div class="block">Gets the primary identifier for the portfolio item, optional.
+ <p>
+ The identifier is used to identify the portfolio item.
+ It will typically be an identifier in an external data system.
+ <p>
+ A portfolio item may have multiple active identifiers. Any identifier may be chosen here.
+ Certain uses of the identifier, such as storage in a database, require that the
+ identifier does not change over time, and this should be considered best practice.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/opengamma/strata/product/PortfolioItem.html#getId--">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/PortfolioItem.html" title="interface in com.opengamma.strata.product">PortfolioItem</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the identifier, optional</dd>
+</dl>
+</li>
+</ul>
+<a name="summarize--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>summarize</h4>
+<pre>default&nbsp;<a href="../../../../com/opengamma/strata/product/PortfolioItemSummary.html" title="class in com.opengamma.strata.product">PortfolioItemSummary</a>&nbsp;summarize()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../com/opengamma/strata/product/PortfolioItem.html#summarize--">PortfolioItem</a></code></span></div>
+<div class="block">Summarizes the portfolio item.
+ <p>
+ This provides a summary, including a human readable description.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/opengamma/strata/product/PortfolioItem.html#summarize--">summarize</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/PortfolioItem.html" title="interface in com.opengamma.strata.product">PortfolioItem</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the summary of the item</dd>
+</dl>
+</li>
+</ul>
 <a name="getInfo--">
 <!--   -->
 </a>
@@ -257,7 +312,7 @@ extends <a href="../../../../com/opengamma/strata/product/SecurityQuantity.html"
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../com/opengamma/strata/product/GenericSecurityTrade.Meta.html" title="class in com.opengamma.strata.product"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../com/opengamma/strata/product/PortfolioItemType.html" title="enum in com.opengamma.strata.product"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../com/opengamma/strata/product/PositionAttributeType.html" title="class in com.opengamma.strata.product"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">

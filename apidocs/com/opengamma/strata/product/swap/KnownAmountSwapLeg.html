@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":9,"i13":10,"i14":10,"i15":10,"i16":10};
+var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":9,"i14":10,"i15":10,"i16":10,"i17":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -186,89 +186,95 @@ implements <a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.htm
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.html#collectCurrencies-com.google.common.collect.ImmutableSet.Builder-">collectCurrencies</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;builder)</code>
+<div class="block">Collects all the currencies referred to by this leg.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>
 <div class="block">Collects all the indices referred to by this leg.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.html#equals-java.lang.Object-">equals</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/schedule/PeriodicSchedule.html" title="class in com.opengamma.strata.basics.schedule">PeriodicSchedule</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.html#getAccrualSchedule--">getAccrualSchedule</a></span>()</code>
 <div class="block">Gets the accrual period schedule.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/value/ValueSchedule.html" title="class in com.opengamma.strata.basics.value">ValueSchedule</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.html#getAmount--">getAmount</a></span>()</code>
 <div class="block">Gets the known amount schedule.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.html#getCurrency--">getCurrency</a></span>()</code>
 <div class="block">Gets the currency of the swap leg.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/date/AdjustableDate.html" title="class in com.opengamma.strata.basics.date">AdjustableDate</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.html#getEndDate--">getEndDate</a></span>()</code>
 <div class="block">Gets the accrual end date of the leg.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/PaymentSchedule.html" title="class in com.opengamma.strata.product.swap">PaymentSchedule</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.html#getPaymentSchedule--">getPaymentSchedule</a></span>()</code>
 <div class="block">Gets the payment period schedule.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/common/PayReceive.html" title="enum in com.opengamma.strata.product.common">PayReceive</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.html#getPayReceive--">getPayReceive</a></span>()</code>
 <div class="block">Gets whether the leg is pay or receive.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/date/AdjustableDate.html" title="class in com.opengamma.strata.basics.date">AdjustableDate</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.html#getStartDate--">getStartDate</a></span>()</code>
 <div class="block">Gets the accrual start date of the leg.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/SwapLegType.html" title="enum in com.opengamma.strata.product.swap">SwapLegType</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.html#getType--">getType</a></span>()</code>
 <div class="block">Gets the type of the leg, such as Fixed or Ibor.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.Meta.html" title="class in com.opengamma.strata.product.swap">KnownAmountSwapLeg.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.html#meta--">meta</a></span>()</code>
 <div class="block">The meta-bean for <code>KnownAmountSwapLeg</code>.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.Meta.html" title="class in com.opengamma.strata.product.swap">KnownAmountSwapLeg.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.html#metaBean--">metaBean</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapLeg</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Converts this swap leg to the equivalent <code>ResolvedSwapLeg</code>.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.Builder.html" title="class in com.opengamma.strata.product.swap">KnownAmountSwapLeg.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.html#toBuilder--">toBuilder</a></span>()</code>
 <div class="block">Returns a builder that allows this bean to be mutated.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -285,7 +291,7 @@ implements <a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.htm
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.swap.<a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html" title="interface in com.opengamma.strata.product.swap">SwapLeg</a></h3>
-<code><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#allIndices--">allIndices</a></code></li>
+<code><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#allCurrencies--">allCurrencies</a>, <a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#allIndices--">allIndices</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.org.joda.beans.Bean">
@@ -369,6 +375,25 @@ implements <a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.htm
 </dl>
 </li>
 </ul>
+<a name="collectCurrencies-com.google.common.collect.ImmutableSet.Builder-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>collectCurrencies</h4>
+<pre>public&nbsp;void&nbsp;collectCurrencies(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;builder)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#collectCurrencies-com.google.common.collect.ImmutableSet.Builder-">SwapLeg</a></code></span></div>
+<div class="block">Collects all the currencies referred to by this leg.
+ <p>
+ This collects the complete set of currencies for the leg, not just the payment currencies.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#collectCurrencies-com.google.common.collect.ImmutableSet.Builder-">collectCurrencies</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html" title="interface in com.opengamma.strata.product.swap">SwapLeg</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>builder</code> - the builder to populate</dd>
+</dl>
+</li>
+</ul>
 <a name="collectIndices-com.google.common.collect.ImmutableSet.Builder-">
 <!--   -->
 </a>
@@ -385,7 +410,7 @@ implements <a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.htm
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html" title="interface in com.opengamma.strata.product.swap">SwapLeg</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>builder</code> - the builder to use</dd>
+<dd><code>builder</code> - the builder to populate</dd>
 </dl>
 </li>
 </ul>

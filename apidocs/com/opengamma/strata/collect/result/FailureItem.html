@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":9,"i7":10,"i8":9,"i9":9,"i10":9,"i11":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":9,"i8":10,"i9":9,"i10":9,"i11":9,"i12":10,"i13":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -76,13 +76,13 @@ var activeTableTab = "activeTableTab";
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -152,6 +152,27 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </table>
 </li>
 </ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html#EXCEPTION_MESSAGE_ATTRIBUTE">EXCEPTION_MESSAGE_ATTRIBUTE</a></span></code>
+<div class="block">Attribute used to store the exception message.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.summary">
@@ -169,51 +190,57 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html#equals-java.lang.Object-">equals</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html#getAttributes--">getAttributes</a></span>()</code>
+<div class="block">Gets the attributes associated with this failure.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html#getCauseType--">getCauseType</a></span>()</code>
 <div class="block">Gets the type of the exception that caused the failure, not present if it wasn't caused by an exception.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html#getMessage--">getMessage</a></span>()</code>
 <div class="block">Gets the error message associated with the failure.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html#getReason--">getReason</a></span>()</code>
 <div class="block">Gets the reason associated with the failure.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html#getStackTrace--">getStackTrace</a></span>()</code>
 <div class="block">Gets stack trace where the failure occurred.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/collect/result/FailureItem.Meta.html" title="class in com.opengamma.strata.collect.result">FailureItem.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html#meta--">meta</a></span>()</code>
 <div class="block">The meta-bean for <code>FailureItem</code>.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/FailureItem.Meta.html" title="class in com.opengamma.strata.collect.result">FailureItem.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html#metaBean--">metaBean</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html#of-com.opengamma.strata.collect.result.FailureReason-java.lang.Exception-">of</a></span>(<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a>&nbsp;reason,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&nbsp;cause)</code>
 <div class="block">Obtains a failure from a reason and exception.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html#of-com.opengamma.strata.collect.result.FailureReason-java.lang.Exception-java.lang.String-java.lang.Object...-">of</a></span>(<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a>&nbsp;reason,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&nbsp;cause,
@@ -222,7 +249,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <div class="block">Obtains a failure from a reason, exception and message.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html#of-com.opengamma.strata.collect.result.FailureReason-java.lang.String-java.lang.Object...-">of</a></span>(<a href="../../../../../com/opengamma/strata/collect/result/FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a>&nbsp;reason,
   <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
@@ -230,10 +257,17 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <div class="block">Obtains a failure from a reason and message.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html#toString--">toString</a></span>()</code>
 <div class="block">Returns a string summary of the failure, as a single line excluding the stack trace.</div>
+</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html#withAttribute-java.lang.String-java.lang.String-">withAttribute</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
+             <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
+<div class="block">Returns an instance with the specified attribute added.</div>
 </td>
 </tr>
 </table>
@@ -259,6 +293,28 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="EXCEPTION_MESSAGE_ATTRIBUTE">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>EXCEPTION_MESSAGE_ATTRIBUTE</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> EXCEPTION_MESSAGE_ATTRIBUTE</pre>
+<div class="block">Attribute used to store the exception message.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../constant-values.html#com.opengamma.strata.collect.result.FailureItem.EXCEPTION_MESSAGE_ATTRIBUTE">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.detail">
@@ -276,8 +332,9 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
                              <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;messageArgs)</pre>
 <div class="block">Obtains a failure from a reason and message.
  <p>
- The message is produced using a template that contains zero to many "{}" placeholders.
+ The message is produced using a template that contains zero to many "{}" or "{abc}" placeholders.
  Each placeholder is replaced by the next available argument.
+ If the placeholder has a name, its value is added to the attributes map with the name as a key.
  If there are too few arguments, then the message will be left with placeholders.
  If there are too many arguments, then the excess arguments are appended to the
  end of the message. No attempt is made to format the arguments.
@@ -339,6 +396,26 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <dd><code>messageArgs</code> - the arguments for the message</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the failure</dd>
+</dl>
+</li>
+</ul>
+<a name="withAttribute-java.lang.String-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withAttribute</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a>&nbsp;withAttribute(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
+                                 <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</pre>
+<div class="block">Returns an instance with the specified attribute added.
+ <p>
+ If the attribute map of this instance has the specified key, the value is replaced.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>key</code> - the key to add</dd>
+<dd><code>value</code> - the value to add</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the new failure item</dd>
 </dl>
 </li>
 </ul>
@@ -410,6 +487,21 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value of the property, not empty</dd>
+</dl>
+</li>
+</ul>
+<a name="getAttributes--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAttributes</h4>
+<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableMap.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableMap</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getAttributes()</pre>
+<div class="block">Gets the attributes associated with this failure.
+ Attributes can contain additional information about the failure. For example, a line number in a file or the ID of a trade.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the value of the property, not null</dd>
 </dl>
 </li>
 </ul>
@@ -524,13 +616,13 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

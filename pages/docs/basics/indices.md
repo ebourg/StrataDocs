@@ -20,8 +20,9 @@ Usually this is from today to tomorrow, but it can be from tomorrow to the day a
 | AUD-AONIA      | AONIA index for AUD      | Act/365F     |
 | BRL-CDI        | CDI index for BRL        | Bus/252 BRBD |
 | CAD-CORRA      | CORRA index for CAD      | Act/365F     |
-| CHF-TOIS       | TOIS index for CHF       | Act/360      |
 | CHF-SARON      | SARON index for CHF      | Act/360      |
+| CHF-TOIS       | TOIS index for CHF       | Act/360      |
+| COP-OIBR       | IBR index for COP        | Act/360      |
 | DKK-TNR        | TNR index for CHF        | Act/360      |
 | EUR-EONIA      | EONIA index for EUR      | Act/360      |
 | GBP-SONIA      | SONIA index for GBP      | Act/365F     |
@@ -33,6 +34,7 @@ Usually this is from today to tomorrow, but it can be from tomorrow to the day a
 | SGD-SONAR *    | SONAR index for SGD      | Act/365F     |
 | JPY-TONAR      | TONAR index for JPY      | Act/365F     |
 | USD-FED-FUND   | Fed-Fund index for USD   | Act/360      |
+| ZAR-SABOR      | SABOR index for ZAR      | Act/360      |
 
 Overnight indices have a constant in `OvernightIndices`.
 The identifier can also be obtained dynamically using `OvernightIndex.of(name)`.
@@ -51,6 +53,7 @@ The deposit period is known as the tenor, and a rate is published for a number o
 | AUD-BBSW-XX          | 1M,2M,3M,4M,5M,6M        | BBSW index for AUD        | Act/365F     |
 | CAD-CDOR-XX          | 1M,2M,3M,6M,12M          | CDOR index for CAD        | Act/365F     |
 | CHF-LIBOR-XX         | 1W,1M,2M,3M,6M,12M       | LIBOR index for CHF       | Act/360      |
+| CNY-REPO-XX *        | 1W                       | REPO index for CNY        | Act/365F     |
 | CZK-PRIBOR-XX        | 1W,2W,1M,2M,3M,6M,12M    | PRIBOR index for CZK      | Act/360      |
 | DKK-CIBOR-XX         | 1W,2W,1M,2M,3M,6M,9M,12M | CIBOR index for DKK       | Act/360      |
 | EUR-LIBOR-XX         | 1W,1M,2M,3M,6M,12M       | LIBOR index for EUR       | Act/360      |

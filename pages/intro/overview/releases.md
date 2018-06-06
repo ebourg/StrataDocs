@@ -6,6 +6,24 @@ permalink: /releases/
 Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
+## Strata v1.7.1
+
+*6 June 2018*
+
+This minor release contains around 11 fixes. These include:
+
+* Parse zero length periods from CSV format,
+ [#1670](https://github.com/OpenGamma/Strata/issues/1670)
+* Add ZAR-SABOR, CNY-REPO-1W, use CHF-SARON in preference to CHF-TOIS, add more inactive indices,
+ [#1681](https://github.com/OpenGamma/Strata/issues/1681),
+ [#1693](https://github.com/OpenGamma/Strata/issues/1693)
+ [#1694](https://github.com/OpenGamma/Strata/issues/1694)
+* Fix Ibor-OIS swap conventions,
+ [#1678](https://github.com/OpenGamma/Strata/issues/1678)
+* Summarizer should handle short periods,
+ [#1663](https://github.com/OpenGamma/Strata/issues/1663)
+
+
 ## Strata v1.7.0
 
 *19 February 2018*

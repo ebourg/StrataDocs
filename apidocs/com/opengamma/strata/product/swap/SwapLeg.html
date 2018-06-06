@@ -147,26 +147,26 @@ extends <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" tit
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>default <a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;</code></td>
+<td class="colFirst"><code>default com.google.common.collect.ImmutableSet&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#allCurrencies--">allCurrencies</a></span>()</code>
 <div class="block">Returns the set of currencies referred to by the leg.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>default <a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;</code></td>
+<td class="colFirst"><code>default com.google.common.collect.ImmutableSet&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#allIndices--">allIndices</a></span>()</code>
 <div class="block">Returns the set of indices referred to by the leg.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>default void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#collectCurrencies-com.google.common.collect.ImmutableSet.Builder-">collectCurrencies</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;builder)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#collectCurrencies-com.google.common.collect.ImmutableSet.Builder-">collectCurrencies</a></span>(com.google.common.collect.ImmutableSet.Builder&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;builder)</code>
 <div class="block">Collects all the currencies referred to by this leg.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/SwapLeg.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(com.google.common.collect.ImmutableSet.Builder&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>
 <div class="block">Collects all the indices referred to by this leg.</div>
 </td>
 </tr>
@@ -314,7 +314,7 @@ extends <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" tit
 <ul class="blockList">
 <li class="blockList">
 <h4>allCurrencies</h4>
-<pre>default&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;allCurrencies()</pre>
+<pre>default&nbsp;com.google.common.collect.ImmutableSet&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;allCurrencies()</pre>
 <div class="block">Returns the set of currencies referred to by the leg.
  <p>
  This returns the complete set of currencies for the leg, not just the payment currencies.
@@ -332,7 +332,7 @@ extends <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" tit
 <ul class="blockList">
 <li class="blockList">
 <h4>collectCurrencies</h4>
-<pre>default&nbsp;void&nbsp;collectCurrencies(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;builder)</pre>
+<pre>default&nbsp;void&nbsp;collectCurrencies(com.google.common.collect.ImmutableSet.Builder&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;builder)</pre>
 <div class="block">Collects all the currencies referred to by this leg.
  <p>
  This collects the complete set of currencies for the leg, not just the payment currencies.</div>
@@ -348,7 +348,7 @@ extends <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" tit
 <ul class="blockList">
 <li class="blockList">
 <h4>allIndices</h4>
-<pre>default&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;allIndices()</pre>
+<pre>default&nbsp;com.google.common.collect.ImmutableSet&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;allIndices()</pre>
 <div class="block">Returns the set of indices referred to by the leg.
  <p>
  A leg will typically refer to at least one index, such as 'GBP-LIBOR-3M'.
@@ -366,7 +366,7 @@ extends <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" tit
 <ul class="blockList">
 <li class="blockList">
 <h4>collectIndices</h4>
-<pre>void&nbsp;collectIndices(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</pre>
+<pre>void&nbsp;collectIndices(com.google.common.collect.ImmutableSet.Builder&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</pre>
 <div class="block">Collects all the indices referred to by this leg.
  <p>
  A swap leg will typically refer to at least one index, such as 'GBP-LIBOR-3M'.

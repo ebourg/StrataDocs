@@ -191,7 +191,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html#collectIndices-com.google.common.collect.ImmutableSet.Builder-">collectIndices</a></span>(com.google.common.collect.ImmutableSet.Builder&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</code>
 <div class="block">Collects all the indices referred to by this leg.</div>
 </td>
 </tr>
@@ -224,13 +224,13 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 </td>
 </tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentEvent</a>&gt;</code></td>
+<td class="colFirst"><code>com.google.common.collect.ImmutableList&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentEvent</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html#getPaymentEvents--">getPaymentEvents</a></span>()</code>
 <div class="block">Gets the payment events that are associated with the swap leg.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
-<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentPeriod</a>&gt;</code></td>
+<td class="colFirst"><code>com.google.common.collect.ImmutableList&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentPeriod</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html#getPaymentPeriods--">getPaymentPeriods</a></span>()</code>
 <div class="block">Gets the payment periods that combine to form the swap leg.</div>
 </td>
@@ -383,7 +383,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <ul class="blockList">
 <li class="blockList">
 <h4>collectIndices</h4>
-<pre>public&nbsp;void&nbsp;collectIndices(<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.Builder.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet.Builder</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</pre>
+<pre>public&nbsp;void&nbsp;collectIndices(com.google.common.collect.ImmutableSet.Builder&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;builder)</pre>
 <div class="block">Collects all the indices referred to by this leg.
  <p>
  A swap leg will typically refer to at least one index, such as 'GBP-LIBOR-3M'.
@@ -500,7 +500,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <ul class="blockList">
 <li class="blockList">
 <h4>getPaymentPeriods</h4>
-<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentPeriod</a>&gt;&nbsp;getPaymentPeriods()</pre>
+<pre>public&nbsp;com.google.common.collect.ImmutableList&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentPeriod.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentPeriod</a>&gt;&nbsp;getPaymentPeriods()</pre>
 <div class="block">Gets the payment periods that combine to form the swap leg.
  <p>
  Each payment period represents part of the life-time of the leg.
@@ -521,7 +521,7 @@ implements <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Immuta
 <ul class="blockList">
 <li class="blockList">
 <h4>getPaymentEvents</h4>
-<pre>public&nbsp;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentEvent</a>&gt;&nbsp;getPaymentEvents()</pre>
+<pre>public&nbsp;com.google.common.collect.ImmutableList&lt;<a href="../../../../../com/opengamma/strata/product/swap/SwapPaymentEvent.html" title="interface in com.opengamma.strata.product.swap">SwapPaymentEvent</a>&gt;&nbsp;getPaymentEvents()</pre>
 <div class="block">Gets the payment events that are associated with the swap leg.
  <p>
  Payment events include notional exchange and fees.</div>

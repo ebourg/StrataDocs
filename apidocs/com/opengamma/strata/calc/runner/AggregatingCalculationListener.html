@@ -275,7 +275,11 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationL
 <li class="blockList">
 <h4>result</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/calc/runner/AggregatingCalculationListener.html" title="type parameter in AggregatingCalculationListener">T</a>&nbsp;result()</pre>
-<div class="block">Returns the aggregate result of the calculations, blocking until it is available.</div>
+<div class="block">Returns the aggregate result of the calculations, blocking until it is available.
+ <p>
+ If the thread is interrupted while this method is blocked, then a runtime exception
+ is thrown, but with the interrupt flag set.
+ For additional control, use <a href="../../../../../com/opengamma/strata/calc/runner/AggregatingCalculationListener.html#getFuture--"><code>getFuture()</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the aggregate result of the calculations, blocking until it is available</dd>

@@ -279,13 +279,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapLeg</a></code></td>
-<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionCashParYieldProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionCashParYieldProductPricer.html#fixedLeg-com.opengamma.strata.product.swap.ResolvedSwap-">fixedLeg</a></span>(<a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwap.html" title="class in com.opengamma.strata.product.swap">ResolvedSwap</a>&nbsp;swap)</code>
+<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionPhysicalProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionPhysicalProductPricer.html#fixedLeg-com.opengamma.strata.product.swap.ResolvedSwap-">fixedLeg</a></span>(<a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwap.html" title="class in com.opengamma.strata.product.swap">ResolvedSwap</a>&nbsp;swap)</code>
 <div class="block">Checks that there is exactly one fixed leg and returns it.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapLeg</a></code></td>
-<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionPhysicalProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionPhysicalProductPricer.html#fixedLeg-com.opengamma.strata.product.swap.ResolvedSwap-">fixedLeg</a></span>(<a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwap.html" title="class in com.opengamma.strata.product.swap">ResolvedSwap</a>&nbsp;swap)</code>
+<td class="colLast"><span class="typeNameLabel">VolatilitySwaptionCashParYieldProductPricer.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/swaption/VolatilitySwaptionCashParYieldProductPricer.html#fixedLeg-com.opengamma.strata.product.swap.ResolvedSwap-">fixedLeg</a></span>(<a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwap.html" title="class in com.opengamma.strata.product.swap">ResolvedSwap</a>&nbsp;swap)</code>
 <div class="block">Checks that there is exactly one fixed leg and returns it.</div>
 </td>
 </tr>
@@ -417,18 +417,6 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapLeg</a></code></td>
-<td class="colLast"><span class="typeNameLabel">RateCalculationSwapLeg.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RateCalculationSwapLeg.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
-<div class="block">Converts this swap leg to the equivalent <code>ResolvedSwapLeg</code>.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapLeg</a></code></td>
-<td class="colLast"><span class="typeNameLabel">KnownAmountSwapLeg.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
-<div class="block">Converts this swap leg to the equivalent <code>ResolvedSwapLeg</code>.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapLeg</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SwapLeg.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/SwapLeg.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Resolves this swap leg using the specified reference data.</div>
 </td>
@@ -436,6 +424,18 @@
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapLeg</a></code></td>
 <td class="colLast"><span class="typeNameLabel">RatePeriodSwapLeg.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RatePeriodSwapLeg.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Converts this swap leg to the equivalent <code>ResolvedSwapLeg</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapLeg</a></code></td>
+<td class="colLast"><span class="typeNameLabel">RateCalculationSwapLeg.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/RateCalculationSwapLeg.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Converts this swap leg to the equivalent <code>ResolvedSwapLeg</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapLeg</a></code></td>
+<td class="colLast"><span class="typeNameLabel">KnownAmountSwapLeg.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/KnownAmountSwapLeg.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Converts this swap leg to the equivalent <code>ResolvedSwapLeg</code>.</div>
 </td>
 </tr>
@@ -459,13 +459,13 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapLeg</a>&gt;</code></td>
+<td class="colFirst"><code>com.google.common.collect.ImmutableList&lt;<a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapLeg</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedSwap.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwap.html#getLegs--">getLegs</a></span>()</code>
 <div class="block">Gets the legs of the swap.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapLeg</a>&gt;</code></td>
+<td class="colFirst"><code>com.google.common.collect.ImmutableList&lt;<a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapLeg</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedSwap.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwap.html#getLegs-com.opengamma.strata.product.swap.SwapLegType-">getLegs</a></span>(<a href="../../../../../../com/opengamma/strata/product/swap/SwapLegType.html" title="enum in com.opengamma.strata.product.swap">SwapLegType</a>&nbsp;type)</code>
 <div class="block">Gets the legs of the swap with the specified type.</div>
 </td>
@@ -483,7 +483,7 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapLeg</a>&gt;&gt;</code></td>
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;com.google.common.collect.ImmutableList&lt;<a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwapLeg.html" title="class in com.opengamma.strata.product.swap">ResolvedSwapLeg</a>&gt;&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedSwap.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/ResolvedSwap.Meta.html#legs--">legs</a></span>()</code>
 <div class="block">The meta-property for the <code>legs</code> property.</div>
 </td>

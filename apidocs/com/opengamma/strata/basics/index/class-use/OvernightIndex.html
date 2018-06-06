@@ -228,6 +228,12 @@
 <div class="block">The Fed Fund index for USD.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightIndices.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndices.html#ZAR_SABOR">ZAR_SABOR</a></span></code>
+<div class="block">The SABOR index for ZAR.</div>
+</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -319,14 +325,14 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a></code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#getIndex--">getIndex</a></span>()</code>
-<div class="block">Gets the Overnight index.</div>
+<td class="colLast"><span class="typeNameLabel">OvernightRateSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/OvernightRateSensitivity.html#getIndex--">getIndex</a></span>()</code>
+<div class="block">Gets the Overnight index that the sensitivity refers to.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a></code></td>
-<td class="colLast"><span class="typeNameLabel">OvernightRateSensitivity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/OvernightRateSensitivity.html#getIndex--">getIndex</a></span>()</code>
-<div class="block">Gets the Overnight index that the sensitivity refers to.</div>
+<td class="colLast"><span class="typeNameLabel">OvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html#getIndex--">getIndex</a></span>()</code>
+<div class="block">Gets the Overnight index.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -345,14 +351,14 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableRatesProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html#getOvernightIndices--">getOvernightIndices</a></span>()</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">RatesProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#getOvernightIndices--">getOvernightIndices</a></span>()</code>
 <div class="block">Gets the set of Overnight indices that are available.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableRatesProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html#getOvernightIndices--">getOvernightIndices</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&gt;</code></td>
@@ -418,13 +424,13 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">OvernightIndexRates</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableRatesProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html#overnightIndexRates-com.opengamma.strata.basics.index.OvernightIndex-">overnightIndexRates</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">OvernightIndexRates</a></code></td>
 <td class="colLast"><span class="typeNameLabel">RatesProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#overnightIndexRates-com.opengamma.strata.basics.index.OvernightIndex-">overnightIndexRates</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index)</code>
 <div class="block">Gets the rates for an Overnight index.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/rate/OvernightIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">OvernightIndexRates</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableRatesProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html#overnightIndexRates-com.opengamma.strata.basics.index.OvernightIndex-">overnightIndexRates</a></span>(<a href="../../../../../../com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

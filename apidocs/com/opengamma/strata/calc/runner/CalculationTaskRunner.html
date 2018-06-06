@@ -189,7 +189,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseabl
                            <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData,
                            <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData,
                            <a href="../../../../../com/opengamma/strata/calc/runner/CalculationListener.html" title="interface in com.opengamma.strata.calc.runner">CalculationListener</a>&nbsp;listener)</code>
-<div class="block">Performs calculations asynchronously for a multiple scenarios, each with a different set of market data,
+<div class="block">Performs calculations asynchronously for multiple scenarios, each with a different set of market data,
  invoking a listener as each calculation completes.</div>
 </td>
 </tr>
@@ -278,7 +278,11 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseabl
 <div class="block">Performs calculations for a single set of market data.
  <p>
  This returns a grid of results based on the specified tasks and market data.
- The grid will contain a row for each target and a column for each measure.</div>
+ The grid will contain a row for each target and a column for each measure.
+ <p>
+ If the thread is interrupted while this method is blocked, calculations will stop
+ and a result returned indicating the failed tasks, with the interrupted flag set.
+ For additional control, use <a href="../../../../../com/opengamma/strata/calc/runner/CalculationTaskRunner.html#calculateAsync-com.opengamma.strata.calc.runner.CalculationTasks-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-com.opengamma.strata.calc.runner.CalculationListener-"><code>calculateAsync(CalculationTasks, MarketData, ReferenceData, CalculationListener)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>tasks</code> - the calculation tasks to invoke</dd>
@@ -327,7 +331,12 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseabl
  <p>
  This returns a grid of results based on the specified tasks and market data.
  The grid will contain a row for each target and a column for each measure.
- Each cell will contain multiple results, one for each scenario.</div>
+ Each cell will contain multiple results, one for each scenario.
+ <p>
+ If the thread is interrupted while this method is blocked, calculations will stop
+ and a result returned indicating the failed tasks, with the interrupted flag set.
+ For additional control, use
+ <a href="../../../../../com/opengamma/strata/calc/runner/CalculationTaskRunner.html#calculateMultiScenarioAsync-com.opengamma.strata.calc.runner.CalculationTasks-com.opengamma.strata.data.scenario.ScenarioMarketData-com.opengamma.strata.basics.ReferenceData-com.opengamma.strata.calc.runner.CalculationListener-"><code>calculateMultiScenarioAsync(CalculationTasks, ScenarioMarketData, ReferenceData, CalculationListener)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>tasks</code> - the calculation tasks to invoke</dd>
@@ -348,7 +357,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseabl
                                  <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData,
                                  <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData,
                                  <a href="../../../../../com/opengamma/strata/calc/runner/CalculationListener.html" title="interface in com.opengamma.strata.calc.runner">CalculationListener</a>&nbsp;listener)</pre>
-<div class="block">Performs calculations asynchronously for a multiple scenarios, each with a different set of market data,
+<div class="block">Performs calculations asynchronously for multiple scenarios, each with a different set of market data,
  invoking a listener as each calculation completes.
  <p>
  This method requires the listener to assemble the results, but it can be much more memory efficient when

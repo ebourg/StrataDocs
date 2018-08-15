@@ -17,7 +17,7 @@ OpenGamma offers commercial support for Strata and all its software offerings. T
  * Production support
  * Service level agreements
 
-Please [contact us directly](http://www.opengamma.com/#contact) to discuss Strata commercial support,
+Please [contact us directly](https://www.opengamma.com/#contact) to discuss Strata commercial support,
 or for more information about derivative market solutions built on Strata.
 
 

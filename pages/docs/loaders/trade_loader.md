@@ -276,8 +276,11 @@ Note that there is a separate CSV format for [positions]({{site.baseurl}}/positi
 | Strata Trade Type     | Mandatory   | The type of the trade, "Security" |
 | Security Id Scheme    | Optional    | The scheme (symbology) within which the security identifier is unique, default "OG-Security" |
 | Security Id           | Mandatory   | The security identifier |
-| Quantity              | Mandatory   | The quantity purchased (positive) or sold (negative) |
+| Buy Sell              | Optional    | Whether the trade is "Buy" or "Sell" |
+| Quantity              | Mandatory   | The quantity purchased |
 | Price                 | Mandatory   | The price paid for each security |
+
+Either use "Buy Sell" and a positive "Quantity", or a signed "Quantity" (positive if bought, negative if sold)
 
 
 ### Term Deposits
@@ -324,17 +327,86 @@ Valid combinations of conditional fields are as follows (other combinations are 
 
 FX forwards/spots can be specified as follows:
 
+#### FX by convention
+
 | Column name             | Mandatory?  | Description |
 |-------------------------|-------------|-------------|
 | Strata Trade Type       | Mandatory   | The type of the trade, "FxSingle" |
+| Convention              | Mandatory   | The convention, which is the currency pair, such as "GBP/USD" |
+| Buy Sell                | Mandatory   | Whether the FX is "Buy" or "Sell" |
+| Curency                 | Mandatory   | The currency of the notional amount |
+| Notional                | Mandatory   | The notional amount, positive with direction defined by Buy/Sell |
+| FX Rate                 | Mandatory   | The FX rate, which must be for the specified currency pair |
 | Payment Date            | Mandatory   | The payment date, such as "2017-06-01", see [accepted formats]({{site.baseurl}}/common_formats/) |
+| Payment Date Convention | Optional    | The payment [business day convention]({{site.baseurl}}/date_adjustments/), such as "Following" or "ModifiedFollowing" |
+| Payment Date Calendar   | Optional    | The payment [holiday calendar]({{site.baseurl}}/holiday_data/) to use, such as "GBLO" |
+
+#### FX by full details
+
+| Column name             | Mandatory?  | Description |
+|-------------------------|-------------|-------------|
+| Strata Trade Type       | Mandatory   | The type of the trade, "FxSingle" |
+| Payment Date            | Conditional | The payment date, such as "2017-06-01", see [accepted formats]({{site.baseurl}}/common_formats/) |
 | Payment Date Convention | Optional    | The payment [business day convention]({{site.baseurl}}/date_adjustments/), such as "Following" or "ModifiedFollowing" |
 | Payment Date Calendar   | Optional    | The payment [holiday calendar]({{site.baseurl}}/holiday_data/) to use, such as "GBLO" |
 | Leg 1 Direction         | Mandatory   | The direction of the leg, "Pay" or "Receive" |
 | Leg 1 Currency          | Mandatory   | The payment currency, such as "GBP" |
 | Leg 1 Notional          | Mandatory   | The notional amount, in the currency of the leg |
+| Leg 1 Payment Date      | Conditional | The payment date, such as "2017-06-01", see [accepted formats]({{site.baseurl}}/common_formats/) |
 | Leg 2 Direction         | Mandatory   | The direction of the leg, "Pay" or "Receive" |
 | Leg 2 Currency          | Mandatory   | The payment currency, such as "GBP" |
 | Leg 2 Notional          | Mandatory   | The notional amount, in the currency of the leg |
+| Leg 2 Payment Date      | Conditional | The payment date, such as "2017-06-01", see [accepted formats]({{site.baseurl}}/common_formats/) |
 
 One leg must be "Pay" and the other "Receive".
+Either the leg specific payment dates or the shared payment date should be specified.
+
+### FX Swap
+
+FX swaps can be specified as follows:
+
+#### FX Swap by convention
+
+| Column name             | Mandatory?  | Description |
+|-------------------------|-------------|-------------|
+| Strata Trade Type       | Mandatory   | The type of the trade, "FxSwap" |
+| Convention              | Mandatory   | The convention, which is the currency pair, such as "GBP/USD" |
+| Buy Sell                | Mandatory   | Whether the FX is "Buy" or "Sell" |
+| Curency                 | Mandatory   | The currency of the notional amount |
+| Notional                | Mandatory   | The notional amount, positive with direction defined by Buy/Sell |
+| FX Rate                 | Mandatory   | The near FX rate, which must be for the specified currency pair |
+| Payment Date            | Mandatory   | The near payment date, such as "2017-06-01", see [accepted formats]({{site.baseurl}}/common_formats/) |
+| Far FX Rate             | Mandatory   | The far FX rate, which must be for the specified currency pair |
+| Far Payment Date        | Mandatory   | The far payment date, such as "2017-09-01", see [accepted formats]({{site.baseurl}}/common_formats/) |
+| Payment Date Convention | Optional    | The payment [business day convention]({{site.baseurl}}/date_adjustments/), such as "Following" or "ModifiedFollowing" |
+| Payment Date Calendar   | Optional    | The payment [holiday calendar]({{site.baseurl}}/holiday_data/) to use, such as "GBLO" |
+
+#### FX Swap by full details
+
+| Column name             | Mandatory?  | Description |
+|-------------------------|-------------|-------------|
+| Strata Trade Type       | Mandatory   | The type of the trade, "FxSwap" |
+| Payment Date            | Conditional | The near payment date, such as "2017-06-01", see [accepted formats]({{site.baseurl}}/common_formats/) |
+| Payment Date Convention | Optional    | The payment [business day convention]({{site.baseurl}}/date_adjustments/), such as "Following" or "ModifiedFollowing" |
+| Payment Date Calendar   | Optional    | The payment [holiday calendar]({{site.baseurl}}/holiday_data/) to use, such as "GBLO" |
+| Leg 1 Direction         | Mandatory   | The near direction of the leg, "Pay" or "Receive" |
+| Leg 1 Currency          | Mandatory   | The near payment currency, such as "GBP" |
+| Leg 1 Notional          | Mandatory   | The near notional amount, in the currency of the leg |
+| Leg 1 Payment Date      | Conditional | The near payment date, such as "2017-06-01", see [accepted formats]({{site.baseurl}}/common_formats/) |
+| Leg 2 Direction         | Mandatory   | The near direction of the leg, "Pay" or "Receive" |
+| Leg 2 Currency          | Mandatory   | The near payment currency, such as "GBP" |
+| Leg 2 Notional          | Mandatory   | The near notional amount, in the currency of the leg |
+| Leg 2 Payment Date      | Conditional | The near payment date, such as "2017-06-01", see [accepted formats]({{site.baseurl}}/common_formats/) |
+| Far Payment Date        | Conditional | The far payment date, such as "2017-06-01", see [accepted formats]({{site.baseurl}}/common_formats/) |
+| Far Leg 1 Direction     | Mandatory   | The far direction of the leg, "Pay" or "Receive" |
+| Far Leg 1 Currency      | Mandatory   | The far payment currency, such as "GBP" |
+| Far Leg 1 Notional      | Mandatory   | The far notional amount, in the currency of the leg |
+| Far Leg 1 Payment Date  | Conditional | The far payment date, such as "2017-06-01", see [accepted formats]({{site.baseurl}}/common_formats/) |
+| Far Leg 2 Direction     | Mandatory   | The far direction of the leg, "Pay" or "Receive" |
+| Far Leg 2 Currency      | Mandatory   | The far payment currency, such as "GBP" |
+| Far Leg 2 Notional      | Mandatory   | The far notional amount, in the currency of the leg |
+| Far Leg 2 Payment Date  | Conditional | The far payment date, such as "2017-06-01", see [accepted formats]({{site.baseurl}}/common_formats/) |
+
+Within the near and far groups, one leg must be "Pay" and the other "Receive".
+Within the near and far groups, either the leg specific payment dates or the shared payment date should be specified.
+

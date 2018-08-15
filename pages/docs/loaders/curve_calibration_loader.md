@@ -15,7 +15,7 @@ Curves can be loaded using the [`RatesCalibrationCsvLoader`]({{site.baseurl}}/ap
 ResourceLocator groupsLocator = ResourceLocator.ofFile(groupsFilename);
 ResourceLocator settingsLocator = ResourceLocator.ofFile(settingsFilename);
 ResourceLocator calibrationLocator = ResourceLocator.ofFile(calibrationFilename);
-Map<CurveGroupName, CurveGroupDefinition> defns = RatesCalibrationCsvLoader.load(
+Map<CurveGroupName, RatesCurveGroupDefinition> defns = RatesCalibrationCsvLoader.load(
     valuationDate, groupsLocator, settingsLocator, calibrationLocator);
 ```
 

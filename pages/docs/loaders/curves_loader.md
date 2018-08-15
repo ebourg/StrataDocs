@@ -15,7 +15,7 @@ Curves can be loaded using the [`RatesCurvesCsvLoader`]({{site.baseurl}}/apidocs
 ResourceLocator groupsLocator = ResourceLocator.ofFile(groupsFilename);
 ResourceLocator settingsLocator = ResourceLocator.ofFile(settingsFilename);
 ResourceLocator curvesLocator = ResourceLocator.ofFile(curvesFilename);
-List<CurveGroup> curves = RatesCurvesCsvLoader.load(
+List<RatesCurveGroup> curves = RatesCurvesCsvLoader.load(
     valuationDate, groupsLocator, settingsLocator, ImmutableList.of(curvesLocator));
 ```
 

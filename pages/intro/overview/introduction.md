@@ -63,7 +63,7 @@ Strata is the foundation layer of OpenGamma's commercial services for the deriva
 helping market participants understand the cost of trading and optimise counterparty relationships.
 We take the view that the market risk foundations of our commercial services are standard functionality
 that can be widely-used in the industry. This allows it to be validated and extended externally.
-See the [main website](http://www.opengamma.com) more information on the commercial services of OpenGamma.
+See the [main website](https://www.opengamma.com) more information on the commercial services of OpenGamma.
 
 
 ## Awards

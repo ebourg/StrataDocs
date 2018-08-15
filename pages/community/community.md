@@ -3,12 +3,12 @@ title: Community
 permalink: /community/
 ---
 
-Strata is an Open Source project backed by a commercial company, [OpenGamma](http://www.opengamma.com).
+Strata is an Open Source project backed by a commercial company, [OpenGamma](https://www.opengamma.com).
 
 OpenGamma provides solutions for the derivatives market, including margin calculations and counterparty analytics
 built on top of Strata. As an independent company, OpenGamma can provide an objective view to help
 market participants understand the cost of trading and optimise counterparty relationships.
-For more information on the services available, see the [main website](http://www.opengamma.com).
+For more information on the services available, see the [main website](https://www.opengamma.com).
 
 
 ## Support

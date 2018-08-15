@@ -35,17 +35,17 @@ and [`FpmlParserPlugin`]({{site.baseurl}}/apidocs/com/opengamma/strata/loader/fp
 
 ## Format
 
-The FpML format is defined at [fpml.org](http://www.fpml.org) and is an XML dialect.
+The FpML format is defined at [fpml.org](https://www.fpml.org) and is an XML dialect.
 Registration is required to see the formal specification, however these links to working drafts also work:
 
-* [Data document](http://www.fpml.org/spec/fpml-5-8-3-wd-3/html/confirmation/schemaDocumentation/schemas/fpml-main-5-8_xsd/elements/dataDocument.html) - the overall XML document
-* [Swap](http://www.fpml.org/spec/fpml-5-8-3-wd-3/html/confirmation/schemaDocumentation/schemas/fpml-ird-5-8_xsd/elements/swap.html)
-* [FRA](http://www.fpml.org/spec/fpml-5-8-3-wd-3/html/confirmation/schemaDocumentation/schemas/fpml-ird-5-8_xsd/elements/fra.html)
-* [Swaption](http://www.fpml.org/spec/fpml-5-8-3-wd-3/html/confirmation/schemaDocumentation/schemas/fpml-ird-5-8_xsd/elements/swaption.html)
-* [FX single](http://www.fpml.org/spec/fpml-5-8-3-wd-3/html/confirmation/schemaDocumentation/schemas/fpml-fx-5-8_xsd/elements/fxSingleLeg.html)
-* [FX swap](http://www.fpml.org/spec/fpml-5-8-3-wd-3/html/confirmation/schemaDocumentation/schemas/fpml-fx-5-8_xsd/elements/fxSwap.html)
-* [Term deposit](http://www.fpml.org/spec/fpml-5-8-3-wd-3/html/confirmation/schemaDocumentation/schemas/fpml-fx-5-8_xsd/elements/termDeposit.html)
-* [Bullet payment](http://www.fpml.org/spec/fpml-5-8-3-wd-3/html/confirmation/schemaDocumentation/schemas/fpml-ird-5-8_xsd/elements/bulletPayment.html)
+* [Data document](https://www.fpml.org/spec/fpml-5-8-3-wd-3/html/confirmation/schemaDocumentation/schemas/fpml-main-5-8_xsd/elements/dataDocument.html) - the overall XML document
+* [Swap](https://www.fpml.org/spec/fpml-5-8-3-wd-3/html/confirmation/schemaDocumentation/schemas/fpml-ird-5-8_xsd/elements/swap.html)
+* [FRA](https://www.fpml.org/spec/fpml-5-8-3-wd-3/html/confirmation/schemaDocumentation/schemas/fpml-ird-5-8_xsd/elements/fra.html)
+* [Swaption](https://www.fpml.org/spec/fpml-5-8-3-wd-3/html/confirmation/schemaDocumentation/schemas/fpml-ird-5-8_xsd/elements/swaption.html)
+* [FX single](https://www.fpml.org/spec/fpml-5-8-3-wd-3/html/confirmation/schemaDocumentation/schemas/fpml-fx-5-8_xsd/elements/fxSingleLeg.html)
+* [FX swap](https://www.fpml.org/spec/fpml-5-8-3-wd-3/html/confirmation/schemaDocumentation/schemas/fpml-fx-5-8_xsd/elements/fxSwap.html)
+* [Term deposit](https://www.fpml.org/spec/fpml-5-8-3-wd-3/html/confirmation/schemaDocumentation/schemas/fpml-fx-5-8_xsd/elements/termDeposit.html)
+* [Bullet payment](https://www.fpml.org/spec/fpml-5-8-3-wd-3/html/confirmation/schemaDocumentation/schemas/fpml-ird-5-8_xsd/elements/bulletPayment.html)
 
 The Strata parsers will ignore FpML elements that do not impact on pricing.
 However, if the parser detects an FpML element that is known to affect pricing

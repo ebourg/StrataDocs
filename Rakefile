@@ -11,7 +11,7 @@ task :test => [:build, 'html:check'] do
     :check_opengraph => true,
     :cache => {
       :timeframe => '6w'
-    }
+    },
     :typhoeus => {
       :timeout => 10,
       :verbose => true,

@@ -14,12 +14,14 @@ Strata includes the following coverage:
       <th>Calc API <a id="calcapi" href="#calcapi-footnote"><sup>2</sup></a></th>
       <th>Examples <a id="examples" href="#examples-footnote"><sup>3</sup></a></th>
       <th>Load from FpML</th>
+      <th>Load from CSV</th>
     </tr>
   </thead>
   <tbody>
   <tr>
     <td><a href="{{site.baseurl}}/swap">Swap</a><br />
       <span class="note">Including Vanilla, OIS, Basis, Cross Currency, Variable Notional and Inflation</span></td>
+    <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
@@ -31,6 +33,7 @@ Strata includes the following coverage:
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
   </tr>
   <tr>
     <td><a href="{{site.baseurl}}/fx_single">FX Forward/Spot</a></td>
@@ -38,9 +41,11 @@ Strata includes the following coverage:
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
   </tr>
   <tr>
     <td>FX NDF</td>
+    <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
@@ -52,6 +57,7 @@ Strata includes the following coverage:
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
   </tr>
   <tr>
     <td>STIR Future (Ibor)</td>
@@ -59,6 +65,7 @@ Strata includes the following coverage:
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td class="na"></td>
+    <td><i class="fa fa-check"></i><a id="securitycsv" href="#securitycsv-footnote"><sup>4</sup></a></td>
   </tr>
   <tr>
     <td>STIR Future Option</td>
@@ -67,6 +74,7 @@ Strata includes the following coverage:
     <td><i class="fa fa-check"></i></td>
     <td></td>
     <td class="na"></td>
+    <td><i class="fa fa-check"></i><a id="securitycsv" href="#securitycsv-footnote"><sup>4</sup></a></td>
   </tr>
   <tr>
     <td>Deliverable Swap Future</td>
@@ -74,9 +82,11 @@ Strata includes the following coverage:
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td class="na"></td>
+    <td><i class="fa fa-check"></i><a id="securitycsv" href="#securitycsv-footnote"><sup>4</sup></a></td>
   </tr>
   <tr>
     <td><a href="{{site.baseurl}}/term_deposit">Term Deposit</a></td>
+    <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
@@ -88,6 +98,7 @@ Strata includes the following coverage:
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
+    <td></td>
   </tr>
   <tr>
     <td><a href="{{site.baseurl}}/swaption">Swaption</a><br />
@@ -97,6 +108,7 @@ Strata includes the following coverage:
     <td><i class="fa fa-check"></i></td>
     <td></td>
     <td><i class="fa fa-check"></i></td>
+    <td></td>
   </tr>
   <tr>
     <td>Fixed-Coupon Bond</td>
@@ -104,6 +116,7 @@ Strata includes the following coverage:
     <td><i class="fa fa-check"></i></td>
     <td></td>
     <td class="na"></td>
+    <td><i class="fa fa-check"></i><a id="securitycsv" href="#securitycsv-footnote"><sup>4</sup></a></td>
   </tr>
   <tr>
     <td>Capital Indexed Bond<br />
@@ -112,6 +125,7 @@ Strata includes the following coverage:
     <td><i class="fa fa-check"></i></td>
     <td></td>
     <td class="na"></td>
+    <td><i class="fa fa-check"></i><a id="securitycsv" href="#securitycsv-footnote"><sup>4</sup></a></td>
   </tr>
   <tr>
     <td>Bond Future</td>
@@ -119,6 +133,7 @@ Strata includes the following coverage:
     <td><i class="fa fa-check"></i></td>
     <td></td>
     <td class="na"></td>
+    <td><i class="fa fa-check"></i><a id="securitycsv" href="#securitycsv-footnote"><sup>4</sup></a></td>
   </tr>
   <tr>
     <td>Bond Future Option</td>
@@ -127,6 +142,7 @@ Strata includes the following coverage:
     <td><i class="fa fa-check"></i></td>
     <td></td>
     <td class="na"></td>
+    <td><i class="fa fa-check"></i><a id="securitycsv" href="#securitycsv-footnote"><sup>4</sup></a></td>
   </tr>
   <tr>
     <td><a href="{{site.baseurl}}/fx_vanilla_option">FX Vanilla Option</a></td>
@@ -135,12 +151,14 @@ Strata includes the following coverage:
     <td><i class="fa fa-check"></i></td>
     <td></td>
     <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>FX Single Barrier Option</td>
     <td><i class="fa fa-check"></i><br />
       <span class="note">Black, Trinomial tree</span></td>
     <td><i class="fa fa-check"></i></td>
+    <td></td>
     <td></td>
     <td></td>
   </tr>
@@ -152,12 +170,14 @@ Strata includes the following coverage:
     <td><i class="fa fa-check"></i></td>
     <td></td>
     <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>Ibor cap/floor</td>
     <td><i class="fa fa-check"></i><br />
       <span class="note">Normal, Black</span></td>
     <td><i class="fa fa-check"></i></td>
+    <td></td>
     <td></td>
     <td></td>
   </tr>
@@ -168,6 +188,7 @@ Strata includes the following coverage:
     <td><i class="fa fa-check"></i></td>
     <td></td>
     <td><i class="fa fa-check"></i></td>
+    <td></td>
   </tr>
   <tr>
     <td>Generic Security</td>
@@ -175,6 +196,7 @@ Strata includes the following coverage:
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
     <td class="na"></td>
+    <td><i class="fa fa-check"></i><a id="securitycsv" href="#securitycsv-footnote"><sup>4</sup></a></td>
   </tr>
   </tbody>
 </table>
@@ -195,6 +217,9 @@ This also implies support in the measure-level API
 Code examples are included in the strata-examples module.
 This also indicates that the command-line tool includes an example portfolio and report for the asset class.
 
+<a id="securitycsv-footnote" href="#securitycsv"><sup>4</sup></a>
+CSV loader for securities refers to the security identifier, with the security details
+expected to be available in the reference data.
 
 ## Additional products
 

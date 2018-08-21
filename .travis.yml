@@ -6,20 +6,26 @@ branches:
   only:
     - /.*/
     - gh-pages
+addons:
+  apt:
+    packages:
+    - libcurl4-openssl-dev
 before_install:
   - pip install --user awscli
   - export PATH=$PATH:$HOME/.local/bin
   - gem update bundler
 before_script:
   - "sed -i -e 's!baseurl: \".*\"!baseurl: \"/strata/'\"$TRAVIS_BRANCH\"'\"!' _config.yml"
+# Could not get http-proofer to work for HTTPS links, despite lots of attempts, so use --only-4xx instead
+# The search.maven.org link fails in http-proofer for some reason, so disable it
 script:
   - bundle exec jekyll build -d ./_site/strata/$TRAVIS_BRANCH
-  - bundle exec htmlproofer _site --url-ignore /github.com/,/www.opengamma.com/support-services/ --file-ignore /strata/$TRAVIS_BRANCH/apidocs/
+  - bundle exec htmlproofer _site --only-4xx --url-ignore /github.com/,/search.maven.org/ --file-ignore /strata/$TRAVIS_BRANCH/apidocs/
 after_success:
   - aws s3 sync --quiet --delete _site/strata/ s3://strata-docs-ci.dev.opengamma.com/strata/
+  - echo "See http://strata-docs-ci.dev.opengamma.com/strata/$TRAVIS_BRANCH/"
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
     - secure: eNaP0LPaOdVrFPhLo4mXvw6vvDlxLEkMI7Pq3yAZbrnVCBtaPwZOHKXPDq789mmGHMqPfOkdCcDto2gmfLEJgeGdv17jHGvhXwjCRrf9D7na8VpbQkGrcJNN5VPVu9iH4+r7Z9oIzw3k3qqqAXRfoj8t9kI/dmcrq3CoSSeEC7zsrMeR6R5UjglI4DJ2jhsdi6j0IatTcZKXrkYcrR8GmNcou5A5GAbMhoCk4Dek+RZalQfFdRSHwNRg1lEox3U3XqL4e5LyrGECcyO+nuVw7JwKwWqrVgoPIVVHfkGm+hmcyTrI35qnR2ZwY2YFt3T76nYQPsIYq9dSHu1ia5CVYrwz38v1r6ydPxGDQfW40qQiiGdqTPbS+BLSWQC4eirsrlZjo/8R0xOnDLxwTVilj2SCLrIGnCNIFwxoijjP4aYLwgVuGaGmsBywuKdJv48Wb/Qotx4DMPziNLboAjSREr4QqwY0VMFYjDP4rywxvtF0BO59i3VZLB8Z61S/sxRfMKXXNpL08xGjk0iwA9b1Y1XNX0Ng5oUSnnb3cjOXl8zpcoZ+rzsAuyjkBj6m4xHblTsFbQVkpA3W1LRjJVo9q5G/C0ZqCSeMAO9MrDl3+2W/q2g6bLLcQfTI5cAseSdAUIjSDyaeCmrQxwfCLM3dMv55FqZOSZrSJ4S9pagYG8I=
     - secure: yDjwnVurfVT78/sK5j8fzGl1cyc1WxBtfreleXgc0pV7Q3oa0NOlMOcpYKNdjrScgVxgY5z7n4Fmj4XNQrsBP0zYTe5jgZ3WlWUeJ+9E88R4pmKxLeqG0yJKpkPD85yAZ00weyaxHsDJmglpa7MAfUiSO5gFc4nqvjv5+Z7Y2r5bv+VotwLXl3QJBLmFcoDIfPzhPRupYyHBM2SOmqvInfLk5r+7vLO7l/btWjY3xuM/4JTU4sugCEt0c7cnryY5Bl4XOw35Bt6xX9ThG0utes+CVoEmrX12Jn/Nh+JnbX/rI9OepXqdTLfwznXRFZj1pyj6whdpLwgl4TgiCX3pvGJBR02mx4CqU5sT7l+R4EMJit7FO8CjI5dIkIEPYASAGrBakzeTXkxMyEN3JV38FepVODnBk81DmKIVeQunfqB+M2ZXxhsiVasw+33KxsXHb5VoCiVlSKQpNXzkNSMRw11RWbwhQGPd1aJ+lyPsrrC3IMxLojFlxZVAlmAUaASYsbQZfc8hEuaf3ZvKPumd2DDvdQyiZM27FRLiJ9j/4PsoEESZgxN/5dq6SVKZdBylHReDqgH+ffdMR8nY8yv8rXXZDW4w/msz1VsIxCNQEuoPfTFBJs1uj4WDYFYRzY9cVbHO1Mo/XOJdCXsGlJjfNwEoqQo2YWBKT7SCfK3ti5s=
-

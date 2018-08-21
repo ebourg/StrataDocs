@@ -99,15 +99,15 @@ concurrent data structures that could slow the application down.
 Each extended enum is defined by one or more `.ini` files.
 The ini file must be located on the classpath in one of three specific locations.
 
-* The "base" location is intended for use by Strata - `com/opengamma/strata/config/base`.
-* The "library" location is intended for use by libraries that build on Strata - `com/opengamma/strata/config/library`.
-* The "application" location is intended for use by end-user application code - `com/opengamma/strata/config/application`.
+* The "base" location is intended for use by Strata - `META-INF/com/opengamma/strata/config/base`.
+* The "library" location is intended for use by libraries that build on Strata - `META-INF/com/opengamma/strata/config/library`.
+* The "application" location is intended for use by end-user application code - `META-INF/com/opengamma/strata/config/application`.
 
 The list of known locations can be expanded by setting the system property
 `com.opengamma.strata.config.directories` on the command line.
 
 For example, if the extended enum interface is `com.opengamma.strata.basics.date.DayCount`,
-then an application ini file must be named: `com/opengamma/strata/config/application/DayCount.ini`.
+then an application ini file must be named: `META-INF/com/opengamma/strata/config/application/DayCount.ini`.
 
 The [`ResourceConfig`]({{site.baseurl}}/apidocs/com/opengamma/strata/collect/io/ResourceConfig.html) class
 is responsible for loading and combining the ini files.

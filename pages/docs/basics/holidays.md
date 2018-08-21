@@ -20,7 +20,7 @@ The calendar is accessed via an identifier `HolidayCalendarId`.
 Each holiday calendar has a unique identifier.
 To obtain the identifier from a string, use `HolidayCalendarId.of(String)`
 
-The actual holiday calendar can then be obtained from [`ReferenceData`](http://strata.opengamma.io/reference_data/):
+The actual holiday calendar can then be obtained from [`ReferenceData`]({{site.baseurl}}/reference_data):
 
 ```java
 HolidayCalendarId holCalId = HolidayCalendarId.of("GBLO");

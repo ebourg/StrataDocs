@@ -18,6 +18,11 @@ If possible please include the following (where relevant):
  * The version of Strata on which the bug occurred.
  * JDK version and operating system.
 
+## Reporting a security vulnerability
+
+If you believe you have identified a security vulnerability in Strata, we encourage responsible disclosure
+via security-at-opengamma.com. Please ensure you provide full details to allow use to investigate properly.
+
 ## Submitting a patch
 If you have a patch for anything from a bug right through to a full-blown feature, the process
 for inclusion of your code into Strata is essentially the same.

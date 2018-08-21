@@ -6,6 +6,162 @@ permalink: /releases/
 Releases of Strata are performed when a set of functionality has stabilized.
 To access a release, see the options for [obtaining Strata]({{site.baseurl}}/obtaining_strata).
 
+## Strata v2.0.0
+
+This is a major release with a number of backwards incompatible changes.
+
+There are over 115 [fixed issues](https://github.com/OpenGamma/Strata/milestone/20?closed=1).
+
+* Add OvernightFutureSecurity,
+ [#1763](https://github.com/OpenGamma/Strata/issues/1763)
+* Allow FX to have split payment dates,
+ [#1729](https://github.com/OpenGamma/Strata/issues/1729),
+ [#1732](https://github.com/OpenGamma/Strata/issues/1732)
+* Extended support for positions,
+ [#1723](https://github.com/OpenGamma/Strata/issues/1723),
+ [#1734](https://github.com/OpenGamma/Strata/issues/1734),
+ [#1733](https://github.com/OpenGamma/Strata/issues/1733),
+ [#1730](https://github.com/OpenGamma/Strata/issues/1730),
+ [#1728](https://github.com/OpenGamma/Strata/issues/1728),
+ [#1721](https://github.com/OpenGamma/Strata/issues/1721),
+ [#1722](https://github.com/OpenGamma/Strata/issues/1722),
+ [#1719](https://github.com/OpenGamma/Strata/issues/1719),
+ [#1711](https://github.com/OpenGamma/Strata/issues/1711),
+ [#1720](https://github.com/OpenGamma/Strata/issues/1720)
+* Link trades and positions better,
+ [#1712](https://github.com/OpenGamma/Strata/issues/1712),
+ [#1713](https://github.com/OpenGamma/Strata/issues/1713),
+ [#1724](https://github.com/OpenGamma/Strata/issues/1724),
+ [#1712](https://github.com/OpenGamma/Strata/issues/1712),
+ [#1731](https://github.com/OpenGamma/Strata/issues/1731)
+* Add Product/Security/Trade model,
+ [#1697](https://github.com/OpenGamma/Strata/issues/1697),
+ [#1695](https://github.com/OpenGamma/Strata/issues/1695),
+ [#1691](https://github.com/OpenGamma/Strata/issues/1691),
+ [#1696](https://github.com/OpenGamma/Strata/issues/1696),
+ [#1689](https://github.com/OpenGamma/Strata/issues/1689),
+ [#1674](https://github.com/OpenGamma/Strata/issues/1674),
+ [#1667](https://github.com/OpenGamma/Strata/issues/1667)
+ [#1666](https://github.com/OpenGamma/Strata/issues/1666)
+* Add Bills and LegalEntityId,
+ [#1748](https://github.com/OpenGamma/Strata/issues/1748),
+ [#1754](https://github.com/OpenGamma/Strata/issues/1754),
+ [#1758](https://github.com/OpenGamma/Strata/issues/1758),
+ [#1762](https://github.com/OpenGamma/Strata/issues/1762),
+ [#1761](https://github.com/OpenGamma/Strata/issues/1761)
+* Rename rates classes,
+ [#1750](https://github.com/OpenGamma/Strata/issues/1750),
+ [#1751](https://github.com/OpenGamma/Strata/issues/1751),
+ [#1766](https://github.com/OpenGamma/Strata/issues/1766)
+* Move configuration to META-INF,
+ [#1736](https://github.com/OpenGamma/Strata/issues/1736)
+* Gamma calculation with a combined curve,
+ [#1680](https://github.com/OpenGamma/Strata/issues/1680),
+ [#1677](https://github.com/OpenGamma/Strata/issues/1677),
+ [#1699](https://github.com/OpenGamma/Strata/issues/1699),
+ [#1625](https://github.com/OpenGamma/Strata/issues/1625),
+ [#1624](https://github.com/OpenGamma/Strata/issues/1624)
+ * Add USD-SOFR, ZAR-SABOR, CNY-REPO-1W, use CHF-SARON in preference to CHF-TOIS, add more inactive indices,
+ [#1765](https://github.com/OpenGamma/Strata/issues/1765),
+ [#1775](https://github.com/OpenGamma/Strata/issues/1775),
+ [#1681](https://github.com/OpenGamma/Strata/issues/1681),
+ [#1693](https://github.com/OpenGamma/Strata/issues/1693)
+ [#1694](https://github.com/OpenGamma/Strata/issues/1694)
+* Ability to lookup any index by name,
+ [#1708](https://github.com/OpenGamma/Strata/issues/1708)
+* Remove deprecations,
+ [#1716](https://github.com/OpenGamma/Strata/issues/1716),
+ [#1718](https://github.com/OpenGamma/Strata/issues/1718),
+ [#1743](https://github.com/OpenGamma/Strata/issues/1743),
+* Fix NZD and INR Fx index definitions,
+ [#1726](https://github.com/OpenGamma/Strata/issues/1726),
+ [#1772](https://github.com/OpenGamma/Strata/issues/1772)
+* Fix Ibor-OIS swap conventions,
+ [#1678](https://github.com/OpenGamma/Strata/issues/1678)
+* Make Trade/Position/Security easier to modify,
+ [#1674](https://github.com/OpenGamma/Strata/issues/1674)
+* Make FX and FX trades easier to work with,
+ [#1666](https://github.com/OpenGamma/Strata/issues/1666),
+ [#1691](https://github.com/OpenGamma/Strata/issues/1691)
+* Enhanced CSV loaders,
+ [#1745](https://github.com/OpenGamma/Strata/issues/1745),
+ [#1735](https://github.com/OpenGamma/Strata/issues/1735),
+ [#1670](https://github.com/OpenGamma/Strata/issues/1670),
+ [#1709](https://github.com/OpenGamma/Strata/issues/1709),
+ [#1702](https://github.com/OpenGamma/Strata/issues/1702),
+ [#1705](https://github.com/OpenGamma/Strata/issues/1705)
+* Enhanced ETD options to support underlying expiry month,
+ [#1668](https://github.com/OpenGamma/Strata/issues/1668),
+ [#1669](https://github.com/OpenGamma/Strata/issues/1669)
+* Additional interpolator,
+ [#1664](https://github.com/OpenGamma/Strata/issues/1664)
+
+#### Compatibility
+
+This is a major release with a number of incompatibilities.
+
+All deprecated classes and methods have been removed.
+
+All configuration files in `com/opengamma/strata/config` have been moved to
+`META-INF/com/opengamma/strata/config`. This is necessary to support Java 9.
+If you have your own configuration files, they will also need to move.
+
+The rates curve classes have been renamed to be specifically about rates.
+If you refer to these classes, you will need to change your code:
+
+* `CurveGroup` becomes `RatesCurveGroup`.
+* `CurveGroupId` becomes `RatesCurveGroupId`.
+* `CurveGroupInputs` becomes `RatesCurveGroupInputs`.
+* `CurveGroupInputsId` becomes `RatesCurveGroupInputsId`.
+* `CurveGroupDefinition` becomes `RatesCurveGroupDefinition`.
+* `CurveGroupDefinitionBuilder` becomes `RatesCurveGroupDefinitionBuilder`.
+* `CurveGroupEntry` becomes `RatesCurveGroupEntry`.
+* `CurveCalibrator` becomes `RatesCurveCalibrator`.
+* `SyntheticCurveCalibrator` becomes `RatesSyntheticCurveCalibrator`.
+* `CurveGroupDefinitionCsvLoader` becomes `RatesCurveGroupDefinitionCsvLoader`.
+
+If you are using bonds, you will likely use classes like `LegalEntityCurveGroup` and
+`LegalEntityCurveGroupDefinitionCsvLoader` instead.
+
+The `FxRateLookup` interface has moved package to `com.opengamma.strata.calc.runner`.
+If you refer to it, you will need to change your import.
+
+The `FxSingle` class has been altered to support split payment dates.
+If you use it, you will need to adapt.
+A Joda-Beans mapper will handle deserialization of the old format transparently.
+
+The `LegalEntityDiscountingProvider` implementations and lookup have been altered to
+support a new type-safe `LegalEntityId` class. The previous combined security and legal
+entity identifier maps have been separated.
+If you use bond pricing, you will need to adapt.
+
+The resolved trade classes for security-based products like `ResolvedBondFutureTrade`
+have been refactored to allow them to be used as positions.
+If you use these classes directly you will need to adapt.
+
+The `ResolvedTrade` interface now exposes `PortfolioItemInfo` instead of `TradeInfo`.
+If you use the interface directly you will need to adapt.
+
+The `Trade` and `Position` interfaces have new methods.
+If you have implemented your own trades/positions you will need to adapt.
+
+The `SwapLeg` interface has a new method.
+If you have implemented your own leg you will need to adapt.
+
+The `Curve` interface has new methods.
+If you have implemented your own curves you will need to adapt.
+
+The `RatesProvider` interface has a new method.
+If you have implemented your own provider you will need to adapt.
+
+The method `ValueWithFailures.combinedWith` has changed from taking `BinaryOperator` to `BiFunction`.
+This is source compatible if using lambdas, but not binary compatible.
+
+The `TradeAttributeType`, `PositionAttributeType` and `SecuirtyAttributeType` classes have been
+merged to become `AttributeType`.
+A Joda-Convert rename mapper will handle deserialization of the old class names transparently.
+
+
 ## Strata v1.7.1
 
 *6 June 2018*

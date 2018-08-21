@@ -8,13 +8,14 @@ There are a number of ways to obtain Strata.
 
 ## From a Maven repository
 
-Strata is available in [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.opengamma.strata%22) and [JCenter](https://bintray.com/bintray/jcenter?filterByPkgName=Strata):
+Strata is available in [Maven Central](https://search.maven.org/search?q=g:com.opengamma.strata)
+and [JCenter](https://bintray.com/bintray/jcenter?filterByPkgName=Strata):
 
 ```
 <dependency>
   <groupId>com.opengamma.strata</groupId>
   <artifactId>strata-measure</artifactId>
-  <version>1.7.1</version>
+  <version>2.0.0</version>
 </dependency>
 ```
 

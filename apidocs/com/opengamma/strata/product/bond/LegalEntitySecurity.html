@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6};
+var methods = {"i0":6,"i1":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -51,7 +51,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../com/opengamma/strata/product/bond/KnownAmountBondPaymentPeriod.Meta.html" title="class in com.opengamma.strata.product.bond"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFuture.html" title="class in com.opengamma.strata.product.bond"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBill.html" title="class in com.opengamma.strata.product.bond"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?com/opengamma/strata/product/bond/LegalEntitySecurity.html" target="_top">Frames</a></li>
@@ -106,7 +106,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondSecurity.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBondSecurity</a>, <a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondSecurity.html" title="class in com.opengamma.strata.product.bond">FixedCouponBondSecurity</a></dd>
+<dd><a href="../../../../../com/opengamma/strata/product/bond/BillSecurity.html" title="class in com.opengamma.strata.product.bond">BillSecurity</a>, <a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondSecurity.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBondSecurity</a>, <a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondSecurity.html" title="class in com.opengamma.strata.product.bond">FixedCouponBondSecurity</a></dd>
 </dl>
 <hr>
 <br>
@@ -134,9 +134,15 @@ extends <a href="../../../../../com/opengamma/strata/product/Security.html" titl
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a></code></td>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/LegalEntityId.html" title="class in com.opengamma.strata.product">LegalEntityId</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/LegalEntitySecurity.html#getLegalEntityId--">getLegalEntityId</a></span>()</code>
 <div class="block">Get the legal entity identifier.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/LegalEntitySecurity.html" title="interface in com.opengamma.strata.product.bond">LegalEntitySecurity</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/LegalEntitySecurity.html#withInfo-com.opengamma.strata.product.SecurityInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityInfo.html" title="class in com.opengamma.strata.product">SecurityInfo</a>&nbsp;info)</code>
+<div class="block">Returns an instance with the specified info.</div>
 </td>
 </tr>
 </table>
@@ -145,7 +151,7 @@ extends <a href="../../../../../com/opengamma/strata/product/Security.html" titl
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.<a href="../../../../../com/opengamma/strata/product/Security.html" title="interface in com.opengamma.strata.product">Security</a></h3>
-<code><a href="../../../../../com/opengamma/strata/product/Security.html#createProduct-com.opengamma.strata.basics.ReferenceData-">createProduct</a>, <a href="../../../../../com/opengamma/strata/product/Security.html#createTrade-com.opengamma.strata.product.TradeInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a>, <a href="../../../../../com/opengamma/strata/product/Security.html#getCurrency--">getCurrency</a>, <a href="../../../../../com/opengamma/strata/product/Security.html#getInfo--">getInfo</a>, <a href="../../../../../com/opengamma/strata/product/Security.html#getSecurityId--">getSecurityId</a>, <a href="../../../../../com/opengamma/strata/product/Security.html#getUnderlyingIds--">getUnderlyingIds</a></code></li>
+<code><a href="../../../../../com/opengamma/strata/product/Security.html#createPosition-com.opengamma.strata.product.PositionInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a>, <a href="../../../../../com/opengamma/strata/product/Security.html#createPosition-com.opengamma.strata.product.PositionInfo-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a>, <a href="../../../../../com/opengamma/strata/product/Security.html#createProduct-com.opengamma.strata.basics.ReferenceData-">createProduct</a>, <a href="../../../../../com/opengamma/strata/product/Security.html#createTrade-com.opengamma.strata.product.TradeInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a>, <a href="../../../../../com/opengamma/strata/product/Security.html#getCurrency--">getCurrency</a>, <a href="../../../../../com/opengamma/strata/product/Security.html#getInfo--">getInfo</a>, <a href="../../../../../com/opengamma/strata/product/Security.html#getSecurityId--">getSecurityId</a>, <a href="../../../../../com/opengamma/strata/product/Security.html#getUnderlyingIds--">getUnderlyingIds</a></code></li>
 </ul>
 </li>
 </ul>
@@ -164,16 +170,35 @@ extends <a href="../../../../../com/opengamma/strata/product/Security.html" titl
 <a name="getLegalEntityId--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getLegalEntityId</h4>
-<pre><a href="../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;getLegalEntityId()</pre>
+<pre><a href="../../../../../com/opengamma/strata/product/LegalEntityId.html" title="class in com.opengamma.strata.product">LegalEntityId</a>&nbsp;getLegalEntityId()</pre>
 <div class="block">Get the legal entity identifier.
  <p>
  The identifier is used for the legal entity that issues the security.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the legal entity identifier</dd>
+</dl>
+</li>
+</ul>
+<a name="withInfo-com.opengamma.strata.product.SecurityInfo-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>withInfo</h4>
+<pre><a href="../../../../../com/opengamma/strata/product/bond/LegalEntitySecurity.html" title="interface in com.opengamma.strata.product.bond">LegalEntitySecurity</a>&nbsp;withInfo(<a href="../../../../../com/opengamma/strata/product/SecurityInfo.html" title="class in com.opengamma.strata.product">SecurityInfo</a>&nbsp;info)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/product/Security.html#withInfo-com.opengamma.strata.product.SecurityInfo-">Security</a></code></span></div>
+<div class="block">Returns an instance with the specified info.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/product/Security.html#withInfo-com.opengamma.strata.product.SecurityInfo-">withInfo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/product/Security.html" title="interface in com.opengamma.strata.product">Security</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>info</code> - the new info</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the instance with the specified info</dd>
 </dl>
 </li>
 </ul>
@@ -207,7 +232,7 @@ extends <a href="../../../../../com/opengamma/strata/product/Security.html" titl
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../com/opengamma/strata/product/bond/KnownAmountBondPaymentPeriod.Meta.html" title="class in com.opengamma.strata.product.bond"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFuture.html" title="class in com.opengamma.strata.product.bond"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBill.html" title="class in com.opengamma.strata.product.bond"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?com/opengamma/strata/product/bond/LegalEntitySecurity.html" target="_top">Frames</a></li>

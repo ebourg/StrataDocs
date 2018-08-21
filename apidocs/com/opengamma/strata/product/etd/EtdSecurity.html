@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":18,"i2":6,"i3":18,"i4":6,"i5":18,"i6":6};
+var methods = {"i0":6,"i1":18,"i2":6,"i3":18,"i4":6,"i5":18,"i6":6,"i7":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -144,7 +144,7 @@ extends <a href="../../../../../com/opengamma/strata/product/Security.html" titl
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html?is-external=true" title="class or interface in java.time">YearMonth</a></code></td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html?is-external=true" title="class or interface in java.time">YearMonth</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdSecurity.html#getExpiry--">getExpiry</a></span>()</code>
 <div class="block">Gets the year-month of the expiry.</div>
 </td>
@@ -173,13 +173,33 @@ extends <a href="../../../../../com/opengamma/strata/product/Security.html" titl
 <div class="block">Gets the variant of ETD.</div>
 </td>
 </tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/etd/EtdSecurity.html" title="interface in com.opengamma.strata.product.etd">EtdSecurity</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdSecurity.html#withInfo-com.opengamma.strata.product.SecurityInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityInfo.html" title="class in com.opengamma.strata.product">SecurityInfo</a>&nbsp;info)</code>
+<div class="block">Returns an instance with the specified info.</div>
+</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.Security">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.<a href="../../../../../com/opengamma/strata/product/Security.html" title="interface in com.opengamma.strata.product">Security</a></h3>
-<code><a href="../../../../../com/opengamma/strata/product/Security.html#createProduct-com.opengamma.strata.basics.ReferenceData-">createProduct</a>, <a href="../../../../../com/opengamma/strata/product/Security.html#createTrade-com.opengamma.strata.product.TradeInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a>, <a href="../../../../../com/opengamma/strata/product/Security.html#getInfo--">getInfo</a></code></li>
+<code><a href="../../../../../com/opengamma/strata/product/Security.html#createPosition-com.opengamma.strata.product.PositionInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a>, <a href="../../../../../com/opengamma/strata/product/Security.html#createPosition-com.opengamma.strata.product.PositionInfo-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a>, <a href="../../../../../com/opengamma/strata/product/Security.html#createProduct-com.opengamma.strata.basics.ReferenceData-">createProduct</a>, <a href="../../../../../com/opengamma/strata/product/Security.html#createTrade-com.opengamma.strata.product.TradeInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a>, <a href="../../../../../com/opengamma/strata/product/Security.html#getInfo--">getInfo</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.SecuritizedProduct">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.<a href="../../../../../com/opengamma/strata/product/SecuritizedProduct.html" title="interface in com.opengamma.strata.product">SecuritizedProduct</a></h3>
+<code><a href="../../../../../com/opengamma/strata/product/SecuritizedProduct.html#allCurrencies--">allCurrencies</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.Product">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.<a href="../../../../../com/opengamma/strata/product/Product.html" title="interface in com.opengamma.strata.product">Product</a></h3>
+<code><a href="../../../../../com/opengamma/strata/product/Product.html#allPaymentCurrencies--">allPaymentCurrencies</a>, <a href="../../../../../com/opengamma/strata/product/Product.html#isCrossCurrency--">isCrossCurrency</a></code></li>
 </ul>
 </li>
 </ul>
@@ -290,7 +310,7 @@ extends <a href="../../../../../com/opengamma/strata/product/Security.html" titl
 <ul class="blockList">
 <li class="blockList">
 <h4>getExpiry</h4>
-<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html?is-external=true" title="class or interface in java.time">YearMonth</a>&nbsp;getExpiry()</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html?is-external=true" title="class or interface in java.time">YearMonth</a>&nbsp;getExpiry()</pre>
 <div class="block">Gets the year-month of the expiry.
  <p>
  Expiry will occur on a date implied by the variant of the ETD.</div>
@@ -303,7 +323,7 @@ extends <a href="../../../../../com/opengamma/strata/product/Security.html" titl
 <a name="getVariant--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getVariant</h4>
 <pre><a href="../../../../../com/opengamma/strata/product/etd/EtdVariant.html" title="class in com.opengamma.strata.product.etd">EtdVariant</a>&nbsp;getVariant()</pre>
@@ -316,6 +336,25 @@ extends <a href="../../../../../com/opengamma/strata/product/Security.html" titl
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the variant</dd>
+</dl>
+</li>
+</ul>
+<a name="withInfo-com.opengamma.strata.product.SecurityInfo-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>withInfo</h4>
+<pre><a href="../../../../../com/opengamma/strata/product/etd/EtdSecurity.html" title="interface in com.opengamma.strata.product.etd">EtdSecurity</a>&nbsp;withInfo(<a href="../../../../../com/opengamma/strata/product/SecurityInfo.html" title="class in com.opengamma.strata.product">SecurityInfo</a>&nbsp;info)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/product/Security.html#withInfo-com.opengamma.strata.product.SecurityInfo-">Security</a></code></span></div>
+<div class="block">Returns an instance with the specified info.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/product/Security.html#withInfo-com.opengamma.strata.product.SecurityInfo-">withInfo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/product/Security.html" title="interface in com.opengamma.strata.product">Security</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>info</code> - the new info</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the instance with the specified info</dd>
 </dl>
 </li>
 </ul>

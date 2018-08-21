@@ -119,10 +119,27 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CurveCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/curve/CurveCalibrator.html#calibrate-com.opengamma.strata.market.curve.CurveGroupDefinition-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">calibrate</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&nbsp;curveGroupDefn,
+<td class="colLast"><span class="typeNameLabel">RatesCurveCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/curve/RatesCurveCalibrator.html#calibrate-java.util.List-com.opengamma.strata.pricer.rate.ImmutableRatesProvider-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">calibrate</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/RatesCurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">RatesCurveGroupDefinition</a>&gt;&nbsp;allGroupsDefn,
+         <a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>&nbsp;knownData,
+         <a href="../../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+         <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calibrates a list of curve groups, each containing one or more curves.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a></code></td>
+<td class="colLast"><span class="typeNameLabel">RatesCurveCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/curve/RatesCurveCalibrator.html#calibrate-com.opengamma.strata.market.curve.RatesCurveGroupDefinition-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">calibrate</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/RatesCurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">RatesCurveGroupDefinition</a>&nbsp;curveGroupDefn,
          <a href="../../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
          <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Calibrates a single curve group, containing one or more curves.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SyntheticRatesCurveCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/curve/SyntheticRatesCurveCalibrator.html#calibrate-com.opengamma.strata.market.curve.RatesCurveGroupDefinition-com.opengamma.strata.pricer.rate.RatesProvider-com.opengamma.strata.basics.ReferenceData-">calibrate</a></span>(<a href="../../../../../../com/opengamma/strata/market/curve/RatesCurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">RatesCurveGroupDefinition</a>&nbsp;group,
+         <a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;inputProvider,
+         <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calibrates synthetic curves from the configuration of the new curves and an existing rates provider.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -134,23 +151,23 @@
 <tr class="altColor">
 <td class="colFirst"><code>default <a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a></code></td>
 <td class="colLast"><span class="typeNameLabel">RatesProviderGenerator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/curve/RatesProviderGenerator.html#generate-com.opengamma.strata.collect.array.DoubleArray-java.util.Map-">generate</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;parameters,
-        <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>,<a href="../../../../../../com/opengamma/strata/market/curve/JacobianCalibrationMatrix.html" title="class in com.opengamma.strata.market.curve">JacobianCalibrationMatrix</a>&gt;&nbsp;jacobians)</code>
+        <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>,<a href="../../../../../../com/opengamma/strata/market/curve/JacobianCalibrationMatrix.html" title="class in com.opengamma.strata.market.curve">JacobianCalibrationMatrix</a>&gt;&nbsp;jacobians)</code>
 <div class="block">Generates a rates provider from a set of parameters and calibration information.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a></code></td>
 <td class="colLast"><span class="typeNameLabel">RatesProviderGenerator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/curve/RatesProviderGenerator.html#generate-com.opengamma.strata.collect.array.DoubleArray-java.util.Map-java.util.Map-">generate</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;parameters,
-        <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>,<a href="../../../../../../com/opengamma/strata/market/curve/JacobianCalibrationMatrix.html" title="class in com.opengamma.strata.market.curve">JacobianCalibrationMatrix</a>&gt;&nbsp;jacobians,
-        <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&nbsp;sensitivitiesMarketQuote)</code>
+        <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>,<a href="../../../../../../com/opengamma/strata/market/curve/JacobianCalibrationMatrix.html" title="class in com.opengamma.strata.market.curve">JacobianCalibrationMatrix</a>&gt;&nbsp;jacobians,
+        <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&nbsp;sensitivitiesMarketQuote)</code>
 <div class="block">Generates a rates provider from a set of parameters and calibration information.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ImmutableRatesProviderGenerator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/curve/ImmutableRatesProviderGenerator.html#generate-com.opengamma.strata.collect.array.DoubleArray-java.util.Map-java.util.Map-">generate</a></span>(<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&nbsp;parameters,
-        <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>,<a href="../../../../../../com/opengamma/strata/market/curve/JacobianCalibrationMatrix.html" title="class in com.opengamma.strata.market.curve">JacobianCalibrationMatrix</a>&gt;&nbsp;jacobians,
-        <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&nbsp;sensitivitiesMarketQuote)</code>&nbsp;</td>
+        <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>,<a href="../../../../../../com/opengamma/strata/market/curve/JacobianCalibrationMatrix.html" title="class in com.opengamma.strata.market.curve">JacobianCalibrationMatrix</a>&gt;&nbsp;jacobians,
+        <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>,<a href="../../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a>&gt;&nbsp;sensitivitiesMarketQuote)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -162,9 +179,18 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a></code></td>
+<td class="colLast"><span class="typeNameLabel">RatesCurveCalibrator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/curve/RatesCurveCalibrator.html#calibrate-java.util.List-com.opengamma.strata.pricer.rate.ImmutableRatesProvider-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">calibrate</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../com/opengamma/strata/market/curve/RatesCurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">RatesCurveGroupDefinition</a>&gt;&nbsp;allGroupsDefn,
+         <a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>&nbsp;knownData,
+         <a href="../../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+         <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Calibrates a list of curve groups, each containing one or more curves.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/pricer/curve/ImmutableRatesProviderGenerator.html" title="class in com.opengamma.strata.pricer.curve">ImmutableRatesProviderGenerator</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableRatesProviderGenerator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/curve/ImmutableRatesProviderGenerator.html#of-com.opengamma.strata.pricer.rate.ImmutableRatesProvider-com.opengamma.strata.market.curve.CurveGroupDefinition-com.opengamma.strata.basics.ReferenceData-">of</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>&nbsp;knownProvider,
-  <a href="../../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&nbsp;groupDefn,
+<td class="colLast"><span class="typeNameLabel">ImmutableRatesProviderGenerator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/curve/ImmutableRatesProviderGenerator.html#of-com.opengamma.strata.pricer.rate.ImmutableRatesProvider-com.opengamma.strata.market.curve.RatesCurveGroupDefinition-com.opengamma.strata.basics.ReferenceData-">of</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>&nbsp;knownProvider,
+  <a href="../../../../../../com/opengamma/strata/market/curve/RatesCurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">RatesCurveGroupDefinition</a>&nbsp;groupDefn,
   <a href="../../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Obtains a generator from an existing provider and definition.</div>
 </td>
@@ -205,13 +231,13 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a></code></td>
-<td class="colLast"><span class="typeNameLabel">RatesProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#toImmutableRatesProvider--">toImmutableRatesProvider</a></span>()</code>
-<div class="block">Converts this provider to an equivalent <code>ImmutableRatesProvider</code>.</div>
-</td>
+<td class="colLast"><span class="typeNameLabel">ImmutableRatesProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html#toImmutableRatesProvider--">toImmutableRatesProvider</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableRatesProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html#toImmutableRatesProvider--">toImmutableRatesProvider</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">RatesProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html#toImmutableRatesProvider--">toImmutableRatesProvider</a></span>()</code>
+<div class="block">Converts this provider to an equivalent <code>ImmutableRatesProvider</code>.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -223,7 +249,7 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>&gt;</code></td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">ImmutableRatesProvider.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.Meta.html#beanType--">beanType</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -270,21 +296,21 @@
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CrossGammaParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CrossGammaParameterSensitivities</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CurveGammaCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/sensitivity/CurveGammaCalculator.html#calculateCrossGammaCrossCurve-com.opengamma.strata.pricer.rate.RatesProvider-java.util.function.Function-">calculateCrossGammaCrossCurve</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                             <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>,<a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;&nbsp;sensitivitiesFn)</code>
+                             <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>,<a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;&nbsp;sensitivitiesFn)</code>
 <div class="block">Computes cross-curve gamma by applying finite difference method to curve delta.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CrossGammaParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CrossGammaParameterSensitivities</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CurveGammaCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/sensitivity/CurveGammaCalculator.html#calculateCrossGammaIntraCurve-com.opengamma.strata.pricer.rate.RatesProvider-java.util.function.Function-">calculateCrossGammaIntraCurve</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                             <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>,<a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;&nbsp;sensitivitiesFn)</code>
+                             <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>,<a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;&nbsp;sensitivitiesFn)</code>
 <div class="block">Computes intra-curve cross gamma by applying finite difference method to curve delta.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
 <td class="colLast"><span class="typeNameLabel">RatesFiniteDifferenceSensitivityCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/sensitivity/RatesFiniteDifferenceSensitivityCalculator.html#sensitivity-com.opengamma.strata.pricer.rate.RatesProvider-java.util.function.Function-">sensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider,
-           <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>,<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&gt;&nbsp;valueFn)</code>
+           <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>,<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&gt;&nbsp;valueFn)</code>
 <div class="block">Computes the first order sensitivities of a function of a RatesProvider to a double by finite difference.</div>
 </td>
 </tr>

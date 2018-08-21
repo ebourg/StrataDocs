@@ -102,12 +102,12 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Superinterfaces:</dt>
-<dd><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a></dd>
+<dd><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public interface <span class="typeNameLabel">CalculationTaskRunner</span>
-extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a></pre>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a></pre>
 <div class="block">Component that provides the ability to run calculation tasks.
  <p>
  This interface is the lower-level counterpart to <a href="../../../../../com/opengamma/strata/calc/CalculationRunner.html" title="interface in com.opengamma.strata.calc"><code>CalculationRunner</code></a>.
@@ -118,8 +118,8 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseabl
  and a column for each measure. The targets and columns that define the grid of results
  are passed in using an instance of <code>CalculationTasks</code>.
  <p>
- The <code>CalculationTasks</code> instance is obtained using a
- <a href="../../../../../com/opengamma/strata/calc/runner/CalculationTasks.html#of-com.opengamma.strata.calc.CalculationRules-java.util.List-java.util.List-">static factory method</a>.
+ The <code>CalculationTasks</code> instance is obtained using 
+ <a href="../../../../../com/opengamma/strata/calc/runner/CalculationTasks.html#of-com.opengamma.strata.calc.CalculationRules-java.util.List-java.util.List-com.opengamma.strata.basics.ReferenceData-">static factory method</a>.
  It consists of a list of <code>CalculationTask</code> instances, where each task instance
  corresponds to a single cell in the grid of results. When the <code>CalculationTasks</code>
  instance is created for a set of trades and measures some one-off initialization is performed.
@@ -201,7 +201,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseabl
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/calc/runner/CalculationTaskRunner.html" title="interface in com.opengamma.strata.calc.runner">CalculationTaskRunner</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/CalculationTaskRunner.html#of-java.util.concurrent.ExecutorService-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a>&nbsp;executor)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/calc/runner/CalculationTaskRunner.html#of-java.util.concurrent.ExecutorService-">of</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a>&nbsp;executor)</code>
 <div class="block">Creates a calculation task runner capable of performing calculations, specifying the executor.</div>
 </td>
 </tr>
@@ -254,7 +254,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseabl
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/opengamma/strata/calc/runner/CalculationTaskRunner.html" title="interface in com.opengamma.strata.calc.runner">CalculationTaskRunner</a>&nbsp;of(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a>&nbsp;executor)</pre>
+<pre>static&nbsp;<a href="../../../../../com/opengamma/strata/calc/runner/CalculationTaskRunner.html" title="interface in com.opengamma.strata.calc.runner">CalculationTaskRunner</a>&nbsp;of(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a>&nbsp;executor)</pre>
 <div class="block">Creates a calculation task runner capable of performing calculations, specifying the executor.
  <p>
  It is the callers responsibility to manage the life-cycle of the executor.</div>
@@ -381,11 +381,11 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseabl
 <pre>void&nbsp;close()</pre>
 <div class="block">Closes any resources held by the component.
  <p>
- If the component holds an <a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent"><code>ExecutorService</code></a>, this method will typically
- call <a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html?is-external=true#shutdown--" title="class or interface in java.util.concurrent"><code>ExecutorService.shutdown()</code></a>.</div>
+ If the component holds an <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent"><code>ExecutorService</code></a>, this method will typically
+ call <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html?is-external=true#shutdown--" title="class or interface in java.util.concurrent"><code>ExecutorService.shutdown()</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html?is-external=true#close--" title="class or interface in java.lang">close</a></code>&nbsp;in interface&nbsp;<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html?is-external=true#close--" title="class or interface in java.lang">close</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a></code></dd>
 </dl>
 </li>
 </ul>

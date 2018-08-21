@@ -98,7 +98,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
 <li>com.opengamma.strata.loader.csv.TradeCsvLoader</li>
@@ -111,7 +111,7 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">TradeCsvLoader</span>
-extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Loads trades from CSV files.
  <p>
  The trades are expected to be in a CSV format known to Strata.
@@ -132,12 +132,12 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
    identifier is unique within, such as 'OG-Counterparty'
  <li>The 'Counterparty' column is optional, and is the identifier of the trade's counterparty,
    such as 'Bank-A'
- <li>The 'Trade Date' column is optional, and is the date that the trade occurred,
-   such as '2017-08-01'
+ <li>The 'Trade Date' column is optional, and is the date that the trade occurred, such as '2017-08-01'
  <li>The 'Trade Time' column is optional, and is the time of day that the trade occurred,
    such as '11:30'
  <li>The 'Trade Zone' column is optional, and is the time-zone that the trade occurred,
    such as 'Europe/London'
+ <li>The 'Settlement Date' column is optional, and is the date that the trade settles, such as '2017-08-01'
  </ul>
  
  <h4>Fra</h4>
@@ -221,15 +221,28 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
  <p>
  The following columns are supported for 'FX Singles' (FX Spots and FX Forwards) trades:
  <ul>
+ <li>'Buy Sell' - optional, if not present notional must be signed
+ <li>'Currency' - mandatory
+ <li>'Notional' - mandatory
+ <li>'FX Rate' - mandatory
+ <li>'Payment Date - mandatory'
+ <li>'Payment Date Convention' - optional field. See <a href="../../../../../com/opengamma/strata/basics/date/BusinessDayConventions.html" title="class in com.opengamma.strata.basics.date"><code>BusinessDayConventions</code></a> for possible values.
+ <li>'Payment Date Calendar' - optional field. See <a href="../../../../../com/opengamma/strata/basics/date/HolidayCalendarIds.html" title="class in com.opengamma.strata.basics.date"><code>HolidayCalendarIds</code></a> for possible values.
+ </ul>
+ 
+ <h4>FX Swaps</h4>
+ <p>
+ The following columns are supported for 'FxSwap' trades:
+ <ul>
+ <li>'Buy Sell' - optional, if not present notional must be signed
+ <li>'Currency' - mandatory
+ <li>'Notional' - mandatory
+ <li>'FX Rate' - mandatory
  <li>Payment Date - mandatory
- <li>Payment Date Convention - optional field. See <a href="../../../../../com/opengamma/strata/basics/date/BusinessDayConventions.html" title="class in com.opengamma.strata.basics.date"><code>BusinessDayConventions</code></a> for possible values.
- <li>Payment Date Calendar - optional field. See <a href="../../../../../com/opengamma/strata/basics/date/HolidayCalendarIds.html" title="class in com.opengamma.strata.basics.date"><code>HolidayCalendarIds</code></a> for possible values.
- <li>Leg 1 Direction - mandatory, see <a href="../../../../../com/opengamma/strata/product/common/PayReceive.html" title="enum in com.opengamma.strata.product.common"><code>PayReceive</code></a>
- <li>Leg 1 Currency - mandatory
- <li>Leg 1 Notional - mandatory
- <li>Leg 2 Direction - mandatory, see <a href="../../../../../com/opengamma/strata/product/common/PayReceive.html" title="enum in com.opengamma.strata.product.common"><code>PayReceive</code></a>
- <li>Leg 2 Currency - mandatory
- <li>Leg 2 Notional - mandatory
+ <li>'Far FX Rate' - mandatory
+ <li>'Far Payment Date' - mandatory
+ <li>'Payment Date Convention' - optional field. See <a href="../../../../../com/opengamma/strata/basics/date/BusinessDayConventions.html" title="class in com.opengamma.strata.basics.date"><code>BusinessDayConventions</code></a> for possible values.
+ <li>'Payment Date Calendar' - optional field. See <a href="../../../../../com/opengamma/strata/basics/date/HolidayCalendarIds.html" title="class in com.opengamma.strata.basics.date"><code>HolidayCalendarIds</code></a> for possible values.
  </ul>
  
  <h4>Security</h4>
@@ -271,13 +284,13 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#load-java.util.Collection-">load</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&gt;&nbsp;resources)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#load-java.util.Collection-">load</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&gt;&nbsp;resources)</code>
 <div class="block">Loads one or more CSV format trade files.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;</code></td>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#load-com.opengamma.strata.collect.io.ResourceLocator...-">load</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>...&nbsp;resources)</code>
 <div class="block">Loads one or more CSV format trade files.</div>
 </td>
@@ -295,22 +308,22 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#parse-java.util.Collection-">parse</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#parse-java.util.Collection-">parse</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources)</code>
 <div class="block">Parses one or more CSV format trade files.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code>&lt;T extends <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;<br><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#parse-java.util.Collection-java.lang.Class-">parse</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources,
-     <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;tradeType)</code>
+<td class="colFirst"><code>&lt;T extends <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;<br><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#parse-java.util.Collection-java.lang.Class-">parse</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources,
+     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;tradeType)</code>
 <div class="block">Parses one or more CSV format trade files with a quiet type filter.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#parse-java.util.Collection-java.util.List-">parse</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources,
-     <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;&nbsp;tradeTypes)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#parse-java.util.Collection-java.util.List-">parse</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources,
+     <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;&nbsp;tradeTypes)</code>
 <div class="block">Parses one or more CSV format trade files with an error-creating type filter.</div>
 </td>
 </tr>
@@ -325,8 +338,8 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 </li>
 </ul>
@@ -394,7 +407,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>load</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;&nbsp;load(<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>...&nbsp;resources)</pre>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;&nbsp;load(<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>...&nbsp;resources)</pre>
 <div class="block">Loads one or more CSV format trade files.
  <p>
  CSV files sometimes contain a Unicode Byte Order Mark.
@@ -413,7 +426,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>load</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;&nbsp;load(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&gt;&nbsp;resources)</pre>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;&nbsp;load(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&gt;&nbsp;resources)</pre>
 <div class="block">Loads one or more CSV format trade files.
  <p>
  CSV files sometimes contain a Unicode Byte Order Mark.
@@ -451,7 +464,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>parse</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;&nbsp;parse(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources)</pre>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;&nbsp;parse(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources)</pre>
 <div class="block">Parses one or more CSV format trade files.
  <p>
  CSV files sometimes contain a Unicode Byte Order Mark.
@@ -470,8 +483,8 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>parse</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;&nbsp;parse(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources,
-                                            <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;&nbsp;tradeTypes)</pre>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;&nbsp;parse(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources,
+                                            <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;&nbsp;tradeTypes)</pre>
 <div class="block">Parses one or more CSV format trade files with an error-creating type filter.
  <p>
  A list of types is specified to filter the trades.
@@ -494,8 +507,8 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>parse</h4>
-<pre>public&nbsp;&lt;T extends <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;&gt;&nbsp;parse(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources,
-                                                          <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;tradeType)</pre>
+<pre>public&nbsp;&lt;T extends <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;&gt;&nbsp;parse(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources,
+                                                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;tradeType)</pre>
 <div class="block">Parses one or more CSV format trade files with a quiet type filter.
  <p>
  A type is specified to filter the trades.

@@ -96,9 +96,27 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.product.bond">com.opengamma.strata.product.bond</a></td>
+<td class="colLast">
+<div class="block">Entity objects describing bonds.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#com.opengamma.strata.product.dsf">com.opengamma.strata.product.dsf</a></td>
+<td class="colLast">
+<div class="block">Entity objects describing Deliverable Swap Futures (DSFs).</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.etd">com.opengamma.strata.product.etd</a></td>
 <td class="colLast">
 <div class="block">Entity objects describing Exchange Traded Derivatives (ETDs).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#com.opengamma.strata.product.index">com.opengamma.strata.product.index</a></td>
+<td class="colLast">
+<div class="block">Entity objects describing contracts based on rate indices.</div>
 </td>
 </tr>
 </tbody>
@@ -179,14 +197,14 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Position.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/Position.html#getInfo--">getInfo</a></span>()</code>
-<div class="block">Gets the standard position information.</div>
+<td class="colLast"><span class="typeNameLabel">GenericSecurityPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/GenericSecurityPosition.html#getInfo--">getInfo</a></span>()</code>
+<div class="block">Gets the additional position information, defaulted to an empty instance.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></code></td>
-<td class="colLast"><span class="typeNameLabel">GenericSecurityPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/GenericSecurityPosition.html#getInfo--">getInfo</a></span>()</code>
-<div class="block">Gets the additional position information, defaulted to an empty instance.</div>
+<td class="colLast"><span class="typeNameLabel">Position.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/Position.html#getInfo--">getInfo</a></span>()</code>
+<div class="block">Gets the standard position information.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -197,10 +215,8 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>&lt;T&gt;&nbsp;<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></code></td>
-<td class="colLast"><span class="typeNameLabel">PositionInfo.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/PositionInfo.html#withAttribute-com.opengamma.strata.product.PositionAttributeType-T-">withAttribute</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionAttributeType.html" title="class in com.opengamma.strata.product">PositionAttributeType</a>&lt;T&gt;&nbsp;type,
-             T&nbsp;value)</code>
-<div class="block">Returns a copy of this instance with attribute added.</div>
-</td>
+<td class="colLast"><span class="typeNameLabel">PositionInfo.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/PositionInfo.html#withAttribute-com.opengamma.strata.product.AttributeType-T-">withAttribute</a></span>(<a href="../../../../../com/opengamma/strata/product/AttributeType.html" title="class in com.opengamma.strata.product">AttributeType</a>&lt;T&gt;&nbsp;type,
+             T&nbsp;value)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -212,7 +228,7 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&gt;</code></td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">PositionInfo.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/PositionInfo.Meta.html#beanType--">beanType</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -240,6 +256,36 @@
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/GenericSecurityPosition.html" title="class in com.opengamma.strata.product">GenericSecurityPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">GenericSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/GenericSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;longQuantity,
+              double&nbsp;shortQuantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Security.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/Security.html#createPosition-com.opengamma.strata.product.PositionInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;longQuantity,
+              double&nbsp;shortQuantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Creates a position based on this security from a long and short quantity.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/GenericSecurityPosition.html" title="class in com.opengamma.strata.product">GenericSecurityPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">GenericSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/GenericSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;tradeInfo,
+              double&nbsp;quantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Security.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/Security.html#createPosition-com.opengamma.strata.product.PositionInfo-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;quantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
+<div class="block">Creates a position based on this security from a net quantity.</div>
+</td>
+</tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityPosition.Builder.html" title="class in com.opengamma.strata.product">SecurityPosition.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SecurityPosition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecurityPosition.Builder.html#info-com.opengamma.strata.product.PositionInfo-">info</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
@@ -286,6 +332,408 @@
 <div class="block">Obtains an instance from position information, security identifier and net quantity.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityPosition.html" title="class in com.opengamma.strata.product">SecurityPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SecurityPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecurityPosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/GenericSecurityPosition.html" title="class in com.opengamma.strata.product">GenericSecurityPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">GenericSecurityPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/GenericSecurityPosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecuritizedProductPosition.html" title="interface in com.opengamma.strata.product">SecuritizedProductPosition</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecuritizedProductPosition.html" title="type parameter in SecuritizedProductPosition">P</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SecuritizedProductPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecuritizedProductPosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<div class="block">Returns an instance with the specified info.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Position.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/Position.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<div class="block">Returns an instance with the specified info.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/ResolvableSecurityPosition.html" title="interface in com.opengamma.strata.product">ResolvableSecurityPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvableSecurityPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/ResolvableSecurityPosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<div class="block">Returns an instance with the specified info.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.product.bond">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a> in <a href="../../../../../com/opengamma/strata/product/bond/package-summary.html">com.opengamma.strata.product.bond</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../com/opengamma/strata/product/bond/package-summary.html">com.opengamma.strata.product.bond</a> that return <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CapitalIndexedBondPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondPosition.html#getInfo--">getInfo</a></span>()</code>
+<div class="block">Gets the additional position information, defaulted to an empty instance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFutureOptionPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionPosition.html#getInfo--">getInfo</a></span>()</code>
+<div class="block">Gets the additional position information, defaulted to an empty instance.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFuturePosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFuturePosition.html#getInfo--">getInfo</a></span>()</code>
+<div class="block">Gets the additional position information, defaulted to an empty instance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BillPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BillPosition.html#getInfo--">getInfo</a></span>()</code>
+<div class="block">Gets the additional position information, defaulted to an empty instance.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FixedCouponBondPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondPosition.html#getInfo--">getInfo</a></span>()</code>
+<div class="block">Gets the additional position information, defaulted to an empty instance.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../com/opengamma/strata/product/bond/package-summary.html">com.opengamma.strata.product.bond</a> that return types with arguments of type <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">CapitalIndexedBondPosition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondPosition.Meta.html#info--">info</a></span>()</code>
+<div class="block">The meta-property for the <code>info</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">BondFutureOptionPosition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionPosition.Meta.html#info--">info</a></span>()</code>
+<div class="block">The meta-property for the <code>info</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">BondFuturePosition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFuturePosition.Meta.html#info--">info</a></span>()</code>
+<div class="block">The meta-property for the <code>info</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">BillPosition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BillPosition.Meta.html#info--">info</a></span>()</code>
+<div class="block">The meta-property for the <code>info</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">FixedCouponBondPosition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondPosition.Meta.html#info--">info</a></span>()</code>
+<div class="block">The meta-property for the <code>info</code> property.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../com/opengamma/strata/product/bond/package-summary.html">com.opengamma.strata.product.bond</a> with parameters of type <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondPosition.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBondPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CapitalIndexedBondSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;longQuantity,
+              double&nbsp;shortQuantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondPosition.html" title="class in com.opengamma.strata.product.bond">FixedCouponBondPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FixedCouponBondSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;longQuantity,
+              double&nbsp;shortQuantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/BondFuturePosition.html" title="class in com.opengamma.strata.product.bond">BondFuturePosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFutureSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;longQuantity,
+              double&nbsp;shortQuantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/BillPosition.html" title="class in com.opengamma.strata.product.bond">BillPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BillSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BillSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;longQuantity,
+              double&nbsp;shortQuantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionPosition.html" title="class in com.opengamma.strata.product.bond">BondFutureOptionPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFutureOptionSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;longQuantity,
+              double&nbsp;shortQuantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondPosition.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBondPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CapitalIndexedBondSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;quantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondPosition.html" title="class in com.opengamma.strata.product.bond">FixedCouponBondPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FixedCouponBondSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;quantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/BondFuturePosition.html" title="class in com.opengamma.strata.product.bond">BondFuturePosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFutureSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;quantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/BillPosition.html" title="class in com.opengamma.strata.product.bond">BillPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BillSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BillSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;quantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionPosition.html" title="class in com.opengamma.strata.product.bond">BondFutureOptionPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFutureOptionSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;quantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondPosition.Builder.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBondPosition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CapitalIndexedBondPosition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondPosition.Builder.html#info-com.opengamma.strata.product.PositionInfo-">info</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<div class="block">Sets the additional position information, defaulted to an empty instance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionPosition.Builder.html" title="class in com.opengamma.strata.product.bond">BondFutureOptionPosition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFutureOptionPosition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionPosition.Builder.html#info-com.opengamma.strata.product.PositionInfo-">info</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<div class="block">Sets the additional position information, defaulted to an empty instance.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/BondFuturePosition.Builder.html" title="class in com.opengamma.strata.product.bond">BondFuturePosition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFuturePosition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFuturePosition.Builder.html#info-com.opengamma.strata.product.PositionInfo-">info</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<div class="block">Sets the additional position information, defaulted to an empty instance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/BillPosition.Builder.html" title="class in com.opengamma.strata.product.bond">BillPosition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BillPosition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BillPosition.Builder.html#info-com.opengamma.strata.product.PositionInfo-">info</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<div class="block">Sets the additional position information, defaulted to an empty instance.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondPosition.Builder.html" title="class in com.opengamma.strata.product.bond">FixedCouponBondPosition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FixedCouponBondPosition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondPosition.Builder.html#info-com.opengamma.strata.product.PositionInfo-">info</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<div class="block">Sets the additional position information, defaulted to an empty instance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/bond/BillPosition.html" title="class in com.opengamma.strata.product.bond">BillPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BillPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BillPosition.html#ofLongShort-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.bond.Bill-double-double-">ofLongShort</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+           <a href="../../../../../com/opengamma/strata/product/bond/Bill.html" title="class in com.opengamma.strata.product.bond">Bill</a>&nbsp;product,
+           double&nbsp;longQuantity,
+           double&nbsp;shortQuantity)</code>
+<div class="block">Obtains an instance from position information, product, long quantity and short quantity.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/bond/BondFuturePosition.html" title="class in com.opengamma.strata.product.bond">BondFuturePosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFuturePosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFuturePosition.html#ofLongShort-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.bond.BondFuture-double-double-">ofLongShort</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+           <a href="../../../../../com/opengamma/strata/product/bond/BondFuture.html" title="class in com.opengamma.strata.product.bond">BondFuture</a>&nbsp;product,
+           double&nbsp;longQuantity,
+           double&nbsp;shortQuantity)</code>
+<div class="block">Obtains an instance from position information, product, long quantity and short quantity.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionPosition.html" title="class in com.opengamma.strata.product.bond">BondFutureOptionPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFutureOptionPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionPosition.html#ofLongShort-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.bond.BondFutureOption-double-double-">ofLongShort</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+           <a href="../../../../../com/opengamma/strata/product/bond/BondFutureOption.html" title="class in com.opengamma.strata.product.bond">BondFutureOption</a>&nbsp;product,
+           double&nbsp;longQuantity,
+           double&nbsp;shortQuantity)</code>
+<div class="block">Obtains an instance from position information, product, long quantity and short quantity.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondPosition.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBondPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CapitalIndexedBondPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondPosition.html#ofLongShort-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.bond.CapitalIndexedBond-double-double-">ofLongShort</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+           <a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBond.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBond</a>&nbsp;product,
+           double&nbsp;longQuantity,
+           double&nbsp;shortQuantity)</code>
+<div class="block">Obtains an instance from position information, product, long quantity and short quantity.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondPosition.html" title="class in com.opengamma.strata.product.bond">FixedCouponBondPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FixedCouponBondPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondPosition.html#ofLongShort-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.bond.FixedCouponBond-double-double-">ofLongShort</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+           <a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBond.html" title="class in com.opengamma.strata.product.bond">FixedCouponBond</a>&nbsp;product,
+           double&nbsp;longQuantity,
+           double&nbsp;shortQuantity)</code>
+<div class="block">Obtains an instance from position information, product, long quantity and short quantity.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/bond/BillPosition.html" title="class in com.opengamma.strata.product.bond">BillPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BillPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BillPosition.html#ofNet-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.bond.Bill-double-">ofNet</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+     <a href="../../../../../com/opengamma/strata/product/bond/Bill.html" title="class in com.opengamma.strata.product.bond">Bill</a>&nbsp;product,
+     double&nbsp;netQuantity)</code>
+<div class="block">Obtains an instance from position information, product and net quantity.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/bond/BondFuturePosition.html" title="class in com.opengamma.strata.product.bond">BondFuturePosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFuturePosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFuturePosition.html#ofNet-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.bond.BondFuture-double-">ofNet</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+     <a href="../../../../../com/opengamma/strata/product/bond/BondFuture.html" title="class in com.opengamma.strata.product.bond">BondFuture</a>&nbsp;product,
+     double&nbsp;netQuantity)</code>
+<div class="block">Obtains an instance from position information, product and net quantity.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionPosition.html" title="class in com.opengamma.strata.product.bond">BondFutureOptionPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFutureOptionPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionPosition.html#ofNet-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.bond.BondFutureOption-double-">ofNet</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+     <a href="../../../../../com/opengamma/strata/product/bond/BondFutureOption.html" title="class in com.opengamma.strata.product.bond">BondFutureOption</a>&nbsp;product,
+     double&nbsp;netQuantity)</code>
+<div class="block">Obtains an instance from position information, product and net quantity.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondPosition.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBondPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CapitalIndexedBondPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondPosition.html#ofNet-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.bond.CapitalIndexedBond-double-">ofNet</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+     <a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBond.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBond</a>&nbsp;product,
+     double&nbsp;netQuantity)</code>
+<div class="block">Obtains an instance from position information, product and net quantity.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondPosition.html" title="class in com.opengamma.strata.product.bond">FixedCouponBondPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FixedCouponBondPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondPosition.html#ofNet-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.bond.FixedCouponBond-double-">ofNet</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+     <a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBond.html" title="class in com.opengamma.strata.product.bond">FixedCouponBond</a>&nbsp;product,
+     double&nbsp;netQuantity)</code>
+<div class="block">Obtains an instance from position information, product and net quantity.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondPosition.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBondPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CapitalIndexedBondPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondPosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionPosition.html" title="class in com.opengamma.strata.product.bond">BondFutureOptionPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFutureOptionPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionPosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/BondFuturePosition.html" title="class in com.opengamma.strata.product.bond">BondFuturePosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFuturePosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFuturePosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/BillPosition.html" title="class in com.opengamma.strata.product.bond">BillPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BillPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BillPosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondPosition.html" title="class in com.opengamma.strata.product.bond">FixedCouponBondPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FixedCouponBondPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondPosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.product.dsf">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a> in <a href="../../../../../com/opengamma/strata/product/dsf/package-summary.html">com.opengamma.strata.product.dsf</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../com/opengamma/strata/product/dsf/package-summary.html">com.opengamma.strata.product.dsf</a> that return <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DsfPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/DsfPosition.html#getInfo--">getInfo</a></span>()</code>
+<div class="block">Gets the additional position information, defaulted to an empty instance.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../com/opengamma/strata/product/dsf/package-summary.html">com.opengamma.strata.product.dsf</a> that return types with arguments of type <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">DsfPosition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/DsfPosition.Meta.html#info--">info</a></span>()</code>
+<div class="block">The meta-property for the <code>info</code> property.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../com/opengamma/strata/product/dsf/package-summary.html">com.opengamma.strata.product.dsf</a> with parameters of type <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/dsf/DsfPosition.html" title="class in com.opengamma.strata.product.dsf">DsfPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DsfSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/DsfSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;longQuantity,
+              double&nbsp;shortQuantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/dsf/DsfPosition.html" title="class in com.opengamma.strata.product.dsf">DsfPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DsfSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/DsfSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;quantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/dsf/DsfPosition.Builder.html" title="class in com.opengamma.strata.product.dsf">DsfPosition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DsfPosition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/DsfPosition.Builder.html#info-com.opengamma.strata.product.PositionInfo-">info</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<div class="block">Sets the additional position information, defaulted to an empty instance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/dsf/DsfPosition.html" title="class in com.opengamma.strata.product.dsf">DsfPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DsfPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/DsfPosition.html#ofLongShort-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.dsf.Dsf-double-double-">ofLongShort</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+           <a href="../../../../../com/opengamma/strata/product/dsf/Dsf.html" title="class in com.opengamma.strata.product.dsf">Dsf</a>&nbsp;product,
+           double&nbsp;longQuantity,
+           double&nbsp;shortQuantity)</code>
+<div class="block">Obtains an instance from position information, product, long quantity and short quantity.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/dsf/DsfPosition.html" title="class in com.opengamma.strata.product.dsf">DsfPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DsfPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/DsfPosition.html#ofNet-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.dsf.Dsf-double-">ofNet</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+     <a href="../../../../../com/opengamma/strata/product/dsf/Dsf.html" title="class in com.opengamma.strata.product.dsf">Dsf</a>&nbsp;product,
+     double&nbsp;netQuantity)</code>
+<div class="block">Obtains an instance from position information, product and net quantity.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/dsf/DsfPosition.html" title="class in com.opengamma.strata.product.dsf">DsfPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DsfPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/DsfPosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -302,13 +750,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></code></td>
-<td class="colLast"><span class="typeNameLabel">EtdOptionPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdOptionPosition.html#getInfo--">getInfo</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">EtdFuturePosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdFuturePosition.html#getInfo--">getInfo</a></span>()</code>
 <div class="block">Gets the additional position information, defaulted to an empty instance.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></code></td>
-<td class="colLast"><span class="typeNameLabel">EtdFuturePosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdFuturePosition.html#getInfo--">getInfo</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">EtdOptionPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdOptionPosition.html#getInfo--">getInfo</a></span>()</code>
 <div class="block">Gets the additional position information, defaulted to an empty instance.</div>
 </td>
 </tr>
@@ -323,13 +771,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">EtdOptionPosition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdOptionPosition.Meta.html#info--">info</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">EtdFuturePosition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdFuturePosition.Meta.html#info--">info</a></span>()</code>
 <div class="block">The meta-property for the <code>info</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">EtdFuturePosition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdFuturePosition.Meta.html#info--">info</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">EtdOptionPosition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdOptionPosition.Meta.html#info--">info</a></span>()</code>
 <div class="block">The meta-property for the <code>info</code> property.</div>
 </td>
 </tr>
@@ -343,14 +791,40 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/etd/EtdOptionPosition.Builder.html" title="class in com.opengamma.strata.product.etd">EtdOptionPosition.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">EtdOptionPosition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdOptionPosition.Builder.html#info-com.opengamma.strata.product.PositionInfo-">info</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/etd/EtdOptionPosition.html" title="class in com.opengamma.strata.product.etd">EtdOptionPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">EtdOptionSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdOptionSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;longQuantity,
+              double&nbsp;shortQuantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/etd/EtdFuturePosition.html" title="class in com.opengamma.strata.product.etd">EtdFuturePosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">EtdFutureSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdFutureSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;longQuantity,
+              double&nbsp;shortQuantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/etd/EtdOptionPosition.html" title="class in com.opengamma.strata.product.etd">EtdOptionPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">EtdOptionSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdOptionSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;quantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/etd/EtdFuturePosition.html" title="class in com.opengamma.strata.product.etd">EtdFuturePosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">EtdFutureSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdFutureSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;quantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/etd/EtdFuturePosition.Builder.html" title="class in com.opengamma.strata.product.etd">EtdFuturePosition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">EtdFuturePosition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdFuturePosition.Builder.html#info-com.opengamma.strata.product.PositionInfo-">info</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
 <div class="block">Sets the additional position information, defaulted to an empty instance.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/etd/EtdFuturePosition.Builder.html" title="class in com.opengamma.strata.product.etd">EtdFuturePosition.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">EtdFuturePosition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdFuturePosition.Builder.html#info-com.opengamma.strata.product.PositionInfo-">info</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/etd/EtdOptionPosition.Builder.html" title="class in com.opengamma.strata.product.etd">EtdOptionPosition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">EtdOptionPosition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdOptionPosition.Builder.html#info-com.opengamma.strata.product.PositionInfo-">info</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
 <div class="block">Sets the additional position information, defaulted to an empty instance.</div>
 </td>
 </tr>
@@ -387,6 +861,208 @@
      double&nbsp;netQuantity)</code>
 <div class="block">Obtains an instance from position information, security and net quantity.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/etd/EtdFuturePosition.html" title="class in com.opengamma.strata.product.etd">EtdFuturePosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">EtdFuturePosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdFuturePosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/etd/EtdPosition.html" title="interface in com.opengamma.strata.product.etd">EtdPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">EtdPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdPosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<div class="block">Returns an instance with the specified info.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/etd/EtdOptionPosition.html" title="class in com.opengamma.strata.product.etd">EtdOptionPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">EtdOptionPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdOptionPosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.product.index">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a> in <a href="../../../../../com/opengamma/strata/product/index/package-summary.html">com.opengamma.strata.product.index</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../com/opengamma/strata/product/index/package-summary.html">com.opengamma.strata.product.index</a> that return <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightFuturePosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/OvernightFuturePosition.html#getInfo--">getInfo</a></span>()</code>
+<div class="block">Gets the additional position information, defaulted to an empty instance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFuturePosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFuturePosition.html#getInfo--">getInfo</a></span>()</code>
+<div class="block">Gets the additional position information, defaulted to an empty instance.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureOptionPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOptionPosition.html#getInfo--">getInfo</a></span>()</code>
+<div class="block">Gets the additional position information, defaulted to an empty instance.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../com/opengamma/strata/product/index/package-summary.html">com.opengamma.strata.product.index</a> that return types with arguments of type <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightFuturePosition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/OvernightFuturePosition.Meta.html#info--">info</a></span>()</code>
+<div class="block">The meta-property for the <code>info</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">IborFuturePosition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFuturePosition.Meta.html#info--">info</a></span>()</code>
+<div class="block">The meta-property for the <code>info</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureOptionPosition.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOptionPosition.Meta.html#info--">info</a></span>()</code>
+<div class="block">The meta-property for the <code>info</code> property.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../com/opengamma/strata/product/index/package-summary.html">com.opengamma.strata.product.index</a> with parameters of type <a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFuturePosition.html" title="class in com.opengamma.strata.product.index">IborFuturePosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;longQuantity,
+              double&nbsp;shortQuantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/OvernightFuturePosition.html" title="class in com.opengamma.strata.product.index">OvernightFuturePosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightFutureSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/OvernightFutureSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;longQuantity,
+              double&nbsp;shortQuantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFutureOptionPosition.html" title="class in com.opengamma.strata.product.index">IborFutureOptionPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureOptionSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOptionSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;longQuantity,
+              double&nbsp;shortQuantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFuturePosition.html" title="class in com.opengamma.strata.product.index">IborFuturePosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;quantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/OvernightFuturePosition.html" title="class in com.opengamma.strata.product.index">OvernightFuturePosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightFutureSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/OvernightFutureSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;quantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFutureOptionPosition.html" title="class in com.opengamma.strata.product.index">IborFutureOptionPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureOptionSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOptionSecurity.html#createPosition-com.opengamma.strata.product.PositionInfo-double-com.opengamma.strata.basics.ReferenceData-">createPosition</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+              double&nbsp;quantity,
+              <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/OvernightFuturePosition.Builder.html" title="class in com.opengamma.strata.product.index">OvernightFuturePosition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightFuturePosition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/OvernightFuturePosition.Builder.html#info-com.opengamma.strata.product.PositionInfo-">info</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<div class="block">Sets the additional position information, defaulted to an empty instance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFuturePosition.Builder.html" title="class in com.opengamma.strata.product.index">IborFuturePosition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFuturePosition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFuturePosition.Builder.html#info-com.opengamma.strata.product.PositionInfo-">info</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<div class="block">Sets the additional position information, defaulted to an empty instance.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFutureOptionPosition.Builder.html" title="class in com.opengamma.strata.product.index">IborFutureOptionPosition.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureOptionPosition.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOptionPosition.Builder.html#info-com.opengamma.strata.product.PositionInfo-">info</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<div class="block">Sets the additional position information, defaulted to an empty instance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/index/IborFuturePosition.html" title="class in com.opengamma.strata.product.index">IborFuturePosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFuturePosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFuturePosition.html#ofLongShort-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.index.IborFuture-double-double-">ofLongShort</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+           <a href="../../../../../com/opengamma/strata/product/index/IborFuture.html" title="class in com.opengamma.strata.product.index">IborFuture</a>&nbsp;product,
+           double&nbsp;longQuantity,
+           double&nbsp;shortQuantity)</code>
+<div class="block">Obtains an instance from position information, product, long quantity and short quantity.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/index/IborFutureOptionPosition.html" title="class in com.opengamma.strata.product.index">IborFutureOptionPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureOptionPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOptionPosition.html#ofLongShort-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.index.IborFutureOption-double-double-">ofLongShort</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+           <a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.html" title="class in com.opengamma.strata.product.index">IborFutureOption</a>&nbsp;product,
+           double&nbsp;longQuantity,
+           double&nbsp;shortQuantity)</code>
+<div class="block">Obtains an instance from position information, product, long quantity and short quantity.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/index/OvernightFuturePosition.html" title="class in com.opengamma.strata.product.index">OvernightFuturePosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightFuturePosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/OvernightFuturePosition.html#ofLongShort-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.index.OvernightFuture-double-double-">ofLongShort</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+           <a href="../../../../../com/opengamma/strata/product/index/OvernightFuture.html" title="class in com.opengamma.strata.product.index">OvernightFuture</a>&nbsp;product,
+           double&nbsp;longQuantity,
+           double&nbsp;shortQuantity)</code>
+<div class="block">Obtains an instance from position information, product, long quantity and short quantity.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/index/IborFuturePosition.html" title="class in com.opengamma.strata.product.index">IborFuturePosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFuturePosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFuturePosition.html#ofNet-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.index.IborFuture-double-">ofNet</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+     <a href="../../../../../com/opengamma/strata/product/index/IborFuture.html" title="class in com.opengamma.strata.product.index">IborFuture</a>&nbsp;product,
+     double&nbsp;netQuantity)</code>
+<div class="block">Obtains an instance from position information, product and net quantity.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/index/IborFutureOptionPosition.html" title="class in com.opengamma.strata.product.index">IborFutureOptionPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureOptionPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOptionPosition.html#ofNet-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.index.IborFutureOption-double-">ofNet</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+     <a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.html" title="class in com.opengamma.strata.product.index">IborFutureOption</a>&nbsp;product,
+     double&nbsp;netQuantity)</code>
+<div class="block">Obtains an instance from position information, product and net quantity.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/index/OvernightFuturePosition.html" title="class in com.opengamma.strata.product.index">OvernightFuturePosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightFuturePosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/OvernightFuturePosition.html#ofNet-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.index.OvernightFuture-double-">ofNet</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
+     <a href="../../../../../com/opengamma/strata/product/index/OvernightFuture.html" title="class in com.opengamma.strata.product.index">OvernightFuture</a>&nbsp;product,
+     double&nbsp;netQuantity)</code>
+<div class="block">Obtains an instance from position information, product and net quantity.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/OvernightFuturePosition.html" title="class in com.opengamma.strata.product.index">OvernightFuturePosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightFuturePosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/OvernightFuturePosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFuturePosition.html" title="class in com.opengamma.strata.product.index">IborFuturePosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFuturePosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFuturePosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFutureOptionPosition.html" title="class in com.opengamma.strata.product.index">IborFutureOptionPosition</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureOptionPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOptionPosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":17,"i3":6,"i4":18};
+var methods = {"i0":17,"i1":17,"i2":17,"i3":17,"i4":6,"i5":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -50,7 +50,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/opengamma/strata/basics/value/HalfUpRounding.Meta.html" title="class in com.opengamma.strata.basics.value"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li>Prev&nbsp;Class</li>
 <li><a href="../../../../../com/opengamma/strata/basics/value/ValueAdjustment.html" title="class in com.opengamma.strata.basics.value"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -100,23 +100,19 @@ var activeTableTab = "activeTableTab";
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
-<dl>
-<dt>All Known Implementing Classes:</dt>
-<dd><a href="../../../../../com/opengamma/strata/basics/value/HalfUpRounding.html" title="class in com.opengamma.strata.basics.value">HalfUpRounding</a></dd>
-</dl>
 <hr>
 <br>
 <pre>public interface <span class="typeNameLabel">Rounding</span></pre>
 <div class="block">A convention defining how to round a number.
  <p>
- This defines a standard mechanism for rounding a <code>double</code> or <a href="http://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math"><code>BigDecimal</code></a>.
+ This defines a standard mechanism for rounding a <code>double</code> or <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math"><code>BigDecimal</code></a>.
  Since financial instruments have different and complex conventions, rounding is extensible.
  <p>
  Note that rounding a <code>double</code> is not straightforward as floating point
  numbers are based on a binary representation, not a decimal one.
  For example, the value 0.1 cannot be exactly represented in a <code>double</code>.
  <p>
- The standard implementation is <a href="../../../../../com/opengamma/strata/basics/value/HalfUpRounding.html" title="class in com.opengamma.strata.basics.value"><code>HalfUpRounding</code></a>.
+ The standard implementation is <code>HalfUpRounding</code>.
  Additional implementations may be added by implementing this interface.
  <p>
  All implementations of this interface must be immutable and thread-safe.</div>
@@ -146,24 +142,30 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/value/Rounding.html#of-com.opengamma.strata.basics.currency.Currency-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency)</code>
+<div class="block">Obtains an instance that rounds to the number of minor units in the currency.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/value/Rounding.html#ofDecimalPlaces-int-">ofDecimalPlaces</a></span>(int&nbsp;decimalPlaces)</code>
 <div class="block">Obtains an instance that rounds to the specified number of decimal places.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/value/Rounding.html#ofFractionalDecimalPlaces-int-int-">ofFractionalDecimalPlaces</a></span>(int&nbsp;decimalPlaces,
                          int&nbsp;fraction)</code>
 <div class="block">Obtains an instance from the number of decimal places and fraction.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/value/Rounding.html#round-java.math.BigDecimal-">round</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;value)</code>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/value/Rounding.html#round-java.math.BigDecimal-">round</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;value)</code>
 <div class="block">Rounds the specified value according to the rules of the convention.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>default double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/basics/value/Rounding.html#round-double-">round</a></span>(double&nbsp;value)</code>
 <div class="block">Rounds the specified value according to the rules of the convention.</div>
@@ -198,6 +200,25 @@ var activeTableTab = "activeTableTab";
 </dl>
 </li>
 </ul>
+<a name="of-com.opengamma.strata.basics.currency.Currency-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>of</h4>
+<pre>static&nbsp;<a href="../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency)</pre>
+<div class="block">Obtains an instance that rounds to the number of minor units in the currency.
+ <p>
+ This returns a convention that rounds for the specified currency.
+ Rounding follows the normal <a href="https://docs.oracle.com/javase/8/docs/api/java/math/RoundingMode.html?is-external=true#HALF_UP" title="class or interface in java.math"><code>RoundingMode.HALF_UP</code></a> convention.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>currency</code> - the currency</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the rounding convention</dd>
+</dl>
+</li>
+</ul>
 <a name="ofDecimalPlaces-int-">
 <!--   -->
 </a>
@@ -208,14 +229,14 @@ var activeTableTab = "activeTableTab";
 <div class="block">Obtains an instance that rounds to the specified number of decimal places.
  <p>
  This returns a convention that rounds to the specified number of decimal places.
- Rounding follows the normal <a href="http://docs.oracle.com/javase/8/docs/api/java/math/RoundingMode.html?is-external=true#HALF_UP" title="class or interface in java.math"><code>RoundingMode.HALF_UP</code></a> convention.</div>
+ Rounding follows the normal <a href="https://docs.oracle.com/javase/8/docs/api/java/math/RoundingMode.html?is-external=true#HALF_UP" title="class or interface in java.math"><code>RoundingMode.HALF_UP</code></a> convention.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>decimalPlaces</code> - the number of decimal places to round to, from 0 to 255 inclusive</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the rounding convention</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the decimal places is invalid</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the decimal places is invalid</dd>
 </dl>
 </li>
 </ul>
@@ -230,7 +251,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Obtains an instance from the number of decimal places and fraction.
  <p>
  This returns a convention that rounds to a fraction of the specified number of decimal places.
- Rounding follows the normal <a href="http://docs.oracle.com/javase/8/docs/api/java/math/RoundingMode.html?is-external=true#HALF_UP" title="class or interface in java.math"><code>RoundingMode.HALF_UP</code></a> convention.
+ Rounding follows the normal <a href="https://docs.oracle.com/javase/8/docs/api/java/math/RoundingMode.html?is-external=true#HALF_UP" title="class or interface in java.math"><code>RoundingMode.HALF_UP</code></a> convention.
  <p>
  For example, to round to the nearest 1/32nd of the 4th decimal place, call
  this method with the arguments 4 and 32.</div>
@@ -241,7 +262,7 @@ var activeTableTab = "activeTableTab";
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the rounding convention</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the decimal places or fraction is invalid</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the decimal places or fraction is invalid</dd>
 </dl>
 </li>
 </ul>
@@ -267,7 +288,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockListLast">
 <li class="blockList">
 <h4>round</h4>
-<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;round(<a href="http://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;value)</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;round(<a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;value)</pre>
 <div class="block">Rounds the specified value according to the rules of the convention.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -306,7 +327,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/opengamma/strata/basics/value/HalfUpRounding.Meta.html" title="class in com.opengamma.strata.basics.value"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li>Prev&nbsp;Class</li>
 <li><a href="../../../../../com/opengamma/strata/basics/value/ValueAdjustment.html" title="class in com.opengamma.strata.basics.value"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">

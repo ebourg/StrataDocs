@@ -117,13 +117,13 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">ImmutableLegalEntityDiscountingProvider</a></code></td>
-<td class="colLast"><span class="typeNameLabel">LegalEntityDiscountingProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html#toImmutableLegalEntityDiscountingProvider--">toImmutableLegalEntityDiscountingProvider</a></span>()</code>
-<div class="block">Converts this provider to an equivalent <code>ImmutableLegalEntityDiscountingProvider</code>.</div>
-</td>
+<td class="colLast"><span class="typeNameLabel">ImmutableLegalEntityDiscountingProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.html#toImmutableLegalEntityDiscountingProvider--">toImmutableLegalEntityDiscountingProvider</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">ImmutableLegalEntityDiscountingProvider</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableLegalEntityDiscountingProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.html#toImmutableLegalEntityDiscountingProvider--">toImmutableLegalEntityDiscountingProvider</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">LegalEntityDiscountingProvider.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html#toImmutableLegalEntityDiscountingProvider--">toImmutableLegalEntityDiscountingProvider</a></span>()</code>
+<div class="block">Converts this provider to an equivalent <code>ImmutableLegalEntityDiscountingProvider</code>.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -135,7 +135,7 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">ImmutableLegalEntityDiscountingProvider</a>&gt;</code></td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">ImmutableLegalEntityDiscountingProvider</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">ImmutableLegalEntityDiscountingProvider.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.Meta.html#beanType--">beanType</a></span>()</code>&nbsp;</td>
 </tr>
 </tbody>
@@ -153,9 +153,16 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CrossGammaParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CrossGammaParameterSensitivities</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CurveGammaCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/sensitivity/CurveGammaCalculator.html#calculateCrossGammaIntraCurve-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-java.util.function.Function-">calculateCrossGammaIntraCurve</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                             <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">ImmutableLegalEntityDiscountingProvider</a>,<a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;&nbsp;sensitivitiesFn)</code>
+<div class="block">Computes intra-curve cross gamma for bond curves by applying finite difference method to curve delta.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a></code></td>
 <td class="colLast"><span class="typeNameLabel">RatesFiniteDifferenceSensitivityCalculator.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/sensitivity/RatesFiniteDifferenceSensitivityCalculator.html#sensitivity-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-java.util.function.Function-">sensitivity</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;provider,
-           <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">ImmutableLegalEntityDiscountingProvider</a>,<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&gt;&nbsp;valueFn)</code>
+           <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">ImmutableLegalEntityDiscountingProvider</a>,<a href="../../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&gt;&nbsp;valueFn)</code>
 <div class="block">Computes the first order sensitivities of a function of a LegalEntityDiscountingProvider to a double by finite difference.</div>
 </td>
 </tr>

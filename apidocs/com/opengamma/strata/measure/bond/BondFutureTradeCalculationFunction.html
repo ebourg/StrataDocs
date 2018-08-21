@@ -76,14 +76,14 @@ var activeTableTab = "activeTableTab";
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
@@ -94,14 +94,14 @@ var activeTableTab = "activeTableTab";
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="subTitle">com.opengamma.strata.measure.bond</div>
-<h2 title="Class BondFutureTradeCalculationFunction" class="title">Class BondFutureTradeCalculationFunction</h2>
+<h2 title="Class BondFutureTradeCalculationFunction" class="title">Class BondFutureTradeCalculationFunction&lt;T extends <a href="../../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html" title="interface in com.opengamma.strata.product">SecuritizedProductPortfolioItem</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFuture.html" title="class in com.opengamma.strata.product.bond">BondFuture</a>&gt; &amp; <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" title="interface in com.opengamma.strata.basics">Resolvable</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&gt;&gt;</h2>
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>com.opengamma.strata.measure.bond.BondFutureTradeCalculationFunction</li>
+<li>com.opengamma.strata.measure.bond.BondFutureTradeCalculationFunction&lt;T&gt;</li>
 </ul>
 </li>
 </ul>
@@ -109,15 +109,20 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - the trade or position type</dd>
+</dl>
+<dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&gt;</dd>
+<dd><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;T&gt;</dd>
 </dl>
 <hr>
 <br>
-<pre>public class <span class="typeNameLabel">BondFutureTradeCalculationFunction</span>
-extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
-implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&gt;</pre>
-<div class="block">Perform calculations on a single <code>BondFutureTrade</code> for each of a set of scenarios.
+<pre>public class <span class="typeNameLabel">BondFutureTradeCalculationFunction&lt;T extends <a href="../../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html" title="interface in com.opengamma.strata.product">SecuritizedProductPortfolioItem</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFuture.html" title="class in com.opengamma.strata.product.bond">BondFuture</a>&gt; &amp; <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" title="interface in com.opengamma.strata.basics">Resolvable</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&gt;&gt;</span>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;T&gt;</pre>
+<div class="block">Perform calculations on a single <code>BondFutureTrade</code> or <code>BondFuturePosition</code>
+ for each of a set of scenarios.
  <p>
  This uses the standard discounting calculation method.
  An instance of <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate"><code>RatesMarketDataLookup</code></a> must be specified.
@@ -142,20 +147,28 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
-<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<!-- =========== FIELD SUMMARY =========== -->
 <ul class="blockList">
-<li class="blockList"><a name="constructor.summary">
+<li class="blockList"><a name="field.summary">
 <!--   -->
 </a>
-<h3>Constructor Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
-<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<h3>Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
-<th class="colOne" scope="col">Constructor and Description</th>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html#BondFutureTradeCalculationFunction--">BondFutureTradeCalculationFunction</a></span>()</code>
-<div class="block">Creates an instance.</div>
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="class in com.opengamma.strata.measure.bond">BondFutureTradeCalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFuturePosition.html" title="class in com.opengamma.strata.product.bond">BondFuturePosition</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html#POSITION">POSITION</a></span></code>
+<div class="block">The position instance</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="class in com.opengamma.strata.measure.bond">BondFutureTradeCalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html#TRADE">TRADE</a></span></code>
+<div class="block">The trade instance</div>
 </td>
 </tr>
 </table>
@@ -174,9 +187,9 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>,<a href="../../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result">Result</a>&lt;?&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html#calculate-com.opengamma.strata.product.bond.BondFutureTrade-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.data.scenario.ScenarioMarketData-com.opengamma.strata.basics.ReferenceData-">calculate</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&nbsp;trade,
-         <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;&nbsp;measures,
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>,<a href="../../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result">Result</a>&lt;?&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html#calculate-T-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.data.scenario.ScenarioMarketData-com.opengamma.strata.basics.ReferenceData-">calculate</a></span>(<a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="type parameter in BondFutureTradeCalculationFunction">T</a>&nbsp;target,
+         <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;&nbsp;measures,
          <a href="../../../../../com/opengamma/strata/calc/runner/CalculationParameters.html" title="class in com.opengamma.strata.calc.runner">CalculationParameters</a>&nbsp;parameters,
          <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;scenarioMarketData,
          <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
@@ -184,35 +197,35 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html#identifier-com.opengamma.strata.product.bond.BondFutureTrade-">identifier</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&nbsp;target)</code>
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html#identifier-T-">identifier</a></span>(<a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="type parameter in BondFutureTradeCalculationFunction">T</a>&nbsp;target)</code>
 <div class="block">Returns an identifier that should uniquely identify the specified target.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html#naturalCurrency-com.opengamma.strata.product.bond.BondFutureTrade-com.opengamma.strata.basics.ReferenceData-">naturalCurrency</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&nbsp;trade,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html#naturalCurrency-T-com.opengamma.strata.basics.ReferenceData-">naturalCurrency</a></span>(<a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="type parameter in BondFutureTradeCalculationFunction">T</a>&nbsp;target,
                <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Returns the "natural" currency for the specified target.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/calc/runner/FunctionRequirements.html" title="class in com.opengamma.strata.calc.runner">FunctionRequirements</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html#requirements-com.opengamma.strata.product.bond.BondFutureTrade-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.basics.ReferenceData-">requirements</a></span>(<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&nbsp;trade,
-            <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;&nbsp;measures,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html#requirements-T-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.basics.ReferenceData-">requirements</a></span>(<a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="type parameter in BondFutureTradeCalculationFunction">T</a>&nbsp;target,
+            <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;&nbsp;measures,
             <a href="../../../../../com/opengamma/strata/calc/runner/CalculationParameters.html" title="class in com.opengamma.strata.calc.runner">CalculationParameters</a>&nbsp;parameters,
             <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Determines the market data required by this function to perform its calculations.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;</code></td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html#supportedMeasures--">supportedMeasures</a></span>()</code>
 <div class="block">Returns the set of measures that the function can calculate.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&gt;</code></td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="type parameter in BondFutureTradeCalculationFunction">T</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html#targetType--">targetType</a></span>()</code>
 <div class="block">Gets the target type that this function applies to.</div>
 </td>
@@ -222,8 +235,8 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 </li>
 </ul>
@@ -233,20 +246,30 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
-<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- ============ FIELD DETAIL =========== -->
 <ul class="blockList">
-<li class="blockList"><a name="constructor.detail">
+<li class="blockList"><a name="field.detail">
 <!--   -->
 </a>
-<h3>Constructor Detail</h3>
-<a name="BondFutureTradeCalculationFunction--">
+<h3>Field Detail</h3>
+<a name="TRADE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TRADE</h4>
+<pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="class in com.opengamma.strata.measure.bond">BondFutureTradeCalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&gt; TRADE</pre>
+<div class="block">The trade instance</div>
+</li>
+</ul>
+<a name="POSITION">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>BondFutureTradeCalculationFunction</h4>
-<pre>public&nbsp;BondFutureTradeCalculationFunction()</pre>
-<div class="block">Creates an instance.</div>
+<h4>POSITION</h4>
+<pre>public static final&nbsp;<a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="class in com.opengamma.strata.measure.bond">BondFutureTradeCalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFuturePosition.html" title="class in com.opengamma.strata.product.bond">BondFuturePosition</a>&gt; POSITION</pre>
+<div class="block">The position instance</div>
 </li>
 </ul>
 </li>
@@ -263,14 +286,14 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
 <ul class="blockList">
 <li class="blockList">
 <h4>targetType</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&gt;&nbsp;targetType()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="type parameter in BondFutureTradeCalculationFunction">T</a>&gt;&nbsp;targetType()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#targetType--">CalculationFunction</a></code></span></div>
 <div class="block">Gets the target type that this function applies to.
  <p>
  The target type will typically be a concrete class.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#targetType--">targetType</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&gt;</code></dd>
+<dd><code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#targetType--">targetType</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="type parameter in BondFutureTradeCalculationFunction">T</a> extends <a href="../../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html" title="interface in com.opengamma.strata.product">SecuritizedProductPortfolioItem</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFuture.html" title="class in com.opengamma.strata.product.bond">BondFuture</a>&gt; &amp; <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" title="interface in com.opengamma.strata.basics">Resolvable</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&gt;&gt;</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the target type</dd>
 </dl>
@@ -282,24 +305,26 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
 <ul class="blockList">
 <li class="blockList">
 <h4>supportedMeasures</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;&nbsp;supportedMeasures()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;&nbsp;supportedMeasures()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#supportedMeasures--">CalculationFunction</a></code></span></div>
 <div class="block">Returns the set of measures that the function can calculate.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#supportedMeasures--">supportedMeasures</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&gt;</code></dd>
+<dd><code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#supportedMeasures--">supportedMeasures</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="type parameter in BondFutureTradeCalculationFunction">T</a> extends <a href="../../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html" title="interface in com.opengamma.strata.product">SecuritizedProductPortfolioItem</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFuture.html" title="class in com.opengamma.strata.product.bond">BondFuture</a>&gt; &amp; <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" title="interface in com.opengamma.strata.basics">Resolvable</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&gt;&gt;</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the read-only set of measures that the function can calculate</dd>
 </dl>
 </li>
 </ul>
-<a name="identifier-com.opengamma.strata.product.bond.BondFutureTrade-">
+<a name="identifier-com.opengamma.strata.product.SecuritizedProductPortfolioItem-">
+<!--   -->
+</a><a name="identifier-T-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>identifier</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;identifier(<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&nbsp;target)</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;identifier(<a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="type parameter in BondFutureTradeCalculationFunction">T</a>&nbsp;target)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#identifier-T-">CalculationFunction</a></code></span></div>
 <div class="block">Returns an identifier that should uniquely identify the specified target.
  <p>
@@ -310,7 +335,7 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
  This method must not throw an exception.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#identifier-T-">identifier</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&gt;</code></dd>
+<dd><code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#identifier-T-">identifier</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="type parameter in BondFutureTradeCalculationFunction">T</a> extends <a href="../../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html" title="interface in com.opengamma.strata.product">SecuritizedProductPortfolioItem</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFuture.html" title="class in com.opengamma.strata.product.bond">BondFuture</a>&gt; &amp; <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" title="interface in com.opengamma.strata.basics">Resolvable</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&gt;&gt;</code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>target</code> - the target of the calculation</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -318,13 +343,15 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
 </dl>
 </li>
 </ul>
-<a name="naturalCurrency-com.opengamma.strata.product.bond.BondFutureTrade-com.opengamma.strata.basics.ReferenceData-">
+<a name="naturalCurrency-com.opengamma.strata.product.SecuritizedProductPortfolioItem-com.opengamma.strata.basics.ReferenceData-">
+<!--   -->
+</a><a name="naturalCurrency-T-com.opengamma.strata.basics.ReferenceData-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>naturalCurrency</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;naturalCurrency(<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&nbsp;trade,
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;naturalCurrency(<a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="type parameter in BondFutureTradeCalculationFunction">T</a>&nbsp;target,
                                 <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#naturalCurrency-T-com.opengamma.strata.basics.ReferenceData-">CalculationFunction</a></code></span></div>
 <div class="block">Returns the "natural" currency for the specified target.
@@ -341,23 +368,25 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
  An exception must only be thrown if the function handles no currency-convertible measures.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#naturalCurrency-T-com.opengamma.strata.basics.ReferenceData-">naturalCurrency</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&gt;</code></dd>
+<dd><code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#naturalCurrency-T-com.opengamma.strata.basics.ReferenceData-">naturalCurrency</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="type parameter in BondFutureTradeCalculationFunction">T</a> extends <a href="../../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html" title="interface in com.opengamma.strata.product">SecuritizedProductPortfolioItem</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFuture.html" title="class in com.opengamma.strata.product.bond">BondFuture</a>&gt; &amp; <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" title="interface in com.opengamma.strata.basics">Resolvable</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&gt;&gt;</code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>trade</code> - the target of the calculation</dd>
+<dd><code>target</code> - the target of the calculation</dd>
 <dd><code>refData</code> - the reference data to be used in the calculation</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the "natural" currency of the target</dd>
 </dl>
 </li>
 </ul>
-<a name="requirements-com.opengamma.strata.product.bond.BondFutureTrade-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.basics.ReferenceData-">
+<a name="requirements-com.opengamma.strata.product.SecuritizedProductPortfolioItem-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.basics.ReferenceData-">
+<!--   -->
+</a><a name="requirements-T-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.basics.ReferenceData-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>requirements</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/calc/runner/FunctionRequirements.html" title="class in com.opengamma.strata.calc.runner">FunctionRequirements</a>&nbsp;requirements(<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&nbsp;trade,
-                                         <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;&nbsp;measures,
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/calc/runner/FunctionRequirements.html" title="class in com.opengamma.strata.calc.runner">FunctionRequirements</a>&nbsp;requirements(<a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="type parameter in BondFutureTradeCalculationFunction">T</a>&nbsp;target,
+                                         <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;&nbsp;measures,
                                          <a href="../../../../../com/opengamma/strata/calc/runner/CalculationParameters.html" title="class in com.opengamma.strata.calc.runner">CalculationParameters</a>&nbsp;parameters,
                                          <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#requirements-T-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.basics.ReferenceData-">CalculationFunction</a></code></span></div>
@@ -368,9 +397,9 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
  The set of measures may include measures that are not supported by this function.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#requirements-T-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.basics.ReferenceData-">requirements</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&gt;</code></dd>
+<dd><code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#requirements-T-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.basics.ReferenceData-">requirements</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="type parameter in BondFutureTradeCalculationFunction">T</a> extends <a href="../../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html" title="interface in com.opengamma.strata.product">SecuritizedProductPortfolioItem</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFuture.html" title="class in com.opengamma.strata.product.bond">BondFuture</a>&gt; &amp; <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" title="interface in com.opengamma.strata.basics">Resolvable</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&gt;&gt;</code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>trade</code> - the target of the calculation</dd>
+<dd><code>target</code> - the target of the calculation</dd>
 <dd><code>measures</code> - the set of measures to be calculated</dd>
 <dd><code>parameters</code> - the parameters that affect how the calculation is performed</dd>
 <dd><code>refData</code> - the reference data to be used in the calculation</dd>
@@ -379,14 +408,16 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
 </dl>
 </li>
 </ul>
-<a name="calculate-com.opengamma.strata.product.bond.BondFutureTrade-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.data.scenario.ScenarioMarketData-com.opengamma.strata.basics.ReferenceData-">
+<a name="calculate-com.opengamma.strata.product.SecuritizedProductPortfolioItem-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.data.scenario.ScenarioMarketData-com.opengamma.strata.basics.ReferenceData-">
+<!--   -->
+</a><a name="calculate-T-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.data.scenario.ScenarioMarketData-com.opengamma.strata.basics.ReferenceData-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>calculate</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>,<a href="../../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result">Result</a>&lt;?&gt;&gt;&nbsp;calculate(<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&nbsp;trade,
-                                        <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;&nbsp;measures,
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>,<a href="../../../../../com/opengamma/strata/collect/result/Result.html" title="class in com.opengamma.strata.collect.result">Result</a>&lt;?&gt;&gt;&nbsp;calculate(<a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="type parameter in BondFutureTradeCalculationFunction">T</a>&nbsp;target,
+                                        <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/calc/Measure.html" title="interface in com.opengamma.strata.calc">Measure</a>&gt;&nbsp;measures,
                                         <a href="../../../../../com/opengamma/strata/calc/runner/CalculationParameters.html" title="class in com.opengamma.strata.calc.runner">CalculationParameters</a>&nbsp;parameters,
                                         <a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;scenarioMarketData,
                                         <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</pre>
@@ -404,9 +435,9 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
  not implement <code>ScenarioArray</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#calculate-T-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.data.scenario.ScenarioMarketData-com.opengamma.strata.basics.ReferenceData-">calculate</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>&gt;</code></dd>
+<dd><code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html#calculate-T-java.util.Set-com.opengamma.strata.calc.runner.CalculationParameters-com.opengamma.strata.data.scenario.ScenarioMarketData-com.opengamma.strata.basics.ReferenceData-">calculate</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;<a href="../../../../../com/opengamma/strata/measure/bond/BondFutureTradeCalculationFunction.html" title="type parameter in BondFutureTradeCalculationFunction">T</a> extends <a href="../../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html" title="interface in com.opengamma.strata.product">SecuritizedProductPortfolioItem</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/BondFuture.html" title="class in com.opengamma.strata.product.bond">BondFuture</a>&gt; &amp; <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" title="interface in com.opengamma.strata.basics">Resolvable</a>&lt;<a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a>&gt;&gt;</code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>trade</code> - the target of the calculation</dd>
+<dd><code>target</code> - the target of the calculation</dd>
 <dd><code>measures</code> - the set of measures to calculate</dd>
 <dd><code>parameters</code> - the parameters that affect how the calculation is performed</dd>
 <dd><code>scenarioMarketData</code> - the multi-scenario market data to be used in the calculation</dd>
@@ -471,14 +502,14 @@ implements <a href="../../../../../com/opengamma/strata/calc/runner/CalculationF
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>

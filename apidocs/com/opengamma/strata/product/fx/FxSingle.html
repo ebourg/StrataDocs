@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":9,"i9":10,"i10":9,"i11":9,"i12":9,"i13":9,"i14":10,"i15":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":9,"i12":10,"i13":9,"i14":9,"i15":9,"i16":9,"i17":9,"i18":9,"i19":10,"i20":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -50,7 +50,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/opengamma/strata/product/fx/FxNdfTrade.Meta.html" title="class in com.opengamma.strata.product.fx"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/product/fx/FxProduct.html" title="interface in com.opengamma.strata.product.fx"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.Meta.html" title="class in com.opengamma.strata.product.fx"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -76,13 +76,13 @@ var activeTableTab = "activeTableTab";
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -98,7 +98,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
 <li>com.opengamma.strata.product.fx.FxSingle</li>
@@ -110,13 +110,13 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../com/opengamma/strata/basics/Resolvable.html" title="interface in com.opengamma.strata.basics">Resolvable</a>&lt;<a href="../../../../../com/opengamma/strata/product/fx/ResolvedFxSingle.html" title="class in com.opengamma.strata.product.fx">ResolvedFxSingle</a>&gt;, <a href="../../../../../com/opengamma/strata/product/Product.html" title="interface in com.opengamma.strata.product">Product</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a></dd>
+<dd><a href="../../../../../com/opengamma/strata/basics/Resolvable.html" title="interface in com.opengamma.strata.basics">Resolvable</a>&lt;<a href="../../../../../com/opengamma/strata/product/fx/ResolvedFxSingle.html" title="class in com.opengamma.strata.product.fx">ResolvedFxSingle</a>&gt;, <a href="../../../../../com/opengamma/strata/product/fx/FxProduct.html" title="interface in com.opengamma.strata.product.fx">FxProduct</a>, <a href="../../../../../com/opengamma/strata/product/Product.html" title="interface in com.opengamma.strata.product">Product</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">FxSingle</span>
-extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
-implements <a href="../../../../../com/opengamma/strata/product/Product.html" title="interface in com.opengamma.strata.product">Product</a>, <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" title="interface in com.opengamma.strata.basics">Resolvable</a>&lt;<a href="../../../../../com/opengamma/strata/product/fx/ResolvedFxSingle.html" title="class in com.opengamma.strata.product.fx">ResolvedFxSingle</a>&gt;, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="../../../../../com/opengamma/strata/product/fx/FxProduct.html" title="interface in com.opengamma.strata.product.fx">FxProduct</a>, <a href="../../../../../com/opengamma/strata/basics/Resolvable.html" title="interface in com.opengamma.strata.basics">Resolvable</a>&lt;<a href="../../../../../com/opengamma/strata/product/fx/ResolvedFxSingle.html" title="class in com.opengamma.strata.product.fx">ResolvedFxSingle</a>&gt;, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
 <div class="block">A single foreign exchange, such as an FX forward or FX spot.
  <p>
  An FX is a financial instrument that represents the exchange of an equivalent amount
@@ -156,6 +156,27 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 </table>
 </li>
 </ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ser/SerDeserializer.html?is-external=true" title="class or interface in org.joda.beans.ser">SerDeserializer</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#DESERIALIZER">DESERIALIZER</a></span></code>
+<div class="block">The deserializer, for compatibility.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.summary">
@@ -170,7 +191,7 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#equals-java.lang.Object-">equals</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#equals-java.lang.Object-">equals</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
@@ -179,91 +200,124 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 </td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#getBaseCurrencyPayment--">getBaseCurrencyPayment</a></span>()</code>
+<div class="block">Gets the payment in the base currency, positive if receiving, negative if paying.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#getCounterCurrencyAmount--">getCounterCurrencyAmount</a></span>()</code>
 <div class="block">Gets the amount in the counter currency, positive if receiving, negative if paying.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#getCounterCurrencyPayment--">getCounterCurrencyPayment</a></span>()</code>
+<div class="block">Gets the payment in the counter currency, positive if receiving, negative if paying.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyPair.html" title="class in com.opengamma.strata.basics.currency">CurrencyPair</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#getCurrencyPair--">getCurrencyPair</a></span>()</code>
 <div class="block">Gets currency pair of the base currency and counter currency.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#getPaymentDate--">getPaymentDate</a></span>()</code>
-<div class="block">Gets the date that the FX settles.</div>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#getPayCurrencyAmount--">getPayCurrencyAmount</a></span>()</code>
+<div class="block">Gets the currency amount in which the amount is paid.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#getPaymentDate--">getPaymentDate</a></span>()</code>
+<div class="block">Gets the last payment date.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#getPaymentDateAdjustment--">getPaymentDateAdjustment</a></span>()</code>
 <div class="block">Gets the payment date adjustment, optional.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#getReceiveCurrencyAmount--">getReceiveCurrencyAmount</a></span>()</code>
 <div class="block">Gets the currency amount in which the amount is received.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/fx/FxSingle.Meta.html" title="class in com.opengamma.strata.product.fx">FxSingle.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#meta--">meta</a></span>()</code>
 <div class="block">The meta-bean for <code>FxSingle</code>.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.Meta.html" title="class in com.opengamma.strata.product.fx">FxSingle.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#metaBean--">metaBean</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html" title="class in com.opengamma.strata.product.fx">FxSingle</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#of-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.basics.currency.CurrencyAmount-java.time.LocalDate-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount1,
   <a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount2,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate)</code>
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate)</code>
 <div class="block">Creates an <code>FxSingle</code> from two amounts and the value date.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html" title="class in com.opengamma.strata.product.fx">FxSingle</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#of-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.basics.currency.CurrencyAmount-java.time.LocalDate-com.opengamma.strata.basics.date.BusinessDayAdjustment-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount1,
   <a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount2,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate,
   <a href="../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;paymentDateAdjustment)</code>
 <div class="block">Creates an <code>FxSingle</code> from two amounts and the value date, specifying a date adjustment.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html" title="class in com.opengamma.strata.product.fx">FxSingle</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#of-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.basics.currency.FxRate-java.time.LocalDate-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount,
   <a href="../../../../../com/opengamma/strata/basics/currency/FxRate.html" title="class in com.opengamma.strata.basics.currency">FxRate</a>&nbsp;fxRate,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate)</code>
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate)</code>
 <div class="block">Creates an <code>FxSingle</code> using a rate.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html" title="class in com.opengamma.strata.product.fx">FxSingle</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#of-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.basics.currency.FxRate-java.time.LocalDate-com.opengamma.strata.basics.date.BusinessDayAdjustment-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount,
   <a href="../../../../../com/opengamma/strata/basics/currency/FxRate.html" title="class in com.opengamma.strata.basics.currency">FxRate</a>&nbsp;fxRate,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate,
   <a href="../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;paymentDateAdjustment)</code>
 <div class="block">Creates an <code>FxSingle</code> using a rate, specifying a date adjustment.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i17" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html" title="class in com.opengamma.strata.product.fx">FxSingle</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#of-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.basics.currency.Payment-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment1,
+  <a href="../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment2)</code>
+<div class="block">Creates an <code>FxSingle</code> from two payments.</div>
+</td>
+</tr>
+<tr id="i18" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html" title="class in com.opengamma.strata.product.fx">FxSingle</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#of-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment1,
+  <a href="../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment2,
+  <a href="../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;paymentDateAdjustment)</code>
+<div class="block">Creates an <code>FxSingle</code> from two payments, specifying a date adjustment.</div>
+</td>
+</tr>
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/fx/ResolvedFxSingle.html" title="class in com.opengamma.strata.product.fx">ResolvedFxSingle</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#resolve-com.opengamma.strata.basics.ReferenceData-">resolve</a></span>(<a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Resolves this object using the specified reference data.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<tr id="i20" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
 </table>
@@ -271,8 +325,22 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.fx.FxProduct">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.fx.<a href="../../../../../com/opengamma/strata/product/fx/FxProduct.html" title="interface in com.opengamma.strata.product.fx">FxProduct</a></h3>
+<code><a href="../../../../../com/opengamma/strata/product/fx/FxProduct.html#allCurrencies--">allCurrencies</a>, <a href="../../../../../com/opengamma/strata/product/fx/FxProduct.html#isCrossCurrency--">isCrossCurrency</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.Product">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.<a href="../../../../../com/opengamma/strata/product/Product.html" title="interface in com.opengamma.strata.product">Product</a></h3>
+<code><a href="../../../../../com/opengamma/strata/product/Product.html#allPaymentCurrencies--">allPaymentCurrencies</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.org.joda.beans.Bean">
@@ -289,12 +357,86 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="DESERIALIZER">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>DESERIALIZER</h4>
+<pre>public static final&nbsp;<a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ser/SerDeserializer.html?is-external=true" title="class or interface in org.joda.beans.ser">SerDeserializer</a> DESERIALIZER</pre>
+<div class="block">The deserializer, for compatibility.</div>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.detail">
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="of-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.basics.currency.Payment-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>of</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html" title="class in com.opengamma.strata.product.fx">FxSingle</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment1,
+                          <a href="../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment2)</pre>
+<div class="block">Creates an <code>FxSingle</code> from two payments.
+ <p>
+ The payments must be of the correct type, one pay and one receive.
+ The currencies of the payments must differ.
+ The payment dates may differ.
+ <p>
+ This factory identifies the currency pair of the exchange and assigns the payments
+ to match the base or counter currency of the standardized currency pair.
+ For example, a EUR/USD exchange always has EUR as the base payment and USD as the counter payment.
+ <p>
+ No payment date adjustments apply.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>payment1</code> - the payment in the first currency</dd>
+<dd><code>payment2</code> - the payment in the second currency</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the FX</dd>
+</dl>
+</li>
+</ul>
+<a name="of-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.basics.currency.Payment-com.opengamma.strata.basics.date.BusinessDayAdjustment-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>of</h4>
+<pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html" title="class in com.opengamma.strata.product.fx">FxSingle</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment1,
+                          <a href="../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;payment2,
+                          <a href="../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;paymentDateAdjustment)</pre>
+<div class="block">Creates an <code>FxSingle</code> from two payments, specifying a date adjustment.
+ <p>
+ The payments must be of the correct type, one pay and one receive.
+ The currencies of the payments must differ.
+ The payment dates may differ.
+ <p>
+ This factory identifies the currency pair of the exchange and assigns the payments
+ to match the base or counter currency of the standardized currency pair.
+ For example, a EUR/USD exchange always has EUR as the base payment and USD as the counter payment.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>payment1</code> - the payment in the first currency</dd>
+<dd><code>payment2</code> - the payment in the second currency</dd>
+<dd><code>paymentDateAdjustment</code> - the adjustment to apply to the payment date</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the FX</dd>
+</dl>
+</li>
+</ul>
 <a name="of-com.opengamma.strata.basics.currency.CurrencyAmount-com.opengamma.strata.basics.currency.CurrencyAmount-java.time.LocalDate-">
 <!--   -->
 </a>
@@ -303,7 +445,7 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 <h4>of</h4>
 <pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html" title="class in com.opengamma.strata.product.fx">FxSingle</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount1,
                           <a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount2,
-                          <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate)</pre>
+                          <a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate)</pre>
 <div class="block">Creates an <code>FxSingle</code> from two amounts and the value date.
  <p>
  The amounts must be of the correct type, one pay and one receive.
@@ -332,7 +474,7 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 <h4>of</h4>
 <pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html" title="class in com.opengamma.strata.product.fx">FxSingle</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount1,
                           <a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount2,
-                          <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate,
+                          <a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate,
                           <a href="../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;paymentDateAdjustment)</pre>
 <div class="block">Creates an <code>FxSingle</code> from two amounts and the value date, specifying a date adjustment.
  <p>
@@ -361,7 +503,7 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 <h4>of</h4>
 <pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html" title="class in com.opengamma.strata.product.fx">FxSingle</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount,
                           <a href="../../../../../com/opengamma/strata/basics/currency/FxRate.html" title="class in com.opengamma.strata.basics.currency">FxRate</a>&nbsp;fxRate,
-                          <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate)</pre>
+                          <a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate)</pre>
 <div class="block">Creates an <code>FxSingle</code> using a rate.
  <p>
  This creates a single foreign exchange specifying the amount, FX rate and value date.
@@ -379,6 +521,8 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 <dd><code>paymentDate</code> - the date that the FX settles</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the FX</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the FX rate and amount do not have a currency in common</dd>
 </dl>
 </li>
 </ul>
@@ -390,7 +534,7 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 <h4>of</h4>
 <pre>public static&nbsp;<a href="../../../../../com/opengamma/strata/product/fx/FxSingle.html" title="class in com.opengamma.strata.product.fx">FxSingle</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;amount,
                           <a href="../../../../../com/opengamma/strata/basics/currency/FxRate.html" title="class in com.opengamma.strata.basics.currency">FxRate</a>&nbsp;fxRate,
-                          <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate,
+                          <a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;paymentDate,
                           <a href="../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&nbsp;paymentDateAdjustment)</pre>
 <div class="block">Creates an <code>FxSingle</code> using a rate, specifying a date adjustment.
  <p>
@@ -408,6 +552,8 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 <dd><code>paymentDateAdjustment</code> - the adjustment to apply to the payment date</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the FX</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the FX rate and amount do not have a currency in common</dd>
 </dl>
 </li>
 </ul>
@@ -422,8 +568,62 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
  <p>
  This currency pair is conventional, thus indifferent to the direction of FX.</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/product/fx/FxProduct.html#getCurrencyPair--">getCurrencyPair</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/product/fx/FxProduct.html" title="interface in com.opengamma.strata.product.fx">FxProduct</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the currency pair</dd>
+</dl>
+</li>
+</ul>
+<a name="getBaseCurrencyAmount--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBaseCurrencyAmount</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;getBaseCurrencyAmount()</pre>
+<div class="block">Gets the amount in the base currency, positive if receiving, negative if paying.
+ <p>
+ The amount is signed.
+ A positive amount indicates the payment is to be received.
+ A negative amount indicates the payment is to be paid.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the amount</dd>
+</dl>
+</li>
+</ul>
+<a name="getCounterCurrencyAmount--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCounterCurrencyAmount</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;getCounterCurrencyAmount()</pre>
+<div class="block">Gets the amount in the counter currency, positive if receiving, negative if paying.
+ <p>
+ The amount is signed.
+ A positive amount indicates the payment is to be received.
+ A negative amount indicates the payment is to be paid.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the amount</dd>
+</dl>
+</li>
+</ul>
+<a name="getPayCurrencyAmount--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPayCurrencyAmount</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;getPayCurrencyAmount()</pre>
+<div class="block">Gets the currency amount in which the amount is paid.
+ <p>
+ This returns the currency amount whose amount is negative or zero.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the pay currency amount</dd>
 </dl>
 </li>
 </ul>
@@ -441,6 +641,23 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the receive currency amount</dd>
+</dl>
+</li>
+</ul>
+<a name="getPaymentDate--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPaymentDate</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;getPaymentDate()</pre>
+<div class="block">Gets the last payment date.
+ <p>
+ The payment date is normally the same for the base and counter currencies.
+ If it differs, this method returns the latest of the two dates.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the latest payment date</dd>
 </dl>
 </li>
 </ul>
@@ -498,53 +715,43 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 </dl>
 </li>
 </ul>
-<a name="getBaseCurrencyAmount--">
+<a name="getBaseCurrencyPayment--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getBaseCurrencyAmount</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;getBaseCurrencyAmount()</pre>
-<div class="block">Gets the amount in the base currency, positive if receiving, negative if paying.
+<h4>getBaseCurrencyPayment</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;getBaseCurrencyPayment()</pre>
+<div class="block">Gets the payment in the base currency, positive if receiving, negative if paying.
  <p>
  The amount is signed.
  A positive amount indicates the payment is to be received.
- A negative amount indicates the payment is to be paid.</div>
+ A negative amount indicates the payment is to be paid.
+ <p>
+ The payment date is usually the same as <code>counterCurrencyPayment</code>.
+ It is typically a valid business day, however the <code>businessDayAdjustment</code>
+ property may be used to adjust it.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value of the property, not null</dd>
 </dl>
 </li>
 </ul>
-<a name="getCounterCurrencyAmount--">
+<a name="getCounterCurrencyPayment--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getCounterCurrencyAmount</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/CurrencyAmount.html" title="class in com.opengamma.strata.basics.currency">CurrencyAmount</a>&nbsp;getCounterCurrencyAmount()</pre>
-<div class="block">Gets the amount in the counter currency, positive if receiving, negative if paying.
+<h4>getCounterCurrencyPayment</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/basics/currency/Payment.html" title="class in com.opengamma.strata.basics.currency">Payment</a>&nbsp;getCounterCurrencyPayment()</pre>
+<div class="block">Gets the payment in the counter currency, positive if receiving, negative if paying.
  <p>
  The amount is signed.
  A positive amount indicates the payment is to be received.
- A negative amount indicates the payment is to be paid.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the value of the property, not null</dd>
-</dl>
-</li>
-</ul>
-<a name="getPaymentDate--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getPaymentDate</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;getPaymentDate()</pre>
-<div class="block">Gets the date that the FX settles.
+ A negative amount indicates the payment is to be paid.
  <p>
- On this date, the pay and receive amounts will be exchanged.
- This date is typically a valid business day, however the <code>businessDayAdjustment</code>
+ The payment date is usually the same as <code>baseCurrencyPayment</code>.
+ It is typically a valid business day, however the <code>businessDayAdjustment</code>
  property may be used to adjust it.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -558,7 +765,7 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getPaymentDateAdjustment</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;&nbsp;getPaymentDateAdjustment()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../com/opengamma/strata/basics/date/BusinessDayAdjustment.html" title="class in com.opengamma.strata.basics.date">BusinessDayAdjustment</a>&gt;&nbsp;getPaymentDateAdjustment()</pre>
 <div class="block">Gets the payment date adjustment, optional.
  <p>
  If present, the adjustment will be applied to the payment date.</div>
@@ -574,10 +781,10 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>equals</h4>
-<pre>public&nbsp;boolean&nbsp;equals(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</pre>
+<pre>public&nbsp;boolean&nbsp;equals(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -590,7 +797,7 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 <pre>public&nbsp;int&nbsp;hashCode()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -600,10 +807,10 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 <ul class="blockListLast">
 <li class="blockList">
 <h4>toString</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toString()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toString()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -636,7 +843,7 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/opengamma/strata/product/fx/FxNdfTrade.Meta.html" title="class in com.opengamma.strata.product.fx"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../com/opengamma/strata/product/fx/FxProduct.html" title="interface in com.opengamma.strata.product.fx"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../../com/opengamma/strata/product/fx/FxSingle.Meta.html" title="class in com.opengamma.strata.product.fx"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -662,13 +869,13 @@ implements <a href="../../../../../com/opengamma/strata/product/Product.html" ti
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

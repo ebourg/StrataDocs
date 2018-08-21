@@ -18,8 +18,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":18,"i1":6,"i2":6,"i3":6,"i4":18};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
+var methods = {"i0":6,"i1":6,"i2":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -50,7 +50,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../com/opengamma/strata/product/SecuritizedProduct.html" title="interface in com.opengamma.strata.product"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../com/opengamma/strata/product/SecuritizedProductPosition.html" title="interface in com.opengamma.strata.product"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../com/opengamma/strata/product/Security.html" title="interface in com.opengamma.strata.product"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -94,24 +94,28 @@ var activeTableTab = "activeTableTab";
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="subTitle">com.opengamma.strata.product</div>
-<h2 title="Interface SecuritizedProductTrade" class="title">Interface SecuritizedProductTrade</h2>
+<h2 title="Interface SecuritizedProductTrade" class="title">Interface SecuritizedProductTrade&lt;P extends <a href="../../../../com/opengamma/strata/product/SecuritizedProduct.html" title="interface in com.opengamma.strata.product">SecuritizedProduct</a>&gt;</h2>
 </div>
 <div class="contentContainer">
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
 <dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>P</code> - the type of securitized product</dd>
+</dl>
+<dl>
 <dt>All Superinterfaces:</dt>
-<dd><a href="../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>, <a href="../../../../com/opengamma/strata/product/PortfolioItem.html" title="interface in com.opengamma.strata.product">PortfolioItem</a>, <a href="../../../../com/opengamma/strata/product/ProductTrade.html" title="interface in com.opengamma.strata.product">ProductTrade</a>, <a href="../../../../com/opengamma/strata/product/SecurityQuantity.html" title="interface in com.opengamma.strata.product">SecurityQuantity</a>, <a href="../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a></dd>
+<dd><a href="../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>, <a href="../../../../com/opengamma/strata/product/PortfolioItem.html" title="interface in com.opengamma.strata.product">PortfolioItem</a>, <a href="../../../../com/opengamma/strata/product/ProductTrade.html" title="interface in com.opengamma.strata.product">ProductTrade</a>, <a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html" title="interface in com.opengamma.strata.product">SecuritizedProductPortfolioItem</a>&lt;P&gt;, <a href="../../../../com/opengamma/strata/product/SecurityQuantity.html" title="interface in com.opengamma.strata.product">SecurityQuantity</a>, <a href="../../../../com/opengamma/strata/product/SecurityQuantityTrade.html" title="interface in com.opengamma.strata.product">SecurityQuantityTrade</a>, <a href="../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a></dd>
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../../../../com/opengamma/strata/product/bond/BondFutureOptionTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureOptionTrade</a>, <a href="../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>, <a href="../../../../com/opengamma/strata/product/bond/CapitalIndexedBondTrade.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBondTrade</a>, <a href="../../../../com/opengamma/strata/product/dsf/DsfTrade.html" title="class in com.opengamma.strata.product.dsf">DsfTrade</a>, <a href="../../../../com/opengamma/strata/product/bond/FixedCouponBondTrade.html" title="class in com.opengamma.strata.product.bond">FixedCouponBondTrade</a>, <a href="../../../../com/opengamma/strata/product/index/IborFutureOptionTrade.html" title="class in com.opengamma.strata.product.index">IborFutureOptionTrade</a>, <a href="../../../../com/opengamma/strata/product/index/IborFutureTrade.html" title="class in com.opengamma.strata.product.index">IborFutureTrade</a></dd>
+<dd><a href="../../../../com/opengamma/strata/product/bond/BillTrade.html" title="class in com.opengamma.strata.product.bond">BillTrade</a>, <a href="../../../../com/opengamma/strata/product/bond/BondFutureOptionTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureOptionTrade</a>, <a href="../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a>, <a href="../../../../com/opengamma/strata/product/bond/CapitalIndexedBondTrade.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBondTrade</a>, <a href="../../../../com/opengamma/strata/product/dsf/DsfTrade.html" title="class in com.opengamma.strata.product.dsf">DsfTrade</a>, <a href="../../../../com/opengamma/strata/product/bond/FixedCouponBondTrade.html" title="class in com.opengamma.strata.product.bond">FixedCouponBondTrade</a>, <a href="../../../../com/opengamma/strata/product/GenericSecurityTrade.html" title="class in com.opengamma.strata.product">GenericSecurityTrade</a>, <a href="../../../../com/opengamma/strata/product/index/IborFutureOptionTrade.html" title="class in com.opengamma.strata.product.index">IborFutureOptionTrade</a>, <a href="../../../../com/opengamma/strata/product/index/IborFutureTrade.html" title="class in com.opengamma.strata.product.index">IborFutureTrade</a>, <a href="../../../../com/opengamma/strata/product/index/OvernightFutureTrade.html" title="class in com.opengamma.strata.product.index">OvernightFutureTrade</a></dd>
 </dl>
 <hr>
 <br>
-<pre>public interface <span class="typeNameLabel">SecuritizedProductTrade</span>
-extends <a href="../../../../com/opengamma/strata/product/ProductTrade.html" title="interface in com.opengamma.strata.product">ProductTrade</a>, <a href="../../../../com/opengamma/strata/product/SecurityQuantity.html" title="interface in com.opengamma.strata.product">SecurityQuantity</a></pre>
+<pre>public interface <span class="typeNameLabel">SecuritizedProductTrade&lt;P extends <a href="../../../../com/opengamma/strata/product/SecuritizedProduct.html" title="interface in com.opengamma.strata.product">SecuritizedProduct</a>&gt;</span>
+extends <a href="../../../../com/opengamma/strata/product/ProductTrade.html" title="interface in com.opengamma.strata.product">ProductTrade</a>, <a href="../../../../com/opengamma/strata/product/SecurityQuantityTrade.html" title="interface in com.opengamma.strata.product">SecurityQuantityTrade</a>, <a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html" title="interface in com.opengamma.strata.product">SecuritizedProductPortfolioItem</a>&lt;P&gt;</pre>
 <div class="block">A trade that is directly based on a securitized product.
  <p>
  This defines a trade in a securitized product.
@@ -138,48 +142,71 @@ extends <a href="../../../../com/opengamma/strata/product/ProductTrade.html" tit
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t5" class="tableTab"><span><a href="javascript:show(16);">Default Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>default <a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html#getCurrency--">getCurrency</a></span>()</code>
-<div class="block">Gets the currency of the trade.</div>
+<td class="colFirst"><code><a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html" title="interface in com.opengamma.strata.product">SecuritizedProductTrade</a>&lt;<a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html" title="type parameter in SecuritizedProductTrade">P</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html#withInfo-com.opengamma.strata.product.TradeInfo-">withInfo</a></span>(<a href="../../../../com/opengamma/strata/product/TradeInfo.html" title="class in com.opengamma.strata.product">TradeInfo</a>&nbsp;info)</code>
+<div class="block">Returns an instance with the specified info.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html#getPrice--">getPrice</a></span>()</code>
-<div class="block">Gets the price that was traded.</div>
+<td class="colFirst"><code><a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html" title="interface in com.opengamma.strata.product">SecuritizedProductTrade</a>&lt;<a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html" title="type parameter in SecuritizedProductTrade">P</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html#withPrice-double-">withPrice</a></span>(double&nbsp;price)</code>
+<div class="block">Returns an instance with the specified price.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../../../../com/opengamma/strata/product/SecuritizedProduct.html" title="interface in com.opengamma.strata.product">SecuritizedProduct</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html#getProduct--">getProduct</a></span>()</code>
-<div class="block">Gets the product of the security that was traded.</div>
-</td>
-</tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html#getQuantity--">getQuantity</a></span>()</code>
-<div class="block">Gets the quantity that was traded.</div>
-</td>
-</tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>default <a href="../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html#getSecurityId--">getSecurityId</a></span>()</code>
-<div class="block">Gets the security identifier.</div>
+<td class="colFirst"><code><a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html" title="interface in com.opengamma.strata.product">SecuritizedProductTrade</a>&lt;<a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html" title="type parameter in SecuritizedProductTrade">P</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html#withQuantity-double-">withQuantity</a></span>(double&nbsp;quantity)</code>
+<div class="block">Returns an instance with the specified quantity.</div>
 </td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.ProductTrade">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.<a href="../../../../com/opengamma/strata/product/ProductTrade.html" title="interface in com.opengamma.strata.product">ProductTrade</a></h3>
+<code><a href="../../../../com/opengamma/strata/product/ProductTrade.html#getProduct--">getProduct</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.SecurityQuantityTrade">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.<a href="../../../../com/opengamma/strata/product/SecurityQuantityTrade.html" title="interface in com.opengamma.strata.product">SecurityQuantityTrade</a></h3>
+<code><a href="../../../../com/opengamma/strata/product/SecurityQuantityTrade.html#getPrice--">getPrice</a></code></li>
+</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.Trade">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.<a href="../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a></h3>
-<code><a href="../../../../com/opengamma/strata/product/Trade.html#getId--">getId</a>, <a href="../../../../com/opengamma/strata/product/Trade.html#getInfo--">getInfo</a>, <a href="../../../../com/opengamma/strata/product/Trade.html#summarize--">summarize</a></code></li>
+<code><a href="../../../../com/opengamma/strata/product/Trade.html#getInfo--">getInfo</a>, <a href="../../../../com/opengamma/strata/product/Trade.html#summarize--">summarize</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.PortfolioItem">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.<a href="../../../../com/opengamma/strata/product/PortfolioItem.html" title="interface in com.opengamma.strata.product">PortfolioItem</a></h3>
+<code><a href="../../../../com/opengamma/strata/product/PortfolioItem.html#getId--">getId</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.SecuritizedProductPortfolioItem">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.<a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html" title="interface in com.opengamma.strata.product">SecuritizedProductPortfolioItem</a></h3>
+<code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html#getCurrency--">getCurrency</a>, <a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html#getProduct--">getProduct</a>, <a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html#getSecurityId--">getSecurityId</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.SecurityQuantity">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.<a href="../../../../com/opengamma/strata/product/SecurityQuantity.html" title="interface in com.opengamma.strata.product">SecurityQuantity</a></h3>
+<code><a href="../../../../com/opengamma/strata/product/SecurityQuantity.html#getQuantity--">getQuantity</a></code></li>
 </ul>
 </li>
 </ul>
@@ -195,87 +222,63 @@ extends <a href="../../../../com/opengamma/strata/product/ProductTrade.html" tit
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="getProduct--">
+<a name="withInfo-com.opengamma.strata.product.TradeInfo-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getProduct</h4>
-<pre><a href="../../../../com/opengamma/strata/product/SecuritizedProduct.html" title="interface in com.opengamma.strata.product">SecuritizedProduct</a>&nbsp;getProduct()</pre>
-<div class="block">Gets the product of the security that was traded.</div>
+<h4>withInfo</h4>
+<pre><a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html" title="interface in com.opengamma.strata.product">SecuritizedProductTrade</a>&lt;<a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html" title="type parameter in SecuritizedProductTrade">P</a>&gt;&nbsp;withInfo(<a href="../../../../com/opengamma/strata/product/TradeInfo.html" title="class in com.opengamma.strata.product">TradeInfo</a>&nbsp;info)</pre>
+<div class="block">Returns an instance with the specified info.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/opengamma/strata/product/ProductTrade.html#getProduct--">getProduct</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/ProductTrade.html" title="interface in com.opengamma.strata.product">ProductTrade</a></code></dd>
+<dd><code><a href="../../../../com/opengamma/strata/product/ProductTrade.html#withInfo-com.opengamma.strata.product.TradeInfo-">withInfo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/ProductTrade.html" title="interface in com.opengamma.strata.product">ProductTrade</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/opengamma/strata/product/SecurityQuantityTrade.html#withInfo-com.opengamma.strata.product.TradeInfo-">withInfo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/SecurityQuantityTrade.html" title="interface in com.opengamma.strata.product">SecurityQuantityTrade</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/opengamma/strata/product/Trade.html#withInfo-com.opengamma.strata.product.TradeInfo-">withInfo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>info</code> - the new info</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the product</dd>
+<dd>the instance with the specified info</dd>
 </dl>
 </li>
 </ul>
-<a name="getQuantity--">
+<a name="withQuantity-double-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getQuantity</h4>
-<pre>double&nbsp;getQuantity()</pre>
-<div class="block">Gets the quantity that was traded.
- <p>
- This will be positive if buying and negative if selling.</div>
+<h4>withQuantity</h4>
+<pre><a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html" title="interface in com.opengamma.strata.product">SecuritizedProductTrade</a>&lt;<a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html" title="type parameter in SecuritizedProductTrade">P</a>&gt;&nbsp;withQuantity(double&nbsp;quantity)</pre>
+<div class="block">Returns an instance with the specified quantity.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/opengamma/strata/product/SecurityQuantity.html#getQuantity--">getQuantity</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/SecurityQuantity.html" title="interface in com.opengamma.strata.product">SecurityQuantity</a></code></dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the quantity</dd>
-</dl>
-</li>
-</ul>
-<a name="getPrice--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getPrice</h4>
-<pre>double&nbsp;getPrice()</pre>
-<div class="block">Gets the price that was traded.
- <p>
- This is the unit price agreed when the trade occurred.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the price</dd>
-</dl>
-</li>
-</ul>
-<a name="getSecurityId--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getSecurityId</h4>
-<pre>default&nbsp;<a href="../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;getSecurityId()</pre>
-<div class="block">Gets the security identifier.
- <p>
- This identifier uniquely identifies the security within the system.</div>
-<dl>
+<dd><code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html#withQuantity-double-">withQuantity</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html" title="interface in com.opengamma.strata.product">SecuritizedProductPortfolioItem</a>&lt;<a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html" title="type parameter in SecuritizedProductTrade">P</a> extends <a href="../../../../com/opengamma/strata/product/SecuritizedProduct.html" title="interface in com.opengamma.strata.product">SecuritizedProduct</a>&gt;</code></dd>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/opengamma/strata/product/SecurityQuantity.html#getSecurityId--">getSecurityId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/SecurityQuantity.html" title="interface in com.opengamma.strata.product">SecurityQuantity</a></code></dd>
+<dd><code><a href="../../../../com/opengamma/strata/product/SecurityQuantityTrade.html#withQuantity-double-">withQuantity</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/SecurityQuantityTrade.html" title="interface in com.opengamma.strata.product">SecurityQuantityTrade</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>quantity</code> - the new quantity</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the security identifier</dd>
+<dd>the instance with the specified quantity</dd>
 </dl>
 </li>
 </ul>
-<a name="getCurrency--">
+<a name="withPrice-double-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>getCurrency</h4>
-<pre>default&nbsp;<a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;getCurrency()</pre>
-<div class="block">Gets the currency of the trade.
- <p>
- This is typically the same as the currency of the product.</div>
+<h4>withPrice</h4>
+<pre><a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html" title="interface in com.opengamma.strata.product">SecuritizedProductTrade</a>&lt;<a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html" title="type parameter in SecuritizedProductTrade">P</a>&gt;&nbsp;withPrice(double&nbsp;price)</pre>
+<div class="block">Returns an instance with the specified price.</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/opengamma/strata/product/SecurityQuantityTrade.html#withPrice-double-">withPrice</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/SecurityQuantityTrade.html" title="interface in com.opengamma.strata.product">SecurityQuantityTrade</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>price</code> - the new price</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the trading currency</dd>
+<dd>the instance with the specified price</dd>
 </dl>
 </li>
 </ul>
@@ -308,7 +311,7 @@ extends <a href="../../../../com/opengamma/strata/product/ProductTrade.html" tit
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../com/opengamma/strata/product/SecuritizedProduct.html" title="interface in com.opengamma.strata.product"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../com/opengamma/strata/product/SecuritizedProductPosition.html" title="interface in com.opengamma.strata.product"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../com/opengamma/strata/product/Security.html" title="interface in com.opengamma.strata.product"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">

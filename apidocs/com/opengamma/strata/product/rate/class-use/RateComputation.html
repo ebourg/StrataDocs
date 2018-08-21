@@ -96,30 +96,36 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#com.opengamma.strata.pricer.index">com.opengamma.strata.pricer.index</a></td>
+<td class="colLast">
+<div class="block">Calculators for products based on rate indices, such as Short Term Interest Rate futures (STIRs).</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.pricer.rate">com.opengamma.strata.pricer.rate</a></td>
 <td class="colLast">
 <div class="block">Calculators for rates instruments, such as Forward Rate Agreement (FRA) and interest rate swap.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.bond">com.opengamma.strata.product.bond</a></td>
 <td class="colLast">
 <div class="block">Entity objects describing bonds.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.fra">com.opengamma.strata.product.fra</a></td>
 <td class="colLast">
 <div class="block">Entity objects describing a forward rate agreement (FRA).</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.rate">com.opengamma.strata.product.rate</a></td>
 <td class="colLast">
 <div class="block">Entity objects describing the rate-based financial instruments.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#com.opengamma.strata.product.swap">com.opengamma.strata.product.swap</a></td>
 <td class="colLast">
 <div class="block">Entity objects describing a swap.</div>
@@ -175,6 +181,24 @@
 <tbody>
 <tr class="altColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/fra/DiscountingFraProductPricer.html#DiscountingFraProductPricer-com.opengamma.strata.pricer.rate.RateComputationFn-">DiscountingFraProductPricer</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/rate/RateComputationFn.html" title="interface in com.opengamma.strata.pricer.rate">RateComputationFn</a>&lt;<a href="../../../../../../com/opengamma/strata/product/rate/RateComputation.html" title="interface in com.opengamma.strata.product.rate">RateComputation</a>&gt;&nbsp;rateComputationFn)</code>
+<div class="block">Creates an instance.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="com.opengamma.strata.pricer.index">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../com/opengamma/strata/product/rate/RateComputation.html" title="interface in com.opengamma.strata.product.rate">RateComputation</a> in <a href="../../../../../../com/opengamma/strata/pricer/index/package-summary.html">com.opengamma.strata.pricer.index</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructor parameters in <a href="../../../../../../com/opengamma/strata/pricer/index/package-summary.html">com.opengamma.strata.pricer.index</a> with type arguments of type <a href="../../../../../../com/opengamma/strata/product/rate/RateComputation.html" title="interface in com.opengamma.strata.product.rate">RateComputation</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/pricer/index/DiscountingOvernightFutureProductPricer.html#DiscountingOvernightFutureProductPricer-com.opengamma.strata.pricer.rate.RateComputationFn-">DiscountingOvernightFutureProductPricer</a></span>(<a href="../../../../../../com/opengamma/strata/pricer/rate/RateComputationFn.html" title="interface in com.opengamma.strata.pricer.rate">RateComputationFn</a>&lt;<a href="../../../../../../com/opengamma/strata/product/rate/RateComputation.html" title="interface in com.opengamma.strata.product.rate">RateComputation</a>&gt;&nbsp;rateComputationFn)</code>
 <div class="block">Creates an instance.</div>
 </td>
 </tr>
@@ -320,6 +344,21 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../com/opengamma/strata/product/rate/RateComputation.html" title="interface in com.opengamma.strata.product.rate">RateComputation</a> in <a href="../../../../../../com/opengamma/strata/product/rate/package-summary.html">com.opengamma.strata.product.rate</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../../com/opengamma/strata/product/rate/RateComputation.html" title="interface in com.opengamma.strata.product.rate">RateComputation</a> in <a href="../../../../../../com/opengamma/strata/product/rate/package-summary.html">com.opengamma.strata.product.rate</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/OvernightRateComputation.html" title="interface in com.opengamma.strata.product.rate">OvernightRateComputation</a></span></code>
+<div class="block">Defines the computation of a rate from a single Overnight index.</div>
+</td>
+</tr>
+</tbody>
+</table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
 <caption><span>Classes in <a href="../../../../../../com/opengamma/strata/product/rate/package-summary.html">com.opengamma.strata.product.rate</a> that implement <a href="../../../../../../com/opengamma/strata/product/rate/RateComputation.html" title="interface in com.opengamma.strata.product.rate">RateComputation</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -380,11 +419,17 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/OvernightAveragedDailyRateComputation.html" title="class in com.opengamma.strata.product.rate">OvernightAveragedDailyRateComputation</a></span></code>
+<div class="block">Defines the computation of an averaged daily rate for a single Overnight index.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/OvernightAveragedRateComputation.html" title="class in com.opengamma.strata.product.rate">OvernightAveragedRateComputation</a></span></code>
 <div class="block">Defines the computation of a rate from a single Overnight index that is averaged daily.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/rate/OvernightCompoundedRateComputation.html" title="class in com.opengamma.strata.product.rate">OvernightCompoundedRateComputation</a></span></code>
 <div class="block">Defines the computation of a rate from a single Overnight index that is compounded daily.</div>
@@ -406,7 +451,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/rate/RateComputation.html" title="interface in com.opengamma.strata.product.rate">RateComputation</a></code></td>
-<td class="colLast"><span class="typeNameLabel">InflationRateCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/InflationRateCalculation.html#createRateComputation-java.time.LocalDate-">createRateComputation</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate)</code>
+<td class="colLast"><span class="typeNameLabel">InflationRateCalculation.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/swap/InflationRateCalculation.html#createRateComputation-java.time.LocalDate-">createRateComputation</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;endDate)</code>
 <div class="block">Creates a rate observation where the start index value is known.</div>
 </td>
 </tr>

@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":9,"i11":10,"i12":9,"i13":9,"i14":9,"i15":9,"i16":10,"i17":10,"i18":10};
+var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":9,"i12":10,"i13":9,"i14":9,"i15":9,"i16":9,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -98,7 +98,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
 <li>com.opengamma.strata.product.GenericSecurityPosition</li>
@@ -110,13 +110,13 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>, <a href="../../../../com/opengamma/strata/product/PortfolioItem.html" title="interface in com.opengamma.strata.product">PortfolioItem</a>, <a href="../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>, <a href="../../../../com/opengamma/strata/product/SecurityQuantity.html" title="interface in com.opengamma.strata.product">SecurityQuantity</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a></dd>
+<dd><a href="../../../../com/opengamma/strata/basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>, <a href="../../../../com/opengamma/strata/product/PortfolioItem.html" title="interface in com.opengamma.strata.product">PortfolioItem</a>, <a href="../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>, <a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html" title="interface in com.opengamma.strata.product">SecuritizedProductPortfolioItem</a>&lt;<a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a>&gt;, <a href="../../../../com/opengamma/strata/product/SecuritizedProductPosition.html" title="interface in com.opengamma.strata.product">SecuritizedProductPosition</a>&lt;<a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a>&gt;, <a href="../../../../com/opengamma/strata/product/SecurityQuantity.html" title="interface in com.opengamma.strata.product">SecurityQuantity</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/Bean.html?is-external=true" title="class or interface in org.joda.beans">Bean</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">GenericSecurityPosition</span>
-extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
-implements <a href="../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>, <a href="../../../../com/opengamma/strata/product/SecurityQuantity.html" title="interface in com.opengamma.strata.product">SecurityQuantity</a>, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="../../../../com/opengamma/strata/product/SecuritizedProductPosition.html" title="interface in com.opengamma.strata.product">SecuritizedProductPosition</a>&lt;<a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a>&gt;, <a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/ImmutableBean.html?is-external=true" title="class or interface in org.joda.beans">ImmutableBean</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
 <div class="block">A position in a security, where the security is embedded ready for mark-to-market pricing.
  <p>
  This represents a position in a security, defined by long and short quantity.
@@ -185,12 +185,12 @@ implements <a href="../../../../com/opengamma/strata/product/Position.html" titl
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#equals-java.lang.Object-">equals</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#equals-java.lang.Object-">equals</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#getCurrency--">getCurrency</a></span>()</code>
-<div class="block">Gets the currency of the trade.</div>
+<div class="block">Gets the currency of the position.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -206,44 +206,50 @@ implements <a href="../../../../com/opengamma/strata/product/Position.html" titl
 </td>
 </tr>
 <tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#getProduct--">getProduct</a></span>()</code>
+<div class="block">Gets the product of the security that was traded.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#getQuantity--">getQuantity</a></span>()</code>
 <div class="block">Gets the net quantity of the security.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#getSecurity--">getSecurity</a></span>()</code>
 <div class="block">Gets the underlying security.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#getSecurityId--">getSecurityId</a></span>()</code>
-<div class="block">Gets the security identifier.</div>
+<div class="block">Gets the identifier of the underlying security.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#getShortQuantity--">getShortQuantity</a></span>()</code>
 <div class="block">Gets the short quantity of the security.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.Meta.html" title="class in com.opengamma.strata.product">GenericSecurityPosition.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#meta--">meta</a></span>()</code>
 <div class="block">The meta-bean for <code>GenericSecurityPosition</code>.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.Meta.html" title="class in com.opengamma.strata.product">GenericSecurityPosition.Meta</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#metaBean--">metaBean</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html" title="class in com.opengamma.strata.product">GenericSecurityPosition</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#ofLongShort-com.opengamma.strata.product.GenericSecurity-double-double-">ofLongShort</a></span>(<a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a>&nbsp;security,
            double&nbsp;longQuantity,
@@ -251,7 +257,7 @@ implements <a href="../../../../com/opengamma/strata/product/Position.html" titl
 <div class="block">Obtains an instance from the security, long quantity and short quantity.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html" title="class in com.opengamma.strata.product">GenericSecurityPosition</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#ofLongShort-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.GenericSecurity-double-double-">ofLongShort</a></span>(<a href="../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
            <a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a>&nbsp;security,
@@ -260,14 +266,14 @@ implements <a href="../../../../com/opengamma/strata/product/Position.html" titl
 <div class="block">Obtains an instance from position information, security, long quantity and short quantity.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html" title="class in com.opengamma.strata.product">GenericSecurityPosition</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#ofNet-com.opengamma.strata.product.GenericSecurity-double-">ofNet</a></span>(<a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a>&nbsp;security,
      double&nbsp;netQuantity)</code>
 <div class="block">Obtains an instance from the security and net quantity.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html" title="class in com.opengamma.strata.product">GenericSecurityPosition</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#ofNet-com.opengamma.strata.product.PositionInfo-com.opengamma.strata.product.GenericSecurity-double-">ofNet</a></span>(<a href="../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;positionInfo,
      <a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a>&nbsp;security,
@@ -275,36 +281,48 @@ implements <a href="../../../../com/opengamma/strata/product/Position.html" titl
 <div class="block">Obtains an instance from position information, security and net quantity.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/product/PortfolioItemSummary.html" title="class in com.opengamma.strata.product">PortfolioItemSummary</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#summarize--">summarize</a></span>()</code>
 <div class="block">Summarizes the portfolio item.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.Builder.html" title="class in com.opengamma.strata.product">GenericSecurityPosition.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#toBuilder--">toBuilder</a></span>()</code>
 <div class="block">Returns a builder that allows this bean to be mutated.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<tr id="i19" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#toString--">toString</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i20" class="altColor">
+<td class="colFirst"><code><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html" title="class in com.opengamma.strata.product">GenericSecurityPosition</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></span>(<a href="../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<div class="block">Returns an instance with the specified info.</div>
+</td>
+</tr>
+<tr id="i21" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html" title="class in com.opengamma.strata.product">GenericSecurityPosition</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html#withQuantity-double-">withQuantity</a></span>(double&nbsp;quantity)</code>
+<div class="block">Returns an instance with the specified quantity.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.Position">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.PortfolioItem">
 <!--   -->
 </a>
-<h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.<a href="../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a></h3>
-<code><a href="../../../../com/opengamma/strata/product/Position.html#getId--">getId</a></code></li>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.<a href="../../../../com/opengamma/strata/product/PortfolioItem.html" title="interface in com.opengamma.strata.product">PortfolioItem</a></h3>
+<code><a href="../../../../com/opengamma/strata/product/PortfolioItem.html#getId--">getId</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.org.joda.beans.Bean">
@@ -360,7 +378,9 @@ implements <a href="../../../../com/opengamma/strata/product/Position.html" titl
                                             double&nbsp;netQuantity)</pre>
 <div class="block">Obtains an instance from position information, security and net quantity.
  <p>
- The net quantity is the long quantity minus the short quantity, which may be negative.</div>
+ The net quantity is the long quantity minus the short quantity, which may be negative.
+ If the quantity is positive it is treated as a long quantity.
+ Otherwise it is treated as a short quantity.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>positionInfo</code> - the position information</dd>
@@ -382,7 +402,9 @@ implements <a href="../../../../com/opengamma/strata/product/Position.html" titl
                                                   double&nbsp;shortQuantity)</pre>
 <div class="block">Obtains an instance from the security, long quantity and short quantity.
  <p>
- The long quantity and short quantity must be zero or positive, not negative.</div>
+ The long quantity and short quantity must be zero or positive, not negative.
+ In many cases, only a long quantity or short quantity will be present with the other set to zero.
+ However it is also possible for both to be non-zero, allowing long and short positions to be treated separately.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>security</code> - the underlying security</dd>
@@ -403,7 +425,11 @@ implements <a href="../../../../com/opengamma/strata/product/Position.html" titl
                                                   <a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a>&nbsp;security,
                                                   double&nbsp;longQuantity,
                                                   double&nbsp;shortQuantity)</pre>
-<div class="block">Obtains an instance from position information, security, long quantity and short quantity.</div>
+<div class="block">Obtains an instance from position information, security, long quantity and short quantity.
+ <p>
+ The long quantity and short quantity must be zero or positive, not negative.
+ In many cases, only a long quantity or short quantity will be present with the other set to zero.
+ However it is also possible for both to be non-zero, allowing long and short positions to be treated separately.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>positionInfo</code> - the position information</dd>
@@ -422,16 +448,38 @@ implements <a href="../../../../com/opengamma/strata/product/Position.html" titl
 <li class="blockList">
 <h4>getSecurityId</h4>
 <pre>public&nbsp;<a href="../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;getSecurityId()</pre>
-<div class="block">Gets the security identifier.
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../com/opengamma/strata/product/Position.html#getSecurityId--">Position</a></code></span></div>
+<div class="block">Gets the identifier of the underlying security.
  <p>
  This identifier uniquely identifies the security within the system.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../com/opengamma/strata/product/Position.html#getSecurityId--">getSecurityId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a></code></dd>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html#getSecurityId--">getSecurityId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html" title="interface in com.opengamma.strata.product">SecuritizedProductPortfolioItem</a>&lt;<a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a>&gt;</code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPosition.html#getSecurityId--">getSecurityId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPosition.html" title="interface in com.opengamma.strata.product">SecuritizedProductPosition</a>&lt;<a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a>&gt;</code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../com/opengamma/strata/product/SecurityQuantity.html#getSecurityId--">getSecurityId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/SecurityQuantity.html" title="interface in com.opengamma.strata.product">SecurityQuantity</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the security identifier</dd>
+</dl>
+</li>
+</ul>
+<a name="getProduct--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getProduct</h4>
+<pre>public&nbsp;<a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a>&nbsp;getProduct()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html#getProduct--">SecuritizedProductPortfolioItem</a></code></span></div>
+<div class="block">Gets the product of the security that was traded.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html#getProduct--">getProduct</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html" title="interface in com.opengamma.strata.product">SecuritizedProductPortfolioItem</a>&lt;<a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a>&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the product</dd>
 </dl>
 </li>
 </ul>
@@ -442,10 +490,13 @@ implements <a href="../../../../com/opengamma/strata/product/Position.html" titl
 <li class="blockList">
 <h4>getCurrency</h4>
 <pre>public&nbsp;<a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;getCurrency()</pre>
-<div class="block">Gets the currency of the trade.
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html#getCurrency--">SecuritizedProductPortfolioItem</a></code></span></div>
+<div class="block">Gets the currency of the position.
  <p>
- This is the currency of the security.</div>
+ This is typically the same as the currency of the product.</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html#getCurrency--">getCurrency</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html" title="interface in com.opengamma.strata.product">SecuritizedProductPortfolioItem</a>&lt;<a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a>&gt;</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the trading currency</dd>
 </dl>
@@ -458,13 +509,12 @@ implements <a href="../../../../com/opengamma/strata/product/Position.html" titl
 <li class="blockList">
 <h4>getQuantity</h4>
 <pre>public&nbsp;double&nbsp;getQuantity()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../com/opengamma/strata/product/Position.html#getQuantity--">Position</a></code></span></div>
 <div class="block">Gets the net quantity of the security.
  <p>
  This returns the <i>net</i> quantity of the underlying security.
  The result is positive if the net position is <i>long</i> and negative
- if the net position is <i>short</i>.
- <p>
- This is calculated by subtracting the short quantity from the long quantity.</div>
+ if the net position is <i>short</i>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../com/opengamma/strata/product/Position.html#getQuantity--">getQuantity</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a></code></dd>
@@ -472,6 +522,50 @@ implements <a href="../../../../com/opengamma/strata/product/Position.html" titl
 <dd><code><a href="../../../../com/opengamma/strata/product/SecurityQuantity.html#getQuantity--">getQuantity</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/SecurityQuantity.html" title="interface in com.opengamma.strata.product">SecurityQuantity</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the net quantity of the underlying security</dd>
+</dl>
+</li>
+</ul>
+<a name="withInfo-com.opengamma.strata.product.PositionInfo-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withInfo</h4>
+<pre>public&nbsp;<a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html" title="class in com.opengamma.strata.product">GenericSecurityPosition</a>&nbsp;withInfo(<a href="../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">SecuritizedProductPosition</a></code></span></div>
+<div class="block">Returns an instance with the specified info.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/opengamma/strata/product/Position.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPosition.html" title="interface in com.opengamma.strata.product">SecuritizedProductPosition</a>&lt;<a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a>&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>info</code> - the new info</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the instance with the specified info</dd>
+</dl>
+</li>
+</ul>
+<a name="withQuantity-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withQuantity</h4>
+<pre>public&nbsp;<a href="../../../../com/opengamma/strata/product/GenericSecurityPosition.html" title="class in com.opengamma.strata.product">GenericSecurityPosition</a>&nbsp;withQuantity(double&nbsp;quantity)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPosition.html#withQuantity-double-">SecuritizedProductPosition</a></code></span></div>
+<div class="block">Returns an instance with the specified quantity.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/opengamma/strata/product/Position.html#withQuantity-double-">withQuantity</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html#withQuantity-double-">withQuantity</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html" title="interface in com.opengamma.strata.product">SecuritizedProductPortfolioItem</a>&lt;<a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a>&gt;</code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPosition.html#withQuantity-double-">withQuantity</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/SecuritizedProductPosition.html" title="interface in com.opengamma.strata.product">SecuritizedProductPosition</a>&lt;<a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a>&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>quantity</code> - the new quantity</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the instance with the specified quantity</dd>
 </dl>
 </li>
 </ul>
@@ -549,6 +643,8 @@ implements <a href="../../../../com/opengamma/strata/product/Position.html" titl
  This allows additional information to be attached to the position.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/opengamma/strata/product/PortfolioItem.html#getInfo--">getInfo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/PortfolioItem.html" title="interface in com.opengamma.strata.product">PortfolioItem</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../com/opengamma/strata/product/Position.html#getInfo--">getInfo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value of the property, not null</dd>
@@ -623,10 +719,10 @@ implements <a href="../../../../com/opengamma/strata/product/Position.html" titl
 <ul class="blockList">
 <li class="blockList">
 <h4>equals</h4>
-<pre>public&nbsp;boolean&nbsp;equals(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</pre>
+<pre>public&nbsp;boolean&nbsp;equals(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -639,7 +735,7 @@ implements <a href="../../../../com/opengamma/strata/product/Position.html" titl
 <pre>public&nbsp;int&nbsp;hashCode()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -649,10 +745,10 @@ implements <a href="../../../../com/opengamma/strata/product/Position.html" titl
 <ul class="blockListLast">
 <li class="blockList">
 <h4>toString</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toString()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toString()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
 </dl>
 </li>
 </ul>

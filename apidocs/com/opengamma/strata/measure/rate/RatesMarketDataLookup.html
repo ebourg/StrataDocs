@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":18,"i6":18,"i7":17,"i8":17,"i9":17,"i10":17,"i11":17,"i12":17,"i13":18,"i14":6,"i15":18,"i16":18,"i17":6};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":18,"i6":18,"i7":18,"i8":18,"i9":17,"i10":17,"i11":17,"i12":17,"i13":17,"i14":17,"i15":18,"i16":6,"i17":18,"i18":18,"i19":6};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -102,12 +102,12 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Superinterfaces:</dt>
-<dd><a href="../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a></dd>
+<dd><a href="../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>, <a href="../../../../../com/opengamma/strata/calc/runner/FxRateLookup.html" title="interface in com.opengamma.strata.calc.runner">FxRateLookup</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public interface <span class="typeNameLabel">RatesMarketDataLookup</span>
-extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a></pre>
+extends <a href="../../../../../com/opengamma/strata/calc/runner/FxRateLookup.html" title="interface in com.opengamma.strata.calc.runner">FxRateLookup</a>, <a href="../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a></pre>
 <div class="block">The lookup that provides access to rates in market data.
  <p>
  The rates market lookup provides access to discount curves and forward curves.
@@ -168,95 +168,114 @@ extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationPara
 </td>
 </tr>
 <tr id="i5" class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/calc/runner/FxRateLookup.html" title="interface in com.opengamma.strata.calc.runner">FxRateLookup</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#getFxRateLookup--">getFxRateLookup</a></span>()</code>
+<div class="block">Gets the underlying FX lookup.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/data/ObservableSource.html" title="class in com.opengamma.strata.data">ObservableSource</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#getObservableSource--">getObservableSource</a></span>()</code>
+<div class="block">Gets the observable source.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketData.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketData</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#marketDataView-com.opengamma.strata.data.MarketData-">marketDataView</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData)</code>
 <div class="block">Obtains a filtered view of the complete set of market data.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/measure/rate/RatesScenarioMarketData.html" title="interface in com.opengamma.strata.measure.rate">RatesScenarioMarketData</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#marketDataView-com.opengamma.strata.data.scenario.ScenarioMarketData-">marketDataView</a></span>(<a href="../../../../../com/opengamma/strata/data/scenario/ScenarioMarketData.html" title="interface in com.opengamma.strata.data.scenario">ScenarioMarketData</a>&nbsp;marketData)</code>
 <div class="block">Obtains a filtered view of the complete set of market data.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#of-com.opengamma.strata.market.curve.CurveGroup-">of</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&nbsp;curveGroup)</code>
-<div class="block">Obtains an instance based on a curve group.</div>
-</td>
-</tr>
-<tr id="i8" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#of-com.opengamma.strata.market.curve.CurveGroupDefinition-">of</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&nbsp;curveGroupDefinition)</code>
-<div class="block">Obtains an instance based on a curve group definition.</div>
-</td>
-</tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#of-com.opengamma.strata.market.curve.CurveGroupDefinition-com.opengamma.strata.data.ObservableSource-com.opengamma.strata.measure.rate.FxRateLookup-">of</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&nbsp;curveGroupDefinition,
-  <a href="../../../../../com/opengamma/strata/data/ObservableSource.html" title="class in com.opengamma.strata.data">ObservableSource</a>&nbsp;observableSource,
-  <a href="../../../../../com/opengamma/strata/measure/rate/FxRateLookup.html" title="interface in com.opengamma.strata.measure.rate">FxRateLookup</a>&nbsp;fxLookup)</code>
-<div class="block">Obtains an instance based on a curve group definition.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#of-com.opengamma.strata.market.curve.CurveGroupName-java.util.Map-java.util.Map-">of</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupName.html" title="class in com.opengamma.strata.market.curve">CurveGroupName</a>&nbsp;groupName,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&gt;&nbsp;discountCurves,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;? extends <a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&gt;&nbsp;forwardCurves)</code>
+<div class="block">Obtains an instance based on a group of discount and forward curves.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#of-com.opengamma.strata.market.curve.CurveGroupName-java.util.Map-java.util.Map-">of</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupName.html" title="class in com.opengamma.strata.market.curve">CurveGroupName</a>&nbsp;groupName,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&gt;&nbsp;discountCurves,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;? extends <a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&gt;&nbsp;forwardCurves)</code>
-<div class="block">Obtains an instance based on a group of discount and forward curves.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#of-java.util.Map-java.util.Map-">of</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;discountCurveIds,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;forwardCurveIds)</code>
+<div class="block">Obtains an instance based on a map of discount and forward curve identifiers.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#of-java.util.Map-java.util.Map-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;discountCurveIds,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;forwardCurveIds)</code>
-<div class="block">Obtains an instance based on a map of discount and forward curve identifiers.</div>
-</td>
-</tr>
-<tr id="i12" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#of-java.util.Map-java.util.Map-com.opengamma.strata.data.ObservableSource-com.opengamma.strata.measure.rate.FxRateLookup-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;discountCurveIds,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;forwardCurveIds,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#of-java.util.Map-java.util.Map-com.opengamma.strata.data.ObservableSource-com.opengamma.strata.calc.runner.FxRateLookup-">of</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;discountCurveIds,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;forwardCurveIds,
   <a href="../../../../../com/opengamma/strata/data/ObservableSource.html" title="class in com.opengamma.strata.data">ObservableSource</a>&nbsp;obsSource,
-  <a href="../../../../../com/opengamma/strata/measure/rate/FxRateLookup.html" title="interface in com.opengamma.strata.measure.rate">FxRateLookup</a>&nbsp;fxLookup)</code>
+  <a href="../../../../../com/opengamma/strata/calc/runner/FxRateLookup.html" title="interface in com.opengamma.strata.calc.runner">FxRateLookup</a>&nbsp;fxLookup)</code>
 <div class="block">Obtains an instance based on a map of discount and forward curve identifiers,
  specifying the source of FX rates.</div>
 </td>
 </tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#of-com.opengamma.strata.market.curve.RatesCurveGroup-">of</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/RatesCurveGroup.html" title="class in com.opengamma.strata.market.curve">RatesCurveGroup</a>&nbsp;curveGroup)</code>
+<div class="block">Obtains an instance based on a curve group.</div>
+</td>
+</tr>
 <tr id="i13" class="rowColor">
-<td class="colFirst"><code>default <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;</code></td>
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#of-com.opengamma.strata.market.curve.RatesCurveGroupDefinition-">of</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/RatesCurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">RatesCurveGroupDefinition</a>&nbsp;curveGroupDefinition)</code>
+<div class="block">Obtains an instance based on a curve group definition.</div>
+</td>
+</tr>
+<tr id="i14" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#of-com.opengamma.strata.market.curve.RatesCurveGroupDefinition-com.opengamma.strata.data.ObservableSource-com.opengamma.strata.calc.runner.FxRateLookup-">of</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/RatesCurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">RatesCurveGroupDefinition</a>&nbsp;curveGroupDefinition,
+  <a href="../../../../../com/opengamma/strata/data/ObservableSource.html" title="class in com.opengamma.strata.data">ObservableSource</a>&nbsp;observableSource,
+  <a href="../../../../../com/opengamma/strata/calc/runner/FxRateLookup.html" title="interface in com.opengamma.strata.calc.runner">FxRateLookup</a>&nbsp;fxLookup)</code>
+<div class="block">Obtains an instance based on a curve group definition.</div>
+</td>
+</tr>
+<tr id="i15" class="rowColor">
+<td class="colFirst"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#queryType--">queryType</a></span>()</code>
 <div class="block">Gets the type that the lookup will be queried by.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#ratesProvider-com.opengamma.strata.data.MarketData-">ratesProvider</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData)</code>
 <div class="block">Obtains a rates provider based on the specified market data.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/calc/runner/FunctionRequirements.html" title="class in com.opengamma.strata.calc.runner">FunctionRequirements</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#requirements-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.basics.index.Index...-">requirements</a></span>(<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency,
             <a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>...&nbsp;indices)</code>
 <div class="block">Creates market data requirements for the specified currency and indices.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/calc/runner/FunctionRequirements.html" title="class in com.opengamma.strata.calc.runner">FunctionRequirements</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#requirements-java.util.Set-">requirements</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;currencies)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#requirements-java.util.Set-">requirements</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;currencies)</code>
 <div class="block">Creates market data requirements for the specified currencies.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/calc/runner/FunctionRequirements.html" title="class in com.opengamma.strata.calc.runner">FunctionRequirements</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#requirements-java.util.Set-java.util.Set-">requirements</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;currencies,
-            <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;? extends <a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;indices)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html#requirements-java.util.Set-java.util.Set-">requirements</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;currencies,
+            <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;? extends <a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;indices)</code>
 <div class="block">Creates market data requirements for the specified currencies and indices.</div>
 </td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.calc.runner.FxRateLookup">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.calc.runner.<a href="../../../../../com/opengamma/strata/calc/runner/FxRateLookup.html" title="interface in com.opengamma.strata.calc.runner">FxRateLookup</a></h3>
+<code><a href="../../../../../com/opengamma/strata/calc/runner/FxRateLookup.html#ofMatrix--">ofMatrix</a>, <a href="../../../../../com/opengamma/strata/calc/runner/FxRateLookup.html#ofMatrix-com.opengamma.strata.data.FxMatrixId-">ofMatrix</a>, <a href="../../../../../com/opengamma/strata/calc/runner/FxRateLookup.html#ofRates--">ofRates</a>, <a href="../../../../../com/opengamma/strata/calc/runner/FxRateLookup.html#ofRates-com.opengamma.strata.basics.currency.Currency-">ofRates</a>, <a href="../../../../../com/opengamma/strata/calc/runner/FxRateLookup.html#ofRates-com.opengamma.strata.basics.currency.Currency-com.opengamma.strata.data.ObservableSource-">ofRates</a>, <a href="../../../../../com/opengamma/strata/calc/runner/FxRateLookup.html#ofRates-com.opengamma.strata.data.ObservableSource-">ofRates</a></code></li>
+</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.calc.runner.CalculationParameter">
 <!--   -->
@@ -284,8 +303,8 @@ extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationPara
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;of(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;discountCurveIds,
-                                <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;forwardCurveIds)</pre>
+<pre>static&nbsp;<a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;of(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;discountCurveIds,
+                                <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;forwardCurveIds)</pre>
 <div class="block">Obtains an instance based on a map of discount and forward curve identifiers.
  <p>
  The discount and forward curves refer to the curve identifier.
@@ -300,16 +319,16 @@ extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationPara
 </dl>
 </li>
 </ul>
-<a name="of-java.util.Map-java.util.Map-com.opengamma.strata.data.ObservableSource-com.opengamma.strata.measure.rate.FxRateLookup-">
+<a name="of-java.util.Map-java.util.Map-com.opengamma.strata.data.ObservableSource-com.opengamma.strata.calc.runner.FxRateLookup-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;of(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;discountCurveIds,
-                                <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;forwardCurveIds,
+<pre>static&nbsp;<a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;of(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;discountCurveIds,
+                                <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;forwardCurveIds,
                                 <a href="../../../../../com/opengamma/strata/data/ObservableSource.html" title="class in com.opengamma.strata.data">ObservableSource</a>&nbsp;obsSource,
-                                <a href="../../../../../com/opengamma/strata/measure/rate/FxRateLookup.html" title="interface in com.opengamma.strata.measure.rate">FxRateLookup</a>&nbsp;fxLookup)</pre>
+                                <a href="../../../../../com/opengamma/strata/calc/runner/FxRateLookup.html" title="interface in com.opengamma.strata.calc.runner">FxRateLookup</a>&nbsp;fxLookup)</pre>
 <div class="block">Obtains an instance based on a map of discount and forward curve identifiers,
  specifying the source of FX rates.
  <p>
@@ -336,8 +355,8 @@ extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationPara
 <li class="blockList">
 <h4>of</h4>
 <pre>static&nbsp;<a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupName.html" title="class in com.opengamma.strata.market.curve">CurveGroupName</a>&nbsp;groupName,
-                                <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&gt;&nbsp;discountCurves,
-                                <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;? extends <a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&gt;&nbsp;forwardCurves)</pre>
+                                <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&gt;&nbsp;discountCurves,
+                                <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;? extends <a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>,<a href="../../../../../com/opengamma/strata/market/curve/CurveName.html" title="class in com.opengamma.strata.market.curve">CurveName</a>&gt;&nbsp;forwardCurves)</pre>
 <div class="block">Obtains an instance based on a group of discount and forward curves.
  <p>
  The discount and forward curves refer to the curve name.
@@ -353,13 +372,13 @@ extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationPara
 </dl>
 </li>
 </ul>
-<a name="of-com.opengamma.strata.market.curve.CurveGroup-">
+<a name="of-com.opengamma.strata.market.curve.RatesCurveGroup-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroup.html" title="class in com.opengamma.strata.market.curve">CurveGroup</a>&nbsp;curveGroup)</pre>
+<pre>static&nbsp;<a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/market/curve/RatesCurveGroup.html" title="class in com.opengamma.strata.market.curve">RatesCurveGroup</a>&nbsp;curveGroup)</pre>
 <div class="block">Obtains an instance based on a curve group.
  <p>
  The discount curves and forward curves from the group are extracted and used to build the lookup.</div>
@@ -371,13 +390,13 @@ extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationPara
 </dl>
 </li>
 </ul>
-<a name="of-com.opengamma.strata.market.curve.CurveGroupDefinition-">
+<a name="of-com.opengamma.strata.market.curve.RatesCurveGroupDefinition-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&nbsp;curveGroupDefinition)</pre>
+<pre>static&nbsp;<a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/market/curve/RatesCurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">RatesCurveGroupDefinition</a>&nbsp;curveGroupDefinition)</pre>
 <div class="block">Obtains an instance based on a curve group definition.
  <p>
  The discount curves and forward curves from the group are extracted and used to build the lookup.</div>
@@ -389,15 +408,15 @@ extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationPara
 </dl>
 </li>
 </ul>
-<a name="of-com.opengamma.strata.market.curve.CurveGroupDefinition-com.opengamma.strata.data.ObservableSource-com.opengamma.strata.measure.rate.FxRateLookup-">
+<a name="of-com.opengamma.strata.market.curve.RatesCurveGroupDefinition-com.opengamma.strata.data.ObservableSource-com.opengamma.strata.calc.runner.FxRateLookup-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">CurveGroupDefinition</a>&nbsp;curveGroupDefinition,
+<pre>static&nbsp;<a href="../../../../../com/opengamma/strata/measure/rate/RatesMarketDataLookup.html" title="interface in com.opengamma.strata.measure.rate">RatesMarketDataLookup</a>&nbsp;of(<a href="../../../../../com/opengamma/strata/market/curve/RatesCurveGroupDefinition.html" title="class in com.opengamma.strata.market.curve">RatesCurveGroupDefinition</a>&nbsp;curveGroupDefinition,
                                 <a href="../../../../../com/opengamma/strata/data/ObservableSource.html" title="class in com.opengamma.strata.data">ObservableSource</a>&nbsp;observableSource,
-                                <a href="../../../../../com/opengamma/strata/measure/rate/FxRateLookup.html" title="interface in com.opengamma.strata.measure.rate">FxRateLookup</a>&nbsp;fxLookup)</pre>
+                                <a href="../../../../../com/opengamma/strata/calc/runner/FxRateLookup.html" title="interface in com.opengamma.strata.calc.runner">FxRateLookup</a>&nbsp;fxLookup)</pre>
 <div class="block">Obtains an instance based on a curve group definition.
  <p>
  The discount curves and forward curves from the group are extracted and used to build the lookup.</div>
@@ -417,7 +436,7 @@ extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationPara
 <ul class="blockList">
 <li class="blockList">
 <h4>queryType</h4>
-<pre>default&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;&nbsp;queryType()</pre>
+<pre>default&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a>&gt;&nbsp;queryType()</pre>
 <div class="block">Gets the type that the lookup will be queried by.
  <p>
  This returns <code>RatesMarketLookup.class</code>.
@@ -426,6 +445,8 @@ extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationPara
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html#queryType--">queryType</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/CalculationParameter.html" title="interface in com.opengamma.strata.calc.runner">CalculationParameter</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/calc/runner/FxRateLookup.html#queryType--">queryType</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/FxRateLookup.html" title="interface in com.opengamma.strata.calc.runner">FxRateLookup</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the type of the parameter implementation</dd>
 </dl>
@@ -462,7 +483,7 @@ extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationPara
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the set of market data identifiers</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the currency is not found</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the currency is not found</dd>
 </dl>
 </li>
 </ul>
@@ -497,7 +518,7 @@ extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationPara
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the set of market data identifiers</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the index is not found</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the index is not found</dd>
 </dl>
 </li>
 </ul>
@@ -507,7 +528,7 @@ extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationPara
 <ul class="blockList">
 <li class="blockList">
 <h4>requirements</h4>
-<pre>default&nbsp;<a href="../../../../../com/opengamma/strata/calc/runner/FunctionRequirements.html" title="class in com.opengamma.strata.calc.runner">FunctionRequirements</a>&nbsp;requirements(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;currencies)</pre>
+<pre>default&nbsp;<a href="../../../../../com/opengamma/strata/calc/runner/FunctionRequirements.html" title="class in com.opengamma.strata.calc.runner">FunctionRequirements</a>&nbsp;requirements(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;currencies)</pre>
 <div class="block">Creates market data requirements for the specified currencies.
  <p>
  This is used when discount factors are required, but forward curves are not.</div>
@@ -517,7 +538,7 @@ extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationPara
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the requirements</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if unable to create requirements</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if unable to create requirements</dd>
 </dl>
 </li>
 </ul>
@@ -537,7 +558,7 @@ extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationPara
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the requirements</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if unable to create requirements</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if unable to create requirements</dd>
 </dl>
 </li>
 </ul>
@@ -547,8 +568,8 @@ extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationPara
 <ul class="blockList">
 <li class="blockList">
 <h4>requirements</h4>
-<pre><a href="../../../../../com/opengamma/strata/calc/runner/FunctionRequirements.html" title="class in com.opengamma.strata.calc.runner">FunctionRequirements</a>&nbsp;requirements(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;currencies,
-                                  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;? extends <a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;indices)</pre>
+<pre><a href="../../../../../com/opengamma/strata/calc/runner/FunctionRequirements.html" title="class in com.opengamma.strata.calc.runner">FunctionRequirements</a>&nbsp;requirements(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;currencies,
+                                  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;? extends <a href="../../../../../com/opengamma/strata/basics/index/Index.html" title="interface in com.opengamma.strata.basics.index">Index</a>&gt;&nbsp;indices)</pre>
 <div class="block">Creates market data requirements for the specified currencies and indices.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -557,7 +578,7 @@ extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationPara
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the requirements</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if unable to create requirements</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if unable to create requirements</dd>
 </dl>
 </li>
 </ul>
@@ -629,7 +650,7 @@ extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationPara
 <a name="fxRateProvider-com.opengamma.strata.data.MarketData-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>fxRateProvider</h4>
 <pre><a href="../../../../../com/opengamma/strata/basics/currency/FxRateProvider.html" title="interface in com.opengamma.strata.basics.currency">FxRateProvider</a>&nbsp;fxRateProvider(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData)</pre>
@@ -646,10 +667,40 @@ extends <a href="../../../../../com/opengamma/strata/calc/runner/CalculationPara
   RatesProvider provider = view.fxRateProvider();
  </pre></div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/calc/runner/FxRateLookup.html#fxRateProvider-com.opengamma.strata.data.MarketData-">fxRateProvider</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/calc/runner/FxRateLookup.html" title="interface in com.opengamma.strata.calc.runner">FxRateLookup</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>marketData</code> - the complete set of market data for one scenario</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the FX rate provider</dd>
+</dl>
+</li>
+</ul>
+<a name="getObservableSource--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getObservableSource</h4>
+<pre>default&nbsp;<a href="../../../../../com/opengamma/strata/data/ObservableSource.html" title="class in com.opengamma.strata.data">ObservableSource</a>&nbsp;getObservableSource()</pre>
+<div class="block">Gets the observable source.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the observable source</dd>
+</dl>
+</li>
+</ul>
+<a name="getFxRateLookup--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getFxRateLookup</h4>
+<pre>default&nbsp;<a href="../../../../../com/opengamma/strata/calc/runner/FxRateLookup.html" title="interface in com.opengamma.strata.calc.runner">FxRateLookup</a>&nbsp;getFxRateLookup()</pre>
+<div class="block">Gets the underlying FX lookup.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the underlying FX lookup</dd>
 </dl>
 </li>
 </ul>

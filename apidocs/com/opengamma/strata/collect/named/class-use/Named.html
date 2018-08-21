@@ -405,7 +405,7 @@
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/date/ImmutableHolidayCalendar.html" title="class in com.opengamma.strata.basics.date">ImmutableHolidayCalendar</a></span></code>
-<div class="block">A holiday calendar implementation based on an immutable set of holiday dates and weekends.</div>
+<div class="block">An immutable holiday calendar implementation.</div>
 </td>
 </tr>
 </tbody>
@@ -673,17 +673,23 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/collect/named/CombinedExtendedEnum.html" title="class in com.opengamma.strata.collect.named">CombinedExtendedEnum</a>&lt;T extends <a href="../../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a>&gt;</span></code>
+<div class="block">Combines multiple extended enums into one lookup.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/collect/named/ExtendedEnum.html" title="class in com.opengamma.strata.collect.named">ExtendedEnum</a>&lt;T extends <a href="../../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a>&gt;</span></code>
 <div class="block">Manager for extended enums controlled by code or configuration.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/collect/named/ExtendedEnum.ExternalEnumNames.html" title="class in com.opengamma.strata.collect.named">ExtendedEnum.ExternalEnumNames</a>&lt;T extends <a href="../../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a>&gt;</span></code>
 <div class="block">Maps names used by external systems to the standard name used here.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/collect/named/NamedLookup.html" title="interface in com.opengamma.strata.collect.named">NamedLookup</a>&lt;T extends <a href="../../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a>&gt;</span></code>
 <div class="block">A lookup for named instances.</div>
@@ -715,14 +721,20 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>static &lt;R extends <a href="../../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a>&gt;<br><a href="../../../../../../com/opengamma/strata/collect/named/ExtendedEnum.html" title="class in com.opengamma.strata.collect.named">ExtendedEnum</a>&lt;R&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ExtendedEnum.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/collect/named/ExtendedEnum.html#of-java.lang.Class-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;R&gt;&nbsp;type)</code>
+<td class="colLast"><span class="typeNameLabel">ExtendedEnum.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/collect/named/ExtendedEnum.html#of-java.lang.Class-">of</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;R&gt;&nbsp;type)</code>
 <div class="block">Obtains an extended enum instance.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static &lt;R extends <a href="../../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a>&gt;<br><a href="../../../../../../com/opengamma/strata/collect/named/CombinedExtendedEnum.html" title="class in com.opengamma.strata.collect.named">CombinedExtendedEnum</a>&lt;R&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">CombinedExtendedEnum.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/collect/named/CombinedExtendedEnum.html#of-java.lang.Class-">of</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;R&gt;&nbsp;type)</code>
+<div class="block">Obtains a combined extended enum instance.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static &lt;T extends <a href="../../../../../../com/opengamma/strata/collect/named/Named.html" title="interface in com.opengamma.strata.collect.named">Named</a>&gt;<br>T</code></td>
-<td class="colLast"><span class="typeNameLabel">Named.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/collect/named/Named.html#of-java.lang.Class-java.lang.String-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;type,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<td class="colLast"><span class="typeNameLabel">Named.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/collect/named/Named.html#of-java.lang.Class-java.lang.String-">of</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;type,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Obtains an instance of the specified named type by name.</div>
 </td>
 </tr>
@@ -1206,32 +1218,20 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/PortfolioItemType.html" title="enum in com.opengamma.strata.product">PortfolioItemType</a></span></code>
-<div class="block">The type of a portfolio item.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/AttributeType.html" title="class in com.opengamma.strata.product">AttributeType</a>&lt;T&gt;</span></code>
+<div class="block">The type that provides meaning to an attribute.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/PositionAttributeType.html" title="class in com.opengamma.strata.product">PositionAttributeType</a>&lt;T&gt;</span></code>
-<div class="block">The type that provides meaning to a position attribute.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/PortfolioItemType.html" title="enum in com.opengamma.strata.product">PortfolioItemType</a></span></code>
+<div class="block">The type of a portfolio item.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/ProductType.html" title="class in com.opengamma.strata.product">ProductType</a></span></code>
 <div class="block">The type of a portfolio item.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/SecurityAttributeType.html" title="class in com.opengamma.strata.product">SecurityAttributeType</a>&lt;T&gt;</span></code>
-<div class="block">The type that provides meaning to a security attribute.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/TradeAttributeType.html" title="class in com.opengamma.strata.product">TradeAttributeType</a>&lt;T&gt;</span></code>
-<div class="block">The type that provides meaning to a trade attribute.</div>
 </td>
 </tr>
 </tbody>
@@ -1250,11 +1250,17 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/BillYieldConvention.html" title="enum in com.opengamma.strata.product.bond">BillYieldConvention</a></span></code>
+<div class="block">A convention defining how yield is computed for a bill.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondYieldConvention.html" title="enum in com.opengamma.strata.product.bond">CapitalIndexedBondYieldConvention</a></span></code>
 <div class="block">A convention defining accrued interest calculation type for inflation bond securities.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/FixedCouponBondYieldConvention.html" title="enum in com.opengamma.strata.product.bond">FixedCouponBondYieldConvention</a></span></code>
 <div class="block">A convention defining accrued interest calculation type for a bond security.</div>

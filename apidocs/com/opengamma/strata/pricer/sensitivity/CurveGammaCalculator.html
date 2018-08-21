@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":9,"i4":9,"i5":9};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":9,"i5":9,"i6":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -98,7 +98,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
 <li>com.opengamma.strata.pricer.sensitivity.CurveGammaCalculator</li>
@@ -111,7 +111,7 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">CurveGammaCalculator</span>
-extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Computes the gamma-related values for the rates curve parameters.
  <p>
  By default the gamma is computed using a one basis-point shift and a forward finite difference.
@@ -160,38 +160,45 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CrossGammaParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CrossGammaParameterSensitivities</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/sensitivity/CurveGammaCalculator.html#calculateCrossGammaCrossCurve-com.opengamma.strata.pricer.rate.RatesProvider-java.util.function.Function-">calculateCrossGammaCrossCurve</a></span>(<a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                             <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>,<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;&nbsp;sensitivitiesFn)</code>
+                             <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>,<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;&nbsp;sensitivitiesFn)</code>
 <div class="block">Computes cross-curve gamma by applying finite difference method to curve delta.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CrossGammaParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CrossGammaParameterSensitivities</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/sensitivity/CurveGammaCalculator.html#calculateCrossGammaIntraCurve-com.opengamma.strata.pricer.rate.RatesProvider-java.util.function.Function-">calculateCrossGammaIntraCurve</a></span>(<a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                             <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>,<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;&nbsp;sensitivitiesFn)</code>
-<div class="block">Computes intra-curve cross gamma by applying finite difference method to curve delta.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/sensitivity/CurveGammaCalculator.html#calculateCrossGammaIntraCurve-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-java.util.function.Function-">calculateCrossGammaIntraCurve</a></span>(<a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                             <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">ImmutableLegalEntityDiscountingProvider</a>,<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;&nbsp;sensitivitiesFn)</code>
+<div class="block">Computes intra-curve cross gamma for bond curves by applying finite difference method to curve delta.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/sensitivity/CurveGammaCalculator.html#calculateSemiParallelGamma-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.basics.currency.Currency-java.util.function.Function-">calculateSemiParallelGamma</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;curve,
-                          <a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;curveCurrency,
-                          <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>,<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a>&gt;&nbsp;sensitivitiesFn)</code>
-<div class="block">Computes the "sum-of-column gamma" or "semi-parallel gamma" for a sensitivity function.</div>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CrossGammaParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CrossGammaParameterSensitivities</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/sensitivity/CurveGammaCalculator.html#calculateCrossGammaIntraCurve-com.opengamma.strata.pricer.rate.RatesProvider-java.util.function.Function-">calculateCrossGammaIntraCurve</a></span>(<a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
+                             <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>,<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;&nbsp;sensitivitiesFn)</code>
+<div class="block">Computes intra-curve cross gamma by applying finite difference method to curve delta.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/sensitivity/CurveGammaCalculator.html#calculateSemiParallelGamma-com.opengamma.strata.market.curve.Curve-com.opengamma.strata.basics.currency.Currency-java.util.function.Function-">calculateSemiParallelGamma</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;curve,
+                          <a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;curveCurrency,
+                          <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>,<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a>&gt;&nbsp;sensitivitiesFn)</code>
+<div class="block">Computes the "sum-of-column gamma" or "semi-parallel gamma" for a sensitivity function.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/pricer/sensitivity/CurveGammaCalculator.html" title="class in com.opengamma.strata.pricer.sensitivity">CurveGammaCalculator</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/sensitivity/CurveGammaCalculator.html#ofBackwardDifference-double-">ofBackwardDifference</a></span>(double&nbsp;shift)</code>
 <div class="block">Obtains an instance of the finite difference calculator using backward differencing.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/pricer/sensitivity/CurveGammaCalculator.html" title="class in com.opengamma.strata.pricer.sensitivity">CurveGammaCalculator</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/sensitivity/CurveGammaCalculator.html#ofCentralDifference-double-">ofCentralDifference</a></span>(double&nbsp;shift)</code>
 <div class="block">Obtains an instance of the finite difference calculator using central differencing.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/pricer/sensitivity/CurveGammaCalculator.html" title="class in com.opengamma.strata.pricer.sensitivity">CurveGammaCalculator</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/sensitivity/CurveGammaCalculator.html#ofForwardDifference-double-">ofForwardDifference</a></span>(double&nbsp;shift)</code>
 <div class="block">Obtains an instance of the finite difference calculator using forward differencing.</div>
@@ -202,8 +209,8 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 </li>
 </ul>
@@ -292,7 +299,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>calculateCrossGammaIntraCurve</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/param/CrossGammaParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CrossGammaParameterSensitivities</a>&nbsp;calculateCrossGammaIntraCurve(<a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                                                      <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>,<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;&nbsp;sensitivitiesFn)</pre>
+                                                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>,<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;&nbsp;sensitivitiesFn)</pre>
 <div class="block">Computes intra-curve cross gamma by applying finite difference method to curve delta.
  <p>
  This computes the intra-curve cross gamma, i.e., the second order sensitivities to individual curves. 
@@ -309,6 +316,29 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </dl>
 </li>
 </ul>
+<a name="calculateCrossGammaIntraCurve-com.opengamma.strata.pricer.bond.LegalEntityDiscountingProvider-java.util.function.Function-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>calculateCrossGammaIntraCurve</h4>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/param/CrossGammaParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CrossGammaParameterSensitivities</a>&nbsp;calculateCrossGammaIntraCurve(<a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html" title="interface in com.opengamma.strata.pricer.bond">LegalEntityDiscountingProvider</a>&nbsp;ratesProvider,
+                                                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.html" title="class in com.opengamma.strata.pricer.bond">ImmutableLegalEntityDiscountingProvider</a>,<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;&nbsp;sensitivitiesFn)</pre>
+<div class="block">Computes intra-curve cross gamma for bond curves by applying finite difference method to curve delta.
+ <p>
+ This computes the intra-curve cross gamma, i.e., the second order sensitivities to individual curves. 
+ Thus the sensitivity of a curve delta to another curve is not produced.
+ <p>
+ The underlying instruments must be single-currency, i.e., the curve currency must be the same as the sensitivity currency.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>ratesProvider</code> - the rates provider</dd>
+<dd><code>sensitivitiesFn</code> - the sensitivity function</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the cross gamma</dd>
+</dl>
+</li>
+</ul>
 <a name="calculateCrossGammaCrossCurve-com.opengamma.strata.pricer.rate.RatesProvider-java.util.function.Function-">
 <!--   -->
 </a>
@@ -316,7 +346,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>calculateCrossGammaCrossCurve</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/param/CrossGammaParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CrossGammaParameterSensitivities</a>&nbsp;calculateCrossGammaCrossCurve(<a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;ratesProvider,
-                                                                      <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>,<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;&nbsp;sensitivitiesFn)</pre>
+                                                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../com/opengamma/strata/pricer/rate/ImmutableRatesProvider.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProvider</a>,<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;&nbsp;sensitivitiesFn)</pre>
 <div class="block">Computes cross-curve gamma by applying finite difference method to curve delta.
  <p>
  This computes the cross-curve gamma, i.e., the second order sensitivities to full curves. 
@@ -341,7 +371,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <h4>calculateSemiParallelGamma</h4>
 <pre>public&nbsp;<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a>&nbsp;calculateSemiParallelGamma(<a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;curve,
                                                                <a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;curveCurrency,
-                                                               <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>,<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a>&gt;&nbsp;sensitivitiesFn)</pre>
+                                                               <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>,<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivity.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivity</a>&gt;&nbsp;sensitivitiesFn)</pre>
 <div class="block">Computes the "sum-of-column gamma" or "semi-parallel gamma" for a sensitivity function.
  <p>
  This implementation supports a single <a href="../../../../../com/opengamma/strata/market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve"><code>Curve</code></a> on the zero-coupon rates.

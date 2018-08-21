@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":18,"i1":6,"i2":6,"i3":6,"i4":18,"i5":6,"i6":18};
+var methods = {"i0":18,"i1":6,"i2":6,"i3":6,"i4":18,"i5":6,"i6":18,"i7":6,"i8":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -111,7 +111,7 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public interface <span class="typeNameLabel">EtdPosition</span>
-extends <a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>, <a href="../../../../../com/opengamma/strata/product/SecurityQuantity.html" title="interface in com.opengamma.strata.product">SecurityQuantity</a></pre>
+extends <a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a></pre>
 <div class="block">A position in an ETD, where the security is embedded ready for mark-to-market pricing.
  <p>
  This represents a position in an ETD, defined by long and short quantity.
@@ -182,13 +182,32 @@ extends <a href="../../../../../com/opengamma/strata/product/Position.html" titl
 <div class="block">Gets the type of the contract - future or option.</div>
 </td>
 </tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/etd/EtdPosition.html" title="interface in com.opengamma.strata.product.etd">EtdPosition</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdPosition.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</code>
+<div class="block">Returns an instance with the specified info.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/etd/EtdPosition.html" title="interface in com.opengamma.strata.product.etd">EtdPosition</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdPosition.html#withQuantity-double-">withQuantity</a></span>(double&nbsp;quantity)</code>
+<div class="block">Returns an instance with the specified quantity.</div>
+</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.Position">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.<a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a></h3>
-<code><a href="../../../../../com/opengamma/strata/product/Position.html#getId--">getId</a>, <a href="../../../../../com/opengamma/strata/product/Position.html#getInfo--">getInfo</a>, <a href="../../../../../com/opengamma/strata/product/Position.html#summarize--">summarize</a></code></li>
+<code><a href="../../../../../com/opengamma/strata/product/Position.html#getInfo--">getInfo</a>, <a href="../../../../../com/opengamma/strata/product/Position.html#summarize--">summarize</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.PortfolioItem">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.<a href="../../../../../com/opengamma/strata/product/PortfolioItem.html" title="interface in com.opengamma.strata.product">PortfolioItem</a></h3>
+<code><a href="../../../../../com/opengamma/strata/product/PortfolioItem.html#getId--">getId</a></code></li>
 </ul>
 </li>
 </ul>
@@ -312,7 +331,7 @@ extends <a href="../../../../../com/opengamma/strata/product/Position.html" titl
 <a name="getShortQuantity--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getShortQuantity</h4>
 <pre>double&nbsp;getShortQuantity()</pre>
@@ -323,6 +342,42 @@ extends <a href="../../../../../com/opengamma/strata/product/Position.html" titl
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the short quantity</dd>
+</dl>
+</li>
+</ul>
+<a name="withInfo-com.opengamma.strata.product.PositionInfo-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withInfo</h4>
+<pre><a href="../../../../../com/opengamma/strata/product/etd/EtdPosition.html" title="interface in com.opengamma.strata.product.etd">EtdPosition</a>&nbsp;withInfo(<a href="../../../../../com/opengamma/strata/product/PositionInfo.html" title="class in com.opengamma.strata.product">PositionInfo</a>&nbsp;info)</pre>
+<div class="block">Returns an instance with the specified info.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/product/Position.html#withInfo-com.opengamma.strata.product.PositionInfo-">withInfo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>info</code> - the new info</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the instance with the specified info</dd>
+</dl>
+</li>
+</ul>
+<a name="withQuantity-double-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>withQuantity</h4>
+<pre><a href="../../../../../com/opengamma/strata/product/etd/EtdPosition.html" title="interface in com.opengamma.strata.product.etd">EtdPosition</a>&nbsp;withQuantity(double&nbsp;quantity)</pre>
+<div class="block">Returns an instance with the specified quantity.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/opengamma/strata/product/Position.html#withQuantity-double-">withQuantity</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>quantity</code> - the new quantity</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the instance with the specified quantity</dd>
 </dl>
 </li>
 </ul>

@@ -110,21 +110,6 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a> in <a href="../../../../../../com/opengamma/strata/basics/value/package-summary.html">com.opengamma.strata.basics.value</a></h3>
-<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
-<caption><span>Classes in <a href="../../../../../../com/opengamma/strata/basics/value/package-summary.html">com.opengamma.strata.basics.value</a> that implement <a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Class and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/value/HalfUpRounding.html" title="class in com.opengamma.strata.basics.value">HalfUpRounding</a></span></code>
-<div class="block">Standard implementation of <code>Rounding</code> that uses the half-up convention.</div>
-</td>
-</tr>
-</tbody>
-</table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../com/opengamma/strata/basics/value/package-summary.html">com.opengamma.strata.basics.value</a> that return <a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -140,11 +125,17 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Rounding.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html#of-com.opengamma.strata.basics.currency.Currency-">of</a></span>(<a href="../../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency)</code>
+<div class="block">Obtains an instance that rounds to the number of minor units in the currency.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Rounding.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html#ofDecimalPlaces-int-">ofDecimalPlaces</a></span>(int&nbsp;decimalPlaces)</code>
 <div class="block">Obtains an instance that rounds to the specified number of decimal places.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Rounding.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html#ofFractionalDecimalPlaces-int-int-">ofFractionalDecimalPlaces</a></span>(int&nbsp;decimalPlaces,
                          int&nbsp;fraction)</code>
@@ -167,19 +158,19 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedBondFutureOption.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html#getRounding--">getRounding</a></span>()</code>
-<div class="block">Gets the definition of how to round the option price, defaulted to no rounding.</div>
+<td class="colLast"><span class="typeNameLabel">BondFutureSecurity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/BondFutureSecurity.html#getRounding--">getRounding</a></span>()</code>
+<div class="block">Gets the definition of how to round the futures price, defaulted to no rounding.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedBondFuture.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedBondFuture.html#getRounding--">getRounding</a></span>()</code>
-<div class="block">Gets the definition of how to round the futures price, defaulted to no rounding.</div>
+<td class="colLast"><span class="typeNameLabel">ResolvedBondFutureOption.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html#getRounding--">getRounding</a></span>()</code>
+<div class="block">Gets the definition of how to round the option price, defaulted to no rounding.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BondFutureSecurity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/BondFutureSecurity.html#getRounding--">getRounding</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedBondFuture.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedBondFuture.html#getRounding--">getRounding</a></span>()</code>
 <div class="block">Gets the definition of how to round the futures price, defaulted to no rounding.</div>
 </td>
 </tr>
@@ -191,14 +182,14 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BondFutureOption.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/BondFutureOption.html#getRounding--">getRounding</a></span>()</code>
-<div class="block">Gets the definition of how to round the option price, defaulted to no rounding.</div>
+<td class="colLast"><span class="typeNameLabel">BondFuture.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/BondFuture.html#getRounding--">getRounding</a></span>()</code>
+<div class="block">Gets the definition of how to round the futures price, defaulted to no rounding.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BondFuture.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/BondFuture.html#getRounding--">getRounding</a></span>()</code>
-<div class="block">Gets the definition of how to round the futures price, defaulted to no rounding.</div>
+<td class="colLast"><span class="typeNameLabel">BondFutureOption.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/BondFutureOption.html#getRounding--">getRounding</a></span>()</code>
+<div class="block">Gets the definition of how to round the option price, defaulted to no rounding.</div>
 </td>
 </tr>
 </tbody>
@@ -212,19 +203,19 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedBondFutureOption.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.Meta.html#rounding--">rounding</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">BondFutureSecurity.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/BondFutureSecurity.Meta.html#rounding--">rounding</a></span>()</code>
 <div class="block">The meta-property for the <code>rounding</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedBondFuture.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedBondFuture.Meta.html#rounding--">rounding</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedBondFutureOption.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.Meta.html#rounding--">rounding</a></span>()</code>
 <div class="block">The meta-property for the <code>rounding</code> property.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">BondFutureSecurity.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/BondFutureSecurity.Meta.html#rounding--">rounding</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedBondFuture.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedBondFuture.Meta.html#rounding--">rounding</a></span>()</code>
 <div class="block">The meta-property for the <code>rounding</code> property.</div>
 </td>
 </tr>
@@ -236,13 +227,13 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">BondFutureOption.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/BondFutureOption.Meta.html#rounding--">rounding</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">BondFuture.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/BondFuture.Meta.html#rounding--">rounding</a></span>()</code>
 <div class="block">The meta-property for the <code>rounding</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">BondFuture.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/BondFuture.Meta.html#rounding--">rounding</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">BondFutureOption.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/BondFutureOption.Meta.html#rounding--">rounding</a></span>()</code>
 <div class="block">The meta-property for the <code>rounding</code> property.</div>
 </td>
 </tr>
@@ -256,20 +247,20 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/BondFutureSecurity.Builder.html" title="class in com.opengamma.strata.product.bond">BondFutureSecurity.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFutureSecurity.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/BondFutureSecurity.Builder.html#rounding-com.opengamma.strata.basics.value.Rounding-">rounding</a></span>(<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&nbsp;rounding)</code>
+<div class="block">Sets the definition of how to round the futures price, defaulted to no rounding.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedBondFutureOption.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.Builder.html#rounding-com.opengamma.strata.basics.value.Rounding-">rounding</a></span>(<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&nbsp;rounding)</code>
 <div class="block">Sets the definition of how to round the option price, defaulted to no rounding.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedBondFuture.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFuture.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedBondFuture.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/ResolvedBondFuture.Builder.html#rounding-com.opengamma.strata.basics.value.Rounding-">rounding</a></span>(<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&nbsp;rounding)</code>
-<div class="block">Sets the definition of how to round the futures price, defaulted to no rounding.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/BondFutureSecurity.Builder.html" title="class in com.opengamma.strata.product.bond">BondFutureSecurity.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BondFutureSecurity.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/BondFutureSecurity.Builder.html#rounding-com.opengamma.strata.basics.value.Rounding-">rounding</a></span>(<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&nbsp;rounding)</code>
 <div class="block">Sets the definition of how to round the futures price, defaulted to no rounding.</div>
 </td>
 </tr>
@@ -280,15 +271,15 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/BondFutureOption.Builder.html" title="class in com.opengamma.strata.product.bond">BondFutureOption.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BondFutureOption.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/BondFutureOption.Builder.html#rounding-com.opengamma.strata.basics.value.Rounding-">rounding</a></span>(<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&nbsp;rounding)</code>
-<div class="block">Sets the definition of how to round the option price, defaulted to no rounding.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/BondFuture.Builder.html" title="class in com.opengamma.strata.product.bond">BondFuture.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BondFuture.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/BondFuture.Builder.html#rounding-com.opengamma.strata.basics.value.Rounding-">rounding</a></span>(<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&nbsp;rounding)</code>
 <div class="block">Sets the definition of how to round the futures price, defaulted to no rounding.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/bond/BondFutureOption.Builder.html" title="class in com.opengamma.strata.product.bond">BondFutureOption.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFutureOption.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/bond/BondFutureOption.Builder.html#rounding-com.opengamma.strata.basics.value.Rounding-">rounding</a></span>(<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&nbsp;rounding)</code>
+<div class="block">Sets the definition of how to round the option price, defaulted to no rounding.</div>
 </td>
 </tr>
 </tbody>
@@ -307,26 +298,14 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedIborFutureOption.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html#getRounding--">getRounding</a></span>()</code>
-<div class="block">Gets the definition of how to round the option price, defaulted to no rounding.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedIborFuture.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFuture.html#getRounding--">getRounding</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedOvernightFuture.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/ResolvedOvernightFuture.html#getRounding--">getRounding</a></span>()</code>
 <div class="block">Gets the definition of how to round the futures price, defaulted to no rounding.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborFutureSecurity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/IborFutureSecurity.html#getRounding--">getRounding</a></span>()</code>
 <div class="block">Gets the definition of how to round the futures price, defaulted to no rounding.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborFutureOptionSecurity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/IborFutureOptionSecurity.html#getRounding--">getRounding</a></span>()</code>
-<div class="block">Gets the definition of how to round the option price, defaulted to no rounding.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -337,7 +316,37 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedIborFutureOption.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html#getRounding--">getRounding</a></span>()</code>
+<div class="block">Gets the definition of how to round the option price, defaulted to no rounding.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightFuture.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/OvernightFuture.html#getRounding--">getRounding</a></span>()</code>
+<div class="block">Gets the definition of how to round the futures price, defaulted to no rounding.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightFutureSecurity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/OvernightFutureSecurity.html#getRounding--">getRounding</a></span>()</code>
+<div class="block">Gets the definition of how to round the futures price, defaulted to no rounding.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureOptionSecurity.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/IborFutureOptionSecurity.html#getRounding--">getRounding</a></span>()</code>
+<div class="block">Gets the definition of how to round the option price, defaulted to no rounding.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborFuture.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/IborFuture.html#getRounding--">getRounding</a></span>()</code>
+<div class="block">Gets the definition of how to round the futures price, defaulted to no rounding.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedIborFuture.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFuture.html#getRounding--">getRounding</a></span>()</code>
 <div class="block">Gets the definition of how to round the futures price, defaulted to no rounding.</div>
 </td>
 </tr>
@@ -352,25 +361,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedIborFutureOption.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.Meta.html#rounding--">rounding</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedOvernightFuture.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/ResolvedOvernightFuture.Meta.html#rounding--">rounding</a></span>()</code>
 <div class="block">The meta-property for the <code>rounding</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedIborFuture.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFuture.Meta.html#rounding--">rounding</a></span>()</code>
-<div class="block">The meta-property for the <code>rounding</code> property.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">IborFutureSecurity.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/IborFutureSecurity.Meta.html#rounding--">rounding</a></span>()</code>
-<div class="block">The meta-property for the <code>rounding</code> property.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">IborFutureOptionSecurity.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/IborFutureOptionSecurity.Meta.html#rounding--">rounding</a></span>()</code>
 <div class="block">The meta-property for the <code>rounding</code> property.</div>
 </td>
 </tr>
@@ -382,7 +379,37 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedIborFutureOption.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.Meta.html#rounding--">rounding</a></span>()</code>
+<div class="block">The meta-property for the <code>rounding</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightFuture.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/OvernightFuture.Meta.html#rounding--">rounding</a></span>()</code>
+<div class="block">The meta-property for the <code>rounding</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightFutureSecurity.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/OvernightFutureSecurity.Meta.html#rounding--">rounding</a></span>()</code>
+<div class="block">The meta-property for the <code>rounding</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureOptionSecurity.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/IborFutureOptionSecurity.Meta.html#rounding--">rounding</a></span>()</code>
+<div class="block">The meta-property for the <code>rounding</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">IborFuture.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/IborFuture.Meta.html#rounding--">rounding</a></span>()</code>
+<div class="block">The meta-property for the <code>rounding</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedIborFuture.Meta.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFuture.Meta.html#rounding--">rounding</a></span>()</code>
 <div class="block">The meta-property for the <code>rounding</code> property.</div>
 </td>
 </tr>
@@ -396,27 +423,15 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.Builder.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedIborFutureOption.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.Builder.html#rounding-com.opengamma.strata.basics.value.Rounding-">rounding</a></span>(<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&nbsp;rounding)</code>
-<div class="block">Sets the definition of how to round the option price, defaulted to no rounding.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFuture.Builder.html" title="class in com.opengamma.strata.product.index">ResolvedIborFuture.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedIborFuture.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFuture.Builder.html#rounding-com.opengamma.strata.basics.value.Rounding-">rounding</a></span>(<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&nbsp;rounding)</code>
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/index/ResolvedOvernightFuture.Builder.html" title="class in com.opengamma.strata.product.index">ResolvedOvernightFuture.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedOvernightFuture.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/ResolvedOvernightFuture.Builder.html#rounding-com.opengamma.strata.basics.value.Rounding-">rounding</a></span>(<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&nbsp;rounding)</code>
 <div class="block">Sets the definition of how to round the futures price, defaulted to no rounding.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/index/IborFutureSecurity.Builder.html" title="class in com.opengamma.strata.product.index">IborFutureSecurity.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborFutureSecurity.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/IborFutureSecurity.Builder.html#rounding-com.opengamma.strata.basics.value.Rounding-">rounding</a></span>(<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&nbsp;rounding)</code>
 <div class="block">Sets the definition of how to round the futures price, defaulted to no rounding.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/index/IborFutureOptionSecurity.Builder.html" title="class in com.opengamma.strata.product.index">IborFutureOptionSecurity.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborFutureOptionSecurity.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/IborFutureOptionSecurity.Builder.html#rounding-com.opengamma.strata.basics.value.Rounding-">rounding</a></span>(<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&nbsp;rounding)</code>
-<div class="block">Sets the definition of how to round the option price, defaulted to no rounding.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -426,8 +441,38 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.Builder.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedIborFutureOption.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.Builder.html#rounding-com.opengamma.strata.basics.value.Rounding-">rounding</a></span>(<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&nbsp;rounding)</code>
+<div class="block">Sets the definition of how to round the option price, defaulted to no rounding.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/index/OvernightFuture.Builder.html" title="class in com.opengamma.strata.product.index">OvernightFuture.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightFuture.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/OvernightFuture.Builder.html#rounding-com.opengamma.strata.basics.value.Rounding-">rounding</a></span>(<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&nbsp;rounding)</code>
+<div class="block">Sets the definition of how to round the futures price, defaulted to no rounding.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/index/OvernightFutureSecurity.Builder.html" title="class in com.opengamma.strata.product.index">OvernightFutureSecurity.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightFutureSecurity.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/OvernightFutureSecurity.Builder.html#rounding-com.opengamma.strata.basics.value.Rounding-">rounding</a></span>(<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&nbsp;rounding)</code>
+<div class="block">Sets the definition of how to round the futures price, defaulted to no rounding.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/index/IborFutureOptionSecurity.Builder.html" title="class in com.opengamma.strata.product.index">IborFutureOptionSecurity.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureOptionSecurity.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/IborFutureOptionSecurity.Builder.html#rounding-com.opengamma.strata.basics.value.Rounding-">rounding</a></span>(<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&nbsp;rounding)</code>
+<div class="block">Sets the definition of how to round the option price, defaulted to no rounding.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/index/IborFuture.Builder.html" title="class in com.opengamma.strata.product.index">IborFuture.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborFuture.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/IborFuture.Builder.html#rounding-com.opengamma.strata.basics.value.Rounding-">rounding</a></span>(<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&nbsp;rounding)</code>
+<div class="block">Sets the definition of how to round the futures price, defaulted to no rounding.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFuture.Builder.html" title="class in com.opengamma.strata.product.index">ResolvedIborFuture.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedIborFuture.Builder.</span><code><span class="memberNameLink"><a href="../../../../../../com/opengamma/strata/product/index/ResolvedIborFuture.Builder.html#rounding-com.opengamma.strata.basics.value.Rounding-">rounding</a></span>(<a href="../../../../../../com/opengamma/strata/basics/value/Rounding.html" title="interface in com.opengamma.strata.basics.value">Rounding</a>&nbsp;rounding)</code>
 <div class="block">Sets the definition of how to round the futures price, defaulted to no rounding.</div>
 </td>
 </tr>

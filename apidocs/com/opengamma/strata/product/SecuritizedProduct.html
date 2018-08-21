@@ -18,8 +18,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var methods = {"i0":18,"i1":6,"i2":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -51,7 +51,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html" title="interface in com.opengamma.strata.product"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html" title="interface in com.opengamma.strata.product"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?com/opengamma/strata/product/SecuritizedProduct.html" target="_top">Frames</a></li>
@@ -110,7 +110,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../../../../com/opengamma/strata/product/bond/BondFuture.html" title="class in com.opengamma.strata.product.bond">BondFuture</a>, <a href="../../../../com/opengamma/strata/product/bond/BondFutureOption.html" title="class in com.opengamma.strata.product.bond">BondFutureOption</a>, <a href="../../../../com/opengamma/strata/product/bond/CapitalIndexedBond.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBond</a>, <a href="../../../../com/opengamma/strata/product/dsf/Dsf.html" title="class in com.opengamma.strata.product.dsf">Dsf</a>, <a href="../../../../com/opengamma/strata/product/etd/EtdFutureSecurity.html" title="class in com.opengamma.strata.product.etd">EtdFutureSecurity</a>, <a href="../../../../com/opengamma/strata/product/etd/EtdOptionSecurity.html" title="class in com.opengamma.strata.product.etd">EtdOptionSecurity</a>, <a href="../../../../com/opengamma/strata/product/bond/FixedCouponBond.html" title="class in com.opengamma.strata.product.bond">FixedCouponBond</a>, <a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a>, <a href="../../../../com/opengamma/strata/product/index/IborFuture.html" title="class in com.opengamma.strata.product.index">IborFuture</a>, <a href="../../../../com/opengamma/strata/product/index/IborFutureOption.html" title="class in com.opengamma.strata.product.index">IborFutureOption</a></dd>
+<dd><a href="../../../../com/opengamma/strata/product/bond/Bill.html" title="class in com.opengamma.strata.product.bond">Bill</a>, <a href="../../../../com/opengamma/strata/product/bond/BondFuture.html" title="class in com.opengamma.strata.product.bond">BondFuture</a>, <a href="../../../../com/opengamma/strata/product/bond/BondFutureOption.html" title="class in com.opengamma.strata.product.bond">BondFutureOption</a>, <a href="../../../../com/opengamma/strata/product/bond/CapitalIndexedBond.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBond</a>, <a href="../../../../com/opengamma/strata/product/dsf/Dsf.html" title="class in com.opengamma.strata.product.dsf">Dsf</a>, <a href="../../../../com/opengamma/strata/product/etd/EtdFutureSecurity.html" title="class in com.opengamma.strata.product.etd">EtdFutureSecurity</a>, <a href="../../../../com/opengamma/strata/product/etd/EtdOptionSecurity.html" title="class in com.opengamma.strata.product.etd">EtdOptionSecurity</a>, <a href="../../../../com/opengamma/strata/product/bond/FixedCouponBond.html" title="class in com.opengamma.strata.product.bond">FixedCouponBond</a>, <a href="../../../../com/opengamma/strata/product/GenericSecurity.html" title="class in com.opengamma.strata.product">GenericSecurity</a>, <a href="../../../../com/opengamma/strata/product/index/IborFuture.html" title="class in com.opengamma.strata.product.index">IborFuture</a>, <a href="../../../../com/opengamma/strata/product/index/IborFutureOption.html" title="class in com.opengamma.strata.product.index">IborFutureOption</a>, <a href="../../../../com/opengamma/strata/product/index/OvernightFuture.html" title="class in com.opengamma.strata.product.index">OvernightFuture</a></dd>
 </dl>
 <hr>
 <br>
@@ -142,24 +142,37 @@ extends <a href="../../../../com/opengamma/strata/product/Product.html" title="i
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t5" class="tableTab"><span><a href="javascript:show(16);">Default Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>default com.google.common.collect.ImmutableSet&lt;<a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/SecuritizedProduct.html#allCurrencies--">allCurrencies</a></span>()</code>
+<div class="block">Returns the set of currencies the product refers to.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/SecuritizedProduct.html#getCurrency--">getCurrency</a></span>()</code>
 <div class="block">Gets the currency that the security is traded in.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/product/SecuritizedProduct.html#getSecurityId--">getSecurityId</a></span>()</code>
 <div class="block">Gets the security identifier.</div>
 </td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.opengamma.strata.product.Product">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.opengamma.strata.product.<a href="../../../../com/opengamma/strata/product/Product.html" title="interface in com.opengamma.strata.product">Product</a></h3>
+<code><a href="../../../../com/opengamma/strata/product/Product.html#allPaymentCurrencies--">allPaymentCurrencies</a>, <a href="../../../../com/opengamma/strata/product/Product.html#isCrossCurrency--">isCrossCurrency</a></code></li>
+</ul>
 </li>
 </ul>
 </li>
@@ -193,7 +206,7 @@ extends <a href="../../../../com/opengamma/strata/product/Product.html" title="i
 <a name="getCurrency--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getCurrency</h4>
 <pre><a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;getCurrency()</pre>
@@ -201,6 +214,26 @@ extends <a href="../../../../com/opengamma/strata/product/Product.html" title="i
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the trading currency</dd>
+</dl>
+</li>
+</ul>
+<a name="allCurrencies--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>allCurrencies</h4>
+<pre>default&nbsp;com.google.common.collect.ImmutableSet&lt;<a href="../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;&nbsp;allCurrencies()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../com/opengamma/strata/product/Product.html#allCurrencies--">Product</a></code></span></div>
+<div class="block">Returns the set of currencies the product refers to.
+ <p>
+ This returns the complete set of currencies, not just the payment currencies.
+ For example, the sets will differ when one of the currencies is non-deliverable.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/opengamma/strata/product/Product.html#allCurrencies--">allCurrencies</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/opengamma/strata/product/Product.html" title="interface in com.opengamma.strata.product">Product</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the set of currencies the product refers to</dd>
 </dl>
 </li>
 </ul>
@@ -234,7 +267,7 @@ extends <a href="../../../../com/opengamma/strata/product/Product.html" title="i
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../com/opengamma/strata/product/SecuritizedProductTrade.html" title="interface in com.opengamma.strata.product"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html" title="interface in com.opengamma.strata.product"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?com/opengamma/strata/product/SecuritizedProduct.html" target="_top">Frames</a></li>

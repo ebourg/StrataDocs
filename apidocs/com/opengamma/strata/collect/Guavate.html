@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":9,"i14":9,"i15":9,"i16":9,"i17":9,"i18":9,"i19":9,"i20":9,"i21":9,"i22":9,"i23":9,"i24":9};
+var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":9,"i14":9,"i15":9,"i16":9,"i17":9,"i18":9,"i19":9,"i20":9,"i21":9,"i22":9,"i23":9,"i24":9,"i25":9,"i26":9,"i27":9,"i28":9,"i29":9,"i30":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -98,7 +98,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
 <li>com.opengamma.strata.collect.Guavate</li>
@@ -111,7 +111,7 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">Guavate</span>
-extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Utilities that help bridge the gap between Java 8 and Google Guava.
  <p>
  Guava has the <code>FluentIterable</code> concept which is similar to streams.
@@ -137,161 +137,203 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;com.google.common.collect.ImmutableList&lt;T&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#concatToList-java.lang.Iterable...-">concatToList</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;T&gt;...&nbsp;iterables)</code>
-<div class="block">Concatenates a number of iterables into a single list.</div>
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#combineFuturesAsList-java.util.List-">combineFuturesAsList</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;? extends T&gt;&gt;&nbsp;futures)</code>
+<div class="block">Converts a list of futures to a single future, combining the values into a list.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BinaryOperator.html?is-external=true" title="class or interface in java.util.function">BinaryOperator</a>&lt;T&gt;</code></td>
+<td class="colFirst"><code>static &lt;K,V,F extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;? extends V&gt;&gt;<br><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,V&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#combineFuturesAsMap-java.util.Map-">combineFuturesAsMap</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,F&gt;&nbsp;futures)</code>
+<div class="block">Converts a map of futures to a single future.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;com.google.common.collect.ImmutableList&lt;T&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#concatToList-java.lang.Iterable...-">concatToList</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;T&gt;...&nbsp;iterables)</code>
+<div class="block">Concatenates a number of iterables into a single list.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BinaryOperator.html?is-external=true" title="class or interface in java.util.function">BinaryOperator</a>&lt;T&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#ensureOnlyOne--">ensureOnlyOne</a></span>()</code>
 <div class="block">Reducer used in a stream to ensure there is no more than one matching element.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code>static &lt;K,V&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;K,V&gt;,?,com.google.common.collect.ImmutableMap&lt;K,V&gt;&gt;</code></td>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>static &lt;K,V&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;K,V&gt;,?,com.google.common.collect.ImmutableMap&lt;K,V&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#entriesToImmutableMap--">entriesToImmutableMap</a></span>()</code>
 <div class="block">Collector used at the end of a stream to build an immutable map
  from a stream containing map entries.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;T&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#firstNonEmpty-java.util.Optional...-">firstNonEmpty</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;? extends T&gt;...&nbsp;optionals)</code>
-<div class="block">Chooses the first optional that is not empty.</div>
-</td>
-</tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;T&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#firstNonEmpty-java.util.function.Supplier...-">firstNonEmpty</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function">Supplier</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;? extends T&gt;&gt;...&nbsp;suppliers)</code>
-<div class="block">Uses a number of suppliers to create a single optional result.</div>
-</td>
-</tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code>static &lt;R&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function">Predicate</a>&lt;R&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#not-java.util.function.Predicate-">not</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function">Predicate</a>&lt;R&gt;&nbsp;predicate)</code>
-<div class="block">Returns a predicate that negates the original.</div>
+<td class="colFirst"><code>static &lt;K,V&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;K,V&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#entry-K-V-">entry</a></span>(K&nbsp;key,
+     V&nbsp;value)</code>
+<div class="block">Creates a single <code>Map.Entry</code>.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code>static &lt;K,V&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;<a href="../../../../com/opengamma/strata/collect/tuple/Pair.html" title="class in com.opengamma.strata.collect.tuple">Pair</a>&lt;K,V&gt;,?,com.google.common.collect.ImmutableMap&lt;K,V&gt;&gt;</code></td>
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;T&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#firstNonEmpty-java.util.Optional...-">firstNonEmpty</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;? extends T&gt;...&nbsp;optionals)</code>
+<div class="block">Chooses the first optional that is not empty.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;T&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#firstNonEmpty-java.util.function.Supplier...-">firstNonEmpty</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;? extends T&gt;&gt;...&nbsp;suppliers)</code>
+<div class="block">Uses a number of suppliers to create a single optional result.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>static &lt;R&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function">Predicate</a>&lt;R&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#not-java.util.function.Predicate-">not</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function">Predicate</a>&lt;R&gt;&nbsp;predicate)</code>
+<div class="block">Returns a predicate that negates the original.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>static &lt;K,V&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;<a href="../../../../com/opengamma/strata/collect/tuple/Pair.html" title="class in com.opengamma.strata.collect.tuple">Pair</a>&lt;K,V&gt;,?,com.google.common.collect.ImmutableMap&lt;K,V&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#pairsToImmutableMap--">pairsToImmutableMap</a></span>()</code>
 <div class="block">Collector used at the end of a stream to build an immutable map
  from a stream containing pairs.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;T&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#stream-java.lang.Iterable-">stream</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;T&gt;&nbsp;iterable)</code>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;T&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#poll-java.util.concurrent.ScheduledExecutorService-java.time.Duration-java.time.Duration-java.util.function.Supplier-">poll</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ScheduledExecutorService</a>&nbsp;executorService,
+    <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html?is-external=true" title="class or interface in java.time">Duration</a>&nbsp;initialDelay,
+    <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html?is-external=true" title="class or interface in java.time">Duration</a>&nbsp;frequency,
+    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function">Supplier</a>&lt;T&gt;&nbsp;pollingTask)</code>
+<div class="block">Polls on a regular frequency until a result is found.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;T&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#stream-java.lang.Iterable-">stream</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;T&gt;&nbsp;iterable)</code>
 <div class="block">Converts an iterable to a serial stream.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;T&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#stream-java.util.Optional-">stream</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;T&gt;&nbsp;optional)</code>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;T&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#stream-java.util.Optional-">stream</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;T&gt;&nbsp;optional)</code>
 <div class="block">Converts an optional to a stream with zero or one elements.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableList.Builder&lt;T&gt;,com.google.common.collect.ImmutableList&lt;T&gt;&gt;</code></td>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>static &lt;T,S extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;? extends T&gt;&gt;<br><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;S,?,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toCombinedFuture--">toCombinedFuture</a></span>()</code>
+<div class="block">Collector used at the end of a stream to convert a list of futures to a single future,
+ combining the values into a list.</div>
+</td>
+</tr>
+<tr id="i14" class="altColor">
+<td class="colFirst"><code>static &lt;K,V,F extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;? extends V&gt;&gt;<br><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;K,F&gt;,?,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,V&gt;&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toCombinedFutureMap--">toCombinedFutureMap</a></span>()</code>
+<div class="block">Collector used at the end of a stream to convert a map of futures to a single future,
+ combining the values into a map.</div>
+</td>
+</tr>
+<tr id="i15" class="rowColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableList.Builder&lt;T&gt;,com.google.common.collect.ImmutableList&lt;T&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableList--">toImmutableList</a></span>()</code>
 <div class="block">Collector used at the end of a stream to build an immutable list.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
-<td class="colFirst"><code>static &lt;T,K&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableListMultimap&lt;K,T&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableListMultimap-java.util.function.Function-">toImmutableListMultimap</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor)</code>
-<div class="block">Collector used at the end of a stream to build an immutable multimap.</div>
-</td>
-</tr>
-<tr id="i11" class="rowColor">
-<td class="colFirst"><code>static &lt;T,K,V&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableListMultimap&lt;K,V&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableListMultimap-java.util.function.Function-java.util.function.Function-">toImmutableListMultimap</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
-                       <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor)</code>
-<div class="block">Collector used at the end of a stream to build an immutable multimap.</div>
-</td>
-</tr>
-<tr id="i12" class="altColor">
-<td class="colFirst"><code>static &lt;T,K&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableMap&lt;K,T&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableMap-java.util.function.Function-">toImmutableMap</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor)</code>
-<div class="block">Collector used at the end of a stream to build an immutable map.</div>
-</td>
-</tr>
-<tr id="i13" class="rowColor">
-<td class="colFirst"><code>static &lt;T,K,V&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableMap&lt;K,V&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableMap-java.util.function.Function-java.util.function.Function-">toImmutableMap</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
-              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor)</code>
-<div class="block">Collector used at the end of a stream to build an immutable map.</div>
-</td>
-</tr>
-<tr id="i14" class="altColor">
-<td class="colFirst"><code>static &lt;T,K,V&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,V&gt;,com.google.common.collect.ImmutableMap&lt;K,V&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableMap-java.util.function.Function-java.util.function.Function-java.util.function.BiFunction-">toImmutableMap</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
-              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor,
-              <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;? super V,? super V,? extends V&gt;&nbsp;mergeFn)</code>
-<div class="block">Collector used at the end of a stream to build an immutable map.</div>
-</td>
-</tr>
-<tr id="i15" class="rowColor">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableMultiset.Builder&lt;T&gt;,com.google.common.collect.ImmutableMultiset&lt;T&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableMultiset--">toImmutableMultiset</a></span>()</code>
-<div class="block">Collector used at the end of a stream to build an immutable multiset.</div>
-</td>
-</tr>
 <tr id="i16" class="altColor">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableSet.Builder&lt;T&gt;,com.google.common.collect.ImmutableSet&lt;T&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableSet--">toImmutableSet</a></span>()</code>
-<div class="block">Collector used at the end of a stream to build an immutable set.</div>
+<td class="colFirst"><code>static &lt;T,K&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableListMultimap&lt;K,T&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableListMultimap-java.util.function.Function-">toImmutableListMultimap</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor)</code>
+<div class="block">Collector used at the end of a stream to build an immutable multimap.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
-<td class="colFirst"><code>static &lt;T,K&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableSetMultimap&lt;K,T&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableSetMultimap-java.util.function.Function-">toImmutableSetMultimap</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor)</code>
+<td class="colFirst"><code>static &lt;T,K,V&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableListMultimap&lt;K,V&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableListMultimap-java.util.function.Function-java.util.function.Function-">toImmutableListMultimap</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
+                       <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor)</code>
 <div class="block">Collector used at the end of a stream to build an immutable multimap.</div>
 </td>
 </tr>
 <tr id="i18" class="altColor">
-<td class="colFirst"><code>static &lt;T,K,V&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableSetMultimap&lt;K,V&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableSetMultimap-java.util.function.Function-java.util.function.Function-">toImmutableSetMultimap</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
-                      <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor)</code>
-<div class="block">Collector used at the end of a stream to build an immutable multimap.</div>
+<td class="colFirst"><code>static &lt;T,K&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableMap&lt;K,T&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableMap-java.util.function.Function-">toImmutableMap</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor)</code>
+<div class="block">Collector used at the end of a stream to build an immutable map.</div>
 </td>
 </tr>
 <tr id="i19" class="rowColor">
-<td class="colFirst"><code>static &lt;T,K extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;?&gt;&gt;<br><a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableSortedMap&lt;K,T&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableSortedMap-java.util.function.Function-">toImmutableSortedMap</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor)</code>
-<div class="block">Collector used at the end of a stream to build an immutable sorted map.</div>
+<td class="colFirst"><code>static &lt;T,K,V&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableMap&lt;K,V&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableMap-java.util.function.Function-java.util.function.Function-">toImmutableMap</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
+              <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor)</code>
+<div class="block">Collector used at the end of a stream to build an immutable map.</div>
 </td>
 </tr>
 <tr id="i20" class="altColor">
-<td class="colFirst"><code>static &lt;T,K extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;?&gt;,V&gt;<br><a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableSortedMap&lt;K,V&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableSortedMap-java.util.function.Function-java.util.function.Function-">toImmutableSortedMap</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
-                    <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor)</code>
-<div class="block">Collector used at the end of a stream to build an immutable sorted map.</div>
+<td class="colFirst"><code>static &lt;T,K,V&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,V&gt;,com.google.common.collect.ImmutableMap&lt;K,V&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableMap-java.util.function.Function-java.util.function.Function-java.util.function.BiFunction-">toImmutableMap</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
+              <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor,
+              <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;? super V,? super V,? extends V&gt;&nbsp;mergeFn)</code>
+<div class="block">Collector used at the end of a stream to build an immutable map.</div>
 </td>
 </tr>
 <tr id="i21" class="rowColor">
-<td class="colFirst"><code>static &lt;T extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;?&gt;&gt;<br><a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableSortedSet.Builder&lt;T&gt;,com.google.common.collect.ImmutableSortedSet&lt;T&gt;&gt;</code></td>
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableMultiset.Builder&lt;T&gt;,com.google.common.collect.ImmutableMultiset&lt;T&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableMultiset--">toImmutableMultiset</a></span>()</code>
+<div class="block">Collector used at the end of a stream to build an immutable multiset.</div>
+</td>
+</tr>
+<tr id="i22" class="altColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableSet.Builder&lt;T&gt;,com.google.common.collect.ImmutableSet&lt;T&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableSet--">toImmutableSet</a></span>()</code>
+<div class="block">Collector used at the end of a stream to build an immutable set.</div>
+</td>
+</tr>
+<tr id="i23" class="rowColor">
+<td class="colFirst"><code>static &lt;T,K&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableSetMultimap&lt;K,T&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableSetMultimap-java.util.function.Function-">toImmutableSetMultimap</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor)</code>
+<div class="block">Collector used at the end of a stream to build an immutable multimap.</div>
+</td>
+</tr>
+<tr id="i24" class="altColor">
+<td class="colFirst"><code>static &lt;T,K,V&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableSetMultimap&lt;K,V&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableSetMultimap-java.util.function.Function-java.util.function.Function-">toImmutableSetMultimap</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
+                      <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor)</code>
+<div class="block">Collector used at the end of a stream to build an immutable multimap.</div>
+</td>
+</tr>
+<tr id="i25" class="rowColor">
+<td class="colFirst"><code>static &lt;T,K extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;?&gt;&gt;<br><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableSortedMap&lt;K,T&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableSortedMap-java.util.function.Function-">toImmutableSortedMap</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor)</code>
+<div class="block">Collector used at the end of a stream to build an immutable sorted map.</div>
+</td>
+</tr>
+<tr id="i26" class="altColor">
+<td class="colFirst"><code>static &lt;T,K extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;?&gt;,V&gt;<br><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableSortedMap&lt;K,V&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableSortedMap-java.util.function.Function-java.util.function.Function-">toImmutableSortedMap</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
+                    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor)</code>
+<div class="block">Collector used at the end of a stream to build an immutable sorted map.</div>
+</td>
+</tr>
+<tr id="i27" class="rowColor">
+<td class="colFirst"><code>static &lt;T extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;?&gt;&gt;<br><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableSortedSet.Builder&lt;T&gt;,com.google.common.collect.ImmutableSortedSet&lt;T&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableSortedSet--">toImmutableSortedSet</a></span>()</code>
 <div class="block">Collector used at the end of a stream to build an immutable sorted set.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableSortedSet.Builder&lt;T&gt;,com.google.common.collect.ImmutableSortedSet&lt;T&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableSortedSet-java.util.Comparator-">toImmutableSortedSet</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;? super T&gt;&nbsp;comparator)</code>
+<tr id="i28" class="altColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableSortedSet.Builder&lt;T&gt;,com.google.common.collect.ImmutableSortedSet&lt;T&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#toImmutableSortedSet-java.util.Comparator-">toImmutableSortedSet</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;? super T&gt;&nbsp;comparator)</code>
 <div class="block">Collector used at the end of a stream to build an immutable sorted set.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
-<td class="colFirst"><code>static &lt;A,B&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;<a href="../../../../com/opengamma/strata/collect/tuple/Pair.html" title="class in com.opengamma.strata.collect.tuple">Pair</a>&lt;A,B&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#zip-java.util.stream.Stream-java.util.stream.Stream-">zip</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;A&gt;&nbsp;stream1,
-   <a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;B&gt;&nbsp;stream2)</code>
+<tr id="i29" class="rowColor">
+<td class="colFirst"><code>static &lt;A,B&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;<a href="../../../../com/opengamma/strata/collect/tuple/Pair.html" title="class in com.opengamma.strata.collect.tuple">Pair</a>&lt;A,B&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#zip-java.util.stream.Stream-java.util.stream.Stream-">zip</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;A&gt;&nbsp;stream1,
+   <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;B&gt;&nbsp;stream2)</code>
 <div class="block">Creates a stream that combines two other streams, continuing until either stream ends.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;<a href="../../../../com/opengamma/strata/collect/tuple/ObjIntPair.html" title="class in com.opengamma.strata.collect.tuple">ObjIntPair</a>&lt;T&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#zipWithIndex-java.util.stream.Stream-">zipWithIndex</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;T&gt;&nbsp;stream)</code>
+<tr id="i30" class="altColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;<a href="../../../../com/opengamma/strata/collect/tuple/ObjIntPair.html" title="class in com.opengamma.strata.collect.tuple">ObjIntPair</a>&lt;T&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/opengamma/strata/collect/Guavate.html#zipWithIndex-java.util.stream.Stream-">zipWithIndex</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;T&gt;&nbsp;stream)</code>
 <div class="block">Creates a stream that wraps a stream with the index.</div>
 </td>
 </tr>
@@ -300,8 +342,8 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 </li>
 </ul>
@@ -323,8 +365,8 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>concatToList</h4>
-<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/SafeVarargs.html?is-external=true" title="class or interface in java.lang">@SafeVarargs</a>
-public static&nbsp;&lt;T&gt;&nbsp;com.google.common.collect.ImmutableList&lt;T&gt;&nbsp;concatToList(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;T&gt;...&nbsp;iterables)</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/SafeVarargs.html?is-external=true" title="class or interface in java.lang">@SafeVarargs</a>
+public static&nbsp;&lt;T&gt;&nbsp;com.google.common.collect.ImmutableList&lt;T&gt;&nbsp;concatToList(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;T&gt;...&nbsp;iterables)</pre>
 <div class="block">Concatenates a number of iterables into a single list.
  <p>
  This is harder than it should be, a method <code>Stream.of(Iterable)</code>
@@ -345,14 +387,14 @@ public static&nbsp;&lt;T&gt;&nbsp;com.google.common.collect.ImmutableList&lt;T&g
 <ul class="blockList">
 <li class="blockList">
 <h4>firstNonEmpty</h4>
-<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/SafeVarargs.html?is-external=true" title="class or interface in java.lang">@SafeVarargs</a>
-public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;T&gt;&nbsp;firstNonEmpty(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function">Supplier</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;? extends T&gt;&gt;...&nbsp;suppliers)</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/SafeVarargs.html?is-external=true" title="class or interface in java.lang">@SafeVarargs</a>
+public static&nbsp;&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;T&gt;&nbsp;firstNonEmpty(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;? extends T&gt;&gt;...&nbsp;suppliers)</pre>
 <div class="block">Uses a number of suppliers to create a single optional result.
  <p>
  This invokes each supplier in turn until a non empty optional is returned.
  As such, not all suppliers are necessarily invoked.
  <p>
- The Java 8 <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util"><code>Optional</code></a> class does not have an <code>or</code> method,
+ The Java 8 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util"><code>Optional</code></a> class does not have an <code>or</code> method,
  so this provides an alternative.</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
@@ -370,11 +412,11 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>firstNonEmpty</h4>
-<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/SafeVarargs.html?is-external=true" title="class or interface in java.lang">@SafeVarargs</a>
-public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;T&gt;&nbsp;firstNonEmpty(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;? extends T&gt;...&nbsp;optionals)</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/SafeVarargs.html?is-external=true" title="class or interface in java.lang">@SafeVarargs</a>
+public static&nbsp;&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;T&gt;&nbsp;firstNonEmpty(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;? extends T&gt;...&nbsp;optionals)</pre>
 <div class="block">Chooses the first optional that is not empty.
  <p>
- The Java 8 <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util"><code>Optional</code></a> class does not have an <code>or</code> method,
+ The Java 8 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util"><code>Optional</code></a> class does not have an <code>or</code> method,
  so this provides an alternative.</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
@@ -386,13 +428,36 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 </dl>
 </li>
 </ul>
+<a name="entry-java.lang.Object-java.lang.Object-">
+<!--   -->
+</a><a name="entry-K-V-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>entry</h4>
+<pre>public static&nbsp;&lt;K,V&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;K,V&gt;&nbsp;entry(K&nbsp;key,
+                                         V&nbsp;value)</pre>
+<div class="block">Creates a single <code>Map.Entry</code>.</div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>K</code> - the type of the key</dd>
+<dd><code>V</code> - the type of the value</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>key</code> - the key</dd>
+<dd><code>value</code> - the value</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the map entry</dd>
+</dl>
+</li>
+</ul>
 <a name="stream-java.lang.Iterable-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>stream</h4>
-<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;T&gt;&nbsp;stream(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;T&gt;&nbsp;iterable)</pre>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;T&gt;&nbsp;stream(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;T&gt;&nbsp;iterable)</pre>
 <div class="block">Converts an iterable to a serial stream.
  <p>
  This is harder than it should be, a method <code>Stream.of(Iterable)</code>
@@ -413,7 +478,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>stream</h4>
-<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;T&gt;&nbsp;stream(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;T&gt;&nbsp;optional)</pre>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;T&gt;&nbsp;stream(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;T&gt;&nbsp;optional)</pre>
 <div class="block">Converts an optional to a stream with zero or one elements.</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
@@ -431,7 +496,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>zipWithIndex</h4>
-<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;<a href="../../../../com/opengamma/strata/collect/tuple/ObjIntPair.html" title="class in com.opengamma.strata.collect.tuple">ObjIntPair</a>&lt;T&gt;&gt;&nbsp;zipWithIndex(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;T&gt;&nbsp;stream)</pre>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;<a href="../../../../com/opengamma/strata/collect/tuple/ObjIntPair.html" title="class in com.opengamma.strata.collect.tuple">ObjIntPair</a>&lt;T&gt;&gt;&nbsp;zipWithIndex(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;T&gt;&nbsp;stream)</pre>
 <div class="block">Creates a stream that wraps a stream with the index.
  <p>
  Each input object is decorated with an <a href="../../../../com/opengamma/strata/collect/tuple/ObjIntPair.html" title="class in com.opengamma.strata.collect.tuple"><code>ObjIntPair</code></a>.
@@ -452,8 +517,8 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>zip</h4>
-<pre>public static&nbsp;&lt;A,B&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;<a href="../../../../com/opengamma/strata/collect/tuple/Pair.html" title="class in com.opengamma.strata.collect.tuple">Pair</a>&lt;A,B&gt;&gt;&nbsp;zip(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;A&gt;&nbsp;stream1,
-                                          <a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;B&gt;&nbsp;stream2)</pre>
+<pre>public static&nbsp;&lt;A,B&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;<a href="../../../../com/opengamma/strata/collect/tuple/Pair.html" title="class in com.opengamma.strata.collect.tuple">Pair</a>&lt;A,B&gt;&gt;&nbsp;zip(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;A&gt;&nbsp;stream1,
+                                          <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;B&gt;&nbsp;stream2)</pre>
 <div class="block">Creates a stream that combines two other streams, continuing until either stream ends.
  <p>
  Each pair of input objects is combined into a <a href="../../../../com/opengamma/strata/collect/tuple/Pair.html" title="class in com.opengamma.strata.collect.tuple"><code>Pair</code></a>.</div>
@@ -475,10 +540,10 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>not</h4>
-<pre>public static&nbsp;&lt;R&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function">Predicate</a>&lt;R&gt;&nbsp;not(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function">Predicate</a>&lt;R&gt;&nbsp;predicate)</pre>
+<pre>public static&nbsp;&lt;R&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function">Predicate</a>&lt;R&gt;&nbsp;not(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function">Predicate</a>&lt;R&gt;&nbsp;predicate)</pre>
 <div class="block">Returns a predicate that negates the original.
  <p>
- The JDK provides <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true#negate--" title="class or interface in java.util.function"><code>Predicate.negate()</code></a> however this requires a predicate.
+ The JDK provides <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true#negate--" title="class or interface in java.util.function"><code>Predicate.negate()</code></a> however this requires a predicate.
  Sometimes, it can be useful to have a static method to achieve this.
  <pre>
   stream.filter(not(String::isEmpty))
@@ -499,12 +564,12 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>ensureOnlyOne</h4>
-<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BinaryOperator.html?is-external=true" title="class or interface in java.util.function">BinaryOperator</a>&lt;T&gt;&nbsp;ensureOnlyOne()</pre>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BinaryOperator.html?is-external=true" title="class or interface in java.util.function">BinaryOperator</a>&lt;T&gt;&nbsp;ensureOnlyOne()</pre>
 <div class="block">Reducer used in a stream to ensure there is no more than one matching element.
  <p>
- This method returns an operator that can be used with <a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true#reduce-java.util.function.BinaryOperator-" title="class or interface in java.util.stream"><code>Stream.reduce(BinaryOperator)</code></a>
- that returns either zero or one elements from the stream. Unlike <a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true#findFirst--" title="class or interface in java.util.stream"><code>Stream.findFirst()</code></a>
- or <a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true#findAny--" title="class or interface in java.util.stream"><code>Stream.findAny()</code></a>, this approach ensures an exception is thrown if there
+ This method returns an operator that can be used with <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true#reduce-java.util.function.BinaryOperator-" title="class or interface in java.util.stream"><code>Stream.reduce(BinaryOperator)</code></a>
+ that returns either zero or one elements from the stream. Unlike <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true#findFirst--" title="class or interface in java.util.stream"><code>Stream.findFirst()</code></a>
+ or <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true#findAny--" title="class or interface in java.util.stream"><code>Stream.findAny()</code></a>, this approach ensures an exception is thrown if there
  is more than one element in the stream.
  <p>
  This would be used as follows:
@@ -525,7 +590,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>toImmutableList</h4>
-<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableList.Builder&lt;T&gt;,com.google.common.collect.ImmutableList&lt;T&gt;&gt;&nbsp;toImmutableList()</pre>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableList.Builder&lt;T&gt;,com.google.common.collect.ImmutableList&lt;T&gt;&gt;&nbsp;toImmutableList()</pre>
 <div class="block">Collector used at the end of a stream to build an immutable list.
  <p>
  A collector is used to gather data at the end of a stream operation.
@@ -545,7 +610,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>toImmutableSet</h4>
-<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableSet.Builder&lt;T&gt;,com.google.common.collect.ImmutableSet&lt;T&gt;&gt;&nbsp;toImmutableSet()</pre>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableSet.Builder&lt;T&gt;,com.google.common.collect.ImmutableSet&lt;T&gt;&gt;&nbsp;toImmutableSet()</pre>
 <div class="block">Collector used at the end of a stream to build an immutable set.
  <p>
  A collector is used to gather data at the end of a stream operation.
@@ -565,7 +630,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>toImmutableSortedSet</h4>
-<pre>public static&nbsp;&lt;T extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;?&gt;&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableSortedSet.Builder&lt;T&gt;,com.google.common.collect.ImmutableSortedSet&lt;T&gt;&gt;&nbsp;toImmutableSortedSet()</pre>
+<pre>public static&nbsp;&lt;T extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;?&gt;&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableSortedSet.Builder&lt;T&gt;,com.google.common.collect.ImmutableSortedSet&lt;T&gt;&gt;&nbsp;toImmutableSortedSet()</pre>
 <div class="block">Collector used at the end of a stream to build an immutable sorted set.
  <p>
  A collector is used to gather data at the end of a stream operation.
@@ -585,7 +650,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>toImmutableSortedSet</h4>
-<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableSortedSet.Builder&lt;T&gt;,com.google.common.collect.ImmutableSortedSet&lt;T&gt;&gt;&nbsp;toImmutableSortedSet(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;? super T&gt;&nbsp;comparator)</pre>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableSortedSet.Builder&lt;T&gt;,com.google.common.collect.ImmutableSortedSet&lt;T&gt;&gt;&nbsp;toImmutableSortedSet(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;? super T&gt;&nbsp;comparator)</pre>
 <div class="block">Collector used at the end of a stream to build an immutable sorted set.
  <p>
  A collector is used to gather data at the end of a stream operation.
@@ -607,7 +672,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>toImmutableMultiset</h4>
-<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableMultiset.Builder&lt;T&gt;,com.google.common.collect.ImmutableMultiset&lt;T&gt;&gt;&nbsp;toImmutableMultiset()</pre>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,com.google.common.collect.ImmutableMultiset.Builder&lt;T&gt;,com.google.common.collect.ImmutableMultiset&lt;T&gt;&gt;&nbsp;toImmutableMultiset()</pre>
 <div class="block">Collector used at the end of a stream to build an immutable multiset.
  <p>
  A collector is used to gather data at the end of a stream operation.
@@ -627,7 +692,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>toImmutableMap</h4>
-<pre>public static&nbsp;&lt;T,K&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableMap&lt;K,T&gt;&gt;&nbsp;toImmutableMap(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor)</pre>
+<pre>public static&nbsp;&lt;T,K&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableMap&lt;K,T&gt;&gt;&nbsp;toImmutableMap(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor)</pre>
 <div class="block">Collector used at the end of a stream to build an immutable map.
  <p>
  A collector is used to gather data at the end of a stream operation.
@@ -637,7 +702,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
  This returns a map by extracting a key from each element.
  The input stream must resolve to unique keys.
  The value associated with each key is the stream element.
- See <a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html?is-external=true#toMap-java.util.function.Function-java.util.function.Function-" title="class or interface in java.util.stream"><code>Collectors.toMap(Function, Function)</code></a> for more details.</div>
+ See <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html?is-external=true#toMap-java.util.function.Function-java.util.function.Function-" title="class or interface in java.util.stream"><code>Collectors.toMap(Function, Function)</code></a> for more details.</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
 <dd><code>T</code> - the type of the stream elements</dd>
@@ -647,7 +712,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the immutable map collector</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the same key is generated twice</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the same key is generated twice</dd>
 </dl>
 </li>
 </ul>
@@ -657,8 +722,8 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>toImmutableMap</h4>
-<pre>public static&nbsp;&lt;T,K,V&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableMap&lt;K,V&gt;&gt;&nbsp;toImmutableMap(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
-                                                                                                <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor)</pre>
+<pre>public static&nbsp;&lt;T,K,V&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableMap&lt;K,V&gt;&gt;&nbsp;toImmutableMap(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
+                                                                                                <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor)</pre>
 <div class="block">Collector used at the end of a stream to build an immutable map.
  <p>
  A collector is used to gather data at the end of a stream operation.
@@ -667,7 +732,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
  <p>
  This returns a map by converting each stream element to a key and value.
  The input stream must resolve to unique keys.
- See <a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html?is-external=true#toMap-java.util.function.Function-java.util.function.Function-" title="class or interface in java.util.stream"><code>Collectors.toMap(Function, Function)</code></a> for more details.</div>
+ See <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html?is-external=true#toMap-java.util.function.Function-java.util.function.Function-" title="class or interface in java.util.stream"><code>Collectors.toMap(Function, Function)</code></a> for more details.</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
 <dd><code>T</code> - the type of the stream elements</dd>
@@ -679,7 +744,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the immutable map collector</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the same key is generated twice</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the same key is generated twice</dd>
 </dl>
 </li>
 </ul>
@@ -689,9 +754,9 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>toImmutableMap</h4>
-<pre>public static&nbsp;&lt;T,K,V&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,V&gt;,com.google.common.collect.ImmutableMap&lt;K,V&gt;&gt;&nbsp;toImmutableMap(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
-                                                                                                       <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor,
-                                                                                                       <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;? super V,? super V,? extends V&gt;&nbsp;mergeFn)</pre>
+<pre>public static&nbsp;&lt;T,K,V&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,V&gt;,com.google.common.collect.ImmutableMap&lt;K,V&gt;&gt;&nbsp;toImmutableMap(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
+                                                                                                       <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor,
+                                                                                                       <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;? super V,? super V,? extends V&gt;&nbsp;mergeFn)</pre>
 <div class="block">Collector used at the end of a stream to build an immutable map.
  <p>
  A collector is used to gather data at the end of a stream operation.
@@ -721,7 +786,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>toImmutableSortedMap</h4>
-<pre>public static&nbsp;&lt;T,K extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;?&gt;&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableSortedMap&lt;K,T&gt;&gt;&nbsp;toImmutableSortedMap(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor)</pre>
+<pre>public static&nbsp;&lt;T,K extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;?&gt;&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableSortedMap&lt;K,T&gt;&gt;&nbsp;toImmutableSortedMap(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor)</pre>
 <div class="block">Collector used at the end of a stream to build an immutable sorted map.
  <p>
  A collector is used to gather data at the end of a stream operation.
@@ -731,7 +796,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
  This returns a map by extracting a key from each element.
  The input stream must resolve to unique keys.
  The value associated with each key is the stream element.
- See <a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html?is-external=true#toMap-java.util.function.Function-java.util.function.Function-" title="class or interface in java.util.stream"><code>Collectors.toMap(Function, Function)</code></a> for more details.</div>
+ See <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html?is-external=true#toMap-java.util.function.Function-java.util.function.Function-" title="class or interface in java.util.stream"><code>Collectors.toMap(Function, Function)</code></a> for more details.</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
 <dd><code>T</code> - the type of the stream elements</dd>
@@ -741,7 +806,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the immutable sorted map collector</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the same key is generated twice</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the same key is generated twice</dd>
 </dl>
 </li>
 </ul>
@@ -751,8 +816,8 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>toImmutableSortedMap</h4>
-<pre>public static&nbsp;&lt;T,K extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;?&gt;,V&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableSortedMap&lt;K,V&gt;&gt;&nbsp;toImmutableSortedMap(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
-                                                                                                                                  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor)</pre>
+<pre>public static&nbsp;&lt;T,K extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;?&gt;,V&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableSortedMap&lt;K,V&gt;&gt;&nbsp;toImmutableSortedMap(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
+                                                                                                                                  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor)</pre>
 <div class="block">Collector used at the end of a stream to build an immutable sorted map.
  <p>
  A collector is used to gather data at the end of a stream operation.
@@ -761,7 +826,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
  <p>
  This returns a map by converting each stream element to a key and value.
  The input stream must resolve to unique keys.
- See <a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html?is-external=true#toMap-java.util.function.Function-java.util.function.Function-" title="class or interface in java.util.stream"><code>Collectors.toMap(Function, Function)</code></a> for more details.</div>
+ See <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html?is-external=true#toMap-java.util.function.Function-java.util.function.Function-" title="class or interface in java.util.stream"><code>Collectors.toMap(Function, Function)</code></a> for more details.</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
 <dd><code>T</code> - the type of the stream elements</dd>
@@ -773,7 +838,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the immutable sorted map collector</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the same key is generated twice</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the same key is generated twice</dd>
 </dl>
 </li>
 </ul>
@@ -783,7 +848,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>toImmutableListMultimap</h4>
-<pre>public static&nbsp;&lt;T,K&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableListMultimap&lt;K,T&gt;&gt;&nbsp;toImmutableListMultimap(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor)</pre>
+<pre>public static&nbsp;&lt;T,K&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableListMultimap&lt;K,T&gt;&gt;&nbsp;toImmutableListMultimap(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor)</pre>
 <div class="block">Collector used at the end of a stream to build an immutable multimap.
  <p>
  A collector is used to gather data at the end of a stream operation.
@@ -793,7 +858,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
  This returns a multimap by extracting a key from each element.
  The value associated with each key is the stream element.
  Stream elements may be converted to the same key, with the values forming a multimap list.
- See <a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html?is-external=true#groupingBy-java.util.function.Function-" title="class or interface in java.util.stream"><code>Collectors.groupingBy(Function)</code></a> for more details.</div>
+ See <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html?is-external=true#groupingBy-java.util.function.Function-" title="class or interface in java.util.stream"><code>Collectors.groupingBy(Function)</code></a> for more details.</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
 <dd><code>T</code> - the type of the stream elements</dd>
@@ -811,8 +876,8 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>toImmutableListMultimap</h4>
-<pre>public static&nbsp;&lt;T,K,V&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableListMultimap&lt;K,V&gt;&gt;&nbsp;toImmutableListMultimap(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
-                                                                                                                  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor)</pre>
+<pre>public static&nbsp;&lt;T,K,V&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableListMultimap&lt;K,V&gt;&gt;&nbsp;toImmutableListMultimap(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
+                                                                                                                  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor)</pre>
 <div class="block">Collector used at the end of a stream to build an immutable multimap.
  <p>
  A collector is used to gather data at the end of a stream operation.
@@ -840,7 +905,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>toImmutableSetMultimap</h4>
-<pre>public static&nbsp;&lt;T,K&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableSetMultimap&lt;K,T&gt;&gt;&nbsp;toImmutableSetMultimap(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor)</pre>
+<pre>public static&nbsp;&lt;T,K&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableSetMultimap&lt;K,T&gt;&gt;&nbsp;toImmutableSetMultimap(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor)</pre>
 <div class="block">Collector used at the end of a stream to build an immutable multimap.
  <p>
  A collector is used to gather data at the end of a stream operation.
@@ -850,7 +915,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
  This returns a multimap by extracting a key from each element.
  The value associated with each key is the stream element.
  Stream elements may be converted to the same key, with the values forming a multimap set.
- See <a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html?is-external=true#groupingBy-java.util.function.Function-" title="class or interface in java.util.stream"><code>Collectors.groupingBy(Function)</code></a> for more details.</div>
+ See <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html?is-external=true#groupingBy-java.util.function.Function-" title="class or interface in java.util.stream"><code>Collectors.groupingBy(Function)</code></a> for more details.</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
 <dd><code>T</code> - the type of the stream elements</dd>
@@ -868,8 +933,8 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>toImmutableSetMultimap</h4>
-<pre>public static&nbsp;&lt;T,K,V&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableSetMultimap&lt;K,V&gt;&gt;&nbsp;toImmutableSetMultimap(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
-                                                                                                                <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor)</pre>
+<pre>public static&nbsp;&lt;T,K,V&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;T,?,com.google.common.collect.ImmutableSetMultimap&lt;K,V&gt;&gt;&nbsp;toImmutableSetMultimap(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends K&gt;&nbsp;keyExtractor,
+                                                                                                                <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super T,? extends V&gt;&nbsp;valueExtractor)</pre>
 <div class="block">Collector used at the end of a stream to build an immutable multimap.
  <p>
  A collector is used to gather data at the end of a stream operation.
@@ -897,7 +962,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <ul class="blockList">
 <li class="blockList">
 <h4>entriesToImmutableMap</h4>
-<pre>public static&nbsp;&lt;K,V&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;K,V&gt;,?,com.google.common.collect.ImmutableMap&lt;K,V&gt;&gt;&nbsp;entriesToImmutableMap()</pre>
+<pre>public static&nbsp;&lt;K,V&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;K,V&gt;,?,com.google.common.collect.ImmutableMap&lt;K,V&gt;&gt;&nbsp;entriesToImmutableMap()</pre>
 <div class="block">Collector used at the end of a stream to build an immutable map
  from a stream containing map entries. This is a common case if a map's
  <code>entrySet</code> has undergone a <code>filter</code> operation. For example:
@@ -927,17 +992,17 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the immutable map collector</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the same key is generated twice</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the same key is generated twice</dd>
 </dl>
 </li>
 </ul>
 <a name="pairsToImmutableMap--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>pairsToImmutableMap</h4>
-<pre>public static&nbsp;&lt;K,V&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;<a href="../../../../com/opengamma/strata/collect/tuple/Pair.html" title="class in com.opengamma.strata.collect.tuple">Pair</a>&lt;K,V&gt;,?,com.google.common.collect.ImmutableMap&lt;K,V&gt;&gt;&nbsp;pairsToImmutableMap()</pre>
+<pre>public static&nbsp;&lt;K,V&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;<a href="../../../../com/opengamma/strata/collect/tuple/Pair.html" title="class in com.opengamma.strata.collect.tuple">Pair</a>&lt;K,V&gt;,?,com.google.common.collect.ImmutableMap&lt;K,V&gt;&gt;&nbsp;pairsToImmutableMap()</pre>
 <div class="block">Collector used at the end of a stream to build an immutable map
  from a stream containing pairs. This is a common case if a map's
  <code>entrySet</code> has undergone a <code>map</code> operation with the
@@ -968,7 +1033,140 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the immutable map collector</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the same key is generated twice</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the same key is generated twice</dd>
+</dl>
+</li>
+</ul>
+<a name="combineFuturesAsList-java.util.List-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>combineFuturesAsList</h4>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;&gt;&nbsp;combineFuturesAsList(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;? extends T&gt;&gt;&nbsp;futures)</pre>
+<div class="block">Converts a list of futures to a single future, combining the values into a list.
+ <p>
+ The <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true#allOf-java.util.concurrent.CompletableFuture...-" title="class or interface in java.util.concurrent"><code>CompletableFuture.allOf(CompletableFuture...)</code></a> method is useful
+ but it returns <code>Void</code>. This method combines the futures but also
+ returns the resulting value as a list.
+ Effectively, this converts <code>List&lt;CompletableFuture&lt;T&gt;&gt;</code> to <code>CompletableFuture&lt;List&lt;T&gt;&gt;</code>.
+ <p>
+ If any input future completes exceptionally, the result will also complete exceptionally.</div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - the type of the values in the list</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>futures</code> - the futures to convert, may be empty</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a future that combines the input futures as a list</dd>
+</dl>
+</li>
+</ul>
+<a name="toCombinedFuture--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toCombinedFuture</h4>
+<pre>public static&nbsp;&lt;T,S extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;? extends T&gt;&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;S,?,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;&gt;&gt;&nbsp;toCombinedFuture()</pre>
+<div class="block">Collector used at the end of a stream to convert a list of futures to a single future,
+ combining the values into a list.
+ <p>
+ A collector is used to gather data at the end of a stream operation.
+ This method returns a collector allowing a stream of futures to be combined into a single future.
+ This converts <code>List&lt;CompletableFuture&lt;T&gt;&gt;</code> to <code>CompletableFuture&lt;List&lt;T&gt;&gt;</code>.</div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>S</code> - the type of the input futures</dd>
+<dd><code>T</code> - the type of the values</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a collector that combines the input futures as a list</dd>
+</dl>
+</li>
+</ul>
+<a name="combineFuturesAsMap-java.util.Map-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>combineFuturesAsMap</h4>
+<pre>public static&nbsp;&lt;K,V,F extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;? extends V&gt;&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,V&gt;&gt;&nbsp;combineFuturesAsMap(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,F&gt;&nbsp;futures)</pre>
+<div class="block">Converts a map of futures to a single future.
+ <p>
+ This is similar to <a href="../../../../com/opengamma/strata/collect/Guavate.html#combineFuturesAsList-java.util.List-"><code>combineFuturesAsList(List)</code></a> but for maps.
+ Effectively, this converts <code>Map&lt;K, CompletableFuture&lt;V&gt;&gt;</code> to <code>CompletableFuture&lt;Map&lt;K, V&gt;&gt;</code>.
+ <p>
+ If any input future completes exceptionally, the result will also complete exceptionally.</div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>K</code> - the type of the keys in the map</dd>
+<dd><code>V</code> - the type of the values in the map</dd>
+<dd><code>F</code> - the type of the futures</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>futures</code> - the futures to convert, may be empty</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a future that combines the input futures as a map</dd>
+</dl>
+</li>
+</ul>
+<a name="toCombinedFutureMap--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toCombinedFutureMap</h4>
+<pre>public static&nbsp;&lt;K,V,F extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;? extends V&gt;&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html?is-external=true" title="class or interface in java.util.stream">Collector</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;K,F&gt;,?,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,V&gt;&gt;&gt;&nbsp;toCombinedFutureMap()</pre>
+<div class="block">Collector used at the end of a stream to convert a map of futures to a single future,
+ combining the values into a map.
+ <p>
+ A collector is used to gather data at the end of a stream operation.
+ This method returns a collector allowing a stream of futures to be combined into a single future.
+ This converts <code>Map&lt;K, CompletableFuture&lt;V&gt;&gt;</code> to <code>CompletableFuture&lt;Map&lt;K, V&gt;&gt;</code>.</div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>K</code> - the type of the keys in the map</dd>
+<dd><code>V</code> - the type of the values in the map</dd>
+<dd><code>F</code> - the type of the input futures</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a collector that combines the input futures as a map</dd>
+</dl>
+</li>
+</ul>
+<a name="poll-java.util.concurrent.ScheduledExecutorService-java.time.Duration-java.time.Duration-java.util.function.Supplier-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>poll</h4>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;T&gt;&nbsp;poll(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ScheduledExecutorService</a>&nbsp;executorService,
+                                            <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html?is-external=true" title="class or interface in java.time">Duration</a>&nbsp;initialDelay,
+                                            <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html?is-external=true" title="class or interface in java.time">Duration</a>&nbsp;frequency,
+                                            <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function">Supplier</a>&lt;T&gt;&nbsp;pollingTask)</pre>
+<div class="block">Polls on a regular frequency until a result is found.
+ <p>
+ Polling is performed via the specified supplier, which must return null until the result is available.
+ If the supplier throws an exception, polling will stop and the future will complete exceptionally.
+ <p>
+ If the future is cancelled, the polling will also be cancelled.
+ It is advisable to consider using a timeout when querying the future.
+ <p>
+ In most cases, there needs to be an initial request, which might return an identifier to query.
+ This pattern may be useful for that case:
+ <pre>
+  return CompletableFuture.supplyAsync(initPollingReturningId(), executorService)
+      .thenCompose(id -&gt; poll(executorService, delay, freq, performPolling(id)));
+  });
+ </pre></div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - the result type</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>executorService</code> - the executor service to use for polling</dd>
+<dd><code>initialDelay</code> - the initial delay before starting to poll</dd>
+<dd><code>frequency</code> - the frequency to poll at</dd>
+<dd><code>pollingTask</code> - the task used to poll, returning null when not yet complete</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the future representing the asynchronous operation</dd>
 </dl>
 </li>
 </ul>

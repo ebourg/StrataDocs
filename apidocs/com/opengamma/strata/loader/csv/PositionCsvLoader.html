@@ -98,7 +98,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
 <li>com.opengamma.strata.loader.csv.PositionCsvLoader</li>
@@ -111,7 +111,7 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">PositionCsvLoader</span>
-extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Loads positions from CSV files.
  <p>
  The positions are expected to be in a CSV format known to Strata.
@@ -165,7 +165,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
  <p>
  The exchange and contract code are combined to form an <a href="../../../../../com/opengamma/strata/product/etd/EtdContractSpecId.html" title="class in com.opengamma.strata.product.etd"><code>EtdContractSpecId</code></a> which is
  resolved in <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics"><code>ReferenceData</code></a> to find additional details about the ETD.
- This process can be changed by providing an alternative <a href="../../../../../com/opengamma/strata/loader/csv/CsvInfoResolver.html" title="interface in com.opengamma.strata.loader.csv"><code>CsvInfoResolver</code></a>.
+ This process can be changed by providing an alternative <a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvInfoResolver.html" title="interface in com.opengamma.strata.loader.csv"><code>PositionCsvInfoResolver</code></a>.
  <p>
  The quantity will normally be set from the 'Quantity' column.
  If that column is not found, the 'Long Quantity' and 'Short Quantity' columns will be used instead.
@@ -190,11 +190,12 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
  <li>'Put Call' - mandatory,  'Put', 'P', 'Call' or 'C'
  <li>'Exercise Price' - mandatory,  the strike price, such as 1.23
  <li>'Version' - optional, the version of the contract, not widely used, defaults to zero
+ <li>'Underlying Expiry' - optional, the expiry year-month of the underlying instrument if applicable, in the format 'yyyy-MM'
  </ul>
  <p>
  The exchange and contract code are combined to form an <a href="../../../../../com/opengamma/strata/product/etd/EtdContractSpecId.html" title="class in com.opengamma.strata.product.etd"><code>EtdContractSpecId</code></a> which is
  resolved in <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics"><code>ReferenceData</code></a> to find additional details about the ETD.
- This process can be changed by providing an alternative <a href="../../../../../com/opengamma/strata/loader/csv/CsvInfoResolver.html" title="interface in com.opengamma.strata.loader.csv"><code>CsvInfoResolver</code></a>.
+ This process can be changed by providing an alternative <a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvInfoResolver.html" title="interface in com.opengamma.strata.loader.csv"><code>PositionCsvInfoResolver</code></a>.
  <p>
  The quantity will normally be set from the 'Quantity' column.
  If that column is not found, the 'Long Quantity' and 'Short Quantity' columns will be used instead.
@@ -226,13 +227,13 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvLoader.html#load-java.util.Collection-">load</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&gt;&nbsp;resources)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvLoader.html#load-java.util.Collection-">load</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&gt;&nbsp;resources)</code>
 <div class="block">Loads one or more CSV format position files.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>&gt;&gt;</code></td>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvLoader.html#load-com.opengamma.strata.collect.io.ResourceLocator...-">load</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>...&nbsp;resources)</code>
 <div class="block">Loads one or more CSV format position files.</div>
 </td>
@@ -250,22 +251,22 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvLoader.html#parse-java.util.Collection-">parse</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvLoader.html#parse-java.util.Collection-">parse</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources)</code>
 <div class="block">Parses one or more CSV format position files, returning ETD futures and
  options using information from reference data.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code>&lt;T extends <a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>&gt;<br><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvLoader.html#parse-java.util.Collection-java.lang.Class-">parse</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources,
-     <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;positionType)</code>
+<td class="colFirst"><code>&lt;T extends <a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>&gt;<br><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvLoader.html#parse-java.util.Collection-java.lang.Class-">parse</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources,
+     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;positionType)</code>
 <div class="block">Parses one or more CSV format position files.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityPosition.html" title="class in com.opengamma.strata.product">SecurityPosition</a>&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvLoader.html#parseLightweight-java.util.Collection-">parseLightweight</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityPosition.html" title="class in com.opengamma.strata.product">SecurityPosition</a>&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/PositionCsvLoader.html#parseLightweight-java.util.Collection-">parseLightweight</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources)</code>
 <div class="block">Parses one or more CSV format position files, returning ETD futures and
  options by identifier without using reference data.</div>
 </td>
@@ -281,8 +282,8 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 </li>
 </ul>
@@ -350,7 +351,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>load</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>&gt;&gt;&nbsp;load(<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>...&nbsp;resources)</pre>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>&gt;&gt;&nbsp;load(<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>...&nbsp;resources)</pre>
 <div class="block">Loads one or more CSV format position files.
  <p>
  CSV files sometimes contain a Unicode Byte Order Mark.
@@ -369,7 +370,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>load</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>&gt;&gt;&nbsp;load(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&gt;&nbsp;resources)</pre>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>&gt;&gt;&nbsp;load(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&gt;&nbsp;resources)</pre>
 <div class="block">Loads one or more CSV format position files.
  <p>
  CSV files sometimes contain a Unicode Byte Order Mark.
@@ -407,7 +408,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>parse</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>&gt;&gt;&nbsp;parse(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources)</pre>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>&gt;&gt;&nbsp;parse(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources)</pre>
 <div class="block">Parses one or more CSV format position files, returning ETD futures and
  options using information from reference data.
  <p>
@@ -431,7 +432,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>parseLightweight</h4>
-<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityPosition.html" title="class in com.opengamma.strata.product">SecurityPosition</a>&gt;&gt;&nbsp;parseLightweight(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources)</pre>
+<pre>public&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityPosition.html" title="class in com.opengamma.strata.product">SecurityPosition</a>&gt;&gt;&nbsp;parseLightweight(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources)</pre>
 <div class="block">Parses one or more CSV format position files, returning ETD futures and
  options by identifier without using reference data.
  <p>
@@ -454,8 +455,8 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>parse</h4>
-<pre>public&nbsp;&lt;T extends <a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>&gt;&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;&gt;&nbsp;parse(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources,
-                                                             <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;positionType)</pre>
+<pre>public&nbsp;&lt;T extends <a href="../../../../../com/opengamma/strata/product/Position.html" title="interface in com.opengamma.strata.product">Position</a>&gt;&nbsp;<a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;&gt;&nbsp;parse(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources,
+                                                             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;positionType)</pre>
 <div class="block">Parses one or more CSV format position files.
  <p>
  A type is specified to filter the positions.

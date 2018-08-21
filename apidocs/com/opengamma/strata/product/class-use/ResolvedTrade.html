@@ -226,7 +226,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>com.google.common.collect.ImmutableList&lt;<a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">CurveGroupDefinition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/CurveGroupDefinition.html#resolvedTrades-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrades</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
+<td class="colLast"><span class="typeNameLabel">RatesCurveGroupDefinition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/curve/RatesCurveGroupDefinition.html#resolvedTrades-com.opengamma.strata.data.MarketData-com.opengamma.strata.basics.ReferenceData-">resolvedTrades</a></span>(<a href="../../../../../com/opengamma/strata/data/MarketData.html" title="interface in com.opengamma.strata.data">MarketData</a>&nbsp;marketData,
               <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Creates a list of trades representing the instrument at each node.</div>
 </td>
@@ -278,7 +278,7 @@
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/market/param/ResolvedTradeParameterMetadata.html" title="class in com.opengamma.strata.market.param">ResolvedTradeParameterMetadata</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedTradeParameterMetadata.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/market/param/ResolvedTradeParameterMetadata.html#of-com.opengamma.strata.product.ResolvedTrade-java.lang.String-">of</a></span>(<a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&nbsp;trade,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;label)</code>
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;label)</code>
 <div class="block">Obtains an instance specifying the trade and label.</div>
 </td>
 </tr>
@@ -336,29 +336,29 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>static &lt;R extends <a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&gt;<br><a href="../../../../../com/opengamma/strata/pricer/curve/TradeCalibrationMeasure.html" title="class in com.opengamma.strata.pricer.curve">TradeCalibrationMeasure</a>&lt;R&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">TradeCalibrationMeasure.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/curve/TradeCalibrationMeasure.html#of-java.lang.String-java.lang.Class-java.util.function.ToDoubleBiFunction-java.util.function.BiFunction-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;R&gt;&nbsp;tradeType,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/ToDoubleBiFunction.html?is-external=true" title="class or interface in java.util.function">ToDoubleBiFunction</a>&lt;R,<a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&gt;&nbsp;valueFn,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;R,<a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>,<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&gt;&nbsp;sensitivityFn)</code>
+<td class="colFirst"><code>static &lt;R extends <a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&gt;<br><a href="../../../../../com/opengamma/strata/pricer/curve/PresentValueCalibrationMeasure.html" title="class in com.opengamma.strata.pricer.curve">PresentValueCalibrationMeasure</a>&lt;R&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">PresentValueCalibrationMeasure.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/curve/PresentValueCalibrationMeasure.html#of-java.lang.String-java.lang.Class-java.util.function.ToDoubleBiFunction-java.util.function.BiFunction-">of</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;R&gt;&nbsp;tradeType,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/ToDoubleBiFunction.html?is-external=true" title="class or interface in java.util.function">ToDoubleBiFunction</a>&lt;R,<a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&gt;&nbsp;valueFn,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;R,<a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>,<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&gt;&nbsp;sensitivityFn)</code>
 <div class="block">Obtains a calibrator for a specific type of trade.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static &lt;R extends <a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&gt;<br><a href="../../../../../com/opengamma/strata/pricer/curve/PresentValueCalibrationMeasure.html" title="class in com.opengamma.strata.pricer.curve">PresentValueCalibrationMeasure</a>&lt;R&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">PresentValueCalibrationMeasure.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/curve/PresentValueCalibrationMeasure.html#of-java.lang.String-java.lang.Class-java.util.function.ToDoubleBiFunction-java.util.function.BiFunction-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;R&gt;&nbsp;tradeType,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/ToDoubleBiFunction.html?is-external=true" title="class or interface in java.util.function">ToDoubleBiFunction</a>&lt;R,<a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&gt;&nbsp;valueFn,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;R,<a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>,<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&gt;&nbsp;sensitivityFn)</code>
+<td class="colFirst"><code>static &lt;R extends <a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&gt;<br><a href="../../../../../com/opengamma/strata/pricer/curve/MarketQuoteMeasure.html" title="class in com.opengamma.strata.pricer.curve">MarketQuoteMeasure</a>&lt;R&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">MarketQuoteMeasure.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/curve/MarketQuoteMeasure.html#of-java.lang.String-java.lang.Class-java.util.function.ToDoubleBiFunction-java.util.function.BiFunction-">of</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;R&gt;&nbsp;tradeType,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/ToDoubleBiFunction.html?is-external=true" title="class or interface in java.util.function">ToDoubleBiFunction</a>&lt;R,<a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&gt;&nbsp;valueFn,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;R,<a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>,<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&gt;&nbsp;sensitivityFn)</code>
 <div class="block">Obtains a calibrator for a specific type of trade.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static &lt;R extends <a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&gt;<br><a href="../../../../../com/opengamma/strata/pricer/curve/MarketQuoteMeasure.html" title="class in com.opengamma.strata.pricer.curve">MarketQuoteMeasure</a>&lt;R&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">MarketQuoteMeasure.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/curve/MarketQuoteMeasure.html#of-java.lang.String-java.lang.Class-java.util.function.ToDoubleBiFunction-java.util.function.BiFunction-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;R&gt;&nbsp;tradeType,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/ToDoubleBiFunction.html?is-external=true" title="class or interface in java.util.function">ToDoubleBiFunction</a>&lt;R,<a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&gt;&nbsp;valueFn,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;R,<a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>,<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&gt;&nbsp;sensitivityFn)</code>
+<td class="colFirst"><code>static &lt;R extends <a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&gt;<br><a href="../../../../../com/opengamma/strata/pricer/curve/TradeCalibrationMeasure.html" title="class in com.opengamma.strata.pricer.curve">TradeCalibrationMeasure</a>&lt;R&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">TradeCalibrationMeasure.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/curve/TradeCalibrationMeasure.html#of-java.lang.String-java.lang.Class-java.util.function.ToDoubleBiFunction-java.util.function.BiFunction-">of</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;R&gt;&nbsp;tradeType,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/ToDoubleBiFunction.html?is-external=true" title="class or interface in java.util.function">ToDoubleBiFunction</a>&lt;R,<a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&gt;&nbsp;valueFn,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function">BiFunction</a>&lt;R,<a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>,<a href="../../../../../com/opengamma/strata/market/sensitivity/PointSensitivities.html" title="class in com.opengamma.strata.market.sensitivity">PointSensitivities</a>&gt;&nbsp;sensitivityFn)</code>
 <div class="block">Obtains a calibrator for a specific type of trade.</div>
 </td>
 </tr>
@@ -375,7 +375,7 @@
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/array/DoubleArray.html" title="class in com.opengamma.strata.collect.array">DoubleArray</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CalibrationMeasures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/curve/CalibrationMeasures.html#derivative-com.opengamma.strata.product.ResolvedTrade-com.opengamma.strata.pricer.rate.RatesProvider-java.util.List-">derivative</a></span>(<a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&nbsp;trade,
           <a href="../../../../../com/opengamma/strata/pricer/rate/RatesProvider.html" title="interface in com.opengamma.strata.pricer.rate">RatesProvider</a>&nbsp;provider,
-          <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveParameterSize.html" title="class in com.opengamma.strata.market.curve">CurveParameterSize</a>&gt;&nbsp;curveOrder)</code>
+          <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveParameterSize.html" title="class in com.opengamma.strata.market.curve">CurveParameterSize</a>&gt;&nbsp;curveOrder)</code>
 <div class="block">Calculates the sensitivity with respect to the rates provider.</div>
 </td>
 </tr>
@@ -397,8 +397,8 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/pricer/curve/CalibrationMeasures.html" title="class in com.opengamma.strata.pricer.curve">CalibrationMeasures</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CalibrationMeasures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/curve/CalibrationMeasures.html#of-java.lang.String-java.util.List-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../com/opengamma/strata/pricer/curve/CalibrationMeasure.html" title="interface in com.opengamma.strata.pricer.curve">CalibrationMeasure</a>&lt;? extends <a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&gt;&gt;&nbsp;measures)</code>
+<td class="colLast"><span class="typeNameLabel">CalibrationMeasures.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/curve/CalibrationMeasures.html#of-java.lang.String-java.util.List-">of</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../com/opengamma/strata/pricer/curve/CalibrationMeasure.html" title="interface in com.opengamma.strata.pricer.curve">CalibrationMeasure</a>&lt;? extends <a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&gt;&gt;&nbsp;measures)</code>
 <div class="block">Obtains an instance from a list of individual trade-specific measures.</div>
 </td>
 </tr>
@@ -418,18 +418,18 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CurveSensitivityUtils.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/sensitivity/CurveSensitivityUtils.html#jacobianFromMarketQuoteSensitivities-java.util.List-java.util.List-java.util.function.Function-">jacobianFromMarketQuoteSensitivities</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveParameterSize.html" title="class in com.opengamma.strata.market.curve">CurveParameterSize</a>&gt;&nbsp;curveOrder,
-                                    <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&gt;&nbsp;trades,
-                                    <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>,<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;&nbsp;sensitivityFunction)</code>
+<td class="colLast"><span class="typeNameLabel">CurveSensitivityUtils.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/sensitivity/CurveSensitivityUtils.html#jacobianFromMarketQuoteSensitivities-java.util.List-java.util.List-java.util.function.Function-">jacobianFromMarketQuoteSensitivities</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveParameterSize.html" title="class in com.opengamma.strata.market.curve">CurveParameterSize</a>&gt;&nbsp;curveOrder,
+                                    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&gt;&nbsp;trades,
+                                    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>,<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;&nbsp;sensitivityFunction)</code>
 <div class="block">Construct the inverse Jacobian matrix from the trades and a function used to compute the sensitivities of the 
  market quotes to the curve parameters.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/collect/array/DoubleMatrix.html" title="class in com.opengamma.strata.collect.array">DoubleMatrix</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CurveSensitivityUtils.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/sensitivity/CurveSensitivityUtils.html#jacobianFromMarketQuoteSensitivities-java.util.List-java.util.List-java.util.function.Function-">jacobianFromMarketQuoteSensitivities</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveParameterSize.html" title="class in com.opengamma.strata.market.curve">CurveParameterSize</a>&gt;&nbsp;curveOrder,
-                                    <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&gt;&nbsp;trades,
-                                    <a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>,<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;&nbsp;sensitivityFunction)</code>
+<td class="colLast"><span class="typeNameLabel">CurveSensitivityUtils.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/sensitivity/CurveSensitivityUtils.html#jacobianFromMarketQuoteSensitivities-java.util.List-java.util.List-java.util.function.Function-">jacobianFromMarketQuoteSensitivities</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/CurveParameterSize.html" title="class in com.opengamma.strata.market.curve">CurveParameterSize</a>&gt;&nbsp;curveOrder,
+                                    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&gt;&nbsp;trades,
+                                    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>,<a href="../../../../../com/opengamma/strata/market/param/CurrencyParameterSensitivities.html" title="class in com.opengamma.strata.market.param">CurrencyParameterSensitivities</a>&gt;&nbsp;sensitivityFunction)</code>
 <div class="block">Construct the inverse Jacobian matrix from the trades and a function used to compute the sensitivities of the 
  market quotes to the curve parameters.</div>
 </td>
@@ -470,23 +470,29 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBillTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBillTrade</a></span></code>
+<div class="block">A trade in a bill, resolved for pricing.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOptionTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOptionTrade</a></span></code>
 <div class="block">A trade in in an option on a futures contract based on a basket of fixed coupon bonds, resolved for pricing.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureTrade</a></span></code>
 <div class="block">A trade in a futures contract based on a basket of fixed coupon bonds, resolved for pricing.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBondTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBondTrade</a></span></code>
 <div class="block">A trade in a capital indexed bond, resolved for pricing.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBondTrade.html" title="class in com.opengamma.strata.product.bond">ResolvedFixedCouponBondTrade</a></span></code>
 <div class="block">A trade in a fixed coupon bond, resolved for pricing.</div>
@@ -706,6 +712,12 @@
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureTrade</a></span></code>
 <div class="block">A trade in a futures contract based on an Ibor index, resolved for pricing.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/ResolvedOvernightFutureTrade.html" title="class in com.opengamma.strata.product.index">ResolvedOvernightFutureTrade</a></span></code>
+<div class="block">A trade in a futures contract based on an Overnight index, resolved for pricing.</div>
 </td>
 </tr>
 </tbody>

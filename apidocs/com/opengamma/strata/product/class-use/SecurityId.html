@@ -183,8 +183,8 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/calc/runner/FunctionRequirements.html" title="class in com.opengamma.strata.calc.runner">FunctionRequirements</a></code></td>
-<td class="colLast"><span class="typeNameLabel">LegalEntityDiscountingMarketDataLookup.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/LegalEntityDiscountingMarketDataLookup.html#requirements-com.opengamma.strata.product.SecurityId-com.opengamma.strata.basics.StandardId-com.opengamma.strata.basics.currency.Currency-">requirements</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId,
-            <a href="../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;issuerId,
+<td class="colLast"><span class="typeNameLabel">LegalEntityDiscountingMarketDataLookup.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/LegalEntityDiscountingMarketDataLookup.html#requirements-com.opengamma.strata.product.SecurityId-com.opengamma.strata.product.LegalEntityId-com.opengamma.strata.basics.currency.Currency-">requirements</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId,
+            <a href="../../../../../com/opengamma/strata/product/LegalEntityId.html" title="class in com.opengamma.strata.product">LegalEntityId</a>&nbsp;issuerId,
             <a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency)</code>
 <div class="block">Creates market data requirements for the specified security and issuer.</div>
 </td>
@@ -212,14 +212,44 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/measure/bond/BondFutureOptionMarketDataLookup.html" title="interface in com.opengamma.strata.measure.bond">BondFutureOptionMarketDataLookup</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BondFutureOptionMarketDataLookup.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/BondFutureOptionMarketDataLookup.html#of-java.util.Map-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>,<a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureVolatilitiesId.html" title="class in com.opengamma.strata.pricer.bond">BondFutureVolatilitiesId</a>&gt;&nbsp;volatilityIds)</code>
-<div class="block">Obtains an instance based on a map of volatility identifiers.</div>
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/measure/bond/LegalEntityDiscountingMarketDataLookup.html" title="interface in com.opengamma.strata.measure.bond">LegalEntityDiscountingMarketDataLookup</a></code></td>
+<td class="colLast"><span class="typeNameLabel">LegalEntityDiscountingMarketDataLookup.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/LegalEntityDiscountingMarketDataLookup.html#of-com.opengamma.strata.market.curve.LegalEntityCurveGroup-java.util.Map-java.util.Map-java.util.Map-">of</a></span>(<a href="../../../../../com/opengamma/strata/market/curve/LegalEntityCurveGroup.html" title="class in com.opengamma.strata.market.curve">LegalEntityCurveGroup</a>&nbsp;curveGroup,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>,<a href="../../../../../com/opengamma/strata/market/curve/RepoGroup.html" title="class in com.opengamma.strata.market.curve">RepoGroup</a>&gt;&nbsp;repoCurveSecurityGroups,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/product/LegalEntityId.html" title="class in com.opengamma.strata.product">LegalEntityId</a>,<a href="../../../../../com/opengamma/strata/market/curve/RepoGroup.html" title="class in com.opengamma.strata.market.curve">RepoGroup</a>&gt;&nbsp;repoCurveGroups,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/product/LegalEntityId.html" title="class in com.opengamma.strata.product">LegalEntityId</a>,<a href="../../../../../com/opengamma/strata/market/curve/LegalEntityGroup.html" title="class in com.opengamma.strata.market.curve">LegalEntityGroup</a>&gt;&nbsp;issuerCurveGroups)</code>
+<div class="block">Obtains an instance based on a curve group and group maps.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/measure/bond/BondFutureOptionMarketDataLookup.html" title="interface in com.opengamma.strata.measure.bond">BondFutureOptionMarketDataLookup</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFutureOptionMarketDataLookup.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/BondFutureOptionMarketDataLookup.html#of-java.util.Map-">of</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>,<a href="../../../../../com/opengamma/strata/pricer/bond/BondFutureVolatilitiesId.html" title="class in com.opengamma.strata.pricer.bond">BondFutureVolatilitiesId</a>&gt;&nbsp;volatilityIds)</code>
+<div class="block">Obtains an instance based on a map of volatility identifiers.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/measure/bond/LegalEntityDiscountingMarketDataLookup.html" title="interface in com.opengamma.strata.measure.bond">LegalEntityDiscountingMarketDataLookup</a></code></td>
+<td class="colLast"><span class="typeNameLabel">LegalEntityDiscountingMarketDataLookup.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/LegalEntityDiscountingMarketDataLookup.html#of-java.util.Map-java.util.Map-java.util.Map-java.util.Map-java.util.Map-">of</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>,<a href="../../../../../com/opengamma/strata/market/curve/RepoGroup.html" title="class in com.opengamma.strata.market.curve">RepoGroup</a>&gt;&nbsp;repoCurveSecurityGroups,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/product/LegalEntityId.html" title="class in com.opengamma.strata.product">LegalEntityId</a>,<a href="../../../../../com/opengamma/strata/market/curve/RepoGroup.html" title="class in com.opengamma.strata.market.curve">RepoGroup</a>&gt;&nbsp;repoCurveGroups,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/collect/tuple/Pair.html" title="class in com.opengamma.strata.collect.tuple">Pair</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/RepoGroup.html" title="class in com.opengamma.strata.market.curve">RepoGroup</a>,<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;repoCurveIds,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/product/LegalEntityId.html" title="class in com.opengamma.strata.product">LegalEntityId</a>,<a href="../../../../../com/opengamma/strata/market/curve/LegalEntityGroup.html" title="class in com.opengamma.strata.market.curve">LegalEntityGroup</a>&gt;&nbsp;issuerCurveGroups,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/collect/tuple/Pair.html" title="class in com.opengamma.strata.collect.tuple">Pair</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/LegalEntityGroup.html" title="class in com.opengamma.strata.market.curve">LegalEntityGroup</a>,<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;issuerCurveIds)</code>
+<div class="block">Obtains an instance based on a maps for repo and issuer curves.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/measure/bond/LegalEntityDiscountingMarketDataLookup.html" title="interface in com.opengamma.strata.measure.bond">LegalEntityDiscountingMarketDataLookup</a></code></td>
+<td class="colLast"><span class="typeNameLabel">LegalEntityDiscountingMarketDataLookup.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/LegalEntityDiscountingMarketDataLookup.html#of-java.util.Map-java.util.Map-java.util.Map-java.util.Map-java.util.Map-com.opengamma.strata.data.ObservableSource-">of</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>,<a href="../../../../../com/opengamma/strata/market/curve/RepoGroup.html" title="class in com.opengamma.strata.market.curve">RepoGroup</a>&gt;&nbsp;repoCurveSecurityGroups,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/product/LegalEntityId.html" title="class in com.opengamma.strata.product">LegalEntityId</a>,<a href="../../../../../com/opengamma/strata/market/curve/RepoGroup.html" title="class in com.opengamma.strata.market.curve">RepoGroup</a>&gt;&nbsp;repoCurveGroups,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/collect/tuple/Pair.html" title="class in com.opengamma.strata.collect.tuple">Pair</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/RepoGroup.html" title="class in com.opengamma.strata.market.curve">RepoGroup</a>,<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;repoCurveIds,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/product/LegalEntityId.html" title="class in com.opengamma.strata.product">LegalEntityId</a>,<a href="../../../../../com/opengamma/strata/market/curve/LegalEntityGroup.html" title="class in com.opengamma.strata.market.curve">LegalEntityGroup</a>&gt;&nbsp;issuerCurveGroups,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/collect/tuple/Pair.html" title="class in com.opengamma.strata.collect.tuple">Pair</a>&lt;<a href="../../../../../com/opengamma/strata/market/curve/LegalEntityGroup.html" title="class in com.opengamma.strata.market.curve">LegalEntityGroup</a>,<a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&gt;,<a href="../../../../../com/opengamma/strata/market/curve/CurveId.html" title="class in com.opengamma.strata.market.curve">CurveId</a>&gt;&nbsp;issuerCurveIds,
+  <a href="../../../../../com/opengamma/strata/data/ObservableSource.html" title="class in com.opengamma.strata.data">ObservableSource</a>&nbsp;obsSource)</code>
+<div class="block">Obtains an instance based on a maps for repo and issuer curves.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/calc/runner/FunctionRequirements.html" title="class in com.opengamma.strata.calc.runner">FunctionRequirements</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BondFutureOptionMarketDataLookup.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/BondFutureOptionMarketDataLookup.html#requirements-java.util.Set-">requirements</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;&nbsp;securityIds)</code>
+<td class="colLast"><span class="typeNameLabel">BondFutureOptionMarketDataLookup.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/measure/bond/BondFutureOptionMarketDataLookup.html#requirements-java.util.Set-">requirements</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;&nbsp;securityIds)</code>
 <div class="block">Creates market data requirements for the specified security IDs.</div>
 </td>
 </tr>
@@ -231,6 +261,27 @@
 </a>
 <h3>Uses of <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a> in <a href="../../../../../com/opengamma/strata/pricer/bond/package-summary.html">com.opengamma.strata.pricer.bond</a></h3>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../com/opengamma/strata/pricer/bond/package-summary.html">com.opengamma.strata.pricer.bond</a> that return types with arguments of type <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>com.google.common.collect.ImmutableMap&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>,<a href="../../../../../com/opengamma/strata/market/curve/RepoGroup.html" title="class in com.opengamma.strata.market.curve">RepoGroup</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableLegalEntityDiscountingProvider.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.html#getRepoCurveSecurityGroups--">getRepoCurveSecurityGroups</a></span>()</code>
+<div class="block">Gets the groups used to find a repo curve by security.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;com.google.common.collect.ImmutableMap&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>,<a href="../../../../../com/opengamma/strata/market/curve/RepoGroup.html" title="class in com.opengamma.strata.market.curve">RepoGroup</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableLegalEntityDiscountingProvider.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.Meta.html#repoCurveSecurityGroups--">repoCurveSecurityGroups</a></span>()</code>
+<div class="block">The meta-property for the <code>repoCurveSecurityGroups</code> property.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../com/opengamma/strata/pricer/bond/package-summary.html">com.opengamma.strata.pricer.bond</a> with parameters of type <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
@@ -239,17 +290,32 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/bond/RepoCurveDiscountFactors.html" title="class in com.opengamma.strata.pricer.bond">RepoCurveDiscountFactors</a></code></td>
-<td class="colLast"><span class="typeNameLabel">LegalEntityDiscountingProvider.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html#repoCurveDiscountFactors-com.opengamma.strata.product.SecurityId-com.opengamma.strata.basics.StandardId-com.opengamma.strata.basics.currency.Currency-">repoCurveDiscountFactors</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId,
-                        <a href="../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;issuerId,
+<td class="colLast"><span class="typeNameLabel">ImmutableLegalEntityDiscountingProvider.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.html#repoCurveDiscountFactors-com.opengamma.strata.product.SecurityId-com.opengamma.strata.product.LegalEntityId-com.opengamma.strata.basics.currency.Currency-">repoCurveDiscountFactors</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId,
+                        <a href="../../../../../com/opengamma/strata/product/LegalEntityId.html" title="class in com.opengamma.strata.product">LegalEntityId</a>&nbsp;issuerId,
+                        <a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/bond/RepoCurveDiscountFactors.html" title="class in com.opengamma.strata.pricer.bond">RepoCurveDiscountFactors</a></code></td>
+<td class="colLast"><span class="typeNameLabel">LegalEntityDiscountingProvider.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/LegalEntityDiscountingProvider.html#repoCurveDiscountFactors-com.opengamma.strata.product.SecurityId-com.opengamma.strata.product.LegalEntityId-com.opengamma.strata.basics.currency.Currency-">repoCurveDiscountFactors</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId,
+                        <a href="../../../../../com/opengamma/strata/product/LegalEntityId.html" title="class in com.opengamma.strata.product">LegalEntityId</a>&nbsp;issuerId,
                         <a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency)</code>
 <div class="block">Gets the discount factors from a repo curve based on the security ID, issuer ID and currency.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/bond/RepoCurveDiscountFactors.html" title="class in com.opengamma.strata.pricer.bond">RepoCurveDiscountFactors</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableLegalEntityDiscountingProvider.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.html#repoCurveDiscountFactors-com.opengamma.strata.product.SecurityId-com.opengamma.strata.basics.StandardId-com.opengamma.strata.basics.currency.Currency-">repoCurveDiscountFactors</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId,
-                        <a href="../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;issuerId,
-                        <a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>&nbsp;currency)</code>&nbsp;</td>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Method parameters in <a href="../../../../../com/opengamma/strata/pricer/bond/package-summary.html">com.opengamma.strata.pricer.bond</a> with type arguments of type <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.Builder.html" title="class in com.opengamma.strata.pricer.bond">ImmutableLegalEntityDiscountingProvider.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableLegalEntityDiscountingProvider.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/pricer/bond/ImmutableLegalEntityDiscountingProvider.Builder.html#repoCurveSecurityGroups-java.util.Map-">repoCurveSecurityGroups</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>,<a href="../../../../../com/opengamma/strata/market/curve/RepoGroup.html" title="class in com.opengamma.strata.market.curve">RepoGroup</a>&gt;&nbsp;repoCurveSecurityGroups)</code>
+<div class="block">Sets the groups used to find a repo curve by security.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -273,32 +339,18 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SecurityTrade.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecurityTrade.html#getSecurityId--">getSecurityId</a></span>()</code>
-<div class="block">Gets the identifier of the security that was traded.</div>
-</td>
+<td class="colLast"><span class="typeNameLabel">GenericSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/GenericSecurity.html#getSecurityId--">getSecurityId</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SecurityQuantity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecurityQuantity.html#getSecurityId--">getSecurityId</a></span>()</code>
-<div class="block">Gets the security identifier.</div>
+<td class="colLast"><span class="typeNameLabel">SecurityTrade.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecurityTrade.html#getSecurityId--">getSecurityId</a></span>()</code>
+<div class="block">Gets the identifier of the security that was traded.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SecurityPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecurityPosition.html#getSecurityId--">getSecurityId</a></span>()</code>
 <div class="block">Gets the identifier of the underlying security.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Security.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/Security.html#getSecurityId--">getSecurityId</a></span>()</code>
-<div class="block">Gets the security identifier.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SecuritizedProductTrade.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecuritizedProductTrade.html#getSecurityId--">getSecurityId</a></span>()</code>
-<div class="block">Gets the security identifier.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -309,42 +361,54 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SecurityQuantity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecurityQuantity.html#getSecurityId--">getSecurityId</a></span>()</code>
+<div class="block">Gets the security identifier.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">GenericSecurityPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/GenericSecurityPosition.html#getSecurityId--">getSecurityId</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SecuritizedProductPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecuritizedProductPosition.html#getSecurityId--">getSecurityId</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Security.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/Security.html#getSecurityId--">getSecurityId</a></span>()</code>
+<div class="block">Gets the security identifier.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SecuritizedProductPortfolioItem.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecuritizedProductPortfolioItem.html#getSecurityId--">getSecurityId</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Position.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/Position.html#getSecurityId--">getSecurityId</a></span>()</code>
 <div class="block">Gets the identifier of the underlying security.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
-<td class="colLast"><span class="typeNameLabel">GenericSecurityTrade.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/GenericSecurityTrade.html#getSecurityId--">getSecurityId</a></span>()</code>
-<div class="block">Gets the security identifier.</div>
-</td>
-</tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
-<td class="colLast"><span class="typeNameLabel">GenericSecurityPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/GenericSecurityPosition.html#getSecurityId--">getSecurityId</a></span>()</code>
-<div class="block">Gets the security identifier.</div>
-</td>
+<td class="colLast"><span class="typeNameLabel">GenericSecurityTrade.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/GenericSecurityTrade.html#getSecurityId--">getSecurityId</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
-<td class="colLast"><span class="typeNameLabel">GenericSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/GenericSecurity.html#getSecurityId--">getSecurityId</a></span>()</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SecurityId.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecurityId.html#of-com.opengamma.strata.basics.StandardId-">of</a></span>(<a href="../../../../../com/opengamma/strata/basics/StandardId.html" title="class in com.opengamma.strata.basics">StandardId</a>&nbsp;standardId)</code>
 <div class="block">Creates an instance from a standard two-part identifier.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SecurityId.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecurityId.html#of-java.lang.String-java.lang.String-">of</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;scheme,
-  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
+<td class="colLast"><span class="typeNameLabel">SecurityId.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecurityId.html#of-java.lang.String-java.lang.String-">of</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;scheme,
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
 <div class="block">Obtains an instance from a scheme and value.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SecurityId.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecurityId.html#parse-java.lang.String-">parse</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;str)</code>
+<td class="colLast"><span class="typeNameLabel">SecurityId.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecurityId.html#parse-java.lang.String-">parse</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;str)</code>
 <div class="block">Parses an <code>StandardId</code> from a formatted scheme and value.</div>
 </td>
 </tr>
@@ -359,13 +423,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">Security.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/Security.html#getUnderlyingIds--">getUnderlyingIds</a></span>()</code>
-<div class="block">Gets the set of underlying security identifiers.</div>
-</td>
+<td class="colLast"><span class="typeNameLabel">GenericSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/GenericSecurity.html#getUnderlyingIds--">getUnderlyingIds</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">GenericSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/GenericSecurity.html#getUnderlyingIds--">getUnderlyingIds</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">Security.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/Security.html#getUnderlyingIds--">getUnderlyingIds</a></span>()</code>
+<div class="block">Gets the set of underlying security identifiers.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
@@ -484,31 +548,49 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CapitalIndexedBondPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondPosition.html#getSecurityId--">getSecurityId</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedFixedCouponBond.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.html#getSecurityId--">getSecurityId</a></span>()</code>
+<div class="block">Gets the security identifier.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedBill.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBill.html#getSecurityId--">getSecurityId</a></span>()</code>
 <div class="block">Gets the security identifier.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCapitalIndexedBond.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.html#getSecurityId--">getSecurityId</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">Bill.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/Bill.html#getSecurityId--">getSecurityId</a></span>()</code>
 <div class="block">Gets the security identifier.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFutureOptionPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionPosition.html#getSecurityId--">getSecurityId</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedBondFutureOption.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.html#getSecurityId--">getSecurityId</a></span>()</code>
 <div class="block">Gets the security identifier.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedBondFuture.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFuture.html#getSecurityId--">getSecurityId</a></span>()</code>
 <div class="block">Gets the security identifier.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFuturePosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFuturePosition.html#getSecurityId--">getSecurityId</a></span>()</code>&nbsp;</td>
+</tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FixedCouponBond.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBond.html#getSecurityId--">getSecurityId</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedCapitalIndexedBond.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.html#getSecurityId--">getSecurityId</a></span>()</code>
 <div class="block">Gets the security identifier.</div>
 </td>
 </tr>
@@ -520,9 +602,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BondFutureOption.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOption.html#getSecurityId--">getSecurityId</a></span>()</code>
-<div class="block">Gets the security identifier.</div>
-</td>
+<td class="colLast"><span class="typeNameLabel">BillPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BillPosition.html#getSecurityId--">getSecurityId</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
@@ -531,6 +611,22 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FixedCouponBondPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondPosition.html#getSecurityId--">getSecurityId</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFutureOption.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOption.html#getSecurityId--">getSecurityId</a></span>()</code>
+<div class="block">Gets the security identifier.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FixedCouponBond.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBond.html#getSecurityId--">getSecurityId</a></span>()</code>
+<div class="block">Gets the security identifier.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BondFutureOptionSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionSecurity.html#getUnderlyingFutureId--">getUnderlyingFutureId</a></span>()</code>
 <div class="block">Gets the identifier of the underlying future.</div>
@@ -559,11 +655,11 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">FixedCouponBondSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondSecurity.html#getUnderlyingIds--">getUnderlyingIds</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">CapitalIndexedBondSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondSecurity.html#getUnderlyingIds--">getUnderlyingIds</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">CapitalIndexedBondSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondSecurity.html#getUnderlyingIds--">getUnderlyingIds</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">FixedCouponBondSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondSecurity.html#getUnderlyingIds--">getUnderlyingIds</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
@@ -571,17 +667,27 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">BondFutureOptionSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionSecurity.html#getUnderlyingIds--">getUnderlyingIds</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">BillSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BillSecurity.html#getUnderlyingIds--">getUnderlyingIds</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">BondFutureOptionSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionSecurity.html#getUnderlyingIds--">getUnderlyingIds</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedFixedCouponBond.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedFixedCouponBond.Meta.html#securityId--">securityId</a></span>()</code>
 <div class="block">The meta-property for the <code>securityId</code> property.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedBill.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBill.Meta.html#securityId--">securityId</a></span>()</code>
+<div class="block">The meta-property for the <code>securityId</code> property.</div>
+</td>
+</tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedCapitalIndexedBond.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.Meta.html#securityId--">securityId</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">Bill.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/Bill.Meta.html#securityId--">securityId</a></span>()</code>
 <div class="block">The meta-property for the <code>securityId</code> property.</div>
 </td>
 </tr>
@@ -599,7 +705,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">FixedCouponBond.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBond.Meta.html#securityId--">securityId</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedCapitalIndexedBond.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.Meta.html#securityId--">securityId</a></span>()</code>
 <div class="block">The meta-property for the <code>securityId</code> property.</div>
 </td>
 </tr>
@@ -611,17 +717,23 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">BondFutureOption.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOption.Meta.html#securityId--">securityId</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">BondFuture.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFuture.Meta.html#securityId--">securityId</a></span>()</code>
 <div class="block">The meta-property for the <code>securityId</code> property.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">BondFuture.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFuture.Meta.html#securityId--">securityId</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">BondFutureOption.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOption.Meta.html#securityId--">securityId</a></span>()</code>
 <div class="block">The meta-property for the <code>securityId</code> property.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">FixedCouponBond.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBond.Meta.html#securityId--">securityId</a></span>()</code>
+<div class="block">The meta-property for the <code>securityId</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">BondFutureOptionSecurity.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionSecurity.Meta.html#underlyingFutureId--">underlyingFutureId</a></span>()</code>
 <div class="block">The meta-property for the <code>underlyingFutureId</code> property.</div>
@@ -650,32 +762,44 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBill.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedBill.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedBill.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBill.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
+<div class="block">Sets the security identifier.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/Bill.Builder.html" title="class in com.opengamma.strata.product.bond">Bill.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Bill.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/Bill.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
+<div class="block">Sets the security identifier.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedBondFutureOption.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
+<div class="block">Sets the security identifier.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFuture.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFuture.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedBondFuture.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFuture.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
+<div class="block">Sets the security identifier.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedCapitalIndexedBond.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedCapitalIndexedBond.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedCapitalIndexedBond.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
 <div class="block">Sets the security identifier.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFutureOption.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedBondFutureOption.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFutureOption.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
-<div class="block">Sets the security identifier.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFuture.Builder.html" title="class in com.opengamma.strata.product.bond">ResolvedBondFuture.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedBondFuture.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/ResolvedBondFuture.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
-<div class="block">Sets the security identifier.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBond.Builder.html" title="class in com.opengamma.strata.product.bond">FixedCouponBond.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FixedCouponBond.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBond.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
-<div class="block">Sets the security identifier.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBond.Builder.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBond.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CapitalIndexedBond.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBond.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
+<div class="block">Sets the security identifier.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/BondFuture.Builder.html" title="class in com.opengamma.strata.product.bond">BondFuture.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BondFuture.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFuture.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
 <div class="block">Sets the security identifier.</div>
 </td>
 </tr>
@@ -686,8 +810,8 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/BondFuture.Builder.html" title="class in com.opengamma.strata.product.bond">BondFuture.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BondFuture.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFuture.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBond.Builder.html" title="class in com.opengamma.strata.product.bond">FixedCouponBond.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">FixedCouponBond.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBond.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
 <div class="block">Sets the security identifier.</div>
 </td>
 </tr>
@@ -708,7 +832,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/bond/BondFutureSecurity.Builder.html" title="class in com.opengamma.strata.product.bond">BondFutureSecurity.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BondFutureSecurity.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureSecurity.Builder.html#deliveryBasketIds-java.util.List-">deliveryBasketIds</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;&nbsp;deliveryBasketIds)</code>
+<td class="colLast"><span class="typeNameLabel">BondFutureSecurity.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureSecurity.Builder.html#deliveryBasketIds-java.util.List-">deliveryBasketIds</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;&nbsp;deliveryBasketIds)</code>
 <div class="block">Sets the basket of deliverable bonds.</div>
 </td>
 </tr>
@@ -728,13 +852,17 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedDsf.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsf.html#getSecurityId--">getSecurityId</a></span>()</code>
-<div class="block">Gets the security identifier.</div>
-</td>
+<td class="colLast"><span class="typeNameLabel">DsfPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/DsfPosition.html#getSecurityId--">getSecurityId</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Dsf.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/Dsf.html#getSecurityId--">getSecurityId</a></span>()</code>
+<div class="block">Gets the security identifier.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedDsf.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsf.html#getSecurityId--">getSecurityId</a></span>()</code>
 <div class="block">Gets the security identifier.</div>
 </td>
 </tr>
@@ -753,13 +881,13 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedDsf.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsf.Meta.html#securityId--">securityId</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">Dsf.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/Dsf.Meta.html#securityId--">securityId</a></span>()</code>
 <div class="block">The meta-property for the <code>securityId</code> property.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">Dsf.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/Dsf.Meta.html#securityId--">securityId</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedDsf.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsf.Meta.html#securityId--">securityId</a></span>()</code>
 <div class="block">The meta-property for the <code>securityId</code> property.</div>
 </td>
 </tr>
@@ -773,14 +901,14 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsf.Builder.html" title="class in com.opengamma.strata.product.dsf">ResolvedDsf.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedDsf.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsf.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/dsf/Dsf.Builder.html" title="class in com.opengamma.strata.product.dsf">Dsf.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Dsf.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/Dsf.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
 <div class="block">Sets the security identifier.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/dsf/Dsf.Builder.html" title="class in com.opengamma.strata.product.dsf">Dsf.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Dsf.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/Dsf.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsf.Builder.html" title="class in com.opengamma.strata.product.dsf">ResolvedDsf.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedDsf.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/dsf/ResolvedDsf.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
 <div class="block">Sets the security identifier.</div>
 </td>
 </tr>
@@ -802,14 +930,22 @@
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
 <td class="colLast"><span class="typeNameLabel">EtdIdUtils.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdIdUtils.html#futureId-com.opengamma.strata.product.common.ExchangeId-com.opengamma.strata.product.etd.EtdContractCode-java.time.YearMonth-com.opengamma.strata.product.etd.EtdVariant-">futureId</a></span>(<a href="../../../../../com/opengamma/strata/product/common/ExchangeId.html" title="class in com.opengamma.strata.product.common">ExchangeId</a>&nbsp;exchangeId,
         <a href="../../../../../com/opengamma/strata/product/etd/EtdContractCode.html" title="class in com.opengamma.strata.product.etd">EtdContractCode</a>&nbsp;contractCode,
-        <a href="http://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html?is-external=true" title="class or interface in java.time">YearMonth</a>&nbsp;expiryMonth,
+        <a href="https://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html?is-external=true" title="class or interface in java.time">YearMonth</a>&nbsp;expiryMonth,
         <a href="../../../../../com/opengamma/strata/product/etd/EtdVariant.html" title="class in com.opengamma.strata.product.etd">EtdVariant</a>&nbsp;variant)</code>
 <div class="block">Creates an identifier for an ETD future instrument.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">EtdFutureTrade.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdFutureTrade.html#getSecurityId--">getSecurityId</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
 <td class="colLast"><span class="typeNameLabel">EtdSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdSecurity.html#getSecurityId--">getSecurityId</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">EtdOptionTrade.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdOptionTrade.html#getSecurityId--">getSecurityId</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>default <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
@@ -818,27 +954,28 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
-<td class="colLast"><span class="typeNameLabel">EtdOptionTrade.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdOptionTrade.html#getSecurityId--">getSecurityId</a></span>()</code>
-<div class="block">Gets the security identifier.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
-<td class="colLast"><span class="typeNameLabel">EtdFutureTrade.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdFutureTrade.html#getSecurityId--">getSecurityId</a></span>()</code>
-<div class="block">Gets the security identifier.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
 <td class="colLast"><span class="typeNameLabel">EtdIdUtils.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdIdUtils.html#optionId-com.opengamma.strata.product.common.ExchangeId-com.opengamma.strata.product.etd.EtdContractCode-java.time.YearMonth-com.opengamma.strata.product.etd.EtdVariant-int-com.opengamma.strata.product.common.PutCall-double-">optionId</a></span>(<a href="../../../../../com/opengamma/strata/product/common/ExchangeId.html" title="class in com.opengamma.strata.product.common">ExchangeId</a>&nbsp;exchangeId,
         <a href="../../../../../com/opengamma/strata/product/etd/EtdContractCode.html" title="class in com.opengamma.strata.product.etd">EtdContractCode</a>&nbsp;contractCode,
-        <a href="http://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html?is-external=true" title="class or interface in java.time">YearMonth</a>&nbsp;expiryMonth,
+        <a href="https://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html?is-external=true" title="class or interface in java.time">YearMonth</a>&nbsp;expiryMonth,
         <a href="../../../../../com/opengamma/strata/product/etd/EtdVariant.html" title="class in com.opengamma.strata.product.etd">EtdVariant</a>&nbsp;variant,
         int&nbsp;version,
         <a href="../../../../../com/opengamma/strata/product/common/PutCall.html" title="enum in com.opengamma.strata.product.common">PutCall</a>&nbsp;putCall,
         double&nbsp;strikePrice)</code>
-<div class="block">Creates an identifier for an ETD future instrument.</div>
+<div class="block">Creates an identifier for an ETD option instrument.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">EtdIdUtils.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdIdUtils.html#optionId-com.opengamma.strata.product.common.ExchangeId-com.opengamma.strata.product.etd.EtdContractCode-java.time.YearMonth-com.opengamma.strata.product.etd.EtdVariant-int-com.opengamma.strata.product.common.PutCall-double-java.time.YearMonth-">optionId</a></span>(<a href="../../../../../com/opengamma/strata/product/common/ExchangeId.html" title="class in com.opengamma.strata.product.common">ExchangeId</a>&nbsp;exchangeId,
+        <a href="../../../../../com/opengamma/strata/product/etd/EtdContractCode.html" title="class in com.opengamma.strata.product.etd">EtdContractCode</a>&nbsp;contractCode,
+        <a href="https://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html?is-external=true" title="class or interface in java.time">YearMonth</a>&nbsp;expiryMonth,
+        <a href="../../../../../com/opengamma/strata/product/etd/EtdVariant.html" title="class in com.opengamma.strata.product.etd">EtdVariant</a>&nbsp;variant,
+        int&nbsp;version,
+        <a href="../../../../../com/opengamma/strata/product/common/PutCall.html" title="enum in com.opengamma.strata.product.common">PutCall</a>&nbsp;putCall,
+        double&nbsp;strikePrice,
+        <a href="https://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html?is-external=true" title="class or interface in java.time">YearMonth</a>&nbsp;underlyingExpiryMonth)</code>
+<div class="block">Creates an identifier for an ETD option instrument.</div>
 </td>
 </tr>
 </tbody>
@@ -870,19 +1007,29 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedOvernightFuture.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/ResolvedOvernightFuture.html#getSecurityId--">getSecurityId</a></span>()</code>
+<div class="block">Gets the security identifier.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureOption.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.html#getSecurityId--">getSecurityId</a></span>()</code>
+<div class="block">Gets the security identifier.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedIborFutureOption.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.html#getSecurityId--">getSecurityId</a></span>()</code>
 <div class="block">Gets the security identifier.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedIborFuture.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFuture.html#getSecurityId--">getSecurityId</a></span>()</code>
-<div class="block">Gets the security identifier.</div>
-</td>
+<td class="colLast"><span class="typeNameLabel">OvernightFuturePosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/OvernightFuturePosition.html#getSecurityId--">getSecurityId</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborFutureOption.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.html#getSecurityId--">getSecurityId</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">OvernightFuture.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/OvernightFuture.html#getSecurityId--">getSecurityId</a></span>()</code>
 <div class="block">Gets the security identifier.</div>
 </td>
 </tr>
@@ -893,6 +1040,20 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedIborFuture.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFuture.html#getSecurityId--">getSecurityId</a></span>()</code>
+<div class="block">Gets the security identifier.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFuturePosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFuturePosition.html#getSecurityId--">getSecurityId</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureOptionPosition.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOptionPosition.html#getSecurityId--">getSecurityId</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IborFutureOptionSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOptionSecurity.html#getUnderlyingFutureId--">getUnderlyingFutureId</a></span>()</code>
 <div class="block">Gets the identifier of the underlying future.</div>
@@ -913,17 +1074,15 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">IborFutureOptionSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOptionSecurity.html#getUnderlyingIds--">getUnderlyingIds</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">OvernightFutureSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/OvernightFutureSecurity.html#getUnderlyingIds--">getUnderlyingIds</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedIborFutureOption.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.Meta.html#securityId--">securityId</a></span>()</code>
-<div class="block">The meta-property for the <code>securityId</code> property.</div>
-</td>
+<td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureOptionSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOptionSecurity.html#getUnderlyingIds--">getUnderlyingIds</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedIborFuture.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFuture.Meta.html#securityId--">securityId</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">ResolvedOvernightFuture.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/ResolvedOvernightFuture.Meta.html#securityId--">securityId</a></span>()</code>
 <div class="block">The meta-property for the <code>securityId</code> property.</div>
 </td>
 </tr>
@@ -935,11 +1094,29 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedIborFutureOption.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.Meta.html#securityId--">securityId</a></span>()</code>
+<div class="block">The meta-property for the <code>securityId</code> property.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightFuture.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/OvernightFuture.Meta.html#securityId--">securityId</a></span>()</code>
+<div class="block">The meta-property for the <code>securityId</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">IborFuture.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFuture.Meta.html#securityId--">securityId</a></span>()</code>
 <div class="block">The meta-property for the <code>securityId</code> property.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedIborFuture.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFuture.Meta.html#securityId--">securityId</a></span>()</code>
+<div class="block">The meta-property for the <code>securityId</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://www.joda.org/joda-beans/apidocs/org/joda/beans/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans">MetaProperty</a>&lt;<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">IborFutureOptionSecurity.Meta.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOptionSecurity.Meta.html#underlyingFutureId--">underlyingFutureId</a></span>()</code>
 <div class="block">The meta-property for the <code>underlyingFutureId</code> property.</div>
@@ -955,26 +1132,38 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/ResolvedOvernightFuture.Builder.html" title="class in com.opengamma.strata.product.index">ResolvedOvernightFuture.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedOvernightFuture.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/ResolvedOvernightFuture.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
+<div class="block">Sets the security identifier.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.Builder.html" title="class in com.opengamma.strata.product.index">IborFutureOption.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFutureOption.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
+<div class="block">Sets the security identifier.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.Builder.html" title="class in com.opengamma.strata.product.index">ResolvedIborFutureOption.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ResolvedIborFutureOption.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFutureOption.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
 <div class="block">Sets the security identifier.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFuture.Builder.html" title="class in com.opengamma.strata.product.index">ResolvedIborFuture.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ResolvedIborFuture.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFuture.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/OvernightFuture.Builder.html" title="class in com.opengamma.strata.product.index">OvernightFuture.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">OvernightFuture.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/OvernightFuture.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
 <div class="block">Sets the security identifier.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.Builder.html" title="class in com.opengamma.strata.product.index">IborFutureOption.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborFutureOption.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFutureOption.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFuture.Builder.html" title="class in com.opengamma.strata.product.index">IborFuture.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IborFuture.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFuture.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
 <div class="block">Sets the security identifier.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFuture.Builder.html" title="class in com.opengamma.strata.product.index">IborFuture.Builder</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborFuture.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/IborFuture.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFuture.Builder.html" title="class in com.opengamma.strata.product.index">ResolvedIborFuture.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ResolvedIborFuture.Builder.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/ResolvedIborFuture.Builder.html#securityId-com.opengamma.strata.product.SecurityId-">securityId</a></span>(<a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId)</code>
 <div class="block">Sets the security identifier.</div>
 </td>
 </tr>
@@ -1000,7 +1189,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFutureTrade.html" title="class in com.opengamma.strata.product.index">IborFutureTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborFutureTemplate.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/type/IborFutureTemplate.html#createTrade-java.time.LocalDate-com.opengamma.strata.product.SecurityId-double-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+<td class="colLast"><span class="typeNameLabel">IborFutureTemplate.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/type/IborFutureTemplate.html#createTrade-java.time.LocalDate-com.opengamma.strata.product.SecurityId-double-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
            <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId,
            double&nbsp;quantity,
            double&nbsp;notional,
@@ -1011,20 +1200,9 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFutureTrade.html" title="class in com.opengamma.strata.product.index">IborFutureTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableIborFutureConvention.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/type/ImmutableIborFutureConvention.html#createTrade-java.time.LocalDate-com.opengamma.strata.product.SecurityId-java.time.Period-int-double-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+<td class="colLast"><span class="typeNameLabel">IborFutureConvention.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/type/IborFutureConvention.html#createTrade-java.time.LocalDate-com.opengamma.strata.product.SecurityId-java.time.Period-int-double-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
            <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId,
-           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;minimumPeriod,
-           int&nbsp;sequenceNumber,
-           double&nbsp;quantity,
-           double&nbsp;notional,
-           double&nbsp;price,
-           <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFutureTrade.html" title="class in com.opengamma.strata.product.index">IborFutureTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborFutureConvention.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/type/IborFutureConvention.html#createTrade-java.time.LocalDate-com.opengamma.strata.product.SecurityId-java.time.Period-int-double-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
-           <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId,
-           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;minimumPeriod,
+           <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;minimumPeriod,
            int&nbsp;sequenceNumber,
            double&nbsp;quantity,
            double&nbsp;notional,
@@ -1032,28 +1210,39 @@
            <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Creates a trade based on this convention.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFutureTrade.html" title="class in com.opengamma.strata.product.index">IborFutureTrade</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableIborFutureConvention.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/type/ImmutableIborFutureConvention.html#createTrade-java.time.LocalDate-com.opengamma.strata.product.SecurityId-java.time.Period-int-double-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+           <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId,
+           <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Period.html?is-external=true" title="class or interface in java.time">Period</a>&nbsp;minimumPeriod,
+           int&nbsp;sequenceNumber,
+           double&nbsp;quantity,
+           double&nbsp;notional,
+           double&nbsp;price,
+           <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFutureTrade.html" title="class in com.opengamma.strata.product.index">IborFutureTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImmutableIborFutureConvention.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/type/ImmutableIborFutureConvention.html#createTrade-java.time.LocalDate-com.opengamma.strata.product.SecurityId-java.time.YearMonth-double-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+<td class="colLast"><span class="typeNameLabel">IborFutureConvention.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/type/IborFutureConvention.html#createTrade-java.time.LocalDate-com.opengamma.strata.product.SecurityId-java.time.YearMonth-double-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
            <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId,
-           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html?is-external=true" title="class or interface in java.time">YearMonth</a>&nbsp;yearMonth,
-           double&nbsp;quantity,
-           double&nbsp;notional,
-           double&nbsp;price,
-           <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFutureTrade.html" title="class in com.opengamma.strata.product.index">IborFutureTrade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IborFutureConvention.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/type/IborFutureConvention.html#createTrade-java.time.LocalDate-com.opengamma.strata.product.SecurityId-java.time.YearMonth-double-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
-           <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId,
-           <a href="http://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html?is-external=true" title="class or interface in java.time">YearMonth</a>&nbsp;yearMonth,
+           <a href="https://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html?is-external=true" title="class or interface in java.time">YearMonth</a>&nbsp;yearMonth,
            double&nbsp;quantity,
            double&nbsp;notional,
            double&nbsp;price,
            <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
 <div class="block">Creates a trade based on this convention.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/index/IborFutureTrade.html" title="class in com.opengamma.strata.product.index">IborFutureTrade</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ImmutableIborFutureConvention.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/type/ImmutableIborFutureConvention.html#createTrade-java.time.LocalDate-com.opengamma.strata.product.SecurityId-java.time.YearMonth-double-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html?is-external=true" title="class or interface in java.time">LocalDate</a>&nbsp;tradeDate,
+           <a href="../../../../../com/opengamma/strata/product/SecurityId.html" title="class in com.opengamma.strata.product">SecurityId</a>&nbsp;securityId,
+           <a href="https://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html?is-external=true" title="class or interface in java.time">YearMonth</a>&nbsp;yearMonth,
+           double&nbsp;quantity,
+           double&nbsp;notional,
+           double&nbsp;price,
+           <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

@@ -220,9 +220,16 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>&lt;T extends <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;<br><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">TradeCsvLoader.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#parse-java.util.Collection-java.lang.Class-">parse</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources,
-     <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;tradeType)</code>
+<td class="colFirst"><code>default &lt;T extends <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;<br>T</code></td>
+<td class="colLast"><span class="typeNameLabel">TradeCsvInfoResolver.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvInfoResolver.html#completeTradeCommon-com.opengamma.strata.collect.io.CsvRow-T-">completeTradeCommon</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/CsvRow.html" title="class in com.opengamma.strata.collect.io">CsvRow</a>&nbsp;row,
+                   T&nbsp;trade)</code>
+<div class="block">Completes the trade, potentially parsing additional columns.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>&lt;T extends <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;<br><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">TradeCsvLoader.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#parse-java.util.Collection-java.lang.Class-">parse</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources,
+     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;tradeType)</code>
 <div class="block">Parses one or more CSV format trade files with a quiet type filter.</div>
 </td>
 </tr>
@@ -236,27 +243,27 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">TradeCsvLoader.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#load-java.util.Collection-">load</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&gt;&nbsp;resources)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">TradeCsvLoader.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#load-java.util.Collection-">load</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>&gt;&nbsp;resources)</code>
 <div class="block">Loads one or more CSV format trade files.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;</code></td>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">TradeCsvLoader.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#load-com.opengamma.strata.collect.io.ResourceLocator...-">load</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/ResourceLocator.html" title="class in com.opengamma.strata.collect.io">ResourceLocator</a>...&nbsp;resources)</code>
 <div class="block">Loads one or more CSV format trade files.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">TradeCsvLoader.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#parse-java.util.Collection-">parse</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">TradeCsvLoader.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#parse-java.util.Collection-">parse</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources)</code>
 <div class="block">Parses one or more CSV format trade files.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">TradeCsvLoader.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#parse-java.util.Collection-java.util.List-">parse</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources,
-     <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;&nbsp;tradeTypes)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">TradeCsvLoader.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#parse-java.util.Collection-java.util.List-">parse</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources,
+     <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;&nbsp;tradeTypes)</code>
 <div class="block">Parses one or more CSV format trade files with an error-creating type filter.</div>
 </td>
 </tr>
@@ -270,9 +277,9 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">TradeCsvLoader.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#parse-java.util.Collection-java.util.List-">parse</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources,
-     <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;&nbsp;tradeTypes)</code>
+<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/collect/result/ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">TradeCsvLoader.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/csv/TradeCsvLoader.html#parse-java.util.Collection-java.util.List-">parse</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;com.google.common.io.CharSource&gt;&nbsp;charSources,
+     <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;&gt;&nbsp;tradeTypes)</code>
 <div class="block">Parses one or more CSV format trade files with an error-creating type filter.</div>
 </td>
 </tr>
@@ -307,15 +314,15 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;</code></td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">FpmlDocumentParser.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/fpml/FpmlDocumentParser.html#parseTrades-com.google.common.io.ByteSource-">parseTrades</a></span>(com.google.common.io.ByteSource&nbsp;source)</code>
 <div class="block">Parses FpML from the specified source, extracting the trades.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;</code></td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">FpmlDocumentParser.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/loader/fpml/FpmlDocumentParser.html#parseTrades-com.opengamma.strata.collect.io.XmlElement-java.util.Map-">parseTrades</a></span>(<a href="../../../../../com/opengamma/strata/collect/io/XmlElement.html" title="class in com.opengamma.strata.collect.io">XmlElement</a>&nbsp;fpmlRootEl,
-           <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../com/opengamma/strata/collect/io/XmlElement.html" title="class in com.opengamma.strata.collect.io">XmlElement</a>&gt;&nbsp;references)</code>
+           <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../com/opengamma/strata/collect/io/XmlElement.html" title="class in com.opengamma.strata.collect.io">XmlElement</a>&gt;&nbsp;references)</code>
 <div class="block">Parses the FpML document extracting the trades.</div>
 </td>
 </tr>
@@ -363,14 +370,26 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/ResolvableTrade.html" title="interface in com.opengamma.strata.product">ResolvableTrade</a>&lt;T extends <a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&gt;</span></code>
-<div class="block">A trade that can to be resolved using reference data.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/ResolvableSecurityTrade.html" title="interface in com.opengamma.strata.product">ResolvableSecurityTrade</a></span></code>
+<div class="block">A trade that has a security identifier that can be resolved using reference data.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecuritizedProductTrade.html" title="interface in com.opengamma.strata.product">SecuritizedProductTrade</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/ResolvableTrade.html" title="interface in com.opengamma.strata.product">ResolvableTrade</a>&lt;T extends <a href="../../../../../com/opengamma/strata/product/ResolvedTrade.html" title="interface in com.opengamma.strata.product">ResolvedTrade</a>&gt;</span></code>
+<div class="block">A trade that can to be resolved using reference data.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecuritizedProductTrade.html" title="interface in com.opengamma.strata.product">SecuritizedProductTrade</a>&lt;P extends <a href="../../../../../com/opengamma/strata/product/SecuritizedProduct.html" title="interface in com.opengamma.strata.product">SecuritizedProduct</a>&gt;</span></code>
 <div class="block">A trade that is directly based on a securitized product.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecurityQuantityTrade.html" title="interface in com.opengamma.strata.product">SecurityQuantityTrade</a></span></code>
+<div class="block">A trade that is based on security, quantity and price.</div>
 </td>
 </tr>
 </tbody>
@@ -407,17 +426,8 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Security.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/Security.html#createTrade-com.opengamma.strata.product.TradeInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="../../../../../com/opengamma/strata/product/TradeInfo.html" title="class in com.opengamma.strata.product">TradeInfo</a>&nbsp;tradeInfo,
-           double&nbsp;quantity,
-           double&nbsp;tradePrice,
-           <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
-<div class="block">Creates a trade based on this security.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SecurityTrade.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/SecurityTrade.html#resolveSecurity-com.opengamma.strata.basics.ReferenceData-">resolveSecurity</a></span>(<a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>
-<div class="block">Resolves the security identifier using the specified reference data.</div>
+<td class="colLast"><span class="typeNameLabel">Trade.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/Trade.html#withInfo-com.opengamma.strata.product.TradeInfo-">withInfo</a></span>(<a href="../../../../../com/opengamma/strata/product/TradeInfo.html" title="class in com.opengamma.strata.product">TradeInfo</a>&nbsp;info)</code>
+<div class="block">Returns an instance with the specified info.</div>
 </td>
 </tr>
 </tbody>
@@ -436,23 +446,29 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BillTrade.html" title="class in com.opengamma.strata.product.bond">BillTrade</a></span></code>
+<div class="block">A trade representing a bill.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureOptionTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureOptionTrade</a></span></code>
 <div class="block">A trade representing an option on a futures contract based on bonds.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/BondFutureTrade.html" title="class in com.opengamma.strata.product.bond">BondFutureTrade</a></span></code>
 <div class="block">A trade representing a futures contract based on a fixed coupon bond.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/CapitalIndexedBondTrade.html" title="class in com.opengamma.strata.product.bond">CapitalIndexedBondTrade</a></span></code>
 <div class="block">A trade representing a capital indexed bond.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/bond/FixedCouponBondTrade.html" title="class in com.opengamma.strata.product.bond">FixedCouponBondTrade</a></span></code>
 <div class="block">A trade representing a fixed coupon bond.</div>
@@ -516,7 +532,7 @@
 <td class="colFirst"><code>static <a href="../../../../../com/opengamma/strata/product/PortfolioItemSummary.html" title="class in com.opengamma.strata.product">PortfolioItemSummary</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SummarizerUtils.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/common/SummarizerUtils.html#summary-com.opengamma.strata.product.Trade-com.opengamma.strata.product.ProductType-java.lang.String-com.opengamma.strata.basics.currency.Currency...-">summary</a></span>(<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&nbsp;trade,
        <a href="../../../../../com/opengamma/strata/product/ProductType.html" title="class in com.opengamma.strata.product">ProductType</a>&nbsp;type,
-       <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;description,
+       <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;description,
        <a href="../../../../../com/opengamma/strata/basics/currency/Currency.html" title="class in com.opengamma.strata.basics.currency">Currency</a>...&nbsp;currencies)</code>
 <div class="block">Creates a summary instance for a trade.</div>
 </td>
@@ -633,29 +649,6 @@
 </tr>
 </tbody>
 </table>
-<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
-<caption><span>Methods in <a href="../../../../../com/opengamma/strata/product/etd/package-summary.html">com.opengamma.strata.product.etd</a> that return <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">EtdOptionSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdOptionSecurity.html#createTrade-com.opengamma.strata.product.TradeInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="../../../../../com/opengamma/strata/product/TradeInfo.html" title="class in com.opengamma.strata.product">TradeInfo</a>&nbsp;tradeInfo,
-           double&nbsp;quantity,
-           double&nbsp;tradePrice,
-           <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a></code></td>
-<td class="colLast"><span class="typeNameLabel">EtdFutureSecurity.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/etd/EtdFutureSecurity.html#createTrade-com.opengamma.strata.product.TradeInfo-double-double-com.opengamma.strata.basics.ReferenceData-">createTrade</a></span>(<a href="../../../../../com/opengamma/strata/product/TradeInfo.html" title="class in com.opengamma.strata.product">TradeInfo</a>&nbsp;tradeInfo,
-           double&nbsp;quantity,
-           double&nbsp;tradePrice,
-           <a href="../../../../../com/opengamma/strata/basics/ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code>&nbsp;</td>
-</tr>
-</tbody>
-</table>
 </li>
 <li class="blockList"><a name="com.opengamma.strata.product.fra">
 <!--   -->
@@ -681,6 +674,21 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a> in <a href="../../../../../com/opengamma/strata/product/fx/package-summary.html">com.opengamma.strata.product.fx</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a> in <a href="../../../../../com/opengamma/strata/product/fx/package-summary.html">com.opengamma.strata.product.fx</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/fx/FxTrade.html" title="interface in com.opengamma.strata.product.fx">FxTrade</a></span></code>
+<div class="block">A foreign exchange trade, such as an FX forward, FX spot or FX option.</div>
+</td>
+</tr>
+</tbody>
+</table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
 <caption><span>Classes in <a href="../../../../../com/opengamma/strata/product/fx/package-summary.html">com.opengamma.strata.product.fx</a> that implement <a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -758,6 +766,12 @@
 <div class="block">A trade representing a futures contract based on an Ibor index.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/product/index/OvernightFutureTrade.html" title="class in com.opengamma.strata.product.index">OvernightFutureTrade</a></span></code>
+<div class="block">A trade representing a futures contract based on an Overnight index.</div>
+</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -833,7 +847,7 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;</code></td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">TradeTokenEvaluator.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/report/framework/expression/TradeTokenEvaluator.html#getTargetType--">getTargetType</a></span>()</code>&nbsp;</td>
 </tr>
 </tbody>
@@ -849,11 +863,11 @@
 <td class="colFirst"><code><a href="../../../../../com/opengamma/strata/report/framework/expression/EvaluationResult.html" title="class in com.opengamma.strata.report.framework.expression">EvaluationResult</a></code></td>
 <td class="colLast"><span class="typeNameLabel">TradeTokenEvaluator.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/report/framework/expression/TradeTokenEvaluator.html#evaluate-com.opengamma.strata.product.Trade-com.opengamma.strata.calc.runner.CalculationFunctions-java.lang.String-java.util.List-">evaluate</a></span>(<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&nbsp;trade,
         <a href="../../../../../com/opengamma/strata/calc/runner/CalculationFunctions.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunctions</a>&nbsp;functions,
-        <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;firstToken,
-        <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;remainingTokens)</code>&nbsp;</td>
+        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;firstToken,
+        <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;remainingTokens)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">TradeTokenEvaluator.</span><code><span class="memberNameLink"><a href="../../../../../com/opengamma/strata/report/framework/expression/TradeTokenEvaluator.html#tokens-com.opengamma.strata.product.Trade-">tokens</a></span>(<a href="../../../../../com/opengamma/strata/product/Trade.html" title="interface in com.opengamma.strata.product">Trade</a>&nbsp;trade)</code>&nbsp;</td>
 </tr>
 </tbody>

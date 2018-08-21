@@ -24,9 +24,9 @@ before_install:
 before_script:
   - "sed -i -e 's!baseurl: \".*\"!baseurl: \"/strata/'\"$TRAVIS_BRANCH\"'\"!' _config.yml"
 script:
-  - bundle exec rake test
   - bundle exec jekyll build -d ./_site/strata/$TRAVIS_BRANCH
-  - bundle exec htmlproofer _site --url-ignore /github.com/,/www.opengamma.com/support-services/ --file-ignore /strata/$TRAVIS_BRANCH/apidocs/
+  - bundle exec rake test
+#  - bundle exec htmlproofer _site --url-ignore /github.com/,/www.opengamma.com/support-services/ --file-ignore /strata/$TRAVIS_BRANCH/apidocs/
 after_success:
   - aws s3 sync --quiet --delete _site/strata/ s3://strata-docs-ci.dev.opengamma.com/strata/
   - echo "See http://strata-docs-ci.dev.opengamma.com/$TRAVIS_BRANCH/"

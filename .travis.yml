@@ -1,11 +1,17 @@
+# https://github.com/gjtorikian/html-proofer/wiki/Using-HTMLProofer-From-Ruby-and-Travis
+sudo: false
+
 language: ruby
-cache: bundler
 rvm:
   - 2.2.2
 branches:
   only:
     - /.*/
     - gh-pages
+cache:
+  bundler: true
+  directories:
+    - $TRAVIS_BUILD_DIR/tmp/.htmlproofer #https://github.com/gjtorikian/html-proofer/issues/381  
 addons:
   apt:
     packages:
@@ -18,6 +24,7 @@ before_install:
 before_script:
   - "sed -i -e 's!baseurl: \".*\"!baseurl: \"/strata/'\"$TRAVIS_BRANCH\"'\"!' _config.yml"
 script:
+  - bundle exec rake test
   - bundle exec jekyll build -d ./_site/strata/$TRAVIS_BRANCH
   - bundle exec htmlproofer _site --url-ignore /github.com/,/www.opengamma.com/support-services/ --file-ignore /strata/$TRAVIS_BRANCH/apidocs/
 after_success:

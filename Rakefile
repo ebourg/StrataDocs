@@ -9,9 +9,13 @@ task :test => [:build, 'html:check'] do
     :check_html => true,
     :check_img_http => true,
     :check_opengraph => true,
-    :ssl_verifyhost: 0,
     :cache => {
       :timeframe => '6w'
+    }
+    :typhoeus => {
+      :timeout => 10,
+      :ssl_verifypeer => false,
+      :ssl_verifyhost => 0
     }
   }
   begin

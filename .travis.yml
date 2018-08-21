@@ -24,7 +24,7 @@ before_install:
 before_script:
   - "sed -i -e 's!baseurl: \".*\"!baseurl: \"/strata/'\"$TRAVIS_BRANCH\"'\"!' _config.yml"
 script:
-  - bundle exec jekyll build -d ./_site/strata/$TRAVIS_BRANCH
+#  - bundle exec jekyll build -d ./_site/strata/$TRAVIS_BRANCH
   - bundle exec rake test
 #  - bundle exec htmlproofer _site --url-ignore /github.com/,/www.opengamma.com/support-services/ --file-ignore /strata/$TRAVIS_BRANCH/apidocs/
 after_success:

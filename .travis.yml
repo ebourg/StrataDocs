@@ -18,6 +18,7 @@ addons:
     - libcurl4-openssl-dev
 before_install:
   - pip install --user awscli
+  - pip install --upgrade pip
   - export PATH=$PATH:$HOME/.local/bin
   - sudo update-ca-certificates
   - gem update bundler
@@ -29,6 +30,7 @@ script:
   - bundle exec htmlproofer _site --url-ignore /github.com/,/www.opengamma.com/support-services/ --file-ignore /strata/$TRAVIS_BRANCH/apidocs/
 after_success:
   - aws s3 sync --quiet --delete _site/strata/ s3://strata-docs-ci.dev.opengamma.com/strata/
+  - echo "See http://strata-docs-ci.dev.opengamma.com/$TRAVIS_BRANCH/"
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer

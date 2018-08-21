@@ -10,6 +10,7 @@ task :test => [:build, 'html:check'] do
     :check_img_http => true,
     :check_opengraph => true,
     :enforce_https => true,
+    :ssl_verifypeer: false,
     :cache => {
       :timeframe => '6w'
     }

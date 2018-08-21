@@ -14,6 +14,7 @@ task :test => [:build, 'html:check'] do
     }
     :typhoeus => {
       :timeout => 10,
+      :verbose => true,
       :ssl_verifypeer => false,
       :ssl_verifyhost => 0
     }

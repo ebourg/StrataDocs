@@ -77,6 +77,14 @@ Strata includes the following coverage:
     <td><i class="fa fa-check"></i><a id="securitycsv" href="#securitycsv-footnote"><sup>4</sup></a></td>
   </tr>
   <tr>
+    <td>STIR Future (Overnight)</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td></td>
+    <td class="na"></td>
+    <td><i class="fa fa-check"></i><a id="securitycsv" href="#securitycsv-footnote"><sup>4</sup></a></td>
+  </tr>
+  <tr>
     <td>Deliverable Swap Future</td>
     <td><i class="fa fa-check"></i></td>
     <td><i class="fa fa-check"></i></td>
@@ -109,6 +117,14 @@ Strata includes the following coverage:
     <td></td>
     <td><i class="fa fa-check"></i></td>
     <td></td>
+  </tr>
+  <tr>
+    <td>Bill</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+    <td></td>
+    <td class="na"></td>
+    <td><i class="fa fa-check"></i><a id="securitycsv" href="#securitycsv-footnote"><sup>4</sup></a></td>
   </tr>
   <tr>
     <td>Fixed-Coupon Bond</td>

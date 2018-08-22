@@ -12,6 +12,12 @@ This is a major release with a number of backwards incompatible changes.
 
 There are over 115 [fixed issues](https://github.com/OpenGamma/Strata/milestone/20?closed=1).
 
+* Add Bills and LegalEntityId,
+ [#1748](https://github.com/OpenGamma/Strata/issues/1748),
+ [#1754](https://github.com/OpenGamma/Strata/issues/1754),
+ [#1758](https://github.com/OpenGamma/Strata/issues/1758),
+ [#1762](https://github.com/OpenGamma/Strata/issues/1762),
+ [#1761](https://github.com/OpenGamma/Strata/issues/1761)
 * Add OvernightFutureSecurity,
  [#1763](https://github.com/OpenGamma/Strata/issues/1763)
 * Allow FX to have split payment dates,
@@ -43,12 +49,6 @@ There are over 115 [fixed issues](https://github.com/OpenGamma/Strata/milestone/
  [#1674](https://github.com/OpenGamma/Strata/issues/1674),
  [#1667](https://github.com/OpenGamma/Strata/issues/1667)
  [#1666](https://github.com/OpenGamma/Strata/issues/1666)
-* Add Bills and LegalEntityId,
- [#1748](https://github.com/OpenGamma/Strata/issues/1748),
- [#1754](https://github.com/OpenGamma/Strata/issues/1754),
- [#1758](https://github.com/OpenGamma/Strata/issues/1758),
- [#1762](https://github.com/OpenGamma/Strata/issues/1762),
- [#1761](https://github.com/OpenGamma/Strata/issues/1761)
 * Rename rates classes,
  [#1750](https://github.com/OpenGamma/Strata/issues/1750),
  [#1751](https://github.com/OpenGamma/Strata/issues/1751),
@@ -73,7 +73,7 @@ There are over 115 [fixed issues](https://github.com/OpenGamma/Strata/milestone/
  [#1716](https://github.com/OpenGamma/Strata/issues/1716),
  [#1718](https://github.com/OpenGamma/Strata/issues/1718),
  [#1743](https://github.com/OpenGamma/Strata/issues/1743),
-* Fix NZD and INR Fx index definitions,
+* Fix NZD and INR FX index definitions,
  [#1726](https://github.com/OpenGamma/Strata/issues/1726),
  [#1772](https://github.com/OpenGamma/Strata/issues/1772)
 * Fix Ibor-OIS swap conventions,

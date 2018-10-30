@@ -123,10 +123,10 @@ The list format uses flexible columns for sensitivity types.
 | Sensitivity Tenor     | Mandatory   | The tenor of the bucketed sensitivity, such as "3M". |
 | Sensitivity Date      | Optional    | The date of the bucketed sensitivity, such as "2018-06-01". |
 | Currency              | Optional    | The currency of each sensitivity value, such as "GBP". If omitted, the currency will be implied from the reference, which must start with the currency. |
-| ZeroRateDelta         | Example*    | The sensitivity values where the header is the sensitivity type, as described above. |
-| ZeroRateGamma         | Example*    | The sensitivity values where the header is the sensitivity type, as described above. |
+| ZeroRateDelta         | Example&dagger;    | The sensitivity values where the header is the sensitivity type, as described above. |
+| ZeroRateGamma         | Example&dagger;    | The sensitivity values where the header is the sensitivity type, as described above. |
 
-* The file format has one to many flexible columns of sensitivity values.
+&dagger; The file format has one to many flexible columns of sensitivity values.
 The table above shows columns for "ZeroRateDelta" and "ZeroRateGamma", but these are not required and other sensitivity types may be used instead.
 
 #### Example
@@ -174,10 +174,10 @@ The grid format uses flexible columns for references.
 | Sensitivity Tenor     | Mandatory   | The tenor of the bucketed sensitivity, such as "1Y" |
 | Sensitivity Date      | Optional    | The date of the bucketed sensitivity, such as "2018-06-01" |
 | Currency              | Optional    | The currency of each sensitivity value, such as "GBP". If omitted, the currency will be implied from the reference, which must start with the currency. |
-| GBP                   | Example*    | The sensitivity values where the header is the reference, as described above. |
-| GBP-LIBOR             | Example*    | The sensitivity values where the header is the reference, as described above. |
+| GBP                   | Example&dagger;    | The sensitivity values where the header is the reference, as described above. |
+| GBP-LIBOR             | Example&dagger;    | The sensitivity values where the header is the reference, as described above. |
 
-* The file format has one to many flexible columns of sensitivity values.
+&dagger; The file format has one to many flexible columns of sensitivity values.
 The table above shows columns for "GBP" and "GBP-LIBOR", but these are not required and other references may be used instead.
 
 #### Example

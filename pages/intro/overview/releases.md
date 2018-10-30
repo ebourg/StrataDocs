@@ -42,8 +42,6 @@ This release contains over 45 [fixed issues](https://github.com/OpenGamma/Strata
  [#1826](https://github.com/OpenGamma/Strata/issues/1826)
 * Find curve names in curve definition,
  [#1817](https://github.com/OpenGamma/Strata/issues/1817)
-* Find curve names in curve definition,
- [#1817](https://github.com/OpenGamma/Strata/issues/1817)
 * Additional methods on `MapStream`,
  [#1788](https://github.com/OpenGamma/Strata/issues/1788),
  [#1798](https://github.com/OpenGamma/Strata/issues/1798),

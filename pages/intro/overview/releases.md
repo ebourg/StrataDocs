@@ -23,7 +23,7 @@ This release contains over 45 [fixed issues](https://github.com/OpenGamma/Strata
  [#1836](https://github.com/OpenGamma/Strata/issues/1836),
  [#1837](https://github.com/OpenGamma/Strata/issues/1837),
  [#1805](https://github.com/OpenGamma/Strata/issues/1805)
-* Calculate maret quote sensitivities for bonds,
+* Calculate market quote sensitivities for bonds,
  [#1809](https://github.com/OpenGamma/Strata/issues/1809)
 * Trade and stub conventions,
  [#1829](https://github.com/OpenGamma/Strata/issues/1829),

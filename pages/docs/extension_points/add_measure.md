@@ -66,6 +66,29 @@ public interface DerivedCalculationFunction<T extends CalculationTarget, R> {
 }
 ```
 
+A typical implementation might be:
+
+```java
+public MyCalculationFunction extends AbstractDerivedCalculationFunction<SwapTrade, CurrencyScenarioArray> {
+
+  private MyCalculationFunction() {
+    super(SwapTrade.class, MyMeasures.NEW_MEASURE, Measures.RESOLVED_TARGET);
+  }
+
+  @Override
+  public CurrencyScenarioArray calculate(
+      SwapTrade trade,
+      Map<Measure, Object> requiredMeasures,
+      CalculationParameters parameters,
+      ScenarioMarketData marketData,
+      ReferenceData refData) {
+
+    ResolvedSwapTrade resolvedTrade = (ResolvedSwapTrade) requiredMeasures.get(Measures.RESOLVED_TARGET);
+    return calculateNewMeasure(resolvedTrade, marketData, refData);
+  }
+}
+```
+
 ### Target type
 
 The `targetType()` method specifies the target type, such as `ResolvedSwap.class`.

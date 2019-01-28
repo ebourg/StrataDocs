@@ -183,6 +183,35 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Creates an instance wrapping the success value and failures.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;<a href="../ValueWithFailures.html" title="type parameter in ValueWithFailures">T</a>&gt;</code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">ValueWithFailures.</span><code><span class="memberNameLink"><a href="../ValueWithFailures.html#withAdditionalFailures(java.util.List)">withAdditionalFailures</a></span>&#8203;(java.util.List&lt;<a href="../FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a>&gt;&nbsp;additionalFailures)</code></th>
+<td class="colLast">
+<div class="block">Returns a new instance with the specified failures, retaining the current value.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>&lt;R&gt;&nbsp;<a href="../ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;R&gt;</code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">ValueWithFailures.</span><code><span class="memberNameLink"><a href="../ValueWithFailures.html#withValue(com.opengamma.strata.collect.result.ValueWithFailures)">withValue</a></span>&#8203;(<a href="../ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;R&gt;&nbsp;valueWithFailures)</code></th>
+<td class="colLast">
+<div class="block">Returns a new instance with the specified value, combining the failures.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>&lt;R&gt;&nbsp;<a href="../ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;R&gt;</code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">ValueWithFailures.</span><code><span class="memberNameLink"><a href="../ValueWithFailures.html#withValue(R)">withValue</a></span>&#8203;(R&nbsp;value)</code></th>
+<td class="colLast">
+<div class="block">Returns a new instance with the specified value, retaining the current failures.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>&lt;R&gt;&nbsp;<a href="../ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;R&gt;</code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">ValueWithFailures.</span><code><span class="memberNameLink"><a href="../ValueWithFailures.html#withValue(R,java.util.List)">withValue</a></span>&#8203;(R&nbsp;value,
+         java.util.List&lt;<a href="../FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a>&gt;&nbsp;additionalFailures)</code></th>
+<td class="colLast">
+<div class="block">Returns a new instance with the specified value, combining the failures.</div>
+</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary">
@@ -204,6 +233,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;java.util.function.BinaryOperator&lt;<a href="../ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;T&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">ValueWithFailures.</span><code><span class="memberNameLink"><a href="../ValueWithFailures.html#combiningValues(java.util.function.BinaryOperator)">combiningValues</a></span>&#8203;(java.util.function.BinaryOperator&lt;T&gt;&nbsp;combiner)</code></th>
+<td class="colLast">
+<div class="block">Returns a <code>BinaryOperator</code> that combines <code>ValueWithFailures</code> objects using the provided combiner
+ function.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static &lt;T&gt;&nbsp;java.util.stream.Collector&lt;<a href="../ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;T&gt;,&#8203;?,&#8203;<a href="../ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;T&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">ValueWithFailures.</span><code><span class="memberNameLink"><a href="../ValueWithFailures.html#toValueWithFailures(T,java.util.function.BinaryOperator)">toValueWithFailures</a></span>&#8203;(T&nbsp;identityValue,
                    java.util.function.BinaryOperator&lt;T&gt;&nbsp;operator)</code></th>
@@ -212,7 +249,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  instances.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static &lt;T&gt;&nbsp;java.util.stream.Collector&lt;<a href="../ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;T&gt;,&#8203;?,&#8203;<a href="../ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;T&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">ValueWithFailures.</span><code><span class="memberNameLink"><a href="../ValueWithFailures.html#toValueWithFailures(T,java.util.function.BinaryOperator)">toValueWithFailures</a></span>&#8203;(T&nbsp;identityValue,
                    java.util.function.BinaryOperator&lt;T&gt;&nbsp;operator)</code></th>
@@ -237,6 +274,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
             java.util.function.BiFunction&lt;<a href="../ValueWithFailures.html" title="type parameter in ValueWithFailures">T</a>,&#8203;U,&#8203;R&gt;&nbsp;combiner)</code></th>
 <td class="colLast">
 <div class="block">Combines this instance with another.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>&lt;R&gt;&nbsp;<a href="../ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;R&gt;</code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">ValueWithFailures.</span><code><span class="memberNameLink"><a href="../ValueWithFailures.html#withValue(com.opengamma.strata.collect.result.ValueWithFailures)">withValue</a></span>&#8203;(<a href="../ValueWithFailures.html" title="class in com.opengamma.strata.collect.result">ValueWithFailures</a>&lt;R&gt;&nbsp;valueWithFailures)</code></th>
+<td class="colLast">
+<div class="block">Returns a new instance with the specified value, combining the failures.</div>
 </td>
 </tr>
 </tbody>

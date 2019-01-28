@@ -371,19 +371,26 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a></code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">HistoricPriceIndexValues.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/HistoricPriceIndexValues.html#getIndex()">getIndex</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Gets the index that the values are for.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">InflationRateSensitivity.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/InflationRateSensitivity.html#getIndex()">getIndex</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Gets the Ibor index that the sensitivity refers to.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">PriceIndexValues.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/PriceIndexValues.html#getIndex()">getIndex</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Gets the Price index.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">SimplePriceIndexValues.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/SimplePriceIndexValues.html#getIndex()">getIndex</a></span>()</code></th>
 <td class="colLast">
@@ -414,6 +421,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://www.joda.org/joda-beans/apidocs/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans" class="externalLink">MetaProperty</a>&lt;<a href="../PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&gt;</code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">HistoricPriceIndexValues.Meta.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/HistoricPriceIndexValues.Meta.html#index()">index</a></span>()</code></th>
+<td class="colLast">
+<div class="block">The meta-property for the <code>index</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="https://www.joda.org/joda-beans/apidocs/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans" class="externalLink">MetaProperty</a>&lt;<a href="../PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&gt;</code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">SimplePriceIndexValues.Meta.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/SimplePriceIndexValues.Meta.html#index()">index</a></span>()</code></th>
 <td class="colLast">
 <div class="block">The meta-property for the <code>index</code> property.</div>
@@ -430,6 +444,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../pricer/rate/HistoricPriceIndexValues.html" title="class in com.opengamma.strata.pricer.rate">HistoricPriceIndexValues</a></code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">HistoricPriceIndexValues.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/HistoricPriceIndexValues.html#of(com.opengamma.strata.basics.index.PriceIndex,java.time.LocalDate,com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries)">of</a></span>&#8203;(<a href="../PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&nbsp;index,
+  java.time.LocalDate&nbsp;valuationDate,
+  <a href="../../../collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&nbsp;fixings)</code></th>
+<td class="colLast">
+<div class="block">Obtains an instance from a time-series of fixings.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../pricer/rate/PriceIndexValues.html" title="interface in com.opengamma.strata.pricer.rate">PriceIndexValues</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">PriceIndexValues.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/PriceIndexValues.html#of(com.opengamma.strata.basics.index.PriceIndex,java.time.LocalDate,com.opengamma.strata.market.curve.Curve,com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries)">of</a></span>&#8203;(<a href="../PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&nbsp;index,
   java.time.LocalDate&nbsp;valuationDate,
@@ -439,7 +462,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Obtains an instance from a curve and time-series of fixings.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../pricer/rate/SimplePriceIndexValues.html" title="class in com.opengamma.strata.pricer.rate">SimplePriceIndexValues</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">SimplePriceIndexValues.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/SimplePriceIndexValues.html#of(com.opengamma.strata.basics.index.PriceIndex,java.time.LocalDate,com.opengamma.strata.market.curve.NodalCurve,com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries)">of</a></span>&#8203;(<a href="../PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&nbsp;index,
   java.time.LocalDate&nbsp;valuationDate,
@@ -449,7 +472,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Obtains an instance based on a curve with no seasonality adjustment.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../pricer/rate/ImmutableRatesProviderBuilder.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProviderBuilder</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">ImmutableRatesProviderBuilder.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/ImmutableRatesProviderBuilder.html#priceIndexCurve(com.opengamma.strata.basics.index.PriceIndex,com.opengamma.strata.market.curve.Curve)">priceIndexCurve</a></span>&#8203;(<a href="../PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&nbsp;index,
                <a href="../../../market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;forwardCurve)</code></th>
@@ -457,7 +480,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Adds a Price index forward curve to the provider.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../pricer/rate/ImmutableRatesProviderBuilder.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProviderBuilder</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">ImmutableRatesProviderBuilder.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/ImmutableRatesProviderBuilder.html#priceIndexCurve(com.opengamma.strata.basics.index.PriceIndex,com.opengamma.strata.market.curve.Curve,com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries)">priceIndexCurve</a></span>&#8203;(<a href="../PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&nbsp;index,
                <a href="../../../market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;forwardCurve,
@@ -466,12 +489,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Adds an index forward curve to the provider with associated time-series.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../pricer/rate/PriceIndexValues.html" title="interface in com.opengamma.strata.pricer.rate">PriceIndexValues</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">ImmutableRatesProvider.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/ImmutableRatesProvider.html#priceIndexValues(com.opengamma.strata.basics.index.PriceIndex)">priceIndexValues</a></span>&#8203;(<a href="../PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&nbsp;index)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../pricer/rate/PriceIndexValues.html" title="interface in com.opengamma.strata.pricer.rate">PriceIndexValues</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">RatesProvider.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/RatesProvider.html#priceIndexValues(com.opengamma.strata.basics.index.PriceIndex)">priceIndexValues</a></span>&#8203;(<a href="../PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a>&nbsp;index)</code></th>
 <td class="colLast">

@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -189,37 +189,44 @@ extends <a href="https://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dir
 </td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="FixedRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">FixedRateCalculation.Builder</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#futureValueNotional(com.opengamma.strata.product.swap.FutureValueNotional)">futureValueNotional</a></span>&#8203;(<a href="FutureValueNotional.html" title="class in com.opengamma.strata.product.swap">FutureValueNotional</a>&nbsp;futureValueNotional)</code></th>
+<td class="colLast">
+<div class="block">Sets the future value notional.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.Object</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#get(java.lang.String)">get</a></span>&#8203;(java.lang.String&nbsp;propertyName)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="FixedRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">FixedRateCalculation.Builder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#initialStub(com.opengamma.strata.product.swap.FixedRateStubCalculation)">initialStub</a></span>&#8203;(<a href="FixedRateStubCalculation.html" title="class in com.opengamma.strata.product.swap">FixedRateStubCalculation</a>&nbsp;initialStub)</code></th>
 <td class="colLast">
 <div class="block">Sets the initial stub, optional.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="FixedRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">FixedRateCalculation.Builder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rate(com.opengamma.strata.basics.value.ValueSchedule)">rate</a></span>&#8203;(<a href="../../basics/value/ValueSchedule.html" title="class in com.opengamma.strata.basics.value">ValueSchedule</a>&nbsp;rate)</code></th>
 <td class="colLast">
 <div class="block">Sets the interest rate to be paid.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="FixedRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">FixedRateCalculation.Builder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#set(java.lang.String,java.lang.Object)">set</a></span>&#8203;(java.lang.String&nbsp;propertyName,
    java.lang.Object&nbsp;newValue)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="FixedRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">FixedRateCalculation.Builder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#set(org.joda.beans.MetaProperty,java.lang.Object)">set</a></span>&#8203;(<a href="https://www.joda.org/joda-beans/apidocs/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans" class="externalLink">MetaProperty</a>&lt;?&gt;&nbsp;property,
    java.lang.Object&nbsp;value)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -380,6 +387,25 @@ extends <a href="https://www.joda.org/joda-beans/apidocs/org/joda/beans/impl/dir
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>finalStub</code> - the new value</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this, for chaining, not null</dd>
+</dl>
+</li>
+</ul>
+<a id="futureValueNotional(com.opengamma.strata.product.swap.FutureValueNotional)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>futureValueNotional</h4>
+<pre class="methodSignature">public&nbsp;<a href="FixedRateCalculation.Builder.html" title="class in com.opengamma.strata.product.swap">FixedRateCalculation.Builder</a>&nbsp;futureValueNotional&#8203;(<a href="FutureValueNotional.html" title="class in com.opengamma.strata.product.swap">FutureValueNotional</a>&nbsp;futureValueNotional)</pre>
+<div class="block">Sets the future value notional.
+ <p>
+ This property is used when the fixed leg of a swap has a future value notional.
+ This is typically used for Brazilian swaps.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>futureValueNotional</code> - the new value</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this, for chaining, not null</dd>
 </dl>

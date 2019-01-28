@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":18,"i1":18,"i2":1,"i3":6,"i4":18,"i5":1,"i6":1,"i7":1};
+var data = {"i0":18,"i1":18,"i2":18,"i3":1,"i4":6,"i5":18,"i6":1,"i7":1,"i8":1};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -170,41 +170,49 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>default <a href="CalculationFunctions.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunctions</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#composedWith(java.util.List)">composedWith</a></span>&#8203;(java.util.List&lt;<a href="DerivedCalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">DerivedCalculationFunction</a>&lt;?,&#8203;?&gt;&gt;&nbsp;functions)</code></th>
+<td class="colLast">
+<div class="block">Returns a set of calculation functions which combines the functions in this set with some
+ derived calculation functions.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>static <a href="CalculationFunctions.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunctions</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#empty()">empty</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Obtains an empty instance with no functions.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>&lt;T extends <a href="../../basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>&gt;<br>java.util.Optional&lt;<a href="CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;? super T&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findFunction(T)">findFunction</a></span>&#8203;(T&nbsp;target)</code></th>
 <td class="colLast">
 <div class="block">Finds the function that handles the specified target.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>default &lt;T extends <a href="../../basics/CalculationTarget.html" title="interface in com.opengamma.strata.basics">CalculationTarget</a>&gt;<br><a href="CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;? super T&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFunction(T)">getFunction</a></span>&#8203;(T&nbsp;target)</code></th>
 <td class="colLast">
 <div class="block">Gets the function that handles the specified target.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>static <a href="CalculationFunctions.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunctions</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#of(com.opengamma.strata.calc.runner.CalculationFunction...)">of</a></span>&#8203;(<a href="CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;?&gt;...&nbsp;functions)</code></th>
 <td class="colLast">
 <div class="block">Obtains an instance from the specified functions.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>static <a href="CalculationFunctions.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunctions</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#of(java.util.List)">of</a></span>&#8203;(java.util.List&lt;? extends <a href="CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;?&gt;&gt;&nbsp;functions)</code></th>
 <td class="colLast">
 <div class="block">Obtains an instance from the specified functions.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>static <a href="CalculationFunctions.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunctions</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#of(java.util.Map)">of</a></span>&#8203;(java.util.Map&lt;java.lang.Class&lt;?&gt;,&#8203;? extends <a href="CalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunction</a>&lt;?&gt;&gt;&nbsp;functions)</code></th>
 <td class="colLast">
@@ -370,10 +378,36 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <a id="composedWith(com.opengamma.strata.calc.runner.DerivedCalculationFunction...)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>composedWith</h4>
 <pre class="methodSignature">default&nbsp;<a href="CalculationFunctions.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunctions</a>&nbsp;composedWith&#8203;(<a href="DerivedCalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">DerivedCalculationFunction</a>&lt;?,&#8203;?&gt;...&nbsp;functions)</pre>
+<div class="block">Returns a set of calculation functions which combines the functions in this set with some
+ derived calculation functions.
+ <p>
+ Each derived function calculates one measure for one type of target, possibly using other calculated measures
+ as inputs.
+ <p>
+ If any of the derived functions depend on each other they must be passed to this method in the correct
+ order to ensure their dependencies can be satisfied. For example, if there is a derived function
+ <code>fnA</code> which depends on the measure calculated by function <code>fnB</code> they must be passed to
+ this method in the order <code>fnB, fnA</code>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>functions</code> - the functions</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a set of calculation functions which combines the functions in this set with some
+   derived calculation functions</dd>
+</dl>
+</li>
+</ul>
+<a id="composedWith(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>composedWith</h4>
+<pre class="methodSignature">default&nbsp;<a href="CalculationFunctions.html" title="interface in com.opengamma.strata.calc.runner">CalculationFunctions</a>&nbsp;composedWith&#8203;(java.util.List&lt;<a href="DerivedCalculationFunction.html" title="interface in com.opengamma.strata.calc.runner">DerivedCalculationFunction</a>&lt;?,&#8203;?&gt;&gt;&nbsp;functions)</pre>
 <div class="block">Returns a set of calculation functions which combines the functions in this set with some
  derived calculation functions.
  <p>

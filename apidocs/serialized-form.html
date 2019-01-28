@@ -1512,7 +1512,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  This is used to identify the boundary date between the last regular schedule period and the final stub.
  <p>
  This is an unadjusted date, and as such it might not be a valid business day.
- This date must be after 'startDate' and after 'firstRegularStartDate'.
+ This date must be after 'startDate' and on or after 'firstRegularStartDate'.
  This date must be on or before 'endDate'.
  <p>
  During schedule generation, if this is present it will be used to determine the schedule.
@@ -2330,8 +2330,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </li>
 <li class="blockList">
 <h4>causeType</h4>
-<pre>java.lang.Class&lt;? extends java.lang.Exception&gt; causeType</pre>
-<div class="block">The type of the exception that caused the failure, not present if it wasn't caused by an exception.</div>
+<pre>java.lang.Class&lt;? extends java.lang.Throwable&gt; causeType</pre>
+<div class="block">The type of the throwable that caused the failure, not present if it wasn't caused by a throwable.</div>
 </li>
 <li class="blockList">
 <h4>message</h4>
@@ -9302,6 +9302,105 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h4>index</h4>
 <pre><a href="com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a> index</pre>
 <div class="block">The index that the rates are for.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a id="com.opengamma.strata.pricer.rate.HistoricIborIndexRates">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/pricer/rate/HistoricIborIndexRates.html" title="class in com.opengamma.strata.pricer.rate">com.opengamma.strata.pricer.rate.HistoricIborIndexRates</a> extends java.lang.Object implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>fixings</h4>
+<pre><a href="com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a> fixings</pre>
+<div class="block">The time-series of fixings, defaulted to an empty time-series.
+ This includes the known historical fixings and may be empty.</div>
+</li>
+<li class="blockList">
+<h4>index</h4>
+<pre><a href="com/opengamma/strata/basics/index/IborIndex.html" title="interface in com.opengamma.strata.basics.index">IborIndex</a> index</pre>
+<div class="block">The index that the rates are for.</div>
+</li>
+<li class="blockListLast">
+<h4>valuationDate</h4>
+<pre>java.time.LocalDate valuationDate</pre>
+<div class="block">The valuation date.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a id="com.opengamma.strata.pricer.rate.HistoricOvernightIndexRates">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/pricer/rate/HistoricOvernightIndexRates.html" title="class in com.opengamma.strata.pricer.rate">com.opengamma.strata.pricer.rate.HistoricOvernightIndexRates</a> extends java.lang.Object implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>fixings</h4>
+<pre><a href="com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a> fixings</pre>
+<div class="block">The time-series of fixings, defaulted to an empty time-series.
+ This includes the known historical fixings and may be empty.</div>
+</li>
+<li class="blockList">
+<h4>index</h4>
+<pre><a href="com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a> index</pre>
+<div class="block">The index that the rates are for.</div>
+</li>
+<li class="blockListLast">
+<h4>valuationDate</h4>
+<pre>java.time.LocalDate valuationDate</pre>
+<div class="block">The valuation date.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a id="com.opengamma.strata.pricer.rate.HistoricPriceIndexValues">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/pricer/rate/HistoricPriceIndexValues.html" title="class in com.opengamma.strata.pricer.rate">com.opengamma.strata.pricer.rate.HistoricPriceIndexValues</a> extends java.lang.Object implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>fixings</h4>
+<pre><a href="com/opengamma/strata/collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a> fixings</pre>
+<div class="block">The monthly time-series of fixings.
+ This includes the known historical fixings and must not be empty.
+ <p>
+ Only one value is stored per month. The value is stored in the time-series on the
+ last date of each month (which may be a non-working day).</div>
+</li>
+<li class="blockList">
+<h4>index</h4>
+<pre><a href="com/opengamma/strata/basics/index/PriceIndex.html" title="interface in com.opengamma.strata.basics.index">PriceIndex</a> index</pre>
+<div class="block">The index that the values are for.</div>
+</li>
+<li class="blockListLast">
+<h4>valuationDate</h4>
+<pre>java.time.LocalDate valuationDate</pre>
+<div class="block">The valuation date.</div>
 </li>
 </ul>
 </li>
@@ -18919,6 +19018,38 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <section role="region">
 <h2 title="Package">Package&nbsp;com.opengamma.strata.product.rate</h2>
 <ul class="blockList">
+<li class="blockList"><a id="com.opengamma.strata.product.rate.FixedOvernightCompoundedAnnualRateComputation">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/product/rate/FixedOvernightCompoundedAnnualRateComputation.html" title="class in com.opengamma.strata.product.rate">com.opengamma.strata.product.rate.FixedOvernightCompoundedAnnualRateComputation</a> extends java.lang.Object implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>accrualFactor</h4>
+<pre>double accrualFactor</pre>
+<div class="block">The accrual factor.</div>
+</li>
+<li class="blockList">
+<h4>rate</h4>
+<pre>double rate</pre>
+<div class="block">The fixed rate for overnight compounding.
+ A 5% rate will be expressed as 0.05.</div>
+</li>
+<li class="blockListLast">
+<h4>simpleRate</h4>
+<pre>double simpleRate</pre>
+<div class="block">The calculated simple rate.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="blockList"><a id="com.opengamma.strata.product.rate.FixedRateComputation">
 <!--   -->
 </a>
@@ -19352,6 +19483,57 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </li>
 </ul>
 </li>
+<li class="blockList"><a id="com.opengamma.strata.product.rate.OvernightCompoundedAnnualRateComputation">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/product/rate/OvernightCompoundedAnnualRateComputation.html" title="class in com.opengamma.strata.product.rate">com.opengamma.strata.product.rate.OvernightCompoundedAnnualRateComputation</a> extends java.lang.Object implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>endDate</h4>
+<pre>java.time.LocalDate endDate</pre>
+<div class="block">The fixing date associated with the end date of the accrual period.
+ <p>
+ The overnight rate is observed until this date.
+ <p>
+ In general, the fixing dates and accrual dates are the same for an overnight index.
+ However, in the case of a Tomorrow/Next index, the fixing period is one business day
+ before the accrual period.</div>
+</li>
+<li class="blockList">
+<h4>fixingCalendar</h4>
+<pre><a href="com/opengamma/strata/basics/date/HolidayCalendar.html" title="interface in com.opengamma.strata.basics.date">HolidayCalendar</a> fixingCalendar</pre>
+<div class="block">The resolved calendar that the index uses.</div>
+</li>
+<li class="blockList">
+<h4>index</h4>
+<pre><a href="com/opengamma/strata/basics/index/OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a> index</pre>
+<div class="block">The Overnight index.
+ <p>
+ The rate to be paid is based on this index.</div>
+</li>
+<li class="blockListLast">
+<h4>startDate</h4>
+<pre>java.time.LocalDate startDate</pre>
+<div class="block">The fixing date associated with the start date of the accrual period.
+ <p>
+ This is also the first fixing date.
+ The overnight rate is observed from this date onwards.
+ <p>
+ In general, the fixing dates and accrual dates are the same for an overnight index.
+ However, in the case of a Tomorrow/Next index, the fixing period is one business day
+ before the accrual period.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="blockList"><a id="com.opengamma.strata.product.rate.OvernightCompoundedRateComputation">
 <!--   -->
 </a>
@@ -19460,6 +19642,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  If this property is present and there is no initial stub, it is ignored.</div>
 </li>
 <li class="blockList">
+<h4>futureValueNotional</h4>
+<pre><a href="com/opengamma/strata/product/swap/FutureValueNotional.html" title="class in com.opengamma.strata.product.swap">FutureValueNotional</a> futureValueNotional</pre>
+<div class="block">The future value notional.
+ <p>
+ This property is used when the fixed leg of a swap has a future value notional.
+ This is typically used for Brazilian swaps.</div>
+</li>
+<li class="blockList">
 <h4>initialStub</h4>
 <pre><a href="com/opengamma/strata/product/swap/FixedRateStubCalculation.html" title="class in com.opengamma.strata.product.swap">FixedRateStubCalculation</a> initialStub</pre>
 <div class="block">The initial stub, optional.
@@ -19508,6 +19698,44 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">The known amount to pay/receive for the stub.
  <p>
  If the known amount is present, then <code>fixedRate</code> must not be present.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a id="com.opengamma.strata.product.swap.FutureValueNotional">
+<!--   -->
+</a>
+<h3>Class <a href="com/opengamma/strata/product/swap/FutureValueNotional.html" title="class in com.opengamma.strata.product.swap">com.opengamma.strata.product.swap.FutureValueNotional</a> extends java.lang.Object implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>dayCountDays</h4>
+<pre>java.lang.Integer dayCountDays</pre>
+<div class="block">The number of days in the calculation period.
+ <p>
+ This defines the number of days from the adjusted start date to the adjusted end date
+ as calculated by the day count.</div>
+</li>
+<li class="blockList">
+<h4>value</h4>
+<pre>java.lang.Double value</pre>
+<div class="block">The amount.
+ <p>
+ The future value notional amount, derived as per the standard formula.</div>
+</li>
+<li class="blockListLast">
+<h4>valueDate</h4>
+<pre>java.time.LocalDate valueDate</pre>
+<div class="block">The value date.
+ <p>
+ This is the adjusted value date of the future value amount, which is the adjusted end date.</div>
 </li>
 </ul>
 </li>
@@ -21268,6 +21496,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">The periodic frequency of accrual.
  <p>
  Interest will be accrued over periods at the specified periodic frequency, such as every 3 months.</div>
+</li>
+<li class="blockList">
+<h4>accrualMethod</h4>
+<pre><a href="com/opengamma/strata/product/swap/FixedAccrualMethod.html" title="enum in com.opengamma.strata.product.swap">FixedAccrualMethod</a> accrualMethod</pre>
+<div class="block">The accrual method using the fixed rate, defaulted to 'None'.
+ <p>
+ This is normally 'None', but can be set forBrazilian swaps.</div>
 </li>
 <li class="blockList">
 <h4>compoundingMethod</h4>

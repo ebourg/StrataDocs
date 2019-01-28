@@ -210,7 +210,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <td class="colFirst"><code>static <a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">OvernightIndices.</span><code><span class="memberNameLink"><a href="../OvernightIndices.html#CHF_TOIS">CHF_TOIS</a></span></code></th>
 <td class="colLast">
-<div class="block">The TOIS index for CHF.</div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>
+<div class="deprecationComment">Not published as of 2017-12-29</div>
+</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -402,12 +404,19 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a></code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">HistoricOvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/HistoricOvernightIndexRates.html#getIndex()">getIndex</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Gets the index that the rates are for.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">OvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/OvernightIndexRates.html#getIndex()">getIndex</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Gets the Overnight index.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">OvernightRateSensitivity.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/OvernightRateSensitivity.html#getIndex()">getIndex</a></span>()</code></th>
 <td class="colLast">
@@ -443,6 +452,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">The meta-property for the <code>index</code> property.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="https://www.joda.org/joda-beans/apidocs/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans" class="externalLink">MetaProperty</a>&lt;<a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&gt;</code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">HistoricOvernightIndexRates.Meta.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/HistoricOvernightIndexRates.Meta.html#index()">index</a></span>()</code></th>
+<td class="colLast">
+<div class="block">The meta-property for the <code>index</code> property.</div>
+</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary">
@@ -471,6 +487,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../pricer/rate/HistoricOvernightIndexRates.html" title="class in com.opengamma.strata.pricer.rate">HistoricOvernightIndexRates</a></code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">HistoricOvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/HistoricOvernightIndexRates.html#of(com.opengamma.strata.basics.index.OvernightIndex,java.time.LocalDate,com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries)">of</a></span>&#8203;(<a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index,
+  java.time.LocalDate&nbsp;valuationDate,
+  <a href="../../../collect/timeseries/LocalDateDoubleTimeSeries.html" title="interface in com.opengamma.strata.collect.timeseries">LocalDateDoubleTimeSeries</a>&nbsp;fixings)</code></th>
+<td class="colLast">
+<div class="block">Obtains an instance from a time-series of fixings.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../pricer/rate/OvernightIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">OvernightIndexRates</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">OvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/OvernightIndexRates.html#of(com.opengamma.strata.basics.index.OvernightIndex,java.time.LocalDate,com.opengamma.strata.market.curve.Curve)">of</a></span>&#8203;(<a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index,
   java.time.LocalDate&nbsp;valuationDate,
@@ -479,7 +504,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Obtains an instance from a forward curve, with an empty time-series of fixings.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../pricer/rate/OvernightIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">OvernightIndexRates</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">OvernightIndexRates.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/OvernightIndexRates.html#of(com.opengamma.strata.basics.index.OvernightIndex,java.time.LocalDate,com.opengamma.strata.market.curve.Curve,com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries)">of</a></span>&#8203;(<a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index,
   java.time.LocalDate&nbsp;valuationDate,
@@ -489,7 +514,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Obtains an instance from a curve and time-series of fixings.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../pricer/rate/ImmutableRatesProviderBuilder.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProviderBuilder</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">ImmutableRatesProviderBuilder.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/ImmutableRatesProviderBuilder.html#overnightIndexCurve(com.opengamma.strata.basics.index.OvernightIndex,com.opengamma.strata.market.curve.Curve)">overnightIndexCurve</a></span>&#8203;(<a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index,
                    <a href="../../../market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;forwardCurve)</code></th>
@@ -497,7 +522,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Adds an Overnight index forward curve to the provider.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../pricer/rate/ImmutableRatesProviderBuilder.html" title="class in com.opengamma.strata.pricer.rate">ImmutableRatesProviderBuilder</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">ImmutableRatesProviderBuilder.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/ImmutableRatesProviderBuilder.html#overnightIndexCurve(com.opengamma.strata.basics.index.OvernightIndex,com.opengamma.strata.market.curve.Curve,com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries)">overnightIndexCurve</a></span>&#8203;(<a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index,
                    <a href="../../../market/curve/Curve.html" title="interface in com.opengamma.strata.market.curve">Curve</a>&nbsp;forwardCurve,
@@ -506,12 +531,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Adds an Overnight index forward curve to the provider with associated time-series.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../pricer/rate/OvernightIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">OvernightIndexRates</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">ImmutableRatesProvider.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/ImmutableRatesProvider.html#overnightIndexRates(com.opengamma.strata.basics.index.OvernightIndex)">overnightIndexRates</a></span>&#8203;(<a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../pricer/rate/OvernightIndexRates.html" title="interface in com.opengamma.strata.pricer.rate">OvernightIndexRates</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">RatesProvider.</span><code><span class="memberNameLink"><a href="../../../pricer/rate/RatesProvider.html#overnightIndexRates(com.opengamma.strata.basics.index.OvernightIndex)">overnightIndexRates</a></span>&#8203;(<a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index)</code></th>
 <td class="colLast">
@@ -637,12 +662,19 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a></code></td>
-<th class="colSecond" scope="row"><span class="typeNameLabel">OvernightCompoundedRateComputation.</span><code><span class="memberNameLink"><a href="../../../product/rate/OvernightCompoundedRateComputation.html#getIndex()">getIndex</a></span>()</code></th>
+<th class="colSecond" scope="row"><span class="typeNameLabel">OvernightCompoundedAnnualRateComputation.</span><code><span class="memberNameLink"><a href="../../../product/rate/OvernightCompoundedAnnualRateComputation.html#getIndex()">getIndex</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Gets the Overnight index.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a></code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">OvernightCompoundedRateComputation.</span><code><span class="memberNameLink"><a href="../../../product/rate/OvernightCompoundedRateComputation.html#getIndex()">getIndex</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Gets the Overnight index.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">OvernightRateComputation.</span><code><span class="memberNameLink"><a href="../../../product/rate/OvernightRateComputation.html#getIndex()">getIndex</a></span>()</code></th>
 <td class="colLast">
@@ -675,6 +707,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://www.joda.org/joda-beans/apidocs/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans" class="externalLink">MetaProperty</a>&lt;<a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&gt;</code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">OvernightCompoundedAnnualRateComputation.Meta.</span><code><span class="memberNameLink"><a href="../../../product/rate/OvernightCompoundedAnnualRateComputation.Meta.html#index()">index</a></span>()</code></th>
+<td class="colLast">
+<div class="block">The meta-property for the <code>index</code> property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="https://www.joda.org/joda-beans/apidocs/MetaProperty.html?is-external=true" title="class or interface in org.joda.beans" class="externalLink">MetaProperty</a>&lt;<a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&gt;</code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">OvernightCompoundedRateComputation.Meta.</span><code><span class="memberNameLink"><a href="../../../product/rate/OvernightCompoundedRateComputation.Meta.html#index()">index</a></span>()</code></th>
 <td class="colLast">
 <div class="block">The meta-property for the <code>index</code> property.</div>
@@ -705,13 +744,20 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../product/rate/OvernightCompoundedAnnualRateComputation.Builder.html" title="class in com.opengamma.strata.product.rate">OvernightCompoundedAnnualRateComputation.Builder</a></code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">OvernightCompoundedAnnualRateComputation.Builder.</span><code><span class="memberNameLink"><a href="../../../product/rate/OvernightCompoundedAnnualRateComputation.Builder.html#index(com.opengamma.strata.basics.index.OvernightIndex)">index</a></span>&#8203;(<a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index)</code></th>
+<td class="colLast">
+<div class="block">Sets the Overnight index.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../product/rate/OvernightCompoundedRateComputation.Builder.html" title="class in com.opengamma.strata.product.rate">OvernightCompoundedRateComputation.Builder</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">OvernightCompoundedRateComputation.Builder.</span><code><span class="memberNameLink"><a href="../../../product/rate/OvernightCompoundedRateComputation.Builder.html#index(com.opengamma.strata.basics.index.OvernightIndex)">index</a></span>&#8203;(<a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index)</code></th>
 <td class="colLast">
 <div class="block">Sets the Overnight index.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../product/rate/OvernightAveragedDailyRateComputation.html" title="class in com.opengamma.strata.product.rate">OvernightAveragedDailyRateComputation</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">OvernightAveragedDailyRateComputation.</span><code><span class="memberNameLink"><a href="../../../product/rate/OvernightAveragedDailyRateComputation.html#of(com.opengamma.strata.basics.index.OvernightIndex,java.time.LocalDate,java.time.LocalDate,com.opengamma.strata.basics.ReferenceData)">of</a></span>&#8203;(<a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index,
   java.time.LocalDate&nbsp;startDate,
@@ -721,7 +767,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Creates an instance from an index and accrual period dates</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../product/rate/OvernightAveragedRateComputation.html" title="class in com.opengamma.strata.product.rate">OvernightAveragedRateComputation</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">OvernightAveragedRateComputation.</span><code><span class="memberNameLink"><a href="../../../product/rate/OvernightAveragedRateComputation.html#of(com.opengamma.strata.basics.index.OvernightIndex,java.time.LocalDate,java.time.LocalDate,int,com.opengamma.strata.basics.ReferenceData)">of</a></span>&#8203;(<a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index,
   java.time.LocalDate&nbsp;startDate,
@@ -732,7 +778,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Creates an instance from an index, accrual period dates and rate cut-off.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../product/rate/OvernightAveragedRateComputation.html" title="class in com.opengamma.strata.product.rate">OvernightAveragedRateComputation</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">OvernightAveragedRateComputation.</span><code><span class="memberNameLink"><a href="../../../product/rate/OvernightAveragedRateComputation.html#of(com.opengamma.strata.basics.index.OvernightIndex,java.time.LocalDate,java.time.LocalDate,com.opengamma.strata.basics.ReferenceData)">of</a></span>&#8203;(<a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index,
   java.time.LocalDate&nbsp;startDate,
@@ -740,6 +786,16 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
   <a href="../../ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code></th>
 <td class="colLast">
 <div class="block">Creates an instance from an index and accrual period dates</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../product/rate/OvernightCompoundedAnnualRateComputation.html" title="class in com.opengamma.strata.product.rate">OvernightCompoundedAnnualRateComputation</a></code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">OvernightCompoundedAnnualRateComputation.</span><code><span class="memberNameLink"><a href="../../../product/rate/OvernightCompoundedAnnualRateComputation.html#of(com.opengamma.strata.basics.index.OvernightIndex,java.time.LocalDate,java.time.LocalDate,com.opengamma.strata.basics.ReferenceData)">of</a></span>&#8203;(<a href="../OvernightIndex.html" title="interface in com.opengamma.strata.basics.index">OvernightIndex</a>&nbsp;index,
+  java.time.LocalDate&nbsp;startDate,
+  java.time.LocalDate&nbsp;endDate,
+  <a href="../../ReferenceData.html" title="interface in com.opengamma.strata.basics">ReferenceData</a>&nbsp;refData)</code></th>
+<td class="colLast">
+<div class="block">Obtains an instance from an index and period dates.</div>
 </td>
 </tr>
 <tr class="altColor">

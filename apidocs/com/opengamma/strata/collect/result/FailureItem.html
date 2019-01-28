@@ -231,10 +231,10 @@ implements <a href="https://www.joda.org/joda-beans/apidocs/ImmutableBean.html?i
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>java.util.Optional&lt;java.lang.Class&lt;? extends java.lang.Exception&gt;&gt;</code></td>
+<td class="colFirst"><code>java.util.Optional&lt;java.lang.Class&lt;? extends java.lang.Throwable&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCauseType()">getCauseType</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Gets the type of the exception that caused the failure, not present if it wasn't caused by an exception.</div>
+<div class="block">Gets the type of the throwable that caused the failure, not present if it wasn't caused by a throwable.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -277,29 +277,29 @@ implements <a href="https://www.joda.org/joda-beans/apidocs/ImmutableBean.html?i
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>static <a href="FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#of(com.opengamma.strata.collect.result.FailureReason,java.lang.Exception)">of</a></span>&#8203;(<a href="FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a>&nbsp;reason,
-  java.lang.Exception&nbsp;cause)</code></th>
-<td class="colLast">
-<div class="block">Obtains a failure from a reason and exception.</div>
-</td>
-</tr>
-<tr id="i10" class="altColor">
-<td class="colFirst"><code>static <a href="FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#of(com.opengamma.strata.collect.result.FailureReason,java.lang.Exception,java.lang.String,java.lang.Object...)">of</a></span>&#8203;(<a href="FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a>&nbsp;reason,
-  java.lang.Exception&nbsp;cause,
-  java.lang.String&nbsp;message,
-  java.lang.Object...&nbsp;messageArgs)</code></th>
-<td class="colLast">
-<div class="block">Obtains a failure from a reason, exception and message.</div>
-</td>
-</tr>
-<tr id="i11" class="rowColor">
-<td class="colFirst"><code>static <a href="FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#of(com.opengamma.strata.collect.result.FailureReason,java.lang.String,java.lang.Object...)">of</a></span>&#8203;(<a href="FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a>&nbsp;reason,
   java.lang.String&nbsp;message,
   java.lang.Object...&nbsp;messageArgs)</code></th>
 <td class="colLast">
 <div class="block">Obtains a failure from a reason and message.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>static <a href="FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#of(com.opengamma.strata.collect.result.FailureReason,java.lang.Throwable)">of</a></span>&#8203;(<a href="FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a>&nbsp;reason,
+  java.lang.Throwable&nbsp;cause)</code></th>
+<td class="colLast">
+<div class="block">Obtains a failure from a reason and exception.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>static <a href="FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#of(com.opengamma.strata.collect.result.FailureReason,java.lang.Throwable,java.lang.String,java.lang.Object...)">of</a></span>&#8203;(<a href="FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a>&nbsp;reason,
+  java.lang.Throwable&nbsp;cause,
+  java.lang.String&nbsp;message,
+  java.lang.Object...&nbsp;messageArgs)</code></th>
+<td class="colLast">
+<div class="block">Obtains a failure from a reason, throwable and message.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
@@ -410,14 +410,14 @@ implements <a href="https://www.joda.org/joda-beans/apidocs/ImmutableBean.html?i
 </dl>
 </li>
 </ul>
-<a id="of(com.opengamma.strata.collect.result.FailureReason,java.lang.Exception)">
+<a id="of(com.opengamma.strata.collect.result.FailureReason,java.lang.Throwable)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
 <pre class="methodSignature">public static&nbsp;<a href="FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a>&nbsp;of&#8203;(<a href="FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a>&nbsp;reason,
-                             java.lang.Exception&nbsp;cause)</pre>
+                             java.lang.Throwable&nbsp;cause)</pre>
 <div class="block">Obtains a failure from a reason and exception.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -428,17 +428,17 @@ implements <a href="https://www.joda.org/joda-beans/apidocs/ImmutableBean.html?i
 </dl>
 </li>
 </ul>
-<a id="of(com.opengamma.strata.collect.result.FailureReason,java.lang.Exception,java.lang.String,java.lang.Object...)">
+<a id="of(com.opengamma.strata.collect.result.FailureReason,java.lang.Throwable,java.lang.String,java.lang.Object...)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
 <pre class="methodSignature">public static&nbsp;<a href="FailureItem.html" title="class in com.opengamma.strata.collect.result">FailureItem</a>&nbsp;of&#8203;(<a href="FailureReason.html" title="enum in com.opengamma.strata.collect.result">FailureReason</a>&nbsp;reason,
-                             java.lang.Exception&nbsp;cause,
+                             java.lang.Throwable&nbsp;cause,
                              java.lang.String&nbsp;message,
                              java.lang.Object...&nbsp;messageArgs)</pre>
-<div class="block">Obtains a failure from a reason, exception and message.
+<div class="block">Obtains a failure from a reason, throwable and message.
  <p>
  The message is produced using a template that contains zero to many "{}" placeholders.
  Each placeholder is replaced by the next available argument.
@@ -603,8 +603,8 @@ implements <a href="https://www.joda.org/joda-beans/apidocs/ImmutableBean.html?i
 <ul class="blockList">
 <li class="blockList">
 <h4>getCauseType</h4>
-<pre class="methodSignature">public&nbsp;java.util.Optional&lt;java.lang.Class&lt;? extends java.lang.Exception&gt;&gt;&nbsp;getCauseType()</pre>
-<div class="block">Gets the type of the exception that caused the failure, not present if it wasn't caused by an exception.</div>
+<pre class="methodSignature">public&nbsp;java.util.Optional&lt;java.lang.Class&lt;? extends java.lang.Throwable&gt;&gt;&nbsp;getCauseType()</pre>
+<div class="block">Gets the type of the throwable that caused the failure, not present if it wasn't caused by a throwable.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the optional value of the property, not null</dd>
